@@ -50,6 +50,8 @@ INSERT INTO "auth_cookie" VALUES('c25979b737184f59f215b427ec310d8a','admin','127
 INSERT INTO "auth_cookie" VALUES('d36573617d1ea0f043f7c387b4b21d0c','admin','127.0.0.1',1352349438);
 INSERT INTO "auth_cookie" VALUES('8a8d39f6dd19fdc9bbbdbb43dcf17e31','thinkbase','119.2.4.178',1352707105);
 INSERT INTO "auth_cookie" VALUES('bddb9962dc8ebe1ea55d39bda9827165','admin','119.2.4.178',1352708562);
+INSERT INTO "auth_cookie" VALUES('c72087ca8f08c719ae6e80dda8f082f0','thinkbase','61.171.91.243',1352782049);
+INSERT INTO "auth_cookie" VALUES('bc60654673cabbcbff2107caa07928fe','thinkbase','61.171.91.243',1352785763);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -60,6 +62,9 @@ INSERT INTO "session" VALUES('admin',1,1352708669);
 INSERT INTO "session" VALUES('thinkbase',1,1352708242);
 INSERT INTO "session" VALUES('11ba61427b966c9f5d553c53',0,1352582903);
 INSERT INTO "session" VALUES('a9dec5feee37a1288464f4eb',0,1352627247);
+INSERT INTO "session" VALUES('b8aeb3552c2fe9ea8b8ad4ea',0,1352760743);
+INSERT INTO "session" VALUES('47579e3a9fb65fefa39a6b5c',0,1352762345);
+INSERT INTO "session" VALUES('d922ad9bc7ecc75c2463ac5e',0,1352767879);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -85,6 +90,12 @@ INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1352581035173000');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
+INSERT INTO "session_attribute" VALUES('b8aeb3552c2fe9ea8b8ad4ea',0,'timeline.lastvisit','1352712131272000');
+INSERT INTO "session_attribute" VALUES('b8aeb3552c2fe9ea8b8ad4ea',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('47579e3a9fb65fefa39a6b5c',0,'timeline.lastvisit','1352712131272000');
+INSERT INTO "session_attribute" VALUES('47579e3a9fb65fefa39a6b5c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d922ad9bc7ecc75c2463ac5e',0,'timeline.lastvisit','1352712131272000');
+INSERT INTO "session_attribute" VALUES('d922ad9bc7ecc75c2463ac5e',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -98,6 +109,17 @@ CREATE TABLE attachment (
 );
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/10','Git with Eclipse  EGit  - Tutorial-045216.png',4706512,1352581035173000,'http://www.vogella.com/articles/EGit/article.html - Git with Eclipse (EGit) - Tutorial 截屏','thinkbase','61.171.42.80');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/12','VMware vSphere Hypervisor (ESXi)的限制.png',131997,1352707947464000,'','thinkbase','119.2.4.178');
+INSERT INTO "attachment" VALUES('blog','about','使用github作为博客引擎.png',1429706,1352712101786000,'来自 http://blog.leezhong.com/tech/2010/08/25/make-github-as-blog-engine.html','thinkbase','119.2.4.178');
+INSERT INTO "attachment" VALUES('blog','about','搭建一个免费的，无流量限制的Blog.pdf',1344613,1352712131272000,'来自 http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html','thinkbase','119.2.4.178');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13','w32tm-auto-02.png',15016,1352784447352000,'','thinkbase','61.171.91.243');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13','w32tm-auto-03.png',14619,1352784457136000,'','thinkbase','61.171.91.243');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13','w32tm-auto-01.png',12879,1352784535751000,'','thinkbase','61.171.91.243');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','01-create-user.png',39192,1352785863199000,'','thinkbase','61.171.91.243');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','03-local.png',54578,1352785876795000,'','thinkbase','61.171.91.243');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','04-network.png',54716,1352785894846000,'','thinkbase','61.171.91.243');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','05-RDP.png',32740,1352785902363000,'','thinkbase','61.171.91.243');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','06-test.png',16482,1352785908692000,'','thinkbase','61.171.91.243');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','02-is-admin.png',36867,1352785988224000,'','thinkbase','61.171.91.243');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -30581,6 +30603,107 @@ INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/12',3,'VMware vSphere Hyp
 
 VMWare ESXi 5 的正式文档上相应的说明如下:
 [[Image(VMware vSphere Hypervisor (ESXi)的限制.png)]]',1352707644,1352707851,'','thinkbase','thinkbase','vmware');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/12',4,'VMware vSphere Hypervisor (ESXi)的功能限制','由于一直免费使用 [http://www.vmware.com VMWare] 的 [http://www.vmware.com/cn/products/datacenter-virtualization/vsphere-hypervisor/overview/ ESXi] 虚拟化方案, 因此比较关心其对 CPU 和 RAM 的限制.
+
+来自 http://quicklinux.sinaapp.com/2012/04/14/57.html :
+{{{#!div style="background: #ffd; padding-left: 6px; text-indent:2em"
+版本4方面（ESXi）物理机 最大两路CPU，最大8核心，（也就是1个8核或者2个四核的CPU）256GB的内存，虚拟机最大4个vSMP，内存不限制（也可以认为成虚拟机合计256GB）
+
+版本5方面(也就是你标题的VMware vSphere Hypervisor )物理机CPU和核心都不限制，内存最大1TB,虚拟机最大8vSMP，但是你注意了，内存合计32GB，理解深刻些，就是如果你有1台虚拟机是32GB内存，那么你只能虚拟出一台虚拟机。如果1台虚拟机的内存是1GB，你可以虚拟32台
+}}}
+
+VMWare ESXi 5 的正式文档上相应的说明如下:[[BR]]
+  [[Image(VMware vSphere Hypervisor (ESXi)的限制.png, 60%)]]',1352707644,1352709665,'','thinkbase','thinkbase','vmware');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/12',5,'VMware vSphere Hypervisor (ESXi)的功能限制','由于一直免费使用 [http://www.vmware.com VMWare] 的 [http://www.vmware.com/cn/products/datacenter-virtualization/vsphere-hypervisor/overview/ ESXi] 虚拟化方案, 因此比较关心其对 CPU 和 RAM 的限制.
+
+来自 http://quicklinux.sinaapp.com/2012/04/14/57.html :
+{{{#!div style="background: #ffd; padding-left: 6px; text-indent:2em"
+版本4方面（ESXi）物理机 最大两路CPU，最大8核心，（也就是1个8核或者2个四核的CPU）256GB的内存，虚拟机最大4个vSMP，内存不限制（也可以认为成虚拟机合计256GB）
+
+版本5方面(也就是你标题的VMware vSphere Hypervisor )物理机CPU和核心都不限制，内存最大1TB,虚拟机最大8vSMP，但是你注意了，内存合计32GB，理解深刻些，就是如果你有1台虚拟机是32GB内存，那么你只能虚拟出一台虚拟机。如果1台虚拟机的内存是1GB，你可以虚拟32台
+}}}
+
+VMWare ESXi 5 的正式文档上相应的说明如下:[[BR]]
+  [[Image(VMware vSphere Hypervisor (ESXi)的限制.png, 80%)]]',1352707644,1352709778,'','thinkbase','thinkbase','vmware');
+INSERT INTO "fullblog_posts" VALUES('about',5,'关于 thinkbase.net','thinkbase.net 一直是一个技术型的 Wiki/blog 站点, 最初使用 [http://www.vqwiki.org/ VQWiki], 期间使用过 `GoogleCode`([http://code.google.com/p/thinkbasenet/ 遗址]), 也尝试基于 `GitHub` 构建自己的站点([https://github.com/thinkbase/thinkbase.github.com 遗址]), 不过都没有坚持下来, 目前转移到 [http://trac.edgewall.org/ Trac] 上.
+  - 之所以不使用 `GoogleCode`, 最主要的原因是不习惯其 Wiki 语法, 与 Trac 相比, `GoogleCode` 在语法上的灵活和丰富程度还是不够的.
+  - 基于 `GitHub` 的 blog 基本上是采用 [https://github.com/mojombo/jekyll/ Jekyll] 方案, 比较详细的方式参见 [http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html 阮一峰:搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门], 考虑到 `编写->生成->上传` 过程比较繁琐(另外就是没有什么心思去设置 `_config.yml` 以及模板文件), 而且这个方案对评论功能的支持比较弱, 所以最终也没有使用.
+
+参考:
+ - 
+ - 
+',1352579059,1352710502,'','thinkbase','thinkbase','blog');
+INSERT INTO "fullblog_posts" VALUES('about',6,'关于 thinkbase.net','thinkbase.net 一直是一个技术型的 Wiki/blog 站点, 最初使用 [http://www.vqwiki.org/ VQWiki], 期间使用过 `GoogleCode`([http://code.google.com/p/thinkbasenet/ 遗址]), 也尝试基于 `GitHub` 构建自己的站点([https://github.com/thinkbase/thinkbase.github.com 遗址]), 不过都没有坚持下来, 目前转移到 [http://trac.edgewall.org/ Trac] 上.
+  - 之所以不使用 `GoogleCode`, 最主要的原因是不习惯其 Wiki 语法, 与 Trac 相比, `GoogleCode` 在语法上的灵活和丰富程度还是不够的.
+  - 基于 `GitHub` 的 blog 基本上是采用 [https://github.com/mojombo/jekyll/ Jekyll] 方案, 比较详细的方式参见 [http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html 阮一峰:搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门], 考虑到 `编写->生成->上传` 过程比较繁琐(另外就是没有什么心思去设置 `_config.yml` 以及模板文件), 而且这个方案对评论功能的支持比较弱, 所以最终也没有使用.
+
+参考:
+ - [http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html 搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门]
+ - [http://blog.leezhong.com/tech/2010/08/25/make-github-as-blog-engine.html 使用github作为博客引擎]
+',1352579059,1352712069,'','thinkbase','thinkbase','blog');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/13',1,'使用 w32tm 命令定期同步服务器时间','有时候因为各种原因, Windows服务器的时间可能不准, 比如虚拟机中服务器的时间会受主机时间的影响, 或者机器的BIOS时钟不准确等;
+
+可以简单通过Windows计划任务, 使用 `w32tm.exe /resync` 命令就可以实现定期自动同步服务器时间的功能:
+ - 在"计划任务"中设置执行的命令:[[BR]]
+ - 设置定期执行:[[BR]]
+
+如果发现定期时间同步不起作用, 建议直接在命令行中执行 `w32tm.exe /resync` 命令进行测试, 如果报错 "`此计算机没有重新同步，因为没有可用的时间数据。`", 可以在 ''''''日期和时间 属性'''''' 中选择其他的服务器试试:
+ - 通过双击 Taskbar 右边的时间显示区域, 或者执行控制面板的"日期和时间", 都可以进入 ''''''日期和时间 属性'''''':[[BR]]
+',1352784085,1352784085,'','thinkbase','thinkbase','windows w32tm');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/13',2,'使用 w32tm 命令定期同步服务器时间','有时候因为各种原因, Windows服务器的时间可能不准, 比如虚拟机中服务器的时间会受主机时间的影响, 或者机器的BIOS时钟不准确等;
+
+可以简单通过Windows计划任务, 使用 `w32tm.exe /resync` 命令就可以实现定期自动同步服务器时间的功能:
+ - 在"计划任务"中设置执行的命令:[[BR]][[Image(w32tm-auto-01.png)]]
+ - 设置定期执行:[[BR]][[Image(w32tm-auto-02.png)]]
+
+如果发现定期时间同步不起作用, 建议直接在命令行中执行 `w32tm.exe /resync` 命令进行测试, 如果报错 "`此计算机没有重新同步，因为没有可用的时间数据。`", 可以在 ''''''日期和时间 属性'''''' 中选择其他的服务器试试:
+ - 通过双击 Taskbar 右边的时间显示区域, 或者执行控制面板的"日期和时间", 都可以进入 ''''''日期和时间 属性'''''':[[BR]][[Image(w32tm-auto-03.png)]]
+
+',1352784085,1352784260,'','thinkbase','thinkbase','windows w32tm');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/13-2',1,'增强Windows计划任务执行用户的安全性','为了避免计划任务执行与当前登录到Windows桌面的用户操作之间的相互干扰(''''在Win2003上, 如果计划任务的执行用户和当前桌面登录用户相同, 计划任务执行时的命令执行窗口会显示在该用户登录的桌面上, Win2008似乎没有这个问题''''), 一般需要为计划任务专门指定一个用户, 我习惯于叫`cron`;
+
+为了方面任务的执行, 通常会简单的把这个用户归到`Administrators`组, 考虑到`Administrators`组用户的权限很大, 因此对这个`cron`帐号需要进行一定的安全控制, 简单的来说就是"`限制该用户登录到服务器`":
+ - 用于计划任务执行用户的创建:[[BR]][[Image(01-create-user.png, 60%)]]
+ - 该用户划入管理员组:[[BR]][[Image(02-is-admin.png, 60%)]]
+ - 通过"组策略编辑器"(`gpedit.msc`)设置"`拒绝本地登录`":[[BR]][[Image(03-local.png, 60%)]]
+ - 通过"组策略编辑器"(`gpedit.msc`)设置"`拒绝从网络访问`":[[BR]][[Image(04-network.png, 60%)]]
+ - 在`终端服务配置`中设置`RDP-Tcp`连接的访问权限:[[BR]][[Image(05-RDP.png, 60%)]]
+
+经过以上配置, 实际测试该用户无法使用终端服务登录服务器, 这个帐号可以比较安全的用于计划任务了:
+ - [[Image(06-test.png, 60%)]]',1352785835,1352785835,'','thinkbase','thinkbase','windows cron');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/13-2',2,'增强Windows计划任务执行用户的安全性','为了避免计划任务执行与当前登录到Windows桌面的用户操作之间的相互干扰(''''在Win2003上, 如果计划任务的执行用户和当前桌面登录用户相同, 计划任务执行时的命令执行窗口会显示在该用户登录的桌面上, Win2008似乎没有这个问题''''), 一般需要为计划任务专门指定一个用户, 我习惯于叫`cron`;
+
+为了方面任务的执行, 通常会简单的把这个用户归到`Administrators`组, 考虑到`Administrators`组用户的权限很大, 因此对这个`cron`帐号需要进行一定的安全控制, 简单的来说就是"`限制该用户登录到服务器`":
+ - 用于计划任务执行用户的创建:[[BR]][[Image(01-create-user.png, 80%)]]
+ - 该用户划入管理员组:[[BR]][[Image(02-is-admin.png, 60%)]]
+ - 通过"组策略编辑器"(`gpedit.msc`)设置"`拒绝本地登录`":[[BR]][[Image(03-local.png, 60%)]]
+ - 通过"组策略编辑器"(`gpedit.msc`)设置"`拒绝从网络访问`":[[BR]][[Image(04-network.png, 60%)]]
+ - 在`终端服务配置`中设置`RDP-Tcp`连接的访问权限:[[BR]][[Image(05-RDP.png, 60%)]]
+
+经过以上配置, 实际测试该用户无法使用终端服务登录服务器, 这个帐号可以比较安全的用于计划任务了:
+ - [[Image(06-test.png, 60%)]]',1352785835,1352786002,'','thinkbase','thinkbase','windows cron');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/13-2',3,'增强Windows计划任务执行用户的安全性','为了避免计划任务执行与当前登录到Windows桌面的用户操作之间的相互干扰(''''在Win2003上, 如果计划任务的执行用户和当前桌面登录用户相同, 计划任务执行时的命令执行窗口会显示在该用户登录的桌面上, Win2008似乎没有这个问题''''), 一般需要为计划任务专门指定一个用户, 我习惯于叫`cron`;
+
+为了方面任务的执行, 通常会简单的把这个用户归到`Administrators`组, 考虑到`Administrators`组用户的权限很大, 因此对这个`cron`帐号需要进行一定的安全控制, 简单的来说就是"`限制该用户登录到服务器`":
+ - 用于计划任务执行用户的创建:[[BR]][[Image(01-create-user.png, 90%)]]
+ - 该用户划入管理员组:[[BR]][[Image(02-is-admin.png, 60%)]]
+ - 通过"组策略编辑器"(`gpedit.msc`)设置"`拒绝本地登录`":[[BR]][[Image(03-local.png, 60%)]]
+ - 通过"组策略编辑器"(`gpedit.msc`)设置"`拒绝从网络访问`":[[BR]][[Image(04-network.png, 60%)]]
+ - 在`终端服务配置`中设置`RDP-Tcp`连接的访问权限:[[BR]][[Image(05-RDP.png, 60%)]]
+
+经过以上配置, 实际测试该用户无法使用终端服务登录服务器, 这个帐号可以比较安全的用于计划任务了:
+ - [[Image(06-test.png, 60%)]]',1352785835,1352786047,'','thinkbase','thinkbase','windows cron');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/13-2',4,'增强Windows计划任务执行用户的安全性','为了避免计划任务执行与当前登录到Windows桌面的用户操作之间的相互干扰(''''在Win2003上, 如果计划任务的执行用户和当前桌面登录用户相同, 计划任务执行时的命令执行窗口会显示在该用户登录的桌面上, Win2008似乎没有这个问题''''), 一般需要为计划任务专门指定一个用户, 我习惯于叫`cron`;
+
+为了方面任务的执行, 通常会简单的把这个用户归到`Administrators`组, 考虑到`Administrators`组用户的权限很大, 因此对这个`cron`帐号需要进行一定的安全控制, 简单的来说就是"`限制该用户登录到服务器`":
+ - 用于计划任务执行用户的创建:[[BR]][[Image(01-create-user.png, 90%)]]
+ - 该用户划入管理员组:[[BR]][[Image(02-is-admin.png, 90%)]]
+ - 通过"组策略编辑器"(`gpedit.msc`)设置"`拒绝本地登录`":[[BR]][[Image(03-local.png, 90%)]]
+ - 通过"组策略编辑器"(`gpedit.msc`)设置"`拒绝从网络访问`":[[BR]][[Image(04-network.png, 90%)]]
+ - 在`终端服务配置`中设置`RDP-Tcp`连接的访问权限:[[BR]][[Image(05-RDP.png, 90%)]]
+
+经过以上配置, 实际测试该用户无法使用终端服务登录服务器, 这个帐号可以比较安全的用于计划任务了:
+ - [[Image(06-test.png, 90%)]]',1352785835,1352786070,'','thinkbase','thinkbase','windows cron');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
