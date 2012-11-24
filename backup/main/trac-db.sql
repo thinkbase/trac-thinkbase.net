@@ -46,16 +46,12 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('c25979b737184f59f215b427ec310d8a','admin','127.0.0.1',1352318227);
-INSERT INTO "auth_cookie" VALUES('d36573617d1ea0f043f7c387b4b21d0c','admin','127.0.0.1',1352349438);
-INSERT INTO "auth_cookie" VALUES('8a8d39f6dd19fdc9bbbdbb43dcf17e31','thinkbase','119.2.4.178',1352707105);
-INSERT INTO "auth_cookie" VALUES('bddb9962dc8ebe1ea55d39bda9827165','admin','119.2.4.178',1352708562);
-INSERT INTO "auth_cookie" VALUES('c72087ca8f08c719ae6e80dda8f082f0','thinkbase','61.171.91.243',1352782049);
-INSERT INTO "auth_cookie" VALUES('bc60654673cabbcbff2107caa07928fe','thinkbase','61.171.91.243',1352785763);
-INSERT INTO "auth_cookie" VALUES('3b26389c3e667954789770131cfd2f66','admin','61.171.91.243',1352787237);
 INSERT INTO "auth_cookie" VALUES('a9b5be7fcdf82ab5a341b4a9c9f6f871','admin','61.171.91.97',1352908298);
 INSERT INTO "auth_cookie" VALUES('30de093a32ed84e136eab62b138f9b59','admin','61.171.91.97',1352908607);
 INSERT INTO "auth_cookie" VALUES('16081adedc36ea360f0e0bf69201e7b4','admin','61.171.91.97',1352908999);
+INSERT INTO "auth_cookie" VALUES('a49f8ae73abeb0edd5cdf7fea837ffac','thinkbase','61.171.91.97',1352909454);
+INSERT INTO "auth_cookie" VALUES('721af857783dedf52f667c22d271a6ea','thinkbase','180.166.22.90',1353653287);
+INSERT INTO "auth_cookie" VALUES('12452937433e19aa5dfcfdc6af70fb44','thinkbase','198.15.110.174',1353726337);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -72,6 +68,13 @@ INSERT INTO "session" VALUES('d922ad9bc7ecc75c2463ac5e',0,1352767879);
 INSERT INTO "session" VALUES('b241e27abaecd36d71e87094',0,1352863116);
 INSERT INTO "session" VALUES('05ce78b0459dcfaf82a3dd73',0,1352880364);
 INSERT INTO "session" VALUES('ee71d34f7a63e71b2ee86111',0,1352884664);
+INSERT INTO "session" VALUES('4345039ddfbc6e0ee35fc355',0,1352955527);
+INSERT INTO "session" VALUES('1b9f5bf7133cf1c06f4189aa',0,1353033989);
+INSERT INTO "session" VALUES('6be22e3a9f8e47a4049fb21d',0,1353157053);
+INSERT INTO "session" VALUES('8a19a9072422ced07765d7d8',0,1353162973);
+INSERT INTO "session" VALUES('67ec93988e432cf1a7b2b769',0,1353477310);
+INSERT INTO "session" VALUES('dcb601bbadd9de1131ebff6c',0,1353505265);
+INSERT INTO "session" VALUES('eb6194434f033f493d1cec6f',0,1353509519);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -109,6 +112,20 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1352627184000000');
+INSERT INTO "session_attribute" VALUES('4345039ddfbc6e0ee35fc355',0,'timeline.lastvisit','1352943738465000');
+INSERT INTO "session_attribute" VALUES('4345039ddfbc6e0ee35fc355',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('1b9f5bf7133cf1c06f4189aa',0,'timeline.lastvisit','1352943738465000');
+INSERT INTO "session_attribute" VALUES('1b9f5bf7133cf1c06f4189aa',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6be22e3a9f8e47a4049fb21d',0,'timeline.lastvisit','1352943738465000');
+INSERT INTO "session_attribute" VALUES('6be22e3a9f8e47a4049fb21d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('8a19a9072422ced07765d7d8',0,'timeline.lastvisit','1352943738465000');
+INSERT INTO "session_attribute" VALUES('8a19a9072422ced07765d7d8',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('67ec93988e432cf1a7b2b769',0,'timeline.lastvisit','1352943738465000');
+INSERT INTO "session_attribute" VALUES('67ec93988e432cf1a7b2b769',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('dcb601bbadd9de1131ebff6c',0,'timeline.lastvisit','1352943738465000');
+INSERT INTO "session_attribute" VALUES('dcb601bbadd9de1131ebff6c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('eb6194434f033f493d1cec6f',0,'timeline.lastvisit','1352943738465000');
+INSERT INTO "session_attribute" VALUES('eb6194434f033f493d1cec6f',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -133,6 +150,8 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','04-network.png'
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','05-RDP.png',32740,1352785902363000,'','thinkbase','61.171.91.243');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','06-test.png',16482,1352785908692000,'','thinkbase','61.171.91.243');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/13-2','02-is-admin.png',36867,1352785988224000,'','thinkbase','61.171.91.243');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/23','.Net-trust.png',23257,1353653652659000,'','thinkbase','180.166.22.90');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/24','Json.NET-Documentation-20121124-james.newtonking.com.7z',580058,1353726855300000,'','thinkbase','198.15.110.174');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -30291,6 +30310,16 @@ INSERT INTO "wiki" VALUES('WikiStart',7,1352909028594000,'admin','61.171.91.97',
 
 ----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更新信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
+INSERT INTO "wiki" VALUES('WikiStart',8,1352943738465000,'admin','116.228.40.98','= 欢迎访问 thinkbase.net =
+
+== 项目 ==
+ * [https://github.com/thinkbase/PortableTrac PortableTrac] `项目管理工具 Trac 重新打包发布的 "Portable" 版本` 
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
+''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
 CREATE TABLE repository (
     id integer,
     name text,
@@ -30747,6 +30776,18 @@ INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/13-2',4,'增强Windows计
 
 经过以上配置, 实际测试该用户无法使用终端服务登录服务器, 这个帐号可以比较安全的用于计划任务了:
  - [[Image(06-test.png, 90%)]]',1352785835,1352786070,'','thinkbase','thinkbase','windows cron');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/23',1,'如何让 .Net 程序能够在网络驱动器上运行','直接双击执行网络驱动器上的 .Net 桌面程序会发生安全异常, 解决方法如下图:
+
+',1353653606,1353653606,'','thinkbase','thinkbase','.net');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/23',2,'如何让 .Net 程序能够在网络驱动器上运行','直接双击执行网络驱动器上的 .Net 桌面程序会发生安全异常, 解决方法如下图:
+
+[[Image(.Net-trust.png)]]',1353653606,1353653689,'','thinkbase','thinkbase','.net');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/24',1,'Json.NET 文档的离线版本','Json.NET( http://json.codeplex.com/ )是 .Net Framework 下一个很有用的 JSON 解析和操作类库，支持 .Net 对象与 JSON 字符串之间的序列化/反序列化，但是其各个 Release 中并没有包含离线文档（只能通过 http://james.newtonking.com/projects/json/help/ 访问其在线版本）。
+
+通过 Firefox 的插件 [http://amb.vis.ne.jp/mozilla/scrapbook/ ScapeBook] (可以从 [https://addons.mozilla.org/firefox/addon/scrapbook/ 这里] 下载), 抓起了一份离线版本， 见附件。',1353726834,1353726834,'','thinkbase','thinkbase','.net json');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/24',2,'Json.NET 文档的离线版本','Json.NET( http://json.codeplex.com/ )是 .Net Framework 下一个很有用的 JSON 解析和操作类库，支持 .Net 对象与 JSON 字符串之间的序列化/反序列化，但是其各个 Release 中并没有包含离线文档（只能通过 http://james.newtonking.com/projects/json/help/ 访问其在线版本）。
+
+通过 Firefox 的插件 [http://amb.vis.ne.jp/mozilla/scrapbook/ ScapeBook] (可以从 [https://addons.mozilla.org/firefox/addon/scrapbook/ 这里] 下载), 抓起了一份离线版本， 见附件([raw-attachment:Json.NET-Documentation-20121124-james.newtonking.com.7z Json.NET-Documentation-20121124-james.newtonking.com.7z])。',1353726834,1353726912,'','thinkbase','thinkbase','.net json');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
