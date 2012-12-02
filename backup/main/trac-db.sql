@@ -51,6 +51,9 @@ INSERT INTO "auth_cookie" VALUES('12452937433e19aa5dfcfdc6af70fb44','thinkbase',
 INSERT INTO "auth_cookie" VALUES('2c250e3e42303328561b941dc8602766','admin','61.171.91.97',1353814396);
 INSERT INTO "auth_cookie" VALUES('17a01278e9abf814a1c49169a0220e4b','thinkbase','61.171.91.97',1353845966);
 INSERT INTO "auth_cookie" VALUES('65c585b93b20ee268b74417c15b0a261','admin','127.0.0.1',1354445705);
+INSERT INTO "auth_cookie" VALUES('6f77fef5493984bcfc9826761b9719f2','admin','61.171.91.97',1354454347);
+INSERT INTO "auth_cookie" VALUES('9d01503aa9947f5ebb3fadaa28ddf8a8','thinkbase','61.171.91.97',1354454369);
+INSERT INTO "auth_cookie" VALUES('ab6c3b0b55866be1fb4140f0fef0333a','admin','61.171.91.97',1354454407);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -30346,6 +30349,79 @@ INSERT INTO "wiki" VALUES('WikiStart',9,1353814627701000,'admin','61.171.91.97',
 
 ----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
+INSERT INTO "wiki" VALUES('WikiStart',10,1354454856818000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 Trac 重新打包发布的 "Portable" 版本;
+  - [wiki:PortableTrac/install 安装和使用说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac github project]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
+''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
+INSERT INTO "wiki" VALUES('PortableTrac/install',1,1354454908490000,'admin','61.171.91.97','== PortableTrac 安装说明 ==
+//TODO - 待完善','',0);
+INSERT INTO "wiki" VALUES('WikiStart',11,1354455031929000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 "Portable" 版本;
+  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac github project]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
+''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
+INSERT INTO "wiki" VALUES('PortableTrac',1,1354455063992000,'admin','61.171.91.97','= 关于 PortableTrac =','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',2,1354455083570000,'admin','61.171.91.97','= 关于 PortableTrac =
+//TODO - 待完善','',0);
+INSERT INTO "wiki" VALUES('WikiStart',12,1354455130540000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
+  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac github project]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
+''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
+INSERT INTO "wiki" VALUES('WikiStart',13,1354455193822000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
+  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac GitHub Repositories]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
+''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
 CREATE TABLE repository (
     id integer,
     name text,
@@ -30926,7 +31002,7 @@ CREATE TABLE cache (
     generation integer,
     key text
 );
-INSERT INTO "cache" VALUES(901198563,2,'trac.wiki.api.WikiSystem.pages');
+INSERT INTO "cache" VALUES(901198563,4,'trac.wiki.api.WikiSystem.pages');
 INSERT INTO "cache" VALUES(1722364385,15,'trac.perm.DefaultPermissionStore._all_permissions');
 CREATE TABLE subtickets (
     parent integer,
