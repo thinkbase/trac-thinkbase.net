@@ -54,6 +54,9 @@ INSERT INTO "auth_cookie" VALUES('65c585b93b20ee268b74417c15b0a261','admin','127
 INSERT INTO "auth_cookie" VALUES('6f77fef5493984bcfc9826761b9719f2','admin','61.171.91.97',1354454347);
 INSERT INTO "auth_cookie" VALUES('9d01503aa9947f5ebb3fadaa28ddf8a8','thinkbase','61.171.91.97',1354454369);
 INSERT INTO "auth_cookie" VALUES('ab6c3b0b55866be1fb4140f0fef0333a','admin','61.171.91.97',1354454407);
+INSERT INTO "auth_cookie" VALUES('b6474760350972dd4d82c3ac5d0916a3','admin','61.171.91.97',1354457439);
+INSERT INTO "auth_cookie" VALUES('cf51d6f75ac4af30ebcd3f76f282bbbe','thinkbase','61.171.91.97',1354459140);
+INSERT INTO "auth_cookie" VALUES('903567b20be8a50d42f628b95228e2b8','thinkbase','61.171.91.97',1354460988);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -165,6 +168,11 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/25','002.png',19476,13
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/25','003.png',19660,1353847655355000,'','thinkbase','61.171.91.97');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/25','004.png',18328,1353847662199000,'','thinkbase','61.171.91.97');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/11/25','011.png',18430,1353847667855000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02','1354456794_OpenOffice.png',38158,1354460145901000,'本网站 logo 的来源文件','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02','1354458207_OpenOffice.png',2703,1354460179371000,'本网站 favorites icon 的来源文件','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02','IconSearch01.png',106189,1354460232106000,'logo 图片来源','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02','IconSearch02.png',70366,1354460246997000,'favorites icon 图片来源','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02','thinkbase-logo.xcf',55676,1354460296608000,'logo 的 GIMP 源文件','thinkbase','61.171.91.97');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -30950,6 +30958,97 @@ INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/25',4,'常用的 PuTTY �
  - [[Image(001.png)]]
 
 == END ==',1353847620,1353848004,'','thinkbase','thinkbase','ssh linux');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',1,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image:http://trac-hacks.org/chrome/site/trachacks_banner.png]], 而 favorites icon 则为 Trac 默认图标 [[Image:/common/trac.ico]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image:1354456794_OpenOffice.png]]
+ - favorites icon 的来源:[[BR]][[Image:1354458207_OpenOffice.png]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见[[attachment:thinkbase-logo.xcf 附件 thinkbase-logo.xcf]];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+',1354459975,1354459975,'','thinkbase','thinkbase','gimp icon logo');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',2,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]], 而 favorites icon 则为 Trac 默认图标 [[Image(/common/trac.ico)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
+ - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见[[attachment:thinkbase-logo.xcf 附件 thinkbase-logo.xcf]];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+',1354459975,1354460016,'','thinkbase','thinkbase','gimp icon logo');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',3,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]], 而 favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
+ - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见[[attachment:thinkbase-logo.xcf 附件 thinkbase-logo.xcf]];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+',1354459975,1354460105,'','thinkbase','thinkbase','gimp icon logo');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',4,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]], 而 favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
+ - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+',1354459975,1354460328,'','thinkbase','thinkbase','gimp icon logo');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',5,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的
+ - logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]]
+ - favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
+ - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+',1354459975,1354460492,'','thinkbase','thinkbase','gimp icon logo');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',6,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png, middle)]], favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico, middle)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:
+  - [[Image(1354456794_OpenOffice.png, top)]]
+ - favorites icon 的来源:
+  - [[Image(1354458207_OpenOffice.png, top)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+',1354459975,1354460689,'','thinkbase','thinkbase','gimp icon logo');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',7,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png, middle)]], favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico, middle)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:
+  - [[Image(1354456794_OpenOffice.png, top)]]
+ - favorites icon 的来源:
+  - [[Image(1354458207_OpenOffice.png, top)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+
+站点 logo / favorites icon 调整的方法参考 ZhTracInterfaceCustomization ;',1354459975,1354461026,'','thinkbase','thinkbase','gimp icon logo');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,

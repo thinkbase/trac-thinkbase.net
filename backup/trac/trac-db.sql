@@ -55,6 +55,7 @@ INSERT INTO "auth_cookie" VALUES('17a01278e9abf814a1c49169a0220e4b','thinkbase',
 INSERT INTO "auth_cookie" VALUES('050849bea9fb562b7ce90172e8d34385','admin','127.0.0.1',1354445666);
 INSERT INTO "auth_cookie" VALUES('7c5dddd7084242236efd053badc8fee9','admin','127.0.0.1',1354446832);
 INSERT INTO "auth_cookie" VALUES('c3abd12ca192ce52115071744eb66144','admin','61.171.91.97',1354454318);
+INSERT INTO "auth_cookie" VALUES('3749a566bcac2bbd5b46387b2bd664af','thinkbase','61.171.91.97',1354455966);
 CREATE TABLE session (
     sid text,
     authenticated integer,
