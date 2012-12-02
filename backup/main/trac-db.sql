@@ -56,7 +56,8 @@ INSERT INTO "auth_cookie" VALUES('9d01503aa9947f5ebb3fadaa28ddf8a8','thinkbase',
 INSERT INTO "auth_cookie" VALUES('ab6c3b0b55866be1fb4140f0fef0333a','admin','61.171.91.97',1354454407);
 INSERT INTO "auth_cookie" VALUES('b6474760350972dd4d82c3ac5d0916a3','admin','61.171.91.97',1354457439);
 INSERT INTO "auth_cookie" VALUES('cf51d6f75ac4af30ebcd3f76f282bbbe','thinkbase','61.171.91.97',1354459140);
-INSERT INTO "auth_cookie" VALUES('903567b20be8a50d42f628b95228e2b8','thinkbase','61.171.91.97',1354460988);
+INSERT INTO "auth_cookie" VALUES('8ccf38a768232c6e0407e283f25e5704','admin','61.171.91.97',1354462389);
+INSERT INTO "auth_cookie" VALUES('7f4ca6c9e21fb049705bd0fe61f3f6dc','thinkbase','61.171.91.97',1354465231);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -173,6 +174,16 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02','1354458207_OpenOf
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02','IconSearch01.png',106189,1354460232106000,'logo 图片来源','thinkbase','61.171.91.97');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02','IconSearch02.png',70366,1354460246997000,'favorites icon 图片来源','thinkbase','61.171.91.97');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02','thinkbase-logo.xcf',55676,1354460296608000,'logo 的 GIMP 源文件','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-2','DocFetcher_10.03_lang_Resource_zh_CN.properties.7z',6545,1354467581935000,'`DocFetcher` 1.0.3 的中文资源文件, 复制到 `DocFetcher` 安装目录的下的 `lang` 子目录即可起作用; 注意其中的 `Resource_zh_CN.properties.txt` 是中文源文件, 执行 `native2ascii Resource_zh_CN.properties.txt > Resource_zh_CN.properties` 可产生实际起作用的资源文件 `Resource_zh_CN.properties`.','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-3','nircmd.zip',95047,1354468858103000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-4','record-active-window.sh',601,1354469394270000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-4','record-specified-window.sh',2359,1354469400753000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-4','20111120-113633.png',28301,1354469409707000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-4','20111120-113640.png',141567,1354469417800000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-5','Wifi-Ad-hoc-prop-1.png',25408,1354469910732000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-5','Wifi-Ad-hoc-prop-2.png',23914,1354469921294000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-5','Wifi-Ad-hoc-prop-3.png',32929,1354469946545000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-5','Wifi-Ad-hoc-IP.png',76542,1354469956873000,'','thinkbase','61.171.91.97');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -31049,6 +31060,656 @@ logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.o
  - [attachment:IconSearch02.png favorites icon 图片来源]
 
 站点 logo / favorites icon 调整的方法参考 ZhTracInterfaceCustomization ;',1354459975,1354461026,'','thinkbase','thinkbase','gimp icon logo');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',8,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png, middle)]], favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico, middle)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:
+  - [[Image(1354456794_OpenOffice.png, top)]]
+ - favorites icon 的来源:
+  - [[Image(1354458207_OpenOffice.png, top)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+
+站点 logo / favorites icon 调整的方法参考 ZhTracInterfaceCustomization ;',1354459975,1354465292,'','thinkbase','thinkbase','gimp trac');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',1,'20110146 - 桌面搜索工具 DocFetcher 试用笔记','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
+
+= 简介 =
+在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
+
+在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (	2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
+
+== 主要特色 ==
+ * 基于 Java SWT 开发, 跨平台;
+ * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
+ * 界面比较简单, 但是使用很方便, 基本上只要两步:
+  # 添加要索引的目录, 建立索引;
+  # 输出要查询的字符串, 进行查找;
+ * 中文支持不错;
+
+== 需要解决的问题 ==
+ * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
+ * 不支持对文件名进行查找;
+ * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
+
+== 中文化 ==
+ * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
+ * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachement:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
+  - `DocFetcher` 1.0.3 的中文资源文件, 复制到 `DocFetcher` 安装目录的下的 `lang` 子目录即可起作用;
+  - 注意其中的 `Resource_zh_CN.properties.txt` 是中文源文件, 执行 `native2ascii Resource_zh_CN.properties.txt > Resource_zh_CN.properties` , 可产生实际起作用的资源文件 `Resource_zh_CN.properties`.
+
+== END ==
+
+== 后记 ==
+Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
+',1354467486,1354467486,'','thinkbase','thinkbase','java search-engine');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',2,'20110416 - 桌面搜索工具 DocFetcher 试用笔记','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
+
+= 简介 =
+在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
+
+在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
+
+== 主要特色 ==
+ * 基于 Java SWT 开发, 跨平台;
+ * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
+ * 界面比较简单, 但是使用很方便, 基本上只要两步:
+  1. 添加要索引的目录, 建立索引;
+  1. 输出要查询的字符串, 进行查找;
+ * 中文支持不错;
+
+== 需要解决的问题 ==
+ * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
+ * 不支持对文件名进行查找;
+ * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
+
+== 中文化 ==
+ * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
+ * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachment:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
+
+== 后记 ==
+ - 20110416
+  * Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
+ - 20121203
+  * 发现目前 !DocFetcher 已经升级到 `1.1.5` 版本了, 已经支持对 zip、7z、rar 等格式的压缩文件进行索引, 具体情况有待试验:
+{{{
+#!div style="background-color:#ffd"
+Between version 1.0.3 and version 1.1 beta 1, !DocFetcher was rewritten from scratch, resulting in a large number of new features and changes. [http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1 This page] gives an overview of the most important ones.
+}}}
+
+== END ==
+',1354467486,1354468208,'','thinkbase','thinkbase','java search-engine');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',1,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
+
+截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
+
+== 简介 ==
+一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
+
+有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
+{{{
+nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
+}}}
+`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
+
+使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
+
+另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
+
+== Linux 下的处理方法 ==
+使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
+ 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
+{{{
+import -window <Window ID> <FileName>.png
+}}}
+ 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如 <u>`import -window root MyScreenshot3.png`</u>;
+ 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
+{{{
+xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
+}}}
+ 1. 20111120 添加 - [20111120_ScreenRecorderShellInLinux Linux 下定期屏幕截屏脚本];
+
+== 下载 ==
+ * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
+
+== 其它 ==
+ 1. 减少文件大小
+  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
+
+== 参考资料 ==
+ 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
+  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
+ 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
+  * "我的ImageMagick使用心得", ImageMagick 的中文介绍;
+ 1. http://www.ruby-forum.com/topic/165740#728314
+  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
+
+== END ==',1354468815,1354468815,'','thinkbase','thinkbase','wink screenshot linux shell nircmd xprop ImageMagick');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',2,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
+
+截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
+
+== 简介 ==
+一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
+
+有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
+{{{
+nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
+}}}
+`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
+
+使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
+
+另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
+
+== Linux 下的处理方法 ==
+使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
+ 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
+{{{
+import -window <Window ID> <FileName>.png
+}}}
+ 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
+{{{
+import -window root MyScreenshot3.png
+}}}
+ 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
+{{{
+xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
+}}}
+ 1. 20111120 添加 - [20111120_ScreenRecorderShellInLinux Linux 下定期屏幕截屏脚本];
+
+== 下载 ==
+ * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
+
+== 其它 ==
+ 1. 减少文件大小
+  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
+
+== 参考资料 ==
+ 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
+  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
+ 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
+  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
+ 1. http://www.ruby-forum.com/topic/165740#728314
+  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
+
+== END ==',1354468815,1354468930,'','thinkbase','thinkbase','wink screenshot linux shell nircmd xprop ImageMagick');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-4',1,'20111120 - Linux 下定期屏幕截屏脚本','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20111120_ScreenRecorderShellInLinux''''
+
+== 概述 ==
+在上一篇 [20101114_ScreenShotAsFilesInWindowsAndLinux Windows 和 Linux 下定期屏幕截屏的方法] 中提到了可以使用 [http://www.imagemagick.org/ ImageMagick] 的 `import` 命令完成截屏过程, 本文基于 `import` 命令, 提供两个脚本, 分别用于定期截取当前活动窗口, 以及定期截取指定窗口;
+
+== 脚本 ==
+ * 定期截取当前活动窗口: [attachment:record-active-window.sh record-active-window.sh]
+ * 定期截取指定窗口: [attachment:record-specified-window.sh record-specified-window.sh]
+
+== 主要技术说明 ==
+=== `import` 命令 ===
+ * `-screen` 参数: 不了解 X 的细节, 猜测对于一个典型的 X 窗口, 其中的工具提示、菜单等其实是有独立的 window id 的, 那么在指定 window id 截屏时, 可能是截取不到这些内容的, 使用 `-screen` 参数可以解决这个问题:
+  * 没有 `-screen` 参数时的内容:[[BR]][[Image(20111120-113633.png)]]
+  * 加上 `-screen` 参数:[[BR]][[Image(20111120-113640.png)]]
+=== 取得窗口的 window id 和 process id ===
+ 1. 获取当前活动窗口的 window id:
+  * {{{xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5}}}
+ 1. 使用 xwininfo 选择一个窗口并获取其 window id:
+  * {{{xwininfo | grep "xwininfo: Window id:" | cut -d '' '' -f 4}}}
+ 1. 获取窗口($WIN_ID)对应的进程 ID:
+  * {{{xprop -id $WIN_ID | grep "_NET_WM_PID(CARDINAL)" | cut -d '' '' -f 3}}}
+=== 比较截屏文件是否一致 ===
+ * 使用 `cmp` 命令即可.
+
+== END ==',1354469331,1354469331,'','thinkbase','thinkbase','wink screenshot linux shell xprop ImageMagick xwininfo cmp bash');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-4',2,'20111120 - Linux 下定期屏幕截屏脚本','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20111120_ScreenRecorderShellInLinux''''
+
+== 概述 ==
+在上一篇 [blog:thinkbase-2012/12/02-3 Windows 和 Linux 下定期屏幕截屏的方法] 中提到了可以使用 [http://www.imagemagick.org/ ImageMagick] 的 `import` 命令完成截屏过程, 本文基于 `import` 命令, 提供两个脚本, 分别用于定期截取当前活动窗口, 以及定期截取指定窗口;
+
+== 脚本 ==
+ * 定期截取当前活动窗口: [attachment:record-active-window.sh record-active-window.sh]
+ * 定期截取指定窗口: [attachment:record-specified-window.sh record-specified-window.sh]
+
+== 主要技术说明 ==
+=== `import` 命令 ===
+ * `-screen` 参数: 不了解 X 的细节, 猜测对于一个典型的 X 窗口, 其中的工具提示、菜单等其实是有独立的 window id 的, 那么在指定 window id 截屏时, 可能是截取不到这些内容的, 使用 `-screen` 参数可以解决这个问题:
+  * 没有 `-screen` 参数时的内容:[[BR]][[Image(20111120-113633.png)]]
+  * 加上 `-screen` 参数:[[BR]][[Image(20111120-113640.png)]]
+=== 取得窗口的 window id 和 process id ===
+ 1. 获取当前活动窗口的 window id:
+  * {{{xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5}}}
+ 1. 使用 xwininfo 选择一个窗口并获取其 window id:
+  * {{{xwininfo | grep "xwininfo: Window id:" | cut -d '' '' -f 4}}}
+ 1. 获取窗口($WIN_ID)对应的进程 ID:
+  * {{{xprop -id $WIN_ID | grep "_NET_WM_PID(CARDINAL)" | cut -d '' '' -f 3}}}
+=== 比较截屏文件是否一致 ===
+ * 使用 `cmp` 命令即可.
+
+== END ==',1354469331,1354469383,'','thinkbase','thinkbase','wink screenshot linux shell xprop ImageMagick xwininfo cmp bash');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',3,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
+
+截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
+
+== 简介 ==
+一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
+
+有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
+{{{
+nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
+}}}
+`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
+
+使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
+
+另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
+
+== Linux 下的处理方法 ==
+使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
+ 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
+{{{
+import -window <Window ID> <FileName>.png
+}}}
+ 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
+{{{
+import -window root MyScreenshot3.png
+}}}
+ 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
+{{{
+xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
+}}}
+ 1. ```20111120 添加``` - [blog:thinkbase-2012/12/02-4 Linux 下定期屏幕截屏脚本];
+
+== 下载 ==
+ * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
+
+== 其它 ==
+ 1. 减少文件大小
+  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
+
+== 参考资料 ==
+ 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
+  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
+ 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
+  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
+ 1. http://www.ruby-forum.com/topic/165740#728314
+  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
+
+== END ==',1354468815,1354469506,'','thinkbase','thinkbase','wink screenshot linux shell nircmd xprop ImageMagick');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',4,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
+
+截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
+
+== 简介 ==
+一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
+
+有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
+{{{
+nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
+}}}
+`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
+
+使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
+
+另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
+
+== Linux 下的处理方法 ==
+使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
+ 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
+{{{
+import -window <Window ID> <FileName>.png
+}}}
+ 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
+{{{
+import -window root MyScreenshot3.png
+}}}
+ 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
+{{{
+xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
+}}}
+ 1. ''''''20111120 添加'''''' - [blog:thinkbase-2012/12/02-4 Linux 下定期屏幕截屏脚本];
+
+== 下载 ==
+ * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
+
+== 其它 ==
+ 1. 减少文件大小
+  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
+
+== 参考资料 ==
+ 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
+  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
+ 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
+  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
+ 1. http://www.ruby-forum.com/topic/165740#728314
+  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
+
+== END ==',1354468815,1354469526,'','thinkbase','thinkbase','wink screenshot linux shell nircmd xprop ImageMagick');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-5',1,'20120222 - Ubuntu 10.04 上通过无线共享互联网连接','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120222_Ubuntu_Wifi_Ad_hoc''''
+
+== 参考页面 ==
+见 http://hi.baidu.com/myl71/blog/item/75bb0944bb44362acefca318.html ;
+
+其主要内容如下:
+{{{
+首先准备好带无线网卡的笔记本电脑一台；
+
+Ubuntu10.04操作系统一套；
+
+能正常连接网络的网线一根；
+
+进入ubuntu 10.04后在右上角工具栏的网络连接上点右键，点“新建连接” ，
+然后输入你想新建的无线路由器的名字，之后设定加密方式，如果是想满足宿舍
+内的网络共享你只需要设置一个wep的加密方式，然后就可以新建成功了，之后
+您就可以叫您的朋友搜索无线网络了，然后连接就可以了。
+
+经我的观察，ubuntu下面新建的wifi效果非常的好，网络稳定，网速也非常的
+快。适合喜欢无线冲浪的您。
+}}}
+
+== 新建的网络连接属性(截屏) ==
+ * [[Image(Wifi-Ad-hoc-prop-1.png)]]
+ * [[Image(Wifi-Ad-hoc-prop-2.png)]]
+ * [[Image(Wifi-Ad-hoc-prop-3.png)]]
+
+== 其他信息 ==
+ * 其他电脑连接时不需要设置IP, 采用DHCP自动获取IP地址即可;
+ * 实际连接后 Ubuntu 机器的网络情况如下, 其中 10.42 网段应该是系统自动分配的, 通过 Wifi 连接到 Ubuntu 上的其他机器的地址应该都在这个网段.[[BR]][[Image(Wifi-Ad-hoc-IP.png)]].
+
+== END ==',1354469896,1354469896,'','thinkbase','thinkbase','ubuntu wifi ad-hoc network');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',1,'20120503 - 批处理中很有用的命令 WMIC','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
+
+== 最典型的用法 ==
+=== 通过命令行中的一些内容查找程序 ===
+{{{
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
+}}}
+
+ * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
+ * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
+
+
+=== 通过命令行中的一些内容结束程序 ===
+{{{
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
+}}}
+
+== 参考 ==
+  * MSDN:
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
+  * Microsoft `TechNet`
+   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
+  * 来自 http://lgj573.iteye.com/blog/327432
+{{{
+wmic 获取硬盘固定分区盘符:
+wmic logicaldisk where "drivetype=3" get name
+
+wmic 获取硬盘各分区文件系统以及可用空间：
+wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
+
+wmic 获取进程名称以及可执行路径:
+wmic process get name,executablepath
+
+wmic 删除指定进程(根据进程名称):
+wmic process where name="qq.exe" call terminate
+或者用
+wmic process where name="qq.exe" delete
+
+wmic 删除指定进程(根据进程PID):
+wmic process where pid="123" delete
+
+wmic 创建新进程
+wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
+
+在远程机器上创建新进程：
+wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
+
+关闭本地计算机
+wmic process call create shutdown.exe
+
+重启远程计算机
+wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
+
+更改计算机名称
+wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
+
+更改帐户名
+wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
+
+wmic 结束可疑进程（根据进程的启动路径）
+wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
+
+wmic 获取物理内存
+wmic memlogical get TotalPhysicalMemory|find /i /v "t"
+
+wmic 获取文件的创建、访问、修改时间
+
+@echo off
+wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
+
+wmic 全盘搜索某文件并获取该文件所在目录
+wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
+
+for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
+
+获取屏幕分辨率
+wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
+
+获取U盘盘符，并运行U盘上的QQ.exe
+@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
+
+获得进程当前占用的内存和最大占用内存的大小：
+wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
+把内存大小改成KB(MB的话可能有小数)
+@echo off
+for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
+set /a m=%%a/1024
+set /a mm=%%b/1024
+echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
+)
+pause 
+}}}',1354470149,1354470149,'','thinkbase','thinkbase','wmic windows batch');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',2,'20120503 - 批处理中很有用的命令 WMIC','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
+
+== 最典型的用法 ==
+=== 通过命令行中的一些内容查找程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
+}}}
+
+ * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
+ * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
+
+
+=== 通过命令行中的一些内容结束程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
+}}}
+
+== 参考 ==
+  * MSDN:
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
+  * Microsoft `TechNet`
+   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
+  * 来自 http://lgj573.iteye.com/blog/327432
+{{{
+#!sh
+wmic 获取硬盘固定分区盘符:
+wmic logicaldisk where "drivetype=3" get name
+
+wmic 获取硬盘各分区文件系统以及可用空间：
+wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
+
+wmic 获取进程名称以及可执行路径:
+wmic process get name,executablepath
+
+wmic 删除指定进程(根据进程名称):
+wmic process where name="qq.exe" call terminate
+或者用
+wmic process where name="qq.exe" delete
+
+wmic 删除指定进程(根据进程PID):
+wmic process where pid="123" delete
+
+wmic 创建新进程
+wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
+
+在远程机器上创建新进程：
+wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
+
+关闭本地计算机
+wmic process call create shutdown.exe
+
+重启远程计算机
+wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
+
+更改计算机名称
+wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
+
+更改帐户名
+wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
+
+wmic 结束可疑进程（根据进程的启动路径）
+wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
+
+wmic 获取物理内存
+wmic memlogical get TotalPhysicalMemory|find /i /v "t"
+
+wmic 获取文件的创建、访问、修改时间
+
+@echo off
+wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
+
+wmic 全盘搜索某文件并获取该文件所在目录
+wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
+
+for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
+
+获取屏幕分辨率
+wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
+
+获取U盘盘符，并运行U盘上的QQ.exe
+@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
+
+获得进程当前占用的内存和最大占用内存的大小：
+wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
+把内存大小改成KB(MB的话可能有小数)
+@echo off
+for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
+set /a m=%%a/1024
+set /a mm=%%b/1024
+echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
+)
+pause 
+}}}',1354470149,1354470203,'','thinkbase','thinkbase','wmic windows batch');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',3,'20120503 - 批处理中很有用的命令 WMIC','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
+
+== 最典型的用法 ==
+=== 通过命令行中的一些内容查找程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
+}}}
+
+ * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
+ * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
+
+
+=== 通过命令行中的一些内容结束程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
+}}}
+
+== 参考 ==
+  * MSDN:
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
+  * Microsoft `TechNet`
+   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
+  * 来自 http://lgj573.iteye.com/blog/327432
+{{{
+#!sh
+# wmic 获取硬盘固定分区盘符:
+wmic logicaldisk where "drivetype=3" get name
+
+# wmic 获取硬盘各分区文件系统以及可用空间：
+wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
+
+# wmic 获取进程名称以及可执行路径:
+wmic process get name,executablepath
+
+# wmic 删除指定进程(根据进程名称):
+wmic process where name="qq.exe" call terminate
+# 或者用
+wmic process where name="qq.exe" delete
+
+# wmic 删除指定进程(根据进程PID):
+wmic process where pid="123" delete
+
+# wmic 创建新进程
+wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
+
+# 在远程机器上创建新进程：
+wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
+
+# 关闭本地计算机
+wmic process call create shutdown.exe
+
+# 重启远程计算机
+wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
+
+# 更改计算机名称
+wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
+
+# 更改帐户名
+wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
+
+# wmic 结束可疑进程（根据进程的启动路径）
+wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
+
+# wmic 获取物理内存
+wmic memlogical get TotalPhysicalMemory|find /i /v "t"
+
+# wmic 获取文件的创建、访问、修改时间
+@echo off
+wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
+
+# wmic 全盘搜索某文件并获取该文件所在目录
+wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
+
+for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
+
+# 获取屏幕分辨率
+wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
+
+# 获取U盘盘符，并运行U盘上的QQ.exe
+@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
+
+# 获得进程当前占用的内存和最大占用内存的大小：
+wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
+# 把内存大小改成KB(MB的话可能有小数)
+@echo off
+for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
+set /a m=%%a/1024
+set /a mm=%%b/1024
+echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
+)
+pause 
+}}}',1354470149,1354470312,'','thinkbase','thinkbase','wmic windows batch');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
