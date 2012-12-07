@@ -46,7 +46,6 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('12452937433e19aa5dfcfdc6af70fb44','thinkbase','198.15.110.174',1353726337);
 INSERT INTO "auth_cookie" VALUES('2c250e3e42303328561b941dc8602766','admin','61.171.91.97',1353814396);
 INSERT INTO "auth_cookie" VALUES('17a01278e9abf814a1c49169a0220e4b','thinkbase','61.171.91.97',1353845966);
 INSERT INTO "auth_cookie" VALUES('65c585b93b20ee268b74417c15b0a261','admin','127.0.0.1',1354445705);
@@ -56,8 +55,8 @@ INSERT INTO "auth_cookie" VALUES('ab6c3b0b55866be1fb4140f0fef0333a','admin','61.
 INSERT INTO "auth_cookie" VALUES('b6474760350972dd4d82c3ac5d0916a3','admin','61.171.91.97',1354457439);
 INSERT INTO "auth_cookie" VALUES('cf51d6f75ac4af30ebcd3f76f282bbbe','thinkbase','61.171.91.97',1354459140);
 INSERT INTO "auth_cookie" VALUES('8ccf38a768232c6e0407e283f25e5704','admin','61.171.91.97',1354462389);
-INSERT INTO "auth_cookie" VALUES('0caaab1e91ce63d3a1010806d453dc01','admin','180.169.66.118',1354554893);
-INSERT INTO "auth_cookie" VALUES('1b5345b1717c863d56df33201c1f3df1','thinkbase','180.169.66.118',1354556608);
+INSERT INTO "auth_cookie" VALUES('3fdcbd7298f0fd43017e0d7fa388b0c2','thinkbase','112.65.136.195',1354588198);
+INSERT INTO "auth_cookie" VALUES('a59461514381bba16d6bdbf6129002e6','thinkbase','112.65.136.195',1354610504);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -85,6 +84,12 @@ INSERT INTO "session" VALUES('a5d5547a405bc5682e9dce9d',0,1353744894);
 INSERT INTO "session" VALUES('8499cdab4f73c0abd12721ab',0,1353760618);
 INSERT INTO "session" VALUES('67f76d912c294ce8fd655c32',0,1354505670);
 INSERT INTO "session" VALUES('3e2bb3ae2ecb0484566e4461',0,1354532112);
+INSERT INTO "session" VALUES('3cc70d0f311cfb79e007d8b6',0,1354565604);
+INSERT INTO "session" VALUES('cc7411e59742c338a9b065df',0,1354615122);
+INSERT INTO "session" VALUES('62964bb46d1028432b564510',0,1354638825);
+INSERT INTO "session" VALUES('12b1a514adab6455d8a1a524',0,1354723322);
+INSERT INTO "session" VALUES('d54358dbf0d03a47ff0f88e3',0,1354757212);
+INSERT INTO "session" VALUES('a6c103972fdbaa5c28d65ad3',0,1354781984);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -144,6 +149,18 @@ INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1353728908000000');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
+INSERT INTO "session_attribute" VALUES('3cc70d0f311cfb79e007d8b6',0,'timeline.lastvisit','1354557159000000');
+INSERT INTO "session_attribute" VALUES('3cc70d0f311cfb79e007d8b6',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('cc7411e59742c338a9b065df',0,'timeline.lastvisit','1354610796000000');
+INSERT INTO "session_attribute" VALUES('cc7411e59742c338a9b065df',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('62964bb46d1028432b564510',0,'timeline.lastvisit','1354610796000000');
+INSERT INTO "session_attribute" VALUES('62964bb46d1028432b564510',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('12b1a514adab6455d8a1a524',0,'timeline.lastvisit','1354610796000000');
+INSERT INTO "session_attribute" VALUES('12b1a514adab6455d8a1a524',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d54358dbf0d03a47ff0f88e3',0,'timeline.lastvisit','1354610796000000');
+INSERT INTO "session_attribute" VALUES('d54358dbf0d03a47ff0f88e3',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a6c103972fdbaa5c28d65ad3',0,'timeline.lastvisit','1354610796000000');
+INSERT INTO "session_attribute" VALUES('a6c103972fdbaa5c28d65ad3',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -362,6 +379,7 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/03','20111203-174838.p
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/03','20111203-174845.png',81189,1354556021100000,'','thinkbase','180.169.66.118');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/03','20111203-174853.png',78294,1354556023257000,'','thinkbase','180.169.66.118');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/03-2','TracDragDropPlugin.png',181832,1354556879192000,'','thinkbase','180.169.66.118');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/03-2','image-20121204-164318.png',35409,1354610636737000,'','thinkbase','112.65.136.195');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -32758,6 +32776,7 @@ Installed e:\thinkbase.net\portabletrac-git\trac\lib\site-packages\tracdragdrop-
 Processing dependencies for tracdragdrop==0.12.0.10-r12033
 Finished processing dependencies for tracdragdrop==0.12.0.10-r12033
 }}}','thinkbase',1354557159);
+INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/03-2',2,'支持从剪贴板上次图片，下面这张图片就是通过在开始菜单“附件 - 画图”中复制到剪贴板的：[[Image(image-20121204-164318.png)]]','thinkbase',1354610796);
 CREATE TABLE votes (
     resource text,
     username text,
