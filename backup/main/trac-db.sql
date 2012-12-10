@@ -46,8 +46,6 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('2c250e3e42303328561b941dc8602766','admin','61.171.91.97',1353814396);
-INSERT INTO "auth_cookie" VALUES('17a01278e9abf814a1c49169a0220e4b','thinkbase','61.171.91.97',1353845966);
 INSERT INTO "auth_cookie" VALUES('65c585b93b20ee268b74417c15b0a261','admin','127.0.0.1',1354445705);
 INSERT INTO "auth_cookie" VALUES('6f77fef5493984bcfc9826761b9719f2','admin','61.171.91.97',1354454347);
 INSERT INTO "auth_cookie" VALUES('9d01503aa9947f5ebb3fadaa28ddf8a8','thinkbase','61.171.91.97',1354454369);
@@ -57,6 +55,8 @@ INSERT INTO "auth_cookie" VALUES('cf51d6f75ac4af30ebcd3f76f282bbbe','thinkbase',
 INSERT INTO "auth_cookie" VALUES('8ccf38a768232c6e0407e283f25e5704','admin','61.171.91.97',1354462389);
 INSERT INTO "auth_cookie" VALUES('3fdcbd7298f0fd43017e0d7fa388b0c2','thinkbase','112.65.136.195',1354588198);
 INSERT INTO "auth_cookie" VALUES('a59461514381bba16d6bdbf6129002e6','thinkbase','112.65.136.195',1354610504);
+INSERT INTO "auth_cookie" VALUES('0a95d5e115768238a798c4c2ba874e0a','thinkbase','61.171.91.97',1355062620);
+INSERT INTO "auth_cookie" VALUES('c9cbea07c790dd87d30f7a705d77b72e','thinkbase','61.171.91.97',1355067142);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -64,7 +64,7 @@ CREATE TABLE session (
     UNIQUE (sid,authenticated)
 );
 INSERT INTO "session" VALUES('admin',1,1354554934);
-INSERT INTO "session" VALUES('thinkbase',1,1354557035);
+INSERT INTO "session" VALUES('thinkbase',1,1355153860);
 INSERT INTO "session" VALUES('11ba61427b966c9f5d553c53',0,1352582903);
 INSERT INTO "session" VALUES('a9dec5feee37a1288464f4eb',0,1352627247);
 INSERT INTO "session" VALUES('b8aeb3552c2fe9ea8b8ad4ea',0,1352760743);
@@ -90,6 +90,9 @@ INSERT INTO "session" VALUES('62964bb46d1028432b564510',0,1354638825);
 INSERT INTO "session" VALUES('12b1a514adab6455d8a1a524',0,1354723322);
 INSERT INTO "session" VALUES('d54358dbf0d03a47ff0f88e3',0,1354757212);
 INSERT INTO "session" VALUES('a6c103972fdbaa5c28d65ad3',0,1354781984);
+INSERT INTO "session" VALUES('3aacd40b9a80d1623eadc106',0,1354900029);
+INSERT INTO "session" VALUES('25f1fcc6afb8c0f4b55ff146',0,1354917638);
+INSERT INTO "session" VALUES('0d8a1568c4c82f8094ed979b',0,1354974060);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -143,12 +146,6 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1352627184000000');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1352581035173000');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','8');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1353728908000000');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
 INSERT INTO "session_attribute" VALUES('3cc70d0f311cfb79e007d8b6',0,'timeline.lastvisit','1354557159000000');
 INSERT INTO "session_attribute" VALUES('3cc70d0f311cfb79e007d8b6',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('cc7411e59742c338a9b065df',0,'timeline.lastvisit','1354610796000000');
@@ -161,6 +158,18 @@ INSERT INTO "session_attribute" VALUES('d54358dbf0d03a47ff0f88e3',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('d54358dbf0d03a47ff0f88e3',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('a6c103972fdbaa5c28d65ad3',0,'timeline.lastvisit','1354610796000000');
 INSERT INTO "session_attribute" VALUES('a6c103972fdbaa5c28d65ad3',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3aacd40b9a80d1623eadc106',0,'timeline.lastvisit','1354610796000000');
+INSERT INTO "session_attribute" VALUES('3aacd40b9a80d1623eadc106',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('25f1fcc6afb8c0f4b55ff146',0,'timeline.lastvisit','1354610796000000');
+INSERT INTO "session_attribute" VALUES('25f1fcc6afb8c0f4b55ff146',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0d8a1568c4c82f8094ed979b',0,'timeline.lastvisit','1354610796000000');
+INSERT INTO "session_attribute" VALUES('0d8a1568c4c82f8094ed979b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1352581035173000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','8');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1353728908000000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -380,6 +389,11 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/03','20111203-174845.p
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/03','20111203-174853.png',78294,1354556023257000,'','thinkbase','180.169.66.118');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/03-2','TracDragDropPlugin.png',181832,1354556879192000,'','thinkbase','180.169.66.118');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/03-2','image-20121204-164318.png',35409,1354610636737000,'','thinkbase','112.65.136.195');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/09','DocFetcher.sh.png',62664,1355152704250000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/09','DocFetcher-after-patched.png',163767,1355152706156000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/09','DocFetcher-乱码.png',191111,1355152708437000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/09','truezip-zip-charset-patch-20121209.jar',3600,1355153165149000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/09','truezip-zip-charset-patch-source.7z',1062854,1355153175149000,'','thinkbase','61.171.91.97');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -30641,6 +30655,54 @@ INSERT INTO "wiki" VALUES('PortableTrac',3,1354557035132000,'thinkbase','180.169
 //TODO - 待完善
 
 https://github.com/thinkbase/PortableTrac','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',4,1355153860081000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
+
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布的, 是一个"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
+ 3. 默认已设置为中文版本;
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',5,1355153892769000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
+
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
+ 3. 默认已设置为中文版本;
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',6,1355154387915000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
+
+== 简介 ==
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
+ 3. 默认已设置为中文版本;
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
+
+== 为什么要创建 PortableTrac ==
+主要是为了自己使用方便, 比如这个站点(http://www.thinkbase.net)就是基于 PortableTrac 的当前版本建立的.','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',7,1355154411572000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
+
+== 简介 ==
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
+ 3. 默认已设置为中文版本;
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
+
+== 为什么要创建 PortableTrac ==
+主要是为了自己使用方便, 比如这个站点( http://www.thinkbase.net )就是基于 PortableTrac 的当前版本建立的.','',0);
 CREATE TABLE repository (
     id integer,
     name text,
@@ -32750,6 +32812,676 @@ INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',3,'快速增加附�
 INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',4,'快速上传附件 - TracDragDropPlugin 插件','[http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 是 http://trac-hacks.org/ 上面的一个 [http://trac.edgewall.org/ Trac] 插件, 其主要功能就是使用 HTML5 `drag-and-drop` 方式, 快速上次附件.
 
 前面一篇 Blog([blog:thinkbase-2012/12/03 这里]) 具有 171 个截图, 这些图片附件就是使用 [http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 批量上传的:[[BR]][[Image(TracDragDropPlugin.png, 100%)]].',1354556865,1354556954,'','thinkbase','thinkbase','trac plugin TracDragDropPlugin html5 upload');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',1,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从解除 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(rewritten from scratch), 包括了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Outlook PST file indexing
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 但是发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [truezip http://truezip.java.net/] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [truezip http://truezip.java.net/] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+}}}
+
+',1355069325,1355069325,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',2,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从解除 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 但是发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+
+
+顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;',1355069325,1355071048,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',3,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从解除 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 但是发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
+
+修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
+
+本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
+
+顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;',1355069325,1355152460,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',4,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+[[Image(DocFetcher-乱码.png, 100%)]]
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
+[[Image(DocFetcher.sh.png, 100%)]]
+
+修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
+[[Image(DocFetcher-after-patched.png, 100%)]]
+
+本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
+
+顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;',1355069325,1355152687,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',5,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+== 概况 ==
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+[[Image(DocFetcher-乱码.png, 100%)]]
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 !DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
+[[Image(DocFetcher.sh.png, 100%)]]
+
+修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
+[[Image(DocFetcher-after-patched.png, 100%)]]
+
+== 总结 ==
+ - 使用 Java System Property `de.schlichtherle.truezip.fs.archive.zip.ZIP_CHARSET` 或者 环境变量 `TRUEZIP_ZIP_CHARSET` 来设置默认情况下 zip 文件采用的编码;
+ - 补丁 jar 包(需要放在 CLASSPATH 的最前面)下载: raw-attachment:truezip-zip-charset-patch-20121209.jar ;
+ - 补丁 jar 包的源程序(含 eclipse 工程和编译必要的 jar 包)下载: raw-attachment:truezip-zip-charset-patch-source.7z ;
+
+== 补充说明 ==
+本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
+
+顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;
+
+== END ==',1355069325,1355153145,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',4,'桌面搜索工具 DocFetcher 试用笔记(补 20110416)','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
+
+= 简介 =
+在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
+
+在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
+
+== 主要特色 ==
+ * 基于 Java SWT 开发, 跨平台;
+ * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
+ * 界面比较简单, 但是使用很方便, 基本上只要两步:
+  1. 添加要索引的目录, 建立索引;
+  1. 输出要查询的字符串, 进行查找;
+ * 中文支持不错;
+
+== 需要解决的问题 ==
+ * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
+ * 不支持对文件名进行查找;
+ * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
+
+== 中文化 ==
+ * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
+ * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachment:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
+
+== 后记 ==
+ - 20110416
+  * Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
+ - 20121203
+  * 发现目前 !DocFetcher 已经升级到 `1.1.5` 版本了, 已经支持对 zip、7z、rar 等格式的压缩文件进行索引, 具体情况有待试验:
+{{{
+#!div style="background-color:#ffd"
+Between version 1.0.3 and version 1.1 beta 1, !DocFetcher was rewritten from scratch, resulting in a large number of new features and changes. [http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1 This page] gives an overview of the most important ones.
+}}}
+
+== END ==
+',1354467486,1355153235,'','thinkbase','thinkbase','java search-engine DocFetcher');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',6,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+== 概况 ==
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+[[Image(DocFetcher-乱码.png, 100%)]]
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 !DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
+[[Image(DocFetcher.sh.png, 100%)]]
+
+修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
+[[Image(DocFetcher-after-patched.png, 100%)]]
+
+== 总结 ==
+ - 使用 Java System Property `de.schlichtherle.truezip.fs.archive.zip.ZIP_CHARSET` 或者 环境变量 `TRUEZIP_ZIP_CHARSET` 来设置默认情况下 zip 文件采用的编码;
+ - 补丁 jar 包(需要放在 CLASSPATH 的最前面)下载: raw-attachment:truezip-zip-charset-patch-20121209.jar ;
+ - 补丁 jar 包的源程序(含 eclipse 工程和编译必要的 jar 包)下载: raw-attachment:truezip-zip-charset-patch-source.7z ;
+
+== 补充说明 ==
+本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
+
+顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;
+
+== END ==',1355069325,1355153252,'','thinkbase','thinkbase','DocFetcher search-engine java truezip zip rar 7-zip');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
@@ -32777,6 +33509,7 @@ Processing dependencies for tracdragdrop==0.12.0.10-r12033
 Finished processing dependencies for tracdragdrop==0.12.0.10-r12033
 }}}','thinkbase',1354557159);
 INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/03-2',2,'支持从剪贴板上次图片，下面这张图片就是通过在开始菜单“附件 - 画图”中复制到剪贴板的：[[Image(image-20121204-164318.png)]]','thinkbase',1354610796);
+INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/02-2',1,'通过基于 [http://truezip.java.net/ truezip] 和 7-zip 的支持, 最新版本的 `DocFetcher-1.1.5` 已经支持对压缩文件中内容进行索引, truezip 内置对 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 多种压缩文件格式的支持, 7-zip 用于支持 `.7z` 和 `.rar` 格式的压缩文件;','thinkbase',1355062749);
 CREATE TABLE votes (
     resource text,
     username text,
