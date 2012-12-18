@@ -51,6 +51,7 @@ INSERT INTO "auth_cookie" VALUES('c9cbea07c790dd87d30f7a705d77b72e','thinkbase',
 INSERT INTO "auth_cookie" VALUES('773597cec641ceb74f4a13e71251b135','admin','61.171.91.97',1355655550);
 INSERT INTO "auth_cookie" VALUES('a71c308bcabde3d9ea945a4e84d8e710','admin','61.171.91.97',1355655910);
 INSERT INTO "auth_cookie" VALUES('f04f5ef537697c6eaf4ef88d7d66df1a','admin','61.171.91.97',1355656187);
+INSERT INTO "auth_cookie" VALUES('f039ba70648bec505e9e4b4428d1eef6','thinkbase','61.171.91.97',1355666713);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -97,6 +98,9 @@ INSERT INTO "session" VALUES('9addbba8531bfb71cd6e1156',0,1355560502);
 INSERT INTO "session" VALUES('9395d580572eed092440c6a7',0,1355579276);
 INSERT INTO "session" VALUES('5ffa33a2cd91171f99d71b4c',0,1355597148);
 INSERT INTO "session" VALUES('c8dd460ba2d691746b952405',0,1355613776);
+INSERT INTO "session" VALUES('807948a2237dfb31f1e9d44d',0,1355659716);
+INSERT INTO "session" VALUES('92c6eb5572b4ad4d58ffc2c4',0,1355708913);
+INSERT INTO "session" VALUES('ee3ad8cb7e99bafcd38dd237',0,1355796247);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -188,12 +192,18 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1352627184000000');
+INSERT INTO "session_attribute" VALUES('807948a2237dfb31f1e9d44d',0,'timeline.lastvisit','1355656544683000');
+INSERT INTO "session_attribute" VALUES('807948a2237dfb31f1e9d44d',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1352581035173000');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1353728908000000');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
+INSERT INTO "session_attribute" VALUES('92c6eb5572b4ad4d58ffc2c4',0,'timeline.lastvisit','1355666846878000');
+INSERT INTO "session_attribute" VALUES('92c6eb5572b4ad4d58ffc2c4',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('ee3ad8cb7e99bafcd38dd237',0,'timeline.lastvisit','1355666846878000');
+INSERT INTO "session_attribute" VALUES('ee3ad8cb7e99bafcd38dd237',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -30753,6 +30763,21 @@ INSERT INTO "wiki" VALUES('misc/NetworkDigest',1,1355656544683000,'thinkbase','6
 ----
  - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
   - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',2,1355666812081000,'thinkbase','61.171.91.97','= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:][[BR]][[BR]]
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',3,1355666846878000,'thinkbase','61.171.91.97','= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''','',0);
 CREATE TABLE repository (
     id integer,
     name text,
