@@ -198,6 +198,32 @@ INSERT INTO "session" VALUES('80afa0acaab2a385dec62453',0,1357219792);
 INSERT INTO "session" VALUES('4bf348403a2c45074f3d6cb7',0,1357276988);
 INSERT INTO "session" VALUES('9cb062d0d050d4173a742bba',0,1357284011);
 INSERT INTO "session" VALUES('617d8553d653eb638930125e',0,1357291225);
+INSERT INTO "session" VALUES('560d88b2b303923a148d1fa7',0,1357339184);
+INSERT INTO "session" VALUES('0d57c3349ab6dc0711b5714f',0,1357339852);
+INSERT INTO "session" VALUES('c0263908b24eb06d8724c0a5',0,1357349726);
+INSERT INTO "session" VALUES('7a895719e509178ee30d2f07',0,1357358258);
+INSERT INTO "session" VALUES('195187d90bedb0eda6fa74d8',0,1357363390);
+INSERT INTO "session" VALUES('5b40f0dcf25014b8c845744c',0,1357370398);
+INSERT INTO "session" VALUES('496351773c850e2d45cd0777',0,1357377607);
+INSERT INTO "session" VALUES('f0c8df617a04301bc5d4b67a',0,1357382103);
+INSERT INTO "session" VALUES('79a8a416a12abbc03a9a64e0',0,1357389763);
+INSERT INTO "session" VALUES('3faa2d7e097e0fd24850ee03',0,1357449797);
+INSERT INTO "session" VALUES('7da27c542e30311755b0d467',0,1357456798);
+INSERT INTO "session" VALUES('3165a8a0492ce768db848e03',0,1357464004);
+INSERT INTO "session" VALUES('e23d80135af2fc8efd18befc',0,1357497086);
+INSERT INTO "session" VALUES('2d1f4eb3dcad12062397a05c',0,1357504955);
+INSERT INTO "session" VALUES('3125ae97261b09815cd980af',0,1357506369);
+INSERT INTO "session" VALUES('e15a505499066162251caedc',0,1357533435);
+INSERT INTO "session" VALUES('d7f348588f3b50ff59d3e3c0',0,1357536180);
+INSERT INTO "session" VALUES('6a1cbda1fe147db8de87241d',0,1357543198);
+INSERT INTO "session" VALUES('e13e0e34c834a571246e8683',0,1357550406);
+INSERT INTO "session" VALUES('2e6b90c76bbf24560d90e22b',0,1357564688);
+INSERT INTO "session" VALUES('8feb2db159790248925ec5d0',0,1357584394);
+INSERT INTO "session" VALUES('73ce6bb809520cb90caa0688',0,1357606949);
+INSERT INTO "session" VALUES('6ba73ad9ef8d886fb7fb0ea2',0,1357622592);
+INSERT INTO "session" VALUES('28afe1f7de97ac28d61639c8',0,1357629598);
+INSERT INTO "session" VALUES('d1f921790ae3bcd78363935c',0,1357636805);
+INSERT INTO "session" VALUES('0efaecb99a8107ff1f567f52',0,1357645501);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -507,6 +533,58 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1352627184000000');
+INSERT INTO "session_attribute" VALUES('560d88b2b303923a148d1fa7',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('560d88b2b303923a148d1fa7',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0d57c3349ab6dc0711b5714f',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('0d57c3349ab6dc0711b5714f',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('c0263908b24eb06d8724c0a5',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('c0263908b24eb06d8724c0a5',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('7a895719e509178ee30d2f07',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('7a895719e509178ee30d2f07',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('195187d90bedb0eda6fa74d8',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('195187d90bedb0eda6fa74d8',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('5b40f0dcf25014b8c845744c',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('5b40f0dcf25014b8c845744c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('496351773c850e2d45cd0777',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('496351773c850e2d45cd0777',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f0c8df617a04301bc5d4b67a',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('f0c8df617a04301bc5d4b67a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('79a8a416a12abbc03a9a64e0',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('79a8a416a12abbc03a9a64e0',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3faa2d7e097e0fd24850ee03',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('3faa2d7e097e0fd24850ee03',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('7da27c542e30311755b0d467',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('7da27c542e30311755b0d467',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3165a8a0492ce768db848e03',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('3165a8a0492ce768db848e03',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e23d80135af2fc8efd18befc',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('e23d80135af2fc8efd18befc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2d1f4eb3dcad12062397a05c',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('2d1f4eb3dcad12062397a05c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3125ae97261b09815cd980af',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('3125ae97261b09815cd980af',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e15a505499066162251caedc',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('e15a505499066162251caedc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d7f348588f3b50ff59d3e3c0',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('d7f348588f3b50ff59d3e3c0',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6a1cbda1fe147db8de87241d',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('6a1cbda1fe147db8de87241d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e13e0e34c834a571246e8683',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('e13e0e34c834a571246e8683',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2e6b90c76bbf24560d90e22b',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('2e6b90c76bbf24560d90e22b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('8feb2db159790248925ec5d0',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('8feb2db159790248925ec5d0',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('73ce6bb809520cb90caa0688',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('73ce6bb809520cb90caa0688',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6ba73ad9ef8d886fb7fb0ea2',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('6ba73ad9ef8d886fb7fb0ea2',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('28afe1f7de97ac28d61639c8',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('28afe1f7de97ac28d61639c8',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d1f921790ae3bcd78363935c',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('d1f921790ae3bcd78363935c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0efaecb99a8107ff1f567f52',0,'timeline.lastvisit','1357317080000000');
+INSERT INTO "session_attribute" VALUES('0efaecb99a8107ff1f567f52',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -30916,218 +30994,218 @@ INSERT INTO "wiki" VALUES('WikiStart',9,1353814627701000,'admin','61.171.91.97',
 
 ----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
-INSERT INTO "wiki" VALUES('WikiStart',10,1354454856818000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
-{{{
-#!html
-<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
-    Talk is cheap. Show me the code.
-</div>
-}}}
-
-== 项目 ==
- * `PortableTrac`: 项目管理工具 Trac 重新打包发布的 "Portable" 版本;
-  - [wiki:PortableTrac/install 安装和使用说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac github project]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',10,1354454856818000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 Trac 重新打包发布的 "Portable" 版本;
+  - [wiki:PortableTrac/install 安装和使用说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac github project]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
-INSERT INTO "wiki" VALUES('PortableTrac/install',1,1354454908490000,'admin','61.171.91.97','== PortableTrac 安装说明 ==
+INSERT INTO "wiki" VALUES('PortableTrac/install',1,1354454908490000,'admin','61.171.91.97','== PortableTrac 安装说明 ==
 //TODO - 待完善','',0);
-INSERT INTO "wiki" VALUES('WikiStart',11,1354455031929000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
-{{{
-#!html
-<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
-    Talk is cheap. Show me the code.
-</div>
-}}}
-
-== 项目 ==
- * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 "Portable" 版本;
-  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac github project]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',11,1354455031929000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 "Portable" 版本;
+  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac github project]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
 INSERT INTO "wiki" VALUES('PortableTrac',1,1354455063992000,'admin','61.171.91.97','= 关于 PortableTrac =','',0);
-INSERT INTO "wiki" VALUES('PortableTrac',2,1354455083570000,'admin','61.171.91.97','= 关于 PortableTrac =
+INSERT INTO "wiki" VALUES('PortableTrac',2,1354455083570000,'admin','61.171.91.97','= 关于 PortableTrac =
 //TODO - 待完善','',0);
-INSERT INTO "wiki" VALUES('WikiStart',12,1354455130540000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
-{{{
-#!html
-<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
-    Talk is cheap. Show me the code.
-</div>
-}}}
-
-== 项目 ==
- * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
-  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac github project]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',12,1354455130540000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
+  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac github project]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
-INSERT INTO "wiki" VALUES('WikiStart',13,1354455193822000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
-{{{
-#!html
-<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
-    Talk is cheap. Show me the code.
-</div>
-}}}
-
-== 项目 ==
- * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
-  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac GitHub Repositories]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',13,1354455193822000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
+  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac GitHub Repositories]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
-INSERT INTO "wiki" VALUES('PortableTrac',3,1354557035132000,'thinkbase','180.169.66.118','= 关于 PortableTrac =
-//TODO - 待完善
-
+INSERT INTO "wiki" VALUES('PortableTrac',3,1354557035132000,'thinkbase','180.169.66.118','= 关于 PortableTrac =
+//TODO - 待完善
+
 https://github.com/thinkbase/PortableTrac','',0);
-INSERT INTO "wiki" VALUES('PortableTrac',4,1355153860081000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
-
-PortableTrac 是 `thinkbase.net` 经过整理后打包发布的, 是一个"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
- 1. Portable - 解压后即可使用;
- 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
- 3. 默认已设置为中文版本;
-
-PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
-
+INSERT INTO "wiki" VALUES('PortableTrac',4,1355153860081000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
+
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布的, 是一个"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
+ 3. 默认已设置为中文版本;
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
 除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .','',0);
-INSERT INTO "wiki" VALUES('PortableTrac',5,1355153892769000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
-
-PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
- 1. Portable - 解压后即可使用;
- 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
- 3. 默认已设置为中文版本;
-
-PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
-
+INSERT INTO "wiki" VALUES('PortableTrac',5,1355153892769000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
+
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
+ 3. 默认已设置为中文版本;
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
 除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .','',0);
-INSERT INTO "wiki" VALUES('PortableTrac',6,1355154387915000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
-
-== 简介 ==
-PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
- 1. Portable - 解压后即可使用;
- 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
- 3. 默认已设置为中文版本;
-
-PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
-
-除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
-
-== 为什么要创建 PortableTrac ==
+INSERT INTO "wiki" VALUES('PortableTrac',6,1355154387915000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
+
+== 简介 ==
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
+ 3. 默认已设置为中文版本;
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
+
+== 为什么要创建 PortableTrac ==
 主要是为了自己使用方便, 比如这个站点(http://www.thinkbase.net)就是基于 PortableTrac 的当前版本建立的.','',0);
-INSERT INTO "wiki" VALUES('PortableTrac',7,1355154411572000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
-
-== 简介 ==
-PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
- 1. Portable - 解压后即可使用;
- 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
- 3. 默认已设置为中文版本;
-
-PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
-
-除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
-
-== 为什么要创建 PortableTrac ==
+INSERT INTO "wiki" VALUES('PortableTrac',7,1355154411572000,'thinkbase','61.171.91.97','= 关于 PortableTrac =
+
+== 简介 ==
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的功能插件, 以及 Apache httpd 等必要的相关软件;
+ 3. 默认已设置为中文版本;
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+除了 [http://www.portablepython.com/ PortablePython] 运行环境, PortableTrac 的所有代码(主要是 python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
+
+== 为什么要创建 PortableTrac ==
 主要是为了自己使用方便, 比如这个站点( http://www.thinkbase.net )就是基于 PortableTrac 的当前版本建立的.','',0);
-INSERT INTO "wiki" VALUES('WikiStart',14,1355656357839000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
-{{{
-#!html
-<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
-    Talk is cheap. Show me the code.
-</div>
-}}}
-
-== 项目 ==
- * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
-  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac GitHub Repositories]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]]
- - [/blog 更多...]
-
-== 杂项 ==
- - [wiki:misc/NetworkDigest 互联网语录]: 摘录网络上比较有趣的话语 ...
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',14,1355656357839000,'admin','61.171.91.97','= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
+  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac GitHub Repositories]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]]
+ - [/blog 更多...]
+
+== 杂项 ==
+ - [wiki:misc/NetworkDigest 互联网语录]: 摘录网络上比较有趣的话语 ...
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
-INSERT INTO "wiki" VALUES('misc/NetworkDigest',1,1355656544683000,'thinkbase','61.171.91.97','= 互联网语录 =
-''''摘录网络上比较有趣的话语 ...''''
-----
- - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',1,1355656544683000,'thinkbase','61.171.91.97','= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
   - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]','',0);
-INSERT INTO "wiki" VALUES('misc/NetworkDigest',2,1355666812081000,'thinkbase','61.171.91.97','= 互联网语录 =
-''''摘录网络上比较有趣的话语 ...''''
-----
- - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
-  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:][[BR]][[BR]]
- - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',2,1355666812081000,'thinkbase','61.171.91.97','= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:][[BR]][[BR]]
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
   - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]','',0);
-INSERT INTO "wiki" VALUES('misc/NetworkDigest',3,1355666846878000,'thinkbase','61.171.91.97','= 互联网语录 =
-''''摘录网络上比较有趣的话语 ...''''
-----
- - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
-  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
-
- - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',3,1355666846878000,'thinkbase','61.171.91.97','= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
   - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''','',0);
-INSERT INTO "wiki" VALUES('misc/NetworkDigest',4,1355925312698000,'thinkbase','61.171.91.97','= 互联网语录 =
-''''摘录网络上比较有趣的话语 ...''''
-----
- - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
-  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
-
- - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
-  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
-
- - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',4,1355925312698000,'thinkbase','61.171.91.97','= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
   - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]','',0);
-INSERT INTO "wiki" VALUES('misc/NetworkDigest',5,1356066687791000,'thinkbase','112.65.136.195','= 互联网语录 =
-''''摘录网络上比较有趣的话语 ...''''
-----
- - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
-  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
-
- - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
-  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
-
- - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
-  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
-
- - {{{www.google.com.hk - 玛雅历法预言末日}}}
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',5,1356066687791000,'thinkbase','112.65.136.195','= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
   - [[Image(玛雅历法预言末日.jpg)]]','',0);
-INSERT INTO "wiki" VALUES('WikiStart',15,1357317046894000,'admin','180.169.66.118','[[PageOutline]]
-= 欢迎访问 thinkbase.net =
-{{{
-#!html
-<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
-    Talk is cheap. Show me the code.
-</div>
-}}}
-
-== 项目 ==
- * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
-  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac GitHub Repositories]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]]
- - [/blog 更多...]
-
-== 杂项 ==
- - [wiki:misc/NetworkDigest 互联网语录]: 摘录网络上比较有趣的话语 ...
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',15,1357317046894000,'admin','180.169.66.118','[[PageOutline]]
+= 欢迎访问 thinkbase.net =
+{{{
+#!html
+<div style="text-align: center; color: darkorange; font-size: 16pt; font-weight: bold">
+    Talk is cheap. Show me the code.
+</div>
+}}}
+
+== 项目 ==
+ * `PortableTrac`: 项目管理工具 [http://trac.edgewall.org/ Trac] 重新打包发布的 `"Portable"` 版本;
+  - [wiki:PortableTrac 概述] | [wiki:PortableTrac/install 安装说明] | [/../trac Online demo] | [https://github.com/thinkbase/PortableTrac GitHub Repositories]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]]
+ - [/blog 更多...]
+
+== 杂项 ==
+ - [wiki:misc/NetworkDigest 互联网语录]: 摘录网络上比较有趣的话语 ...
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',1);
 CREATE TABLE repository (
     id integer,
@@ -31657,2383 +31735,2383 @@ INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/11/25',4,'常用的 PuTTY �
  - [[Image(001.png)]]
 
 == END ==',1353847620,1353848004,'','thinkbase','thinkbase','ssh linux');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',1,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image:http://trac-hacks.org/chrome/site/trachacks_banner.png]], 而 favorites icon 则为 Trac 默认图标 [[Image:/common/trac.ico]].
-
-现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
- - logo 的来源:[[BR]][[Image:1354456794_OpenOffice.png]]
- - favorites icon 的来源:[[BR]][[Image:1354458207_OpenOffice.png]]
-
-logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见[[attachment:thinkbase-logo.xcf 附件 thinkbase-logo.xcf]];
-
-关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
- - [attachment:IconSearch01.png logo 图片来源]
- - [attachment:IconSearch02.png favorites icon 图片来源]
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',1,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image:http://trac-hacks.org/chrome/site/trachacks_banner.png]], 而 favorites icon 则为 Trac 默认图标 [[Image:/common/trac.ico]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image:1354456794_OpenOffice.png]]
+ - favorites icon 的来源:[[BR]][[Image:1354458207_OpenOffice.png]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见[[attachment:thinkbase-logo.xcf 附件 thinkbase-logo.xcf]];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
 ',1354459975,1354459975,'','thinkbase','thinkbase','gimp icon logo');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',2,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]], 而 favorites icon 则为 Trac 默认图标 [[Image(/common/trac.ico)]].
-
-现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
- - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
- - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
-
-logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见[[attachment:thinkbase-logo.xcf 附件 thinkbase-logo.xcf]];
-
-关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
- - [attachment:IconSearch01.png logo 图片来源]
- - [attachment:IconSearch02.png favorites icon 图片来源]
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',2,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]], 而 favorites icon 则为 Trac 默认图标 [[Image(/common/trac.ico)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
+ - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见[[attachment:thinkbase-logo.xcf 附件 thinkbase-logo.xcf]];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
 ',1354459975,1354460016,'','thinkbase','thinkbase','gimp icon logo');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',3,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]], 而 favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico)]].
-
-现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
- - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
- - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
-
-logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见[[attachment:thinkbase-logo.xcf 附件 thinkbase-logo.xcf]];
-
-关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
- - [attachment:IconSearch01.png logo 图片来源]
- - [attachment:IconSearch02.png favorites icon 图片来源]
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',3,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]], 而 favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
+ - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见[[attachment:thinkbase-logo.xcf 附件 thinkbase-logo.xcf]];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
 ',1354459975,1354460105,'','thinkbase','thinkbase','gimp icon logo');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',4,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]], 而 favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico)]].
-
-现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
- - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
- - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
-
-logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
-
-关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
- - [attachment:IconSearch01.png logo 图片来源]
- - [attachment:IconSearch02.png favorites icon 图片来源]
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',4,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]], 而 favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
+ - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
 ',1354459975,1354460328,'','thinkbase','thinkbase','gimp icon logo');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',5,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的
- - logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]]
- - favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico)]].
-
-现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
- - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
- - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
-
-logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
-
-关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
- - [attachment:IconSearch01.png logo 图片来源]
- - [attachment:IconSearch02.png favorites icon 图片来源]
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',5,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的
+ - logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png)]]
+ - favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:[[BR]][[Image(1354456794_OpenOffice.png)]]
+ - favorites icon 的来源:[[BR]][[Image(1354458207_OpenOffice.png)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
 ',1354459975,1354460492,'','thinkbase','thinkbase','gimp icon logo');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',6,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png, middle)]], favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico, middle)]].
-
-现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
- - logo 的来源:
-  - [[Image(1354456794_OpenOffice.png, top)]]
- - favorites icon 的来源:
-  - [[Image(1354458207_OpenOffice.png, top)]]
-
-logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
-
-关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
- - [attachment:IconSearch01.png logo 图片来源]
- - [attachment:IconSearch02.png favorites icon 图片来源]
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',6,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png, middle)]], favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico, middle)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:
+  - [[Image(1354456794_OpenOffice.png, top)]]
+ - favorites icon 的来源:
+  - [[Image(1354458207_OpenOffice.png, top)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
 ',1354459975,1354460689,'','thinkbase','thinkbase','gimp icon logo');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',7,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png, middle)]], favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico, middle)]].
-
-现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
- - logo 的来源:
-  - [[Image(1354456794_OpenOffice.png, top)]]
- - favorites icon 的来源:
-  - [[Image(1354458207_OpenOffice.png, top)]]
-
-logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
-
-关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
- - [attachment:IconSearch01.png logo 图片来源]
- - [attachment:IconSearch02.png favorites icon 图片来源]
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',7,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png, middle)]], favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico, middle)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:
+  - [[Image(1354456794_OpenOffice.png, top)]]
+ - favorites icon 的来源:
+  - [[Image(1354458207_OpenOffice.png, top)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+
 站点 logo / favorites icon 调整的方法参考 ZhTracInterfaceCustomization ;',1354459975,1354461026,'','thinkbase','thinkbase','gimp icon logo');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',8,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png, middle)]], favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico, middle)]].
-
-现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
- - logo 的来源:
-  - [[Image(1354456794_OpenOffice.png, top)]]
- - favorites icon 的来源:
-  - [[Image(1354458207_OpenOffice.png, top)]]
-
-logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
-
-关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
- - [attachment:IconSearch01.png logo 图片来源]
- - [attachment:IconSearch02.png favorites icon 图片来源]
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02',8,'thinkbase.net 站点 logo / favorites icon 调整','默认情况下 PortableTrac 的 logo 为 [[Image(http://trac-hacks.org/chrome/site/trachacks_banner.png, middle)]], favorites icon 则为 Trac 默认图标 [[Image(/chrome/common/trac.ico, middle)]].
+
+现在 thinkbase.net 的 logo 和 favorites icon 是在 !OpenOffice 相关图标的基础上修改得到的, 来源为下面两个图标:
+ - logo 的来源:
+  - [[Image(1354456794_OpenOffice.png, top)]]
+ - favorites icon 的来源:
+  - [[Image(1354458207_OpenOffice.png, top)]]
+
+logo 上的文字是使用 GIMP 修改上去的, 使用的是 [http://www.wenq.org/index.cgi?FontGuide#_4 文泉驿等宽正黑] 字体, GIMP 源文件 (.xcf 格式) 见附件 [attachment:thinkbase-logo.xcf thinkbase-logo.xcf];
+
+关于这两个图标的详细来源和 License, 请详细参考 [http://www.iconfinder.com/ ICON FINDER] 上的相关页面:
+ - [attachment:IconSearch01.png logo 图片来源]
+ - [attachment:IconSearch02.png favorites icon 图片来源]
+
 站点 logo / favorites icon 调整的方法参考 ZhTracInterfaceCustomization ;',1354459975,1354465292,'','thinkbase','thinkbase','gimp trac');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',1,'20110146 - 桌面搜索工具 DocFetcher 试用笔记','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
-
-= 简介 =
-在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
-
-在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (	2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
-
-== 主要特色 ==
- * 基于 Java SWT 开发, 跨平台;
- * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
- * 界面比较简单, 但是使用很方便, 基本上只要两步:
-  # 添加要索引的目录, 建立索引;
-  # 输出要查询的字符串, 进行查找;
- * 中文支持不错;
-
-== 需要解决的问题 ==
- * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
- * 不支持对文件名进行查找;
- * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
-
-== 中文化 ==
- * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
- * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachement:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
-  - `DocFetcher` 1.0.3 的中文资源文件, 复制到 `DocFetcher` 安装目录的下的 `lang` 子目录即可起作用;
-  - 注意其中的 `Resource_zh_CN.properties.txt` 是中文源文件, 执行 `native2ascii Resource_zh_CN.properties.txt > Resource_zh_CN.properties` , 可产生实际起作用的资源文件 `Resource_zh_CN.properties`.
-
-== END ==
-
-== 后记 ==
-Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',1,'20110146 - 桌面搜索工具 DocFetcher 试用笔记','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
+
+= 简介 =
+在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
+
+在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (	2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
+
+== 主要特色 ==
+ * 基于 Java SWT 开发, 跨平台;
+ * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
+ * 界面比较简单, 但是使用很方便, 基本上只要两步:
+  # 添加要索引的目录, 建立索引;
+  # 输出要查询的字符串, 进行查找;
+ * 中文支持不错;
+
+== 需要解决的问题 ==
+ * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
+ * 不支持对文件名进行查找;
+ * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
+
+== 中文化 ==
+ * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
+ * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachement:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
+  - `DocFetcher` 1.0.3 的中文资源文件, 复制到 `DocFetcher` 安装目录的下的 `lang` 子目录即可起作用;
+  - 注意其中的 `Resource_zh_CN.properties.txt` 是中文源文件, 执行 `native2ascii Resource_zh_CN.properties.txt > Resource_zh_CN.properties` , 可产生实际起作用的资源文件 `Resource_zh_CN.properties`.
+
+== END ==
+
+== 后记 ==
+Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
 ',1354467486,1354467486,'','thinkbase','thinkbase','java search-engine');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',2,'20110416 - 桌面搜索工具 DocFetcher 试用笔记','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
-
-= 简介 =
-在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
-
-在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
-
-== 主要特色 ==
- * 基于 Java SWT 开发, 跨平台;
- * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
- * 界面比较简单, 但是使用很方便, 基本上只要两步:
-  1. 添加要索引的目录, 建立索引;
-  1. 输出要查询的字符串, 进行查找;
- * 中文支持不错;
-
-== 需要解决的问题 ==
- * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
- * 不支持对文件名进行查找;
- * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
-
-== 中文化 ==
- * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
- * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachment:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
-
-== 后记 ==
- - 20110416
-  * Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
- - 20121203
-  * 发现目前 !DocFetcher 已经升级到 `1.1.5` 版本了, 已经支持对 zip、7z、rar 等格式的压缩文件进行索引, 具体情况有待试验:
-{{{
-#!div style="background-color:#ffd"
-Between version 1.0.3 and version 1.1 beta 1, !DocFetcher was rewritten from scratch, resulting in a large number of new features and changes. [http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1 This page] gives an overview of the most important ones.
-}}}
-
-== END ==
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',2,'20110416 - 桌面搜索工具 DocFetcher 试用笔记','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
+
+= 简介 =
+在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
+
+在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
+
+== 主要特色 ==
+ * 基于 Java SWT 开发, 跨平台;
+ * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
+ * 界面比较简单, 但是使用很方便, 基本上只要两步:
+  1. 添加要索引的目录, 建立索引;
+  1. 输出要查询的字符串, 进行查找;
+ * 中文支持不错;
+
+== 需要解决的问题 ==
+ * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
+ * 不支持对文件名进行查找;
+ * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
+
+== 中文化 ==
+ * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
+ * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachment:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
+
+== 后记 ==
+ - 20110416
+  * Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
+ - 20121203
+  * 发现目前 !DocFetcher 已经升级到 `1.1.5` 版本了, 已经支持对 zip、7z、rar 等格式的压缩文件进行索引, 具体情况有待试验:
+{{{
+#!div style="background-color:#ffd"
+Between version 1.0.3 and version 1.1 beta 1, !DocFetcher was rewritten from scratch, resulting in a large number of new features and changes. [http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1 This page] gives an overview of the most important ones.
+}}}
+
+== END ==
 ',1354467486,1354468208,'','thinkbase','thinkbase','java search-engine');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',1,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
-
-截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
-
-== 简介 ==
-一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
-
-有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
-{{{
-nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
-}}}
-`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
-
-使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
-
-另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
-
-== Linux 下的处理方法 ==
-使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
- 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
-{{{
-import -window <Window ID> <FileName>.png
-}}}
- 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如 <u>`import -window root MyScreenshot3.png`</u>;
- 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
-{{{
-xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
-}}}
- 1. 20111120 添加 - [20111120_ScreenRecorderShellInLinux Linux 下定期屏幕截屏脚本];
-
-== 下载 ==
- * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
-
-== 其它 ==
- 1. 减少文件大小
-  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
-
-== 参考资料 ==
- 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
-  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
- 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
-  * "我的ImageMagick使用心得", ImageMagick 的中文介绍;
- 1. http://www.ruby-forum.com/topic/165740#728314
-  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',1,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
+
+截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
+
+== 简介 ==
+一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
+
+有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
+{{{
+nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
+}}}
+`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
+
+使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
+
+另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
+
+== Linux 下的处理方法 ==
+使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
+ 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
+{{{
+import -window <Window ID> <FileName>.png
+}}}
+ 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如 <u>`import -window root MyScreenshot3.png`</u>;
+ 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
+{{{
+xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
+}}}
+ 1. 20111120 添加 - [20111120_ScreenRecorderShellInLinux Linux 下定期屏幕截屏脚本];
+
+== 下载 ==
+ * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
+
+== 其它 ==
+ 1. 减少文件大小
+  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
+
+== 参考资料 ==
+ 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
+  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
+ 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
+  * "我的ImageMagick使用心得", ImageMagick 的中文介绍;
+ 1. http://www.ruby-forum.com/topic/165740#728314
+  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
+
 == END ==',1354468815,1354468815,'','thinkbase','thinkbase','wink screenshot linux shell nircmd xprop ImageMagick');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',2,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
-
-截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
-
-== 简介 ==
-一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
-
-有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
-{{{
-nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
-}}}
-`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
-
-使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
-
-另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
-
-== Linux 下的处理方法 ==
-使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
- 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
-{{{
-import -window <Window ID> <FileName>.png
-}}}
- 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
-{{{
-import -window root MyScreenshot3.png
-}}}
- 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
-{{{
-xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
-}}}
- 1. 20111120 添加 - [20111120_ScreenRecorderShellInLinux Linux 下定期屏幕截屏脚本];
-
-== 下载 ==
- * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
-
-== 其它 ==
- 1. 减少文件大小
-  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
-
-== 参考资料 ==
- 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
-  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
- 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
-  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
- 1. http://www.ruby-forum.com/topic/165740#728314
-  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',2,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
+
+截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
+
+== 简介 ==
+一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
+
+有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
+{{{
+nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
+}}}
+`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
+
+使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
+
+另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
+
+== Linux 下的处理方法 ==
+使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
+ 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
+{{{
+import -window <Window ID> <FileName>.png
+}}}
+ 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
+{{{
+import -window root MyScreenshot3.png
+}}}
+ 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
+{{{
+xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
+}}}
+ 1. 20111120 添加 - [20111120_ScreenRecorderShellInLinux Linux 下定期屏幕截屏脚本];
+
+== 下载 ==
+ * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
+
+== 其它 ==
+ 1. 减少文件大小
+  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
+
+== 参考资料 ==
+ 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
+  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
+ 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
+  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
+ 1. http://www.ruby-forum.com/topic/165740#728314
+  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
+
 == END ==',1354468815,1354468930,'','thinkbase','thinkbase','wink screenshot linux shell nircmd xprop ImageMagick');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-4',1,'20111120 - Linux 下定期屏幕截屏脚本','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20111120_ScreenRecorderShellInLinux''''
-
-== 概述 ==
-在上一篇 [20101114_ScreenShotAsFilesInWindowsAndLinux Windows 和 Linux 下定期屏幕截屏的方法] 中提到了可以使用 [http://www.imagemagick.org/ ImageMagick] 的 `import` 命令完成截屏过程, 本文基于 `import` 命令, 提供两个脚本, 分别用于定期截取当前活动窗口, 以及定期截取指定窗口;
-
-== 脚本 ==
- * 定期截取当前活动窗口: [attachment:record-active-window.sh record-active-window.sh]
- * 定期截取指定窗口: [attachment:record-specified-window.sh record-specified-window.sh]
-
-== 主要技术说明 ==
-=== `import` 命令 ===
- * `-screen` 参数: 不了解 X 的细节, 猜测对于一个典型的 X 窗口, 其中的工具提示、菜单等其实是有独立的 window id 的, 那么在指定 window id 截屏时, 可能是截取不到这些内容的, 使用 `-screen` 参数可以解决这个问题:
-  * 没有 `-screen` 参数时的内容:[[BR]][[Image(20111120-113633.png)]]
-  * 加上 `-screen` 参数:[[BR]][[Image(20111120-113640.png)]]
-=== 取得窗口的 window id 和 process id ===
- 1. 获取当前活动窗口的 window id:
-  * {{{xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5}}}
- 1. 使用 xwininfo 选择一个窗口并获取其 window id:
-  * {{{xwininfo | grep "xwininfo: Window id:" | cut -d '' '' -f 4}}}
- 1. 获取窗口($WIN_ID)对应的进程 ID:
-  * {{{xprop -id $WIN_ID | grep "_NET_WM_PID(CARDINAL)" | cut -d '' '' -f 3}}}
-=== 比较截屏文件是否一致 ===
- * 使用 `cmp` 命令即可.
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-4',1,'20111120 - Linux 下定期屏幕截屏脚本','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20111120_ScreenRecorderShellInLinux''''
+
+== 概述 ==
+在上一篇 [20101114_ScreenShotAsFilesInWindowsAndLinux Windows 和 Linux 下定期屏幕截屏的方法] 中提到了可以使用 [http://www.imagemagick.org/ ImageMagick] 的 `import` 命令完成截屏过程, 本文基于 `import` 命令, 提供两个脚本, 分别用于定期截取当前活动窗口, 以及定期截取指定窗口;
+
+== 脚本 ==
+ * 定期截取当前活动窗口: [attachment:record-active-window.sh record-active-window.sh]
+ * 定期截取指定窗口: [attachment:record-specified-window.sh record-specified-window.sh]
+
+== 主要技术说明 ==
+=== `import` 命令 ===
+ * `-screen` 参数: 不了解 X 的细节, 猜测对于一个典型的 X 窗口, 其中的工具提示、菜单等其实是有独立的 window id 的, 那么在指定 window id 截屏时, 可能是截取不到这些内容的, 使用 `-screen` 参数可以解决这个问题:
+  * 没有 `-screen` 参数时的内容:[[BR]][[Image(20111120-113633.png)]]
+  * 加上 `-screen` 参数:[[BR]][[Image(20111120-113640.png)]]
+=== 取得窗口的 window id 和 process id ===
+ 1. 获取当前活动窗口的 window id:
+  * {{{xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5}}}
+ 1. 使用 xwininfo 选择一个窗口并获取其 window id:
+  * {{{xwininfo | grep "xwininfo: Window id:" | cut -d '' '' -f 4}}}
+ 1. 获取窗口($WIN_ID)对应的进程 ID:
+  * {{{xprop -id $WIN_ID | grep "_NET_WM_PID(CARDINAL)" | cut -d '' '' -f 3}}}
+=== 比较截屏文件是否一致 ===
+ * 使用 `cmp` 命令即可.
+
 == END ==',1354469331,1354469331,'','thinkbase','thinkbase','wink screenshot linux shell xprop ImageMagick xwininfo cmp bash');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-4',2,'20111120 - Linux 下定期屏幕截屏脚本','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20111120_ScreenRecorderShellInLinux''''
-
-== 概述 ==
-在上一篇 [blog:thinkbase-2012/12/02-3 Windows 和 Linux 下定期屏幕截屏的方法] 中提到了可以使用 [http://www.imagemagick.org/ ImageMagick] 的 `import` 命令完成截屏过程, 本文基于 `import` 命令, 提供两个脚本, 分别用于定期截取当前活动窗口, 以及定期截取指定窗口;
-
-== 脚本 ==
- * 定期截取当前活动窗口: [attachment:record-active-window.sh record-active-window.sh]
- * 定期截取指定窗口: [attachment:record-specified-window.sh record-specified-window.sh]
-
-== 主要技术说明 ==
-=== `import` 命令 ===
- * `-screen` 参数: 不了解 X 的细节, 猜测对于一个典型的 X 窗口, 其中的工具提示、菜单等其实是有独立的 window id 的, 那么在指定 window id 截屏时, 可能是截取不到这些内容的, 使用 `-screen` 参数可以解决这个问题:
-  * 没有 `-screen` 参数时的内容:[[BR]][[Image(20111120-113633.png)]]
-  * 加上 `-screen` 参数:[[BR]][[Image(20111120-113640.png)]]
-=== 取得窗口的 window id 和 process id ===
- 1. 获取当前活动窗口的 window id:
-  * {{{xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5}}}
- 1. 使用 xwininfo 选择一个窗口并获取其 window id:
-  * {{{xwininfo | grep "xwininfo: Window id:" | cut -d '' '' -f 4}}}
- 1. 获取窗口($WIN_ID)对应的进程 ID:
-  * {{{xprop -id $WIN_ID | grep "_NET_WM_PID(CARDINAL)" | cut -d '' '' -f 3}}}
-=== 比较截屏文件是否一致 ===
- * 使用 `cmp` 命令即可.
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-4',2,'20111120 - Linux 下定期屏幕截屏脚本','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20111120_ScreenRecorderShellInLinux''''
+
+== 概述 ==
+在上一篇 [blog:thinkbase-2012/12/02-3 Windows 和 Linux 下定期屏幕截屏的方法] 中提到了可以使用 [http://www.imagemagick.org/ ImageMagick] 的 `import` 命令完成截屏过程, 本文基于 `import` 命令, 提供两个脚本, 分别用于定期截取当前活动窗口, 以及定期截取指定窗口;
+
+== 脚本 ==
+ * 定期截取当前活动窗口: [attachment:record-active-window.sh record-active-window.sh]
+ * 定期截取指定窗口: [attachment:record-specified-window.sh record-specified-window.sh]
+
+== 主要技术说明 ==
+=== `import` 命令 ===
+ * `-screen` 参数: 不了解 X 的细节, 猜测对于一个典型的 X 窗口, 其中的工具提示、菜单等其实是有独立的 window id 的, 那么在指定 window id 截屏时, 可能是截取不到这些内容的, 使用 `-screen` 参数可以解决这个问题:
+  * 没有 `-screen` 参数时的内容:[[BR]][[Image(20111120-113633.png)]]
+  * 加上 `-screen` 参数:[[BR]][[Image(20111120-113640.png)]]
+=== 取得窗口的 window id 和 process id ===
+ 1. 获取当前活动窗口的 window id:
+  * {{{xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5}}}
+ 1. 使用 xwininfo 选择一个窗口并获取其 window id:
+  * {{{xwininfo | grep "xwininfo: Window id:" | cut -d '' '' -f 4}}}
+ 1. 获取窗口($WIN_ID)对应的进程 ID:
+  * {{{xprop -id $WIN_ID | grep "_NET_WM_PID(CARDINAL)" | cut -d '' '' -f 3}}}
+=== 比较截屏文件是否一致 ===
+ * 使用 `cmp` 命令即可.
+
 == END ==',1354469331,1354469383,'','thinkbase','thinkbase','wink screenshot linux shell xprop ImageMagick xwininfo cmp bash');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',3,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
-
-截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
-
-== 简介 ==
-一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
-
-有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
-{{{
-nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
-}}}
-`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
-
-使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
-
-另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
-
-== Linux 下的处理方法 ==
-使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
- 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
-{{{
-import -window <Window ID> <FileName>.png
-}}}
- 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
-{{{
-import -window root MyScreenshot3.png
-}}}
- 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
-{{{
-xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
-}}}
- 1. ```20111120 添加``` - [blog:thinkbase-2012/12/02-4 Linux 下定期屏幕截屏脚本];
-
-== 下载 ==
- * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
-
-== 其它 ==
- 1. 减少文件大小
-  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
-
-== 参考资料 ==
- 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
-  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
- 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
-  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
- 1. http://www.ruby-forum.com/topic/165740#728314
-  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',3,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
+
+截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
+
+== 简介 ==
+一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
+
+有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
+{{{
+nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
+}}}
+`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
+
+使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
+
+另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
+
+== Linux 下的处理方法 ==
+使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
+ 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
+{{{
+import -window <Window ID> <FileName>.png
+}}}
+ 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
+{{{
+import -window root MyScreenshot3.png
+}}}
+ 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
+{{{
+xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
+}}}
+ 1. ```20111120 添加``` - [blog:thinkbase-2012/12/02-4 Linux 下定期屏幕截屏脚本];
+
+== 下载 ==
+ * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
+
+== 其它 ==
+ 1. 减少文件大小
+  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
+
+== 参考资料 ==
+ 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
+  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
+ 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
+  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
+ 1. http://www.ruby-forum.com/topic/165740#728314
+  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
+
 == END ==',1354468815,1354469506,'','thinkbase','thinkbase','wink screenshot linux shell nircmd xprop ImageMagick');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',4,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
-
-截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
-
-== 简介 ==
-一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
-
-有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
-{{{
-nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
-}}}
-`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
-
-使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
-
-另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
-
-== Linux 下的处理方法 ==
-使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
- 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
-{{{
-import -window <Window ID> <FileName>.png
-}}}
- 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
-{{{
-import -window root MyScreenshot3.png
-}}}
- 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
-{{{
-xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
-}}}
- 1. ''''''20111120 添加'''''' - [blog:thinkbase-2012/12/02-4 Linux 下定期屏幕截屏脚本];
-
-== 下载 ==
- * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
-
-== 其它 ==
- 1. 减少文件大小
-  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
-
-== 参考资料 ==
- 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
-  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
- 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
-  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
- 1. http://www.ruby-forum.com/topic/165740#728314
-  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',4,'20101114 - Windows 和 Linux 下定期屏幕截屏的方法','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
+
+截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
+
+== 简介 ==
+一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
+
+有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
+{{{
+nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
+}}}
+`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
+
+使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
+
+另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
+
+== Linux 下的处理方法 ==
+使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
+ 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
+{{{
+import -window <Window ID> <FileName>.png
+}}}
+ 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
+{{{
+import -window root MyScreenshot3.png
+}}}
+ 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
+{{{
+xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
+}}}
+ 1. ''''''20111120 添加'''''' - [blog:thinkbase-2012/12/02-4 Linux 下定期屏幕截屏脚本];
+
+== 下载 ==
+ * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
+
+== 其它 ==
+ 1. 减少文件大小
+  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
+
+== 参考资料 ==
+ 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
+  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
+ 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
+  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
+ 1. http://www.ruby-forum.com/topic/165740#728314
+  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
+
 == END ==',1354468815,1354469526,'','thinkbase','thinkbase','wink screenshot linux shell nircmd xprop ImageMagick');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-5',1,'20120222 - Ubuntu 10.04 上通过无线共享互联网连接','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120222_Ubuntu_Wifi_Ad_hoc''''
-
-== 参考页面 ==
-见 http://hi.baidu.com/myl71/blog/item/75bb0944bb44362acefca318.html ;
-
-其主要内容如下:
-{{{
-首先准备好带无线网卡的笔记本电脑一台；
-
-Ubuntu10.04操作系统一套；
-
-能正常连接网络的网线一根；
-
-进入ubuntu 10.04后在右上角工具栏的网络连接上点右键，点“新建连接” ，
-然后输入你想新建的无线路由器的名字，之后设定加密方式，如果是想满足宿舍
-内的网络共享你只需要设置一个wep的加密方式，然后就可以新建成功了，之后
-您就可以叫您的朋友搜索无线网络了，然后连接就可以了。
-
-经我的观察，ubuntu下面新建的wifi效果非常的好，网络稳定，网速也非常的
-快。适合喜欢无线冲浪的您。
-}}}
-
-== 新建的网络连接属性(截屏) ==
- * [[Image(Wifi-Ad-hoc-prop-1.png)]]
- * [[Image(Wifi-Ad-hoc-prop-2.png)]]
- * [[Image(Wifi-Ad-hoc-prop-3.png)]]
-
-== 其他信息 ==
- * 其他电脑连接时不需要设置IP, 采用DHCP自动获取IP地址即可;
- * 实际连接后 Ubuntu 机器的网络情况如下, 其中 10.42 网段应该是系统自动分配的, 通过 Wifi 连接到 Ubuntu 上的其他机器的地址应该都在这个网段.[[BR]][[Image(Wifi-Ad-hoc-IP.png)]].
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-5',1,'20120222 - Ubuntu 10.04 上通过无线共享互联网连接','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120222_Ubuntu_Wifi_Ad_hoc''''
+
+== 参考页面 ==
+见 http://hi.baidu.com/myl71/blog/item/75bb0944bb44362acefca318.html ;
+
+其主要内容如下:
+{{{
+首先准备好带无线网卡的笔记本电脑一台；
+
+Ubuntu10.04操作系统一套；
+
+能正常连接网络的网线一根；
+
+进入ubuntu 10.04后在右上角工具栏的网络连接上点右键，点“新建连接” ，
+然后输入你想新建的无线路由器的名字，之后设定加密方式，如果是想满足宿舍
+内的网络共享你只需要设置一个wep的加密方式，然后就可以新建成功了，之后
+您就可以叫您的朋友搜索无线网络了，然后连接就可以了。
+
+经我的观察，ubuntu下面新建的wifi效果非常的好，网络稳定，网速也非常的
+快。适合喜欢无线冲浪的您。
+}}}
+
+== 新建的网络连接属性(截屏) ==
+ * [[Image(Wifi-Ad-hoc-prop-1.png)]]
+ * [[Image(Wifi-Ad-hoc-prop-2.png)]]
+ * [[Image(Wifi-Ad-hoc-prop-3.png)]]
+
+== 其他信息 ==
+ * 其他电脑连接时不需要设置IP, 采用DHCP自动获取IP地址即可;
+ * 实际连接后 Ubuntu 机器的网络情况如下, 其中 10.42 网段应该是系统自动分配的, 通过 Wifi 连接到 Ubuntu 上的其他机器的地址应该都在这个网段.[[BR]][[Image(Wifi-Ad-hoc-IP.png)]].
+
 == END ==',1354469896,1354469896,'','thinkbase','thinkbase','ubuntu wifi ad-hoc network');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',1,'20120503 - 批处理中很有用的命令 WMIC','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
-
-== 最典型的用法 ==
-=== 通过命令行中的一些内容查找程序 ===
-{{{
-wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
-}}}
-
- * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
- * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
-
-
-=== 通过命令行中的一些内容结束程序 ===
-{{{
-wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
-}}}
-
-== 参考 ==
-  * MSDN:
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
-  * Microsoft `TechNet`
-   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
-  * 来自 http://lgj573.iteye.com/blog/327432
-{{{
-wmic 获取硬盘固定分区盘符:
-wmic logicaldisk where "drivetype=3" get name
-
-wmic 获取硬盘各分区文件系统以及可用空间：
-wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
-
-wmic 获取进程名称以及可执行路径:
-wmic process get name,executablepath
-
-wmic 删除指定进程(根据进程名称):
-wmic process where name="qq.exe" call terminate
-或者用
-wmic process where name="qq.exe" delete
-
-wmic 删除指定进程(根据进程PID):
-wmic process where pid="123" delete
-
-wmic 创建新进程
-wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
-
-在远程机器上创建新进程：
-wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
-
-关闭本地计算机
-wmic process call create shutdown.exe
-
-重启远程计算机
-wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
-
-更改计算机名称
-wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
-
-更改帐户名
-wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
-
-wmic 结束可疑进程（根据进程的启动路径）
-wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
-
-wmic 获取物理内存
-wmic memlogical get TotalPhysicalMemory|find /i /v "t"
-
-wmic 获取文件的创建、访问、修改时间
-
-@echo off
-wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
-
-wmic 全盘搜索某文件并获取该文件所在目录
-wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
-
-for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
-
-获取屏幕分辨率
-wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
-
-获取U盘盘符，并运行U盘上的QQ.exe
-@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
-
-获得进程当前占用的内存和最大占用内存的大小：
-wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
-把内存大小改成KB(MB的话可能有小数)
-@echo off
-for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
-set /a m=%%a/1024
-set /a mm=%%b/1024
-echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
-)
-pause 
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',1,'20120503 - 批处理中很有用的命令 WMIC','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
+
+== 最典型的用法 ==
+=== 通过命令行中的一些内容查找程序 ===
+{{{
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
+}}}
+
+ * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
+ * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
+
+
+=== 通过命令行中的一些内容结束程序 ===
+{{{
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
+}}}
+
+== 参考 ==
+  * MSDN:
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
+  * Microsoft `TechNet`
+   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
+  * 来自 http://lgj573.iteye.com/blog/327432
+{{{
+wmic 获取硬盘固定分区盘符:
+wmic logicaldisk where "drivetype=3" get name
+
+wmic 获取硬盘各分区文件系统以及可用空间：
+wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
+
+wmic 获取进程名称以及可执行路径:
+wmic process get name,executablepath
+
+wmic 删除指定进程(根据进程名称):
+wmic process where name="qq.exe" call terminate
+或者用
+wmic process where name="qq.exe" delete
+
+wmic 删除指定进程(根据进程PID):
+wmic process where pid="123" delete
+
+wmic 创建新进程
+wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
+
+在远程机器上创建新进程：
+wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
+
+关闭本地计算机
+wmic process call create shutdown.exe
+
+重启远程计算机
+wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
+
+更改计算机名称
+wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
+
+更改帐户名
+wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
+
+wmic 结束可疑进程（根据进程的启动路径）
+wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
+
+wmic 获取物理内存
+wmic memlogical get TotalPhysicalMemory|find /i /v "t"
+
+wmic 获取文件的创建、访问、修改时间
+
+@echo off
+wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
+
+wmic 全盘搜索某文件并获取该文件所在目录
+wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
+
+for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
+
+获取屏幕分辨率
+wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
+
+获取U盘盘符，并运行U盘上的QQ.exe
+@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
+
+获得进程当前占用的内存和最大占用内存的大小：
+wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
+把内存大小改成KB(MB的话可能有小数)
+@echo off
+for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
+set /a m=%%a/1024
+set /a mm=%%b/1024
+echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
+)
+pause 
 }}}',1354470149,1354470149,'','thinkbase','thinkbase','wmic windows batch');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',2,'20120503 - 批处理中很有用的命令 WMIC','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
-
-== 最典型的用法 ==
-=== 通过命令行中的一些内容查找程序 ===
-{{{
-#!sh
-wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
-}}}
-
- * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
- * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
-
-
-=== 通过命令行中的一些内容结束程序 ===
-{{{
-#!sh
-wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
-}}}
-
-== 参考 ==
-  * MSDN:
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
-  * Microsoft `TechNet`
-   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
-  * 来自 http://lgj573.iteye.com/blog/327432
-{{{
-#!sh
-wmic 获取硬盘固定分区盘符:
-wmic logicaldisk where "drivetype=3" get name
-
-wmic 获取硬盘各分区文件系统以及可用空间：
-wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
-
-wmic 获取进程名称以及可执行路径:
-wmic process get name,executablepath
-
-wmic 删除指定进程(根据进程名称):
-wmic process where name="qq.exe" call terminate
-或者用
-wmic process where name="qq.exe" delete
-
-wmic 删除指定进程(根据进程PID):
-wmic process where pid="123" delete
-
-wmic 创建新进程
-wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
-
-在远程机器上创建新进程：
-wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
-
-关闭本地计算机
-wmic process call create shutdown.exe
-
-重启远程计算机
-wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
-
-更改计算机名称
-wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
-
-更改帐户名
-wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
-
-wmic 结束可疑进程（根据进程的启动路径）
-wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
-
-wmic 获取物理内存
-wmic memlogical get TotalPhysicalMemory|find /i /v "t"
-
-wmic 获取文件的创建、访问、修改时间
-
-@echo off
-wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
-
-wmic 全盘搜索某文件并获取该文件所在目录
-wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
-
-for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
-
-获取屏幕分辨率
-wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
-
-获取U盘盘符，并运行U盘上的QQ.exe
-@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
-
-获得进程当前占用的内存和最大占用内存的大小：
-wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
-把内存大小改成KB(MB的话可能有小数)
-@echo off
-for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
-set /a m=%%a/1024
-set /a mm=%%b/1024
-echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
-)
-pause 
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',2,'20120503 - 批处理中很有用的命令 WMIC','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
+
+== 最典型的用法 ==
+=== 通过命令行中的一些内容查找程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
+}}}
+
+ * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
+ * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
+
+
+=== 通过命令行中的一些内容结束程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
+}}}
+
+== 参考 ==
+  * MSDN:
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
+  * Microsoft `TechNet`
+   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
+  * 来自 http://lgj573.iteye.com/blog/327432
+{{{
+#!sh
+wmic 获取硬盘固定分区盘符:
+wmic logicaldisk where "drivetype=3" get name
+
+wmic 获取硬盘各分区文件系统以及可用空间：
+wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
+
+wmic 获取进程名称以及可执行路径:
+wmic process get name,executablepath
+
+wmic 删除指定进程(根据进程名称):
+wmic process where name="qq.exe" call terminate
+或者用
+wmic process where name="qq.exe" delete
+
+wmic 删除指定进程(根据进程PID):
+wmic process where pid="123" delete
+
+wmic 创建新进程
+wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
+
+在远程机器上创建新进程：
+wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
+
+关闭本地计算机
+wmic process call create shutdown.exe
+
+重启远程计算机
+wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
+
+更改计算机名称
+wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
+
+更改帐户名
+wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
+
+wmic 结束可疑进程（根据进程的启动路径）
+wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
+
+wmic 获取物理内存
+wmic memlogical get TotalPhysicalMemory|find /i /v "t"
+
+wmic 获取文件的创建、访问、修改时间
+
+@echo off
+wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
+
+wmic 全盘搜索某文件并获取该文件所在目录
+wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
+
+for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
+
+获取屏幕分辨率
+wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
+
+获取U盘盘符，并运行U盘上的QQ.exe
+@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
+
+获得进程当前占用的内存和最大占用内存的大小：
+wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
+把内存大小改成KB(MB的话可能有小数)
+@echo off
+for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
+set /a m=%%a/1024
+set /a mm=%%b/1024
+echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
+)
+pause 
 }}}',1354470149,1354470203,'','thinkbase','thinkbase','wmic windows batch');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',3,'20120503 - 批处理中很有用的命令 WMIC','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
-
-== 最典型的用法 ==
-=== 通过命令行中的一些内容查找程序 ===
-{{{
-#!sh
-wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
-}}}
-
- * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
- * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
-
-
-=== 通过命令行中的一些内容结束程序 ===
-{{{
-#!sh
-wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
-}}}
-
-== 参考 ==
-  * MSDN:
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
-  * Microsoft `TechNet`
-   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
-  * 来自 http://lgj573.iteye.com/blog/327432
-{{{
-#!sh
-# wmic 获取硬盘固定分区盘符:
-wmic logicaldisk where "drivetype=3" get name
-
-# wmic 获取硬盘各分区文件系统以及可用空间：
-wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
-
-# wmic 获取进程名称以及可执行路径:
-wmic process get name,executablepath
-
-# wmic 删除指定进程(根据进程名称):
-wmic process where name="qq.exe" call terminate
-# 或者用
-wmic process where name="qq.exe" delete
-
-# wmic 删除指定进程(根据进程PID):
-wmic process where pid="123" delete
-
-# wmic 创建新进程
-wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
-
-# 在远程机器上创建新进程：
-wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
-
-# 关闭本地计算机
-wmic process call create shutdown.exe
-
-# 重启远程计算机
-wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
-
-# 更改计算机名称
-wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
-
-# 更改帐户名
-wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
-
-# wmic 结束可疑进程（根据进程的启动路径）
-wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
-
-# wmic 获取物理内存
-wmic memlogical get TotalPhysicalMemory|find /i /v "t"
-
-# wmic 获取文件的创建、访问、修改时间
-@echo off
-wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
-
-# wmic 全盘搜索某文件并获取该文件所在目录
-wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
-
-for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
-
-# 获取屏幕分辨率
-wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
-
-# 获取U盘盘符，并运行U盘上的QQ.exe
-@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
-
-# 获得进程当前占用的内存和最大占用内存的大小：
-wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
-# 把内存大小改成KB(MB的话可能有小数)
-@echo off
-for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
-set /a m=%%a/1024
-set /a mm=%%b/1024
-echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
-)
-pause 
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',3,'20120503 - 批处理中很有用的命令 WMIC','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
+
+== 最典型的用法 ==
+=== 通过命令行中的一些内容查找程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
+}}}
+
+ * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
+ * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
+
+
+=== 通过命令行中的一些内容结束程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
+}}}
+
+== 参考 ==
+  * MSDN:
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
+  * Microsoft `TechNet`
+   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
+  * 来自 http://lgj573.iteye.com/blog/327432
+{{{
+#!sh
+# wmic 获取硬盘固定分区盘符:
+wmic logicaldisk where "drivetype=3" get name
+
+# wmic 获取硬盘各分区文件系统以及可用空间：
+wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
+
+# wmic 获取进程名称以及可执行路径:
+wmic process get name,executablepath
+
+# wmic 删除指定进程(根据进程名称):
+wmic process where name="qq.exe" call terminate
+# 或者用
+wmic process where name="qq.exe" delete
+
+# wmic 删除指定进程(根据进程PID):
+wmic process where pid="123" delete
+
+# wmic 创建新进程
+wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
+
+# 在远程机器上创建新进程：
+wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
+
+# 关闭本地计算机
+wmic process call create shutdown.exe
+
+# 重启远程计算机
+wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
+
+# 更改计算机名称
+wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
+
+# 更改帐户名
+wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
+
+# wmic 结束可疑进程（根据进程的启动路径）
+wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
+
+# wmic 获取物理内存
+wmic memlogical get TotalPhysicalMemory|find /i /v "t"
+
+# wmic 获取文件的创建、访问、修改时间
+@echo off
+wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
+
+# wmic 全盘搜索某文件并获取该文件所在目录
+wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
+
+for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
+
+# 获取屏幕分辨率
+wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
+
+# 获取U盘盘符，并运行U盘上的QQ.exe
+@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
+
+# 获得进程当前占用的内存和最大占用内存的大小：
+wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
+# 把内存大小改成KB(MB的话可能有小数)
+@echo off
+for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
+set /a m=%%a/1024
+set /a mm=%%b/1024
+echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
+)
+pause 
 }}}',1354470149,1354470312,'','thinkbase','thinkbase','wmic windows batch');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',3,'桌面搜索工具 DocFetcher 试用笔记(补 20110416)','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
-
-= 简介 =
-在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
-
-在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
-
-== 主要特色 ==
- * 基于 Java SWT 开发, 跨平台;
- * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
- * 界面比较简单, 但是使用很方便, 基本上只要两步:
-  1. 添加要索引的目录, 建立索引;
-  1. 输出要查询的字符串, 进行查找;
- * 中文支持不错;
-
-== 需要解决的问题 ==
- * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
- * 不支持对文件名进行查找;
- * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
-
-== 中文化 ==
- * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
- * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachment:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
-
-== 后记 ==
- - 20110416
-  * Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
- - 20121203
-  * 发现目前 !DocFetcher 已经升级到 `1.1.5` 版本了, 已经支持对 zip、7z、rar 等格式的压缩文件进行索引, 具体情况有待试验:
-{{{
-#!div style="background-color:#ffd"
-Between version 1.0.3 and version 1.1 beta 1, !DocFetcher was rewritten from scratch, resulting in a large number of new features and changes. [http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1 This page] gives an overview of the most important ones.
-}}}
-
-== END ==
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',3,'桌面搜索工具 DocFetcher 试用笔记(补 20110416)','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
+
+= 简介 =
+在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
+
+在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
+
+== 主要特色 ==
+ * 基于 Java SWT 开发, 跨平台;
+ * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
+ * 界面比较简单, 但是使用很方便, 基本上只要两步:
+  1. 添加要索引的目录, 建立索引;
+  1. 输出要查询的字符串, 进行查找;
+ * 中文支持不错;
+
+== 需要解决的问题 ==
+ * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
+ * 不支持对文件名进行查找;
+ * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
+
+== 中文化 ==
+ * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
+ * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachment:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
+
+== 后记 ==
+ - 20110416
+  * Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
+ - 20121203
+  * 发现目前 !DocFetcher 已经升级到 `1.1.5` 版本了, 已经支持对 zip、7z、rar 等格式的压缩文件进行索引, 具体情况有待试验:
+{{{
+#!div style="background-color:#ffd"
+Between version 1.0.3 and version 1.1 beta 1, !DocFetcher was rewritten from scratch, resulting in a large number of new features and changes. [http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1 This page] gives an overview of the most important ones.
+}}}
+
+== END ==
 ',1354467486,1354505761,'','thinkbase','thinkbase','java search-engine');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',5,'Windows 和 Linux 下定期屏幕截屏的方法(补 20101114)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
-
-截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
-
-== 简介 ==
-一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
-
-有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
-{{{
-nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
-}}}
-`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
-
-使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
-
-另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
-
-== Linux 下的处理方法 ==
-使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
- 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
-{{{
-import -window <Window ID> <FileName>.png
-}}}
- 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
-{{{
-import -window root MyScreenshot3.png
-}}}
- 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
-{{{
-xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
-}}}
- 1. ''''''20111120 添加'''''' - [blog:thinkbase-2012/12/02-4 Linux 下定期屏幕截屏脚本];
-
-== 下载 ==
- * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
-
-== 其它 ==
- 1. 减少文件大小
-  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
-
-== 参考资料 ==
- 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
-  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
- 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
-  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
- 1. http://www.ruby-forum.com/topic/165740#728314
-  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-3',5,'Windows 和 Linux 下定期屏幕截屏的方法(补 20101114)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20101114_ScreenShotAsFilesInWindowsAndLinux''''
+
+截屏并存储到文件的方法, 主要是可以用于录制操作视频, 或者日志重要系统操作过程, 以及测试过程等.
+
+== 简介 ==
+一直以来使用 [http://www.debugmode.com/wink/ Wink] 作为屏幕录制的首选软件, 但是 Wink 存在一个很麻烦的问题, 就是在录制途中, 所有的屏幕截屏都存储在内存里, 因此在很长时间的操作中, 往往会造成内存溢出, 导致前功尽弃.
+
+有一个想法是写一个录制屏幕并且及时存储到图片文件的软件, 最初的想法是使用 Java 来写, 但是一直都没有开始; 今天无意中看到了 [http://www.nirsoft.net/utils/nircmd2.html nircmd] 这个软件, 其中的命令 `savescreenshot` 可以较好的完成这个要求:
+{{{
+nircmdc.exe loop 1000 2000 savescreenshot c:\temp\scr~$currdate.MM_dd_yyyy$-~$currtime.HH_mm_ss$.png 
+}}}
+`loop 1000 2000` 代表循环 1000 次, 间隔时间 2 秒(2000 毫秒);
+
+使用 `nircmdc` 可以保证 1000 次循环完成之前, 命令行一直停留在这个命令上, 方便不需要的时候使用 `Ctrl-C` 结束截屏过程;
+
+另外还可以使用 `savescreenshotwin` 命令保存当前活动窗口的命令;
+
+== Linux 下的处理方法 ==
+使用 `nircmdc` 可以在 Windows 下实现定时截屏的要求, 但是在 Linux 下又如何实现呢? 经过一番搜索, 大致的解决方案如下:
+ 1. 基于 [http://www.imagemagick.org/ ImageMagick], 使用其 `import` 命令完成截屏过程, 基本语法为:
+{{{
+import -window <Window ID> <FileName>.png
+}}}
+ 1. 如果需要截取整个屏幕, 可以使用 `root` 作为 Window ID, 例如:
+{{{
+import -window root MyScreenshot3.png
+}}}
+ 1. 如何实现截取当前活动窗口呢? 可以使用如下命令得到当前活动窗口 ID:
+{{{
+xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5
+}}}
+ 1. ''''''20111120 添加'''''' - [blog:thinkbase-2012/12/02-4 Linux 下定期屏幕截屏脚本];
+
+== 下载 ==
+ * nircmd 安装包下载 [attachment:nircmd.zip nircmd.zip]
+
+== 其它 ==
+ 1. 减少文件大小
+  * 如果屏幕内容一直不变, 那么就会出现重复录取同一个画面的情况, 应该可以通过一个脚本使用 md5sum 等命令检查两张图片是否完全一样, 删除重复内容的图片, 这样就可以实现减少文件大小的目的了.
+
+== 参考资料 ==
+ 1. http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux
+  * "How to Take a Screenshot in Linux (Ubuntu)", 描述了在 Ubuntu 上几种截屏的方法;
+ 1. http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html
+  * "我的ImageMagick使用心得", !ImageMagick 的中文介绍;
+ 1. http://www.ruby-forum.com/topic/165740#728314
+  * "Title from current active window", Ruby-Gnome 2 论坛的讨论;
+
 == END ==',1354468815,1354505789,'','thinkbase','thinkbase','wink screenshot linux shell nircmd xprop ImageMagick');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-4',3,'Linux 下定期屏幕截屏脚本(补 20111120)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20111120_ScreenRecorderShellInLinux''''
-
-== 概述 ==
-在上一篇 [blog:thinkbase-2012/12/02-3 Windows 和 Linux 下定期屏幕截屏的方法] 中提到了可以使用 [http://www.imagemagick.org/ ImageMagick] 的 `import` 命令完成截屏过程, 本文基于 `import` 命令, 提供两个脚本, 分别用于定期截取当前活动窗口, 以及定期截取指定窗口;
-
-== 脚本 ==
- * 定期截取当前活动窗口: [attachment:record-active-window.sh record-active-window.sh]
- * 定期截取指定窗口: [attachment:record-specified-window.sh record-specified-window.sh]
-
-== 主要技术说明 ==
-=== `import` 命令 ===
- * `-screen` 参数: 不了解 X 的细节, 猜测对于一个典型的 X 窗口, 其中的工具提示、菜单等其实是有独立的 window id 的, 那么在指定 window id 截屏时, 可能是截取不到这些内容的, 使用 `-screen` 参数可以解决这个问题:
-  * 没有 `-screen` 参数时的内容:[[BR]][[Image(20111120-113633.png)]]
-  * 加上 `-screen` 参数:[[BR]][[Image(20111120-113640.png)]]
-=== 取得窗口的 window id 和 process id ===
- 1. 获取当前活动窗口的 window id:
-  * {{{xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5}}}
- 1. 使用 xwininfo 选择一个窗口并获取其 window id:
-  * {{{xwininfo | grep "xwininfo: Window id:" | cut -d '' '' -f 4}}}
- 1. 获取窗口($WIN_ID)对应的进程 ID:
-  * {{{xprop -id $WIN_ID | grep "_NET_WM_PID(CARDINAL)" | cut -d '' '' -f 3}}}
-=== 比较截屏文件是否一致 ===
- * 使用 `cmp` 命令即可.
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-4',3,'Linux 下定期屏幕截屏脚本(补 20111120)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20111120_ScreenRecorderShellInLinux''''
+
+== 概述 ==
+在上一篇 [blog:thinkbase-2012/12/02-3 Windows 和 Linux 下定期屏幕截屏的方法] 中提到了可以使用 [http://www.imagemagick.org/ ImageMagick] 的 `import` 命令完成截屏过程, 本文基于 `import` 命令, 提供两个脚本, 分别用于定期截取当前活动窗口, 以及定期截取指定窗口;
+
+== 脚本 ==
+ * 定期截取当前活动窗口: [attachment:record-active-window.sh record-active-window.sh]
+ * 定期截取指定窗口: [attachment:record-specified-window.sh record-specified-window.sh]
+
+== 主要技术说明 ==
+=== `import` 命令 ===
+ * `-screen` 参数: 不了解 X 的细节, 猜测对于一个典型的 X 窗口, 其中的工具提示、菜单等其实是有独立的 window id 的, 那么在指定 window id 截屏时, 可能是截取不到这些内容的, 使用 `-screen` 参数可以解决这个问题:
+  * 没有 `-screen` 参数时的内容:[[BR]][[Image(20111120-113633.png)]]
+  * 加上 `-screen` 参数:[[BR]][[Image(20111120-113640.png)]]
+=== 取得窗口的 window id 和 process id ===
+ 1. 获取当前活动窗口的 window id:
+  * {{{xprop -root | grep "_NET_ACTIVE_WINDOW(WINDOW)"| cut -d '' '' -f 5}}}
+ 1. 使用 xwininfo 选择一个窗口并获取其 window id:
+  * {{{xwininfo | grep "xwininfo: Window id:" | cut -d '' '' -f 4}}}
+ 1. 获取窗口($WIN_ID)对应的进程 ID:
+  * {{{xprop -id $WIN_ID | grep "_NET_WM_PID(CARDINAL)" | cut -d '' '' -f 3}}}
+=== 比较截屏文件是否一致 ===
+ * 使用 `cmp` 命令即可.
+
 == END ==',1354469331,1354505823,'','thinkbase','thinkbase','wink screenshot linux shell xprop ImageMagick xwininfo cmp bash');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-5',2,'Ubuntu 10.04 上通过无线共享互联网连接(补 20120222)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120222_Ubuntu_Wifi_Ad_hoc''''
-
-== 参考页面 ==
-见 http://hi.baidu.com/myl71/blog/item/75bb0944bb44362acefca318.html ;
-
-其主要内容如下:
-{{{
-首先准备好带无线网卡的笔记本电脑一台；
-
-Ubuntu10.04操作系统一套；
-
-能正常连接网络的网线一根；
-
-进入ubuntu 10.04后在右上角工具栏的网络连接上点右键，点“新建连接” ，
-然后输入你想新建的无线路由器的名字，之后设定加密方式，如果是想满足宿舍
-内的网络共享你只需要设置一个wep的加密方式，然后就可以新建成功了，之后
-您就可以叫您的朋友搜索无线网络了，然后连接就可以了。
-
-经我的观察，ubuntu下面新建的wifi效果非常的好，网络稳定，网速也非常的
-快。适合喜欢无线冲浪的您。
-}}}
-
-== 新建的网络连接属性(截屏) ==
- * [[Image(Wifi-Ad-hoc-prop-1.png)]]
- * [[Image(Wifi-Ad-hoc-prop-2.png)]]
- * [[Image(Wifi-Ad-hoc-prop-3.png)]]
-
-== 其他信息 ==
- * 其他电脑连接时不需要设置IP, 采用DHCP自动获取IP地址即可;
- * 实际连接后 Ubuntu 机器的网络情况如下, 其中 10.42 网段应该是系统自动分配的, 通过 Wifi 连接到 Ubuntu 上的其他机器的地址应该都在这个网段.[[BR]][[Image(Wifi-Ad-hoc-IP.png)]].
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-5',2,'Ubuntu 10.04 上通过无线共享互联网连接(补 20120222)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120222_Ubuntu_Wifi_Ad_hoc''''
+
+== 参考页面 ==
+见 http://hi.baidu.com/myl71/blog/item/75bb0944bb44362acefca318.html ;
+
+其主要内容如下:
+{{{
+首先准备好带无线网卡的笔记本电脑一台；
+
+Ubuntu10.04操作系统一套；
+
+能正常连接网络的网线一根；
+
+进入ubuntu 10.04后在右上角工具栏的网络连接上点右键，点“新建连接” ，
+然后输入你想新建的无线路由器的名字，之后设定加密方式，如果是想满足宿舍
+内的网络共享你只需要设置一个wep的加密方式，然后就可以新建成功了，之后
+您就可以叫您的朋友搜索无线网络了，然后连接就可以了。
+
+经我的观察，ubuntu下面新建的wifi效果非常的好，网络稳定，网速也非常的
+快。适合喜欢无线冲浪的您。
+}}}
+
+== 新建的网络连接属性(截屏) ==
+ * [[Image(Wifi-Ad-hoc-prop-1.png)]]
+ * [[Image(Wifi-Ad-hoc-prop-2.png)]]
+ * [[Image(Wifi-Ad-hoc-prop-3.png)]]
+
+== 其他信息 ==
+ * 其他电脑连接时不需要设置IP, 采用DHCP自动获取IP地址即可;
+ * 实际连接后 Ubuntu 机器的网络情况如下, 其中 10.42 网段应该是系统自动分配的, 通过 Wifi 连接到 Ubuntu 上的其他机器的地址应该都在这个网段.[[BR]][[Image(Wifi-Ad-hoc-IP.png)]].
+
 == END ==',1354469896,1354505846,'','thinkbase','thinkbase','ubuntu wifi ad-hoc network');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',4,'批处理中很有用的命令 WMIC(补 20120503)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
-
-== 最典型的用法 ==
-=== 通过命令行中的一些内容查找程序 ===
-{{{
-#!sh
-wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
-}}}
-
- * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
- * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
-
-
-=== 通过命令行中的一些内容结束程序 ===
-{{{
-#!sh
-wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
-}}}
-
-== 参考 ==
-  * MSDN:
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
-   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
-  * Microsoft `TechNet`
-   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
-  * 来自 http://lgj573.iteye.com/blog/327432
-{{{
-#!sh
-# wmic 获取硬盘固定分区盘符:
-wmic logicaldisk where "drivetype=3" get name
-
-# wmic 获取硬盘各分区文件系统以及可用空间：
-wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
-
-# wmic 获取进程名称以及可执行路径:
-wmic process get name,executablepath
-
-# wmic 删除指定进程(根据进程名称):
-wmic process where name="qq.exe" call terminate
-# 或者用
-wmic process where name="qq.exe" delete
-
-# wmic 删除指定进程(根据进程PID):
-wmic process where pid="123" delete
-
-# wmic 创建新进程
-wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
-
-# 在远程机器上创建新进程：
-wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
-
-# 关闭本地计算机
-wmic process call create shutdown.exe
-
-# 重启远程计算机
-wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
-
-# 更改计算机名称
-wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
-
-# 更改帐户名
-wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
-
-# wmic 结束可疑进程（根据进程的启动路径）
-wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
-
-# wmic 获取物理内存
-wmic memlogical get TotalPhysicalMemory|find /i /v "t"
-
-# wmic 获取文件的创建、访问、修改时间
-@echo off
-wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
-
-# wmic 全盘搜索某文件并获取该文件所在目录
-wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
-
-for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
-
-# 获取屏幕分辨率
-wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
-
-# 获取U盘盘符，并运行U盘上的QQ.exe
-@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
-
-# 获得进程当前占用的内存和最大占用内存的大小：
-wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
-# 把内存大小改成KB(MB的话可能有小数)
-@echo off
-for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
-set /a m=%%a/1024
-set /a mm=%%b/1024
-echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
-)
-pause 
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',4,'批处理中很有用的命令 WMIC(补 20120503)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
+
+== 最典型的用法 ==
+=== 通过命令行中的一些内容查找程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
+}}}
+
+ * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
+ * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
+
+
+=== 通过命令行中的一些内容结束程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
+}}}
+
+== 参考 ==
+  * MSDN:
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
+  * Microsoft `TechNet`
+   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
+  * 来自 http://lgj573.iteye.com/blog/327432
+{{{
+#!sh
+# wmic 获取硬盘固定分区盘符:
+wmic logicaldisk where "drivetype=3" get name
+
+# wmic 获取硬盘各分区文件系统以及可用空间：
+wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
+
+# wmic 获取进程名称以及可执行路径:
+wmic process get name,executablepath
+
+# wmic 删除指定进程(根据进程名称):
+wmic process where name="qq.exe" call terminate
+# 或者用
+wmic process where name="qq.exe" delete
+
+# wmic 删除指定进程(根据进程PID):
+wmic process where pid="123" delete
+
+# wmic 创建新进程
+wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
+
+# 在远程机器上创建新进程：
+wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
+
+# 关闭本地计算机
+wmic process call create shutdown.exe
+
+# 重启远程计算机
+wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
+
+# 更改计算机名称
+wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
+
+# 更改帐户名
+wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
+
+# wmic 结束可疑进程（根据进程的启动路径）
+wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
+
+# wmic 获取物理内存
+wmic memlogical get TotalPhysicalMemory|find /i /v "t"
+
+# wmic 获取文件的创建、访问、修改时间
+@echo off
+wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
+
+# wmic 全盘搜索某文件并获取该文件所在目录
+wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
+
+for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
+
+# 获取屏幕分辨率
+wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
+
+# 获取U盘盘符，并运行U盘上的QQ.exe
+@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
+
+# 获得进程当前占用的内存和最大占用内存的大小：
+wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
+# 把内存大小改成KB(MB的话可能有小数)
+@echo off
+for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
+set /a m=%%a/1024
+set /a mm=%%b/1024
+echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
+)
+pause 
 }}}',1354470149,1354505872,'','thinkbase','thinkbase','wmic windows batch');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03',1,'CentOS 6.0 虚拟机安装日志(截屏)(补 20111203)','== 在虚拟机中安装 CentOS 6.0 ==
-[[PageOutline]]
-=== 从 DVD1 iso 文件启动 ===
-[[Image(20111203-122450-vm-boot-from-dvd1.png)]][[BR]]
-=== 安装开始界面 ===
-[[Image(20111203-122506-install-start-screen.png)]][[BR]]
-=== 开始安装 ===
-[[Image(20111203-122609-start-install.png)]][[BR]]
-[[Image(20111203-122620.png)]][[BR]]
-[[Image(20111203-122622.png)]][[BR]]
-[[Image(20111203-122625.png)]][[BR]]
-[[Image(20111203-122627.png)]][[BR]]
-[[Image(20111203-122719.png)]][[BR]]
-[[Image(20111203-122747.png)]][[BR]]
-[[Image(20111203-123139.png)]][[BR]]
-[[Image(20111203-123141.png)]][[BR]]
-[[Image(20111203-123144.png)]][[BR]]
-[[Image(20111203-123148.png)]][[BR]]
-[[Image(20111203-123155.png)]][[BR]]
-[[Image(20111203-123216.png)]][[BR]]
-[[Image(20111203-123225.png)]][[BR]]
-[[Image(20111203-123236.png)]][[BR]]
-[[Image(20111203-123248.png)]][[BR]]
-[[Image(20111203-123308.png)]][[BR]]
-[[Image(20111203-123313.png)]][[BR]]
-[[Image(20111203-123347.png)]][[BR]]
-[[Image(20111203-123352.png)]][[BR]]
-=== 磁盘分区 ===
-[[Image(20111203-123415-partition.png)]][[BR]]
-[[Image(20111203-123424.png)]][[BR]]
-[[Image(20111203-123431.png)]][[BR]]
-[[Image(20111203-123433.png)]][[BR]]
-[[Image(20111203-123435.png)]][[BR]]
-[[Image(20111203-123451.png)]][[BR]]
-[[Image(20111203-123454.png)]][[BR]]
-[[Image(20111203-123456.png)]][[BR]]
-[[Image(20111203-123540.png)]][[BR]]
-=== 选择"最小桌面"安装方式 ===
-[[Image(20111203-123558-install-min-desktop.png)]][[BR]]
-[[Image(20111203-123602.png)]][[BR]]
-[[Image(20111203-123619.png)]][[BR]]
-[[Image(20111203-123640.png)]][[BR]]
-[[Image(20111203-123645.png)]][[BR]]
-[[Image(20111203-124001.png)]][[BR]]
-[[Image(20111203-124351.png)]][[BR]]
-[[Image(20111203-124533.png)]][[BR]]
-[[Image(20111203-124535.png)]][[BR]]
-=== 安装完成, 重启 ===
-[[Image(20111203-124551-install-complete-reboot.png)]][[BR]]
-[[Image(20111203-124558.png)]][[BR]]
-[[Image(20111203-124621.png)]][[BR]]
-[[Image(20111203-124627.png)]][[BR]]
-[[Image(20111203-124632.png)]][[BR]]
-[[Image(20111203-124634.png)]][[BR]]
-== 安装后的设置步骤 ==
-=== 基本设置项目 ===
-[[Image(20111203-124648-configuration.png)]][[BR]]
-[[Image(20111203-124650.png)]][[BR]]
-[[Image(20111203-124713.png)]][[BR]]
-[[Image(20111203-124720.png)]][[BR]]
-[[Image(20111203-124723.png)]][[BR]]
-=== Kdump 无法启用 ===
-[[Image(20111203-124739-kdump-disabled.png)]][[BR]]
-[[Image(20111203-124746.png)]][[BR]]
-=== 进入系统 ===
-[[Image(20111203-124834.png)]][[BR]]
-[[Image(20111203-125020.png)]][[BR]]
-[[Image(20111203-125028.png)]][[BR]]
-=== 设置网络 ===
-[[Image(20111203-125153-network-setting.png)]][[BR]]
-[[Image(20111203-125356.png)]][[BR]]
-[[Image(20111203-125409.png)]][[BR]]
-[[Image(20111203-125537.png)]][[BR]]
-[[Image(20111203-125614.png)]][[BR]]
-[[Image(20111203-125625.png)]][[BR]]
-[[Image(20111203-125644.png)]][[BR]]
-=== 虚拟机安装结束 ===
-[[Image(20111203-125906-install-ok.png)]][[BR]]
-== 重启, 检查更新 ==
-[[Image(20111203-134815-reboot-check-update.png)]][[BR]]
-[[Image(20111203-134845.png)]][[BR]]
-[[Image(20111203-134858.png)]][[BR]]
-[[Image(20111203-134900.png)]][[BR]]
-[[Image(20111203-134915.png)]][[BR]]
-[[Image(20111203-135004.png)]][[BR]]
-[[Image(20111203-135009.png)]][[BR]]
-[[Image(20111203-135016.png)]][[BR]]
-[[Image(20111203-135041.png)]][[BR]]
-[[Image(20111203-135049.png)]][[BR]]
-[[Image(20111203-135119.png)]][[BR]]
-[[Image(20111203-135137.png)]][[BR]]
-[[Image(20111203-135200.png)]][[BR]]
-[[Image(20111203-135215.png)]][[BR]]
-[[Image(20111203-135235.png)]][[BR]]
-[[Image(20111203-135452.png)]][[BR]]
-[[Image(20111203-135515.png)]][[BR]]
-[[Image(20111203-135533.png)]][[BR]]
-[[Image(20111203-135546.png)]][[BR]]
-[[Image(20111203-135558.png)]][[BR]]
-[[Image(20111203-135611.png)]][[BR]]
-[[Image(20111203-135614.png)]][[BR]]
-[[Image(20111203-135621.png)]][[BR]]
-[[Image(20111203-135629.png)]][[BR]]
-[[Image(20111203-135652.png)]][[BR]]
-[[Image(20111203-135659.png)]][[BR]]
-[[Image(20111203-135730.png)]][[BR]]
-[[Image(20111203-135735.png)]][[BR]]
-[[Image(20111203-135835.png)]][[BR]]
-[[Image(20111203-135908.png)]][[BR]]
-[[Image(20111203-135910.png)]][[BR]]
-[[Image(20111203-140051.png)]][[BR]]
-[[Image(20111203-140114.png)]][[BR]]
-[[Image(20111203-140124.png)]][[BR]]
-[[Image(20111203-140154.png)]][[BR]]
-[[Image(20111203-140156.png)]][[BR]]
-[[Image(20111203-140201.png)]][[BR]]
-[[Image(20111203-140208.png)]][[BR]]
-[[Image(20111203-140215.png)]][[BR]]
-[[Image(20111203-140222.png)]][[BR]]
-[[Image(20111203-140229.png)]][[BR]]
-[[Image(20111203-140233.png)]][[BR]]
-[[Image(20111203-140252.png)]][[BR]]
-[[Image(20111203-140341.png)]][[BR]]
-== 安装 gcc 和内核头文件等 ==
-[[Image(20111203-140452-install-gcc-and-kernel-devel.png)]][[BR]]
-[[Image(20111203-140457.png)]][[BR]]
-[[Image(20111203-140501.png)]][[BR]]
-[[Image(20111203-140514.png)]][[BR]]
-[[Image(20111203-140554.png)]][[BR]]
-[[Image(20111203-140559.png)]][[BR]]
-[[Image(20111203-140603.png)]][[BR]]
-[[Image(20111203-140621.png)]][[BR]]
-[[Image(20111203-140643.png)]][[BR]]
-== 安装 vmware-tools ==
-=== 尝试 ===
-[[Image(20111203-140705-try-install-vmware-tools.png)]][[BR]]
-=== 系统安装时已自带 vmware-tools ===
-[[Image(20111203-140741-CentOS6-already-has-vmware-tools.png)]][[BR]]
-== 安装 telnet 命令 ==
-[[Image(20111203-140821-install-telnet.png)]][[BR]]
-[[Image(20111203-140825.png)]][[BR]]
-[[Image(20111203-140829.png)]][[BR]]
-[[Image(20111203-140834.png)]][[BR]]
-[[Image(20111203-140838.png)]][[BR]]
-== 验证 sshd 已安装 ==
-[[Image(20111203-140847-check-sshd.png)]][[BR]]
-== 安装 svn (客户端) ==
-[[Image(20111203-164710-install-svn.png)]][[BR]]
-[[Image(20111203-164712.png)]][[BR]]
-[[Image(20111203-164715.png)]][[BR]]
-[[Image(20111203-164724.png)]][[BR]]
-[[Image(20111203-164733.png)]][[BR]]
-[[Image(20111203-164736.png)]][[BR]]
-[[Image(20111203-164745.png)]][[BR]]
-== 安装 7-zip 支持 ==
-[[Image(20111203-165140-install-7-zip-support.png)]][[BR]]
-[[Image(20111203-165147.png)]][[BR]]
-[[Image(20111203-165152.png)]][[BR]]
-[[Image(20111203-165204.png)]][[BR]]
-[[Image(20111203-165209.png)]][[BR]]
-[[Image(20111203-165212.png)]][[BR]]
-[[Image(20111203-165214.png)]][[BR]]
-[[Image(20111203-165219.png)]][[BR]]
-[[Image(20111203-165224.png)]][[BR]]
-[[Image(20111203-165226.png)]][[BR]]
-[[Image(20111203-165234.png)]][[BR]]
-[[Image(20111203-165236.png)]][[BR]]
-[[Image(20111203-165244.png)]][[BR]]
-[[Image(20111203-165248.png)]][[BR]]
-[[Image(20111203-165251.png)]][[BR]]
-[[Image(20111203-165253.png)]][[BR]]
-[[Image(20111203-165256.png)]][[BR]]
-[[Image(20111203-165829.png)]][[BR]]
-[[Image(20111203-165834.png)]][[BR]]
-[[Image(20111203-165836.png)]][[BR]]
-[[Image(20111203-165901.png)]][[BR]]
-[[Image(20111203-165904.png)]][[BR]]
-[[Image(20111203-165906.png)]][[BR]]
-[[Image(20111203-165911.png)]][[BR]]
-[[Image(20111203-165921.png)]][[BR]]
-[[Image(20111203-165926.png)]][[BR]]
-[[Image(20111203-170109.png)]][[BR]]
-[[Image(20111203-170112.png)]][[BR]]
-[[Image(20111203-170119.png)]][[BR]]
-[[Image(20111203-170122.png)]][[BR]]
-[[Image(20111203-170129.png)]][[BR]]
-[[Image(20111203-170132.png)]][[BR]]
-== 防火墙(iptables)设置 ==
-[[Image(20111203-174541-iptables-config.png)]][[BR]]
-[[Image(20111203-174601.png)]][[BR]]
-[[Image(20111203-174749.png)]][[BR]]
-[[Image(20111203-174821.png)]][[BR]]
-[[Image(20111203-174838.png)]][[BR]]
-[[Image(20111203-174845.png)]][[BR]]
-[[Image(20111203-174853.png)]][[BR]]
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03',1,'CentOS 6.0 虚拟机安装日志(截屏)(补 20111203)','== 在虚拟机中安装 CentOS 6.0 ==
+[[PageOutline]]
+=== 从 DVD1 iso 文件启动 ===
+[[Image(20111203-122450-vm-boot-from-dvd1.png)]][[BR]]
+=== 安装开始界面 ===
+[[Image(20111203-122506-install-start-screen.png)]][[BR]]
+=== 开始安装 ===
+[[Image(20111203-122609-start-install.png)]][[BR]]
+[[Image(20111203-122620.png)]][[BR]]
+[[Image(20111203-122622.png)]][[BR]]
+[[Image(20111203-122625.png)]][[BR]]
+[[Image(20111203-122627.png)]][[BR]]
+[[Image(20111203-122719.png)]][[BR]]
+[[Image(20111203-122747.png)]][[BR]]
+[[Image(20111203-123139.png)]][[BR]]
+[[Image(20111203-123141.png)]][[BR]]
+[[Image(20111203-123144.png)]][[BR]]
+[[Image(20111203-123148.png)]][[BR]]
+[[Image(20111203-123155.png)]][[BR]]
+[[Image(20111203-123216.png)]][[BR]]
+[[Image(20111203-123225.png)]][[BR]]
+[[Image(20111203-123236.png)]][[BR]]
+[[Image(20111203-123248.png)]][[BR]]
+[[Image(20111203-123308.png)]][[BR]]
+[[Image(20111203-123313.png)]][[BR]]
+[[Image(20111203-123347.png)]][[BR]]
+[[Image(20111203-123352.png)]][[BR]]
+=== 磁盘分区 ===
+[[Image(20111203-123415-partition.png)]][[BR]]
+[[Image(20111203-123424.png)]][[BR]]
+[[Image(20111203-123431.png)]][[BR]]
+[[Image(20111203-123433.png)]][[BR]]
+[[Image(20111203-123435.png)]][[BR]]
+[[Image(20111203-123451.png)]][[BR]]
+[[Image(20111203-123454.png)]][[BR]]
+[[Image(20111203-123456.png)]][[BR]]
+[[Image(20111203-123540.png)]][[BR]]
+=== 选择"最小桌面"安装方式 ===
+[[Image(20111203-123558-install-min-desktop.png)]][[BR]]
+[[Image(20111203-123602.png)]][[BR]]
+[[Image(20111203-123619.png)]][[BR]]
+[[Image(20111203-123640.png)]][[BR]]
+[[Image(20111203-123645.png)]][[BR]]
+[[Image(20111203-124001.png)]][[BR]]
+[[Image(20111203-124351.png)]][[BR]]
+[[Image(20111203-124533.png)]][[BR]]
+[[Image(20111203-124535.png)]][[BR]]
+=== 安装完成, 重启 ===
+[[Image(20111203-124551-install-complete-reboot.png)]][[BR]]
+[[Image(20111203-124558.png)]][[BR]]
+[[Image(20111203-124621.png)]][[BR]]
+[[Image(20111203-124627.png)]][[BR]]
+[[Image(20111203-124632.png)]][[BR]]
+[[Image(20111203-124634.png)]][[BR]]
+== 安装后的设置步骤 ==
+=== 基本设置项目 ===
+[[Image(20111203-124648-configuration.png)]][[BR]]
+[[Image(20111203-124650.png)]][[BR]]
+[[Image(20111203-124713.png)]][[BR]]
+[[Image(20111203-124720.png)]][[BR]]
+[[Image(20111203-124723.png)]][[BR]]
+=== Kdump 无法启用 ===
+[[Image(20111203-124739-kdump-disabled.png)]][[BR]]
+[[Image(20111203-124746.png)]][[BR]]
+=== 进入系统 ===
+[[Image(20111203-124834.png)]][[BR]]
+[[Image(20111203-125020.png)]][[BR]]
+[[Image(20111203-125028.png)]][[BR]]
+=== 设置网络 ===
+[[Image(20111203-125153-network-setting.png)]][[BR]]
+[[Image(20111203-125356.png)]][[BR]]
+[[Image(20111203-125409.png)]][[BR]]
+[[Image(20111203-125537.png)]][[BR]]
+[[Image(20111203-125614.png)]][[BR]]
+[[Image(20111203-125625.png)]][[BR]]
+[[Image(20111203-125644.png)]][[BR]]
+=== 虚拟机安装结束 ===
+[[Image(20111203-125906-install-ok.png)]][[BR]]
+== 重启, 检查更新 ==
+[[Image(20111203-134815-reboot-check-update.png)]][[BR]]
+[[Image(20111203-134845.png)]][[BR]]
+[[Image(20111203-134858.png)]][[BR]]
+[[Image(20111203-134900.png)]][[BR]]
+[[Image(20111203-134915.png)]][[BR]]
+[[Image(20111203-135004.png)]][[BR]]
+[[Image(20111203-135009.png)]][[BR]]
+[[Image(20111203-135016.png)]][[BR]]
+[[Image(20111203-135041.png)]][[BR]]
+[[Image(20111203-135049.png)]][[BR]]
+[[Image(20111203-135119.png)]][[BR]]
+[[Image(20111203-135137.png)]][[BR]]
+[[Image(20111203-135200.png)]][[BR]]
+[[Image(20111203-135215.png)]][[BR]]
+[[Image(20111203-135235.png)]][[BR]]
+[[Image(20111203-135452.png)]][[BR]]
+[[Image(20111203-135515.png)]][[BR]]
+[[Image(20111203-135533.png)]][[BR]]
+[[Image(20111203-135546.png)]][[BR]]
+[[Image(20111203-135558.png)]][[BR]]
+[[Image(20111203-135611.png)]][[BR]]
+[[Image(20111203-135614.png)]][[BR]]
+[[Image(20111203-135621.png)]][[BR]]
+[[Image(20111203-135629.png)]][[BR]]
+[[Image(20111203-135652.png)]][[BR]]
+[[Image(20111203-135659.png)]][[BR]]
+[[Image(20111203-135730.png)]][[BR]]
+[[Image(20111203-135735.png)]][[BR]]
+[[Image(20111203-135835.png)]][[BR]]
+[[Image(20111203-135908.png)]][[BR]]
+[[Image(20111203-135910.png)]][[BR]]
+[[Image(20111203-140051.png)]][[BR]]
+[[Image(20111203-140114.png)]][[BR]]
+[[Image(20111203-140124.png)]][[BR]]
+[[Image(20111203-140154.png)]][[BR]]
+[[Image(20111203-140156.png)]][[BR]]
+[[Image(20111203-140201.png)]][[BR]]
+[[Image(20111203-140208.png)]][[BR]]
+[[Image(20111203-140215.png)]][[BR]]
+[[Image(20111203-140222.png)]][[BR]]
+[[Image(20111203-140229.png)]][[BR]]
+[[Image(20111203-140233.png)]][[BR]]
+[[Image(20111203-140252.png)]][[BR]]
+[[Image(20111203-140341.png)]][[BR]]
+== 安装 gcc 和内核头文件等 ==
+[[Image(20111203-140452-install-gcc-and-kernel-devel.png)]][[BR]]
+[[Image(20111203-140457.png)]][[BR]]
+[[Image(20111203-140501.png)]][[BR]]
+[[Image(20111203-140514.png)]][[BR]]
+[[Image(20111203-140554.png)]][[BR]]
+[[Image(20111203-140559.png)]][[BR]]
+[[Image(20111203-140603.png)]][[BR]]
+[[Image(20111203-140621.png)]][[BR]]
+[[Image(20111203-140643.png)]][[BR]]
+== 安装 vmware-tools ==
+=== 尝试 ===
+[[Image(20111203-140705-try-install-vmware-tools.png)]][[BR]]
+=== 系统安装时已自带 vmware-tools ===
+[[Image(20111203-140741-CentOS6-already-has-vmware-tools.png)]][[BR]]
+== 安装 telnet 命令 ==
+[[Image(20111203-140821-install-telnet.png)]][[BR]]
+[[Image(20111203-140825.png)]][[BR]]
+[[Image(20111203-140829.png)]][[BR]]
+[[Image(20111203-140834.png)]][[BR]]
+[[Image(20111203-140838.png)]][[BR]]
+== 验证 sshd 已安装 ==
+[[Image(20111203-140847-check-sshd.png)]][[BR]]
+== 安装 svn (客户端) ==
+[[Image(20111203-164710-install-svn.png)]][[BR]]
+[[Image(20111203-164712.png)]][[BR]]
+[[Image(20111203-164715.png)]][[BR]]
+[[Image(20111203-164724.png)]][[BR]]
+[[Image(20111203-164733.png)]][[BR]]
+[[Image(20111203-164736.png)]][[BR]]
+[[Image(20111203-164745.png)]][[BR]]
+== 安装 7-zip 支持 ==
+[[Image(20111203-165140-install-7-zip-support.png)]][[BR]]
+[[Image(20111203-165147.png)]][[BR]]
+[[Image(20111203-165152.png)]][[BR]]
+[[Image(20111203-165204.png)]][[BR]]
+[[Image(20111203-165209.png)]][[BR]]
+[[Image(20111203-165212.png)]][[BR]]
+[[Image(20111203-165214.png)]][[BR]]
+[[Image(20111203-165219.png)]][[BR]]
+[[Image(20111203-165224.png)]][[BR]]
+[[Image(20111203-165226.png)]][[BR]]
+[[Image(20111203-165234.png)]][[BR]]
+[[Image(20111203-165236.png)]][[BR]]
+[[Image(20111203-165244.png)]][[BR]]
+[[Image(20111203-165248.png)]][[BR]]
+[[Image(20111203-165251.png)]][[BR]]
+[[Image(20111203-165253.png)]][[BR]]
+[[Image(20111203-165256.png)]][[BR]]
+[[Image(20111203-165829.png)]][[BR]]
+[[Image(20111203-165834.png)]][[BR]]
+[[Image(20111203-165836.png)]][[BR]]
+[[Image(20111203-165901.png)]][[BR]]
+[[Image(20111203-165904.png)]][[BR]]
+[[Image(20111203-165906.png)]][[BR]]
+[[Image(20111203-165911.png)]][[BR]]
+[[Image(20111203-165921.png)]][[BR]]
+[[Image(20111203-165926.png)]][[BR]]
+[[Image(20111203-170109.png)]][[BR]]
+[[Image(20111203-170112.png)]][[BR]]
+[[Image(20111203-170119.png)]][[BR]]
+[[Image(20111203-170122.png)]][[BR]]
+[[Image(20111203-170129.png)]][[BR]]
+[[Image(20111203-170132.png)]][[BR]]
+== 防火墙(iptables)设置 ==
+[[Image(20111203-174541-iptables-config.png)]][[BR]]
+[[Image(20111203-174601.png)]][[BR]]
+[[Image(20111203-174749.png)]][[BR]]
+[[Image(20111203-174821.png)]][[BR]]
+[[Image(20111203-174838.png)]][[BR]]
+[[Image(20111203-174845.png)]][[BR]]
+[[Image(20111203-174853.png)]][[BR]]
 == END ==',1354555382,1354555382,'','thinkbase','thinkbase','linux vmware centos redhat');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03',2,'CentOS 6.0 虚拟机安装日志(截屏)(补 20111203)','[[PageOutline]]
-== 在虚拟机中安装 CentOS 6.0 ==
-=== 从 DVD1 iso 文件启动 ===
-[[Image(20111203-122450-vm-boot-from-dvd1.png)]][[BR]]
-=== 安装开始界面 ===
-[[Image(20111203-122506-install-start-screen.png)]][[BR]]
-=== 开始安装 ===
-[[Image(20111203-122609-start-install.png)]][[BR]]
-[[Image(20111203-122620.png)]][[BR]]
-[[Image(20111203-122622.png)]][[BR]]
-[[Image(20111203-122625.png)]][[BR]]
-[[Image(20111203-122627.png)]][[BR]]
-[[Image(20111203-122719.png)]][[BR]]
-[[Image(20111203-122747.png)]][[BR]]
-[[Image(20111203-123139.png)]][[BR]]
-[[Image(20111203-123141.png)]][[BR]]
-[[Image(20111203-123144.png)]][[BR]]
-[[Image(20111203-123148.png)]][[BR]]
-[[Image(20111203-123155.png)]][[BR]]
-[[Image(20111203-123216.png)]][[BR]]
-[[Image(20111203-123225.png)]][[BR]]
-[[Image(20111203-123236.png)]][[BR]]
-[[Image(20111203-123248.png)]][[BR]]
-[[Image(20111203-123308.png)]][[BR]]
-[[Image(20111203-123313.png)]][[BR]]
-[[Image(20111203-123347.png)]][[BR]]
-[[Image(20111203-123352.png)]][[BR]]
-=== 磁盘分区 ===
-[[Image(20111203-123415-partition.png)]][[BR]]
-[[Image(20111203-123424.png)]][[BR]]
-[[Image(20111203-123431.png)]][[BR]]
-[[Image(20111203-123433.png)]][[BR]]
-[[Image(20111203-123435.png)]][[BR]]
-[[Image(20111203-123451.png)]][[BR]]
-[[Image(20111203-123454.png)]][[BR]]
-[[Image(20111203-123456.png)]][[BR]]
-[[Image(20111203-123540.png)]][[BR]]
-=== 选择"最小桌面"安装方式 ===
-[[Image(20111203-123558-install-min-desktop.png)]][[BR]]
-[[Image(20111203-123602.png)]][[BR]]
-[[Image(20111203-123619.png)]][[BR]]
-[[Image(20111203-123640.png)]][[BR]]
-[[Image(20111203-123645.png)]][[BR]]
-[[Image(20111203-124001.png)]][[BR]]
-[[Image(20111203-124351.png)]][[BR]]
-[[Image(20111203-124533.png)]][[BR]]
-[[Image(20111203-124535.png)]][[BR]]
-=== 安装完成, 重启 ===
-[[Image(20111203-124551-install-complete-reboot.png)]][[BR]]
-[[Image(20111203-124558.png)]][[BR]]
-[[Image(20111203-124621.png)]][[BR]]
-[[Image(20111203-124627.png)]][[BR]]
-[[Image(20111203-124632.png)]][[BR]]
-[[Image(20111203-124634.png)]][[BR]]
-== 安装后的设置步骤 ==
-=== 基本设置项目 ===
-[[Image(20111203-124648-configuration.png)]][[BR]]
-[[Image(20111203-124650.png)]][[BR]]
-[[Image(20111203-124713.png)]][[BR]]
-[[Image(20111203-124720.png)]][[BR]]
-[[Image(20111203-124723.png)]][[BR]]
-=== Kdump 无法启用 ===
-[[Image(20111203-124739-kdump-disabled.png)]][[BR]]
-[[Image(20111203-124746.png)]][[BR]]
-=== 进入系统 ===
-[[Image(20111203-124834.png)]][[BR]]
-[[Image(20111203-125020.png)]][[BR]]
-[[Image(20111203-125028.png)]][[BR]]
-=== 设置网络 ===
-[[Image(20111203-125153-network-setting.png)]][[BR]]
-[[Image(20111203-125356.png)]][[BR]]
-[[Image(20111203-125409.png)]][[BR]]
-[[Image(20111203-125537.png)]][[BR]]
-[[Image(20111203-125614.png)]][[BR]]
-[[Image(20111203-125625.png)]][[BR]]
-[[Image(20111203-125644.png)]][[BR]]
-=== 虚拟机安装结束 ===
-[[Image(20111203-125906-install-ok.png)]][[BR]]
-== 重启, 检查更新 ==
-[[Image(20111203-134815-reboot-check-update.png)]][[BR]]
-[[Image(20111203-134845.png)]][[BR]]
-[[Image(20111203-134858.png)]][[BR]]
-[[Image(20111203-134900.png)]][[BR]]
-[[Image(20111203-134915.png)]][[BR]]
-[[Image(20111203-135004.png)]][[BR]]
-[[Image(20111203-135009.png)]][[BR]]
-[[Image(20111203-135016.png)]][[BR]]
-[[Image(20111203-135041.png)]][[BR]]
-[[Image(20111203-135049.png)]][[BR]]
-[[Image(20111203-135119.png)]][[BR]]
-[[Image(20111203-135137.png)]][[BR]]
-[[Image(20111203-135200.png)]][[BR]]
-[[Image(20111203-135215.png)]][[BR]]
-[[Image(20111203-135235.png)]][[BR]]
-[[Image(20111203-135452.png)]][[BR]]
-[[Image(20111203-135515.png)]][[BR]]
-[[Image(20111203-135533.png)]][[BR]]
-[[Image(20111203-135546.png)]][[BR]]
-[[Image(20111203-135558.png)]][[BR]]
-[[Image(20111203-135611.png)]][[BR]]
-[[Image(20111203-135614.png)]][[BR]]
-[[Image(20111203-135621.png)]][[BR]]
-[[Image(20111203-135629.png)]][[BR]]
-[[Image(20111203-135652.png)]][[BR]]
-[[Image(20111203-135659.png)]][[BR]]
-[[Image(20111203-135730.png)]][[BR]]
-[[Image(20111203-135735.png)]][[BR]]
-[[Image(20111203-135835.png)]][[BR]]
-[[Image(20111203-135908.png)]][[BR]]
-[[Image(20111203-135910.png)]][[BR]]
-[[Image(20111203-140051.png)]][[BR]]
-[[Image(20111203-140114.png)]][[BR]]
-[[Image(20111203-140124.png)]][[BR]]
-[[Image(20111203-140154.png)]][[BR]]
-[[Image(20111203-140156.png)]][[BR]]
-[[Image(20111203-140201.png)]][[BR]]
-[[Image(20111203-140208.png)]][[BR]]
-[[Image(20111203-140215.png)]][[BR]]
-[[Image(20111203-140222.png)]][[BR]]
-[[Image(20111203-140229.png)]][[BR]]
-[[Image(20111203-140233.png)]][[BR]]
-[[Image(20111203-140252.png)]][[BR]]
-[[Image(20111203-140341.png)]][[BR]]
-== 安装 gcc 和内核头文件等 ==
-[[Image(20111203-140452-install-gcc-and-kernel-devel.png)]][[BR]]
-[[Image(20111203-140457.png)]][[BR]]
-[[Image(20111203-140501.png)]][[BR]]
-[[Image(20111203-140514.png)]][[BR]]
-[[Image(20111203-140554.png)]][[BR]]
-[[Image(20111203-140559.png)]][[BR]]
-[[Image(20111203-140603.png)]][[BR]]
-[[Image(20111203-140621.png)]][[BR]]
-[[Image(20111203-140643.png)]][[BR]]
-== 安装 vmware-tools ==
-=== 尝试 ===
-[[Image(20111203-140705-try-install-vmware-tools.png)]][[BR]]
-=== 系统安装时已自带 vmware-tools ===
-[[Image(20111203-140741-CentOS6-already-has-vmware-tools.png)]][[BR]]
-== 安装 telnet 命令 ==
-[[Image(20111203-140821-install-telnet.png)]][[BR]]
-[[Image(20111203-140825.png)]][[BR]]
-[[Image(20111203-140829.png)]][[BR]]
-[[Image(20111203-140834.png)]][[BR]]
-[[Image(20111203-140838.png)]][[BR]]
-== 验证 sshd 已安装 ==
-[[Image(20111203-140847-check-sshd.png)]][[BR]]
-== 安装 svn (客户端) ==
-[[Image(20111203-164710-install-svn.png)]][[BR]]
-[[Image(20111203-164712.png)]][[BR]]
-[[Image(20111203-164715.png)]][[BR]]
-[[Image(20111203-164724.png)]][[BR]]
-[[Image(20111203-164733.png)]][[BR]]
-[[Image(20111203-164736.png)]][[BR]]
-[[Image(20111203-164745.png)]][[BR]]
-== 安装 7-zip 支持 ==
-[[Image(20111203-165140-install-7-zip-support.png)]][[BR]]
-[[Image(20111203-165147.png)]][[BR]]
-[[Image(20111203-165152.png)]][[BR]]
-[[Image(20111203-165204.png)]][[BR]]
-[[Image(20111203-165209.png)]][[BR]]
-[[Image(20111203-165212.png)]][[BR]]
-[[Image(20111203-165214.png)]][[BR]]
-[[Image(20111203-165219.png)]][[BR]]
-[[Image(20111203-165224.png)]][[BR]]
-[[Image(20111203-165226.png)]][[BR]]
-[[Image(20111203-165234.png)]][[BR]]
-[[Image(20111203-165236.png)]][[BR]]
-[[Image(20111203-165244.png)]][[BR]]
-[[Image(20111203-165248.png)]][[BR]]
-[[Image(20111203-165251.png)]][[BR]]
-[[Image(20111203-165253.png)]][[BR]]
-[[Image(20111203-165256.png)]][[BR]]
-[[Image(20111203-165829.png)]][[BR]]
-[[Image(20111203-165834.png)]][[BR]]
-[[Image(20111203-165836.png)]][[BR]]
-[[Image(20111203-165901.png)]][[BR]]
-[[Image(20111203-165904.png)]][[BR]]
-[[Image(20111203-165906.png)]][[BR]]
-[[Image(20111203-165911.png)]][[BR]]
-[[Image(20111203-165921.png)]][[BR]]
-[[Image(20111203-165926.png)]][[BR]]
-[[Image(20111203-170109.png)]][[BR]]
-[[Image(20111203-170112.png)]][[BR]]
-[[Image(20111203-170119.png)]][[BR]]
-[[Image(20111203-170122.png)]][[BR]]
-[[Image(20111203-170129.png)]][[BR]]
-[[Image(20111203-170132.png)]][[BR]]
-== 防火墙(iptables)设置 ==
-[[Image(20111203-174541-iptables-config.png)]][[BR]]
-[[Image(20111203-174601.png)]][[BR]]
-[[Image(20111203-174749.png)]][[BR]]
-[[Image(20111203-174821.png)]][[BR]]
-[[Image(20111203-174838.png)]][[BR]]
-[[Image(20111203-174845.png)]][[BR]]
-[[Image(20111203-174853.png)]][[BR]]
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03',2,'CentOS 6.0 虚拟机安装日志(截屏)(补 20111203)','[[PageOutline]]
+== 在虚拟机中安装 CentOS 6.0 ==
+=== 从 DVD1 iso 文件启动 ===
+[[Image(20111203-122450-vm-boot-from-dvd1.png)]][[BR]]
+=== 安装开始界面 ===
+[[Image(20111203-122506-install-start-screen.png)]][[BR]]
+=== 开始安装 ===
+[[Image(20111203-122609-start-install.png)]][[BR]]
+[[Image(20111203-122620.png)]][[BR]]
+[[Image(20111203-122622.png)]][[BR]]
+[[Image(20111203-122625.png)]][[BR]]
+[[Image(20111203-122627.png)]][[BR]]
+[[Image(20111203-122719.png)]][[BR]]
+[[Image(20111203-122747.png)]][[BR]]
+[[Image(20111203-123139.png)]][[BR]]
+[[Image(20111203-123141.png)]][[BR]]
+[[Image(20111203-123144.png)]][[BR]]
+[[Image(20111203-123148.png)]][[BR]]
+[[Image(20111203-123155.png)]][[BR]]
+[[Image(20111203-123216.png)]][[BR]]
+[[Image(20111203-123225.png)]][[BR]]
+[[Image(20111203-123236.png)]][[BR]]
+[[Image(20111203-123248.png)]][[BR]]
+[[Image(20111203-123308.png)]][[BR]]
+[[Image(20111203-123313.png)]][[BR]]
+[[Image(20111203-123347.png)]][[BR]]
+[[Image(20111203-123352.png)]][[BR]]
+=== 磁盘分区 ===
+[[Image(20111203-123415-partition.png)]][[BR]]
+[[Image(20111203-123424.png)]][[BR]]
+[[Image(20111203-123431.png)]][[BR]]
+[[Image(20111203-123433.png)]][[BR]]
+[[Image(20111203-123435.png)]][[BR]]
+[[Image(20111203-123451.png)]][[BR]]
+[[Image(20111203-123454.png)]][[BR]]
+[[Image(20111203-123456.png)]][[BR]]
+[[Image(20111203-123540.png)]][[BR]]
+=== 选择"最小桌面"安装方式 ===
+[[Image(20111203-123558-install-min-desktop.png)]][[BR]]
+[[Image(20111203-123602.png)]][[BR]]
+[[Image(20111203-123619.png)]][[BR]]
+[[Image(20111203-123640.png)]][[BR]]
+[[Image(20111203-123645.png)]][[BR]]
+[[Image(20111203-124001.png)]][[BR]]
+[[Image(20111203-124351.png)]][[BR]]
+[[Image(20111203-124533.png)]][[BR]]
+[[Image(20111203-124535.png)]][[BR]]
+=== 安装完成, 重启 ===
+[[Image(20111203-124551-install-complete-reboot.png)]][[BR]]
+[[Image(20111203-124558.png)]][[BR]]
+[[Image(20111203-124621.png)]][[BR]]
+[[Image(20111203-124627.png)]][[BR]]
+[[Image(20111203-124632.png)]][[BR]]
+[[Image(20111203-124634.png)]][[BR]]
+== 安装后的设置步骤 ==
+=== 基本设置项目 ===
+[[Image(20111203-124648-configuration.png)]][[BR]]
+[[Image(20111203-124650.png)]][[BR]]
+[[Image(20111203-124713.png)]][[BR]]
+[[Image(20111203-124720.png)]][[BR]]
+[[Image(20111203-124723.png)]][[BR]]
+=== Kdump 无法启用 ===
+[[Image(20111203-124739-kdump-disabled.png)]][[BR]]
+[[Image(20111203-124746.png)]][[BR]]
+=== 进入系统 ===
+[[Image(20111203-124834.png)]][[BR]]
+[[Image(20111203-125020.png)]][[BR]]
+[[Image(20111203-125028.png)]][[BR]]
+=== 设置网络 ===
+[[Image(20111203-125153-network-setting.png)]][[BR]]
+[[Image(20111203-125356.png)]][[BR]]
+[[Image(20111203-125409.png)]][[BR]]
+[[Image(20111203-125537.png)]][[BR]]
+[[Image(20111203-125614.png)]][[BR]]
+[[Image(20111203-125625.png)]][[BR]]
+[[Image(20111203-125644.png)]][[BR]]
+=== 虚拟机安装结束 ===
+[[Image(20111203-125906-install-ok.png)]][[BR]]
+== 重启, 检查更新 ==
+[[Image(20111203-134815-reboot-check-update.png)]][[BR]]
+[[Image(20111203-134845.png)]][[BR]]
+[[Image(20111203-134858.png)]][[BR]]
+[[Image(20111203-134900.png)]][[BR]]
+[[Image(20111203-134915.png)]][[BR]]
+[[Image(20111203-135004.png)]][[BR]]
+[[Image(20111203-135009.png)]][[BR]]
+[[Image(20111203-135016.png)]][[BR]]
+[[Image(20111203-135041.png)]][[BR]]
+[[Image(20111203-135049.png)]][[BR]]
+[[Image(20111203-135119.png)]][[BR]]
+[[Image(20111203-135137.png)]][[BR]]
+[[Image(20111203-135200.png)]][[BR]]
+[[Image(20111203-135215.png)]][[BR]]
+[[Image(20111203-135235.png)]][[BR]]
+[[Image(20111203-135452.png)]][[BR]]
+[[Image(20111203-135515.png)]][[BR]]
+[[Image(20111203-135533.png)]][[BR]]
+[[Image(20111203-135546.png)]][[BR]]
+[[Image(20111203-135558.png)]][[BR]]
+[[Image(20111203-135611.png)]][[BR]]
+[[Image(20111203-135614.png)]][[BR]]
+[[Image(20111203-135621.png)]][[BR]]
+[[Image(20111203-135629.png)]][[BR]]
+[[Image(20111203-135652.png)]][[BR]]
+[[Image(20111203-135659.png)]][[BR]]
+[[Image(20111203-135730.png)]][[BR]]
+[[Image(20111203-135735.png)]][[BR]]
+[[Image(20111203-135835.png)]][[BR]]
+[[Image(20111203-135908.png)]][[BR]]
+[[Image(20111203-135910.png)]][[BR]]
+[[Image(20111203-140051.png)]][[BR]]
+[[Image(20111203-140114.png)]][[BR]]
+[[Image(20111203-140124.png)]][[BR]]
+[[Image(20111203-140154.png)]][[BR]]
+[[Image(20111203-140156.png)]][[BR]]
+[[Image(20111203-140201.png)]][[BR]]
+[[Image(20111203-140208.png)]][[BR]]
+[[Image(20111203-140215.png)]][[BR]]
+[[Image(20111203-140222.png)]][[BR]]
+[[Image(20111203-140229.png)]][[BR]]
+[[Image(20111203-140233.png)]][[BR]]
+[[Image(20111203-140252.png)]][[BR]]
+[[Image(20111203-140341.png)]][[BR]]
+== 安装 gcc 和内核头文件等 ==
+[[Image(20111203-140452-install-gcc-and-kernel-devel.png)]][[BR]]
+[[Image(20111203-140457.png)]][[BR]]
+[[Image(20111203-140501.png)]][[BR]]
+[[Image(20111203-140514.png)]][[BR]]
+[[Image(20111203-140554.png)]][[BR]]
+[[Image(20111203-140559.png)]][[BR]]
+[[Image(20111203-140603.png)]][[BR]]
+[[Image(20111203-140621.png)]][[BR]]
+[[Image(20111203-140643.png)]][[BR]]
+== 安装 vmware-tools ==
+=== 尝试 ===
+[[Image(20111203-140705-try-install-vmware-tools.png)]][[BR]]
+=== 系统安装时已自带 vmware-tools ===
+[[Image(20111203-140741-CentOS6-already-has-vmware-tools.png)]][[BR]]
+== 安装 telnet 命令 ==
+[[Image(20111203-140821-install-telnet.png)]][[BR]]
+[[Image(20111203-140825.png)]][[BR]]
+[[Image(20111203-140829.png)]][[BR]]
+[[Image(20111203-140834.png)]][[BR]]
+[[Image(20111203-140838.png)]][[BR]]
+== 验证 sshd 已安装 ==
+[[Image(20111203-140847-check-sshd.png)]][[BR]]
+== 安装 svn (客户端) ==
+[[Image(20111203-164710-install-svn.png)]][[BR]]
+[[Image(20111203-164712.png)]][[BR]]
+[[Image(20111203-164715.png)]][[BR]]
+[[Image(20111203-164724.png)]][[BR]]
+[[Image(20111203-164733.png)]][[BR]]
+[[Image(20111203-164736.png)]][[BR]]
+[[Image(20111203-164745.png)]][[BR]]
+== 安装 7-zip 支持 ==
+[[Image(20111203-165140-install-7-zip-support.png)]][[BR]]
+[[Image(20111203-165147.png)]][[BR]]
+[[Image(20111203-165152.png)]][[BR]]
+[[Image(20111203-165204.png)]][[BR]]
+[[Image(20111203-165209.png)]][[BR]]
+[[Image(20111203-165212.png)]][[BR]]
+[[Image(20111203-165214.png)]][[BR]]
+[[Image(20111203-165219.png)]][[BR]]
+[[Image(20111203-165224.png)]][[BR]]
+[[Image(20111203-165226.png)]][[BR]]
+[[Image(20111203-165234.png)]][[BR]]
+[[Image(20111203-165236.png)]][[BR]]
+[[Image(20111203-165244.png)]][[BR]]
+[[Image(20111203-165248.png)]][[BR]]
+[[Image(20111203-165251.png)]][[BR]]
+[[Image(20111203-165253.png)]][[BR]]
+[[Image(20111203-165256.png)]][[BR]]
+[[Image(20111203-165829.png)]][[BR]]
+[[Image(20111203-165834.png)]][[BR]]
+[[Image(20111203-165836.png)]][[BR]]
+[[Image(20111203-165901.png)]][[BR]]
+[[Image(20111203-165904.png)]][[BR]]
+[[Image(20111203-165906.png)]][[BR]]
+[[Image(20111203-165911.png)]][[BR]]
+[[Image(20111203-165921.png)]][[BR]]
+[[Image(20111203-165926.png)]][[BR]]
+[[Image(20111203-170109.png)]][[BR]]
+[[Image(20111203-170112.png)]][[BR]]
+[[Image(20111203-170119.png)]][[BR]]
+[[Image(20111203-170122.png)]][[BR]]
+[[Image(20111203-170129.png)]][[BR]]
+[[Image(20111203-170132.png)]][[BR]]
+== 防火墙(iptables)设置 ==
+[[Image(20111203-174541-iptables-config.png)]][[BR]]
+[[Image(20111203-174601.png)]][[BR]]
+[[Image(20111203-174749.png)]][[BR]]
+[[Image(20111203-174821.png)]][[BR]]
+[[Image(20111203-174838.png)]][[BR]]
+[[Image(20111203-174845.png)]][[BR]]
+[[Image(20111203-174853.png)]][[BR]]
 == END ==',1354555382,1354555423,'','thinkbase','thinkbase','linux vmware centos redhat');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03',3,'CentOS 6.0 虚拟机安装日志(截屏)(补 20111203)','[[PageOutline]]
-== 在虚拟机中安装 CentOS 6.0 ==
-=== 从 DVD1 iso 文件启动 ===
-[[Image(20111203-122450-vm-boot-from-dvd1.png, 100%)]][[BR]]
-=== 安装开始界面 ===
-[[Image(20111203-122506-install-start-screen.png, 100%)]][[BR]]
-=== 开始安装 ===
-[[Image(20111203-122609-start-install.png, 100%)]][[BR]]
-[[Image(20111203-122620.png, 100%)]][[BR]]
-[[Image(20111203-122622.png, 100%)]][[BR]]
-[[Image(20111203-122625.png, 100%)]][[BR]]
-[[Image(20111203-122627.png, 100%)]][[BR]]
-[[Image(20111203-122719.png, 100%)]][[BR]]
-[[Image(20111203-122747.png, 100%)]][[BR]]
-[[Image(20111203-123139.png, 100%)]][[BR]]
-[[Image(20111203-123141.png, 100%)]][[BR]]
-[[Image(20111203-123144.png, 100%)]][[BR]]
-[[Image(20111203-123148.png, 100%)]][[BR]]
-[[Image(20111203-123155.png, 100%)]][[BR]]
-[[Image(20111203-123216.png, 100%)]][[BR]]
-[[Image(20111203-123225.png, 100%)]][[BR]]
-[[Image(20111203-123236.png, 100%)]][[BR]]
-[[Image(20111203-123248.png, 100%)]][[BR]]
-[[Image(20111203-123308.png, 100%)]][[BR]]
-[[Image(20111203-123313.png, 100%)]][[BR]]
-[[Image(20111203-123347.png, 100%)]][[BR]]
-[[Image(20111203-123352.png, 100%)]][[BR]]
-=== 磁盘分区 ===
-[[Image(20111203-123415-partition.png, 100%)]][[BR]]
-[[Image(20111203-123424.png, 100%)]][[BR]]
-[[Image(20111203-123431.png, 100%)]][[BR]]
-[[Image(20111203-123433.png, 100%)]][[BR]]
-[[Image(20111203-123435.png, 100%)]][[BR]]
-[[Image(20111203-123451.png, 100%)]][[BR]]
-[[Image(20111203-123454.png, 100%)]][[BR]]
-[[Image(20111203-123456.png, 100%)]][[BR]]
-[[Image(20111203-123540.png, 100%)]][[BR]]
-=== 选择"最小桌面"安装方式 ===
-[[Image(20111203-123558-install-min-desktop.png, 100%)]][[BR]]
-[[Image(20111203-123602.png, 100%)]][[BR]]
-[[Image(20111203-123619.png, 100%)]][[BR]]
-[[Image(20111203-123640.png, 100%)]][[BR]]
-[[Image(20111203-123645.png, 100%)]][[BR]]
-[[Image(20111203-124001.png, 100%)]][[BR]]
-[[Image(20111203-124351.png, 100%)]][[BR]]
-[[Image(20111203-124533.png, 100%)]][[BR]]
-[[Image(20111203-124535.png, 100%)]][[BR]]
-=== 安装完成, 重启 ===
-[[Image(20111203-124551-install-complete-reboot.png, 100%)]][[BR]]
-[[Image(20111203-124558.png, 100%)]][[BR]]
-[[Image(20111203-124621.png, 100%)]][[BR]]
-[[Image(20111203-124627.png, 100%)]][[BR]]
-[[Image(20111203-124632.png, 100%)]][[BR]]
-[[Image(20111203-124634.png, 100%)]][[BR]]
-== 安装后的设置步骤 ==
-=== 基本设置项目 ===
-[[Image(20111203-124648-configuration.png, 100%)]][[BR]]
-[[Image(20111203-124650.png, 100%)]][[BR]]
-[[Image(20111203-124713.png, 100%)]][[BR]]
-[[Image(20111203-124720.png, 100%)]][[BR]]
-[[Image(20111203-124723.png, 100%)]][[BR]]
-=== Kdump 无法启用 ===
-[[Image(20111203-124739-kdump-disabled.png, 100%)]][[BR]]
-[[Image(20111203-124746.png, 100%)]][[BR]]
-=== 进入系统 ===
-[[Image(20111203-124834.png, 100%)]][[BR]]
-[[Image(20111203-125020.png, 100%)]][[BR]]
-[[Image(20111203-125028.png, 100%)]][[BR]]
-=== 设置网络 ===
-[[Image(20111203-125153-network-setting.png, 100%)]][[BR]]
-[[Image(20111203-125356.png, 100%)]][[BR]]
-[[Image(20111203-125409.png, 100%)]][[BR]]
-[[Image(20111203-125537.png, 100%)]][[BR]]
-[[Image(20111203-125614.png, 100%)]][[BR]]
-[[Image(20111203-125625.png, 100%)]][[BR]]
-[[Image(20111203-125644.png, 100%)]][[BR]]
-=== 虚拟机安装结束 ===
-[[Image(20111203-125906-install-ok.png, 100%)]][[BR]]
-== 重启, 检查更新 ==
-[[Image(20111203-134815-reboot-check-update.png, 100%)]][[BR]]
-[[Image(20111203-134845.png, 100%)]][[BR]]
-[[Image(20111203-134858.png, 100%)]][[BR]]
-[[Image(20111203-134900.png, 100%)]][[BR]]
-[[Image(20111203-134915.png, 100%)]][[BR]]
-[[Image(20111203-135004.png, 100%)]][[BR]]
-[[Image(20111203-135009.png, 100%)]][[BR]]
-[[Image(20111203-135016.png, 100%)]][[BR]]
-[[Image(20111203-135041.png, 100%)]][[BR]]
-[[Image(20111203-135049.png, 100%)]][[BR]]
-[[Image(20111203-135119.png, 100%)]][[BR]]
-[[Image(20111203-135137.png, 100%)]][[BR]]
-[[Image(20111203-135200.png, 100%)]][[BR]]
-[[Image(20111203-135215.png, 100%)]][[BR]]
-[[Image(20111203-135235.png, 100%)]][[BR]]
-[[Image(20111203-135452.png, 100%)]][[BR]]
-[[Image(20111203-135515.png, 100%)]][[BR]]
-[[Image(20111203-135533.png, 100%)]][[BR]]
-[[Image(20111203-135546.png, 100%)]][[BR]]
-[[Image(20111203-135558.png, 100%)]][[BR]]
-[[Image(20111203-135611.png, 100%)]][[BR]]
-[[Image(20111203-135614.png, 100%)]][[BR]]
-[[Image(20111203-135621.png, 100%)]][[BR]]
-[[Image(20111203-135629.png, 100%)]][[BR]]
-[[Image(20111203-135652.png, 100%)]][[BR]]
-[[Image(20111203-135659.png, 100%)]][[BR]]
-[[Image(20111203-135730.png, 100%)]][[BR]]
-[[Image(20111203-135735.png, 100%)]][[BR]]
-[[Image(20111203-135835.png, 100%)]][[BR]]
-[[Image(20111203-135908.png, 100%)]][[BR]]
-[[Image(20111203-135910.png, 100%)]][[BR]]
-[[Image(20111203-140051.png, 100%)]][[BR]]
-[[Image(20111203-140114.png, 100%)]][[BR]]
-[[Image(20111203-140124.png, 100%)]][[BR]]
-[[Image(20111203-140154.png, 100%)]][[BR]]
-[[Image(20111203-140156.png, 100%)]][[BR]]
-[[Image(20111203-140201.png, 100%)]][[BR]]
-[[Image(20111203-140208.png, 100%)]][[BR]]
-[[Image(20111203-140215.png, 100%)]][[BR]]
-[[Image(20111203-140222.png, 100%)]][[BR]]
-[[Image(20111203-140229.png, 100%)]][[BR]]
-[[Image(20111203-140233.png, 100%)]][[BR]]
-[[Image(20111203-140252.png, 100%)]][[BR]]
-[[Image(20111203-140341.png, 100%)]][[BR]]
-== 安装 gcc 和内核头文件等 ==
-[[Image(20111203-140452-install-gcc-and-kernel-devel.png, 100%)]][[BR]]
-[[Image(20111203-140457.png, 100%)]][[BR]]
-[[Image(20111203-140501.png, 100%)]][[BR]]
-[[Image(20111203-140514.png, 100%)]][[BR]]
-[[Image(20111203-140554.png, 100%)]][[BR]]
-[[Image(20111203-140559.png, 100%)]][[BR]]
-[[Image(20111203-140603.png, 100%)]][[BR]]
-[[Image(20111203-140621.png, 100%)]][[BR]]
-[[Image(20111203-140643.png, 100%)]][[BR]]
-== 安装 vmware-tools ==
-=== 尝试 ===
-[[Image(20111203-140705-try-install-vmware-tools.png, 100%)]][[BR]]
-=== 系统安装时已自带 vmware-tools ===
-[[Image(20111203-140741-CentOS6-already-has-vmware-tools.png, 100%)]][[BR]]
-== 安装 telnet 命令 ==
-[[Image(20111203-140821-install-telnet.png, 100%)]][[BR]]
-[[Image(20111203-140825.png, 100%)]][[BR]]
-[[Image(20111203-140829.png, 100%)]][[BR]]
-[[Image(20111203-140834.png, 100%)]][[BR]]
-[[Image(20111203-140838.png, 100%)]][[BR]]
-== 验证 sshd 已安装 ==
-[[Image(20111203-140847-check-sshd.png, 100%)]][[BR]]
-== 安装 svn (客户端) ==
-[[Image(20111203-164710-install-svn.png, 100%)]][[BR]]
-[[Image(20111203-164712.png, 100%)]][[BR]]
-[[Image(20111203-164715.png, 100%)]][[BR]]
-[[Image(20111203-164724.png, 100%)]][[BR]]
-[[Image(20111203-164733.png, 100%)]][[BR]]
-[[Image(20111203-164736.png, 100%)]][[BR]]
-[[Image(20111203-164745.png, 100%)]][[BR]]
-== 安装 7-zip 支持 ==
-[[Image(20111203-165140-install-7-zip-support.png, 100%)]][[BR]]
-[[Image(20111203-165147.png, 100%)]][[BR]]
-[[Image(20111203-165152.png, 100%)]][[BR]]
-[[Image(20111203-165204.png, 100%)]][[BR]]
-[[Image(20111203-165209.png, 100%)]][[BR]]
-[[Image(20111203-165212.png, 100%)]][[BR]]
-[[Image(20111203-165214.png, 100%)]][[BR]]
-[[Image(20111203-165219.png, 100%)]][[BR]]
-[[Image(20111203-165224.png, 100%)]][[BR]]
-[[Image(20111203-165226.png, 100%)]][[BR]]
-[[Image(20111203-165234.png, 100%)]][[BR]]
-[[Image(20111203-165236.png, 100%)]][[BR]]
-[[Image(20111203-165244.png, 100%)]][[BR]]
-[[Image(20111203-165248.png, 100%)]][[BR]]
-[[Image(20111203-165251.png, 100%)]][[BR]]
-[[Image(20111203-165253.png, 100%)]][[BR]]
-[[Image(20111203-165256.png, 100%)]][[BR]]
-[[Image(20111203-165829.png, 100%)]][[BR]]
-[[Image(20111203-165834.png, 100%)]][[BR]]
-[[Image(20111203-165836.png, 100%)]][[BR]]
-[[Image(20111203-165901.png, 100%)]][[BR]]
-[[Image(20111203-165904.png, 100%)]][[BR]]
-[[Image(20111203-165906.png, 100%)]][[BR]]
-[[Image(20111203-165911.png, 100%)]][[BR]]
-[[Image(20111203-165921.png, 100%)]][[BR]]
-[[Image(20111203-165926.png, 100%)]][[BR]]
-[[Image(20111203-170109.png, 100%)]][[BR]]
-[[Image(20111203-170112.png, 100%)]][[BR]]
-[[Image(20111203-170119.png, 100%)]][[BR]]
-[[Image(20111203-170122.png, 100%)]][[BR]]
-[[Image(20111203-170129.png, 100%)]][[BR]]
-[[Image(20111203-170132.png, 100%)]][[BR]]
-== 防火墙(iptables)设置 ==
-[[Image(20111203-174541-iptables-config.png, 100%)]][[BR]]
-[[Image(20111203-174601.png, 100%)]][[BR]]
-[[Image(20111203-174749.png, 100%)]][[BR]]
-[[Image(20111203-174821.png, 100%)]][[BR]]
-[[Image(20111203-174838.png, 100%)]][[BR]]
-[[Image(20111203-174845.png, 100%)]][[BR]]
-[[Image(20111203-174853.png, 100%)]][[BR]]
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03',3,'CentOS 6.0 虚拟机安装日志(截屏)(补 20111203)','[[PageOutline]]
+== 在虚拟机中安装 CentOS 6.0 ==
+=== 从 DVD1 iso 文件启动 ===
+[[Image(20111203-122450-vm-boot-from-dvd1.png, 100%)]][[BR]]
+=== 安装开始界面 ===
+[[Image(20111203-122506-install-start-screen.png, 100%)]][[BR]]
+=== 开始安装 ===
+[[Image(20111203-122609-start-install.png, 100%)]][[BR]]
+[[Image(20111203-122620.png, 100%)]][[BR]]
+[[Image(20111203-122622.png, 100%)]][[BR]]
+[[Image(20111203-122625.png, 100%)]][[BR]]
+[[Image(20111203-122627.png, 100%)]][[BR]]
+[[Image(20111203-122719.png, 100%)]][[BR]]
+[[Image(20111203-122747.png, 100%)]][[BR]]
+[[Image(20111203-123139.png, 100%)]][[BR]]
+[[Image(20111203-123141.png, 100%)]][[BR]]
+[[Image(20111203-123144.png, 100%)]][[BR]]
+[[Image(20111203-123148.png, 100%)]][[BR]]
+[[Image(20111203-123155.png, 100%)]][[BR]]
+[[Image(20111203-123216.png, 100%)]][[BR]]
+[[Image(20111203-123225.png, 100%)]][[BR]]
+[[Image(20111203-123236.png, 100%)]][[BR]]
+[[Image(20111203-123248.png, 100%)]][[BR]]
+[[Image(20111203-123308.png, 100%)]][[BR]]
+[[Image(20111203-123313.png, 100%)]][[BR]]
+[[Image(20111203-123347.png, 100%)]][[BR]]
+[[Image(20111203-123352.png, 100%)]][[BR]]
+=== 磁盘分区 ===
+[[Image(20111203-123415-partition.png, 100%)]][[BR]]
+[[Image(20111203-123424.png, 100%)]][[BR]]
+[[Image(20111203-123431.png, 100%)]][[BR]]
+[[Image(20111203-123433.png, 100%)]][[BR]]
+[[Image(20111203-123435.png, 100%)]][[BR]]
+[[Image(20111203-123451.png, 100%)]][[BR]]
+[[Image(20111203-123454.png, 100%)]][[BR]]
+[[Image(20111203-123456.png, 100%)]][[BR]]
+[[Image(20111203-123540.png, 100%)]][[BR]]
+=== 选择"最小桌面"安装方式 ===
+[[Image(20111203-123558-install-min-desktop.png, 100%)]][[BR]]
+[[Image(20111203-123602.png, 100%)]][[BR]]
+[[Image(20111203-123619.png, 100%)]][[BR]]
+[[Image(20111203-123640.png, 100%)]][[BR]]
+[[Image(20111203-123645.png, 100%)]][[BR]]
+[[Image(20111203-124001.png, 100%)]][[BR]]
+[[Image(20111203-124351.png, 100%)]][[BR]]
+[[Image(20111203-124533.png, 100%)]][[BR]]
+[[Image(20111203-124535.png, 100%)]][[BR]]
+=== 安装完成, 重启 ===
+[[Image(20111203-124551-install-complete-reboot.png, 100%)]][[BR]]
+[[Image(20111203-124558.png, 100%)]][[BR]]
+[[Image(20111203-124621.png, 100%)]][[BR]]
+[[Image(20111203-124627.png, 100%)]][[BR]]
+[[Image(20111203-124632.png, 100%)]][[BR]]
+[[Image(20111203-124634.png, 100%)]][[BR]]
+== 安装后的设置步骤 ==
+=== 基本设置项目 ===
+[[Image(20111203-124648-configuration.png, 100%)]][[BR]]
+[[Image(20111203-124650.png, 100%)]][[BR]]
+[[Image(20111203-124713.png, 100%)]][[BR]]
+[[Image(20111203-124720.png, 100%)]][[BR]]
+[[Image(20111203-124723.png, 100%)]][[BR]]
+=== Kdump 无法启用 ===
+[[Image(20111203-124739-kdump-disabled.png, 100%)]][[BR]]
+[[Image(20111203-124746.png, 100%)]][[BR]]
+=== 进入系统 ===
+[[Image(20111203-124834.png, 100%)]][[BR]]
+[[Image(20111203-125020.png, 100%)]][[BR]]
+[[Image(20111203-125028.png, 100%)]][[BR]]
+=== 设置网络 ===
+[[Image(20111203-125153-network-setting.png, 100%)]][[BR]]
+[[Image(20111203-125356.png, 100%)]][[BR]]
+[[Image(20111203-125409.png, 100%)]][[BR]]
+[[Image(20111203-125537.png, 100%)]][[BR]]
+[[Image(20111203-125614.png, 100%)]][[BR]]
+[[Image(20111203-125625.png, 100%)]][[BR]]
+[[Image(20111203-125644.png, 100%)]][[BR]]
+=== 虚拟机安装结束 ===
+[[Image(20111203-125906-install-ok.png, 100%)]][[BR]]
+== 重启, 检查更新 ==
+[[Image(20111203-134815-reboot-check-update.png, 100%)]][[BR]]
+[[Image(20111203-134845.png, 100%)]][[BR]]
+[[Image(20111203-134858.png, 100%)]][[BR]]
+[[Image(20111203-134900.png, 100%)]][[BR]]
+[[Image(20111203-134915.png, 100%)]][[BR]]
+[[Image(20111203-135004.png, 100%)]][[BR]]
+[[Image(20111203-135009.png, 100%)]][[BR]]
+[[Image(20111203-135016.png, 100%)]][[BR]]
+[[Image(20111203-135041.png, 100%)]][[BR]]
+[[Image(20111203-135049.png, 100%)]][[BR]]
+[[Image(20111203-135119.png, 100%)]][[BR]]
+[[Image(20111203-135137.png, 100%)]][[BR]]
+[[Image(20111203-135200.png, 100%)]][[BR]]
+[[Image(20111203-135215.png, 100%)]][[BR]]
+[[Image(20111203-135235.png, 100%)]][[BR]]
+[[Image(20111203-135452.png, 100%)]][[BR]]
+[[Image(20111203-135515.png, 100%)]][[BR]]
+[[Image(20111203-135533.png, 100%)]][[BR]]
+[[Image(20111203-135546.png, 100%)]][[BR]]
+[[Image(20111203-135558.png, 100%)]][[BR]]
+[[Image(20111203-135611.png, 100%)]][[BR]]
+[[Image(20111203-135614.png, 100%)]][[BR]]
+[[Image(20111203-135621.png, 100%)]][[BR]]
+[[Image(20111203-135629.png, 100%)]][[BR]]
+[[Image(20111203-135652.png, 100%)]][[BR]]
+[[Image(20111203-135659.png, 100%)]][[BR]]
+[[Image(20111203-135730.png, 100%)]][[BR]]
+[[Image(20111203-135735.png, 100%)]][[BR]]
+[[Image(20111203-135835.png, 100%)]][[BR]]
+[[Image(20111203-135908.png, 100%)]][[BR]]
+[[Image(20111203-135910.png, 100%)]][[BR]]
+[[Image(20111203-140051.png, 100%)]][[BR]]
+[[Image(20111203-140114.png, 100%)]][[BR]]
+[[Image(20111203-140124.png, 100%)]][[BR]]
+[[Image(20111203-140154.png, 100%)]][[BR]]
+[[Image(20111203-140156.png, 100%)]][[BR]]
+[[Image(20111203-140201.png, 100%)]][[BR]]
+[[Image(20111203-140208.png, 100%)]][[BR]]
+[[Image(20111203-140215.png, 100%)]][[BR]]
+[[Image(20111203-140222.png, 100%)]][[BR]]
+[[Image(20111203-140229.png, 100%)]][[BR]]
+[[Image(20111203-140233.png, 100%)]][[BR]]
+[[Image(20111203-140252.png, 100%)]][[BR]]
+[[Image(20111203-140341.png, 100%)]][[BR]]
+== 安装 gcc 和内核头文件等 ==
+[[Image(20111203-140452-install-gcc-and-kernel-devel.png, 100%)]][[BR]]
+[[Image(20111203-140457.png, 100%)]][[BR]]
+[[Image(20111203-140501.png, 100%)]][[BR]]
+[[Image(20111203-140514.png, 100%)]][[BR]]
+[[Image(20111203-140554.png, 100%)]][[BR]]
+[[Image(20111203-140559.png, 100%)]][[BR]]
+[[Image(20111203-140603.png, 100%)]][[BR]]
+[[Image(20111203-140621.png, 100%)]][[BR]]
+[[Image(20111203-140643.png, 100%)]][[BR]]
+== 安装 vmware-tools ==
+=== 尝试 ===
+[[Image(20111203-140705-try-install-vmware-tools.png, 100%)]][[BR]]
+=== 系统安装时已自带 vmware-tools ===
+[[Image(20111203-140741-CentOS6-already-has-vmware-tools.png, 100%)]][[BR]]
+== 安装 telnet 命令 ==
+[[Image(20111203-140821-install-telnet.png, 100%)]][[BR]]
+[[Image(20111203-140825.png, 100%)]][[BR]]
+[[Image(20111203-140829.png, 100%)]][[BR]]
+[[Image(20111203-140834.png, 100%)]][[BR]]
+[[Image(20111203-140838.png, 100%)]][[BR]]
+== 验证 sshd 已安装 ==
+[[Image(20111203-140847-check-sshd.png, 100%)]][[BR]]
+== 安装 svn (客户端) ==
+[[Image(20111203-164710-install-svn.png, 100%)]][[BR]]
+[[Image(20111203-164712.png, 100%)]][[BR]]
+[[Image(20111203-164715.png, 100%)]][[BR]]
+[[Image(20111203-164724.png, 100%)]][[BR]]
+[[Image(20111203-164733.png, 100%)]][[BR]]
+[[Image(20111203-164736.png, 100%)]][[BR]]
+[[Image(20111203-164745.png, 100%)]][[BR]]
+== 安装 7-zip 支持 ==
+[[Image(20111203-165140-install-7-zip-support.png, 100%)]][[BR]]
+[[Image(20111203-165147.png, 100%)]][[BR]]
+[[Image(20111203-165152.png, 100%)]][[BR]]
+[[Image(20111203-165204.png, 100%)]][[BR]]
+[[Image(20111203-165209.png, 100%)]][[BR]]
+[[Image(20111203-165212.png, 100%)]][[BR]]
+[[Image(20111203-165214.png, 100%)]][[BR]]
+[[Image(20111203-165219.png, 100%)]][[BR]]
+[[Image(20111203-165224.png, 100%)]][[BR]]
+[[Image(20111203-165226.png, 100%)]][[BR]]
+[[Image(20111203-165234.png, 100%)]][[BR]]
+[[Image(20111203-165236.png, 100%)]][[BR]]
+[[Image(20111203-165244.png, 100%)]][[BR]]
+[[Image(20111203-165248.png, 100%)]][[BR]]
+[[Image(20111203-165251.png, 100%)]][[BR]]
+[[Image(20111203-165253.png, 100%)]][[BR]]
+[[Image(20111203-165256.png, 100%)]][[BR]]
+[[Image(20111203-165829.png, 100%)]][[BR]]
+[[Image(20111203-165834.png, 100%)]][[BR]]
+[[Image(20111203-165836.png, 100%)]][[BR]]
+[[Image(20111203-165901.png, 100%)]][[BR]]
+[[Image(20111203-165904.png, 100%)]][[BR]]
+[[Image(20111203-165906.png, 100%)]][[BR]]
+[[Image(20111203-165911.png, 100%)]][[BR]]
+[[Image(20111203-165921.png, 100%)]][[BR]]
+[[Image(20111203-165926.png, 100%)]][[BR]]
+[[Image(20111203-170109.png, 100%)]][[BR]]
+[[Image(20111203-170112.png, 100%)]][[BR]]
+[[Image(20111203-170119.png, 100%)]][[BR]]
+[[Image(20111203-170122.png, 100%)]][[BR]]
+[[Image(20111203-170129.png, 100%)]][[BR]]
+[[Image(20111203-170132.png, 100%)]][[BR]]
+== 防火墙(iptables)设置 ==
+[[Image(20111203-174541-iptables-config.png, 100%)]][[BR]]
+[[Image(20111203-174601.png, 100%)]][[BR]]
+[[Image(20111203-174749.png, 100%)]][[BR]]
+[[Image(20111203-174821.png, 100%)]][[BR]]
+[[Image(20111203-174838.png, 100%)]][[BR]]
+[[Image(20111203-174845.png, 100%)]][[BR]]
+[[Image(20111203-174853.png, 100%)]][[BR]]
 == END ==',1354555382,1354555582,'','thinkbase','thinkbase','linux vmware centos redhat');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',1,'快速增加附件 - `TracDragDropPlugin` 插件','[http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 是 http://trac-hacks.org/ 上面的一个 [http://trac.edgewall.org/ Trac] 插件, 其主要功能就是使用 HTML5 `drag-and-drop` 方式, 快速上次附件.
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',1,'快速增加附件 - `TracDragDropPlugin` 插件','[http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 是 http://trac-hacks.org/ 上面的一个 [http://trac.edgewall.org/ Trac] 插件, 其主要功能就是使用 HTML5 `drag-and-drop` 方式, 快速上次附件.
+
 前面一篇 Blog([blog:thinkbase-2012/12/03 这里]) 具有 171 个截图, 这些图片附件就是使用 [http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 批量上传的:[[BR]][[Image(TracDragDropPlugin.png, 100%)]].',1354556865,1354556865,'','thinkbase','thinkbase','trac plugin TracDragDropPlugin');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',2,'快速增加附件 - TracDragDropPlugin 插件','[http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 是 http://trac-hacks.org/ 上面的一个 [http://trac.edgewall.org/ Trac] 插件, 其主要功能就是使用 HTML5 `drag-and-drop` 方式, 快速上次附件.
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',2,'快速增加附件 - TracDragDropPlugin 插件','[http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 是 http://trac-hacks.org/ 上面的一个 [http://trac.edgewall.org/ Trac] 插件, 其主要功能就是使用 HTML5 `drag-and-drop` 方式, 快速上次附件.
+
 前面一篇 Blog([blog:thinkbase-2012/12/03 这里]) 具有 171 个截图, 这些图片附件就是使用 [http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 批量上传的:[[BR]][[Image(TracDragDropPlugin.png, 100%)]].',1354556865,1354556901,'','thinkbase','thinkbase','trac plugin TracDragDropPlugin');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',3,'快速增加附件 - TracDragDropPlugin 插件','[http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 是 http://trac-hacks.org/ 上面的一个 [http://trac.edgewall.org/ Trac] 插件, 其主要功能就是使用 HTML5 `drag-and-drop` 方式, 快速上次附件.
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',3,'快速增加附件 - TracDragDropPlugin 插件','[http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 是 http://trac-hacks.org/ 上面的一个 [http://trac.edgewall.org/ Trac] 插件, 其主要功能就是使用 HTML5 `drag-and-drop` 方式, 快速上次附件.
+
 前面一篇 Blog([blog:thinkbase-2012/12/03 这里]) 具有 171 个截图, 这些图片附件就是使用 [http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 批量上传的:[[BR]][[Image(TracDragDropPlugin.png, 100%)]].',1354556865,1354556919,'','thinkbase','thinkbase','trac plugin TracDragDropPlugin html5 upload');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',4,'快速上传附件 - TracDragDropPlugin 插件','[http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 是 http://trac-hacks.org/ 上面的一个 [http://trac.edgewall.org/ Trac] 插件, 其主要功能就是使用 HTML5 `drag-and-drop` 方式, 快速上次附件.
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/03-2',4,'快速上传附件 - TracDragDropPlugin 插件','[http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 是 http://trac-hacks.org/ 上面的一个 [http://trac.edgewall.org/ Trac] 插件, 其主要功能就是使用 HTML5 `drag-and-drop` 方式, 快速上次附件.
+
 前面一篇 Blog([blog:thinkbase-2012/12/03 这里]) 具有 171 个截图, 这些图片附件就是使用 [http://trac-hacks.org/wiki/TracDragDropPlugin TracDragDropPlugin] 批量上传的:[[BR]][[Image(TracDragDropPlugin.png, 100%)]].',1354556865,1354556954,'','thinkbase','thinkbase','trac plugin TracDragDropPlugin html5 upload');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',1,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从解除 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
-
-最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(rewritten from scratch), 包括了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
- - Archive indexing: DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
- - Outlook PST file indexing
- - Indexing of and searching in filenames - 可以按照文件名查找;
-
-经过简单试用, 觉得这个版本还是值得升级的, 但是发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
-
-下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [truezip http://truezip.java.net/] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [truezip http://truezip.java.net/] 中, zip 格式默认使用的字符集为 `IBM437`:
-{{{
-#!java
-public class ZipDriver
-extends FsCharsetArchiveDriver<ZipDriverEntry>
-implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
-
-    private static final Logger logger = Logger.getLogger(
-            ZipDriver.class.getName(),
-            ZipDriver.class.getName());
-
-    /**
-     * The character set for entry names and comments in &quot;traditional&quot;
-     * ZIP files, which is {@code "IBM437"}.
-     */
-    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
-
-    private final IOPool<?> ioPool;
-
-    /**
-     * Constructs a new ZIP driver.
-     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
-     * and comments.
-     *
-     * @param ioPoolProvider the provider for I/O entry pools for allocating
-     *        temporary I/O entries (buffers).
-     */
-    public ZipDriver(IOPoolProvider ioPoolProvider) {
-        this(ioPoolProvider, ZIP_CHARSET);
-    }
-}}}
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',1,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从解除 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(rewritten from scratch), 包括了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Outlook PST file indexing
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 但是发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [truezip http://truezip.java.net/] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [truezip http://truezip.java.net/] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+}}}
+
 ',1355069325,1355069325,'','thinkbase','thinkbase','');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',2,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从解除 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
-
-最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
- - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
- - Indexing of and searching in filenames - 可以按照文件名查找;
-
-经过简单试用, 觉得这个版本还是值得升级的, 但是发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
-
-下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
-{{{
-#!java
-... ...
-public class ZipDriver
-extends FsCharsetArchiveDriver<ZipDriverEntry>
-implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
-
-    private static final Logger logger = Logger.getLogger(
-            ZipDriver.class.getName(),
-            ZipDriver.class.getName());
-
-    /**
-     * The character set for entry names and comments in &quot;traditional&quot;
-     * ZIP files, which is {@code "IBM437"}.
-     */
-    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
-
-    private final IOPool<?> ioPool;
-
-    /**
-     * Constructs a new ZIP driver.
-     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
-     * and comments.
-     *
-     * @param ioPoolProvider the provider for I/O entry pools for allocating
-     *        temporary I/O entries (buffers).
-     */
-    public ZipDriver(IOPoolProvider ioPoolProvider) {
-        this(ioPoolProvider, ZIP_CHARSET);
-    }
-    ... ...
-}}}
-
-而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
-
-默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
-{{{
-#!java
-public final class ZipDriverService extends FsDriverService {
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
-
-另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
-
-解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
-	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
-
-	private static final ZipDriver buildZipDriver(){
-		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		
-		return new ZipDriver(IOPoolLocator.SINGLETON);
-	}
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", buildZipDriver() },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',2,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从解除 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 但是发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+
+
 顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;',1355069325,1355071048,'','thinkbase','thinkbase','');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',3,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从解除 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
-
-最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
- - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
- - Indexing of and searching in filenames - 可以按照文件名查找;
-
-经过简单试用, 觉得这个版本还是值得升级的, 但是发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
-
-下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
-{{{
-#!java
-... ...
-public class ZipDriver
-extends FsCharsetArchiveDriver<ZipDriverEntry>
-implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
-
-    private static final Logger logger = Logger.getLogger(
-            ZipDriver.class.getName(),
-            ZipDriver.class.getName());
-
-    /**
-     * The character set for entry names and comments in &quot;traditional&quot;
-     * ZIP files, which is {@code "IBM437"}.
-     */
-    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
-
-    private final IOPool<?> ioPool;
-
-    /**
-     * Constructs a new ZIP driver.
-     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
-     * and comments.
-     *
-     * @param ioPoolProvider the provider for I/O entry pools for allocating
-     *        temporary I/O entries (buffers).
-     */
-    public ZipDriver(IOPoolProvider ioPoolProvider) {
-        this(ioPoolProvider, ZIP_CHARSET);
-    }
-    ... ...
-}}}
-
-而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
-
-默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
-
-另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
-
-解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
-	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
-
-	private static final ZipDriver buildZipDriver(){
-		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		
-		return new ZipDriver(IOPoolLocator.SINGLETON);
-	}
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", buildZipDriver() },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
-
-修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
-
-本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',3,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从解除 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 但是发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
+
+修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
+
+本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
+
 顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;',1355069325,1355152460,'','thinkbase','thinkbase','');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',4,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
-
-最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
- - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
- - Indexing of and searching in filenames - 可以按照文件名查找;
-
-经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
-[[Image(DocFetcher-乱码.png, 100%)]]
-
-下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
-{{{
-#!java
-... ...
-public class ZipDriver
-extends FsCharsetArchiveDriver<ZipDriverEntry>
-implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
-
-    private static final Logger logger = Logger.getLogger(
-            ZipDriver.class.getName(),
-            ZipDriver.class.getName());
-
-    /**
-     * The character set for entry names and comments in &quot;traditional&quot;
-     * ZIP files, which is {@code "IBM437"}.
-     */
-    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
-
-    private final IOPool<?> ioPool;
-
-    /**
-     * Constructs a new ZIP driver.
-     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
-     * and comments.
-     *
-     * @param ioPoolProvider the provider for I/O entry pools for allocating
-     *        temporary I/O entries (buffers).
-     */
-    public ZipDriver(IOPoolProvider ioPoolProvider) {
-        this(ioPoolProvider, ZIP_CHARSET);
-    }
-    ... ...
-}}}
-
-而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
-
-默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
-
-另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
-
-解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
-	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
-
-	private static final ZipDriver buildZipDriver(){
-		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		
-		return new ZipDriver(IOPoolLocator.SINGLETON);
-	}
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", buildZipDriver() },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
-[[Image(DocFetcher.sh.png, 100%)]]
-
-修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
-[[Image(DocFetcher-after-patched.png, 100%)]]
-
-本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',4,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+[[Image(DocFetcher-乱码.png, 100%)]]
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
+[[Image(DocFetcher.sh.png, 100%)]]
+
+修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
+[[Image(DocFetcher-after-patched.png, 100%)]]
+
+本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
+
 顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;',1355069325,1355152687,'','thinkbase','thinkbase','');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',5,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
-
-== 概况 ==
-最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
- - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
- - Indexing of and searching in filenames - 可以按照文件名查找;
-
-经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
-[[Image(DocFetcher-乱码.png, 100%)]]
-
-下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
-{{{
-#!java
-... ...
-public class ZipDriver
-extends FsCharsetArchiveDriver<ZipDriverEntry>
-implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
-
-    private static final Logger logger = Logger.getLogger(
-            ZipDriver.class.getName(),
-            ZipDriver.class.getName());
-
-    /**
-     * The character set for entry names and comments in &quot;traditional&quot;
-     * ZIP files, which is {@code "IBM437"}.
-     */
-    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
-
-    private final IOPool<?> ioPool;
-
-    /**
-     * Constructs a new ZIP driver.
-     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
-     * and comments.
-     *
-     * @param ioPoolProvider the provider for I/O entry pools for allocating
-     *        temporary I/O entries (buffers).
-     */
-    public ZipDriver(IOPoolProvider ioPoolProvider) {
-        this(ioPoolProvider, ZIP_CHARSET);
-    }
-    ... ...
-}}}
-
-而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
-
-默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
-
-另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
-
-解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
-	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
-
-	private static final ZipDriver buildZipDriver(){
-		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		
-		return new ZipDriver(IOPoolLocator.SINGLETON);
-	}
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", buildZipDriver() },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 !DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
-[[Image(DocFetcher.sh.png, 100%)]]
-
-修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
-[[Image(DocFetcher-after-patched.png, 100%)]]
-
-== 总结 ==
- - 使用 Java System Property `de.schlichtherle.truezip.fs.archive.zip.ZIP_CHARSET` 或者 环境变量 `TRUEZIP_ZIP_CHARSET` 来设置默认情况下 zip 文件采用的编码;
- - 补丁 jar 包(需要放在 CLASSPATH 的最前面)下载: raw-attachment:truezip-zip-charset-patch-20121209.jar ;
- - 补丁 jar 包的源程序(含 eclipse 工程和编译必要的 jar 包)下载: raw-attachment:truezip-zip-charset-patch-source.7z ;
-
-== 补充说明 ==
-本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
-
-顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',5,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+== 概况 ==
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+[[Image(DocFetcher-乱码.png, 100%)]]
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 !DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
+[[Image(DocFetcher.sh.png, 100%)]]
+
+修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
+[[Image(DocFetcher-after-patched.png, 100%)]]
+
+== 总结 ==
+ - 使用 Java System Property `de.schlichtherle.truezip.fs.archive.zip.ZIP_CHARSET` 或者 环境变量 `TRUEZIP_ZIP_CHARSET` 来设置默认情况下 zip 文件采用的编码;
+ - 补丁 jar 包(需要放在 CLASSPATH 的最前面)下载: raw-attachment:truezip-zip-charset-patch-20121209.jar ;
+ - 补丁 jar 包的源程序(含 eclipse 工程和编译必要的 jar 包)下载: raw-attachment:truezip-zip-charset-patch-source.7z ;
+
+== 补充说明 ==
+本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
+
+顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;
+
 == END ==',1355069325,1355153145,'','thinkbase','thinkbase','');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',4,'桌面搜索工具 DocFetcher 试用笔记(补 20110416)','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
-
-= 简介 =
-在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
-
-在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
-
-== 主要特色 ==
- * 基于 Java SWT 开发, 跨平台;
- * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
- * 界面比较简单, 但是使用很方便, 基本上只要两步:
-  1. 添加要索引的目录, 建立索引;
-  1. 输出要查询的字符串, 进行查找;
- * 中文支持不错;
-
-== 需要解决的问题 ==
- * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
- * 不支持对文件名进行查找;
- * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
-
-== 中文化 ==
- * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
- * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachment:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
-
-== 后记 ==
- - 20110416
-  * Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
- - 20121203
-  * 发现目前 !DocFetcher 已经升级到 `1.1.5` 版本了, 已经支持对 zip、7z、rar 等格式的压缩文件进行索引, 具体情况有待试验:
-{{{
-#!div style="background-color:#ffd"
-Between version 1.0.3 and version 1.1 beta 1, !DocFetcher was rewritten from scratch, resulting in a large number of new features and changes. [http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1 This page] gives an overview of the most important ones.
-}}}
-
-== END ==
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-2',4,'桌面搜索工具 DocFetcher 试用笔记(补 20110416)','''''最初发布在 https://code.google.com/p/thinkbasenet/wiki/20110416_DocFetcherTrialRun ;''''
+
+= 简介 =
+在 Ubuntu 上一直使用 `Beagle Search`( http://beagle-project.org/ )来对一些有用的文档进行全文检索, 今天想起这件事, 上网找了一圈, 发现 `DocFetcher`( http://sourceforge.net/projects/docfetcher/ ) 也是不错的一个桌面搜索工具.
+
+在 sf.net 网站可以下载到的 `DocFetcher` 最新版本是 1.0.3 (2010-03-18 更新), 提供了 Win32 安装程序、Linux deb 包, 以及一个可用于 Windows 及 Linux 环境的 "portable" 版本, 解压后即可使用, 运行时产生的配置及索引数据都存放在程序目录下, 方便存放到 U 盘等移动设备上使用 :)
+
+== 主要特色 ==
+ * 基于 Java SWT 开发, 跨平台;
+ * 支持 txt、html、MS Office、Open Office、PDF等常用的文件格式, 基本上够用了;
+ * 界面比较简单, 但是使用很方便, 基本上只要两步:
+  1. 添加要索引的目录, 建立索引;
+  1. 输出要查询的字符串, 进行查找;
+ * 中文支持不错;
+
+== 需要解决的问题 ==
+ * 最主要的缺点(我认为)是不能检索压缩包, 这样对那些压缩打包后的文档就比较难搜索了;
+ * 不支持对文件名进行查找;
+ * 对 UTF-8 格式的文本文件, 似乎只能认识英文;
+
+== 中文化 ==
+ * 这个版本的 `lang` 目录下有 fr、de 等几种语言的资源文件(`.properties`), 但是没有中文语言的资源文件, 不过很容易通过对 `Resource.properties`文件翻译产生中文语言包.
+ * 今天大致翻译了一下, 如果需要有这个中文语言包的话, 可以在[attachment:DocFetcher_10.03_lang_Resource_zh_CN.properties.7z 这里下载];
+
+== 后记 ==
+ - 20110416
+  * Puggle( http://puggle.sourceforge.net/index.html )也是一个简单易用的 Java 桌面搜索工具, 而且支持 zip 和 rar 格式文档的搜索, 以及针对文件名字的查找(不过, 似乎不支持扩展名 :$). 
+ - 20121203
+  * 发现目前 !DocFetcher 已经升级到 `1.1.5` 版本了, 已经支持对 zip、7z、rar 等格式的压缩文件进行索引, 具体情况有待试验:
+{{{
+#!div style="background-color:#ffd"
+Between version 1.0.3 and version 1.1 beta 1, !DocFetcher was rewritten from scratch, resulting in a large number of new features and changes. [http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1 This page] gives an overview of the most important ones.
+}}}
+
+== END ==
 ',1354467486,1355153235,'','thinkbase','thinkbase','java search-engine DocFetcher');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',6,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
-
-== 概况 ==
-最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
- - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
- - Indexing of and searching in filenames - 可以按照文件名查找;
-
-经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
-[[Image(DocFetcher-乱码.png, 100%)]]
-
-下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
-{{{
-#!java
-... ...
-public class ZipDriver
-extends FsCharsetArchiveDriver<ZipDriverEntry>
-implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
-
-    private static final Logger logger = Logger.getLogger(
-            ZipDriver.class.getName(),
-            ZipDriver.class.getName());
-
-    /**
-     * The character set for entry names and comments in &quot;traditional&quot;
-     * ZIP files, which is {@code "IBM437"}.
-     */
-    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
-
-    private final IOPool<?> ioPool;
-
-    /**
-     * Constructs a new ZIP driver.
-     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
-     * and comments.
-     *
-     * @param ioPoolProvider the provider for I/O entry pools for allocating
-     *        temporary I/O entries (buffers).
-     */
-    public ZipDriver(IOPoolProvider ioPoolProvider) {
-        this(ioPoolProvider, ZIP_CHARSET);
-    }
-    ... ...
-}}}
-
-而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
-
-默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
-
-另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
-
-解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
-	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
-
-	private static final ZipDriver buildZipDriver(){
-		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		
-		return new ZipDriver(IOPoolLocator.SINGLETON);
-	}
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", buildZipDriver() },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 !DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
-[[Image(DocFetcher.sh.png, 100%)]]
-
-修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
-[[Image(DocFetcher-after-patched.png, 100%)]]
-
-== 总结 ==
- - 使用 Java System Property `de.schlichtherle.truezip.fs.archive.zip.ZIP_CHARSET` 或者 环境变量 `TRUEZIP_ZIP_CHARSET` 来设置默认情况下 zip 文件采用的编码;
- - 补丁 jar 包(需要放在 CLASSPATH 的最前面)下载: raw-attachment:truezip-zip-charset-patch-20121209.jar ;
- - 补丁 jar 包的源程序(含 eclipse 工程和编译必要的 jar 包)下载: raw-attachment:truezip-zip-charset-patch-source.7z ;
-
-== 补充说明 ==
-本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
-
-顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',6,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+== 概况 ==
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+[[Image(DocFetcher-乱码.png, 100%)]]
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 !DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
+[[Image(DocFetcher.sh.png, 100%)]]
+
+修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
+[[Image(DocFetcher-after-patched.png, 100%)]]
+
+== 总结 ==
+ - 使用 Java System Property `de.schlichtherle.truezip.fs.archive.zip.ZIP_CHARSET` 或者 环境变量 `TRUEZIP_ZIP_CHARSET` 来设置默认情况下 zip 文件采用的编码;
+ - 补丁 jar 包(需要放在 CLASSPATH 的最前面)下载: raw-attachment:truezip-zip-charset-patch-20121209.jar ;
+ - 补丁 jar 包的源程序(含 eclipse 工程和编译必要的 jar 包)下载: raw-attachment:truezip-zip-charset-patch-source.7z ;
+
+== 补充说明 ==
+本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
+
+顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;
+
 == END ==',1355069325,1355153252,'','thinkbase','thinkbase','DocFetcher search-engine java truezip zip rar 7-zip');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',7,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','[[PageOutline]]
-自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
-
-== 概况 ==
-最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
- - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
- - Indexing of and searching in filenames - 可以按照文件名查找;
-
-经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
-[[Image(DocFetcher-乱码.png, 100%)]]
-
-下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
-{{{
-#!java
-... ...
-public class ZipDriver
-extends FsCharsetArchiveDriver<ZipDriverEntry>
-implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
-
-    private static final Logger logger = Logger.getLogger(
-            ZipDriver.class.getName(),
-            ZipDriver.class.getName());
-
-    /**
-     * The character set for entry names and comments in &quot;traditional&quot;
-     * ZIP files, which is {@code "IBM437"}.
-     */
-    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
-
-    private final IOPool<?> ioPool;
-
-    /**
-     * Constructs a new ZIP driver.
-     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
-     * and comments.
-     *
-     * @param ioPoolProvider the provider for I/O entry pools for allocating
-     *        temporary I/O entries (buffers).
-     */
-    public ZipDriver(IOPoolProvider ioPoolProvider) {
-        this(ioPoolProvider, ZIP_CHARSET);
-    }
-    ... ...
-}}}
-
-而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
-
-默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
-
-另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
-
-解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
-{{{
-#!java
-@Immutable
-public final class ZipDriverService extends FsDriverService {
-	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
-	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
-
-	private static final ZipDriver buildZipDriver(){
-		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
-		if (null!=charset && charset.trim().length() > 0){
-			return new ZipDriver(
-					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
-		}
-		
-		return new ZipDriver(IOPoolLocator.SINGLETON);
-	}
-
-    private static final Map<FsScheme, FsDriver>
-            DRIVERS = newMap(new Object[][] {
-                { "zip", buildZipDriver() },
-                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
-                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
-                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
-            });
-
-    @Override
-    public Map<FsScheme, FsDriver> get() {
-        return DRIVERS;
-    }
-}
-}}}
-
-编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 !DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
-[[Image(DocFetcher.sh.png, 100%)]]
-
-修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
-[[Image(DocFetcher-after-patched.png, 100%)]]
-
-== 总结 ==
- - 使用 Java System Property `de.schlichtherle.truezip.fs.archive.zip.ZIP_CHARSET` 或者 环境变量 `TRUEZIP_ZIP_CHARSET` 来设置默认情况下 zip 文件采用的编码;
- - 补丁 jar 包(需要放在 CLASSPATH 的最前面)下载: raw-attachment:truezip-zip-charset-patch-20121209.jar ;
- - 补丁 jar 包的源程序(含 eclipse 工程和编译必要的 jar 包)下载: raw-attachment:truezip-zip-charset-patch-source.7z ;
-
-== 补充说明 ==
-本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
-
-顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/09',7,'DocFetcher 1.1.5 试用及 zip 文件中文问题解决','[[PageOutline]]
+自从接触 [http://docfetcher.sourceforge.net DocFetcher] 以来, 就一直使用它来搜索自己的各类文档, 当时也总结过这个软件存在的问题, 详见 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记];
+
+== 概况 ==
+最近发现 [http://docfetcher.sourceforge.net DocFetcher] 已经发布了 `1.1.5` 版本, 根据网站上的介绍, 1.1 版本经过完全重写(`rewritten from scratch`), 增加了大量的新特征(详见 http://docfetcher.sourceforge.net/wiki/doku.php?id=changes_in_v1.1), 包括我在 [blog:thinkbase-2012/12/02-2 桌面搜索工具 DocFetcher 试用笔记] 中所关注的:
+ - Archive indexing: !DocFetcher can now traverse archives. The following archive formats are supported: zip and zip-derived formats, 7z, rar, SFX zip, SFX 7z - 实际实验确认可以支持搜索压缩包中的内容, 而且''''''支持嵌套压缩'''''', 具体可以查看下面的截图;
+ - Indexing of and searching in filenames - 可以按照文件名查找;
+
+经过简单试用, 觉得这个版本还是值得升级的, 随后发现在搜索 zip 格式压缩包里面的内容时, 中文文件名会变成乱码. 具体现象如下图所示, 虽然可以索引压缩文件中的内容, 但是 zip 格式压缩包中中文文件名显示为乱码, 而 7z 和 rar 格式则显示正确:
+[[Image(DocFetcher-乱码.png, 100%)]]
+
+下载代码(`git clone http://git.code.sf.net/p/docfetcher/code docfetcher-code`)研究了一下, 发现 [http://docfetcher.sourceforge.net DocFetcher] 使用了 [http://truezip.java.net/ truezip] 来进行 zip 格式压缩文件的搜索(支持 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 等多种格式), 而在 [http://truezip.java.net/ truezip] 中, zip 格式默认使用的字符集为 `IBM437`:
+{{{
+#!java
+... ...
+public class ZipDriver
+extends FsCharsetArchiveDriver<ZipDriverEntry>
+implements ZipOutputStreamParameters, ZipFileParameters<ZipDriverEntry> {
+
+    private static final Logger logger = Logger.getLogger(
+            ZipDriver.class.getName(),
+            ZipDriver.class.getName());
+
+    /**
+     * The character set for entry names and comments in &quot;traditional&quot;
+     * ZIP files, which is {@code "IBM437"}.
+     */
+    private static final Charset ZIP_CHARSET = Charset.forName("IBM437");
+
+    private final IOPool<?> ioPool;
+
+    /**
+     * Constructs a new ZIP driver.
+     * This constructor uses {@link #ZIP_CHARSET} for encoding entry names
+     * and comments.
+     *
+     * @param ioPoolProvider the provider for I/O entry pools for allocating
+     *        temporary I/O entries (buffers).
+     */
+    public ZipDriver(IOPoolProvider ioPoolProvider) {
+        this(ioPoolProvider, ZIP_CHARSET);
+    }
+    ... ...
+}}}
+
+而日常我们使用的 zip 压缩文件都是使用本地字符集进行压缩的(在中文环境下, 一般就是`GBK`), 继续研究发现, [http://docfetcher.sourceforge.net DocFetcher] 使用 [http://truezip.java.net/ truezip] 的 `TFile`, 实现与 `java.io.File` 相似的方式统一访问文件系统目录和压缩文件(也就是把压缩文件看作一个目录), 而 `TFile` 内部则通过一个 `TArchiveDetector` 类型的成员变量来依据后缀名确定使用那种 "Driver" 操作具体的压缩文件;
+
+默认情况下, 通过 `TConfig.getArchiveDetector()` 得到的 !ArchiveDetector 是 `TArchiveDetector.ALL`, 此时在 `TArchiveDetector` 中实际使用 `FsDriverLocator.SINGLETON` 来获得所有加载的 "Driver", `FsDriverLocator` 会通过 `ServiceLocator` 查找并加载所有可用的 Driver, zip 格式相关 Driver 的定义实现在 `ZipDriverService` 中:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", new ZipDriver(IOPoolLocator.SINGLETON) },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+从上面这段代码可见, 系统默认得到的 `ZipDriver` 使用的是默认字符集 `IBM437`, 所以, 会产生中文问题;
+
+另外, 从源代码还可以看到, `JarDriver` 默认使用的字符集是 `UTF-8`;
+
+解决这个问题的方式是对 `ZipDriverService` 进行一定的调整, 以便通过环境变量或者 Java 系统属性来调整 `ZipDriver` 的默认字符集, 然后把这个 class 以 jar 补丁的形式, 放到 CLASSPATH 的最前面. 修改后的 `ZipDriverService` 代码如下:
+{{{
+#!java
+@Immutable
+public final class ZipDriverService extends FsDriverService {
+	private static final String SYS_PROP_ZIP_CHARSET = ZipDriverService.class.getPackage().getName() + ".ZIP_CHARSET";
+	private static final String ENV_VAR_ZIP_CHARSET = "TRUEZIP_ZIP_CHARSET";
+
+	private static final ZipDriver buildZipDriver(){
+		String charset = System.getProperty(SYS_PROP_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		charset = System.getenv(ENV_VAR_ZIP_CHARSET);
+		if (null!=charset && charset.trim().length() > 0){
+			return new ZipDriver(
+					IOPoolLocator.SINGLETON, Charset.forName(charset.trim()));
+		}
+		
+		return new ZipDriver(IOPoolLocator.SINGLETON);
+	}
+
+    private static final Map<FsScheme, FsDriver>
+            DRIVERS = newMap(new Object[][] {
+                { "zip", buildZipDriver() },
+                { "ear|jar|war", new JarDriver(IOPoolLocator.SINGLETON) },
+                { "odt|ott|odg|otg|odp|otp|ods|ots|odc|otc|odi|oti|odf|otf|odm|oth|odb", new OdfDriver(IOPoolLocator.SINGLETON) },
+                { "exe", new ReadOnlySfxDriver(IOPoolLocator.SINGLETON) },
+            });
+
+    @Override
+    public Map<FsScheme, FsDriver> get() {
+        return DRIVERS;
+    }
+}
+}}}
+
+编译后的 jar 补丁可以到附件中下载, 此 jar 文件可以放到 !DocFetcher-1.1.5 的 `patches` 目录下, 然后按照下图的样子修改 `DocFetcher.sh`:
+[[Image(DocFetcher.sh.png, 100%)]]
+
+修改后即可正常处理 zip 格式压缩文件中的中文文件名了:
+[[Image(DocFetcher-after-patched.png, 100%)]]
+
+== 总结 ==
+ - 使用 Java System Property `de.schlichtherle.truezip.fs.archive.zip.ZIP_CHARSET` 或者 环境变量 `TRUEZIP_ZIP_CHARSET` 来设置默认情况下 zip 文件采用的编码;
+ - 补丁 jar 包(需要放在 CLASSPATH 的最前面)下载: raw-attachment:truezip-zip-charset-patch-20121209.jar ;
+ - 补丁 jar 包的源程序(含 eclipse 工程和编译必要的 jar 包)下载: raw-attachment:truezip-zip-charset-patch-source.7z ;
+
+== 补充说明 ==
+本文所提供的补丁没有在 Windows 系统上进行测试, 如果要在 Windows 系统中使用, 建议设置系统环境变量 `set TRUEZIP_ZIP_CHARSET=GBK` 后运行, 效果应该与 Linux 下一致;
+
+顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;
+
 == END ==',1355069325,1357317080,'','admin','thinkbase','DocFetcher search-engine java truezip zip rar 7-zip');
 CREATE TABLE fullblog_comments (
     name text,
@@ -34043,29 +34121,29 @@ CREATE TABLE fullblog_comments (
     time integer,
     UNIQUE (name,number)
 );
-INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/03-2',1,'在 [PortableTrac] 环境下安装 `TracDragDropPlugin` 过程记录如下:
-{{{
-#!sh
-E:\thinkbase.net\PortableTrac-git>easy_install.cmd http://trac-hacks.org/svn/tracdragdropplugin/0.12
-[Current timestamp: 2012-12-04 周二  0-38-21.56]
-
->>> call easy_install.exe --prefix="E:\thinkbase.net\PortableTrac-git\trac" http://trac-hacks.org/svn/tracdragdropplugin/0.12
-Downloading http://trac-hacks.org/svn/tracdragdropplugin/0.12
-Doing subversion checkout from http://trac-hacks.org/svn/tracdragdropplugin/0.12 to d:\temp\easy_install-7qhidu\0.12
-Processing 0.12
-Running setup.py -q bdist_egg --dist-dir d:\temp\easy_install-7qhidu\0.12\egg-dist-tmp-7peg_c
-zip_safe flag not set; analyzing archive contents...
-Adding tracdragdrop 0.12.0.10-r12033 to easy-install.pth file
-
-Installed e:\thinkbase.net\portabletrac-git\trac\lib\site-packages\tracdragdrop-0.12.0.10_r12033-py2.7.egg
-Processing dependencies for tracdragdrop==0.12.0.10-r12033
-Finished processing dependencies for tracdragdrop==0.12.0.10-r12033
+INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/03-2',1,'在 [PortableTrac] 环境下安装 `TracDragDropPlugin` 过程记录如下:
+{{{
+#!sh
+E:\thinkbase.net\PortableTrac-git>easy_install.cmd http://trac-hacks.org/svn/tracdragdropplugin/0.12
+[Current timestamp: 2012-12-04 周二  0-38-21.56]
+
+>>> call easy_install.exe --prefix="E:\thinkbase.net\PortableTrac-git\trac" http://trac-hacks.org/svn/tracdragdropplugin/0.12
+Downloading http://trac-hacks.org/svn/tracdragdropplugin/0.12
+Doing subversion checkout from http://trac-hacks.org/svn/tracdragdropplugin/0.12 to d:\temp\easy_install-7qhidu\0.12
+Processing 0.12
+Running setup.py -q bdist_egg --dist-dir d:\temp\easy_install-7qhidu\0.12\egg-dist-tmp-7peg_c
+zip_safe flag not set; analyzing archive contents...
+Adding tracdragdrop 0.12.0.10-r12033 to easy-install.pth file
+
+Installed e:\thinkbase.net\portabletrac-git\trac\lib\site-packages\tracdragdrop-0.12.0.10_r12033-py2.7.egg
+Processing dependencies for tracdragdrop==0.12.0.10-r12033
+Finished processing dependencies for tracdragdrop==0.12.0.10-r12033
 }}}','thinkbase',1354557159);
 INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/03-2',2,'支持从剪贴板上次图片，下面这张图片就是通过在开始菜单“附件 - 画图”中复制到剪贴板的：[[Image(image-20121204-164318.png)]]','thinkbase',1354610796);
 INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/02-2',1,'通过基于 [http://truezip.java.net/ truezip] 和 7-zip 的支持, 最新版本的 `DocFetcher-1.1.5` 已经支持对压缩文件中内容进行索引, truezip 内置对 `jar|tar|tar.bz2|tar.gz|tb2|tbz|tgz|zip` 多种压缩文件格式的支持, 7-zip 用于支持 `.7z` 和 `.rar` 格式的压缩文件;','thinkbase',1355062749);
 INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/02-4',1,'试用了一下 [http://pastebin.com Pastebin.com], 把这个贴在上面: http://pastebin.com/jXRKMnEX .','thinkbase',1355460213);
-INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/03-2',3,'不过这个插件存在一个问题, 就是在 Wiki 页面被设置为 "Readonly" 的情况下, 只要用户具备 "WIKI_MODIFY" 权限, 那么仍然会显示出添加附件的界面, 并且可以上传;
-
+INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/03-2',3,'不过这个插件存在一个问题, 就是在 Wiki 页面被设置为 "Readonly" 的情况下, 只要用户具备 "WIKI_MODIFY" 权限, 那么仍然会显示出添加附件的界面, 并且可以上传;
+
 在未解决这个问题之前, 本站点暂时禁用这个插件.','thinkbase',1355656073);
 CREATE TABLE votes (
     resource text,

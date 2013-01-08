@@ -55,7 +55,7 @@ CREATE TABLE session (
     UNIQUE (sid,authenticated)
 );
 INSERT INTO "session" VALUES('admin',1,1357309443);
-INSERT INTO "session" VALUES('thinkbase',1,1354891549);
+INSERT INTO "session" VALUES('thinkbase',1,1357649560);
 INSERT INTO "session" VALUES('11ba61427b966c9f5d553c53',0,1352582903);
 INSERT INTO "session" VALUES('a9dec5feee37a1288464f4eb',0,1352627247);
 INSERT INTO "session" VALUES('b8aeb3552c2fe9ea8b8ad4ea',0,1352760743);
@@ -482,6 +482,71 @@ INSERT INTO "session" VALUES('36a9f3692ff3396b29850e78',0,1357150633);
 INSERT INTO "session" VALUES('9325257382bfc83a004eeca4',0,1357160817);
 INSERT INTO "session" VALUES('ca5be85c5a02e099c24008bb',0,1357225077);
 INSERT INTO "session" VALUES('cfb5950d6a7d237a7a0024ba',0,1357225945);
+INSERT INTO "session" VALUES('8ba575bcbc550bdefc899ca6',0,1357349536);
+INSERT INTO "session" VALUES('198b3a1eb57a44de699c241b',0,1357349566);
+INSERT INTO "session" VALUES('21b47f8794ba3a33e6342244',0,1357349787);
+INSERT INTO "session" VALUES('3d39d780a7ac6a02de0b0079',0,1357349886);
+INSERT INTO "session" VALUES('a598a98808c259c680b0a50d',0,1357349976);
+INSERT INTO "session" VALUES('f9c5d554c42c0c90d7a818bb',0,1357352039);
+INSERT INTO "session" VALUES('02ff67513c22a9d6a725cc45',0,1357358357);
+INSERT INTO "session" VALUES('ae37612dfd71b0619ea5860c',0,1357362839);
+INSERT INTO "session" VALUES('05f6a02bef86ed16ea7c3b17',0,1357368526);
+INSERT INTO "session" VALUES('19544771f346f1c5a5107ad6',0,1357377931);
+INSERT INTO "session" VALUES('4c5b2b95f8bd5fe51d28b9bc',0,1357404387);
+INSERT INTO "session" VALUES('38aa323cf0519ff1cd111cbf',0,1357404759);
+INSERT INTO "session" VALUES('35d08ec7a51f66cf09c18694',0,1357384208);
+INSERT INTO "session" VALUES('f227f9eb49f91db906786dd6',0,1357384456);
+INSERT INTO "session" VALUES('192c45feb2c270b5a05f29d8',0,1357384927);
+INSERT INTO "session" VALUES('aac7383cc4cb62fc7703dbd8',0,1357386304);
+INSERT INTO "session" VALUES('888585dfb553f7417b88fa41',0,1357387333);
+INSERT INTO "session" VALUES('925b17e2bf6212824f3ff3d5',0,1357387695);
+INSERT INTO "session" VALUES('13a9d49130cc9c9b2372d063',0,1357388440);
+INSERT INTO "session" VALUES('cdbd3c9f26722d21e9b20d9e',0,1357388566);
+INSERT INTO "session" VALUES('0a18bd97e6b594749f8bdd90',0,1357388844);
+INSERT INTO "session" VALUES('53d3cf329d6fae9b0138b2ad',0,1357389479);
+INSERT INTO "session" VALUES('17b80b1df4a4193f26ed827a',0,1357389844);
+INSERT INTO "session" VALUES('32add289f84a63d81bdeac56',0,1357390709);
+INSERT INTO "session" VALUES('b5f0e4d604bd54d6afa4f9ca',0,1357420026);
+INSERT INTO "session" VALUES('de43ae8e4fc806601205cce1',0,1357420634);
+INSERT INTO "session" VALUES('475033fd3c08380e64beec62',0,1357421066);
+INSERT INTO "session" VALUES('f694e5c5140c425dfae7938b',0,1357421501);
+INSERT INTO "session" VALUES('a6d51102e6bc797294caf78a',0,1357422478);
+INSERT INTO "session" VALUES('258839015bbf41ecf4382d6c',0,1357423154);
+INSERT INTO "session" VALUES('395af117e5f9cd73f7469be8',0,1357423400);
+INSERT INTO "session" VALUES('6f0e5f6b035581775c6b649a',0,1357424842);
+INSERT INTO "session" VALUES('336e2490aed3fdee7104356f',0,1357425120);
+INSERT INTO "session" VALUES('e774bebe428d15d908a5c58c',0,1357425140);
+INSERT INTO "session" VALUES('b467783b1af4777e0e513f07',0,1357425455);
+INSERT INTO "session" VALUES('ebdfa43b04e380b80b635c10',0,1357432195);
+INSERT INTO "session" VALUES('5d56a55acf447b32cd238992',0,1357432458);
+INSERT INTO "session" VALUES('1168349eadd4bd3d4bc01754',0,1357432706);
+INSERT INTO "session" VALUES('2c02f065e373fc4c9c6913a3',0,1357433293);
+INSERT INTO "session" VALUES('acd97514aed421fd9a51da78',0,1357434149);
+INSERT INTO "session" VALUES('2a8ae52815977993ac360a74',0,1357434510);
+INSERT INTO "session" VALUES('3937d1a572d2c440f6803fff',0,1357442764);
+INSERT INTO "session" VALUES('7c02bf3254095cfb0d7c303e',0,1357444193);
+INSERT INTO "session" VALUES('8a692fab9b23043effb9cbd1',0,1357445644);
+INSERT INTO "session" VALUES('b803d118ca52f5519c729f46',0,1357447773);
+INSERT INTO "session" VALUES('10311ce947d324ed2c2fa128',0,1357450804);
+INSERT INTO "session" VALUES('39e506e5c3ebe1cafb3c188a',0,1357465464);
+INSERT INTO "session" VALUES('667fcc0294c66a5f7a3c88db',0,1357474369);
+INSERT INTO "session" VALUES('b6343633ca6643febd063340',0,1357476110);
+INSERT INTO "session" VALUES('27259aa0a46ec39cce6b90e6',0,1357478523);
+INSERT INTO "session" VALUES('7e20b61d41213dd08b59a0b1',0,1357490361);
+INSERT INTO "session" VALUES('4b577be1f4908cff41dd76b4',0,1357501360);
+INSERT INTO "session" VALUES('e77ac8c09ea45a8c5ccad4ef',0,1357501380);
+INSERT INTO "session" VALUES('cce9399b3463aa320be89bac',0,1357503840);
+INSERT INTO "session" VALUES('d4fea52270597062d8cd2a9c',0,1357504975);
+INSERT INTO "session" VALUES('e56ab8852810d37850e508f4',0,1357504995);
+INSERT INTO "session" VALUES('26c92700aaa3ba45da5baf14',0,1357521674);
+INSERT INTO "session" VALUES('3e63eb4d3d6423c1782d968b',0,1357539979);
+INSERT INTO "session" VALUES('0474d40ef420e31c4f7fd34d',0,1357541068);
+INSERT INTO "session" VALUES('ff49b90c19aa65711fc71efe',0,1357569887);
+INSERT INTO "session" VALUES('8d86c8f98560fbffff409547',0,1357571981);
+INSERT INTO "session" VALUES('bc023919593dc9230407f82b',0,1357591511);
+INSERT INTO "session" VALUES('e821a3bf886e8375f5561044',0,1357595004);
+INSERT INTO "session" VALUES('66a90329d639e4178f18c795',0,1357622295);
+INSERT INTO "session" VALUES('d079ece9a0dc9d7ec4aa13bb',0,1357630615);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -853,12 +918,6 @@ INSERT INTO "session_attribute" VALUES('3718db7f8eca1a03b72aab32',0,'query_time'
 INSERT INTO "session_attribute" VALUES('3718db7f8eca1a03b72aab32',0,'query_constraints','[{''status'': [u''!closed'']}]');
 INSERT INTO "session_attribute" VALUES('3718db7f8eca1a03b72aab32',0,'query_href','/trac/query?status=!closed&order=summary');
 INSERT INTO "session_attribute" VALUES('3718db7f8eca1a03b72aab32',0,'query_tickets','');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1352581035173000');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','8');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1353728908000000');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
 INSERT INTO "session_attribute" VALUES('394f8314d6cb229b839272cc',0,'query_href','/trac/report/5?asc=1&page=1');
 INSERT INTO "session_attribute" VALUES('394f8314d6cb229b839272cc',0,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('1a56d8935376f9aaa4bbc54d',0,'timeline.lastvisit','1354898540429000');
@@ -1849,6 +1908,216 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1354446309277000');
+INSERT INTO "session_attribute" VALUES('8ba575bcbc550bdefc899ca6',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('8ba575bcbc550bdefc899ca6',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('198b3a1eb57a44de699c241b',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('198b3a1eb57a44de699c241b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('21b47f8794ba3a33e6342244',0,'query_time','1357349786');
+INSERT INTO "session_attribute" VALUES('21b47f8794ba3a33e6342244',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('21b47f8794ba3a33e6342244',0,'query_href','/trac/query?owner=%24USER&status=reopened&col=id&col=component&report=9&desc=1&order=component');
+INSERT INTO "session_attribute" VALUES('21b47f8794ba3a33e6342244',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('3d39d780a7ac6a02de0b0079',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('3d39d780a7ac6a02de0b0079',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a598a98808c259c680b0a50d',0,'query_time','1357349976');
+INSERT INTO "session_attribute" VALUES('a598a98808c259c680b0a50d',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('a598a98808c259c680b0a50d',0,'query_href','/trac/query?status=closed&max=3&col=id&col=reporter&desc=1&order=reporter&row=description');
+INSERT INTO "session_attribute" VALUES('a598a98808c259c680b0a50d',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('f9c5d554c42c0c90d7a818bb',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('f9c5d554c42c0c90d7a818bb',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('02ff67513c22a9d6a725cc45',0,'query_time','1357358357');
+INSERT INTO "session_attribute" VALUES('02ff67513c22a9d6a725cc45',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('02ff67513c22a9d6a725cc45',0,'query_href','/trac/query?owner=%24USER&status=reopened&col=id&col=component&report=9&desc=1&order=component');
+INSERT INTO "session_attribute" VALUES('02ff67513c22a9d6a725cc45',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('ae37612dfd71b0619ea5860c',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('ae37612dfd71b0619ea5860c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('05f6a02bef86ed16ea7c3b17',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('05f6a02bef86ed16ea7c3b17',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('19544771f346f1c5a5107ad6',0,'query_time','1357377930');
+INSERT INTO "session_attribute" VALUES('19544771f346f1c5a5107ad6',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('19544771f346f1c5a5107ad6',0,'query_href','/trac/query?owner=%24USER&status=reopened&col=id&col=component&report=9&order=blocking');
+INSERT INTO "session_attribute" VALUES('19544771f346f1c5a5107ad6',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('4c5b2b95f8bd5fe51d28b9bc',0,'query_time','1357404387');
+INSERT INTO "session_attribute" VALUES('4c5b2b95f8bd5fe51d28b9bc',0,'query_constraints','[{''status'': [u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('4c5b2b95f8bd5fe51d28b9bc',0,'query_href','/trac/query?status=reopened&desc=1&order=owner');
+INSERT INTO "session_attribute" VALUES('4c5b2b95f8bd5fe51d28b9bc',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('38aa323cf0519ff1cd111cbf',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('38aa323cf0519ff1cd111cbf',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('35d08ec7a51f66cf09c18694',0,'query_href','/trac/report/1?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('35d08ec7a51f66cf09c18694',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('f227f9eb49f91db906786dd6',0,'query_time','1357384456');
+INSERT INTO "session_attribute" VALUES('f227f9eb49f91db906786dd6',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('f227f9eb49f91db906786dd6',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&order=priority');
+INSERT INTO "session_attribute" VALUES('f227f9eb49f91db906786dd6',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('192c45feb2c270b5a05f29d8',0,'query_time','1357384927');
+INSERT INTO "session_attribute" VALUES('192c45feb2c270b5a05f29d8',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('192c45feb2c270b5a05f29d8',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=reporter&row=description');
+INSERT INTO "session_attribute" VALUES('192c45feb2c270b5a05f29d8',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('aac7383cc4cb62fc7703dbd8',0,'query_time','1357386304');
+INSERT INTO "session_attribute" VALUES('aac7383cc4cb62fc7703dbd8',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('aac7383cc4cb62fc7703dbd8',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&desc=1&order=priority');
+INSERT INTO "session_attribute" VALUES('aac7383cc4cb62fc7703dbd8',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('888585dfb553f7417b88fa41',0,'query_time','1357387333');
+INSERT INTO "session_attribute" VALUES('888585dfb553f7417b88fa41',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('888585dfb553f7417b88fa41',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&group=owner&order=priority');
+INSERT INTO "session_attribute" VALUES('888585dfb553f7417b88fa41',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('925b17e2bf6212824f3ff3d5',0,'query_href','/trac/report/7?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('925b17e2bf6212824f3ff3d5',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('13a9d49130cc9c9b2372d063',0,'query_time','1357388440');
+INSERT INTO "session_attribute" VALUES('13a9d49130cc9c9b2372d063',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('13a9d49130cc9c9b2372d063',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&order=id');
+INSERT INTO "session_attribute" VALUES('13a9d49130cc9c9b2372d063',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('cdbd3c9f26722d21e9b20d9e',0,'query_time','1357388566');
+INSERT INTO "session_attribute" VALUES('cdbd3c9f26722d21e9b20d9e',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('cdbd3c9f26722d21e9b20d9e',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=reporter');
+INSERT INTO "session_attribute" VALUES('cdbd3c9f26722d21e9b20d9e',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('0a18bd97e6b594749f8bdd90',0,'query_time','1357388843');
+INSERT INTO "session_attribute" VALUES('0a18bd97e6b594749f8bdd90',0,'query_constraints','[{u''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('0a18bd97e6b594749f8bdd90',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('0a18bd97e6b594749f8bdd90',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('53d3cf329d6fae9b0138b2ad',0,'query_time','1357389479');
+INSERT INTO "session_attribute" VALUES('53d3cf329d6fae9b0138b2ad',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('53d3cf329d6fae9b0138b2ad',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&order=status');
+INSERT INTO "session_attribute" VALUES('53d3cf329d6fae9b0138b2ad',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('17b80b1df4a4193f26ed827a',0,'query_time','1357389843');
+INSERT INTO "session_attribute" VALUES('17b80b1df4a4193f26ed827a',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('17b80b1df4a4193f26ed827a',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=id');
+INSERT INTO "session_attribute" VALUES('17b80b1df4a4193f26ed827a',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('32add289f84a63d81bdeac56',0,'query_time','1357390708');
+INSERT INTO "session_attribute" VALUES('32add289f84a63d81bdeac56',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('32add289f84a63d81bdeac56',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&order=milestone');
+INSERT INTO "session_attribute" VALUES('32add289f84a63d81bdeac56',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('b5f0e4d604bd54d6afa4f9ca',0,'query_href','/trac/report/3?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('b5f0e4d604bd54d6afa4f9ca',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('de43ae8e4fc806601205cce1',0,'query_href','/trac/report/8?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('de43ae8e4fc806601205cce1',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('475033fd3c08380e64beec62',0,'query_time','1357421066');
+INSERT INTO "session_attribute" VALUES('475033fd3c08380e64beec62',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('475033fd3c08380e64beec62',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=summary&row=description');
+INSERT INTO "session_attribute" VALUES('475033fd3c08380e64beec62',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('f694e5c5140c425dfae7938b',0,'query_href','/trac/report/5?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('f694e5c5140c425dfae7938b',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('a6d51102e6bc797294caf78a',0,'query_time','1357422478');
+INSERT INTO "session_attribute" VALUES('a6d51102e6bc797294caf78a',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('a6d51102e6bc797294caf78a',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&order=type');
+INSERT INTO "session_attribute" VALUES('a6d51102e6bc797294caf78a',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('258839015bbf41ecf4382d6c',0,'query_href','/trac/report/2?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('258839015bbf41ecf4382d6c',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('395af117e5f9cd73f7469be8',0,'query_time','1357423400');
+INSERT INTO "session_attribute" VALUES('395af117e5f9cd73f7469be8',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('395af117e5f9cd73f7469be8',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=id&row=description');
+INSERT INTO "session_attribute" VALUES('395af117e5f9cd73f7469be8',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('6f0e5f6b035581775c6b649a',0,'query_time','1357424842');
+INSERT INTO "session_attribute" VALUES('6f0e5f6b035581775c6b649a',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('6f0e5f6b035581775c6b649a',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=resolution');
+INSERT INTO "session_attribute" VALUES('6f0e5f6b035581775c6b649a',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('336e2490aed3fdee7104356f',0,'query_time','1357425120');
+INSERT INTO "session_attribute" VALUES('336e2490aed3fdee7104356f',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('336e2490aed3fdee7104356f',0,'query_href','/trac/query?owner=%24USER&status=reopened&col=id&col=component&report=9&order=blocking');
+INSERT INTO "session_attribute" VALUES('336e2490aed3fdee7104356f',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('e774bebe428d15d908a5c58c',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('e774bebe428d15d908a5c58c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b467783b1af4777e0e513f07',0,'query_time','1357425455');
+INSERT INTO "session_attribute" VALUES('b467783b1af4777e0e513f07',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('b467783b1af4777e0e513f07',0,'query_href','/trac/query?owner=%24USER&status=!closed&max=0&col=id&col=component&order=complete');
+INSERT INTO "session_attribute" VALUES('b467783b1af4777e0e513f07',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('ebdfa43b04e380b80b635c10',0,'query_href','/trac/report/6?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('ebdfa43b04e380b80b635c10',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('5d56a55acf447b32cd238992',0,'query_time','1357432458');
+INSERT INTO "session_attribute" VALUES('5d56a55acf447b32cd238992',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('5d56a55acf447b32cd238992',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=summary');
+INSERT INTO "session_attribute" VALUES('5d56a55acf447b32cd238992',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('1168349eadd4bd3d4bc01754',0,'query_time','1357432706');
+INSERT INTO "session_attribute" VALUES('1168349eadd4bd3d4bc01754',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('1168349eadd4bd3d4bc01754',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&order=owner');
+INSERT INTO "session_attribute" VALUES('1168349eadd4bd3d4bc01754',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('2c02f065e373fc4c9c6913a3',0,'query_time','1357433293');
+INSERT INTO "session_attribute" VALUES('2c02f065e373fc4c9c6913a3',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('2c02f065e373fc4c9c6913a3',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=owner');
+INSERT INTO "session_attribute" VALUES('2c02f065e373fc4c9c6913a3',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('acd97514aed421fd9a51da78',0,'query_time','1357434149');
+INSERT INTO "session_attribute" VALUES('acd97514aed421fd9a51da78',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('acd97514aed421fd9a51da78',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&order=summary');
+INSERT INTO "session_attribute" VALUES('acd97514aed421fd9a51da78',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('2a8ae52815977993ac360a74',0,'query_time','1357434510');
+INSERT INTO "session_attribute" VALUES('2a8ae52815977993ac360a74',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('2a8ae52815977993ac360a74',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&order=summary');
+INSERT INTO "session_attribute" VALUES('2a8ae52815977993ac360a74',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('3937d1a572d2c440f6803fff',0,'query_time','1357442764');
+INSERT INTO "session_attribute" VALUES('3937d1a572d2c440f6803fff',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('3937d1a572d2c440f6803fff',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=owner&row=description');
+INSERT INTO "session_attribute" VALUES('3937d1a572d2c440f6803fff',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('7c02bf3254095cfb0d7c303e',0,'query_time','1357444193');
+INSERT INTO "session_attribute" VALUES('7c02bf3254095cfb0d7c303e',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('7c02bf3254095cfb0d7c303e',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=resolution&row=description');
+INSERT INTO "session_attribute" VALUES('7c02bf3254095cfb0d7c303e',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('8a692fab9b23043effb9cbd1',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('8a692fab9b23043effb9cbd1',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b803d118ca52f5519c729f46',0,'query_href','/trac/report/4?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('b803d118ca52f5519c729f46',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('10311ce947d324ed2c2fa128',0,'query_time','1357450804');
+INSERT INTO "session_attribute" VALUES('10311ce947d324ed2c2fa128',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('10311ce947d324ed2c2fa128',0,'query_href','/trac/query?owner=%24USER&status=reopened&col=id&col=component&report=9&order=id');
+INSERT INTO "session_attribute" VALUES('10311ce947d324ed2c2fa128',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('39e506e5c3ebe1cafb3c188a',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('39e506e5c3ebe1cafb3c188a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('667fcc0294c66a5f7a3c88db',0,'query_time','1357474369');
+INSERT INTO "session_attribute" VALUES('667fcc0294c66a5f7a3c88db',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('667fcc0294c66a5f7a3c88db',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&desc=1&order=type');
+INSERT INTO "session_attribute" VALUES('667fcc0294c66a5f7a3c88db',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('b6343633ca6643febd063340',0,'query_href','/trac/report/1?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('b6343633ca6643febd063340',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('27259aa0a46ec39cce6b90e6',0,'query_time','1357478523');
+INSERT INTO "session_attribute" VALUES('27259aa0a46ec39cce6b90e6',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('27259aa0a46ec39cce6b90e6',0,'query_href','/trac/query?owner=%24USER&status=reopened&col=id&col=component&report=9&order=due_assign');
+INSERT INTO "session_attribute" VALUES('27259aa0a46ec39cce6b90e6',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('7e20b61d41213dd08b59a0b1',0,'query_time','1357490360');
+INSERT INTO "session_attribute" VALUES('7e20b61d41213dd08b59a0b1',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('7e20b61d41213dd08b59a0b1',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&group=owner&order=priority');
+INSERT INTO "session_attribute" VALUES('7e20b61d41213dd08b59a0b1',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('4b577be1f4908cff41dd76b4',0,'query_time','1357501359');
+INSERT INTO "session_attribute" VALUES('4b577be1f4908cff41dd76b4',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('4b577be1f4908cff41dd76b4',0,'query_href','/trac/query?owner=%24USER&status=reopened&col=id&col=component&report=9&order=status');
+INSERT INTO "session_attribute" VALUES('4b577be1f4908cff41dd76b4',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('e77ac8c09ea45a8c5ccad4ef',0,'query_time','1357501379');
+INSERT INTO "session_attribute" VALUES('e77ac8c09ea45a8c5ccad4ef',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('e77ac8c09ea45a8c5ccad4ef',0,'query_href','/trac/query?owner=%24USER&status=!closed&max=0&col=id&col=milestone&order=priority');
+INSERT INTO "session_attribute" VALUES('e77ac8c09ea45a8c5ccad4ef',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('cce9399b3463aa320be89bac',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('cce9399b3463aa320be89bac',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d4fea52270597062d8cd2a9c',0,'query_time','1357504974');
+INSERT INTO "session_attribute" VALUES('d4fea52270597062d8cd2a9c',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('d4fea52270597062d8cd2a9c',0,'query_href','/trac/query?owner=%24USER&status=!closed&max=0&col=id&col=milestone&order=due_close');
+INSERT INTO "session_attribute" VALUES('d4fea52270597062d8cd2a9c',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('e56ab8852810d37850e508f4',0,'query_time','1357504994');
+INSERT INTO "session_attribute" VALUES('e56ab8852810d37850e508f4',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('e56ab8852810d37850e508f4',0,'query_href','/trac/query?status=closed&max=3&col=id&col=reporter&order=resolution&row=description');
+INSERT INTO "session_attribute" VALUES('e56ab8852810d37850e508f4',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('26c92700aaa3ba45da5baf14',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('26c92700aaa3ba45da5baf14',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3e63eb4d3d6423c1782d968b',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('3e63eb4d3d6423c1782d968b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0474d40ef420e31c4f7fd34d',0,'query_href','/trac/report/6?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('0474d40ef420e31c4f7fd34d',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('ff49b90c19aa65711fc71efe',0,'query_time','1357569887');
+INSERT INTO "session_attribute" VALUES('ff49b90c19aa65711fc71efe',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('ff49b90c19aa65711fc71efe',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&group=owner&order=priority');
+INSERT INTO "session_attribute" VALUES('ff49b90c19aa65711fc71efe',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('8d86c8f98560fbffff409547',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('8d86c8f98560fbffff409547',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('bc023919593dc9230407f82b',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('bc023919593dc9230407f82b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e821a3bf886e8375f5561044',0,'query_href','/trac/report/8?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('e821a3bf886e8375f5561044',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('66a90329d639e4178f18c795',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('66a90329d639e4178f18c795',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d079ece9a0dc9d7ec4aa13bb',0,'timeline.lastvisit','1357316956802000');
+INSERT INTO "session_attribute" VALUES('d079ece9a0dc9d7ec4aa13bb',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1352581035173000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','8');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1353728908000000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -32063,1548 +32332,2162 @@ INSERT INTO "wiki" VALUES('WikiStart',11,1354446309277000,'admin','127.0.0.1','=
 
 ----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',0);
-INSERT INTO "wiki" VALUES('WikiStart',12,1354453938525000,'admin','61.171.91.97','= `PortableTrac` 演示站点 =
- - [https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且“开箱即用”的 Trac;[[BR]]
- - 本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征;
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',12,1354453938525000,'admin','61.171.91.97','= `PortableTrac` 演示站点 =
+ - [https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且“开箱即用”的 Trac;[[BR]]
+ - 本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征;
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',0);
-INSERT INTO "wiki" VALUES('WikiStart',13,1354454124418000,'admin','61.171.91.97','= `PortableTrac` 演示站点 =
-[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且“开箱即用”的 Trac;
-
-本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征;
-
-关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
-''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''
+INSERT INTO "wiki" VALUES('WikiStart',13,1354454124418000,'admin','61.171.91.97','= `PortableTrac` 演示站点 =
+[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且“开箱即用”的 Trac;
+
+本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征;
+
+关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
+''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''
 ','',0);
-INSERT INTO "wiki" VALUES('WikiStart',14,1354891549788000,'thinkbase','61.171.91.97','= `PortableTrac` 演示站点 =
-[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且“开箱即用”的 Trac;
-
-本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征;
-
-关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
-
-== 插件使用示例 ==
- - 
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
-''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''
+INSERT INTO "wiki" VALUES('WikiStart',14,1354891549788000,'thinkbase','61.171.91.97','= `PortableTrac` 演示站点 =
+[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且“开箱即用”的 Trac;
+
+本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征;
+
+关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
+
+== 插件使用示例 ==
+ - 
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
+''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',1,1354892119533000,'thinkbase','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
-
-简单的示例: 可以看到 1)通过 `SELECT ALL` 选中全部代码; 2)代码显示区域可以折叠收起;
-{{{
-#!CodeExample
-#!python
-@staticmethod
-def get_templates_dirs():
-    """ Notify Trac about templates dir. """
-    from pkg_resources import resource_filename
-    return [resource_filename(__name__, ''templates'')]
-}}}
-
-支持 ##type 参数: simple, good, bad , 用于显示标识为正确或者错误的代码
-{{{
-#!CodeExample
-##type = bad
-#!haskell
-fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
-}}}
-{{{
-#!CodeExample
-#!haskell
-##type = good
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',1,1354892119533000,'thinkbase','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
+
+简单的示例: 可以看到 1)通过 `SELECT ALL` 选中全部代码; 2)代码显示区域可以折叠收起;
+{{{
+#!CodeExample
+#!python
+@staticmethod
+def get_templates_dirs():
+    """ Notify Trac about templates dir. """
+    from pkg_resources import resource_filename
+    return [resource_filename(__name__, ''templates'')]
+}}}
+
+支持 ##type 参数: simple, good, bad , 用于显示标识为正确或者错误的代码
+{{{
+#!CodeExample
+##type = bad
+#!haskell
+fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
+}}}
+{{{
+#!CodeExample
+#!haskell
+##type = good
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
 }}}','',0);
-INSERT INTO "wiki" VALUES('WikiStart',15,1354893591719000,'thinkbase','61.171.91.97','= `PortableTrac` 演示站点 =
-[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且“开箱即用”的 Trac;
-
-本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征;
-
-关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
-
-== 插件使用示例 ==
-[[TitleIndex(include=plugins-demo/*, format=hierarchy)]]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',15,1354893591719000,'thinkbase','61.171.91.97','= `PortableTrac` 演示站点 =
+[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且“开箱即用”的 Trac;
+
+本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征;
+
+关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
+
+== 插件使用示例 ==
+[[TitleIndex(include=plugins-demo/*, format=hierarchy)]]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',2,1354894393155000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
-
-=== 简单的示例 ===
-基本的特征包括:
- 1. 通过`SELECT ALL`选中全部代码;
- 2. 代码显示区域可以`折叠收起`;
-
-{{{
-#!CodeExample
-#!python
-@staticmethod
-def get_templates_dirs():
-    """ Notify Trac about templates dir. """
-    from pkg_resources import resource_filename
-    return [resource_filename(__name__, ''templates'')]
-}}}
-
-=== `##type`参数 ===
-支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
-{{{
-#!CodeExample
-##type = bad
-#!haskell
-fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
-}}}
-{{{
-#!CodeExample
-#!haskell
-##type = good
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',2,1354894393155000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
+
+=== 简单的示例 ===
+基本的特征包括:
+ 1. 通过`SELECT ALL`选中全部代码;
+ 2. 代码显示区域可以`折叠收起`;
+
+{{{
+#!CodeExample
+#!python
+@staticmethod
+def get_templates_dirs():
+    """ Notify Trac about templates dir. """
+    from pkg_resources import resource_filename
+    return [resource_filename(__name__, ''templates'')]
+}}}
+
+=== `##type`参数 ===
+支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
+{{{
+#!CodeExample
+##type = bad
+#!haskell
+fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
+}}}
+{{{
+#!CodeExample
+#!haskell
+##type = good
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
 }}}','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',3,1354894468271000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
-
-=== 简单的示例 ===
-基本的特征包括:
- 1. 通过`SELECT ALL`选中全部代码;
- 2. 代码显示区域可以`折叠收起`;
-
-{{{
-#!CodeExample
-#!python
-@staticmethod
-def get_templates_dirs():
-    """ Notify Trac about templates dir. """
-    from pkg_resources import resource_filename
-    return [resource_filename(__name__, ''templates'')]
-}}}
-
-=== `##type`参数 ===
-支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
-{{{
-#!CodeExample
-##type = bad
-##title = 错误代码
-#!haskell
-fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
-}}}
-{{{
-#!CodeExample
-##type = good
-##title = 良好的代码
-#!haskell
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',3,1354894468271000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
+
+=== 简单的示例 ===
+基本的特征包括:
+ 1. 通过`SELECT ALL`选中全部代码;
+ 2. 代码显示区域可以`折叠收起`;
+
+{{{
+#!CodeExample
+#!python
+@staticmethod
+def get_templates_dirs():
+    """ Notify Trac about templates dir. """
+    from pkg_resources import resource_filename
+    return [resource_filename(__name__, ''templates'')]
+}}}
+
+=== `##type`参数 ===
+支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
+{{{
+#!CodeExample
+##type = bad
+##title = 错误代码
+#!haskell
+fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
+}}}
+{{{
+#!CodeExample
+##type = good
+##title = 良好的代码
+#!haskell
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
 }}}','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',4,1354895192284000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
-
-=== 简单的示例 ===
-基本的特征包括:
- 1. 通过`SELECT ALL`选中全部代码;
- 2. 代码显示区域可以`折叠收起`;
- 3. 使用 `#!<语言名称>` 指定代码语言;
- 4. 使用 `##title = ...` 指定标题;
-
-{{{
-#!CodeExample
-#!python
-##title = 代码示例
-@staticmethod
-def get_templates_dirs():
-    """ Notify Trac about templates dir. """
-    from pkg_resources import resource_filename
-    return [resource_filename(__name__, ''templates'')]
-}}}
-
-=== `##type`参数 ===
-支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
-{{{
-#!CodeExample
-##type = bad
-##title = 错误代码
-#!haskell
-fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
-}}}
-{{{
-#!CodeExample
-##type = good
-##title = 良好的代码
-#!haskell
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
-}}}
-
-=== 链接文件 ===
-使用 `##path` 指定需要显示的文件链接, 如下面示例显示的是附件 raw-attachment:teamviewer :
-{{{
-#!CodeExample
-##title = 显示附件(teamviewer7)
-#!sh
-##path = raw-attachment:teamviewer
+INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',4,1354895192284000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
+
+=== 简单的示例 ===
+基本的特征包括:
+ 1. 通过`SELECT ALL`选中全部代码;
+ 2. 代码显示区域可以`折叠收起`;
+ 3. 使用 `#!<语言名称>` 指定代码语言;
+ 4. 使用 `##title = ...` 指定标题;
+
+{{{
+#!CodeExample
+#!python
+##title = 代码示例
+@staticmethod
+def get_templates_dirs():
+    """ Notify Trac about templates dir. """
+    from pkg_resources import resource_filename
+    return [resource_filename(__name__, ''templates'')]
+}}}
+
+=== `##type`参数 ===
+支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
+{{{
+#!CodeExample
+##type = bad
+##title = 错误代码
+#!haskell
+fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
+}}}
+{{{
+#!CodeExample
+##type = good
+##title = 良好的代码
+#!haskell
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+}}}
+
+=== 链接文件 ===
+使用 `##path` 指定需要显示的文件链接, 如下面示例显示的是附件 raw-attachment:teamviewer :
+{{{
+#!CodeExample
+##title = 显示附件(teamviewer7)
+#!sh
+##path = raw-attachment:teamviewer
 }}}','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',5,1354895269262000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
-
-=== 简单的示例 ===
-基本的特征包括:
- 1. 通过`SELECT ALL`选中全部代码;
- 2. 代码显示区域可以`折叠收起`;
- 3. 使用 `#!<语言名称>` 指定代码语言;
- 4. 使用 `##title = ...` 指定标题;
-
-{{{
-#!CodeExample
-#!python
-##title = 代码示例
-@staticmethod
-def get_templates_dirs():
-    """ Notify Trac about templates dir. """
-    from pkg_resources import resource_filename
-    return [resource_filename(__name__, ''templates'')]
-}}}
-
-=== `##type`参数 ===
-支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
-{{{
-#!CodeExample
-##type = bad
-##title = 错误代码
-#!haskell
-fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
-}}}
-{{{
-#!CodeExample
-##type = good
-##title = 良好的代码
-#!haskell
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
-}}}
-
-=== 链接文件 ===
-使用 `##path` 指定需要显示的文件链接, 如下面示例显示的是附件 attachment:teamviewer :
-{{{
-#!CodeExample
-##title = 显示附件(teamviewer7)
-#!sh
-##path = raw-attachment:teamviewer
+INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',5,1354895269262000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
+
+=== 简单的示例 ===
+基本的特征包括:
+ 1. 通过`SELECT ALL`选中全部代码;
+ 2. 代码显示区域可以`折叠收起`;
+ 3. 使用 `#!<语言名称>` 指定代码语言;
+ 4. 使用 `##title = ...` 指定标题;
+
+{{{
+#!CodeExample
+#!python
+##title = 代码示例
+@staticmethod
+def get_templates_dirs():
+    """ Notify Trac about templates dir. """
+    from pkg_resources import resource_filename
+    return [resource_filename(__name__, ''templates'')]
+}}}
+
+=== `##type`参数 ===
+支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
+{{{
+#!CodeExample
+##type = bad
+##title = 错误代码
+#!haskell
+fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
+}}}
+{{{
+#!CodeExample
+##type = good
+##title = 良好的代码
+#!haskell
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+}}}
+
+=== 链接文件 ===
+使用 `##path` 指定需要显示的文件链接, 如下面示例显示的是附件 attachment:teamviewer :
+{{{
+#!CodeExample
+##title = 显示附件(teamviewer7)
+#!sh
+##path = raw-attachment:teamviewer
 }}}','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',6,1354895897410000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
-
-== 示例 ==
-=== 简单的示例 ===
-基本的特征包括:
- 1. 通过`SELECT ALL`选中全部代码;
- 2. 代码显示区域可以`折叠收起`;
- 3. 使用 `#!<语言名称>` 指定代码语言;
- 4. 使用 `##title = ...` 指定标题;
-
-{{{
-#!CodeExample
-#!python
-##title = 代码示例
-@staticmethod
-def get_templates_dirs():
-    """ Notify Trac about templates dir. """
-    from pkg_resources import resource_filename
-    return [resource_filename(__name__, ''templates'')]
-}}}
-
-=== `##type`参数 ===
-支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
-{{{
-#!CodeExample
-##type = bad
-##title = 错误代码
-#!haskell
-fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
-}}}
-{{{
-#!CodeExample
-##type = good
-##title = 良好的代码
-#!haskell
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
-}}}
-
-== 使用文档 ==
-[[MacroList(CodeExample)]]
-
-== 参考 ==
- - http://trac-hacks.org/wiki/CodeExampleMacro
- - 来自上述地址的语法摘要:
-{{{
-#!html
-<table>
-<tbody><tr><td><strong>Argument</strong><br>  </td><td><strong>Version</strong><br>  </td><td><strong>Required (R)<br>Optional (O)</strong> </td><td><strong>Description</strong><br>        </td><td><strong>Default</strong><br>  
-</td></tr><tr><td> <tt>## type</tt>  </td><td> </td><td> O </td><td> A type of box example: <tt>simple</tt>, <tt>good</tt>, <tt>bad</tt> <br>* Example:  <tt> ## type = bad </tt> </td><td> <tt>simple</tt> 
-</td></tr><tr><td> <tt>## title</tt> </td><td> </td><td> O </td><td> The title of the example.<br>* Example:  <tt> ## title = Source from repository A </tt>  </td><td> If <tt>## type = simple</tt> then <tt>EXAMPLE:</tt><br>If <tt>## type = good</tt> then <tt>CORRECT EXAMPLE:</tt><br>If <tt>## type = bad</tt> then <tt>INCORRECT EXAMPLE:</tt> 
-</td></tr><tr><td> <tt>## path</tt>  </td><td> </td><td> O </td><td> A file in the repository (using <a class="wiki" href="/wiki/TracLinks">TracLinks</a> format for source code)<br>* Example:  <tt> ## path = GPGMail/Source/GPGMailPreferences.m </tt>  </td><td> None 
-</td></tr><tr><td> <tt>## repo</tt> </td><td> </td><td> O </td><td> Repository to use (Trac 0.12 and upper only).<br>* Example:  <tt> ## repo = T.B.D. </tt>  </td><td> None 
-</td></tr><tr><td> <tt>## regex</tt> </td><td> </td><td> O </td><td> A regular expression indicates where to start an example.<br>* Example:  <tt> ## regex = ".*updater\s*{" </tt>  </td><td> None 
-</td></tr><tr><td> <tt>## lines</tt> </td><td> </td><td> O </td><td> Number of lines to show.<br>* Example:  <tt> ## lines = 3 </tt>  </td><td> None 
-</td></tr><tr><td> <tt>#!language</tt> </td><td> </td><td> O </td><td> Syntax highlighter. <tt>language</tt> is any supported by Trac. See <a class="wiki" href="/wiki/TracSyntaxColoring">TracSyntaxColoring</a>.<br>* Example:  <tt> #!python </tt>  </td><td> <tt>trac</tt> 
-</td></tr></tbody>
-</table>
+INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',6,1354895897410000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
+
+== 示例 ==
+=== 简单的示例 ===
+基本的特征包括:
+ 1. 通过`SELECT ALL`选中全部代码;
+ 2. 代码显示区域可以`折叠收起`;
+ 3. 使用 `#!<语言名称>` 指定代码语言;
+ 4. 使用 `##title = ...` 指定标题;
+
+{{{
+#!CodeExample
+#!python
+##title = 代码示例
+@staticmethod
+def get_templates_dirs():
+    """ Notify Trac about templates dir. """
+    from pkg_resources import resource_filename
+    return [resource_filename(__name__, ''templates'')]
+}}}
+
+=== `##type`参数 ===
+支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
+{{{
+#!CodeExample
+##type = bad
+##title = 错误代码
+#!haskell
+fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
+}}}
+{{{
+#!CodeExample
+##type = good
+##title = 良好的代码
+#!haskell
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+}}}
+
+== 使用文档 ==
+[[MacroList(CodeExample)]]
+
+== 参考 ==
+ - http://trac-hacks.org/wiki/CodeExampleMacro
+ - 来自上述地址的语法摘要:
+{{{
+#!html
+<table>
+<tbody><tr><td><strong>Argument</strong><br>  </td><td><strong>Version</strong><br>  </td><td><strong>Required (R)<br>Optional (O)</strong> </td><td><strong>Description</strong><br>        </td><td><strong>Default</strong><br>  
+</td></tr><tr><td> <tt>## type</tt>  </td><td> </td><td> O </td><td> A type of box example: <tt>simple</tt>, <tt>good</tt>, <tt>bad</tt> <br>* Example:  <tt> ## type = bad </tt> </td><td> <tt>simple</tt> 
+</td></tr><tr><td> <tt>## title</tt> </td><td> </td><td> O </td><td> The title of the example.<br>* Example:  <tt> ## title = Source from repository A </tt>  </td><td> If <tt>## type = simple</tt> then <tt>EXAMPLE:</tt><br>If <tt>## type = good</tt> then <tt>CORRECT EXAMPLE:</tt><br>If <tt>## type = bad</tt> then <tt>INCORRECT EXAMPLE:</tt> 
+</td></tr><tr><td> <tt>## path</tt>  </td><td> </td><td> O </td><td> A file in the repository (using <a class="wiki" href="/wiki/TracLinks">TracLinks</a> format for source code)<br>* Example:  <tt> ## path = GPGMail/Source/GPGMailPreferences.m </tt>  </td><td> None 
+</td></tr><tr><td> <tt>## repo</tt> </td><td> </td><td> O </td><td> Repository to use (Trac 0.12 and upper only).<br>* Example:  <tt> ## repo = T.B.D. </tt>  </td><td> None 
+</td></tr><tr><td> <tt>## regex</tt> </td><td> </td><td> O </td><td> A regular expression indicates where to start an example.<br>* Example:  <tt> ## regex = ".*updater\s*{" </tt>  </td><td> None 
+</td></tr><tr><td> <tt>## lines</tt> </td><td> </td><td> O </td><td> Number of lines to show.<br>* Example:  <tt> ## lines = 3 </tt>  </td><td> None 
+</td></tr><tr><td> <tt>#!language</tt> </td><td> </td><td> O </td><td> Syntax highlighter. <tt>language</tt> is any supported by Trac. See <a class="wiki" href="/wiki/TracSyntaxColoring">TracSyntaxColoring</a>.<br>* Example:  <tt> #!python </tt>  </td><td> <tt>trac</tt> 
+</td></tr></tbody>
+</table>
 }}}','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',7,1354895990933000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
-
-== 示例 ==
-=== 简单的示例 ===
-基本的特征包括:
- 1. 通过`SELECT ALL`选中全部代码;
- 2. 代码显示区域可以`折叠收起`;
- 3. 使用 `#!<语言名称>` 指定代码语言;
- 4. 使用 `##title = ...` 指定标题;
-
-{{{
-#!CodeExample
-#!python
-##title = 代码示例
-@staticmethod
-def get_templates_dirs():
-    """ Notify Trac about templates dir. """
-    from pkg_resources import resource_filename
-    return [resource_filename(__name__, ''templates'')]
-}}}
-
-=== `##type`参数 ===
-支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
-{{{
-#!CodeExample
-##type = bad
-##title = 错误代码
-#!haskell
-fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
-}}}
-{{{
-#!CodeExample
-##type = good
-##title = 良好的代码
-#!haskell
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
-}}}
-
-== 使用文档 ==
-[[MacroList(CodeExample)]]
-
-== 参考 ==
- - http://trac-hacks.org/wiki/CodeExampleMacro
- - 来自上述地址的语法摘要:
-{{{
-#!html
-<table class="wiki">
-<tbody><tr><td><strong>Argument</strong><br>  </td><td><strong>Version</strong><br>  </td><td><strong>Required (R)<br>Optional (O)</strong> </td><td><strong>Description</strong><br>        </td><td><strong>Default</strong><br>  
-</td></tr><tr><td> <tt>## type</tt>  </td><td> </td><td> O </td><td> A type of box example: <tt>simple</tt>, <tt>good</tt>, <tt>bad</tt> <br>* Example:  <tt> ## type = bad </tt> </td><td> <tt>simple</tt> 
-</td></tr><tr><td> <tt>## title</tt> </td><td> </td><td> O </td><td> The title of the example.<br>* Example:  <tt> ## title = Source from repository A </tt>  </td><td> If <tt>## type = simple</tt> then <tt>EXAMPLE:</tt><br>If <tt>## type = good</tt> then <tt>CORRECT EXAMPLE:</tt><br>If <tt>## type = bad</tt> then <tt>INCORRECT EXAMPLE:</tt> 
-</td></tr><tr><td> <tt>## path</tt>  </td><td> </td><td> O </td><td> A file in the repository (using <a class="wiki" href="/wiki/TracLinks">TracLinks</a> format for source code)<br>* Example:  <tt> ## path = GPGMail/Source/GPGMailPreferences.m </tt>  </td><td> None 
-</td></tr><tr><td> <tt>## repo</tt> </td><td> </td><td> O </td><td> Repository to use (Trac 0.12 and upper only).<br>* Example:  <tt> ## repo = T.B.D. </tt>  </td><td> None 
-</td></tr><tr><td> <tt>## regex</tt> </td><td> </td><td> O </td><td> A regular expression indicates where to start an example.<br>* Example:  <tt> ## regex = ".*updater\s*{" </tt>  </td><td> None 
-</td></tr><tr><td> <tt>## lines</tt> </td><td> </td><td> O </td><td> Number of lines to show.<br>* Example:  <tt> ## lines = 3 </tt>  </td><td> None 
-</td></tr><tr><td> <tt>#!language</tt> </td><td> </td><td> O </td><td> Syntax highlighter. <tt>language</tt> is any supported by Trac. See <a class="wiki" href="/wiki/TracSyntaxColoring">TracSyntaxColoring</a>.<br>* Example:  <tt> #!python </tt>  </td><td> <tt>trac</tt> 
-</td></tr></tbody>
-</table>
+INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',7,1354895990933000,'admin','61.171.91.97','= `CodeExampleMacro`: 代码语法高亮显示 =
+
+== 示例 ==
+=== 简单的示例 ===
+基本的特征包括:
+ 1. 通过`SELECT ALL`选中全部代码;
+ 2. 代码显示区域可以`折叠收起`;
+ 3. 使用 `#!<语言名称>` 指定代码语言;
+ 4. 使用 `##title = ...` 指定标题;
+
+{{{
+#!CodeExample
+#!python
+##title = 代码示例
+@staticmethod
+def get_templates_dirs():
+    """ Notify Trac about templates dir. """
+    from pkg_resources import resource_filename
+    return [resource_filename(__name__, ''templates'')]
+}}}
+
+=== `##type`参数 ===
+支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
+{{{
+#!CodeExample
+##type = bad
+##title = 错误代码
+#!haskell
+fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
+}}}
+{{{
+#!CodeExample
+##type = good
+##title = 良好的代码
+#!haskell
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+}}}
+
+== 使用文档 ==
+[[MacroList(CodeExample)]]
+
+== 参考 ==
+ - http://trac-hacks.org/wiki/CodeExampleMacro
+ - 来自上述地址的语法摘要:
+{{{
+#!html
+<table class="wiki">
+<tbody><tr><td><strong>Argument</strong><br>  </td><td><strong>Version</strong><br>  </td><td><strong>Required (R)<br>Optional (O)</strong> </td><td><strong>Description</strong><br>        </td><td><strong>Default</strong><br>  
+</td></tr><tr><td> <tt>## type</tt>  </td><td> </td><td> O </td><td> A type of box example: <tt>simple</tt>, <tt>good</tt>, <tt>bad</tt> <br>* Example:  <tt> ## type = bad </tt> </td><td> <tt>simple</tt> 
+</td></tr><tr><td> <tt>## title</tt> </td><td> </td><td> O </td><td> The title of the example.<br>* Example:  <tt> ## title = Source from repository A </tt>  </td><td> If <tt>## type = simple</tt> then <tt>EXAMPLE:</tt><br>If <tt>## type = good</tt> then <tt>CORRECT EXAMPLE:</tt><br>If <tt>## type = bad</tt> then <tt>INCORRECT EXAMPLE:</tt> 
+</td></tr><tr><td> <tt>## path</tt>  </td><td> </td><td> O </td><td> A file in the repository (using <a class="wiki" href="/wiki/TracLinks">TracLinks</a> format for source code)<br>* Example:  <tt> ## path = GPGMail/Source/GPGMailPreferences.m </tt>  </td><td> None 
+</td></tr><tr><td> <tt>## repo</tt> </td><td> </td><td> O </td><td> Repository to use (Trac 0.12 and upper only).<br>* Example:  <tt> ## repo = T.B.D. </tt>  </td><td> None 
+</td></tr><tr><td> <tt>## regex</tt> </td><td> </td><td> O </td><td> A regular expression indicates where to start an example.<br>* Example:  <tt> ## regex = ".*updater\s*{" </tt>  </td><td> None 
+</td></tr><tr><td> <tt>## lines</tt> </td><td> </td><td> O </td><td> Number of lines to show.<br>* Example:  <tt> ## lines = 3 </tt>  </td><td> None 
+</td></tr><tr><td> <tt>#!language</tt> </td><td> </td><td> O </td><td> Syntax highlighter. <tt>language</tt> is any supported by Trac. See <a class="wiki" href="/wiki/TracSyntaxColoring">TracSyntaxColoring</a>.<br>* Example:  <tt> #!python </tt>  </td><td> <tt>trac</tt> 
+</td></tr></tbody>
+</table>
 }}}','',0);
-INSERT INTO "wiki" VALUES('plugins',1,1354896078678000,'admin','61.171.91.97','= 插件使用示例 =
+INSERT INTO "wiki" VALUES('plugins',1,1354896078678000,'admin','61.171.91.97','= 插件使用示例 =
 [[TitleIndex(include=plugins-demo/*, format=hierarchy)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo',1,1354896110436000,'admin','61.171.91.97','= 插件使用示例 =
+INSERT INTO "wiki" VALUES('plugins-demo',1,1354896110436000,'admin','61.171.91.97','= 插件使用示例 =
 [[TitleIndex(include=plugins-demo/*, format=hierarchy)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',1,1354897275545000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
-`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
-
-== 示例 ==
-{{{
-#!graphviz
- digraph ClassLoader {
-  rankdir = BT;
-  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
-  node [label="System\n(CLASSPATH)", color=blue] System;
-  subgraph cluster_himalaya {
-    color=lightblue4;
-    label="企业应用系统核心";
-    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
-    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
-    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
-    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
-    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
-  }
-  node [label="FileSystem\n(文件系统)", color=brown] fileSystem;
-  
-  System -> Bootstrap;
-  theApp_ear -> System;
-
-  axis_war -> theApp_ear;
-  portal_ear -> theApp_ear;
-  webApp_ear -> theApp_ear;
-  webApp2_ear -> theApp_ear;
-
-  fileSystem -> theApp_ear[label="CustomizedClassLoader", fontsize=9];
- }
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',1,1354897275545000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="企业应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n(文件系统)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label="CustomizedClassLoader", fontsize=9];
+ }
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',2,1354897691893000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
-`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
-
-== 示例 ==
-=== 1 ===
-{{{
-#!graphviz
- digraph ClassLoader {
-  rankdir = BT;
-  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
-  node [label="System\n(CLASSPATH)", color=blue] System;
-  subgraph cluster_himalaya {
-    color=lightblue4;
-    label="企业应用系统核心";
-    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
-    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
-    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
-    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
-    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
-  }
-  node [label="FileSystem\n(文件系统)", color=brown] fileSystem;
-  
-  System -> Bootstrap;
-  theApp_ear -> System;
-
-  axis_war -> theApp_ear;
-  portal_ear -> theApp_ear;
-  webApp_ear -> theApp_ear;
-  webApp2_ear -> theApp_ear;
-
-  fileSystem -> theApp_ear[label="CustomizedClassLoader", fontsize=9];
- }
-}}}
-
-=== 2 ===
-来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple" label="graph/图" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
-    }
-} 
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',2,1354897691893000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="企业应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n(文件系统)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label="CustomizedClassLoader", fontsize=9];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
 }}}','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',3,1354897838507000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
-`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
-
-== 示例 ==
-=== 1 ===
-{{{
-#!graphviz
- digraph ClassLoader {
-  rankdir = BT;
-  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
-  node [label="System\n(CLASSPATH)", color=blue] System;
-  subgraph cluster_himalaya {
-    color=lightblue4;
-    label="企业应用系统核心";
-    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
-    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
-    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
-    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
-    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
-  }
-  node [label="FileSystem\n(文件系统)", color=brown] fileSystem;
-  
-  System -> Bootstrap;
-  theApp_ear -> System;
-
-  axis_war -> theApp_ear;
-  portal_ear -> theApp_ear;
-  webApp_ear -> theApp_ear;
-  webApp2_ear -> theApp_ear;
-
-  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
-                           fontcolor=blue, color=red];
- }
-}}}
-
-=== 2 ===
-来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple" label="graph/图" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
-    }
-} 
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',3,1354897838507000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="企业应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n(文件系统)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
+                           fontcolor=blue, color=red];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
 }}}','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',4,1354897932539000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
-`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
-
-== 示例 ==
-=== 1 ===
-{{{
-#!graphviz
- digraph ClassLoader {
-  rankdir = BT;
-  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
-  node [label="System\n(CLASSPATH)", color=blue] System;
-  subgraph cluster_himalaya {
-    color=lightblue4;
-    label="企业应用系统核心";
-    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
-    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
-    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
-    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
-    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
-  }
-  node [label="FileSystem\n(文件系统)", color=brown] fileSystem;
-  
-  System -> Bootstrap;
-  theApp_ear -> System;
-
-  axis_war -> theApp_ear;
-  portal_ear -> theApp_ear;
-  webApp_ear -> theApp_ear;
-  webApp2_ear -> theApp_ear;
-
-  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
-                           fontcolor=blue, color=red];
- }
-}}}
-
-=== 2 ===
-来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple" label="graph/图" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
-    }
-} 
-}}}
-
-== 参考 ==
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',4,1354897932539000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="企业应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n(文件系统)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
+                           fontcolor=blue, color=red];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+== 参考 ==
  - http://trac-hacks.org/wiki/GraphvizPlugin','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',5,1354898463987000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
-`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
-
-== 示例 ==
-=== 1 ===
-{{{
-#!graphviz
- digraph ClassLoader {
-  rankdir = BT;
-  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
-  node [label="System\n(CLASSPATH)", color=blue] System;
-  subgraph cluster_himalaya {
-    color=lightblue4;
-    label="应用系统核心";
-    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
-    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
-    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
-    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
-    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
-  }
-  node [label="FileSystem\n扩展(文件系统)", color=brown] fileSystem;
-  
-  System -> Bootstrap;
-  theApp_ear -> System;
-
-  axis_war -> theApp_ear;
-  portal_ear -> theApp_ear;
-  webApp_ear -> theApp_ear;
-  webApp2_ear -> theApp_ear;
-
-  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
-                           fontcolor=red];
- }
-}}}
-
-=== 2 ===
-来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple" label="graph/图" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
-    }
-} 
-}}}
-
-== 参考 ==
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',5,1354898463987000,'admin','61.171.91.97','= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n扩展(文件系统)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
+                           fontcolor=red];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+== 参考 ==
  - http://trac-hacks.org/wiki/GraphvizPlugin','',0);
-INSERT INTO "wiki" VALUES('WikiStart',16,1354898540429000,'admin','61.171.91.97','= `PortableTrac` 演示站点 =
-[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且 `开箱即用` 的 Trac;
-
-本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征, 重点是在基础的 Trac 上增加的 plugin;
-
-关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
-
-== 插件使用示例 ==
-[[TitleIndex(include=plugins-demo/*, format=hierarchy)]]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',16,1354898540429000,'admin','61.171.91.97','= `PortableTrac` 演示站点 =
+[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且 `开箱即用` 的 Trac;
+
+本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征, 重点是在基础的 Trac 上增加的 plugin;
+
+关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
+
+== 插件使用示例 ==
+[[TitleIndex(include=plugins-demo/*, format=hierarchy)]]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',1,1357309443631000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
-
-== 示例 ==
-[[NoteBox(warn, my Text)]] 
-
-== 使用文档 ==
+INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',1,1357309443631000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+
+== 示例 ==
+[[NoteBox(warn, my Text)]] 
+
+== 使用文档 ==
 [[MacroList(NoteBox)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',2,1357309720686000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
-
-== 示例 ==
-[[NoteBox(warn,使用 `[[``NoteBox(warn\, 警告信息)``]]` 这样的写法表示一个警告信息)]] 
-
-== 使用文档 ==
+INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',2,1357309720686000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+
+== 示例 ==
+[[NoteBox(warn,使用 `[[``NoteBox(warn\, 警告信息)``]]` 这样的写法表示一个警告信息)]] 
+
+== 使用文档 ==
 [[MacroList(NoteBox)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',3,1357309851527000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
-
-== 示例 ==
-[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个警告信息)]] 
-
-== 使用文档 ==
+INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',3,1357309851527000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+
+== 示例 ==
+[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个警告信息)]] 
+
+== 使用文档 ==
 [[MacroList(NoteBox)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',4,1357309880698000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
-
-== 示例 ==
-[[NoteBox(warn, 使用 `[``[``NoteBox(warn\, 警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
-
-== 使用文档 ==
+INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',4,1357309880698000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+
+== 示例 ==
+[[NoteBox(warn, 使用 `[``[``NoteBox(warn\, 警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
+
+== 使用文档 ==
 [[MacroList(NoteBox)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',5,1357309894479000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
-
-== 示例 ==
-[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
-
-== 使用文档 ==
+INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',5,1357309894479000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+
+== 示例 ==
+[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
+
+== 使用文档 ==
 [[MacroList(NoteBox)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',6,1357309966790000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
-
-== 示例 ==
-[[NoteBox(note,使用 `[``[``NoteBox(note\,说明信息)``]``]` 这样的写法表示一个说明信息.)]] 
-[[NoteBox(tip,使用 `[``[``NoteBox(tip\,提示信息)``]``]` 这样的写法表示一个''''提示信息''''.)]] 
-[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
-
-== 使用文档 ==
+INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',6,1357309966790000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+
+== 示例 ==
+[[NoteBox(note,使用 `[``[``NoteBox(note\,说明信息)``]``]` 这样的写法表示一个说明信息.)]] 
+[[NoteBox(tip,使用 `[``[``NoteBox(tip\,提示信息)``]``]` 这样的写法表示一个''''提示信息''''.)]] 
+[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
+
+== 使用文档 ==
 [[MacroList(NoteBox)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',7,1357310208411000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
-
-== 示例 ==
-[[NoteBox(note,使用 `[``[``NoteBox(note\,说明信息)``]``]` 这样的写法表示一个说明信息.)]] 
-[[NoteBox(tip,使用 `[``[``NoteBox(tip\,提示信息)``]``]` 这样的写法表示一个''''提示信息''''.)]] 
-[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
-
-== 说明 ==
- 1. 第二个参数(说明文本)前面如果加上空格, 会缩进显示, 也就是说图标和文字间的距离会变大, 例如:[[BR]][[NoteBox(tip, 一个空格)]][[NoteBox(tip,  两个空格)]]
- 2. 第二个参数中间如果存在逗号(`,`), 需要使用 `\,` 来进行转义;
-
-== 使用文档 ==
+INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',7,1357310208411000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+
+== 示例 ==
+[[NoteBox(note,使用 `[``[``NoteBox(note\,说明信息)``]``]` 这样的写法表示一个说明信息.)]] 
+[[NoteBox(tip,使用 `[``[``NoteBox(tip\,提示信息)``]``]` 这样的写法表示一个''''提示信息''''.)]] 
+[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
+
+== 说明 ==
+ 1. 第二个参数(说明文本)前面如果加上空格, 会缩进显示, 也就是说图标和文字间的距离会变大, 例如:[[BR]][[NoteBox(tip, 一个空格)]][[NoteBox(tip,  两个空格)]]
+ 2. 第二个参数中间如果存在逗号(`,`), 需要使用 `\,` 来进行转义;
+
+== 使用文档 ==
 [[MacroList(NoteBox)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',8,1357310242051000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
-
-== 示例 ==
-[[NoteBox(note,使用 `[``[``NoteBox(note\,说明信息)``]``]` 这样的写法表示一个说明信息.)]] 
-[[NoteBox(tip,使用 `[``[``NoteBox(tip\,提示信息)``]``]` 这样的写法表示一个''''提示信息''''.)]] 
-[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
-
-== 注意事项 ==
- 1. 第二个参数(说明文本)前面如果加上空格, 会缩进显示, 也就是说图标和文字间的距离会变大, 例如:[[BR]][[NoteBox(tip, 一个空格)]][[NoteBox(tip,  两个空格)]]
- 2. 第二个参数中间如果存在逗号(`,`), 需要使用 `\,` 来进行转义;
-
-== 使用文档 ==
+INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',8,1357310242051000,'admin','180.169.66.118','= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+
+== 示例 ==
+[[NoteBox(note,使用 `[``[``NoteBox(note\,说明信息)``]``]` 这样的写法表示一个说明信息.)]] 
+[[NoteBox(tip,使用 `[``[``NoteBox(tip\,提示信息)``]``]` 这样的写法表示一个''''提示信息''''.)]] 
+[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
+
+== 注意事项 ==
+ 1. 第二个参数(说明文本)前面如果加上空格, 会缩进显示, 也就是说图标和文字间的距离会变大, 例如:[[BR]][[NoteBox(tip, 一个空格)]][[NoteBox(tip,  两个空格)]]
+ 2. 第二个参数中间如果存在逗号(`,`), 需要使用 `\,` 来进行转义;
+
+== 使用文档 ==
 [[MacroList(NoteBox)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',1,1357310735929000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',1,1357310735929000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
 详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',2,1357311782542000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-group 启动容器事务
-  接口 -> 系统B: 传输单据数据
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',2,1357311782542000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+group 启动容器事务
+  接口 -> 系统B: 传输单据数据
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',3,1357312215780000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 --> 系统A: 标记单据处理完毕
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 -> 系统B: 标识数据为有效状态
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',3,1357312215780000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 --> 系统A: 标记单据处理完毕
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 -> 系统B: 标识数据为有效状态
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',4,1357312254077000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',4,1357312254077000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',5,1357312691983000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-{{{
-#!plantuml
-@startuml
-:System Administrator: as Admin
-(Use the application) as (Use)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (System monitor)
-
-note right of Admin : 管理员可以登录用户系统进行监控.
-
-note right of (Use)
-  用户启动系统后可以进行业务操作.
-end note
-@enduml
-}}}
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',5,1357312691983000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+:System Administrator: as Admin
+(Use the application) as (Use)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (System monitor)
+
+note right of Admin : 管理员可以登录用户系统进行监控.
+
+note right of (Use)
+  用户启动系统后可以进行业务操作.
+end note
+@enduml
+}}}
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',6,1357313314892000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-''''''注意:'''''' 在目前版本的用例图中, 处理说明文本之外, 不能使用中文.
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note right of Admin : 管理员具有全部的用户权限.
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',6,1357313314892000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+''''''注意:'''''' 在目前版本的用例图中, 处理说明文本之外, 不能使用中文.
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note right of Admin : 管理员具有全部的用户权限.
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',7,1357313442044000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-''''''注意:'''''' 在目前版本的用例图中, 处理说明文本之外, 不能使用中文.
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note right of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',7,1357313442044000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+''''''注意:'''''' 在目前版本的用例图中, 处理说明文本之外, 不能使用中文.
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note right of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',8,1357313473450000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-''''''注意:'''''' 在目前版本的用例图中, 除了说明文本之外, 不能使用中文.
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note right of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',8,1357313473450000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+''''''注意:'''''' 在目前版本的用例图中, 除了说明文本之外, 不能使用中文.
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note right of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',9,1357313537651000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-''''''注意:'''''' 在目前版本的用例图中, 除了说明文本之外, 不能使用中文.
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',9,1357313537651000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+''''''注意:'''''' 在目前版本的用例图中, 除了说明文本之外, 不能使用中文.
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',10,1357314515547000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-''''''注意:'''''' 在目前版本的用例图中, 除了说明文本之外, 不能使用中文.
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-{{{
-#!plantuml
-@startuml
-IWorker <|-- AbstractWorker
-AbstractWorker <|-- MethodCWorker
-
-interface IWorker {
-  + perform(Object message)
-}
-class AbstractWorker {
-  - Object message
-  + perform(Object message)
-  # Object getMessage()
-  + {abstract} doWork()
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',10,1357314515547000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+''''''注意:'''''' 在目前版本的用例图中, 除了说明文本之外, 不能使用中文.
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+{{{
+#!plantuml
+@startuml
+IWorker <|-- AbstractWorker
+AbstractWorker <|-- MethodCWorker
+
+interface IWorker {
+  + perform(Object message)
+}
+class AbstractWorker {
+  - Object message
+  + perform(Object message)
+  # Object getMessage()
+  + {abstract} doWork()
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',11,1357315226872000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-  }
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',11,1357315226872000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+  }
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',12,1357315520411000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
-[[PageOutline]]
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-  }
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',12,1357315520411000,'admin','180.169.66.118','= `PlantUMLMacro`: 创建 UML 图 =
+[[PageOutline]]
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+  }
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('WikiStart',17,1357315546926000,'admin','180.169.66.118','= `PortableTrac` 演示站点 =
-[[PageOutline]]
-
-[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且 `开箱即用` 的 Trac;
-
-本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征, 重点是在基础的 Trac 上增加的 plugin;
-
-关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
-
-== 插件使用示例 ==
-[[TitleIndex(include=plugins-demo/*, format=hierarchy)]]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',17,1357315546926000,'admin','180.169.66.118','= `PortableTrac` 演示站点 =
+[[PageOutline]]
+
+[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且 `开箱即用` 的 Trac;
+
+本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征, 重点是在基础的 Trac 上增加的 plugin;
+
+关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
+
+== 插件使用示例 ==
+[[TitleIndex(include=plugins-demo/*, format=hierarchy)]]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',0);
-INSERT INTO "wiki" VALUES('WikiStart',18,1357315560894000,'admin','180.169.66.118','[[PageOutline]]
-= `PortableTrac` 演示站点 =
-[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且 `开箱即用` 的 Trac;
-
-本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征, 重点是在基础的 Trac 上增加的 plugin;
-
-关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
-
-== 插件使用示例 ==
-[[TitleIndex(include=plugins-demo/*, format=hierarchy)]]
-
-== 最近的文章 ==
-[[BlogList(recent=30, format=inline)]][/blog 更多...]
-
-----
+INSERT INTO "wiki" VALUES('WikiStart',18,1357315560894000,'admin','180.169.66.118','[[PageOutline]]
+= `PortableTrac` 演示站点 =
+[https://github.com/thinkbase/PortableTrac PortableTrac] 是 `项目管理工具 Trac 重新打包发布的 "Portable" 版本` , 其主要目的是建立一个易于部署并且 `开箱即用` 的 Trac;
+
+本站点用于演示和测试 [https://github.com/thinkbase/PortableTrac PortableTrac] 的各项特征, 重点是在基础的 Trac 上增加的 plugin;
+
+关于 [https://github.com/thinkbase/PortableTrac PortableTrac] 的更多信息, 请参考 [/../main thinkbase.net 主站点];
+
+== 插件使用示例 ==
+[[TitleIndex(include=plugins-demo/*, format=hierarchy)]]
+
+== 最近的文章 ==
+[[BlogList(recent=30, format=inline)]][/blog 更多...]
+
+----
 ''''本网站基于 [http://trac.edgewall.org/ Trac] 构建, 关于 Trac 的更多信息, 请参考 [ZhWikiStart] 和 [EnWikiStart](英文版) .''''','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',13,1357315580081000,'admin','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-  }
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',13,1357315580081000,'admin','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+  }
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
 ','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',8,1357315611393000,'admin','180.169.66.118','[[PageOutline]]
-= `CodeExampleMacro`: 代码语法高亮显示 =
-
-== 示例 ==
-=== 简单的示例 ===
-基本的特征包括:
- 1. 通过`SELECT ALL`选中全部代码;
- 2. 代码显示区域可以`折叠收起`;
- 3. 使用 `#!<语言名称>` 指定代码语言;
- 4. 使用 `##title = ...` 指定标题;
-
-{{{
-#!CodeExample
-#!python
-##title = 代码示例
-@staticmethod
-def get_templates_dirs():
-    """ Notify Trac about templates dir. """
-    from pkg_resources import resource_filename
-    return [resource_filename(__name__, ''templates'')]
-}}}
-
-=== `##type`参数 ===
-支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
-{{{
-#!CodeExample
-##type = bad
-##title = 错误代码
-#!haskell
-fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
-}}}
-{{{
-#!CodeExample
-##type = good
-##title = 良好的代码
-#!haskell
-fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
-}}}
-
-== 使用文档 ==
-[[MacroList(CodeExample)]]
-
-== 参考 ==
- - http://trac-hacks.org/wiki/CodeExampleMacro
- - 来自上述地址的语法摘要:
-{{{
-#!html
-<table class="wiki">
-<tbody><tr><td><strong>Argument</strong><br>  </td><td><strong>Version</strong><br>  </td><td><strong>Required (R)<br>Optional (O)</strong> </td><td><strong>Description</strong><br>        </td><td><strong>Default</strong><br>  
-</td></tr><tr><td> <tt>## type</tt>  </td><td> </td><td> O </td><td> A type of box example: <tt>simple</tt>, <tt>good</tt>, <tt>bad</tt> <br>* Example:  <tt> ## type = bad </tt> </td><td> <tt>simple</tt> 
-</td></tr><tr><td> <tt>## title</tt> </td><td> </td><td> O </td><td> The title of the example.<br>* Example:  <tt> ## title = Source from repository A </tt>  </td><td> If <tt>## type = simple</tt> then <tt>EXAMPLE:</tt><br>If <tt>## type = good</tt> then <tt>CORRECT EXAMPLE:</tt><br>If <tt>## type = bad</tt> then <tt>INCORRECT EXAMPLE:</tt> 
-</td></tr><tr><td> <tt>## path</tt>  </td><td> </td><td> O </td><td> A file in the repository (using <a class="wiki" href="/wiki/TracLinks">TracLinks</a> format for source code)<br>* Example:  <tt> ## path = GPGMail/Source/GPGMailPreferences.m </tt>  </td><td> None 
-</td></tr><tr><td> <tt>## repo</tt> </td><td> </td><td> O </td><td> Repository to use (Trac 0.12 and upper only).<br>* Example:  <tt> ## repo = T.B.D. </tt>  </td><td> None 
-</td></tr><tr><td> <tt>## regex</tt> </td><td> </td><td> O </td><td> A regular expression indicates where to start an example.<br>* Example:  <tt> ## regex = ".*updater\s*{" </tt>  </td><td> None 
-</td></tr><tr><td> <tt>## lines</tt> </td><td> </td><td> O </td><td> Number of lines to show.<br>* Example:  <tt> ## lines = 3 </tt>  </td><td> None 
-</td></tr><tr><td> <tt>#!language</tt> </td><td> </td><td> O </td><td> Syntax highlighter. <tt>language</tt> is any supported by Trac. See <a class="wiki" href="/wiki/TracSyntaxColoring">TracSyntaxColoring</a>.<br>* Example:  <tt> #!python </tt>  </td><td> <tt>trac</tt> 
-</td></tr></tbody>
-</table>
+INSERT INTO "wiki" VALUES('plugins-demo/CodeExampleMacro',8,1357315611393000,'admin','180.169.66.118','[[PageOutline]]
+= `CodeExampleMacro`: 代码语法高亮显示 =
+
+== 示例 ==
+=== 简单的示例 ===
+基本的特征包括:
+ 1. 通过`SELECT ALL`选中全部代码;
+ 2. 代码显示区域可以`折叠收起`;
+ 3. 使用 `#!<语言名称>` 指定代码语言;
+ 4. 使用 `##title = ...` 指定标题;
+
+{{{
+#!CodeExample
+#!python
+##title = 代码示例
+@staticmethod
+def get_templates_dirs():
+    """ Notify Trac about templates dir. """
+    from pkg_resources import resource_filename
+    return [resource_filename(__name__, ''templates'')]
+}}}
+
+=== `##type`参数 ===
+支持 `##type` 参数: `simple`, `good`, `bad` , 用于显示标识为正确或者错误的代码
+{{{
+#!CodeExample
+##type = bad
+##title = 错误代码
+#!haskell
+fibs = 0 : 1 : [ a + b | a <- fibs | b <- tail fibs ]
+}}}
+{{{
+#!CodeExample
+##type = good
+##title = 良好的代码
+#!haskell
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+}}}
+
+== 使用文档 ==
+[[MacroList(CodeExample)]]
+
+== 参考 ==
+ - http://trac-hacks.org/wiki/CodeExampleMacro
+ - 来自上述地址的语法摘要:
+{{{
+#!html
+<table class="wiki">
+<tbody><tr><td><strong>Argument</strong><br>  </td><td><strong>Version</strong><br>  </td><td><strong>Required (R)<br>Optional (O)</strong> </td><td><strong>Description</strong><br>        </td><td><strong>Default</strong><br>  
+</td></tr><tr><td> <tt>## type</tt>  </td><td> </td><td> O </td><td> A type of box example: <tt>simple</tt>, <tt>good</tt>, <tt>bad</tt> <br>* Example:  <tt> ## type = bad </tt> </td><td> <tt>simple</tt> 
+</td></tr><tr><td> <tt>## title</tt> </td><td> </td><td> O </td><td> The title of the example.<br>* Example:  <tt> ## title = Source from repository A </tt>  </td><td> If <tt>## type = simple</tt> then <tt>EXAMPLE:</tt><br>If <tt>## type = good</tt> then <tt>CORRECT EXAMPLE:</tt><br>If <tt>## type = bad</tt> then <tt>INCORRECT EXAMPLE:</tt> 
+</td></tr><tr><td> <tt>## path</tt>  </td><td> </td><td> O </td><td> A file in the repository (using <a class="wiki" href="/wiki/TracLinks">TracLinks</a> format for source code)<br>* Example:  <tt> ## path = GPGMail/Source/GPGMailPreferences.m </tt>  </td><td> None 
+</td></tr><tr><td> <tt>## repo</tt> </td><td> </td><td> O </td><td> Repository to use (Trac 0.12 and upper only).<br>* Example:  <tt> ## repo = T.B.D. </tt>  </td><td> None 
+</td></tr><tr><td> <tt>## regex</tt> </td><td> </td><td> O </td><td> A regular expression indicates where to start an example.<br>* Example:  <tt> ## regex = ".*updater\s*{" </tt>  </td><td> None 
+</td></tr><tr><td> <tt>## lines</tt> </td><td> </td><td> O </td><td> Number of lines to show.<br>* Example:  <tt> ## lines = 3 </tt>  </td><td> None 
+</td></tr><tr><td> <tt>#!language</tt> </td><td> </td><td> O </td><td> Syntax highlighter. <tt>language</tt> is any supported by Trac. See <a class="wiki" href="/wiki/TracSyntaxColoring">TracSyntaxColoring</a>.<br>* Example:  <tt> #!python </tt>  </td><td> <tt>trac</tt> 
+</td></tr></tbody>
+</table>
 }}}','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',6,1357315624955000,'admin','180.169.66.118','[[PageOutline]]
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',6,1357315624955000,'admin','180.169.66.118','[[PageOutline]]
+= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n扩展(文件系统)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
+                           fontcolor=red];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+== 参考 ==
+ - http://trac-hacks.org/wiki/GraphvizPlugin','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',9,1357315657595000,'admin','180.169.66.118','[[PageOutline]]
+= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+
+== 示例 ==
+[[NoteBox(note,使用 `[``[``NoteBox(note\,说明信息)``]``]` 这样的写法表示一个说明信息.)]] 
+[[NoteBox(tip,使用 `[``[``NoteBox(tip\,提示信息)``]``]` 这样的写法表示一个''''提示信息''''.)]] 
+[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
+
+== 注意事项 ==
+ 1. 第二个参数(说明文本)前面如果加上空格, 会缩进显示, 也就是说图标和文字间的距离会变大, 例如:[[BR]][[NoteBox(tip, 一个空格)]][[NoteBox(tip,  两个空格)]]
+ 2. 第二个参数中间如果存在逗号(`,`), 需要使用 `\,` 来进行转义;
+
+== 使用文档 ==
+[[MacroList(NoteBox)]]','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',14,1357315812872000,'admin','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',15,1357315879746000,'admin','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',16,1357316444453000,'admin','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
+[[MacroList(PlantUML)]]','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',17,1357316602497000,'admin','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
+[[MacroList(PlantUML)]]','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',18,1357316956802000,'admin','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+[[NoteBox(tip,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(Use the application) as (Use)
+(System Monitor) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+[[NoteBox(tip,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
+[[MacroList(PlantUML)]]','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',7,1357649560292000,'thinkbase','180.169.66.118','[[PageOutline]]
 = `GraphvizPlugin`: 显示 Graphviz 流程图 =
 `GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
 
@@ -33625,7 +34508,7 @@ INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',6,1357315624955000,'admi
     node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
     node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
   }
-  node [label="FileSystem\n扩展(文件系统)", color=brown] fileSystem;
+  node [label="FileSystem\n扩展(文件系统加载)", color=brown] fileSystem;
   
   System -> Bootstrap;
   theApp_ear -> System;
@@ -33655,23 +34538,157 @@ digraph G {
 } 
 }}}
 
+graphviz 2.29 之后的版本可以使用过渡色:
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple:pink" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue:cyan" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="red:yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
 == 参考 ==
  - http://trac-hacks.org/wiki/GraphvizPlugin','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/NoteBoxMacro',9,1357315657595000,'admin','180.169.66.118','[[PageOutline]]
-= `NoteBoxMacro`: 使用不同的颜色区域和图标表示各类消息 =
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',8,1357649607595000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
 
 == 示例 ==
-[[NoteBox(note,使用 `[``[``NoteBox(note\,说明信息)``]``]` 这样的写法表示一个说明信息.)]] 
-[[NoteBox(tip,使用 `[``[``NoteBox(tip\,提示信息)``]``]` 这样的写法表示一个''''提示信息''''.)]] 
-[[NoteBox(warn,使用 `[``[``NoteBox(warn\,警告信息)``]``]` 这样的写法表示一个''''''警告信息''''''.)]] 
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n扩展(文件系统加载)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
 
-== 注意事项 ==
- 1. 第二个参数(说明文本)前面如果加上空格, 会缩进显示, 也就是说图标和文字间的距离会变大, 例如:[[BR]][[NoteBox(tip, 一个空格)]][[NoteBox(tip,  两个空格)]]
- 2. 第二个参数中间如果存在逗号(`,`), 需要使用 `\,` 来进行转义;
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
 
-== 使用文档 ==
-[[MacroList(NoteBox)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',14,1357315812872000,'admin','180.169.66.118','[[PageOutline]]
+  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
+                           fontcolor=red];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+graphviz 2.29 之后的版本可以使用过渡色:
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple:pink" label="graph/图(过渡色)" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue:cyan" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="red:yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+== 参考 ==
+ - http://trac-hacks.org/wiki/GraphvizPlugin','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',9,1357650263596000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n扩展(文件系统加载)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label=<<b>The Customized<br/>ClassLoader</b>>, fontsize=9,
+                           fontcolor=red];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图(单色)" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+graphviz 2.29 之后的版本可以使用过渡色:
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple:pink" label="graph/图(过渡色)" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue:cyan" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="red:yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+== 参考 ==
+ - http://trac-hacks.org/wiki/GraphvizPlugin','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',19,1357650368091000,'thinkbase','180.169.66.118','[[PageOutline]]
 = `PlantUMLMacro`: 创建 UML 图 =
 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
 
@@ -33679,7 +34696,6 @@ INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',14,1357315812872000,'admi
 
 == 示例 ==
 === 用例图 ===
-[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
 {{{
 #!plantuml
 @startuml
@@ -33687,8 +34703,8 @@ INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',14,1357315812872000,'admi
 :System Administrator: as Admin
 User <|-- Admin
 
-(Use the application) as (Use)
-(System Monitor) as (Mon)
+(使用软件) as (Use)
+(系统监控) as (Mon)
 
 User -> (Start)
 User --> (Use)
@@ -33716,7 +34732,7 @@ end note
 }}}
 
 === 类图 ===
-[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+[[NoteBox(tip,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
 {{{
 #!plantuml
 @startuml
@@ -33734,330 +34750,7 @@ package net.thinkbase.intf {
     - Object message
     + perform(Object message)
     # Object getMessage()
-    + {abstract} doWork()
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',15,1357315879746000,'admin','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',16,1357316444453000,'admin','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
-[[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',17,1357316602497000,'admin','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-[[NoteBox(warn,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(Use the application) as (Use)
-(System Monitor) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-[[NoteBox(warn,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()
+    + {abstract} doWork()    //抽象方法供子类实现
   }
   note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
 }
@@ -34106,7 +34799,7 @@ end
 
 === PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',18,1357316956802000,'admin','180.169.66.118','[[PageOutline]]
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',20,1357650400876000,'thinkbase','180.169.66.118','[[PageOutline]]
 = `PlantUMLMacro`: 创建 UML 图 =
 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
 
@@ -34114,7 +34807,6 @@ INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',18,1357316956802000,'admi
 
 == 示例 ==
 === 用例图 ===
-[[NoteBox(tip,在目前版本的用例图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
 {{{
 #!plantuml
 @startuml
@@ -34122,8 +34814,8 @@ INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',18,1357316956802000,'admi
 :System Administrator: as Admin
 User <|-- Admin
 
-(Use the application) as (Use)
-(System Monitor) as (Mon)
+(使用软件) as (Use)
+(系统监控) as (Mon)
 
 User -> (Start)
 User --> (Use)
@@ -34151,7 +34843,6 @@ end note
 }}}
 
 === 类图 ===
-[[NoteBox(tip,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
 {{{
 #!plantuml
 @startuml
@@ -34169,7 +34860,7 @@ package net.thinkbase.intf {
     - Object message
     + perform(Object message)
     # Object getMessage()
-    + {abstract} doWork()
+    + {abstract} doWork()    //抽象方法供子类实现
   }
   note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
 }
@@ -34195,6 +34886,116 @@ package net.thinkbase.impl {
 系统A -> 系统A: 轮询待处理单据
 系统A -> 接口: 启动
 接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
+[[MacroList(PlantUML)]]','',0);
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',21,1357650472165000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
   note left
     数据传输时使用SOAP协
     议,因此无法保证两个系
@@ -34537,23 +35338,55 @@ CREATE TABLE fullblog_posts (
     UNIQUE (name,version)
 );
 INSERT INTO "fullblog_posts" VALUES('about',1,'关于 http://www.thinkbase.net/trac','这个站点的主要用途就是 [/../main/wiki/PortableTrac PortableTrac] 的演示.',1354896273,1354896273,'','admin','admin','');
-INSERT INTO "fullblog_posts" VALUES('admin-2012/12/07',1,'2012/12/07 - CodeExampleMacro 的示例, 以及修正',' 1. 修正 `CodeExampleMacro` 插件丢失 css image 的一个bug, 见:
-  - https://github.com/thinkbase/PortableTrac/commit/6f5cea2070984740ef303c11e726e54fcdb5ebe4
+INSERT INTO "fullblog_posts" VALUES('admin-2012/12/07',1,'2012/12/07 - CodeExampleMacro 的示例, 以及修正',' 1. 修正 `CodeExampleMacro` 插件丢失 css image 的一个bug, 见:
+  - https://github.com/thinkbase/PortableTrac/commit/6f5cea2070984740ef303c11e726e54fcdb5ebe4
  2. 为 `CodeExampleMacro` 创建实例页面, 见 [wiki:plugins-demo/CodeExampleMacro 这里];',1354896462,1354896462,'','admin','admin','');
-INSERT INTO "fullblog_posts" VALUES('admin-2012/12/07',2,'2012/12/07 - CodeExampleMacro 的错误修正以及示例',' 1. 修正 `CodeExampleMacro` 插件丢失 css image 的一个bug, 见:
-  - https://github.com/thinkbase/PortableTrac/commit/6f5cea2070984740ef303c11e726e54fcdb5ebe4
+INSERT INTO "fullblog_posts" VALUES('admin-2012/12/07',2,'2012/12/07 - CodeExampleMacro 的错误修正以及示例',' 1. 修正 `CodeExampleMacro` 插件丢失 css image 的一个bug, 见:
+  - https://github.com/thinkbase/PortableTrac/commit/6f5cea2070984740ef303c11e726e54fcdb5ebe4
  2. 为 `CodeExampleMacro` 创建实例页面, 见 [wiki:plugins-demo/CodeExampleMacro 这里];',1354896462,1354896501,'','admin','admin','');
-INSERT INTO "fullblog_posts" VALUES('admin-2012/12/07-2',1,'2012/12/07 - GraphvizPlugin 示例','[/../main/wiki/PortableTrac PortableTrac]中不仅包含了`GraphvizPlugin`, 而且也已经包含了`graphviz`运行环境(见 https://github.com/thinkbase/PortableTrac/tree/master/bin);
-
+INSERT INTO "fullblog_posts" VALUES('admin-2012/12/07-2',1,'2012/12/07 - GraphvizPlugin 示例','[/../main/wiki/PortableTrac PortableTrac]中不仅包含了`GraphvizPlugin`, 而且也已经包含了`graphviz`运行环境(见 https://github.com/thinkbase/PortableTrac/tree/master/bin);
+
 具体使用的例子见 wiki:plugins-demo/GraphvizPlugin , 主要是测试中文显示是否有问题.',1354898281,1354898281,'','admin','admin','');
-INSERT INTO "fullblog_posts" VALUES('admin-2013/01/04',1,'2013/01/05 - PlantUMLMacro 使用示例','PortableTrac 中已包含了 PlantUMLMacro, 并且已经配置好了运行环境(需要在 `PATH` 中存在 `java.exe` 所在目录;
-
-具体使用的例子见 wiki:plugins-demo/PlantUMLMacro , 主要是测试中文显示是否有问题; 经测试, 目前版本中, 部分 UML 元素不能使用中文(有空会尝试升级相关的 jar 文件, 也许可以解决这个问题).
+INSERT INTO "fullblog_posts" VALUES('admin-2013/01/04',1,'2013/01/05 - PlantUMLMacro 使用示例','PortableTrac 中已包含了 PlantUMLMacro, 并且已经配置好了运行环境(需要在 `PATH` 中存在 `java.exe` 所在目录;
+
+具体使用的例子见 wiki:plugins-demo/PlantUMLMacro , 主要是测试中文显示是否有问题; 经测试, 目前版本中, 部分 UML 元素不能使用中文(有空会尝试升级相关的 jar 文件, 也许可以解决这个问题).
 ',1357316874,1357316874,'','admin','admin','');
-INSERT INTO "fullblog_posts" VALUES('admin-2013/01/04',2,'2013/01/05 - PlantUMLMacro 使用示例','[/../main/wiki/PortableTrac PortableTrac] 中已包含了 PlantUMLMacro, 并且已经配置好了运行环境(需要在 `PATH` 中存在 `java.exe` 所在目录;
-
-具体使用的例子见 wiki:plugins-demo/PlantUMLMacro , 主要是测试中文显示是否有问题; 经测试, 目前版本中, 部分 UML 元素不能使用中文(有空会尝试升级相关的 jar 文件, 也许可以解决这个问题).
+INSERT INTO "fullblog_posts" VALUES('admin-2013/01/04',2,'2013/01/05 - PlantUMLMacro 使用示例','[/../main/wiki/PortableTrac PortableTrac] 中已包含了 PlantUMLMacro, 并且已经配置好了运行环境(需要在 `PATH` 中存在 `java.exe` 所在目录;
+
+具体使用的例子见 wiki:plugins-demo/PlantUMLMacro , 主要是测试中文显示是否有问题; 经测试, 目前版本中, 部分 UML 元素不能使用中文(有空会尝试升级相关的 jar 文件, 也许可以解决这个问题).
 ',1357316874,1357316898,'','admin','admin','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',1,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
+最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本], 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(2013-01-02, plantuml-jar-lgpl-7948), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
+
+== Graphviz 升级 ==
+最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 2.26 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
+
+''''''补充说明'''''': 在使用 Graphviz 开发版本 `2.29.20130107` 的安装程序(`msi`文件)安装后, 运行 dot.exe 会报错, 提示找不到 `graph.dll`, 将 `2.28` 版本的同名 dll 复制到 bin 目录下即可正常运行.',1357651664,1357651664,'','thinkbase','thinkbase','upgrade');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',2,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
+最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本]), 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(2013-01-02, plantuml-jar-lgpl-7948), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
+
+== Graphviz 升级 ==
+最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 2.26 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
+
+''''''补充说明'''''': 在使用 Graphviz 开发版本 `2.29.20130107` 的安装程序(`msi`文件)安装后, 运行 dot.exe 会报错, 提示找不到 `graph.dll`, 将 `2.28` 版本的同名 dll 复制到 bin 目录下即可正常运行.',1357651664,1357651680,'','thinkbase','thinkbase','upgrade');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',3,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
+最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本]), 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(`2013-01-02, plantuml-jar-lgpl-7948`), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
+
+== Graphviz 升级 ==
+最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 2.26 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
+
+''''''补充说明'''''': 在使用 Graphviz 开发版本 `2.29.20130107` 的安装程序(`msi`文件)安装后, 运行 `dot.exe` 会报错, 提示找不到 `graph.dll`, 将 `2.28` 版本的同名 dll 复制到 bin 目录下即可正常运行.',1357651664,1357651726,'','thinkbase','thinkbase','upgrade');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',4,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
+最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本]), 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(`2013-01-02, plantuml-jar-lgpl-7948`), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
+
+== Graphviz 升级 ==
+最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 `2.26.3` 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28.0`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
+
+''''''补充说明'''''': 在使用 Graphviz 开发版本 `2.29.20130107` 的安装程序(`msi`文件)安装后, 运行 `dot.exe` 会报错, 提示找不到 `graph.dll`, 将 `2.28.0` 版本的同名 dll 复制到 bin 目录下即可正常运行.',1357651664,1357651851,'','thinkbase','thinkbase','upgrade');
+INSERT INTO "fullblog_posts" VALUES('admin-2012/12/07',3,'2012/12/07 - CodeExampleMacro 的错误修正以及示例',' 1. 修正 `CodeExampleMacro` 插件丢失 css image 的一个bug, 见:
+  - https://github.com/thinkbase/PortableTrac/commit/6f5cea2070984740ef303c11e726e54fcdb5ebe4
+ 2. 为 `CodeExampleMacro` 创建实例页面, 见 [wiki:plugins-demo/CodeExampleMacro 这里];',1354896462,1357651992,'','admin','admin','bugfix');
+INSERT INTO "fullblog_posts" VALUES('about',2,'关于 http://www.thinkbase.net/trac','这个站点的主要用途就是 [/../main/wiki/PortableTrac PortableTrac] 的演示, 以及相关的更新、升级和bug修正信息记录.',1354896273,1357652097,'','admin','admin','');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
