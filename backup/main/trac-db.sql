@@ -46,7 +46,6 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('1d61c9edf7efb5177429aa5a247a5899','thinkbase','61.171.91.97',1358001096);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -261,6 +260,36 @@ INSERT INTO "session" VALUES('be74e9cc85356d6be50a6b8d',0,1358080297);
 INSERT INTO "session" VALUES('f7628e3c76815a7b865fd56b',0,1358110396);
 INSERT INTO "session" VALUES('275c113fd15fd0a055d920c0',0,1358116026);
 INSERT INTO "session" VALUES('8905ac625ff84e3b9e3c431c',0,1358169140);
+INSERT INTO "session" VALUES('a53b174f20bc16e783c9482a',0,1358196673);
+INSERT INTO "session" VALUES('d79effe9dcfc659106420e45',0,1358262565);
+INSERT INTO "session" VALUES('0e9ad1508f62065a76ea72d1',0,1358275521);
+INSERT INTO "session" VALUES('7bbb78aa6d93c3e15698b247',0,1358291365);
+INSERT INTO "session" VALUES('ba513785103e765713c24a70',0,1358299348);
+INSERT INTO "session" VALUES('7652a8d53701bf9deb97f784',0,1358331713);
+INSERT INTO "session" VALUES('2ffa0f7a839e0ae3fbece701',0,1358332648);
+INSERT INTO "session" VALUES('9882f06f53d7869594ecdbfe',0,1358341730);
+INSERT INTO "session" VALUES('1d5ca94ac201f8b5e94611ff',0,1358352147);
+INSERT INTO "session" VALUES('10f0bcfca6bd0ae398ff4139',0,1358471453);
+INSERT INTO "session" VALUES('cb0626893130ff2c81c7ede2',0,1358522556);
+INSERT INTO "session" VALUES('2b0f2e296a1edc25e1bc6468',0,1358555845);
+INSERT INTO "session" VALUES('8b92b46f8a0472c0387ac131',0,1358622321);
+INSERT INTO "session" VALUES('1b28c663db96232ceaec7aa4',0,1358695721);
+INSERT INTO "session" VALUES('1b57367472775e894cb0e2bb',0,1358704537);
+INSERT INTO "session" VALUES('b6795aafc533b7fef2617765',0,1358789835);
+INSERT INTO "session" VALUES('6fe4a51ab962d492a84a07cc',0,1358875939);
+INSERT INTO "session" VALUES('a659dcc39065dd1192659f86',0,1358915200);
+INSERT INTO "session" VALUES('61848e6d188c3bb3f0e2db6a',0,1358950805);
+INSERT INTO "session" VALUES('ebe3f421f88c68dfa765ddd7',0,1358967804);
+INSERT INTO "session" VALUES('0e81b9caa56cb812e2004338',0,1359015148);
+INSERT INTO "session" VALUES('90aa04ed86adc27a019f06c2',0,1359016375);
+INSERT INTO "session" VALUES('c99b78be03ef21d4d7051e1d',0,1359018469);
+INSERT INTO "session" VALUES('27f429f784dfed036901fdcc',0,1359198511);
+INSERT INTO "session" VALUES('3b8b5c8d5df08d830e7901c5',0,1359209776);
+INSERT INTO "session" VALUES('56866e329ab60831226ab974',0,1359211734);
+INSERT INTO "session" VALUES('174ed4838aca01a881af9d8e',0,1359489128);
+INSERT INTO "session" VALUES('fc06b02db970d6dc68df5290',0,1359583021);
+INSERT INTO "session" VALUES('2353cbb5458ee46aa187be4c',0,1359602346);
+INSERT INTO "session" VALUES('f4a5753ccfe6826aeb1f72cc',0,1359738176);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -694,6 +723,67 @@ INSERT INTO "session_attribute" VALUES('275c113fd15fd0a055d920c0',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('275c113fd15fd0a055d920c0',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('8905ac625ff84e3b9e3c431c',0,'timeline.lastvisit','1358004586644000');
 INSERT INTO "session_attribute" VALUES('8905ac625ff84e3b9e3c431c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a53b174f20bc16e783c9482a',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('a53b174f20bc16e783c9482a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d79effe9dcfc659106420e45',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('d79effe9dcfc659106420e45',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0e9ad1508f62065a76ea72d1',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('0e9ad1508f62065a76ea72d1',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('7bbb78aa6d93c3e15698b247',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('7bbb78aa6d93c3e15698b247',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('ba513785103e765713c24a70',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('ba513785103e765713c24a70',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('7652a8d53701bf9deb97f784',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('7652a8d53701bf9deb97f784',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2ffa0f7a839e0ae3fbece701',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('2ffa0f7a839e0ae3fbece701',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('9882f06f53d7869594ecdbfe',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('9882f06f53d7869594ecdbfe',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('1d5ca94ac201f8b5e94611ff',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('1d5ca94ac201f8b5e94611ff',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('10f0bcfca6bd0ae398ff4139',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('10f0bcfca6bd0ae398ff4139',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('cb0626893130ff2c81c7ede2',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('cb0626893130ff2c81c7ede2',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2b0f2e296a1edc25e1bc6468',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('2b0f2e296a1edc25e1bc6468',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('8b92b46f8a0472c0387ac131',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('8b92b46f8a0472c0387ac131',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('1b28c663db96232ceaec7aa4',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('1b28c663db96232ceaec7aa4',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('1b57367472775e894cb0e2bb',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('1b57367472775e894cb0e2bb',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b6795aafc533b7fef2617765',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('b6795aafc533b7fef2617765',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6fe4a51ab962d492a84a07cc',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('6fe4a51ab962d492a84a07cc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a659dcc39065dd1192659f86',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('a659dcc39065dd1192659f86',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('61848e6d188c3bb3f0e2db6a',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('61848e6d188c3bb3f0e2db6a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('ebe3f421f88c68dfa765ddd7',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('ebe3f421f88c68dfa765ddd7',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0e81b9caa56cb812e2004338',0,'name','cjljrg');
+INSERT INTO "session_attribute" VALUES('0e81b9caa56cb812e2004338',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('0e81b9caa56cb812e2004338',0,'email','mavjue@ajnctu.com');
+INSERT INTO "session_attribute" VALUES('90aa04ed86adc27a019f06c2',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('90aa04ed86adc27a019f06c2',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('c99b78be03ef21d4d7051e1d',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('c99b78be03ef21d4d7051e1d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('27f429f784dfed036901fdcc',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('27f429f784dfed036901fdcc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3b8b5c8d5df08d830e7901c5',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('3b8b5c8d5df08d830e7901c5',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('56866e329ab60831226ab974',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('56866e329ab60831226ab974',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('174ed4838aca01a881af9d8e',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('174ed4838aca01a881af9d8e',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('fc06b02db970d6dc68df5290',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('fc06b02db970d6dc68df5290',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2353cbb5458ee46aa187be4c',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('2353cbb5458ee46aa187be4c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f4a5753ccfe6826aeb1f72cc',0,'timeline.lastvisit','1358004586644000');
+INSERT INTO "session_attribute" VALUES('f4a5753ccfe6826aeb1f72cc',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -919,6 +1009,8 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/09','DocFetcher-乱码
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/09','truezip-zip-charset-patch-20121209.jar',3600,1355153165149000,'','thinkbase','61.171.91.97');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/09','truezip-zip-charset-patch-source.7z',1062854,1355153175149000,'','thinkbase','61.171.91.97');
 INSERT INTO "attachment" VALUES('wiki','misc/NetworkDigest','玛雅历法预言末日.jpg',39920,1356066775258000,'','thinkbase','112.65.136.195');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2013/02/02','Screenshot-Fill3D-Test.png',52888,1359821766542000,'','thinkbase','61.171.91.97');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2013/02/02','Screenshot-Fill3D-Test2.png',43894,1359822161211000,'','thinkbase','61.171.91.97');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -34308,6 +34400,72 @@ public final class ZipDriverService extends FsDriverService {
 顺便说一下, [http://docfetcher.sourceforge.net DocFetcher] 对 rar 文件的解析是通过 [http://code.google.com/p/java-unrar/ java-unrar] 实现的, 与 zip 压缩文件不同, rar 和 7z 压缩文件是通过所谓 `SolidArchiveFactory` 来处理的, `SolidArchive` 模式需要将文件解压到临时目录后再进行索引处理;
 
 == END ==',1355069325,1357317080,'','admin','thinkbase','DocFetcher search-engine java truezip zip rar 7-zip');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/02',1,'使用 x3dom 框架及 WebGL 在浏览器上显示 3 维模型','如果需要在浏览器上显示 3D 画面的话, 现在一般会使用 [http://zh.wikipedia.org/wiki/WebGL WebGL], 典型的例如 `three.js`(http://mrdoob.github.com/three.js/), 但是 `WebGL` 对浏览器版本以及显卡的要求比较高, 很多客户端无法正常使用.
+
+后来在网上查找到了 `X3DOM`(http://www.x3dom.org/), 通过使用不同的后端(backend), `X3DOM` 可以兼容较低版本的浏览器(主要是指 IE 系列), 也可以在没有显卡支持的情况下运行, 常用的非 WebGL 后端可以是 [http://www.adobe.com/products/flashplayer.html Adobe Flash Player 11] 或者 [http://www.google.com/chromeframe Google Chrome Frame], 注意 Flash 11 以下的版本是不能正常运行的.
+
+`X3DOM` 是通过在标准的 `HTML5` DOM 中加入 [http://www.web3d.org/about/overview/ X3D] 格式的 XML 元素, 实现将 `X3D` 格式的 3D 模型嵌入到 HTML 页面的功能的, 在 http://www.x3dom.org/ 网站上有丰富的示例以及较详细的文档, 不过彻底搞懂估计需要一些 3D 建模的支持, 比如 [http://en.wikipedia.org/wiki/Field_of_view fieldOfView] 这样的专业术语.
+
+另外 [http://www.web3d.org/ web3D Consortium] 也有大量关于 `X3D` 的资料, 尤其是 `X3D tooltips`(http://www.web3d.org/x3d/content/X3dTooltips.html), 是一份全面的 `X3D` 节点元素速查手册(有[http://www.web3d.org/x3d/content/X3dTooltipsChinese.html 中文版])''''(不知道为什么 www.web3d.org 被 GWF 了, 如果要下载也可以到 [https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill/docs 这里])'''';
+
+在初步了解 `x3dom` 的基础上, 以显示货物装箱为例, 对 `x3dom` 进行了简单的封装, 重点关注 ''''''货物在集装箱等容器中的堆放方式的显示'''''', 可以实现以 "Box" 的方式加入不同尺寸的货物(长方体), 以不同的角度查看堆放情况, 以及对这些长方体的选择/加亮显示等等, 具体代码可以到 https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill 下载, 注意测试用的 html 文件不能直接在本地打开, 必须部署到 HTTP 服务器上才能正常运行;',1359821643,1359821643,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/02',2,'使用 x3dom 框架及 WebGL 在浏览器上显示 3 维模型','如果需要在浏览器上显示 3D 画面的话, 现在一般会使用 [http://zh.wikipedia.org/wiki/WebGL WebGL], 典型的例如 `three.js`(http://mrdoob.github.com/three.js/), 但是 `WebGL` 对浏览器版本以及显卡的要求比较高, 很多客户端无法正常使用.
+
+后来在网上查找到了 `X3DOM`(http://www.x3dom.org/), 通过使用不同的后端(backend), `X3DOM` 可以兼容较低版本的浏览器(主要是指 IE 系列), 也可以在没有显卡支持的情况下运行, 常用的非 WebGL 后端可以是 [http://www.adobe.com/products/flashplayer.html Adobe Flash Player 11] 或者 [http://www.google.com/chromeframe Google Chrome Frame], 注意 Flash 11 以下的版本是不能正常运行的.
+
+`X3DOM` 是通过在标准的 `HTML5` DOM 中加入 [http://www.web3d.org/about/overview/ X3D] 格式的 XML 元素, 实现将 `X3D` 格式的 3D 模型嵌入到 HTML 页面的功能的, 在 http://www.x3dom.org/ 网站上有丰富的示例以及较详细的文档, 不过彻底搞懂估计需要一些 3D 建模的支持, 比如 [http://en.wikipedia.org/wiki/Field_of_view fieldOfView] 这样的专业术语.
+
+另外 [http://www.web3d.org/ web3D Consortium] 也有大量关于 `X3D` 的资料, 尤其是 `X3D tooltips`(http://www.web3d.org/x3d/content/X3dTooltips.html), 是一份全面的 `X3D` 节点元素速查手册(有[http://www.web3d.org/x3d/content/X3dTooltipsChinese.html 中文版])''''(不知道为什么 www.web3d.org 被 GWF 了, 如果要下载也可以到 [https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill/docs 这里])'''';
+
+在初步了解 `x3dom` 的基础上, 以显示货物装箱为例, 对 `x3dom` 进行了简单的封装, 重点关注 ''''''货物在集装箱等容器中的堆放方式的显示'''''', 可以实现以 "Box" 的方式加入不同尺寸的货物(长方体), 以不同的角度查看堆放情况, 以及对这些长方体的选择/加亮显示等等, 具体代码可以到 https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill 下载, 注意测试用的 html 文件不能直接在本地打开, 必须部署到 HTTP 服务器上才能正常运行;
+
+实际显示的效果如下图所示:[[BR]][[Image(Screenshot-Fill3D-Test.png, 100%)]]',1359821643,1359821751,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/02',3,'使用 x3dom 框架及 WebGL 在浏览器上显示 3 维模型','如果需要在浏览器上显示 3D 画面的话, 现在一般会使用 [http://zh.wikipedia.org/wiki/WebGL WebGL], 典型的例如 `three.js`(http://mrdoob.github.com/three.js/), 但是 `WebGL` 对浏览器版本以及显卡的要求比较高, 很多客户端无法正常使用.
+
+后来在网上查找到了 `X3DOM`(http://www.x3dom.org/), 通过使用不同的后端(backend), `X3DOM` 可以兼容较低版本的浏览器(主要是指 IE 系列), 也可以在没有显卡支持的情况下运行, 常用的非 WebGL 后端可以是 [http://www.adobe.com/products/flashplayer.html Adobe Flash Player 11] 或者 [http://www.google.com/chromeframe Google Chrome Frame], 注意 Flash 11 以下的版本是不能正常运行的.
+
+`X3DOM` 是通过在标准的 `HTML5` DOM 中加入 [http://www.web3d.org/about/overview/ X3D] 格式的 XML 元素, 实现将 `X3D` 格式的 3D 模型嵌入到 HTML 页面的功能的, 在 http://www.x3dom.org/ 网站上有丰富的示例以及较详细的文档, 不过彻底搞懂估计需要一些 3D 建模的支持, 比如 [http://en.wikipedia.org/wiki/Field_of_view fieldOfView] 这样的专业术语.
+
+另外 [http://www.web3d.org/ web3D Consortium] 也有大量关于 `X3D` 的资料, 尤其是 `X3D tooltips`(http://www.web3d.org/x3d/content/X3dTooltips.html), 是一份全面的 `X3D` 节点元素速查手册(有[http://www.web3d.org/x3d/content/X3dTooltipsChinese.html 中文版])''''(不知道为什么 www.web3d.org 被 GWF 了, 如果要下载也可以到 [https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill/docs 这里])'''';
+
+在初步了解 `x3dom` 的基础上, 以显示货物装箱为例, 对 `x3dom` 进行了简单的封装, 重点关注 ''''''货物在集装箱等容器中的堆放方式的显示'''''', 可以实现以 "Box" 的方式加入不同尺寸的货物(长方体), 以不同的角度查看堆放情况, 以及对这些长方体的选择/加亮显示等等, 具体代码可以到 https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill 下载, 注意测试用的 html 文件不能直接在本地打开, 必须部署到 HTTP 服务器上才能正常运行;
+
+实际显示的效果如下图所示:[[BR]][[Image(Screenshot-Fill3D-Test.png, 100%)]]',1359821643,1359821857,'','thinkbase','thinkbase','webgl x3d x3dom javascript');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/02',4,'使用 x3dom 框架及 WebGL 在浏览器上显示 3 维模型','如果需要在浏览器上显示 3D 画面的话, 现在一般会使用 [http://zh.wikipedia.org/wiki/WebGL WebGL], 典型的例如 `three.js`(http://mrdoob.github.com/three.js/), 但是 `WebGL` 对浏览器版本以及显卡的要求比较高, 很多客户端无法正常使用.
+
+后来在网上查找到了 `X3DOM`(http://www.x3dom.org/), 通过使用不同的后端(backend), `X3DOM` 可以兼容较低版本的浏览器(主要是指 IE 系列), 也可以在没有显卡支持的情况下运行, 常用的非 WebGL 后端可以是 [http://www.adobe.com/products/flashplayer.html Adobe Flash Player 11] 或者 [http://www.google.com/chromeframe Google Chrome Frame], 注意 Flash 11 以下的版本是不能正常运行的.
+
+`X3DOM` 是通过在标准的 `HTML5` DOM 中加入 [http://www.web3d.org/about/overview/ X3D] 格式的 XML 元素, 实现将 `X3D` 格式的 3D 模型嵌入到 HTML 页面的功能的, 在 http://www.x3dom.org/ 网站上有丰富的示例以及较详细的文档, 不过彻底搞懂估计需要一些 3D 建模的支持, 比如 [http://en.wikipedia.org/wiki/Field_of_view fieldOfView] 这样的专业术语.
+
+另外 [http://www.web3d.org/ web3D Consortium] 也有大量关于 `X3D` 的资料, 尤其是 `X3D tooltips`(http://www.web3d.org/x3d/content/X3dTooltips.html), 是一份全面的 `X3D` 节点元素速查手册(有[http://www.web3d.org/x3d/content/X3dTooltipsChinese.html 中文版])''''(不知道为什么 www.web3d.org 被 GWF 了, 如果要下载也可以到 [https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill/docs 这里])'''';
+
+在初步了解 `x3dom` 的基础上, 以显示货物装箱为例, 对 `x3dom` 进行了简单的封装, 重点关注 ''''''货物在集装箱等容器中的堆放方式的显示'''''', 可以实现以 "Box" 的方式加入不同尺寸的货物(长方体), 以不同的角度查看堆放情况, 以及对这些长方体的选择/加亮显示等等, 具体代码可以到 https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill 下载, 注意测试用的 html 文件不能直接在本地打开, 必须部署到 HTTP 服务器上才能正常运行;
+
+实际显示的效果如下图所示:[[BR]][[Image(Screenshot-Fill3D-Test.png, 100%)]]',1359821643,1359821895,'','thinkbase','thinkbase','webgl x3d x3dom javascript 3D VRML');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/02',5,'使用 x3dom 框架及 WebGL 在浏览器上显示 3 维模型','如果需要在浏览器上显示 3D 画面的话, 现在一般会使用 [http://zh.wikipedia.org/wiki/WebGL WebGL], 典型的例如 `three.js`(http://mrdoob.github.com/three.js/), 但是 `WebGL` 对浏览器版本以及显卡的要求比较高, 很多客户端无法正常使用.
+
+后来在网上查找到了 `X3DOM`(http://www.x3dom.org/), 通过使用不同的后端(backend), `X3DOM` 可以兼容较低版本的浏览器(主要是指 IE 系列), 也可以在没有显卡支持的情况下运行, 常用的非 WebGL 后端可以是 [http://www.adobe.com/products/flashplayer.html Adobe Flash Player 11] 或者 [http://www.google.com/chromeframe Google Chrome Frame], 注意 Flash 11 以下的版本是不能正常运行的.
+
+`X3DOM` 是通过在标准的 `HTML5` DOM 中加入 [http://www.web3d.org/about/overview/ X3D] 格式的 XML 元素, 实现将 `X3D` 格式的 3D 模型嵌入到 HTML 页面的功能的, 在 http://www.x3dom.org/ 网站上有丰富的示例以及较详细的文档, 不过彻底搞懂估计需要一些 3D 建模的支持, 比如 [http://en.wikipedia.org/wiki/Field_of_view fieldOfView] 这样的专业术语.
+
+另外 [http://www.web3d.org/ web3D Consortium] 也有大量关于 `X3D` 的资料, 尤其是 `X3D tooltips`(http://www.web3d.org/x3d/content/X3dTooltips.html), 是一份全面的 `X3D` 节点元素速查手册(有[http://www.web3d.org/x3d/content/X3dTooltipsChinese.html 中文版])''''(不知道为什么 www.web3d.org 被 GWF 了, 如果要下载也可以到 [https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill/docs 这里])'''';
+
+在初步了解 `x3dom` 的基础上, 以显示货物装箱为例, 对 `x3dom` 进行了简单的封装, 重点关注 ''''''货物在集装箱等容器中的堆放方式的显示'''''', 可以实现以 "Box" 的方式加入不同尺寸的货物(长方体), 以不同的角度查看堆放情况, 以及对这些长方体的选择/加亮显示等等, 具体代码可以到 https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill 下载, 注意测试用的 html 文件不能直接在本地打开, 必须部署到 HTTP 服务器上才能正常运行;
+
+实际显示的效果如下图所示''''(使用 Flash backend 的效果, 如果系统支持 WebGL 的话效果应该要好很多)'''':[[BR]][[Image(Screenshot-Fill3D-Test.png, 100%)]]',1359821643,1359822006,'','thinkbase','thinkbase','webgl x3d x3dom javascript 3D VRML');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/02',6,'使用 x3dom 框架及 WebGL 在浏览器上显示 3 维模型','如果需要在浏览器上显示 3D 画面的话, 现在一般会使用 [http://zh.wikipedia.org/wiki/WebGL WebGL], 典型的例如 `three.js`(http://mrdoob.github.com/three.js/), 但是 `WebGL` 对浏览器版本以及显卡的要求比较高, 很多客户端无法正常使用.
+
+后来在网上查找到了 `X3DOM`(http://www.x3dom.org/), 通过使用不同的后端(backend), `X3DOM` 可以兼容较低版本的浏览器(主要是指 IE 系列), 也可以在没有显卡支持的情况下运行, 常用的非 WebGL 后端可以是 [http://www.adobe.com/products/flashplayer.html Adobe Flash Player 11] 或者 [http://www.google.com/chromeframe Google Chrome Frame], 注意 Flash 11 以下的版本是不能正常运行的.
+
+`X3DOM` 是通过在标准的 `HTML5` DOM 中加入 [http://www.web3d.org/about/overview/ X3D] 格式的 XML 元素, 实现将 `X3D` 格式的 3D 模型嵌入到 HTML 页面的功能的, 在 http://www.x3dom.org/ 网站上有丰富的示例以及较详细的文档, 不过彻底搞懂估计需要一些 3D 建模的支持, 比如 [http://en.wikipedia.org/wiki/Field_of_view fieldOfView] 这样的专业术语.
+
+另外 [http://www.web3d.org/ web3D Consortium] 也有大量关于 `X3D` 的资料, 尤其是 `X3D tooltips`(http://www.web3d.org/x3d/content/X3dTooltips.html), 是一份全面的 `X3D` 节点元素速查手册(有[http://www.web3d.org/x3d/content/X3dTooltipsChinese.html 中文版])''''(不知道为什么 www.web3d.org 被 GWF 了, 如果要下载也可以到 [https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill/docs 这里])'''';
+
+在初步了解 `x3dom` 的基础上, 以显示货物装箱为例, 对 `x3dom` 进行了简单的封装, 重点关注 ''''''货物在集装箱等容器中的堆放方式的显示'''''', 可以实现以 "Box" 的方式加入不同尺寸的货物(长方体), 以不同的角度查看堆放情况, 以及对这些长方体的选择/加亮显示等等, 具体代码可以到 https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill 下载, 注意测试用的 html 文件不能直接在本地打开, 必须部署到 HTTP 服务器上才能正常运行;
+
+实际显示的效果如下图所示''''(使用 Flash backend 的效果, 如果系统支持 WebGL 的话效果应该要好很多)'''':
+[[BR]][[Image(Screenshot-Fill3D-Test.png, 100%)]]
+[[BR]][[Image(Screenshot-Fill3D-Test2.png, 100%)]]',1359821643,1359822182,'','thinkbase','thinkbase','webgl x3d x3dom javascript 3D VRML');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
@@ -34340,6 +34498,7 @@ INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/02-4',1,'试用了一�
 INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/03-2',3,'不过这个插件存在一个问题, 就是在 Wiki 页面被设置为 "Readonly" 的情况下, 只要用户具备 "WIKI_MODIFY" 权限, 那么仍然会显示出添加附件的界面, 并且可以上传;
 
 在未解决这个问题之前, 本站点暂时禁用这个插件.','thinkbase',1355656073);
+INSERT INTO "fullblog_comments" VALUES('thinkbase-2013/02/02',1,'关于 IE 支持 WebGL 的问题, 发现有一个插件 [http://www.iewebgl.com/ IEWebGL], 不确定具体的效果怎么样.','thinkbase',1359821957);
 CREATE TABLE votes (
     resource text,
     username text,
