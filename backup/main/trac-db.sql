@@ -290,6 +290,8 @@ INSERT INTO "session" VALUES('174ed4838aca01a881af9d8e',0,1359489128);
 INSERT INTO "session" VALUES('fc06b02db970d6dc68df5290',0,1359583021);
 INSERT INTO "session" VALUES('2353cbb5458ee46aa187be4c',0,1359602346);
 INSERT INTO "session" VALUES('f4a5753ccfe6826aeb1f72cc',0,1359738176);
+INSERT INTO "session" VALUES('818fa63d7729ff3bebd9d915',0,1359893238);
+INSERT INTO "session" VALUES('a3ea55266726eb1a8a4da139',0,1359914168);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -784,6 +786,10 @@ INSERT INTO "session_attribute" VALUES('2353cbb5458ee46aa187be4c',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('2353cbb5458ee46aa187be4c',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('f4a5753ccfe6826aeb1f72cc',0,'timeline.lastvisit','1358004586644000');
 INSERT INTO "session_attribute" VALUES('f4a5753ccfe6826aeb1f72cc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('818fa63d7729ff3bebd9d915',0,'timeline.lastvisit','1359823164000000');
+INSERT INTO "session_attribute" VALUES('818fa63d7729ff3bebd9d915',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a3ea55266726eb1a8a4da139',0,'timeline.lastvisit','1359823164000000');
+INSERT INTO "session_attribute" VALUES('a3ea55266726eb1a8a4da139',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -34466,6 +34472,19 @@ INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/02',6,'使用 x3dom 框�
 实际显示的效果如下图所示''''(使用 Flash backend 的效果, 如果系统支持 WebGL 的话效果应该要好很多)'''':
 [[BR]][[Image(Screenshot-Fill3D-Test.png, 100%)]]
 [[BR]][[Image(Screenshot-Fill3D-Test2.png, 100%)]]',1359821643,1359822182,'','thinkbase','thinkbase','webgl x3d x3dom javascript 3D VRML');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/02',7,'使用 x3dom 框架及 WebGL 在浏览器上显示 3 维模型','如果需要在浏览器上显示 3D 画面的话, 现在一般会使用 [http://zh.wikipedia.org/wiki/WebGL WebGL], 典型的例如 `three.js`(http://mrdoob.github.com/three.js/), 但是 `WebGL` 对浏览器版本以及显卡的要求比较高, 很多客户端无法正常使用.
+
+后来在网上查找到了 `X3DOM`(http://www.x3dom.org/), 通过使用不同的后端(backend), `X3DOM` 可以兼容较低版本的浏览器(主要是指 IE 系列), 也可以在没有显卡支持的情况下运行, 常用的非 WebGL 后端是 [http://www.adobe.com/products/flashplayer.html Adobe Flash Player 11], IE 也可以通过使用 [http://www.google.com/chromeframe Google Chrome Frame] 实现对 WebGL 的支持, 注意 Flash 11 以下的版本是不能正常运行的.
+
+`X3DOM` 通过在标准的 `HTML5` DOM 中加入 [http://www.web3d.org/about/overview/ X3D] 格式的 XML 元素, 实现将 `X3D` 格式的 3D 模型嵌入到 HTML 页面的功能; 在 http://www.x3dom.org/ 网站上有丰富的示例以及较详细的文档, 不过彻底搞懂估计需要一些 3D 建模的知识, 比如 [http://en.wikipedia.org/wiki/Field_of_view fieldOfView] 这样的专业术语.
+
+另外 [http://www.web3d.org/ web3D Consortium] 也有大量关于 `X3D` 的资料, 尤其是 `X3D tooltips`(http://www.web3d.org/x3d/content/X3dTooltips.html), 是一份全面的 `X3D` 节点元素速查手册(有[http://www.web3d.org/x3d/content/X3dTooltipsChinese.html 中文版])''''(不知道为什么 www.web3d.org 被 GWF 了, 如果要下载也可以到 [https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill/docs 这里])'''';
+
+在初步了解 `x3dom` 的基础上, 以显示货物装箱为例, 对 `x3dom` 进行了简单的封装, 重点关注 ''''''货物在集装箱等容器中的堆放方式的显示'''''', 可以实现以 "Box" 的方式加入不同尺寸的货物(长方体), 以不同的角度查看堆放情况, 以及对这些长方体的选择/加亮显示等等, 具体代码可以到 https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill 下载, 注意测试用的 html 文件不能直接在本地打开, 必须部署到 HTTP 服务器上才能正常运行;
+
+实际显示的效果如下图所示''''(使用 Flash backend 的效果, 如果系统支持 WebGL 的话效果应该要好很多)'''':
+[[BR]][[Image(Screenshot-Fill3D-Test.png, 100%)]]
+[[BR]][[Image(Screenshot-Fill3D-Test2.png, 100%)]]',1359821643,1359823164,'','thinkbase','thinkbase','webgl x3d x3dom javascript 3D VRML');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
@@ -34499,6 +34518,9 @@ INSERT INTO "fullblog_comments" VALUES('thinkbase-2012/12/03-2',3,'不过这个�
 
 在未解决这个问题之前, 本站点暂时禁用这个插件.','thinkbase',1355656073);
 INSERT INTO "fullblog_comments" VALUES('thinkbase-2013/02/02',1,'关于 IE 支持 WebGL 的问题, 发现有一个插件 [http://www.iewebgl.com/ IEWebGL], 不确定具体的效果怎么样.','thinkbase',1359821957);
+INSERT INTO "fullblog_comments" VALUES('thinkbase-2013/02/02',2,'在不同浏览器下的差异(在使用 Flash backend 时):
+ - IE9: 鼠标移动可以正常加亮对应的 Box, 但是 `Last highlight` 和 `Last normalize` 区域不会随之变化, 需要在加亮的 Box 上点击一下才会改变, 估计应该是 Flash 插件的差异(IE 使用的是 ActiveX 方式的 Flash 插件);
+ - Firefox: "选择" 下拉框的 change 事件触发稍有区别, IE 和 Chrome, 只要使用上下按键改变选择项(在下拉框获得焦点但是未下拉的状态下)就会触发 change 事件, 但是 Firefox 在改变选择项后, 必须按 Enter 键, 或者将焦点移除, 才会触发 change 事件.','thinkbase',1359915341);
 CREATE TABLE votes (
     resource text,
     username text,
