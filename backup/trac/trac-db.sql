@@ -946,6 +946,7 @@ INSERT INTO "session" VALUES('ab326bcced0d6c1354487170',0,1360968845);
 INSERT INTO "session" VALUES('3d2cc55c18291b8fe51bc622',0,1361044763);
 INSERT INTO "session" VALUES('8a9e623001817bef93ed4fcc',0,1361086963);
 INSERT INTO "session" VALUES('de88254270d0e95c0118c6c4',0,1361149849);
+INSERT INTO "session" VALUES('d4a91493952da7e2217d069b',0,1361168899);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -3823,6 +3824,10 @@ INSERT INTO "session_attribute" VALUES('de88254270d0e95c0118c6c4',0,'query_time'
 INSERT INTO "session_attribute" VALUES('de88254270d0e95c0118c6c4',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''accepted'', u''assigned'', u''new'', u''reopened'']}]');
 INSERT INTO "session_attribute" VALUES('de88254270d0e95c0118c6c4',0,'query_href','/trac/query?owner=%24USER&status=accepted&status=assigned&status=new&status=reopened&col=id&col=summary&col=status&col=due_assign&col=due_close&col=complete&col=parents&col=blockedby&col=blocking&col=type&col=priority&col=milestone&col=component&report=9&order=priority');
 INSERT INTO "session_attribute" VALUES('de88254270d0e95c0118c6c4',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.daysback','60');
+INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.filter.ticket','1');
+INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.filter.blog','1');
+INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.filter.wiki','1');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -38956,6 +38961,2825 @@ salt
 
 === PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
+INSERT INTO "wiki" VALUES('PageTemplates',3,1361171557718000,'trac','127.0.0.1','= Wiki Page Templates = 
+
+  ''''(since [http://trac.edgewall.org/milestone/0.11 0.11])''''
+
+The default content for a new wiki page can be chosen from a list of page templates. 
+
+That list is generated from all the wiki pages having a name starting with ''''PageTemplates/''''.
+The initial content of a new page will simply be the content of the chosen template page, or a blank page if the special ''''(blank page)'''' entry is selected. When there are no wiki pages with the ''''PageTemplates/'''' prefix, the initial content will always be the blank page and the list selector will not be shown (i.e. this matches the behavior we had up to now).
+
+To create a new template, simply create a new page having a name starting with ''''PageTemplates/''''.
+
+(Hint: one could even create a ''''!PageTemplates/Template'''' for facilitating the creation of new templates!)
+
+After the first template has been created, a drop-down selection box will automatically appear on any new wiki pages that are created.  By default it is located on the right side of the ''Create this page'' button. The default selection will be ''''blank page'''', or ''''!DefaultPage'''' if ''''!PageTemplates/DefaultPage'''' exists.
+
+Available templates: 
+[[TitleIndex(PageTemplates/)]]
+----
+See also: TracWiki
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('TracFastCgi',4,1361171557733000,'trac','127.0.0.1','[[PageOutline]]
+
+= Trac with FastCGI =
+
+[http://www.fastcgi.com/ FastCGI] interface allows Trac to remain resident much like with [wiki:TracModPython mod_python] or [wiki:TracModWSGI mod_wsgi]. It is faster than external CGI interfaces which must start a new process for each request.  Additionally, it is supported by much wider variety of web servers.
+
+Note that unlike mod_python, FastCGI supports [http://httpd.apache.org/docs/suexec.html Apache SuEXEC], i.e. run with different permissions than web server running with (`mod_wsgi` supports the `WSGIDaemonProcess` with user / group parameters to achieve the same effect).
+
+''''''Note for Windows:'''''' Trac''s FastCGI does not run under Windows, as Windows does not implement `Socket.fromfd`, which is used by `_fcgi.py`. If you want to connect to IIS, you may want to try [trac:TracOnWindowsIisAjp AJP]/[trac:TracOnWindowsIisAjp ISAPI].
+
+[[PageOutline(2-3,Overview,inline)]]
+
+
+== Simple Apache configuration ==
+
+There are two FastCGI modules commonly available for Apache: `mod_fastcgi` and
+`mod_fcgid` (preferred). The latter is more up-to-date.
+
+The following sections focus on the FCGI specific setup, see also [wiki:TracModWSGI#ConfiguringAuthentication] for configuring the authentication in Apache.
+
+Regardless of which cgi module is used, be sure the web server has executable permissions on the cgi-bin folder. While FastCGI will throw specific permissions errors, mod_fcgid will throw an ambiguous error if this has not been done. (Connection reset by peer: mod_fcgid: error reading data from FastCGI server) 
+
+=== Set up with `mod_fastcgi` ===
+`mod_fastcgi` uses `FastCgiIpcDir` and `FastCgiConfig` directives that should be added to an appropriate Apache configuration file:
+{{{
+# Enable fastcgi for .fcgi files
+# (If you''re using a distro package for mod_fcgi, something like
+# this is probably already present)
+<IfModule mod_fastcgi.c>
+   AddHandler fastcgi-script .fcgi
+   FastCgiIpcDir /var/lib/apache2/fastcgi 
+</IfModule>
+LoadModule fastcgi_module /usr/lib/apache2/modules/mod_fastcgi.so
+}}}
+Setting `FastCgiIpcDir` is optional if the default is suitable. Note that the `LoadModule` line must be after the `IfModule` group.
+
+Configure `ScriptAlias` or similar options as described in TracCgi, but
+calling `trac.fcgi` instead of `trac.cgi`.
+
+Add the following to the Apache configuration file (below the `FastCgiIpcDir` line) if you intend to set up the `TRAC_ENV` as an overall default:
+{{{
+FastCgiConfig -initial-env TRAC_ENV=/path/to/env/trac
+}}}
+
+Alternatively, you can serve multiple Trac projects in a directory by adding this:
+{{{
+FastCgiConfig -initial-env TRAC_ENV_PARENT_DIR=/parent/dir/of/projects
+}}}
+
+=== Set up with `mod_fcgid` ===
+Configure `ScriptAlias` (see TracCgi for details), but call `trac.fcgi`
+instead of `trac.cgi`. Note that slash at the end - it is important.
+{{{
+ScriptAlias /trac /path/to/www/trac/cgi-bin/trac.fcgi/
+}}}
+
+To set up Trac environment for `mod_fcgid` it is necessary to use
+`DefaultInitEnv` directive. It cannot be used in `Directory` or
+`Location` context, so if you need to support multiple projects, try
+alternative environment setup below.
+
+{{{
+DefaultInitEnv TRAC_ENV /path/to/env/trac/
+}}}
+
+=== alternative environment setup ===
+A better method to specify path to Trac environment is to embed the path
+into `trac.fcgi` script itself. That doesn''t require configuration of server
+environment variables, works for both FastCgi modules
+(and for [http://www.lighttpd.net/ lighttpd] and CGI as well):
+{{{
+import os
+os.environ[''TRAC_ENV''] = "/path/to/projectenv"
+}}}
+or
+{{{
+import os
+os.environ[''TRAC_ENV_PARENT_DIR''] = "/path/to/project/parent/dir"
+}}}
+
+With this method different projects can be supported by using different
+`.fcgi` scripts with different `ScriptAliases`.
+
+See [https://coderanger.net/~coderanger/httpd/fcgi_example.conf this fcgid example config] which uses a !ScriptAlias directive with trac.fcgi with a trailing / like this:
+{{{
+ScriptAlias / /srv/tracsite/cgi-bin/trac.fcgi/
+}}}
+
+== Simple Cherokee Configuration ==
+
+The configuration on Cherokee''s side is quite simple. You will only need to know that you can spawn Trac as an SCGI process.
+You can either start it manually, or better yet, automatically by letting Cherokee spawn the server whenever it is down.
+First set up an information source in cherokee-admin with a local interpreter.
+
+{{{
+Host:
+localhost:4433
+
+Interpreter:
+/usr/bin/tracd —single-env —daemonize —protocol=scgi —hostname=localhost —port=4433 /path/to/project/
+}}}
+
+If the port was not reachable, the interpreter command would be launched. Note that, in the definition of the information source, you will have to manually launch the spawner if you use a ''''Remote host'''' as ''''Information source'''' instead of a ''''Local interpreter''''.
+
+After doing this, we will just have to create a new rule managed by the SCGI handler to access Trac. It can be created in a new virtual server, trac.example.net for instance, and will only need two rules. The ''''''default'''''' one will use the SCGI handler associated to the previously created information source.
+The second rule will be there to serve the few static files needed to correctly display the Trac interface. Create it as ''''Directory rule'''' for ''''/common'''' and just set it to the ''''Static files'''' handler and with a ''''Document root'''' that points to the appropriate files: ''''$TRAC_LOCAL/htdocs/'''' (where $TRAC_LOCAL is a directory defined by the user or the system administrator to place local trac resources).
+
+Note:\\
+If the tracd process fails to start up, and cherokee displays a 503 error page, you might be missing the [http://trac.saddi.com/flup python-flup] package.\\
+Python-flup is a dependency which provides trac with SCGI capability. You can install it on debian based systems with:
+{{{
+sudo apt-get install python-flup
+}}}
+
+
+== Simple Lighttpd Configuration ==
+
+The FastCGI front-end was developed primarily for use with alternative webservers, such as [http://www.lighttpd.net/ lighttpd].
+
+lighttpd is a secure, fast, compliant and very flexible web-server that has been optimized for high-performance
+environments.  It has a very low memory footprint compared to other web servers and takes care of CPU load.
+
+For using `trac.fcgi`(prior to 0.11) / fcgi_frontend.py (0.11) with lighttpd add the following to your lighttpd.conf:
+{{{
+#var.fcgi_binary="/usr/bin/python /path/to/fcgi_frontend.py" # 0.11 if installed with easy_setup, it is inside the egg directory
+var.fcgi_binary="/path/to/cgi-bin/trac.fcgi" # 0.10 name of prior fcgi executable
+fastcgi.server = ("/trac" =>
+   
+                   ("trac" =>
+                     ("socket" => "/tmp/trac-fastcgi.sock",
+                      "bin-path" => fcgi_binary,
+                      "check-local" => "disable",
+                      "bin-environment" =>
+                        ("TRAC_ENV" => "/path/to/projenv")
+                     )
+                   )
+                 )
+}}}
+
+Note that you will need to add a new entry to `fastcgi.server` for each separate Trac instance that you wish to run. Alternatively, you may use the `TRAC_ENV_PARENT_DIR` variable instead of `TRAC_ENV` as described above,
+and you may set one of the two in `trac.fcgi` instead of in `lighttpd.conf`
+using `bin-environment` (as in the section above on Apache configuration).
+
+Note that lighttpd has a bug related to ''SCRIPT_NAME'' and ''PATH_INFO'' when the uri of fastcgi.server is ''/'' instead of ''/trac'' in this example (see [trac:#2418]). This is fixed in lighttpd 1.5, and under lighttpd 1.4.23 or later the workaround is to add `"fix-root-scriptname" => "enable"` as a parameter of fastcgi.server.
+
+For using two projects with lighttpd add the following to your `lighttpd.conf`:
+{{{
+fastcgi.server = ("/first" =>
+                   ("first" =>
+                    ("socket" => "/tmp/trac-fastcgi-first.sock",
+                     "bin-path" => fcgi_binary,
+                     "check-local" => "disable",
+                     "bin-environment" =>
+                       ("TRAC_ENV" => "/path/to/projenv-first")
+                    )
+                  ),
+                  "/second" =>
+                    ("second" =>
+                    ("socket" => "/tmp/trac-fastcgi-second.sock",
+                     "bin-path" => fcgi_binary,
+                     "check-local" => "disable",
+                     "bin-environment" =>
+                       ("TRAC_ENV" => "/path/to/projenv-second")
+                    )
+                  )
+                )
+}}}
+Note that field values are different.  If you prefer setting the environment
+variables in the `.fcgi` scripts, then copy/rename `trac.fcgi`, e.g., to
+`first.fcgi` and `second.fcgi`, and reference them in the above settings.
+Note that the above will result in different processes in any event, even
+if both are running from the same `trac.fcgi` script.
+
+{{{
+#!div class=important
+''''''Note'''''' It''s very important the order on which server.modules are loaded, if mod_auth is not loaded ''''''BEFORE'''''' mod_fastcgi, then the server will fail to authenticate the user.
+}}}
+
+For authentication you should enable mod_auth in lighttpd.conf ''server.modules'', select auth.backend and auth rules:
+{{{
+server.modules              = (
+...
+  "mod_auth",
+...
+)
+
+auth.backend               = "htpasswd"
+
+# Separated password files for each project
+# See "Conditional Configuration" in
+# http://trac.lighttpd.net/trac/file/branches/lighttpd-merge-1.4.x/doc/configuration.txt
+
+$HTTP["url"] =~ "^/first/" {
+  auth.backend.htpasswd.userfile = "/path/to/projenv-first/htpasswd.htaccess"
+}
+$HTTP["url"] =~ "^/second/" {
+  auth.backend.htpasswd.userfile = "/path/to/projenv-second/htpasswd.htaccess"
+}
+
+# Enable auth on trac URLs, see
+# http://trac.lighttpd.net/trac/file/branches/lighttpd-merge-1.4.x/doc/authentication.txt
+
+auth.require = ("/first/login" =>
+                ("method"  => "basic",
+                 "realm"   => "First project",
+                 "require" => "valid-user"
+                ),
+                "/second/login" =>
+                ("method"  => "basic",
+                 "realm"   => "Second project",
+                 "require" => "valid-user"
+                )
+               )
+
+
+}}}
+Note that lighttpd (I use version 1.4.3) stopped if password file doesn''t exist.
+
+Note that lighttpd doesn''t support ''valid-user'' in versions prior to 1.3.16.
+
+Conditional configuration is also useful for mapping static resources, i.e. serving out images and CSS directly instead of through FastCGI:
+{{{
+# Aliasing functionality is needed
+server.modules += ("mod_alias")
+
+# Set up an alias for the static resources
+alias.url = ("/trac/chrome/common" => "/usr/share/trac/htdocs")
+
+# Use negative lookahead, matching all requests that ask for any resource under /trac, EXCEPT in
+# /trac/chrome/common, and use FastCGI for those
+$HTTP["url"] =~ "^/trac(?!/chrome/common)" {
+# Even if you have other fastcgi.server declarations for applications other than Trac, do NOT use += here
+fastcgi.server = ("/trac" =>
+                   ("trac" =>
+                     ("socket" => "/tmp/trac-fastcgi.sock",
+                      "bin-path" => fcgi_binary,
+                      "check-local" => "disable",
+                      "bin-environment" =>
+                        ("TRAC_ENV" => "/path/to/projenv")
+                     )
+                   )
+                 )
+}
+}}}
+The technique can be easily adapted for use with multiple projects by creating aliases for each of them, and wrapping the fastcgi.server declarations inside conditional configuration blocks.
+Also there is another way to handle multiple projects and it''s to use TRAC_ENV_PARENT_DIR instead of TRAC_ENV and use global auth, let''s see an example:
+{{{
+#  This is for handling multiple projects
+  alias.url       = ( "/trac/" => "/path/to/trac/htdocs/" )
+
+  fastcgi.server += ("/projects"  =>
+                      ("trac" =>
+                        (
+                          "socket" => "/tmp/trac.sock",
+                          "bin-path" => fcgi_binary,
+                          "check-local" => "disable",
+                          "bin-environment" =>
+                            ("TRAC_ENV_PARENT_DIR" => "/path/to/parent/dir/of/projects/" )
+                        )
+                      )
+                    )
+#And here starts the global auth configuration
+  auth.backend = "htpasswd"
+  auth.backend.htpasswd.userfile = "/path/to/unique/htpassword/file/trac.htpasswd"
+  $HTTP["url"] =~ "^/projects/.*/login$" {
+    auth.require = ("/" =>
+                     (
+                       "method"  => "basic",
+                       "realm"   => "trac",
+                       "require" => "valid-user"
+                     )
+                   )
+  }
+}}}
+
+Changing date/time format also supported by lighttpd over environment variable LC_TIME
+{{{
+fastcgi.server = ("/trac" =>
+                   ("trac" =>
+                     ("socket" => "/tmp/trac-fastcgi.sock",
+                      "bin-path" => fcgi_binary,
+                      "check-local" => "disable",
+                      "bin-environment" =>
+                        ("TRAC_ENV" => "/path/to/projenv",
+                        "LC_TIME" => "ru_RU")
+                     )
+                   )
+                 )
+}}}
+For details about languages specification see [trac:TracFaq TracFaq] question 2.13.
+
+Other important information like the [wiki:TracInstall#MappingStaticResources mapping static resources advices] are useful for non-fastcgi specific installation aspects.
+]
+
+Relaunch lighttpd, and browse to `http://yourhost.example.org/trac` to access Trac.
+
+Note about running lighttpd with reduced permissions:
+
+If nothing else helps and trac.fcgi doesn''t start with lighttpd settings `server.username = "www-data"`, `server.groupname = "www-data"`, then in the `bin-environment` section set `PYTHON_EGG_CACHE` to the home directory of `www-data` or some other directory accessible to this account for writing.
+
+
+== Simple !LiteSpeed Configuration ==
+
+The FastCGI front-end was developed primarily for use with alternative webservers, such as [http://www.litespeedtech.com/ LiteSpeed].
+
+!LiteSpeed web server is an event-driven asynchronous Apache replacement designed from the ground-up to be secure, scalable, and operate with minimal resources. !LiteSpeed can operate directly from an Apache config file and is targeted for business-critical environments.
+
+ 1. Please make sure you have first have a working install of a Trac project. Test install with “tracd” first.
+
+ 2. Create a Virtual Host for this setup. From now on we will refer to this vhost as !TracVhost. For this tutorial we will be assuming that your trac project will be accessible via:
+
+{{{
+http://yourdomain.com/trac/
+}}}
+
+ 3. Go “!TracVhost → External Apps” tab and create a new “External Application”.
+
+{{{
+Name: MyTracFCGI	
+Address: uds://tmp/lshttpd/mytracfcgi.sock
+Max Connections: 10
+Environment: TRAC_ENV=/fullpathto/mytracproject/ <--- path to root folder of trac project
+Initial Request Timeout (secs): 30
+Retry Timeout (secs): 0
+Persistent Connection	Yes
+Connection Keepalive Timeout: 30
+Response Bufferring: No	
+Auto Start: Yes
+Command: /usr/share/trac/cgi-bin/trac.fcgi  <--- path to trac.fcgi
+Back Log: 50
+Instances: 10
+}}}
+
+ 4. Optional. If you need to use htpasswd based authentication. Go to “!TracVhost → Security” tab and create a new security “Realm”.
+
+{{{
+DB Type: Password File
+Realm Name: MyTracUserDB               <--- any name you wish and referenced later
+User DB Location: /fullpathto/htpasswd <--- path to your htpasswd file
+}}}
+
+If you don’t have a htpasswd file or don’t know how to create the entries within one, go to http://sherylcanter.com/encrypt.php, to generate the user:password combos.
+
+ 5. Go to “!PythonVhost → Contexts” and create a new “FCGI Context”.
+
+{{{
+URI: /trac/                              <--- URI path to bind to python fcgi app we created	
+Fast CGI App: [VHost Level] MyTractFCGI  <--- select the trac fcgi extapp we just created
+Realm: TracUserDB                        <--- only if (4) is set. select realm created in (4)
+}}}
+
+ 6. Modify `/fullpathto/mytracproject/conf/trac.ini`
+
+{{{
+#find/set base_rul, url, and link variables
+base_url = http://yourdomain.com/trac/ <--- base url to generate correct links to
+url = http://yourdomain.com/trac/      <--- link of project
+link = http://yourdomain.com/trac/     <--- link of graphic logo
+}}}
+
+ 7. Restart !LiteSpeed, “lswsctrl restart”, and access your new Trac project at: 
+
+{{{
+http://yourdomain.com/trac/
+}}}
+
+
+== Simple Nginx Configuration ==
+
+Nginx is able to communicate with FastCGI processes, but can not spawn them. So you need to start FastCGI server for Trac separately.
+
+ 1. Nginx configuration with basic authentication handled by Nginx - confirmed to work on 0.6.32
+{{{
+    server {
+        listen       10.9.8.7:443;
+        server_name  trac.example;
+
+        ssl                  on;
+        ssl_certificate      /etc/ssl/trac.example.crt;
+        ssl_certificate_key  /etc/ssl/trac.example.key;
+
+        ssl_session_timeout  5m;
+
+        ssl_protocols  SSLv2 SSLv3 TLSv1;
+        ssl_ciphers  ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+        ssl_prefer_server_ciphers   on;
+
+        # (Or ``^/some/prefix/(.*)``.
+        if ($uri ~ ^/(.*)) {
+             set $path_info /$1;
+        }
+
+        # it makes sense to serve static resources through Nginx
+        location /chrome/ {
+             alias /home/trac/instance/static/htdocs/;
+        }
+
+        # You can copy this whole location to ``location [/some/prefix]/login``
+        # and remove the auth entries below if you want Trac to enforce
+        # authorization where appropriate instead of needing to authenticate
+        # for accessing the whole site.
+        # (Or ``location /some/prefix``.)
+        location / {
+            auth_basic            "trac realm";
+            auth_basic_user_file /home/trac/htpasswd;
+
+            # socket address
+            fastcgi_pass   unix:/home/trac/run/instance.sock;
+
+            # python - wsgi specific
+            fastcgi_param HTTPS on;
+
+            ## WSGI REQUIRED VARIABLES
+            # WSGI application name - trac instance prefix.
+	    # (Or ``fastcgi_param  SCRIPT_NAME  /some/prefix``.)
+            fastcgi_param  SCRIPT_NAME        "";
+            fastcgi_param  PATH_INFO          $path_info;
+
+            ## WSGI NEEDED VARIABLES - trac warns about them
+            fastcgi_param  REQUEST_METHOD     $request_method;
+            fastcgi_param  SERVER_NAME        $server_name;
+            fastcgi_param  SERVER_PORT        $server_port;
+            fastcgi_param  SERVER_PROTOCOL    $server_protocol;
+            fastcgi_param  QUERY_STRING       $query_string;
+
+            # For Nginx authentication to work - do not forget to comment these
+            # lines if not using Nginx for authentication
+            fastcgi_param  AUTH_USER          $remote_user;
+            fastcgi_param  REMOTE_USER        $remote_user;
+
+            # for ip to work
+            fastcgi_param REMOTE_ADDR         $remote_addr;
+
+            # For attchments to work
+            fastcgi_param    CONTENT_TYPE     $content_type;
+            fastcgi_param    CONTENT_LENGTH   $content_length;
+        }
+    }
+}}}
+
+ 2. Modified trac.fcgi:
+
+{{{
+#!/usr/bin/env python
+import os
+sockaddr = ''/home/trac/run/instance.sock''
+os.environ[''TRAC_ENV''] = ''/home/trac/instance''
+
+try:
+     from trac.web.main import dispatch_request
+     import trac.web._fcgi
+
+     fcgiserv = trac.web._fcgi.WSGIServer(dispatch_request, 
+          bindAddress = sockaddr, umask = 7)
+     fcgiserv.run()
+
+except SystemExit:
+    raise
+except Exception, e:
+    print ''Content-Type: text/plain\r\n\r\n'',
+    print ''Oops...''
+    print
+    print ''Trac detected an internal error:''
+    print
+    print e
+    print
+    import traceback
+    import StringIO
+    tb = StringIO.StringIO()
+    traceback.print_exc(file=tb)
+    print tb.getvalue()
+
+}}}
+
+ 3. reload nginx and launch trac.fcgi like that:
+
+{{{
+trac@trac.example ~ $ ./trac-standalone-fcgi.py 
+}}}
+
+The above assumes that:
+ * There is a user named ''trac'' for running trac instances and keeping trac environments in its home directory.
+ * `/home/trac/instance` contains a trac environment
+ * `/home/trac/htpasswd` contains authentication information
+ * `/home/trac/run` is owned by the same group the nginx runs under
+  * and if your system is Linux the `/home/trac/run` has setgid bit set (`chmod g+s run`)
+  * and patch from ticket #T7239 is applied, or you''ll have to fix the socket file permissions every time
+
+Unfortunately nginx does not support variable expansion in fastcgi_pass directive. 
+Thus it is not possible to serve multiple trac instances from one server block. 
+
+If you worry enough about security, run trac instances under separate users. 
+
+Another way to run trac as a FCGI external application is offered in ticket #T6224
+
+----
+See also:  TracGuide, TracInstall, [wiki:TracModWSGI ModWSGI], [wiki:TracCgi CGI], [wiki:TracModPython ModPython], [trac:TracNginxRecipe TracNginxRecipe]
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('TracInterfaceCustomization',4,1361171557733000,'trac','127.0.0.1','= Customizing the Trac Interface =
+[[TracGuideToc]]
+[[PageOutline]]
+
+== Introduction ==
+This page is meant to give users suggestions on how they can customize the look of Trac.  Topics on this page cover editing the HTML templates and CSS files, but not the program code itself.  The topics are intended to show users how they can modify the look of Trac to meet their specific needs.  Suggestions for changes to Trac''s interface applicable to all users should be filed as tickets, not listed on this page.
+
+== Project Logo and Icon ==
+The easiest parts of the Trac interface to customize are the logo and the site icon.  Both of these can be configured with settings in [wiki:TracIni trac.ini].
+
+The logo or icon image should be put in a folder named "htdocs" in your project''s environment folder.  (''''Note: in projects created with a Trac version prior to 0.9 you will need to create this folder'''')
+
+ ''''Note: you can actually put the logo and icon anywhere on your server (as long as it''s accessible through the web server), and use their absolute or server-relative URLs in the configuration.''''
+
+Now configure the appropriate section of your [wiki:TracIni trac.ini]:
+
+=== Logo ===
+Change the `src` setting to `site/` followed by the name of your image file.  The `width` and `height` settings should be modified to match your image''s dimensions (the Trac chrome handler uses "`site/`" for files within the project directory `htdocs`, and "`common/`" for the common `htdocs` directory belonging to a Trac installation). Note that ''site/'' is not a placeholder for your project name, it is the actual prefix that should be used (literally). For example, if your project is named ''sandbox'', and the image file is ''red_logo.gif'' then the ''src'' setting would be ''site/red_logo.gif'', not ''sandbox/red_logo.gif''.
+
+{{{
+[header_logo]
+src = site/my_logo.gif
+alt = My Project
+width = 300
+height = 100
+}}}
+
+=== Icon ===
+Icons should be a 32x32 image in `.gif` or `.ico` format.  Change the `icon` setting to `site/` followed by the name of your icon file.  Icons will typically be displayed by your web browser next to the site''s URL and in the `Bookmarks` menu.
+
+{{{
+[project]
+icon = site/my_icon.ico
+}}}
+
+Note though that this icon is ignored by Internet Explorer, which only accepts a file named ``favicon.ico`` at the root of the host. To make the project icon work in both IE and other browsers, you can store the icon in the document root of the host, and reference it from ``trac.ini`` as follows:
+
+{{{
+[project]
+icon = /favicon.ico
+}}}
+
+Should your browser have issues with your favicon showing up in the address bar, you may put a "?" (less the quotation marks) after your favicon file extension. 
+
+{{{
+[project]
+icon = /favicon.ico?
+}}}
+
+== Custom Navigation Entries ==
+The new [mainnav] and [metanav] can now be used to customize the text and link used for the navigation items, or even to disable them (but not for adding new ones).
+
+In the following example, we rename the link to the Wiki start "Home", and hide the "!Help/Guide". We also make the "View Tickets" entry link to a specific report .
+{{{
+[mainnav]
+wiki.label = Home
+tickets.href = /report/24
+
+[metanav]
+help = disabled
+}}}
+
+See also TracNavigation for a more detailed explanation of the mainnav and metanav terms.
+
+== Site Appearance == #SiteAppearance
+
+Trac is using [http://genshi.edgewall.org Genshi] as the templating engine. Documentation is yet to be written, in the meantime the following tip should work.
+
+Say you want to add a link to a custom stylesheet, and then your own
+header and footer. Save the following content as `site.html` inside your projects `templates/` directory (each Trac project can have their own `site.html`), e.g. {{{/path/to/env/templates/site.html}}}:
+
+{{{
+#!xml
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      py:strip="">
+
+  <!--! Add site-specific style sheet -->
+  <head py:match="head" py:attrs="select(''@*'')">
+    ${select(''*|comment()|text()'')}
+    <link rel="stylesheet" type="text/css"
+          href="${href.chrome(''site/style.css'')}" />
+  </head>
+
+  <body py:match="body" py:attrs="select(''@*'')">
+    <!--! Add site-specific header -->
+    <div id="siteheader">
+      <!--! Place your header content here... -->
+    </div>
+
+    ${select(''*|text()'')}
+
+    <!--! Add site-specific footer -->
+    <div id="sitefooter">
+      <!--! Place your footer content here... -->
+    </div>
+  </body>
+</html>
+}}}
+
+Those who are familiar with XSLT may notice that Genshi templates bear some similarities. However, there are some Trac specific features - for example `${href.chrome(''site/style.css'')}` attribute references a CSS file placed into environment''s `htdocs/` directory. In a similar fashion `${chrome.htdocs_location}` is used to specify the common `htdocs/` directory belonging to a Trac installation. That latter location can however be overriden using the [[TracIni#trac-config|[trac] htdocs_location]] configuration setting.
+
+`site.html` is one file to contain all your modifications. It usually works using the `py:match` directive (element or attribute), and it allows you to modify the page as it renders - the matches hook onto specific sections depending on what it tries to find
+and modify them.
+See [http://groups.google.com/group/trac-users/browse_thread/thread/70487fb2c406c937/ this thread] for a detailed explanation of the above example `site.html`.
+A `site.html` can contain any number of such `py:match` sections for whatever you need to modify. This is all Genshi, so the [http://genshi.edgewall.org/wiki/Documentation/xml-templates.html docs on the exact syntax] can be found there.
+
+
+Example snippet of adding introduction text to the new ticket form (but not shown during preview):
+
+{{{#!xml
+<form py:match="div[@id=''content'' and @class=''ticket'']/form" py:attrs="select(''@*'')">
+  <py:if test="req.environ[''PATH_INFO''] == ''/newticket'' and (not ''preview'' in req.args)">
+    <p>Please make sure to search for existing tickets before reporting a new one!</p>
+  </py:if>
+  ${select(''*'')} 
+</form>
+}}}
+
+This example illustrates a technique of using `req.environ[''PATH_INFO'']` to limit scope of changes to one view only. For instance, to make changes in `site.html` only for timeline and avoid modifying other sections - use  `req.environ[''PATH_INFO''] == ''/timeline''` condition in `<py:if>` test.
+
+More examples snippets for `site.html` can be found at [trac:wiki:CookBook/SiteHtml CookBook/SiteHtml].
+
+Example snippets for `style.css` can be found at [trac:wiki:CookBook/SiteStyleCss CookBook/SiteStyleCss].
+
+If the environment is upgraded from 0.10 and a `site_newticket.cs` file already exists, it can actually be loaded by using a workaround - providing it contains no ClearSilver processing. In addition, as only one element can be imported, the content needs some sort of wrapper such as a `<div>` block or other similar parent container. The XInclude namespace must be specified to allow includes, but that can be moved to document root along with the others:
+{{{
+#!xml
+<form py:match="div[@id=''content'' and @class=''ticket'']/form" py:attrs="select(''@*'')"
+        xmlns:xi="http://www.w3.org/2001/XInclude">
+  <py:if test="req.environ[''PATH_INFO''] == ''/newticket'' and (not ''preview'' in req.args)"> 
+    <xi:include href="site_newticket.cs"><xi:fallback /></xi:include>
+  </py:if>
+  ${select(''*'')} 
+</form>
+}}}
+
+Also note that the `site.html` (despite its name) can be put in a common templates directory - see the [[TracIni#inherit-section|[inherit] templates_dir]] option. This could provide easier maintainence (and a migration path from 0.10 for larger installations) as one new global `site.html` file can be made to include any existing header, footer and newticket snippets.
+
+== Project List == #ProjectList
+
+You can use a custom Genshi template to display the list of projects if you are using Trac with multiple projects.  
+
+The following is the basic template used by Trac to display a list of links to the projects.  For projects that could not be loaded it displays an error message. You can use this as a starting point for your own index template.
+
+{{{
+#!text/html
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude">
+  <head>
+    <title>Available Projects</title>
+  </head>
+  <body>
+    <h1>Available Projects</h1>
+    <ul>
+      <li py:for="project in projects" py:choose="">
+        <a py:when="project.href" href="$project.href"
+           title="$project.description">$project.name</a>
+        <py:otherwise>
+          <small>$project.name: <em>Error</em> <br /> ($project.description)</small>
+        </py:otherwise>
+      </li>
+    </ul>
+  </body>
+</html>
+}}}
+
+Once you''ve created your custom template you will need to configure the webserver to tell Trac where the template is located (pls verify ... not yet changed to 0.11):
+
+For [wiki:TracModWSGI mod_wsgi]:
+{{{
+os.environ[''TRAC_ENV_INDEX_TEMPLATE''] = ''/path/to/template.html''
+}}}
+
+For [wiki:TracFastCgi FastCGI]:
+{{{
+FastCgiConfig -initial-env TRAC_ENV_PARENT_DIR=/parent/dir/of/projects \
+              -initial-env TRAC_ENV_INDEX_TEMPLATE=/path/to/template
+}}}
+
+For [wiki:TracModPython mod_python]:
+{{{
+PythonOption TracEnvParentDir /parent/dir/of/projects
+PythonOption TracEnvIndexTemplate /path/to/template
+}}}
+
+For [wiki:TracCgi CGI]:
+{{{
+SetEnv TRAC_ENV_INDEX_TEMPLATE /path/to/template
+}}}
+
+For [wiki:TracStandalone], you''ll need to set up the `TRAC_ENV_INDEX_TEMPLATE` environment variable in the shell used to launch tracd:
+ - Unix
+   {{{
+#!sh
+$ export TRAC_ENV_INDEX_TEMPLATE=/path/to/template
+   }}}
+ - Windows
+   {{{
+#!sh
+$ set TRAC_ENV_INDEX_TEMPLATE=/path/to/template
+   }}}
+
+== Project Templates ==
+
+The appearance of each individual Trac environment (that is, instance of a project) can be customized independently of other projects, even those hosted by the same server. The recommended way is to use a `site.html` template (see [#SiteAppearance]) whenever possible. Using `site.html` means changes are made to the original templates as they are rendered, and you should not normally need to redo modifications whenever Trac is upgraded. If you do make a copy of `theme.html` or any other Trac template, you need to migrate your modifiations to the newer version - if not, new Trac features or bug fixes may not work as expected.
+
+With that word of caution, any Trac template may be copied and customized. The default Trac templates are located inside the installed Trac egg (`/usr/lib/pythonVERSION/site-packages/Trac-VERSION.egg/trac/templates, .../trac/ticket/templates, .../trac/wiki/templates, ++`). The [#ProjectList] template file is called `index.html`, while the template responsible for main layout is called `theme.html`. Page assets such as images and CSS style sheets are located in the egg''s `trac/htdocs` directory.
+
+However, do not edit templates or site resources inside the Trac egg - installing Trac again can completely delete your modifications. Instead use one of two alternatives:
+ * For a modification to one project only, copy the template to project `templates` directory.
+ * For a modification shared by several projects, copy the template to a shared location and have each project point to this location using the `[inherit] templates_dir =` trac.ini option.
+
+Trac resolves requests for a template by first looking inside the project, then in any inherited templates location, and finally inside the Trac egg.
+
+Trac caches templates in memory by default to improve performance. To apply a template you need to restart the server.
+
+----
+See also TracGuide, TracIni
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('TracNavigation',4,1361171557749000,'trac','127.0.0.1','= Trac Navigation =
+
+Starting with Trac 0.11, it is now possible to customize the main and meta navigation entries in some basic ways.
+
+The new `[mainnav]` and `[metanav]` configuration sections can now be used to customize the text and link used for the navigation items, or even to disable them.  The `mainnav` and `metanav` options in the `[trac]` configuration section can also be used to change the order.
+
+=== `[mainnav]` #mainnav-bar
+`[mainnav]` corresponds to the ''''''main navigation bar'''''', the one containing entries such as ''''Wiki'''', ''''Timeline'''', ''''Roadmap'''', ''''Browse Source'''' and so on. This navigation bar is meant to access the default page of the main modules enabled in Trac that are accessible for the current user.
+
+
+** [=#Example Example] ** 
+
+In the following example, we rename the link to the Wiki start "Home", and make the "View Tickets" entry link to a specific report.  The second example (below) also hides the "!Help/Guide" link.
+
+Relevant excerpt from the TracIni:
+{{{
+[mainnav]
+wiki.label = Home
+tickets.href = /report/24
+}}}
+
+=== `[metanav]` #metanav-bar
+`[metanav]` corresponds to the ''''''meta navigation bar'''''', by default positioned above the main navigation bar and below the ''''Search'''' box. It contains the ''''Log in'''', ''''Logout'''', ''''!Help/Guide'''' etc. entries. This navigation bar is meant to access some global information about the Trac project and the current user.
+
+There is one special entry in the  `[metanav]` section: `logout.redirect` is the page the user sees after hitting the logout button. 
+[[comment(see also #Trac3808)]]
+
+** Example ** 
+
+{{{
+[metanav]
+help = disabled
+logout.redirect = wiki/Logout
+}}}
+
+
+=== Notes
+Possible URL formats (for `.href` or `.redirect`):
+|| ''''''config'''''' || ''''''redirect to'''''' ||
+|| `wiki/Logout` || `/projects/env/wiki/Logout` ||
+|| `http://hostname/` || `http://hostname/` ||
+|| `/projects` || `/projects` ||
+
+
+=== `[trac]` #nav-order
+The `mainnav` and `metanav` options in the `[trac]` configuration section control the order in which the navigation items are displayed (left to right).  This can be useful with plugins that add navigation items.
+
+** Example ** 
+
+In the following example, we change the order to prioritise the ticket related items further left.
+
+Relevant excerpt from the TracIni:
+{{{
+[trac]
+mainnav = wiki,tickets,newticket,timeline,roadmap,browser,search,admin
+}}}
+
+The default order and item names can be viewed in the [TracIni#trac-section trac section of TracIni].
+
+=== Context Navigation #ctxtnav-bar
+
+Note that it is still not possible to customize the ''''''contextual navigation bar'''''', i.e. the one usually placed below the main navigation bar.
+
+
+----
+See also: TracInterfaceCustomization, and the [http://trac-hacks.org/wiki/NavAddPlugin TracHacks:NavAddPlugin] or [http://trac-hacks.org/wiki/MenusPlugin TracHacks:MenusPlugin] (still needed for adding entries)',NULL,NULL);
+INSERT INTO "wiki" VALUES('TracPermissions',4,1361171557749000,'trac','127.0.0.1','= Trac Permissions =
+[[TracGuideToc]]
+
+Trac uses a simple, case sensitive, permission system to control what users can and can''t access.
+
+Permission privileges are managed using the [TracAdmin trac-admin] tool or (new in version 0.11) the ''''General / Permissions'''' panel in the ''''Admin'''' tab of the web interface.
+
+In addition to the default permission policy described in this page, it is possible to activate additional permission policies by enabling plugins and listing them in the `[trac] permission_policies` configuration entry in the TracIni. See TracFineGrainedPermissions for more details.
+
+Non-authenticated users accessing the system are assigned the name "anonymous". Assign permissions to the "anonymous" user to set privileges for anonymous/guest users. The parts of Trac that a user does not have the privileges for will not be displayed in the navigation.
+In addition to these privileges, users can be granted additional individual rights in effect when authenticated and logged into the system. All logged in users belong to the virtual group "authenticated", which inherits permissions from "anonymous".
+
+== Graphical Admin Tab ==
+''''This feature is new in version 0.11.''''
+
+To access this tab, a user must have one of the following permissions: `TRAC_ADMIN`, `PERMISSION_ADMIN`, `PERMISSION_ADD`, `PERMISSION_REMOVE`. The permissions can granted using the `trac-admin` command (more on `trac-admin` below):
+{{{
+  $ trac-admin /path/to/projenv permission add bob TRAC_ADMIN
+}}}
+
+Then, the user `bob` will be able to see the Admin tab, and can then access the permissions menu. This menu will allow you to perform all the following actions, but from the browser without requiring root access to the server (just the correct permissions for your user account). ''''''Use at least one lowercase character in user names, as all-uppercase names are reserved for permissions.''''''
+
+ 1. [[Image(htdocs:../common/guide/admin.png)]]
+ 1. [[Image(htdocs:../common/guide/admin-permissions.png)]]
+ 1. [[Image(htdocs:../common/guide/admin-permissions-TICKET_ADMIN.png)]]
+
+An easy way to quickly secure a new Trac install is to run the above command on the anonymous user, install the [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin], create a new admin account graphically and then remove the TRAC_ADMIN permission from the anonymous user.
+
+== Available Privileges ==
+
+To enable all privileges for a user, use the `TRAC_ADMIN` permission. Having `TRAC_ADMIN` is like being `root` on a *NIX system: it will allow you to perform any operation.
+
+Otherwise, individual privileges can be assigned to users for the various different functional areas of Trac (''''''note that the privilege names are case-sensitive''''''):
+
+=== Repository Browser ===
+
+|| `BROWSER_VIEW` || View directory listings in the [wiki:TracBrowser repository browser] ||
+|| `LOG_VIEW` || View revision logs of files and directories in the [wiki:TracBrowser repository browser] ||
+|| `FILE_VIEW` || View files in the [wiki:TracBrowser repository browser] ||
+|| `CHANGESET_VIEW` || View [wiki:TracChangeset repository check-ins] ||
+
+=== Ticket System ===
+
+|| `TICKET_VIEW` || View existing [wiki:TracTickets tickets] and perform [wiki:TracQuery ticket queries] ||
+|| `TICKET_CREATE` || Create new [wiki:TracTickets tickets] ||
+|| `TICKET_APPEND` || Add comments or attachments to [wiki:TracTickets tickets] ||
+|| `TICKET_CHGPROP` || Modify [wiki:TracTickets ticket] properties (priority, assignment, keywords, etc.) with the following exceptions: edit description field, add/remove other users from cc field when logged in, and set email to pref ||
+|| `TICKET_MODIFY` || Includes both `TICKET_APPEND` and `TICKET_CHGPROP`, and in addition allows resolving [wiki:TracTickets tickets]. Tickets can be assigned to users through a [TracTickets#Assign-toasDrop-DownList drop-down list] when the list of possible owners has been restricted. ||
+|| `TICKET_EDIT_CC` || Full modify cc field ||
+|| `TICKET_EDIT_DESCRIPTION` || Modify description field ||
+|| `TICKET_EDIT_COMMENT` || Modify comments ||
+|| `TICKET_BATCH_MODIFY` || [wiki:TracBatchModify Batch modify] tickets ||
+|| `TICKET_ADMIN` || All `TICKET_*` permissions, plus the deletion of ticket attachments and modification of the reporter and description fields. It also allows managing ticket properties in the WebAdmin panel. ||
+
+Attention: the "view tickets" button appears with the `REPORT_VIEW` permission.
+
+=== Roadmap ===
+
+|| `MILESTONE_VIEW` || View milestones and assign tickets to milestones. ||
+|| `MILESTONE_CREATE` || Create a new milestone ||
+|| `MILESTONE_MODIFY` || Modify existing milestones ||
+|| `MILESTONE_DELETE` || Delete milestones ||
+|| `MILESTONE_ADMIN` || All `MILESTONE_*` permissions ||
+|| `ROADMAP_VIEW` || View the [wiki:TracRoadmap roadmap] page, is not (yet) the same as MILESTONE_VIEW, see [trac:#4292 #4292] ||
+|| `ROADMAP_ADMIN` || to be removed with [trac:#3022 #3022], replaced by MILESTONE_ADMIN ||
+
+=== Reports ===
+
+|| `REPORT_VIEW` || View [wiki:TracReports reports], i.e. the "view tickets" link. ||
+|| `REPORT_SQL_VIEW` || View the underlying SQL query of a [wiki:TracReports report] ||
+|| `REPORT_CREATE` || Create new [wiki:TracReports reports] ||
+|| `REPORT_MODIFY` || Modify existing [wiki:TracReports reports] ||
+|| `REPORT_DELETE` || Delete [wiki:TracReports reports] ||
+|| `REPORT_ADMIN` || All `REPORT_*` permissions ||
+
+=== Wiki System ===
+
+|| `WIKI_VIEW` || View existing [wiki:TracWiki wiki] pages ||
+|| `WIKI_CREATE` || Create new [wiki:TracWiki wiki] pages ||
+|| `WIKI_MODIFY` || Change [wiki:TracWiki wiki] pages ||
+|| `WIKI_RENAME` || Rename [wiki:TracWiki wiki] pages ||
+|| `WIKI_DELETE` || Delete [wiki:TracWiki wiki] pages and attachments ||
+|| `WIKI_ADMIN` || All `WIKI_*` permissions, plus the management of ''''readonly'''' pages. ||
+
+=== Permissions ===
+
+|| `PERMISSION_GRANT` || add/grant a permission ||
+|| `PERMISSION_REVOKE` || remove/revoke a permission ||
+|| `PERMISSION_ADMIN` || All `PERMISSION_*` permissions ||
+
+=== Others ===
+
+|| `TIMELINE_VIEW` || View the [wiki:TracTimeline timeline] page ||
+|| `SEARCH_VIEW` || View and execute [wiki:TracSearch search] queries ||
+|| `CONFIG_VIEW` || Enables additional pages on ''''About Trac'''' that show the current configuration or the list of installed plugins ||
+|| `EMAIL_VIEW` || Shows email addresses even if [wiki:TracIni#trac-section trac show_email_addresses] configuration option is false ||
+
+== Creating New Privileges ==
+
+To create custom permissions, for example to be used in a custom workflow, enable the optional [trac:ExtraPermissionsProvider tracopt.perm.config_perm_provider.ExtraPermissionsProvider] component in the "Plugins" admin panel, and add the desired permissions to the `[extra-permissions]` section in your [wiki:TracIni#extra-permissions-section trac.ini]. For more information, please refer to the documentation of the component in the admin panel.
+
+== Granting Privileges ==
+
+You grant privileges to users using [wiki:TracAdmin trac-admin]. The current set of privileges can be listed with the following command:
+{{{
+  $ trac-admin /path/to/projenv permission list
+}}}
+
+This command will allow the user ''''bob'''' to delete reports:
+{{{
+  $ trac-admin /path/to/projenv permission add bob REPORT_DELETE
+}}}
+
+The `permission add` command also accepts multiple privilege names:
+{{{
+  $ trac-admin /path/to/projenv permission add bob REPORT_DELETE WIKI_CREATE
+}}}
+
+Or add all privileges:
+{{{
+  $ trac-admin /path/to/projenv permission add bob TRAC_ADMIN
+}}}
+
+== Permission Groups ==
+
+There are two built-in groups, "authenticated" and "anonymous".
+Any user who has not logged in is automatically in the "anonymous" group.
+Any user who has logged in is also in the "authenticated" group.
+The "authenticated" group inherits permissions from the "anonymous" group.
+For example, if the "anonymous" group has permission WIKI_MODIFY, 
+it is not necessary to add the WIKI_MODIFY permission to the "authenticated" group as well.
+
+Custom groups may be defined that inherit permissions from the two built-in groups.
+
+Permissions can be grouped together to form roles such as ''''developer'''', ''''admin'''', etc.
+{{{
+  $ trac-admin /path/to/projenv permission add developer WIKI_ADMIN
+  $ trac-admin /path/to/projenv permission add developer REPORT_ADMIN
+  $ trac-admin /path/to/projenv permission add developer TICKET_MODIFY
+  $ trac-admin /path/to/projenv permission add bob developer
+  $ trac-admin /path/to/projenv permission add john developer
+}}}
+
+Group membership can be checked by doing a {{{permission list}}} with no further arguments; the resulting output will include group memberships. ''''''Use at least one lowercase character in group names, as all-uppercase names are reserved for permissions''''''.
+
+== Adding a New Group and Permissions ==
+Permission groups can be created by assigning a user to a group you wish to create, then assign permissions to that group.
+
+The following will add ''''bob'''' to the new group called ''''beta_testers'''' and then will assign WIKI_ADMIN permissions to that group. (Thus, ''''bob'''' will inherit the WIKI_ADMIN permission)
+{{{ 
+   $ trac-admin /path/to/projenv permission add bob beta_testers
+   $ trac-admin /path/to/projenv permission add beta_testers WIKI_ADMIN
+
+}}}
+
+== Removing Permissions ==
+
+Permissions can be removed using the ''remove'' command. For example:
+
+This command will prevent the user ''''bob'''' from deleting reports:
+{{{
+  $ trac-admin /path/to/projenv permission remove bob REPORT_DELETE
+}}}
+
+Just like `permission add`, this command accepts multiple privilege names.
+
+You can also remove all privileges for a specific user:
+{{{
+  $ trac-admin /path/to/projenv permission remove bob ''*''
+}}}
+
+Or one privilege for all users:
+{{{
+  $ trac-admin /path/to/projenv permission remove ''*'' REPORT_ADMIN
+}}}
+
+== Default Permissions ==
+
+By default on a new Trac installation, the `anonymous` user will have ''''view'''' access to everything in Trac, but will not be able to create or modify anything.
+On the other hand, the `authenticated` users will have the permissions to ''''create and modify tickets and wiki pages''''.
+
+''''''anonymous''''''
+{{{
+ BROWSER_VIEW 
+ CHANGESET_VIEW 
+ FILE_VIEW 
+ LOG_VIEW 
+ MILESTONE_VIEW 
+ REPORT_SQL_VIEW 
+ REPORT_VIEW 
+ ROADMAP_VIEW 
+ SEARCH_VIEW 
+ TICKET_VIEW 
+ TIMELINE_VIEW
+ WIKI_VIEW
+}}}
+
+''''''authenticated''''''
+{{{
+ TICKET_CREATE 
+ TICKET_MODIFY 
+ WIKI_CREATE 
+ WIKI_MODIFY  
+}}}
+----
+See also: TracAdmin, TracGuide and TracFineGrainedPermissions
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('TracReports',4,1361171557749000,'trac','127.0.0.1','= Trac Reports =
+[[TracGuideToc]]
+
+The Trac reports module provides a simple, yet powerful reporting facility
+to present information about tickets in the Trac database.
+
+Rather than have its own report definition format, TracReports relies on standard SQL
+`SELECT` statements for custom report definition. 
+
+  ''''''Note:'''''' ''''The report module is being phased out in its current form because it seriously limits the ability of the Trac team to make adjustments to the underlying database schema. We believe that the [wiki:TracQuery query module] is a good replacement that provides more flexibility and better usability. While there are certain reports that cannot yet be handled by the query module, we intend to further enhance it so that at some point the reports module can be completely removed. This also means that there will be no major enhancements to the report module anymore.''''
+
+  ''''You can already completely replace the reports module by the query module simply by disabling the former in [wiki:TracIni trac.ini]:''''
+  {{{
+  [components]
+  trac.ticket.report.* = disabled
+  }}}
+  ''''This will make the query module the default handler for the “View Tickets” navigation item. We encourage you to try this configuration and report back what kind of features of reports you are missing, if any.''''
+
+A report consists of these basic parts:
+ * ''''''ID'''''' — Unique (sequential) identifier 
+ * ''''''Title'''''' — Descriptive title
+ * ''''''Description'''''' — A brief description of the report, in WikiFormatting text.
+ * ''''''Report Body'''''' — List of results from report query, formatted according to the methods described below.
+ * ''''''Footer'''''' — Links to alternative download formats for this report.
+
+== Changing Sort Order ==
+Simple reports - ungrouped reports to be specific - can be changed to be sorted by any column simply by clicking the column header. 
+
+If a column header is a hyperlink (red), click the column you would like to sort by. Clicking the same header again reverses the order.
+
+== Changing Report Numbering ==
+There may be instances where you need to change the ID of the report, perhaps to organize the reports better. At present this requires changes to the trac database. The ''''report'''' table has the following schema ''''(since 0.10)'''':
+ * id integer PRIMARY KEY
+ * author text
+ * title text
+ * query text
+ * description text
+Changing the ID changes the shown order and number in the ''''Available Reports'''' list and the report''s perma-link. This is done by running something like:
+{{{
+update report set id=5 where id=3;
+}}}
+Keep in mind that the integrity has to be maintained (i.e., ID has to be unique, and you don''t want to exceed the max, since that''s managed by SQLite someplace).
+
+You may also need to update or remove the report number stored in the report or query.
+
+== Navigating Tickets ==
+Clicking on one of the report results will take you to that ticket. You can navigate through the results by clicking the ''''Next Ticket'''' or ''''Previous Ticket'''' links just below the main menu bar, or click the ''''Back to Report'''' link to return to the report page.
+
+You can safely edit any of the tickets and continue to navigate through the results using the ''''!Next/Previous/Back to Report'''' links after saving your results, but when you return to the report, there will be no hint about what has changed, as would happen if you were navigating a list of tickets obtained from a query (see TracQuery#NavigatingTickets). ''''(since 0.11)''''
+
+== Alternative Download Formats ==
+Aside from the default HTML view, reports can also be exported in a number of alternative formats.
+At the bottom of the report page, you will find a list of available data formats. Click the desired link to 
+download the alternative report format.
+
+=== Comma-delimited - CSV (Comma Separated Values) ===
+Export the report as plain text, each row on its own line, columns separated by a single comma ('','').
+''''''Note:'''''' The output is fully escaped so carriage returns, line feeds, and commas will be preserved in the output.
+
+=== Tab-delimited ===
+Like above, but uses tabs (\t) instead of comma.
+
+=== RSS - XML Content Syndication ===
+All reports support syndication using XML/RSS 2.0. To subscribe to an RSS feed, click the orange ''XML'' icon at the bottom of the page. See TracRss for general information on RSS support in Trac.
+
+----
+
+== Creating Custom Reports ==
+
+''''Creating a custom report requires a comfortable knowledge of SQL.''''
+
+''''''Note that you need to set up [TracPermissions#Reports permissions] in order to see the buttons for adding or editing reports.''''''
+
+A report is basically a single named SQL query, executed and presented by
+Trac.  Reports can be viewed and created from a custom SQL expression directly
+in the web interface.
+
+Typically, a report consists of a SELECT-expression from the ''ticket'' table,
+using the available columns and sorting the way you want it.
+
+== Ticket columns ==
+The ''''ticket'''' table has the following columns:
+ * id
+ * type
+ * time
+ * changetime
+ * component
+ * severity  
+ * priority 
+ * owner
+ * reporter
+ * cc
+ * version
+ * milestone
+ * status
+ * resolution
+ * summary
+ * description
+ * keywords
+
+See TracTickets for a detailed description of the column fields.
+
+Example: ''''''All active tickets, sorted by priority and time''''''
+{{{
+SELECT id AS ticket, status, severity, priority, owner, 
+       time AS created, summary FROM ticket 
+  WHERE status IN (''new'', ''assigned'', ''reopened'')
+  ORDER BY priority, time
+}}}
+
+
+== Advanced Reports: Dynamic Variables ==
+For more flexible reports, Trac supports the use of ''''dynamic variables'''' in report SQL statements. 
+In short, dynamic variables are ''''special'''' strings that are replaced by custom data before query execution.
+
+=== Using Variables in a Query ===
+The syntax for dynamic variables is simple, any upper case word beginning with ''$'' is considered a variable.
+
+Example:
+{{{
+SELECT id AS ticket,summary FROM ticket WHERE priority=$PRIORITY
+}}}
+
+To assign a value to $PRIORITY when viewing the report, you must define it as an argument in the report URL, leaving out the leading ''$''.
+
+Example:
+{{{
+ http://trac.edgewall.org/reports/14?PRIORITY=high
+}}}
+
+To use multiple variables, separate them with an ''&''.
+
+Example:
+{{{
+ http://trac.edgewall.org/reports/14?PRIORITY=high&SEVERITY=critical
+}}}
+
+Dynamic variables can also be used in the report title and description (since 1.1.1).
+
+=== !Special/Constant Variables ===
+There is one dynamic variable whose value is set automatically (the URL does not have to be changed) to allow practical reports. 
+
+ * $USER — Username of logged in user.
+
+Example (''''List all tickets assigned to me''''):
+{{{
+SELECT id AS ticket,summary FROM ticket WHERE owner=$USER
+}}}
+
+
+
+== Advanced Reports: Custom Formatting ==
+Trac is also capable of more advanced reports, including custom layouts,
+result grouping and user-defined CSS styles. To create such reports, we''ll use
+specialized SQL statements to control the output of the Trac report engine.
+
+=== Special Columns ===
+To format reports, TracReports looks for ''magic'' column names in the query
+result. These ''magic'' names are processed and affect the layout and style of the 
+final report.
+
+=== Automatically formatted columns ===
+ * ''''''ticket'''''' — Ticket ID number. Becomes a hyperlink to that ticket. 
+ * ''''''id'''''' — same as ''''''ticket'''''' above when ''''''realm'''''' is not set
+ * ''''''realm'''''' — together with ''''''id'''''', can be used to create links to other resources than tickets (e.g. a realm of ''''wiki'''' and an ''''id'''' to a page name will create a link to that wiki page)
+ * ''''''created, modified, date, time'''''' — Format cell as a date and/or time.
+ * ''''''description'''''' — Ticket description field, parsed through the wiki engine.
+
+''''''Example:''''''
+{{{
+SELECT id AS ticket, created, status, summary FROM ticket 
+}}}
+
+Those columns can also be defined but marked as hidden, see [#column-syntax below].
+
+See trac:wiki/CookBook/Configuration/Reports for some example of creating reports for realms other than ''''ticket''''.
+
+=== Custom formatting columns ===
+Columns whose names begin and end with 2 underscores (Example: ''''''`__color__`'''''') are
+assumed to be ''''formatting hints'''', affecting the appearance of the row.
+ 
+ * ''''''`__group__`'''''' — Group results based on values in this column. Each group will have its own header and table.
+ * ''''''`__grouplink__`'''''' — Make the header of each group a link to the specified URL. The URL is taken from the first row of each group.
+ * ''''''`__color__`'''''' — Should be a numeric value ranging from 1 to 5 to select a pre-defined row color. Typically used to color rows by issue priority.
+{{{
+#!html
+<div style="margin-left:7.5em">Defaults: 
+<span style="border: none; color: #333; background: transparent;  font-size: 85%; background: #fdc; border-color: #e88; color: #a22">Color 1</span>
+<span style="border: none; color: #333; background: transparent;  font-size: 85%; background: #ffb; border-color: #eea; color: #880">Color 2</span>
+<span style="border: none; color: #333; background: transparent;  font-size: 85%; background: #fbfbfb; border-color: #ddd; color: #444">Color 3</span>
+<span style="border: none; color: #333; background: transparent; font-size: 85%; background: #e7ffff; border-color: #cee; color: #099">Color 4</span>
+<span style="border: none; color: #333; background: transparent;  font-size: 85%; background: #e7eeff; border-color: #cde; color: #469">Color 5</span>
+</div>
+}}}
+ * ''''''`__style__`'''''' — A custom CSS style expression to use on the `<tr>` element of the current row.
+ * ''''''`__class__`'''''' — Zero or more space-separated CSS class names to be set on the `<tr>` element of the current row. These classes are added to the class name derived from `__color__` and the odd / even indicator.
+
+''''''Example:'''''' ''''List active tickets, grouped by milestone, group header linked to milestone page, colored by priority''''
+{{{
+SELECT p.value AS __color__,
+     t.milestone AS __group__,
+     ''../milestone/'' || t.milestone AS __grouplink__,
+     (CASE owner WHEN ''daniel'' THEN ''font-weight: bold; background: red;'' ELSE '''' END) AS __style__,
+       t.id AS ticket, summary
+  FROM ticket t,enum p
+  WHERE t.status IN (''new'', ''assigned'', ''reopened'') 
+    AND p.name=t.priority AND p.type=''priority''
+  ORDER BY t.milestone, p.value, t.severity, t.time
+}}}
+
+''''''Note:'''''' A table join is used to match ''''ticket'''' priorities with their
+numeric representation from the ''''enum'''' table.
+
+=== Changing layout of report rows === #column-syntax
+By default, all columns on each row are display on a single row in the HTML
+report, possibly formatted according to the descriptions above. However, it''s
+also possible to create multi-line report entries.
+
+ * ''''''`column_`'''''' — ''''Break row after this''''. By appending an underscore (''_'') to the column name, the remaining columns will be continued on a second line.
+
+ * ''''''`_column_`'''''' — ''''Full row''''. By adding an underscore (''_'') both at the beginning and the end of a column name, the data will be shown on a separate row.
+
+ * ''''''`_column`'''''' — ''''Hide data''''. Prepending an underscore (''_'') to a column name instructs Trac to hide the contents from the HTML output. This is useful for information to be visible only if downloaded in other formats (like CSV or RSS/XML).
+   This can be used to hide any kind of column, even important ones required for identifying the resource, e.g. `id as _id` will hide the ''''''Id'''''' column but the link to the ticket will be present.
+
+''''''Example:'''''' ''''List active tickets, grouped by milestone, colored by priority, with  description and multi-line layout''''
+
+{{{
+SELECT p.value AS __color__,
+       t.milestone AS __group__,
+       (CASE owner 
+          WHEN ''daniel'' THEN ''font-weight: bold; background: red;'' 
+          ELSE '''' END) AS __style__,
+       t.id AS ticket, summary AS summary_,             -- ## Break line here
+       component,version, severity, milestone, status, owner,
+       time AS created, changetime AS modified,         -- ## Dates are formatted
+       description AS _description_,                    -- ## Uses a full row
+       changetime AS _changetime, reporter AS _reporter -- ## Hidden from HTML output
+  FROM ticket t,enum p
+  WHERE t.status IN (''new'', ''assigned'', ''reopened'') 
+    AND p.name=t.priority AND p.type=''priority''
+  ORDER BY t.milestone, p.value, t.severity, t.time
+}}}
+
+=== Reporting on custom fields ===
+
+If you have added custom fields to your tickets (a feature since v0.8, see TracTicketsCustomFields), you can write a SQL query to cover them. You''ll need to make a join on the ticket_custom table, but this isn''t especially easy.
+
+If you have tickets in the database ''''before'''' you declare the extra fields in trac.ini, there will be no associated data in the ticket_custom table. To get around this, use SQL''s "LEFT OUTER JOIN" clauses. See [trac:TracIniReportCustomFieldSample TracIniReportCustomFieldSample] for some examples.
+
+=== A note about SQL rewriting #rewriting
+
+Beyond the relatively trivial replacement of dynamic variables, the SQL query is also altered in order to support two features of the reports:
+ 1. [#sort-order changing the sort order]
+ 2. pagination support (limitation of the number of result rows displayed on each page)
+In order to support the first feature, the sort column is inserted in the `ORDER BY` clause in the first position or in the second position if a `__group__` column is specified (an `ORDER BY` clause is created if needed). In order to support pagination, a `LIMIT ... OFFSET ...` clause is appended.
+The query might be too complex for the automatic rewrite to work correctly, resulting in an erroneous query. In this case you still have the possibility to control exactly how the rewrite is done by manually inserting the following tokens:
+ - `@SORT_COLUMN@`, the place where the name of the selected sort column will be inserted,
+ - `@LIMIT_OFFSET@`, the place where the pagination support clause will be added
+Note that if you write them after an SQL comment, `--`, you''ll effectively disable rewriting if this is what you want!
+
+Let''s take an example, consider the following SQL query:
+{{{
+-- ## 4: Assigned, Active Tickets by Owner ## --
+
+-- 
+-- List assigned tickets, group by ticket owner, sorted by priority.
+-- 
+
+SELECT p.value AS __color__,
+   owner AS __group__,
+   id AS ticket, summary, component, milestone, t.type AS type, severity, time AS created,
+   changetime AS _changetime, description AS _description,
+   reporter AS _reporter
+  FROM ticket t,enum p
+  WHERE status = ''assigned''
+AND p.name=t.priority AND p.type=''priority''
+  ORDER BY __group__, p.value, severity, time
+}}}
+
+The automatic rewrite will be the following (4 rows per page, page 2, sorted by `component`):
+{{{
+SELECT p.value AS __color__,
+   owner AS __group__,
+   id AS ticket, summary, component, milestone, t.type AS type, severity, time AS created,
+   changetime AS _changetime, description AS _description,
+   reporter AS _reporter
+  FROM ticket t,enum p
+  WHERE status = ''assigned''
+AND p.name=t.priority AND p.type=''priority''
+  ORDER BY __group__ ASC, `component` ASC,  __group__, p.value, severity, time
+ LIMIT 4 OFFSET 4
+}}}
+
+The equivalent SQL query with the rewrite tokens would have been:
+{{{
+SELECT p.value AS __color__,
+   owner AS __group__,
+   id AS ticket, summary, component, milestone, t.type AS type, severity, time AS created,
+   changetime AS _changetime, description AS _description,
+   reporter AS _reporter
+  FROM ticket t,enum p
+  WHERE status = ''assigned''
+AND p.name=t.priority AND p.type=''priority''
+  ORDER BY __group__, @SORT_COLUMN@, p.value, severity, time
+@LIMIT_OFFSET@
+}}}
+
+If you want to always sort first by priority and only then by the user selected sort column, simply use the following `ORDER BY` clause:
+{{{
+  ORDER BY __group__, p.value, @SORT_COLUMN@, severity, time
+}}}
+
+----
+See also: TracTickets, TracQuery, TracGuide, [http://www.sqlite.org/lang_expr.html Query Language Understood by SQLite]
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('TracRepositoryAdmin',4,1361171557749000,'trac','127.0.0.1','= Repository Administration =
+[[PageOutline(2-3)]]
+
+== Quick start == #QuickStart
+
+ * Manage repositories in the "Repository" admin panel, with `trac-admin` or in the `[repositories]` section of [wiki:TracIni#repositories-section trac.ini].
+ * Set up a call to `trac-admin $ENV changeset added $REPO $REV` in the post-commit hook of each repository. Additionally, add a call to `trac-admin $ENV changeset modified $REPO $REV` in the post-revprop-change hook of repositories allowing revision property changes.
+ * Set the `[trac] repository_sync_per_request` option to an empty value to disable per-request syncing.
+ * Make sure the user under which your Subversion hooks are run has write access to the Trac environment, or use a tool like `sudo` to temporarily elevate privileges.
+
+== Specifying repositories == #Repositories
+Starting with 0.12, Trac can handle more than one repository per environment. The pre-0.12 way of specifying the repository with the `repository_dir` and `repository_type` options in the `[trac]` section of [wiki:TracIni trac.ini] is still supported, but two new mechanisms allow including additional repositories into an environment.
+
+It is also possible to define aliases of repositories, that act as "pointers" to real repositories. This can be useful when renaming a repository, to avoid breaking all the links to the old name.
+
+A number of attributes can be associated with each repository, which define the repository''s location, type, name and how it is displayed in the source browser. The following attributes are supported:
+
+||=''''''Attribute'''''' =||=''''''Description'''''' =||
+||`alias` ||\
+||A repository having an `alias` attribute is an alias to a real repository. All TracLinks referencing the alias resolve to the aliased repository. Note that multiple indirection is not supported, so an alias must always point to a real repository. The `alias` and `dir` attributes are mutually exclusive. ||
+||`description` ||\
+||The text specified in the `description` attribute is displayed below the top-level entry for the repository in the source browser. It supports WikiFormatting. ||
+||`dir` ||\
+||The `dir` attribute specifies the location of the repository in the filesystem. It corresponds to the value previously specified in the option `[trac] repository_dir`. The `alias` and `dir` attributes are mutually exclusive. ||
+||`hidden` ||When set to `true`, the repository is hidden from the repository index page in the source browser. Browsing the repository is still possible, and links referencing the repository remain valid. ||
+||`type` ||The `type` attribute sets the type of version control system used by the repository. Trac supports Subversion and Git out-of-the-box, and plugins add support for many other systems. If `type` is not specified, it defaults to the value of the `[trac] repository_type` option. ||
+||`url` ||The `url` attribute specifies the root URL to be used for checking out from the repository. When specified, a "Repository URL" link is added to the context navigation links in the source browser, that can be copied into the tool used for creating the working copy. ||
+
+A repository `name` and one of `alias` or `dir` attributes are mandatory. All others are optional.
+
+After adding a repository, the cache for that repository must be re-synchronized once with the `trac-admin $ENV repository resync` command.
+
+ `repository resync <repos>`::
+   Re-synchronize Trac with a repository.
+
+
+=== In `trac.ini` === #ReposTracIni
+Repositories and repository attributes can be specified in the `[repositories]` section of [wiki:TracIni#repositories-section trac.ini]. Every attribute consists of a key structured as `{name}.{attribute}` and the corresponding value separated with an equal sign (`=`). The name of the default repository is empty.
+
+The main advantage of specifying repositories in `trac.ini` is that they can be inherited from a global configuration (see the [wiki:TracIni#GlobalConfiguration global configuration] section of TracIni). One drawback is that, due to limitations in the `ConfigParser` class used to parse `trac.ini`, the repository name is always all-lowercase.
+
+The following example defines two Subversion repositories named `project` and `lib`, and an alias to `project` as the default repository. This is a typical use case where a Trac environment previously had a single repository (the `project` repository), and was converted to multiple repositories. The alias ensures that links predating the change continue to resolve to the `project` repository.
+{{{
+#!ini
+[repositories]
+project.dir = /var/repos/project
+project.description = This is the ''''main'''' project repository.
+project.type = svn
+project.url = http://example.com/svn/project
+project.hidden = true
+
+lib.dir = /var/repos/lib
+lib.description = This is the secondary library code.
+lib.type = svn
+lib.url = http://example.com/svn/lib
+
+.alias = project
+}}}
+Note that `name.alias = target` makes `name` an alias for the `target` repo, not the other way around.
+
+=== In the database === #ReposDatabase
+Repositories can also be specified in the database, using either the "Repositories" admin panel under "Version Control", or the `trac-admin $ENV repository` commands.
+
+The admin panel shows the list of all repositories defined in the Trac environment. It allows adding repositories and aliases, editing repository attributes and removing repositories. Note that repositories defined in `trac.ini` are displayed but cannot be edited.
+
+The following [wiki:TracAdmin trac-admin] commands can be used to perform repository operations from the command line.
+
+ `repository add <repos> <dir> [type]`::
+   Add a repository `<repos>` located at `<dir>`, and optionally specify its type.
+
+ `repository alias <name> <target>`::
+   Create an alias `<name>` for the repository `<target>`.
+
+ `repository remove <repos>`::
+   Remove the repository `<repos>`.
+
+ `repository set <repos> <key> <value>`::
+   Set the attribute `<key>` to `<value>` for the repository `<repos>`. 
+
+Note that the default repository has an empty name, so it will likely need to be quoted when running `trac-admin` from a shell. Alternatively, the name "`(default)`" can be used instead, for example when running `trac-admin` in interactive mode.
+
+
+== Repository synchronization == #Synchronization
+Prior to 0.12, Trac synchronized its cache with the repository on every HTTP request. This approach is not very efficient and not practical anymore with multiple repositories. For this reason, explicit synchronization through post-commit hooks was added. 
+
+There is also new functionality in the form of a repository listener extension point ''''(IRepositoryChangeListener)'''' that is triggered by the post-commit hook when a changeset is added or modified, and can be used by plugins to perform actions on commit.
+
+=== Mercurial Repositories ===
+Please note that at the time of writing, no initial resynchronization or any hooks are necessary for Mercurial repositories - see [trac:#9485] for more information. 
+
+=== Explicit synchronization === #ExplicitSync
+This is the preferred method of repository synchronization. It requires setting the `[trac]  repository_sync_per_request` option in [wiki:TracIni#trac-section trac.ini] to an empty value, and adding a call to `trac-admin` in the post-commit hook of each repository. Additionally, if a repository allows changing revision metadata, a call to `trac-admin` must be added to the post-revprop-change hook as well.
+
+ `changeset added <repos> <rev> [...]`::
+   Notify Trac that one or more changesets have been added to a repository.
+
+ `changeset modified <repos> <rev> [...]`::
+   Notify Trac that metadata on one or more changesets in a repository has been modified.
+
+The `<repos>` argument can be either a repository name (use "`(default)`" for the default repository) or the path to the repository.
+
+Note that you may have to set the environment variable PYTHON_EGG_CACHE to the same value as was used for the web server configuration before calling trac-admin, if you changed it from its default location. See [wiki:TracPlugins Trac Plugins] for more information.
+
+The following examples are complete post-commit and post-revprop-change scripts for Subversion. They should be edited for the specific environment, marked executable (where applicable) and placed in the `hooks` directory of each repository. On Unix (`post-commit`):
+{{{#!sh
+#!/bin/sh
+export PYTHON_EGG_CACHE="/path/to/dir"
+/usr/bin/trac-admin /path/to/env changeset added "$1" "$2"
+}}}
+Note: Ubuntu doesn''t seem to like /usr/bin/trac-admin, so just use:
+{{{#!sh
+#!/bin/sh
+export PYTHON_EGG_CACHE="/path/to/dir"
+trac-admin /path/to/env/ changeset added "$1" "$2"
+}}}
+On Windows (`post-commit.cmd`):
+{{{#!application/x-dos-batch
+@C:\Python26\Scripts\trac-admin.exe C:\path\to\env changeset added "%1" "%2"
+}}}
+
+The post-revprop-change hook for Subversion is very similar. On Unix (`post-revprop-change`):
+{{{#!sh
+#!/bin/sh
+export PYTHON_EGG_CACHE="/path/to/dir"
+/usr/bin/trac-admin /path/to/env changeset modified "$1" "$2"
+}}}
+On Windows (`post-revprop-change.cmd`):
+{{{#!application/x-dos-batch
+@C:\Python26\Scripts\trac-admin.exe C:\path\to\env changeset modified "%1" "%2"
+}}}
+
+The Unix variants above assume that the user running the Subversion commit has write access to the Trac environment, which is the case in the standard configuration where both the repository and Trac are served by the web server. If you access the repository through another means, for example `svn+ssh://`, you may have to run `trac-admin` with different privileges, for example by using `sudo`.
+
+Note that calling `trac-admin` in your Subversion hooks can slow down the commit and log editing operations on the client side. You might want to use the [trac:source:trunk/contrib/trac-svn-hook contrib/trac-svn-hook] script which starts `trac-admin` in an asynchronous way. The script also comes with a number of safety checks and usage advices which should make it easier to set up and test your hooks. There''s no equivalent `trac-svn-hook.bat` for Windows yet, but the script can be run by Cygwin''s bash.
+
+See the [http://svnbook.red-bean.com/en/1.5/svn.reposadmin.create.html#svn.reposadmin.create.hooks section about hooks] in the Subversion book for more information. Other repository types will require different hook setups.
+
+Git hooks can be used in the same way for explicit syncing of git repositories. Add the following to `.git/hooks/post-commit`:
+{{{#!sh
+REV=$(git rev-parse HEAD)
+trac-admin /path/to/env changeset added <my-repository> $REV
+}}}
+
+For Mercurial, add the following entries to the `.hgrc` file of each repository accessed by Trac (if [trac:TracMercurial] is installed in a Trac `plugins` directory, download [trac:source:mercurial-plugin/tracext/hg/hooks.py hooks.py] and place it somewhere accessible):
+{{{#!ini
+[hooks]
+; If mercurial-plugin is installed globally
+commit = python:tracext.hg.hooks.add_changesets
+changegroup = python:tracext.hg.hooks.add_changesets
+
+; If mercurial-plugin is installed in a Trac plugins directory
+commit = python:/path/to/hooks.py:add_changesets
+changegroup = python:/path/to/hooks.py:add_changesets
+
+[trac]
+env = /path/to/env
+trac-admin = /path/to/trac-admin
+}}}
+
+=== Per-request synchronization === #PerRequestSync
+If the post-commit hooks are not available, the environment can be set up for per-request synchronization. In that case, the `[trac] repository_sync_per_request` option in [wiki:TracIni#trac-section trac.ini] must be set to a comma-separated list of repository names to be synchronized.
+
+Note that in this case, the changeset listener extension point is not called, and therefore plugins using it will not work correctly.
+
+
+== Migration from a single-repository setup (Subversion) == #Migration
+The following procedure illustrates a typical migration from a Subversion single-repository setup to multiple repositories.
+
+ 1. Remove the default repository specification from the `[trac] repository_dir` option.
+ 1. Add the main repository as a named repository.
+ 1. Re-synchronize the main repository.
+ 1. Set up post-commit and post-revprop-change hooks on the "main" repository, and set `[trac] repository_sync_per_request` to an empty value.
+ 1. Add an alias to the main repository as the default repository (by leaving out the the `name`, e.g. `.alias = main`). This ensures that all links predating the migration still resolve to the main repository.
+ 1. Repeat steps 2, 3 and 4 to add other "named" repositories as needed.
+
+== Migration from a single-repository setup (Mercurial) == #MigrationMercurial
+The following procedure illustrates a typical migration from a Mercurial single-repository setup to multiple repositories. Please note that at the time of writing, no initial resynchronization or any hooks are necessary for Mercurial repositories - see [trac:ticket:9485 #9485] for more information.
+
+ 1. Upgrade to the latest version of the TracMercurial plugin.
+ 1. Remove the default repository specification from the `[trac] repository_dir` option.
+ 1. Add the main repository as a named repository.
+ 1. Add an alias to the main repository as the default repository (by leaving out the the `name`, e.g. `.alias = main`). This ensures that all links predating the migration still resolve to the main repository.
+ 1. Repeat step 3 to add other "named" repositories as needed.
+
+== Troubleshooting ==
+
+=== My trac-post-commit-hook doesn''t work anymore === #trac-post-commit-hook
+
+You must now use the optional components from `tracopt.ticket.commit_updater.*`, which you can activate through the Plugins panel in the Administrative part of the web interface, or by directly modifying the [TracIni#components-section "[components]"] section in the trac.ini. Be sure to use [#ExplicitSync explicit synchronization] as explained above.
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('TracStandalone',4,1361171557749000,'trac','127.0.0.1','= Tracd =
+
+Tracd is a lightweight standalone Trac web server.
+It can be used in a variety of situations, from a test or development server to a multiprocess setup behind another web server used as a load balancer.
+
+== Pros ==
+
+ * Fewer dependencies: You don''t need to install apache or any other web-server.
+ * Fast: Should be almost as fast as the [wiki:TracModPython mod_python] version (and much faster than the [wiki:TracCgi CGI]), even more so since version 0.12 where the HTTP/1.1 version of the protocol is enabled by default
+ * Automatic reloading: For development, Tracd can be used in ''''auto_reload'''' mode, which will automatically restart the server whenever you make a change to the code (in Trac itself or in a plugin).
+
+== Cons ==
+
+ * Fewer features: Tracd implements a very simple web-server and is not as configurable or as scalable as Apache httpd.
+ * No native HTTPS support: [http://www.rickk.com/sslwrap/ sslwrap] can be used instead,
+   or [http://trac.edgewall.org/wiki/STunnelTracd stunnel -- a tutorial on how to use stunnel with tracd] or Apache with mod_proxy.
+
+== Usage examples ==
+
+A single project on port 8080. (http://localhost:8080/)
+{{{
+ $ tracd -p 8080 /path/to/project
+}}}
+Stricly speaking this will make your Trac accessible to everybody from your network rather than ''''localhost only''''. To truly limit it use ''''--hostname'''' option.
+{{{
+ $ tracd --hostname=localhost -p 8080 /path/to/project
+}}}
+With more than one project. (http://localhost:8080/project1/ and http://localhost:8080/project2/)
+{{{
+ $ tracd -p 8080 /path/to/project1 /path/to/project2
+}}}
+
+You can''t have the last portion of the path identical between the projects since Trac uses that name to keep the URLs of the
+different projects unique. So if you use `/project1/path/to` and `/project2/path/to`, you will only see the second project.
+
+An alternative way to serve multiple projects is to specify a parent directory in which each subdirectory is a Trac project, using the `-e` option. The example above could be rewritten:
+{{{
+ $ tracd -p 8080 -e /path/to
+}}}
+
+To exit the server on Windows, be sure to use {{{CTRL-BREAK}}} -- using {{{CTRL-C}}} will leave a Python process running in the background.
+
+== Installing as a Windows Service ==
+
+=== Option 1 ===
+To install as a Windows service, get the [http://www.google.com/search?q=srvany.exe SRVANY] utility and run:
+{{{
+ C:\path\to\instsrv.exe tracd C:\path\to\srvany.exe
+ reg add HKLM\SYSTEM\CurrentControlSet\Services\tracd\Parameters /v Application /d "\"C:\path\to\python.exe\" \"C:\path\to\python\scripts\tracd-script.py\" <your tracd parameters>"
+ net start tracd
+}}}
+
+''''''DO NOT'''''' use {{{tracd.exe}}}.  Instead register {{{python.exe}}} directly with {{{tracd-script.py}}} as a parameter.  If you use {{{tracd.exe}}}, it will spawn the python process without SRVANY''s knowledge.  This python process will survive a {{{net stop tracd}}}.
+
+If you want tracd to start automatically when you boot Windows, do:
+{{{
+ sc config tracd start= auto
+}}}
+
+The spacing here is important.
+
+{{{#!div
+Once the service is installed, it might be simpler to run the Registry Editor rather than use the `reg add` command documented above.  Navigate to:[[BR]]
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\tracd\Parameters`
+
+Three (string) parameters are provided:
+||!AppDirectory ||C:\Python26\ ||
+||Application ||python.exe ||
+||!AppParameters ||scripts\tracd-script.py -p 8080 ... ||
+
+Note that, if the !AppDirectory is set as above, the paths of the executable ''''and'''' of the script name and parameter values are relative to the directory.  This makes updating Python a little simpler because the change can be limited, here, to a single point.
+(This is true for the path to the .htpasswd file, as well, despite the documentation calling out the /full/path/to/htpasswd; however, you may not wish to store that file under the Python directory.)
+}}}
+
+For Windows 7 User, srvany.exe may not be an option, so you can use [http://www.google.com/search?q=winserv.exe WINSERV] utility and run:
+{{{
+"C:\path\to\winserv.exe" install tracd -displayname "tracd" -start auto "C:\path\to\python.exe" c:\path\to\python\scripts\tracd-script.py <your tracd parameters>"
+
+net start tracd
+}}}
+
+=== Option 2 ===
+
+Use [http://trac-hacks.org/wiki/WindowsServiceScript WindowsServiceScript], available at [http://trac-hacks.org/ Trac Hacks]. Installs, removes, starts, stops, etc. your Trac service.
+
+=== Option 3 ===
+
+also cygwin''s cygrunsrv.exe can be used:
+{{{
+$ cygrunsrv --install tracd --path /cygdrive/c/Python27/Scripts/tracd.exe --args ''--port 8000 --env-parent-dir E:\IssueTrackers\Trac\Projects''
+$ net start tracd
+}}}
+
+== Using Authentication ==
+
+Tracd allows you to run Trac without the need for Apache, but you can take advantage of Apache''s password tools (htpasswd and htdigest) to easily create a password file in the proper format for tracd to use in authentication. (It is also possible to create the password file without htpasswd or htdigest; see below for alternatives)
+
+Tracd provides support for both Basic and Digest authentication. Digest is considered more secure. The examples below use Digest; to use Basic authentication, replace `--auth` with `--basic-auth` in the command line.
+
+The general format for using authentication is:
+{{{
+ $ tracd -p port --auth="base_project_dir,password_file_path,realm" project_path
+}}}
+where:
+ * ''''''base_project_dir'''''': the base directory of the project specified as follows:
+   * when serving multiple projects: ''''relative'''' to the `project_path`
+   * when serving only a single project (`-s`): the name of the project directory
+ Don''t use an absolute path here as this won''t work. ''''Note:'''' This parameter is case-sensitive even for environments on Windows.
+ * ''''''password_file_path'''''': path to the password file
+ * ''''''realm'''''': the realm name (can be anything)
+ * ''''''project_path'''''': path of the project
+
+ * **`--auth`** in the above means use Digest authentication, replace `--auth` with `--basic-auth` if you want to use Basic auth.  Although Basic authentication does not require a "realm", the command parser does, so the second comma is required, followed directly by the closing quote for an empty realm name.
+
+Examples:
+
+{{{
+ $ tracd -p 8080 \
+   --auth="project1,/path/to/passwordfile,mycompany.com" /path/to/project1
+}}}
+
+Of course, the password file can be be shared so that it is used for more than one project:
+{{{
+ $ tracd -p 8080 \
+   --auth="project1,/path/to/passwordfile,mycompany.com" \
+   --auth="project2,/path/to/passwordfile,mycompany.com" \
+   /path/to/project1 /path/to/project2
+}}}
+
+Another way to share the password file is to specify "*" for the project name:
+{{{
+ $ tracd -p 8080 \
+   --auth="*,/path/to/users.htdigest,mycompany.com" \
+   /path/to/project1 /path/to/project2
+}}}
+
+=== Basic Authorization: Using a htpasswd password file ===
+This section describes how to use `tracd` with Apache .htpasswd files.
+
+  Note: It is necessary (at least with Python 2.6) to install the fcrypt package in order to
+  decode some htpasswd formats.  Trac source code attempt an `import crypt` first, but there
+  is no such package for Python 2.6. Only `SHA-1` passwords (since Trac 1.0) work without this module.
+
+To create a .htpasswd file use Apache''s `htpasswd` command (see [#GeneratingPasswordsWithoutApache below] for a method to create these files without using Apache):
+{{{
+ $ sudo htpasswd -c /path/to/env/.htpasswd username
+}}}
+then for additional users:
+{{{
+ $ sudo htpasswd /path/to/env/.htpasswd username2
+}}}
+
+Then to start `tracd` run something like this:
+{{{
+ $ tracd -p 8080 --basic-auth="projectdirname,/fullpath/environmentname/.htpasswd,realmname" /fullpath/environmentname
+}}}
+
+For example:
+{{{
+ $ tracd -p 8080 --basic-auth="testenv,/srv/tracenv/testenv/.htpasswd,My Test Env" /srv/tracenv/testenv
+}}}
+''''Note:'''' You might need to pass "-m" as a parameter to htpasswd on some platforms (OpenBSD).
+
+=== Digest authentication: Using a htdigest password file ===
+
+If you have Apache available, you can use the htdigest command to generate the password file. Type ''htdigest'' to get some usage instructions, or read [http://httpd.apache.org/docs/2.0/programs/htdigest.html this page] from the Apache manual to get precise instructions.  You''ll be prompted for a password to enter for each user that you create.  For the name of the password file, you can use whatever you like, but if you use something like `users.htdigest` it will remind you what the file contains. As a suggestion, put it in your <projectname>/conf folder along with the [TracIni trac.ini] file.
+
+Note that you can start tracd without the `--auth` argument, but if you click on the ''''Login'''' link you will get an error.
+
+=== Generating Passwords Without Apache ===
+
+Basic Authorization can be accomplished via this [http://aspirine.org/htpasswd_en.html online HTTP Password generator] which also supports `SHA-1`.  Copy the generated password-hash line to the .htpasswd file on your system. Note that Windows Python lacks the "crypt" module that is the default hash type for htpasswd ; Windows Python can grok MD5 password hashes just fine and you should use MD5.
+
+You can use this simple Python script to generate a ''''''digest'''''' password file:
+
+{{{
+#!python
+from optparse import OptionParser
+# The md5 module is deprecated in Python 2.5
+try:
+    from hashlib import md5
+except ImportError:
+    from md5 import md5
+realm = ''trac''
+
+# build the options
+usage = "usage: %prog [options]"
+parser = OptionParser(usage=usage)
+parser.add_option("-u", "--username",action="store", dest="username", type = "string",
+                  help="the username for whom to generate a password")
+parser.add_option("-p", "--password",action="store", dest="password", type = "string",
+                  help="the password to use")
+parser.add_option("-r", "--realm",action="store", dest="realm", type = "string",
+                  help="the realm in which to create the digest")
+(options, args) = parser.parse_args()
+
+# check options
+if (options.username is None) or (options.password is None):
+   parser.error("You must supply both the username and password")
+if (options.realm is not None):
+   realm = options.realm
+   
+# Generate the string to enter into the htdigest file
+kd = lambda x: md5('':''.join(x)).hexdigest()
+print '':''.join((options.username, realm, kd([options.username, realm, options.password])))
+}}}
+
+Note: If you use the above script you must set the realm in the `--auth` argument to ''''''`trac`''''''. Example usage (assuming you saved the script as trac-digest.py):
+
+{{{
+ $ python trac-digest.py -u username -p password >> c:\digest.txt
+ $ tracd --port 8000 --auth=proj_name,c:\digest.txt,trac c:\path\to\proj_name
+}}}
+
+==== Using `md5sum`
+It is possible to use `md5sum` utility to generate digest-password file:
+{{{
+user=
+realm=
+password=
+path_to_file=
+echo ${user}:${realm}:$(printf "${user}:${realm}:${password}" | md5sum - | sed -e ''s/\s\+-//'') > ${path_to_file}
+}}}
+
+== Reference ==
+
+Here''s the online help, as a reminder (`tracd --help`):
+{{{
+Usage: tracd [options] [projenv] ...
+
+Options:
+  --version             show program''s version number and exit
+  -h, --help            show this help message and exit
+  -a DIGESTAUTH, --auth=DIGESTAUTH
+                        [projectdir],[htdigest_file],[realm]
+  --basic-auth=BASICAUTH
+                        [projectdir],[htpasswd_file],[realm]
+  -p PORT, --port=PORT  the port number to bind to
+  -b HOSTNAME, --hostname=HOSTNAME
+                        the host name or IP address to bind to
+  --protocol=PROTOCOL   http|scgi|ajp|fcgi
+  -q, --unquote         unquote PATH_INFO (may be needed when using ajp)
+  --http10              use HTTP/1.0 protocol version instead of HTTP/1.1
+  --http11              use HTTP/1.1 protocol version (default)
+  -e PARENTDIR, --env-parent-dir=PARENTDIR
+                        parent directory of the project environments
+  --base-path=BASE_PATH
+                        the initial portion of the request URL''s "path"
+  -r, --auto-reload     restart automatically when sources are modified
+  -s, --single-env      only serve a single project without the project list
+  -d, --daemonize       run in the background as a daemon
+  --pidfile=PIDFILE     when daemonizing, file to which to write pid
+  --umask=MASK          when daemonizing, file mode creation mask to use, in
+                        octal notation (default 022)
+  --group=GROUP         the group to run as
+  --user=USER           the user to run as
+}}}
+
+Use the -d option so that tracd doesn''t hang if you close the terminal window where tracd was started.
+
+== Tips ==
+
+=== Serving static content ===
+
+If `tracd` is the only web server used for the project, 
+it can also be used to distribute static content 
+(tarballs, Doxygen documentation, etc.)
+
+This static content should be put in the `$TRAC_ENV/htdocs` folder,
+and is accessed by URLs like `<project_URL>/chrome/site/...`.
+
+Example: given a `$TRAC_ENV/htdocs/software-0.1.tar.gz` file,
+the corresponding relative URL would be `/<project_name>/chrome/site/software-0.1.tar.gz`, 
+which in turn can be written as `htdocs:software-0.1.tar.gz` (TracLinks syntax) or `[/<project_name>/chrome/site/software-0.1.tar.gz]` (relative link syntax). 
+
+ ''''Support for `htdocs:` TracLinks syntax was added in version 0.10''''
+
+=== Using tracd behind a proxy
+
+In some situations when you choose to use tracd behind Apache or another web server.
+
+In this situation, you might experience issues with redirects, like being redirected to URLs with the wrong host or protocol. In this case (and only in this case), setting the `[trac] use_base_url_for_redirect` to `true` can help, as this will force Trac to use the value of `[trac] base_url` for doing the redirects.
+
+If you''re using the AJP protocol to connect with `tracd` (which is possible if you have flup installed), then you might experience problems with double quoting. Consider adding the `--unquote` parameter.
+
+See also [trac:TracOnWindowsIisAjp], [trac:TracNginxRecipe].
+
+=== Authentication for tracd behind a proxy
+It is convenient to provide central external authentication to your tracd instances, instead of using {{{--basic-auth}}}. There is some discussion about this in #9206.
+
+Below is example configuration based on Apache 2.2, mod_proxy, mod_authnz_ldap.
+
+First we bring tracd into Apache''s location namespace.
+
+{{{
+<Location /project/proxified>
+        Require ldap-group cn=somegroup, ou=Groups,dc=domain.com
+        Require ldap-user somespecificusertoo
+        ProxyPass http://localhost:8101/project/proxified/
+        # Turns out we don''t really need complicated RewriteRules here at all
+        RequestHeader set REMOTE_USER %{REMOTE_USER}s
+</Location>
+}}}
+
+Then we need a single file plugin to recognize HTTP_REMOTE_USER header as valid authentication source. HTTP headers like ''''''HTTP_FOO_BAR'''''' will get converted to ''''''Foo-Bar'''''' during processing. Name it something like ''''''remote-user-auth.py'''''' and drop it into ''''''proxified/plugins'''''' directory:
+{{{
+#!python
+from trac.core import *
+from trac.config import BoolOption
+from trac.web.api import IAuthenticator
+
+class MyRemoteUserAuthenticator(Component):
+
+    implements(IAuthenticator)
+
+    obey_remote_user_header = BoolOption(''trac'', ''obey_remote_user_header'', ''false'', 
+               """Whether the ''Remote-User:'' HTTP header is to be trusted for user logins 
+                (''''since ??.??'').""") 
+
+    def authenticate(self, req):
+        if self.obey_remote_user_header and req.get_header(''Remote-User''): 
+            return req.get_header(''Remote-User'') 
+        return None
+
+}}}
+
+Add this new parameter to your TracIni:
+{{{
+...
+[trac]
+...
+obey_remote_user_header = true
+...
+}}}
+
+Run tracd:
+{{{
+tracd -p 8101 -r -s proxified --base-path=/project/proxified
+}}}
+
+Note that if you want to install this plugin for all projects, you have to put it in your [TracPlugins#Plugindiscovery global plugins_dir] and enable it in your global trac.ini.
+
+Global config (e.g. `/srv/trac/conf/trac.ini`):
+{{{
+[components]
+remote-user-auth.* = enabled
+[inherit]
+plugins_dir = /srv/trac/plugins
+[trac]
+obey_remote_user_header = true
+}}}
+
+Environment config (e.g. `/srv/trac/envs/myenv`):
+{{{
+[inherit]
+file = /srv/trac/conf/trac.ini
+}}}
+
+=== Serving a different base path than / ===
+Tracd supports serving projects with different base urls than /<project>. The parameter name to change this is
+{{{
+ $ tracd --base-path=/some/path
+}}}
+
+----
+See also: TracInstall, TracCgi, TracModPython, TracGuide, [trac:TracOnWindowsStandalone#RunningTracdasservice Running tracd.exe as a Windows service]
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('TracUpgrade',4,1361171557765000,'trac','127.0.0.1','= Upgrade Instructions =
+[[TracGuideToc]]
+[[PageOutline(2-4,,inline,unnumbered)]]
+
+== Instructions ==
+
+Typically, there are seven steps involved in upgrading to a newer version of Trac:
+
+=== 1. Bring your server off-line
+
+It is not a good idea to update a running server: the server processes may have parts of the current packages cached in memory, and updating the code will likely trigger [#ZipImportError internal errors]. 
+
+=== 2. Update the Trac Code === #UpdatetheTracCode
+
+Get the new version as described in TracInstall, or your operating system specific procedure.
+
+If you already have a 0.11 version of Trac installed via `easy_install`, it might be easiest to also use `easy_install` to upgrade your Trac installation:
+
+{{{
+# easy_install --upgrade Trac==0.12
+}}}
+
+If you do a manual (not operating system-specific) upgrade, you should also stop any running Trac servers before the installation. Doing "hot" upgrades is not advised, especially on Windows ([trac:#7265]).
+
+You may also want to remove the pre-existing Trac code by deleting the `trac` directory from the Python `lib/site-packages` directory, or remove Trac `.egg` files from former versions.
+The location of the site-packages directory depends on the operating system and the location in which Python was installed. However, the following locations are typical:
+ * on Linux: `/usr/lib/python2.X/site-packages`
+ * on Windows: `C:\Python2.X\lib\site-packages`
+ * on MacOSX: `/Library/Python/2.X/site-packages`
+
+You may also want to remove the Trac `cgi-bin`, `htdocs`, `templates` and `wiki-default` directories that are commonly found in a directory called `share/trac`. (The exact location depends on your platform.)
+
+This cleanup is not mandatory, but makes it easier to troubleshoot issues later on, as you won''t waste your time looking at code or templates from a previous release that are not being used anymore... As usual, make a backup before actually deleting things.
+
+=== 3. Upgrade the Trac Environment === #UpgradetheTracEnvironment
+
+Environment upgrades are not necessary for minor version releases unless otherwise noted. 
+
+After restarting, Trac should show the instances which need a manual upgrade via the automated upgrade scripts to ease the pain. These scripts are run via [TracAdmin trac-admin]:
+{{{
+trac-admin /path/to/projenv upgrade
+}}}
+
+This command will do nothing if the environment is already up-to-date.
+
+Note that a backup of your database will be performed automatically prior to the upgrade. 
+This feature is relatively new for the PostgreSQL or MySQL database backends, so if it fails, you will have to backup the database manually. Then, to perform the actual upgrade, run:
+{{{
+trac-admin /path/to/projenv upgrade --no-backup
+}}}
+
+=== 4. Update the Trac Documentation === #UpdatetheTracDocumentation
+
+Every [TracEnvironment Trac environment] includes a copy of the Trac documentation for the installed version. As you probably want to keep the included documentation in sync with the installed version of Trac, [TracAdmin trac-admin] provides a command to upgrade the documentation:
+{{{
+trac-admin /path/to/projenv wiki upgrade
+}}}
+
+Note that this procedure will leave your `WikiStart` page intact.
+
+
+=== 5. Refresh static resources ===
+
+If you have set up a web server to give out static resources directly (accessed using the `/chrome/` URL) then you will need to refresh them using the same command:
+{{{
+trac-admin /path/to/env deploy /deploy/path
+}}}
+this will extract static resources and CGI scripts (`trac.wsgi`, etc) from new Trac version and its plugins into `/deploy/path`.
+
+Some web browsers (IE, Opera) cache CSS and Javascript files aggressively, so you may need to instruct your users to manually erase the contents of their browser''s cache, a forced refreshed (`<F5>`) should be enough.
+{{{#!comment
+Remove above note once #9936 is fixed.
+}}}
+
+=== 6. Steps specific to a given Trac version  ===
+==== Upgrading from Trac 0.12 to Trac 1.0 ==== #to1.0
+
+The Trac components for Subversion support are no longer enabled by default. To enable the svn support, you need to make sure the `tracopt.versioncontrol.svn` components are enabled, for example by setting the following in the TracIni:
+{{{
+[components]
+tracopt.versioncontrol.svn.* = enabled
+}}}
+The upgrade procedure should take care of this and change the TracIni appropriately, unless you already had the svn components explicitly disabled.
+
+Another step in the automatic upgrade will change the way the attachments are stored. If you''re a bit paranoid, you might want to take a backup of the `attachments` directory before upgrading (but if you are, you already did a full copy of the environment, no?). In case the `attachments` directory contains some files which are //not// attachments, the last step of the migration to the new layout will fail: the deletion of the now unused `attachments` directory can''t be done if there are still files and folders in it. You may ignore this error, but better go have a look to these files, move them elsewhere and remove the `attachments` directory manually to cleanup the environment. The attachments themselves are now all located in your environment below the `files/attachments` directory.
+
+
+==== Upgrading from Trac 0.11 to Trac 0.12 ====
+
+===== Python 2.3 no longer supported =====
+The minimum supported version of python is now 2.4
+
+===== SQLite v3.x required =====
+SQLite v2.x is no longer supported. If you still use a Trac database of this format, you''ll need to convert it to SQLite v3.x first. See [trac:PySqlite#UpgradingSQLitefrom2.xto3.x] for details.
+
+===== PySqlite 2 required =====
+PySqlite 1.1.x is no longer supported. Please install 2.5.5 or later if possible (see [#Tracdatabaseupgrade Trac database upgrade] below).
+
+===== Multiple Repository Support =====
+The latest version includes support for multiple repositories. If you plan to add more repositories to your Trac instance, please refer to TracRepositoryAdmin#Migration.
+
+This may be of interest to users with only one repository, since there''s now a way to avoid the potentially costly resync check at every request.
+
+===== Resynchronize the Trac Environment Against the Source Code Repository =====
+
+Each [TracEnvironment Trac environment] must be resynchronized against the source code repository in order to avoid errors such as "[http://trac.edgewall.org/ticket/6120 No changeset ??? in the repository]" while browsing the source through the Trac interface:
+
+{{{
+trac-admin /path/to/projenv repository resync ''*''
+}}}
+
+===== Improved repository synchronization =====
+In addition to supporting multiple repositories, there is now a more efficient method for synchronizing Trac and your repositories.
+
+While you can keep the same synchronization as in 0.11 adding the post-commit hook as outlined in TracRepositoryAdmin#Synchronization and TracRepositoryAdmin#ExplicitSync will allow more efficient synchronization and is more or less required for multiple repositories.
+
+Note that if you were using the `trac-post-commit-hook`, ''''you''re strongly advised to upgrade it'''' to the new hook documented in the above references and [TracWorkflow#Howtocombinethetracopt.ticket.commit_updaterwiththetestingworkflow here], as the old hook will not work with anything else than the default repository and even for this case, it won''t trigger the appropriate notifications.
+
+===== Authz permission checking =====
+The authz permission checking has been migrated to a fine-grained permission policy. If you use authz permissions (aka `[trac] authz_file` and `authz_module_name`), you must add `AuthzSourcePolicy` in front of your permission policies in `[trac] permission_policies`. You must also remove `BROWSER_VIEW`, `CHANGESET_VIEW`, `FILE_VIEW` and `LOG_VIEW` from your global permissions (with `trac-admin $ENV permission remove` or the "Permissions" admin panel).
+
+===== Microsecond timestamps =====
+All timestamps in database tables (except the `session` table) have been changed from "seconds since epoch" to "microseconds since epoch" values. This change should be transparent to most users, except for custom reports. If any of your reports use date/time columns in calculations (e.g. to pass them to `datetime()`), you must divide the values retrieved from the database by 1''000''000. Similarly, if a report provides a calculated value to be displayed as a date/time (i.e. with a column named "time", "datetime", "changetime", "date", "created" or "modified"), you must provide a microsecond timestamp, that is, multiply your previous calculation with 1''000''000.
+
+==== Upgrading from Trac 0.10 to Trac 0.11 ====
+===== Site Templates and Styles =====
+The templating engine has changed in 0.11 to Genshi, please look at TracInterfaceCustomization for more information.
+
+If you are using custom CSS styles or modified templates in the `templates` directory of the TracEnvironment, you will need to convert them to the Genshi way of doing things. To continue to use your style sheet, follow the instructions at TracInterfaceCustomization#SiteAppearance.
+
+===== Trac Macros, Plugins =====
+The Trac macros will need to be adapted, as the old-style wiki-macros are not supported anymore (due to the drop of [trac:ClearSilver] and the HDF); they need to be converted to the new-style macros, see WikiMacros. When they are converted to the new style, they need to be placed into the plugins directory instead and not wiki-macros, which is no longer scanned for macros or plugins.
+
+===== For FCGI/WSGI/CGI users =====
+For those who run Trac under the CGI environment, run this command in order to obtain the trac.*gi file:
+{{{
+trac-admin /path/to/env deploy /deploy/directory/path
+}}}
+
+This will create a deploy directory with the following two subdirectories: `cgi-bin` and `htdocs`. Then update your Apache configuration file `httpd.conf` with this new `trac.cgi` location and `htdocs` location.
+
+===== Web Admin plugin integrated =====
+If you had the webadmin plugin installed, you can uninstall it as it is part of the Trac code base since 0.11.
+
+=== 7. Restart the Web Server === #RestarttheWebServer
+
+If you are not running [wiki:TracCgi CGI], reload the new Trac code by restarting your web server.
+
+== Known Issues ==
+
+Things you should pay attention to, while upgrading.
+
+=== Customized Templates
+
+Trac supports customization of its Genshi templates by placing copies of the templates in the `<env>/templates` folder of your [TracEnvironment environment] or in a common location specified in the [[TracIni#GlobalConfiguration| [inherit] templates_dir]] configuration setting. If you choose to do so, be wary that you will need to repeat your changes manually on a copy of the new templates when you upgrade to a new release of Trac (even a minor one), as the templates will likely evolve. So keep a diff around ;-)
+
+The preferred way to perform TracInterfaceCustomization is to write a custom plugin doing an appropriate `ITemplateStreamFilter` transformation, as this is more robust in case of changes: we usually won''t modify element `id`s or change CSS `class`es, and if we have to do so, this will be documented in the TracDev/ApiChanges pages.
+
+=== !ZipImportError ===
+
+Due to internal caching of zipped packages,  whenever the content of the packages change on disk, the in-memory zip index will no longer match and you''ll get irrecoverable !ZipImportError errors. Better anticipate and bring your server down for maintenance before upgrading.
+See [trac:#7014] for details.
+
+=== Wiki Upgrade ===
+`trac-admin` will not delete or remove default wiki pages that were present in a previous version but are no longer in the new version.
+
+=== Trac database upgrade ===
+
+A known issue in some versions of PySqlite (2.5.2-2.5.4) prevents the trac-admin upgrade script from successfully upgrading the database format. It is advised to use either a newer or older version of the sqlite python bindings to avoid this error. For more details see ticket [trac:#9434].
+
+=== parent dir ===
+If you use a trac parent env configuration and one of the plugins in one child does not work, none of the children work.
+
+== Related topics
+
+=== Upgrading Python ===
+
+Upgrading Python to a newer version will require reinstallation of Python packages: Trac of course; also [http://pypi.python.org/pypi/setuptools easy_install], if you''ve been using that.  Assuming you''re using Subversion, you''ll also need to upgrade the Python bindings for svn.
+
+==== Windows and Python 2.6 ====
+
+If you''ve been using !CollabNet''s Subversion package, you may need to uninstall that in favor of [http://alagazam.net/ Alagazam], which has the Python bindings readily available (see TracSubversion).  The good news is, that works with no tweaking.
+
+=== Changing Database Backend ===
+==== SQLite to PostgreSQL ====
+
+The [http://trac-hacks.org/wiki/SqliteToPgScript sqlite2pg] script on [http://trac-hacks.org trac-hacks.org] has been written to assist in migrating a SQLite database to a PostgreSQL database
+
+=== Upgrading from older versions of Trac === #OlderVersions
+
+For upgrades from versions older than Trac 0.10, refer first to [trac:wiki:0.10/TracUpgrade#SpecificVersions].
+
+-----
+See also: TracGuide, TracInstall
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('TracWorkflow',3,1361171557765000,'trac','127.0.0.1','= The Trac Ticket Workflow System =
+[[TracGuideToc]]
+
+The Trac issue database provides a configurable workflow.
+
+== The Default Ticket Workflow ==
+=== Environments upgraded from 0.10 ===
+When you run `trac-admin <env> upgrade`, your `trac.ini` will be modified to include a `[ticket-workflow]` section.
+The workflow configured in this case is the original workflow, so that ticket actions will behave like they did in 0.10.
+
+Graphically, that looks like this:
+
+{{{#!Workflow width=500 height=240
+leave = * -> *
+leave.operations = leave_status
+leave.default = 1
+accept = new -> assigned
+accept.permissions = TICKET_MODIFY
+accept.operations = set_owner_to_self
+resolve = new,assigned,reopened -> closed
+resolve.permissions = TICKET_MODIFY
+resolve.operations = set_resolution
+reassign = new,assigned,reopened -> new
+reassign.permissions = TICKET_MODIFY
+reassign.operations = set_owner
+reopen = closed -> reopened
+reopen.permissions = TICKET_CREATE
+reopen.operations = del_resolution
+}}}
+
+There are some significant "warts" in this; such as accepting a ticket sets it to ''assigned'' state, and assigning a ticket sets it to ''new'' state.  Perfectly obvious, right?
+So you will probably want to migrate to "basic" workflow; [trac:source:trunk/contrib/workflow/migrate_original_to_basic.py contrib/workflow/migrate_original_to_basic.py] may be helpful.
+
+=== Environments created with 0.11 ===
+When a new environment is created, a default workflow is configured in your trac.ini.  This workflow is the basic workflow (described in `basic-workflow.ini`), which is somewhat different from the workflow of the 0.10 releases.
+
+Graphically, it looks like this:
+
+{{{#!Workflow width=700 height=300
+leave = * -> *
+leave.operations = leave_status
+leave.default = 1
+accept = new,assigned,accepted,reopened -> accepted
+accept.permissions = TICKET_MODIFY
+accept.operations = set_owner_to_self
+resolve = new,assigned,accepted,reopened -> closed
+resolve.permissions = TICKET_MODIFY
+resolve.operations = set_resolution
+reassign = new,assigned,accepted,reopened -> assigned
+reassign.permissions = TICKET_MODIFY
+reassign.operations = set_owner
+reopen = closed -> reopened
+reopen.permissions = TICKET_CREATE
+reopen.operations = del_resolution
+}}}
+
+== Additional Ticket Workflows ==
+
+There are several example workflows provided in the Trac source tree; look in [trac:source:trunk/contrib/workflow contrib/workflow] for `.ini` config sections.  One of those may be a good match for what you want. They can be pasted into the `[ticket-workflow]` section of your `trac.ini` file. However if you have existing tickets then there may be issues if those tickets have states that are not in the new workflow. 
+
+Here are some [http://trac.edgewall.org/wiki/WorkFlow/Examples diagrams] of the above examples.
+
+== Basic Ticket Workflow Customization ==
+
+Note: Ticket "statuses" or "states" are not separately defined. The states a ticket can be in are automatically generated by the transitions defined in a workflow. Therefore, creating a new ticket state simply requires defining a state transition in the workflow that starts or ends with that state.
+
+Create a `[ticket-workflow]` section in `trac.ini`.
+Within this section, each entry is an action that may be taken on a ticket. 
+For example, consider the `accept` action from `simple-workflow.ini`:
+{{{
+accept = new,accepted -> accepted
+accept.permissions = TICKET_MODIFY
+accept.operations = set_owner_to_self
+}}}
+The first line in this example defines the `accept` action, along with the states the action is valid in (`new` and `accepted`), and the new state of the ticket when the action is taken (`accepted`).
+The `accept.permissions` line specifies what permissions the user must have to use this action.
+The `accept.operations` line specifies changes that will be made to the ticket in addition to the status change when this action is taken.  In this case, when a user clicks on `accept`, the ticket owner field is updated to the logged in user.  Multiple operations may be specified in a comma separated list.
+
+The available operations are:
+ - del_owner -- Clear the owner field.
+ - set_owner -- Sets the owner to the selected or entered owner.
+   - ''''actionname''''`.set_owner` may optionally be set to a comma delimited list or a single value.
+ - set_owner_to_self -- Sets the owner to the logged in user.
+ - del_resolution -- Clears the resolution field
+ - set_resolution -- Sets the resolution to the selected value.
+   - ''''actionname''''`.set_resolution` may optionally be set to a comma delimited list or a single value. Example:
+     {{{
+resolve_new = new -> closed
+resolve_new.name = resolve
+resolve_new.operations = set_resolution
+resolve_new.permissions = TICKET_MODIFY
+resolve_new.set_resolution = invalid,wontfix
+     }}}
+ - leave_status -- Displays "leave as <current status>" and makes no change to the ticket.
+''''''Note:'''''' Specifying conflicting operations (such as `set_owner` and `del_owner`) has unspecified results.
+
+{{{
+resolve_accepted = accepted -> closed
+resolve_accepted.name = resolve
+resolve_accepted.permissions = TICKET_MODIFY
+resolve_accepted.operations = set_resolution
+}}}
+
+In this example, we see the `.name` attribute used.  The action here is `resolve_accepted`, but it will be presented to the user as `resolve`.
+
+For actions that should be available in all states, `*` may be used in place of the state.  The obvious example is the `leave` action:
+{{{
+leave = * -> *
+leave.operations = leave_status
+leave.default = 1
+}}}
+This also shows the use of the `.default` attribute.  This value is expected to be an integer, and the order in which the actions are displayed is determined by this value.  The action with the highest `.default` value is listed first, and is selected by default.  The rest of the actions are listed in order of decreasing `.default` values.
+If not specified for an action, `.default` is 0.  The value may be negative.
+
+There are a couple of hard-coded constraints to the workflow.  In particular, tickets are created with status `new`, and tickets are expected to have a `closed` state.  Further, the default reports/queries treat any state other than `closed` as an open state.
+
+While creating or modifying a ticket workflow, `contrib/workflow/workflow_parser.py` may be useful.  It can create `.dot` files that [http://www.graphviz.org GraphViz] understands to provide a visual description of the workflow.
+
+This can be done as follows (your install path may be different).
+{{{
+cd /var/local/trac_devel/contrib/workflow/
+sudo ./showworkflow /srv/trac/PlannerSuite/conf/trac.ini
+}}}
+And then open up the resulting `trac.pdf` file created by the script (it will be in the same directory as the `trac.ini` file).
+
+An online copy of the workflow parser is available at http://foss.wush.net/cgi-bin/visual-workflow.pl
+
+After you have changed a workflow, you need to restart apache for the changes to take effect. This is important, because the changes will still show up when you run your script, but all the old workflow steps will still be there until the server is restarted.
+
+== Example: Adding optional Testing with Workflow ==
+
+By adding the following to your [ticket-workflow] section of trac.ini you get optional testing.  When the ticket is in new, accepted or needs_work status you can choose to submit it for testing.  When it''s in the testing status the user gets the option to reject it and send it back to needs_work, or pass the testing and send it along to closed.  If they accept it then it gets automatically marked as closed and the resolution is set to fixed.  Since all the old work flow remains, a ticket can skip this entire section.
+
+{{{
+testing = new,accepted,needs_work,assigned,reopened -> testing
+testing.name = Submit to reporter for testing
+testing.permissions = TICKET_MODIFY
+
+reject = testing -> needs_work
+reject.name = Failed testing, return to developer
+
+pass = testing -> closed
+pass.name = Passes Testing
+pass.operations = set_resolution
+pass.set_resolution = fixed
+}}}
+
+=== How to combine the `tracopt.ticket.commit_updater` with the testing workflow ===
+
+The [[trac:source:trunk/tracopt/ticket/commit_updater.py|tracopt.ticket.commit_updater]] is the optional component that [[TracRepositoryAdmin#trac-post-commit-hook|replaces the old trac-post-commit-hook]], in Trac 0.12.
+
+By default it reacts on some keywords found in changeset message logs like ''''close'''', ''''fix'''' etc. and performs the corresponding workflow action.
+
+If you have a more complex workflow, like the testing stage described above and you want the ''''closes'''' keyword to move the ticket to the ''''testing'''' status instead of the ''''closed'''' status, you need to adapt the code a bit. 
+
+Have a look at the [[trac:wiki:0.11/TracWorkflow#How-ToCombineSVNtrac-post-commit-hookWithTestWorkflow|Trac 0.11 recipe]] for the `trac-post-commit-hook`, this will give you some ideas about how to modify the component.
+
+== Example: Add simple optional generic review state ==
+
+Sometimes Trac is used in situations where "testing" can mean different things to different people so you may want to create an optional workflow state that is between the default workflow''s `assigned` and `closed` states, but does not impose implementation-specific details. The only new state you need to add for this is a `reviewing` state. A ticket may then be "submitted for review" from any state that it can be reassigned. If a review passes, you can re-use the `resolve` action to close the ticket, and if it fails you can re-use the `reassign` action to push it back into the normal workflow.
+
+The new `reviewing` state along with its associated `review` action looks like this:
+
+{{{
+review = new,assigned,reopened -> reviewing
+review.operations = set_owner
+review.permissions = TICKET_MODIFY
+}}}
+
+Then, to integrate this with the default Trac 0.11 workflow, you also need to add the `reviewing` state to the `accept` and `resolve` actions, like so:
+
+{{{
+accept = new,reviewing -> assigned
+[…]
+resolve = new,assigned,reopened,reviewing -> closed
+}}}
+
+Optionally, you can also add a new action that allows you to change the ticket''s owner without moving the ticket out of the `reviewing` state. This enables you to reassign review work without pushing the ticket back to the `new` status.
+
+{{{
+reassign_reviewing = reviewing -> *
+reassign_reviewing.name = reassign review
+reassign_reviewing.operations = set_owner
+reassign_reviewing.permissions = TICKET_MODIFY
+}}}
+
+The full `[ticket-workflow]` configuration will thus look like this:
+
+{{{
+[ticket-workflow]
+accept = new,reviewing -> assigned
+accept.operations = set_owner_to_self
+accept.permissions = TICKET_MODIFY
+leave = * -> *
+leave.default = 1
+leave.operations = leave_status
+reassign = new,assigned,accepted,reopened -> assigned
+reassign.operations = set_owner
+reassign.permissions = TICKET_MODIFY
+reopen = closed -> reopened
+reopen.operations = del_resolution
+reopen.permissions = TICKET_CREATE
+resolve = new,assigned,reopened,reviewing -> closed
+resolve.operations = set_resolution
+resolve.permissions = TICKET_MODIFY
+review = new,assigned,reopened -> reviewing
+review.operations = set_owner
+review.permissions = TICKET_MODIFY
+reassign_reviewing = reviewing -> *
+reassign_reviewing.operations = set_owner
+reassign_reviewing.name = reassign review
+reassign_reviewing.permissions = TICKET_MODIFY
+}}}
+
+== Example: Limit the resolution options for a new ticket ==
+
+The above resolve_new operation allows you to set the possible resolutions for a new ticket.  By modifying the existing resolve action and removing the new status from before the `->` we then get two resolve actions.  One with limited resolutions for new tickets, and then the regular one once a ticket is accepted.
+
+{{{
+resolve_new = new -> closed
+resolve_new.name = resolve
+resolve_new.operations = set_resolution
+resolve_new.permissions = TICKET_MODIFY
+resolve_new.set_resolution = invalid,wontfix,duplicate
+
+resolve = assigned,accepted,reopened -> closed
+resolve.operations = set_resolution
+resolve.permissions = TICKET_MODIFY
+}}}
+
+== Advanced Ticket Workflow Customization ==
+
+If the customization above is not extensive enough for your needs, you can extend the workflow using plugins.  These plugins can provide additional operations for the workflow (like code_review), or implement side-effects for an action (such as triggering a build) that may not be merely simple state changes.  Look at [trac:source:trunk/sample-plugins/workflow sample-plugins/workflow] for a few simple examples to get started.
+
+But if even that is not enough, you can disable the !ConfigurableTicketWorkflow component and create a plugin that completely replaces it.
+
+== Adding Workflow States to Milestone Progress Bars ==
+
+If you add additional states to your workflow, you may want to customize your milestone progress bars as well.  See [TracIni#milestone-groups-section TracIni].
+
+== some ideas for next steps ==
+
+New enhancement ideas for the workflow system should be filed as enhancement tickets against the `ticket system` component.  If desired, add a single-line link to that ticket here.  Also look at the [http://trac-hacks.org/wiki/AdvancedTicketWorkflowPlugin AdvancedTicketWorkflowPlugin] as it provides experimental operations.
+
+If you have a response to the comments below, create an enhancement ticket, and replace the description below with a link to the ticket.
+
+ * the "operation" could be on the nodes, possible operations are:
+   * ''''''preops'''''': automatic, before entering the state/activity
+   * ''''''postops'''''': automatic, when leaving the state/activity
+   * ''''''actions'''''': can be chosen by the owner in the list at the bottom, and/or drop-down/pop-up together with the default actions of leaving the node on one of the arrows.
+''''This appears to add complexity without adding functionality; please provide a detailed example where these additions allow something currently impossible to implement.''''
+
+ * operations could be anything: sum up the time used for the activity, or just write some statistical fields like 
+''''A workflow plugin can add an arbitrary workflow operation, so this is already possible.''''
+
+ * set_actor should be an operation allowing to set the owner, e.g. as a "preop":
+   * either to a role, a person
+   * entered fix at define time, or at run time, e.g. out of a field, or select.
+''''This is either duplicating the existing `set_owner` operation, or needs to be clarified.''''
+
+ * Actions should be selectable based on the ticket type (different Workflows for different tickets)
+''''Look into the [http://trac-hacks.org/wiki/AdvancedTicketWorkflowPlugin AdvancedTicketWorkflowPlugin]''s `triage` operation.''''
+
+ * I''d wish to have an option to perform automatic status changes. In my case, I do not want to start with "new", but with "assigned". So tickets in state "new" should automatically go into state "assigned". Or is there already a way to do this and I just missed it?
+''''Have a look at [http://trac-hacks.org/wiki/TicketCreationStatusPlugin TicketCreationStatusPlugin] and [http://trac-hacks.org/wiki/TicketConditionalCreationStatusPlugin TicketConditionalCreationStatusPlugin]''''
+
+ * I added a ''testing'' state. A tester can close the ticket or reject it. I''d like the transition from testing to rejected to set the owner to the person that put the ticket in ''testing''. The [http://trac-hacks.org/wiki/AdvancedTicketWorkflowPlugin AdvancedTicketWorkflowPlugin] is close with set_owner_to_field, but we need something like set_field_to_owner.
+
+ * I''d like to track the time a ticket is in each state, adding up ''disjoints'' intervals in the same state.
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('WikiMacros',4,1361171557780000,'trac','127.0.0.1','= Trac Macros =
+
+[[PageOutline]]
+
+Trac macros are plugins to extend the Trac engine with custom ''functions'' written in Python. A macro inserts dynamic HTML data in any context supporting WikiFormatting. Its syntax is `[[macro-name(optional-arguments)]]`.
+
+The WikiProcessors are another kind of macros. They typically deal with alternate markup formats and transformation of larger "blocks" of information (like source code highlighting). They are used for processing the multiline `{{{#!wiki-processor-name ... }}}` blocks.
+
+== Using Macros ==
+
+Macro calls are enclosed in two ''''square brackets''''. Like Python functions, macros can also have arguments, a comma separated list within parentheses.
+
+=== Getting Detailed Help ===
+The list of available macros and the full help can be obtained using the !MacroList macro, as seen [#AvailableMacros below].
+
+A brief list can be obtained via `[[MacroList(*)]]` or `[[?]]`.
+
+Detailed help on a specific macro can be obtained by passing it as an argument to !MacroList, e.g. `[[MacroList(MacroList)]]`, or, more conveniently, by appending a question mark (`?`) to the macro''s name, like in `[[MacroList?]]`.
+
+
+
+=== Example ===
+
+A list of 3 most recently changed wiki pages starting with ''Trac'':
+
+||= Wiki Markup =||= Display =||
+{{{#!td
+  {{{
+  [[RecentChanges(Trac,3)]]
+  }}}
+}}}
+{{{#!td style="padding-left: 2em;"
+[[RecentChanges(Trac,3)]]
+}}}
+|-----------------------------------
+{{{#!td
+  {{{
+  [[RecentChanges?(Trac,3)]]
+  }}}
+}}}
+{{{#!td style="padding-left: 2em;"
+[[RecentChanges?(Trac,3)]]
+}}}
+|-----------------------------------
+{{{#!td
+  {{{
+  [[?]]
+  }}}
+}}}
+{{{#!td style="padding-left: 2em"
+{{{#!html 
+<div style="font-size: 80%" class="trac-macrolist">
+<h3><code>[[Image]]</code></h3>Embed an image in wiki-formatted text.
+
+The first argument is the file …
+<h3><code>[[InterTrac]]</code></h3>Provide a list of known <a class="wiki" href="/wiki/InterTrac">InterTrac</a> prefixes.
+<h3><code>[[InterWiki]]</code></h3>Provide a description list for the known <a class="wiki" href="/wiki/InterWiki">InterWiki</a> prefixes.
+<h3><code>[[KnownMimeTypes]]</code></h3>List all known mime-types which can be used as <a class="wiki" href="/wiki/WikiProcessors">WikiProcessors</a>.
+Can be …</div>
+}}}
+etc.
+}}}
+
+== Available Macros ==
+
+''''Note that the following list will only contain the macro documentation if you''ve not enabled `-OO` optimizations, or not set the `PythonOptimize` option for [wiki:TracModPython mod_python].''''
+
+[[MacroList]]
+
+== Macros from around the world ==
+
+The [http://trac-hacks.org/ Trac Hacks] site provides a wide collection of macros and other Trac [TracPlugins plugins] contributed by the Trac community. If you''re looking for new macros, or have written one that you''d like to share with the world, please don''t hesitate to visit that site.
+
+== Developing Custom Macros ==
+Macros, like Trac itself, are written in the [http://python.org/ Python programming language] and are developed as part of TracPlugins.
+
+For more information about developing macros, see the [trac:TracDev development resources] on the main project site.
+
+
+Here are 2 simple examples showing how to create a Macro with Trac 0.11. 
+
+Also, have a look at [trac:source:tags/trac-0.11/sample-plugins/Timestamp.py Timestamp.py] for an example that shows the difference between old style and new style macros and at the [trac:source:tags/trac-0.11/wiki-macros/README macros/README] which provides a little more insight about the transition.
+
+=== Macro without arguments ===
+To test the following code, you should saved it in a `timestamp_sample.py` file located in the TracEnvironment''s `plugins/` directory.
+{{{
+#!python
+from datetime import datetime
+# Note: since Trac 0.11, datetime objects are used internally
+
+from genshi.builder import tag
+
+from trac.util.datefmt import format_datetime, utc
+from trac.wiki.macros import WikiMacroBase
+
+class TimeStampMacro(WikiMacroBase):
+    """Inserts the current time (in seconds) into the wiki page."""
+
+    revision = "$Rev$"
+    url = "$URL$"
+
+    def expand_macro(self, formatter, name, text):
+        t = datetime.now(utc)
+        return tag.b(format_datetime(t, ''%c''))
+}}}
+
+=== Macro with arguments ===
+To test the following code, you should saved it in a `helloworld_sample.py` file located in the TracEnvironment''s `plugins/` directory.
+{{{
+#!python
+from genshi.core import Markup
+
+from trac.wiki.macros import WikiMacroBase
+
+class HelloWorldMacro(WikiMacroBase):
+    """Simple HelloWorld macro.
+
+    Note that the name of the class is meaningful:
+     - it must end with "Macro"
+     - what comes before "Macro" ends up being the macro name
+
+    The documentation of the class (i.e. what you''re reading)
+    will become the documentation of the macro, as shown by
+    the !MacroList macro (usually used in the WikiMacros page).
+    """
+
+    revision = "$Rev$"
+    url = "$URL$"
+
+    def expand_macro(self, formatter, name, text, args):
+        """Return some output that will be displayed in the Wiki content.
+
+        `name` is the actual name of the macro (no surprise, here it''ll be
+        `''HelloWorld''`),
+        `text` is the text enclosed in parenthesis at the call of the macro.
+          Note that if there are ''''no'''' parenthesis (like in, e.g.
+          [[HelloWorld]]), then `text` is `None`.
+        `args` are the arguments passed when HelloWorld is called using a
+        `#!HelloWorld` code block.
+        """
+        return ''Hello World, text = %s, args = %s'' % \
+            (Markup.escape(text), Markup.escape(repr(args)))
+
+}}}
+
+Note that `expand_macro` optionally takes a 4^th^ parameter ''''`args`''''. When the macro is called as a [WikiProcessors WikiProcessor], it''s also possible to pass `key=value` [WikiProcessors#UsingProcessors processor parameters]. If given, those are stored in a dictionary and passed in this extra `args` parameter. On the contrary, when called as a macro, `args` is  `None`. (''''since 0.12'''').
+
+For example, when writing:
+{{{
+{{{#!HelloWorld style="polite" -silent verbose
+<Hello World!>
+}}}
+
+{{{#!HelloWorld
+<Hello World!>
+}}}
+
+[[HelloWorld(<Hello World!>)]]
+}}}
+One should get:
+{{{
+Hello World, text = <Hello World!> , args = {''style'': u''polite'', ''silent'': False, ''verbose'': True}
+Hello World, text = <Hello World!> , args = {}
+Hello World, text = <Hello World!> , args = None
+}}}
+
+Note that the return value of `expand_macro` is ''''''not'''''' HTML escaped. Depending on the expected result, you should escape it by yourself (using `return Markup.escape(result)`) or, if this is indeed HTML, wrap it in a Markup object (`return Markup(result)`) with `Markup` coming from Genshi, (`from genshi.core import Markup`).  
+
+You can also recursively use a wiki Formatter (`from trac.wiki import Formatter`) to process the `text` as wiki markup, for example by doing:
+
+{{{
+#!python
+from genshi.core import Markup
+from trac.wiki.macros import WikiMacroBase
+from trac.wiki import Formatter
+import StringIO
+
+class HelloWorldMacro(WikiMacroBase):
+	def expand_macro(self, formatter, name, text, args):
+		text = "whatever ''''''wiki'''''' markup you want, even containing other macros"
+		# Convert Wiki markup to HTML, new style
+		out = StringIO.StringIO()
+		Formatter(self.env, formatter.context).format(text, out)
+		return Markup(out.getvalue())
+}}}
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('WikiNewPage',3,1361171557780000,'trac','127.0.0.1','= Steps to Add a New Wiki Page =
+[[TracGuideToc]]
+
+Note: make sure you actually have the rights to edit wiki pages. If you don''t see the **Edit this page** button, read the information relative to the editing policy for your Trac installation (usually on the front page WikiStart), or contact your local Trac administrator.
+
+ 1. Choose a name for your new page. See WikiPageNames for naming conventions.
+ 2. Edit an existing page (or any other resources that support WikiFormatting and add a [TracLinks link] to your new page. Save your changes.
+ 3. Follow the link you created to take you to the new page. Trac will display a "describe !PageName here" message.
+ 4. Click the "Edit this page" button to edit and add content to your new page. Save your changes.
+ 5. All done. Your new page is published.
+
+You can skip the second step by entering the CamelCase name of the page in the quick-search field at the top of the page. But note that the page will effectively be "orphaned" unless you link to it from somewhere else.
+
+== Rename a page #renaming
+
+While picking up good WikiPageNames is important, you can always change your mind
+and rename the page later.
+
+You''ll need to ask for the WIKI_RENAME permission in order to be allowed to do this.
+When renaming a page, you''ll be offered the possibility to create a redirection page, so that links pointing to the old location will not be left dangling.
+
+----
+See also: TracWiki, PageTemplates, WikiFormatting, TracLinks, WikiDeletePage
+',NULL,NULL);
+INSERT INTO "wiki" VALUES('WikiProcessors',4,1361171557780000,'trac','127.0.0.1','= Wiki Processors =
+
+Processors are WikiMacros designed to provide alternative markup formats for the [TracWiki Wiki engine]. Processors can be thought of as ''''macro functions to process user-edited text''''. 
+
+Wiki processors can be used in any Wiki text throughout Trac,
+for various different purposes, like:
+ - [#CodeHighlightingSupport syntax highlighting] or for rendering text verbatim,
+ - rendering [#HTMLrelated Wiki markup inside a context], 
+   like inside <div> blocks or <span> or within <td> or <th> table cells,
+ - using an alternative markup syntax, like [wiki:WikiHtml raw HTML] and
+   [wiki:WikiRestructuredText Restructured Text],
+   or [http://www.textism.com/tools/textile/ textile]
+
+
+== Using Processors ==
+
+To use a processor on a block of text, first delimit the lines using
+a Wiki ''''code block'''':
+{{{
+{{{
+The lines
+that should be processed...
+}}}
+}}}
+
+Immediately after the `{{{` or on the line just below, 
+add `#!` followed by the ''''processor name''''.
+
+{{{
+{{{
+#!processorname
+The lines
+that should be processed...
+}}}
+}}}
+
+This is the "shebang" notation, familiar to most UNIX users.
+
+Besides their content, some Wiki processors can also accept ''''parameters'''',
+which are then given as `key=value` pairs after the processor name, 
+on the same line. If `value` has to contain space, as it''s often the case for
+the style parameter, a quoted string can be used (`key="value with space"`).
+
+As some processors are meant to process Wiki markup, it''s quite possible to
+''''nest'''' processor blocks.
+You may want to indent the content of nested blocks for increased clarity,
+this extra indentation will be ignored when processing the content.
+
+
+== Examples ==
+
+||= Wiki Markup =||= Display =||
+{{{#!td colspan=2 align=center style="border: none"
+
+                __Example 1__: Inserting raw HTML
+}}}
+|-----------------------------------------------------------------
+{{{#!td style="border: none"
+{{{
+{{{
+#!html
+<h1 style="color: grey">This is raw HTML</h1>
+}}}
+}}}
+}}}
+{{{#!td valign=top style="border: none; padding-left: 2em"
+{{{
+#!html
+<h1 style="color: grey">This is raw HTML</h1>
+}}}
+}}}
+|-----------------------------------------------------------------
+{{{#!td colspan=2 align=center style="border: none"
+
+     __Example 2__: Highlighted Python code in a <div> block with custom style
+}}}
+|-----------------------------------------------------------------
+{{{#!td style="border: none"
+  {{{
+  {{{#!div style="background: #ffd; border: 3px ridge"
+
+  This is an example of embedded "code" block:
+
+    {{{
+    #!python
+    def hello():
+        return "world"
+    }}}
+
+  }}}
+  }}}
+}}}
+{{{#!td valign=top style="border: none; padding: 1em"
+  {{{#!div style="background: #ffd; border: 3px ridge"
+
+  This is an example of embedded "code" block:
+
+    {{{
+    #!python
+    def hello():
+        return "world"
+    }}}
+
+  }}}
+}}}
+|-----------------------------------------------------------------
+{{{#!td colspan=2 align=center style="border: none"
+
+     __Example 3__: Searching tickets from a wiki page, by keywords.
+}}}
+|-----------------------------------------------------------------
+{{{#!td style="border: none"
+  {{{
+  {{{
+  #!html
+  <form action="/query" method="get"><div>
+  <input type="text" name="keywords" value="~" size="30"/>
+  <input type="submit" value="Search by Keywords"/>
+  <!-- To control what fields show up use hidden fields
+  <input type="hidden" name="col" value="id"/>
+  <input type="hidden" name="col" value="summary"/>
+  <input type="hidden" name="col" value="status"/>
+  <input type="hidden" name="col" value="milestone"/>
+  <input type="hidden" name="col" value="version"/>
+  <input type="hidden" name="col" value="owner"/>
+  <input type="hidden" name="col" value="priority"/>
+  <input type="hidden" name="col" value="component"/>
+  -->
+  </div></form>
+  }}}
+  }}}
+}}}
+{{{#!td valign=top style="border: none; padding: 1em"
+  {{{
+  #!html
+  <form action="/query" method="get"><div>
+  <input type="text" name="keywords" value="~" size="30"/>
+  <input type="submit" value="Search by Keywords"/>
+  <!-- To control what fields show up use hidden fields
+  <input type="hidden" name="col" value="id"/>
+  <input type="hidden" name="col" value="summary"/>
+  <input type="hidden" name="col" value="status"/>
+  <input type="hidden" name="col" value="milestone"/>
+  <input type="hidden" name="col" value="version"/>
+  <input type="hidden" name="col" value="owner"/>
+  <input type="hidden" name="col" value="priority"/>
+  <input type="hidden" name="col" value="component"/>
+  -->
+  </div></form>
+  }}}
+}}}
+== Available Processors ==
+
+The following processors are included in the Trac distribution:
+
+|| ''''''`#!default`'''''' || Present the text verbatim in a preformatted text block. This is the same as specifying ''''no'''' processor name (and no `#!`) ||
+|| ''''''`#!comment`'''''' || Do not process the text in this section (i.e. contents exist only in the plain text - not in the rendered page). ||
+|||| ||
+||||= ''''''HTML related'''''' =||
+|| ''''''`#!html`'''''' || Insert custom HTML in a wiki page. ||
+|| ''''''`#!htmlcomment`'''''' || Insert an HTML comment in a wiki page (''''since 0.12''''). ||
+|| || Note that `#!html` blocks have to be ''''self-contained'''', i.e. you can''t start an HTML element in one block and close it later in a second block. Use the following processors for achieving a similar effect.  ||
+|| ''''''`#!div`'''''' || Wrap an arbitrary Wiki content inside a <div> element (''''since 0.11''''). ||
+|| ''''''`#!span`'''''' || Wrap an arbitrary Wiki content inside a <span> element (''''since 0.11''''). ||
+|| ''''''`#!td`'''''' || Wrap an arbitrary Wiki content inside a <td> element (''''since 0.12'''') ||
+|| ''''''`#!th`'''''' || Wrap an arbitrary Wiki content inside a <th> element (''''since 0.12'''') ||
+|| ''''''`#!tr`'''''' || Can optionally be used for wrapping `#!td` and `#!th` blocks, either for specifying row attributes of better visual grouping (''''since 0.12'''') ||
+|| || See WikiHtml for example usage and more details about these processors. ||
+|||| ||
+||||= ''''''Other Markups'''''' =||
+|| ''''''`#!rst`'''''' || Trac support for Restructured Text. See WikiRestructuredText. ||
+|| ''''''`#!textile`'''''' || Supported if [http://cheeseshop.python.org/pypi/textile Textile] is installed. See [http://www.textism.com/tools/textile/ a Textile reference]. ||
+|||| ||
+||||= ''''''Code Highlighting Support'''''' =||
+|| ''''''`#!c`'''''' [[BR]] ''''''`#!cpp`'''''' (C++) [[BR]] ''''''`#!python`'''''' [[BR]] ''''''`#!perl`'''''' [[BR]] ''''''`#!ruby`'''''' [[BR]] ''''''`#!php`'''''' [[BR]] ''''''`#!asp`'''''' [[BR]] ''''''`#!java`'''''' [[BR]] ''''''`#!js`'''''' (Javascript) [[BR]] ''''''`#!sql`'''''' [[BR]] ''''''`#!xml`'''''' (XML or HTML) [[BR]] ''''''`#!sh`'''''' (!Bourne/Bash shell) [[BR]] ''''''etc.'''''' [[BR]] || Trac includes processors to provide inline syntax highlighting for source code in various languages. [[BR]] [[BR]] Trac relies on external software packages for syntax coloring, like [http://pygments.org Pygments]. [[BR]] [[BR]] See TracSyntaxColoring for information about which languages are supported and how to enable support for more languages. ||
+|||| ||
+
+Using the MIME type as processor, it is possible to syntax-highlight the same languages that are supported when browsing source code.
+
+||||= ''''''MIME Type Processors'''''' =||
+{{{#!tr
+{{{#!td
+Some examples:
+ {{{
+{{{
+#!text/html
+<h1>text</h1>
+}}}
+ }}}
+}}}
+{{{#!td
+The result will be syntax highlighted HTML code:
+ {{{
+#!text/html
+<h1>text</h1>
+ }}}
+
+The same is valid for all other [TracSyntaxColoring#SyntaxColoringSupport mime types supported].
+}}}
+}}}
+{{{#!td
+ {{{
+{{{
+#!diff
+--- Version 55
++++ Version 56
+@@ -115,8 +115,9 @@
+     name=''TracHelloWorld'', version=''1.0'',
+     packages=find_packages(exclude=[''*.tests*'']),
+-    entry_points = """
+-        [trac.plugins]
+-        helloworld = myplugs.helloworld
+-    """,
++    entry_points = {
++        ''trac.plugins'': [
++            ''helloworld = myplugs.helloworld'',
++        ],
++    },
+ )
+}}}
+ }}}
+}}}
+{{{#!td
+''''''`#!diff`'''''' has a particularly nice renderer:
+ {{{
+#!diff
+--- Version 55
++++ Version 56
+@@ -115,8 +115,9 @@
+     name=''TracHelloWorld'', version=''1.0'',
+     packages=find_packages(exclude=[''*.tests*'']),
+-    entry_points = """
+-        [trac.plugins]
+-        helloworld = myplugs.helloworld
+-    """,
++    entry_points = {
++        ''trac.plugins'': [
++            ''helloworld = myplugs.helloworld'',
++        ],
++    },
+ )
+ }}}
+}}}
+
+For more processor macros developed and/or contributed by users, visit: 
+ * [trac:ProcessorBazaar]
+ * [trac:MacroBazaar]
+ * [http://trac-hacks.org Trac Hacks] community site
+
+Developing processors is no different from Wiki macros. 
+In fact they work the same way, only the usage syntax differs. 
+See WikiMacros#DevelopingCustomMacros for more information.
+
+
+----
+See also: WikiMacros, WikiHtml, WikiRestructuredText, TracSyntaxColoring, WikiFormatting, TracGuide',NULL,NULL);
 CREATE TABLE repository (
     id integer,
     name text,
