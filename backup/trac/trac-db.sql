@@ -3824,10 +3824,12 @@ INSERT INTO "session_attribute" VALUES('de88254270d0e95c0118c6c4',0,'query_time'
 INSERT INTO "session_attribute" VALUES('de88254270d0e95c0118c6c4',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''accepted'', u''assigned'', u''new'', u''reopened'']}]');
 INSERT INTO "session_attribute" VALUES('de88254270d0e95c0118c6c4',0,'query_href','/trac/query?owner=%24USER&status=accepted&status=assigned&status=new&status=reopened&col=id&col=summary&col=status&col=due_assign&col=due_close&col=complete&col=parents&col=blockedby&col=blocking&col=type&col=priority&col=milestone&col=component&report=9&order=priority');
 INSERT INTO "session_attribute" VALUES('de88254270d0e95c0118c6c4',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.filter.blog','1');
 INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.daysback','60');
 INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.filter.ticket','1');
-INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.filter.blog','1');
+INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.nextlastvisit','1361171557780000');
 INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.filter.wiki','1');
+INSERT INTO "session_attribute" VALUES('d4a91493952da7e2217d069b',0,'timeline.lastvisit','1361171557780000');
 CREATE TABLE attachment (
     type text,
     id text,
