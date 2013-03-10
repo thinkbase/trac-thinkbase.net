@@ -37169,2769 +37169,2769 @@ end
 
 === PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',7,1357649560292000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `GraphvizPlugin`: 显示 Graphviz 流程图 =
-`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
-
-== 示例 ==
-=== 1 ===
-{{{
-#!graphviz
- digraph ClassLoader {
-  rankdir = BT;
-  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
-  node [label="System\n(CLASSPATH)", color=blue] System;
-  subgraph cluster_himalaya {
-    color=lightblue4;
-    label="应用系统核心";
-    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
-    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
-    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
-    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
-    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
-  }
-  node [label="FileSystem\n扩展(文件系统加载)", color=brown] fileSystem;
-  
-  System -> Bootstrap;
-  theApp_ear -> System;
-
-  axis_war -> theApp_ear;
-  portal_ear -> theApp_ear;
-  webApp_ear -> theApp_ear;
-  webApp2_ear -> theApp_ear;
-
-  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
-                           fontcolor=red];
- }
-}}}
-
-=== 2 ===
-来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple" label="graph/图" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
-    }
-} 
-}}}
-
-graphviz 2.29 之后的版本可以使用过渡色:
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple:pink" label="graph/图" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue:cyan" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="red:yellow" style="filled" gradientangle=90] anode;
-    }
-} 
-}}}
-
-== 参考 ==
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',7,1357649560292000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n扩展(文件系统加载)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
+                           fontcolor=red];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+graphviz 2.29 之后的版本可以使用过渡色:
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple:pink" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue:cyan" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="red:yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+== 参考 ==
  - http://trac-hacks.org/wiki/GraphvizPlugin','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',8,1357649607595000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `GraphvizPlugin`: 显示 Graphviz 流程图 =
-`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
-
-== 示例 ==
-=== 1 ===
-{{{
-#!graphviz
- digraph ClassLoader {
-  rankdir = BT;
-  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
-  node [label="System\n(CLASSPATH)", color=blue] System;
-  subgraph cluster_himalaya {
-    color=lightblue4;
-    label="应用系统核心";
-    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
-    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
-    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
-    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
-    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
-  }
-  node [label="FileSystem\n扩展(文件系统加载)", color=brown] fileSystem;
-  
-  System -> Bootstrap;
-  theApp_ear -> System;
-
-  axis_war -> theApp_ear;
-  portal_ear -> theApp_ear;
-  webApp_ear -> theApp_ear;
-  webApp2_ear -> theApp_ear;
-
-  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
-                           fontcolor=red];
- }
-}}}
-
-=== 2 ===
-来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple" label="graph/图" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
-    }
-} 
-}}}
-
-graphviz 2.29 之后的版本可以使用过渡色:
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple:pink" label="graph/图(过渡色)" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue:cyan" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="red:yellow" style="filled" gradientangle=90] anode;
-    }
-} 
-}}}
-
-== 参考 ==
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',8,1357649607595000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n扩展(文件系统加载)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label="Customized\nClassLoader", fontsize=12,
+                           fontcolor=red];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+graphviz 2.29 之后的版本可以使用过渡色:
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple:pink" label="graph/图(过渡色)" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue:cyan" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="red:yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+== 参考 ==
  - http://trac-hacks.org/wiki/GraphvizPlugin','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',9,1357650263596000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `GraphvizPlugin`: 显示 Graphviz 流程图 =
-`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
-
-== 示例 ==
-=== 1 ===
-{{{
-#!graphviz
- digraph ClassLoader {
-  rankdir = BT;
-  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
-  node [label="System\n(CLASSPATH)", color=blue] System;
-  subgraph cluster_himalaya {
-    color=lightblue4;
-    label="应用系统核心";
-    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
-    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
-    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
-    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
-    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
-  }
-  node [label="FileSystem\n扩展(文件系统加载)", color=brown] fileSystem;
-  
-  System -> Bootstrap;
-  theApp_ear -> System;
-
-  axis_war -> theApp_ear;
-  portal_ear -> theApp_ear;
-  webApp_ear -> theApp_ear;
-  webApp2_ear -> theApp_ear;
-
-  fileSystem -> theApp_ear[label=<<b>The Customized<br/>ClassLoader</b>>, fontsize=9,
-                           fontcolor=red];
- }
-}}}
-
-=== 2 ===
-来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple" label="graph/图(单色)" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
-    }
-} 
-}}}
-
-graphviz 2.29 之后的版本可以使用过渡色:
-{{{
-#!graphviz
-digraph G {
-  bgcolor="purple:pink" label="graph/图(过渡色)" fontcolor="white"
-    subgraph cluster1 {
-            fillcolor="blue:cyan" label="cluster/簇" fontcolor="white" style="filled"
-            gradientangle="270"
-        node [label="node/节点"
-              shape=box fillcolor="red:yellow" style="filled" gradientangle=90] anode;
-    }
-} 
-}}}
-
-== 参考 ==
+INSERT INTO "wiki" VALUES('plugins-demo/GraphvizPlugin',9,1357650263596000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `GraphvizPlugin`: 显示 Graphviz 流程图 =
+`GraphvizPlugin` 用于显示 [http://www.graphviz.org/ Graphviz] 格式的流程图.
+
+== 示例 ==
+=== 1 ===
+{{{
+#!graphviz
+ digraph ClassLoader {
+  rankdir = BT;
+  node [label="Bootstrap\n(rt.jar & ext/*.jar)", color=blue] Bootstrap;
+  node [label="System\n(CLASSPATH)", color=blue] System;
+  subgraph cluster_himalaya {
+    color=lightblue4;
+    label="应用系统核心";
+    node [label="theApp.ear\n(大部分核心和第三方 jar)", color=lightblue4] theApp_ear;
+    node [label="portal.jar\n(EJB)", color=lightblue4] portal_ear;
+    node [label="axis.war\n(WebApp)", color=lightblue4] axis_war;
+    node [label="webApp.war\n(WebApp)", color=lightblue4] webApp_ear;
+    node [label="webApp2.war\n(WebApp)", color=lightblue4] webApp2_ear;
+  }
+  node [label="FileSystem\n扩展(文件系统加载)", color=brown] fileSystem;
+  
+  System -> Bootstrap;
+  theApp_ear -> System;
+
+  axis_war -> theApp_ear;
+  portal_ear -> theApp_ear;
+  webApp_ear -> theApp_ear;
+  webApp2_ear -> theApp_ear;
+
+  fileSystem -> theApp_ear[label=<<b>The Customized<br/>ClassLoader</b>>, fontsize=9,
+                           fontcolor=red];
+ }
+}}}
+
+=== 2 ===
+来自 http://www.graphviz.org/Gallery/gradient/g_c_n.html ;
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple" label="graph/图(单色)" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+graphviz 2.29 之后的版本可以使用过渡色:
+{{{
+#!graphviz
+digraph G {
+  bgcolor="purple:pink" label="graph/图(过渡色)" fontcolor="white"
+    subgraph cluster1 {
+            fillcolor="blue:cyan" label="cluster/簇" fontcolor="white" style="filled"
+            gradientangle="270"
+        node [label="node/节点"
+              shape=box fillcolor="red:yellow" style="filled" gradientangle=90] anode;
+    }
+} 
+}}}
+
+== 参考 ==
  - http://trac-hacks.org/wiki/GraphvizPlugin','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',19,1357650368091000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-[[NoteBox(tip,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',19,1357650368091000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+[[NoteBox(tip,在目前版本的类图中\, 除了说明文本之外\, ''''''不能使用中文''''''.)]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',20,1357650400876000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',20,1357650400876000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',21,1357650472165000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',21,1357650472165000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',22,1357654474007000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ 参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {
-    参数配置
-    ==
-    {
-      语言: | ^(系统默认)^
-      时区: | ^+08:00^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    }
-  }
-}
-@enduml
-}}}
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',22,1357654474007000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ 参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {
+    参数配置
+    ==
+    {
+      语言: | ^(系统默认)^
+      时区: | ^+08:00^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    }
+  }
+}
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',23,1357654515212000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ 参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {
-    参数配置
-    ==
-    {
-      系统
-      --
-      语言: | ^(系统默认)^
-      时区: | ^+08:00^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    }
-  }
-}
-@enduml
-}}}
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',23,1357654515212000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ 参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {
+    参数配置
+    ==
+    {
+      系统
+      --
+      语言: | ^(系统默认)^
+      时区: | ^+08:00^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    }
+  }
+}
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',24,1357655017812000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ 参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {
-    参数配置
-    ==|==
-    {
-      系统
-      --|--
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    }
-    ~~|~~
-    [ 应用 ]
-  }
-}
-@enduml
-}}}
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',24,1357655017812000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ 参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {
+    参数配置
+    ==|==
+    {
+      系统
+      --|--
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    }
+    ~~|~~
+    [ 应用 ]
+  }
+}
+@enduml
+}}}
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',25,1357655438406000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ 参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    [ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip, 目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',25,1357655438406000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ 参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    [ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip, 目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',26,1357655462938000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ 参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    [ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',26,1357655462938000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ 参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    [ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',27,1357655631516000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ >参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {+
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    [ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',27,1357655631516000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ >参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {+
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    [ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',28,1357655755078000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ >参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {+
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--|..
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --|..
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    [ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',28,1357655755078000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ >参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {+
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--|..
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --|..
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    [ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',29,1357656040204000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ >参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {+
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--|..
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --|..
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    [ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
-[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐的占位符.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',29,1357656040204000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ >参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {+
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--|..
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --|..
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    [ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
+[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐的占位符.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',30,1357656152349000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ >参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {+
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--|..
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --|..
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    [ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
-[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐的占位符\, 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',30,1357656152349000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ >参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {+
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--|..
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --|..
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    [ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 disable 状态\, 没有多行文本\, 不支持缩进\, 不支持靠右或者置中对齐等等.)]]
+[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐的占位符\, 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',31,1357656311948000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ >参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {+
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--|..
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --|..
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    ..|..|[ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
-[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐的占位符\, 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',31,1357656311948000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ >参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {+
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--|..
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --|..
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    ..|..|[ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
+[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐的占位符\, 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',32,1357656373184000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ >参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {+
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--|..
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --|..
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    ..|..|[ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
-[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐或者缩进的占位符\; 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',32,1357656373184000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ >参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {+
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--|..
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --|..
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    ..|..|[ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
+[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐或者缩进的占位符\; 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',33,1357656395247000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-系统A -> 系统A: 轮询待处理单据
-系统A -> 接口: 启动
-接口 -> 系统B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-group 启动容器事务
-  接口 -> 系统B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  接口 --> 系统A: 标记单据处理完毕
-end
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ >参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {+
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--|..
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --|..
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    ..|..|[ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
-[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐或者缩进的占位符; 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',33,1357656395247000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+系统A -> 系统A: 轮询待处理单据
+系统A -> 接口: 启动
+接口 -> 系统B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+group 启动容器事务
+  接口 -> 系统B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  接口 --> 系统A: 标记单据处理完毕
+end
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ >参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {+
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--|..
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --|..
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    ..|..|[ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
+[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐或者缩进的占位符; 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',34,1357657197741000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-participant "系统A" as A
-participant "接口" as ESB
-participant "系统B" as B
-
-A -> A: 轮询待处理单据
-activate A
-
-A -> ESB: 启动
-activate ESB
-
-ESB -> B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-activate B
-
-group 启动容器事务
-  ESB -> B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  ESB --> A: 标记单据处理完毕
-end
-
-deactivate A
-deactivate B
-deactivate ESB
-
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ >参数配置
-    +++ 用户管理
-    ++ 登出
-  } | {+
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--|..
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --|..
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    ..|..|[ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
-[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐或者缩进的占位符; 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',34,1357657197741000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+participant "系统A" as A
+participant "接口" as ESB
+participant "系统B" as B
+
+A -> A: 轮询待处理单据
+activate A
+
+A -> ESB: 启动
+activate ESB
+
+ESB -> B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+activate B
+
+group 启动容器事务
+  ESB -> B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  ESB --> A: 标记单据处理完毕
+end
+
+deactivate A
+deactivate B
+deactivate ESB
+
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ >参数配置
+    +++ 用户管理
+    ++ 登出
+  } | {+
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--|..
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --|..
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    ..|..|[ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 Salt 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
+[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐或者缩进的占位符; 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
-INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',35,1357696668753000,'thinkbase','180.169.66.118','[[PageOutline]]
-= `PlantUMLMacro`: 创建 UML 图 =
-[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
-
-详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
-
-== 示例 ==
-=== 用例图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-:System Administrator: as Admin
-User <|-- Admin
-
-(使用软件) as (Use)
-(系统监控) as (Mon)
-
-User -> (Start)
-User --> (Use)
-
-Admin ---> (Mon)
-
-note left of Admin : 管理员
-note "管理员具有全部的用户权限" as N2
-User .. N2
-N2 .. Admin
-
-
-note right of (Mon)
-  管理员可以登录用
-  户系统进行监控.
-end note
-note left of (Use)
-  用户启动系统后可
-  以进行业务操作.
-end note
-
-(Start) .. (Use)
-
-@enduml
-}}}
-
-=== 类图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-package net.thinkbase.intf {
-  IWorker <|-- AbstractWorker
-
-  interface IWorker {
-    + perform(Object message)
-  }
-  note left of IWorker
-    定义通用的 Worker 接口
-  end note
-
-  class AbstractWorker {
-    - Object message
-    + perform(Object message)
-    # Object getMessage()
-    + {abstract} doWork()    //抽象方法供子类实现
-  }
-  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
-}
-package net.thinkbase.impl {
-  AbstractWorker <|-- MethodCWorker
-
-  class MethodCWorker {
-    + doWork()
-  }
-  note left of MethodCWorker
-    一个可以运行的之类, 必
-    须使用 AbstractWorker
-    中的抽象方法: doWork()
-  end note
-}
-@enduml
-}}}
-
-=== 时序图 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-
-participant "系统A" as A
-participant "接口" as ESB
-participant "系统B" as B
-
-A -> A: 轮询待处理单据
-activate A
-
-A -> ESB: 启动
-activate ESB
-
-ESB -> B: 传输单据数据(SOAP)
-  note left
-    数据传输时使用SOAP协
-    议,因此无法保证两个系
-    统间的事务一致性
-  end note
-activate B
-
-group 启动容器事务
-  ESB -> B: 标识数据为有效状态
-    note right
-      接口通过XA协议处理两
-      个数据库的事务,保证两
-      个系统数据的一致性
-    end note
-  ESB --> A: 标记单据处理完毕
-end
-
-deactivate A
-deactivate B
-deactivate ESB
-
-@enduml
-}}}
-
-=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
- * [[BR]]
-{{{
-#!plantuml
-@startuml
-salt
-{
-  {T
-    + 功能菜单
-    ++ 首页
-    ++ 系统管理
-    +++ >参数配置
-    +++ 用户管理
-    ++ 登出
-  } |..| {+
-    参数配置
-    ==|==|==
-    {
-      系统
-      --|--|..
-      语言: | ^(系统默认)^
-      时区: | ^+08:00 ^
-      网址: | "        "
-      [X] 自动刷新
-      自动刷新间隔(s): | "        "
-    } | {
-      L&F
-      --|..
-      (X) MetalLookAndFeel
-      ( ) GTKLookAndFeel
-      ( ) MotifLookAndFeel
-      ( ) WindowsLookAndFeel
-    } | {
-      备注: | "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-         ..| "          "
-    }
-    ~~|~~|~~
-    ..|..|[ 应用 ]
-  }
-}
-@enduml
-}}}
-[[NoteBox(tip,目前看来 [http://plantuml.sourceforge.net/salt.html Salt] 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
-[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐或者缩进的占位符; 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
-
-== 使用说明 ==
-=== PlantUML Language Reference Guide ===
-可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
-
-=== PlantUMLMacro 使用说明 ===
+INSERT INTO "wiki" VALUES('plugins-demo/PlantUMLMacro',35,1357696668753000,'thinkbase','180.169.66.118','[[PageOutline]]
+= `PlantUMLMacro`: 创建 UML 图 =
+[wiki:plugins-demo/PlantUMLMacro PlantUMLMacro] 使用 [http://plantuml.sourceforge.net/ PlantUML] 在页面上绘制各种类型的 UML 图.
+
+详细的 UML 描述语法可以参见 PlantUML 的相关文档: http://plantuml.sourceforge.net/ ;
+
+== 示例 ==
+=== 用例图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+:System Administrator: as Admin
+User <|-- Admin
+
+(使用软件) as (Use)
+(系统监控) as (Mon)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Mon)
+
+note left of Admin : 管理员
+note "管理员具有全部的用户权限" as N2
+User .. N2
+N2 .. Admin
+
+
+note right of (Mon)
+  管理员可以登录用
+  户系统进行监控.
+end note
+note left of (Use)
+  用户启动系统后可
+  以进行业务操作.
+end note
+
+(Start) .. (Use)
+
+@enduml
+}}}
+
+=== 类图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+package net.thinkbase.intf {
+  IWorker <|-- AbstractWorker
+
+  interface IWorker {
+    + perform(Object message)
+  }
+  note left of IWorker
+    定义通用的 Worker 接口
+  end note
+
+  class AbstractWorker {
+    - Object message
+    + perform(Object message)
+    # Object getMessage()
+    + {abstract} doWork()    //抽象方法供子类实现
+  }
+  note right of AbstractWorker: 通过抽象类实现, 抽取出 doWork 方法
+}
+package net.thinkbase.impl {
+  AbstractWorker <|-- MethodCWorker
+
+  class MethodCWorker {
+    + doWork()
+  }
+  note left of MethodCWorker
+    一个可以运行的之类, 必
+    须使用 AbstractWorker
+    中的抽象方法: doWork()
+  end note
+}
+@enduml
+}}}
+
+=== 时序图 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+
+participant "系统A" as A
+participant "接口" as ESB
+participant "系统B" as B
+
+A -> A: 轮询待处理单据
+activate A
+
+A -> ESB: 启动
+activate ESB
+
+ESB -> B: 传输单据数据(SOAP)
+  note left
+    数据传输时使用SOAP协
+    议,因此无法保证两个系
+    统间的事务一致性
+  end note
+activate B
+
+group 启动容器事务
+  ESB -> B: 标识数据为有效状态
+    note right
+      接口通过XA协议处理两
+      个数据库的事务,保证两
+      个系统数据的一致性
+    end note
+  ESB --> A: 标记单据处理完毕
+end
+
+deactivate A
+deactivate B
+deactivate ESB
+
+@enduml
+}}}
+
+=== 使用 [http://plantuml.sourceforge.net/salt.html Salt] 表达界面原型 ===
+ * [[BR]]
+{{{
+#!plantuml
+@startuml
+salt
+{
+  {T
+    + 功能菜单
+    ++ 首页
+    ++ 系统管理
+    +++ >参数配置
+    +++ 用户管理
+    ++ 登出
+  } |..| {+
+    参数配置
+    ==|==|==
+    {
+      系统
+      --|--|..
+      语言: | ^(系统默认)^
+      时区: | ^+08:00 ^
+      网址: | "        "
+      [X] 自动刷新
+      自动刷新间隔(s): | "        "
+    } | {
+      L&F
+      --|..
+      (X) MetalLookAndFeel
+      ( ) GTKLookAndFeel
+      ( ) MotifLookAndFeel
+      ( ) WindowsLookAndFeel
+    } | {
+      备注: | "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+         ..| "          "
+    }
+    ~~|~~|~~
+    ..|..|[ 应用 ]
+  }
+}
+@enduml
+}}}
+[[NoteBox(tip,目前看来 [http://plantuml.sourceforge.net/salt.html Salt] 还很不成熟\, 比如不能表达控件的 `disable` 状态、没有多行文本、不支持缩进、不支持靠右或者置中对齐、无法方便设置行和列的合并 等等.)]]
+[[NoteBox(tip,''''''小技巧'''''': 可以使用虚线(`..`)作为网格对齐或者缩进的占位符; 虚线也可以用于分隔界面\, 在各列间留一个空白列空间.)]]
+
+== 使用说明 ==
+=== PlantUML Language Reference Guide ===
+可以在 [http://plantuml.sourceforge.net/index.html PlantUML 首页] 找到相关下载, 也可以在本文的附件中[raw-attachment:"wiki:plugins-demo/PlantUMLMacro:PlantUML Language Reference Guide.pdf" 下载 PlantUML Language Reference Guide.pdf];
+
+=== PlantUMLMacro 使用说明 ===
 [[MacroList(PlantUML)]]','',0);
 INSERT INTO "wiki" VALUES('PageTemplates',3,1361171557718000,'trac','127.0.0.1','= Wiki Page Templates = 
 
@@ -43088,36 +43088,36 @@ INSERT INTO "fullblog_posts" VALUES('admin-2013/01/04',2,'2013/01/05 - PlantUMLM
 
 具体使用的例子见 wiki:plugins-demo/PlantUMLMacro , 主要是测试中文显示是否有问题; 经测试, 目前版本中, 部分 UML 元素不能使用中文(有空会尝试升级相关的 jar 文件, 也许可以解决这个问题).
 ',1357316874,1357316898,'','admin','admin','');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',1,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
-最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本], 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(2013-01-02, plantuml-jar-lgpl-7948), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
-
-== Graphviz 升级 ==
-最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 2.26 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',1,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
+最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本], 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(2013-01-02, plantuml-jar-lgpl-7948), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
+
+== Graphviz 升级 ==
+最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 2.26 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
+
 ''''''补充说明'''''': 在使用 Graphviz 开发版本 `2.29.20130107` 的安装程序(`msi`文件)安装后, 运行 dot.exe 会报错, 提示找不到 `graph.dll`, 将 `2.28` 版本的同名 dll 复制到 bin 目录下即可正常运行.',1357651664,1357651664,'','thinkbase','thinkbase','upgrade');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',2,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
-最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本]), 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(2013-01-02, plantuml-jar-lgpl-7948), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
-
-== Graphviz 升级 ==
-最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 2.26 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',2,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
+最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本]), 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(2013-01-02, plantuml-jar-lgpl-7948), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
+
+== Graphviz 升级 ==
+最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 2.26 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
+
 ''''''补充说明'''''': 在使用 Graphviz 开发版本 `2.29.20130107` 的安装程序(`msi`文件)安装后, 运行 dot.exe 会报错, 提示找不到 `graph.dll`, 将 `2.28` 版本的同名 dll 复制到 bin 目录下即可正常运行.',1357651664,1357651680,'','thinkbase','thinkbase','upgrade');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',3,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
-最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本]), 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(`2013-01-02, plantuml-jar-lgpl-7948`), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
-
-== Graphviz 升级 ==
-最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 2.26 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',3,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
+最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本]), 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(`2013-01-02, plantuml-jar-lgpl-7948`), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
+
+== Graphviz 升级 ==
+最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 2.26 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
+
 ''''''补充说明'''''': 在使用 Graphviz 开发版本 `2.29.20130107` 的安装程序(`msi`文件)安装后, 运行 `dot.exe` 会报错, 提示找不到 `graph.dll`, 将 `2.28` 版本的同名 dll 复制到 bin 目录下即可正常运行.',1357651664,1357651726,'','thinkbase','thinkbase','upgrade');
-INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',4,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
-最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本]), 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(`2013-01-02, plantuml-jar-lgpl-7948`), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
-
-== Graphviz 升级 ==
-最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 `2.26.3` 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28.0`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
-
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/01/08',4,'2013/01/08 - PlantUML 和 Graphviz 的升级','== PlantUML 升级 ==
+最初发现 PlantUML 的一些 UML 图中不能使用中文(见 [wiki:plugins-demo/PlantUMLMacro?version=18 PlantUMLMacro 示例的早期版本]), 而且 `note`、`package` 等元素的使用效果与 http://plantuml.sourceforge.net/usecase.html 和 http://plantuml.sourceforge.net/classes.html 的效果也不一致, 尝试升级到最新发布的版本(`2013-01-02, plantuml-jar-lgpl-7948`), 问题解决, 效果见 [wiki:plugins-demo/PlantUMLMacro PlantUMLMacro 示例];
+
+== Graphviz 升级 ==
+最初 [https://github.com/thinkbase/PortableTrac PortableTrac] 所使用的 graphviz 是 `2.26.3` 版本的, 无法实现 http://www.graphviz.org/Gallery.php 中很多示例的过渡色效果(例如 http://www.graphviz.org/Gallery/gradient/g_c_n.html), 升级到当前稳定版本(`2.28.0`)后仍然不能支持, 最后升级到开发版本 `2.29.20130107` 后发现可以正常显示了, 例子见 [wiki:plugins-demo/GraphvizPlugin GraphvizPlugin 示例].
+
 ''''''补充说明'''''': 在使用 Graphviz 开发版本 `2.29.20130107` 的安装程序(`msi`文件)安装后, 运行 `dot.exe` 会报错, 提示找不到 `graph.dll`, 将 `2.28.0` 版本的同名 dll 复制到 bin 目录下即可正常运行.',1357651664,1357651851,'','thinkbase','thinkbase','upgrade');
-INSERT INTO "fullblog_posts" VALUES('admin-2012/12/07',3,'2012/12/07 - CodeExampleMacro 的错误修正以及示例',' 1. 修正 `CodeExampleMacro` 插件丢失 css image 的一个bug, 见:
-  - https://github.com/thinkbase/PortableTrac/commit/6f5cea2070984740ef303c11e726e54fcdb5ebe4
+INSERT INTO "fullblog_posts" VALUES('admin-2012/12/07',3,'2012/12/07 - CodeExampleMacro 的错误修正以及示例',' 1. 修正 `CodeExampleMacro` 插件丢失 css image 的一个bug, 见:
+  - https://github.com/thinkbase/PortableTrac/commit/6f5cea2070984740ef303c11e726e54fcdb5ebe4
  2. 为 `CodeExampleMacro` 创建实例页面, 见 [wiki:plugins-demo/CodeExampleMacro 这里];',1354896462,1357651992,'','admin','admin','bugfix');
 INSERT INTO "fullblog_posts" VALUES('about',2,'关于 http://www.thinkbase.net/trac','这个站点的主要用途就是 [/../main/wiki/PortableTrac PortableTrac] 的演示, 以及相关的更新、升级和bug修正信息记录.',1354896273,1357652097,'','admin','admin','');
 CREATE TABLE fullblog_comments (
