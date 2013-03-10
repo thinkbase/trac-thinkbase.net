@@ -54,7 +54,7 @@ CREATE TABLE session (
     UNIQUE (sid,authenticated)
 );
 INSERT INTO "session" VALUES('admin',1,1362925768);
-INSERT INTO "session" VALUES('thinkbase',1,1361259677);
+INSERT INTO "session" VALUES('thinkbase',1,1362931150);
 INSERT INTO "session" VALUES('ce5a32991e1b6f084d5a310c',0,1355186719);
 INSERT INTO "session" VALUES('4f8b942aa874fd1bcc7d606a',0,1355198972);
 INSERT INTO "session" VALUES('8601f9dd3017e7d32d8a6d13',0,1355200031);
@@ -806,12 +806,6 @@ INSERT INTO "session_attribute" VALUES('6a91de1a16e05eef7eebbba7',0,'email','gde
 INSERT INTO "session_attribute" VALUES('9a158d9abf3f9efda9b86c28',0,'name','fgzzlwbg');
 INSERT INTO "session_attribute" VALUES('9a158d9abf3f9efda9b86c28',0,'chrome.notices.0','Your preferences have been saved.');
 INSERT INTO "session_attribute" VALUES('9a158d9abf3f9efda9b86c28',0,'email','nezxqh@hyfxzp.com');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1353728908000000');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','8');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1361178443000000');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
 INSERT INTO "session_attribute" VALUES('f5a47a009e2fb9c785ad3184',0,'timeline.lastvisit','1361259911484000');
 INSERT INTO "session_attribute" VALUES('f5a47a009e2fb9c785ad3184',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('3c6b4cd6baf86704d43bfe1a',0,'timeline.lastvisit','1361259911484000');
@@ -878,6 +872,14 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1361171568561000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignorewhitespace','1');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1361178443000000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1353728908000000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','8');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignoreblanklines','1');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -1106,6 +1108,7 @@ INSERT INTO "attachment" VALUES('wiki','misc/NetworkDigest','玛雅历法预言�
 INSERT INTO "attachment" VALUES('blog','thinkbase-2013/02/02','Screenshot-Fill3D-Test.png',52888,1359821766542000,'','thinkbase','61.171.91.97');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2013/02/02','Screenshot-Fill3D-Test2.png',43894,1359822161211000,'','thinkbase','61.171.91.97');
 INSERT INTO "attachment" VALUES('wiki','misc/NetworkDigest','Screenshot-Python-OSChina.NET.png',61763,1361259911484000,'','thinkbase','112.65.136.195');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2013/03/10','admin_versioncontrol_repository.png',68249,1362931360712000,'','thinkbase','61.171.244.181');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -34438,6 +34441,151 @@ INSERT INTO "wiki" VALUES('misc/NetworkDigest',10,1361259890017000,'thinkbase','
  - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
   - [[Image(Screenshot-Python-OSChina.NET.png)]]
   - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 之 31 楼]','',0);
+INSERT INTO "wiki" VALUES('TracGit',1,1362931515243000,'thinkbase','61.171.244.181','[[PageOutline(2-3)]]
+= Git support in Trac (#10594) =
+
+Starting with version [milestone:1.0], Trac features built-in support 
+for [http://git-scm.com/ Git] so that it can be used as one of the
+VersionControlSystem for Trac.
+
+Please note that we''re still considering the level of performance to 
+be sub-optimal, so it might not work for you. Small to medium sized 
+repositories should be handled reasonably well, however.
+
+== Features ==
+
+* Browsing source code in a Git repository via the TracBrowser
+* Viewing the change history of a file or directory using TracRevisionLog
+* Performing diffs between any two files or two directories
+* Displaying submitted changes in the TracTimeline
+* (Optionally) caching TracChangeset information in Trac''s database
+* Caching Git commit relation graph in memory
+* Using the TracSearch page to search change descriptions
+* Annotation support, also known as "blame" operation
+* Interpretation of 40-character wide hex-strings as sha1 commit checksums 
+
+== Git ==
+=== Download and Installation ===
+
+You need to have the `git` command line tools installed. You can download Git itself from 
+[http://git-scm.com/download Git:Download].
+
+We try to maintain backward compatibility with versions of Git as old as 1.5.6, 
+up to the latest. Better use a recent version however.
+
+=== Configuration ===
+
+The configuration has to be done mainly on the Trac side, 
+there''s nothing required to do on the Git repository side.
+Some advanced use cases necessitate however to install a
+`post-receive` hook in the Git repository (see [#hooks below]).
+
+Note that the repository should be made accessible as a local repository. 
+Thanks to the distributed nature of Git, that''s always possible (if the 
+repository is not already local, simply `git clone` it).
+
+== Trac ==
+
+The Trac Git support is included with Trac since 1.0 as an optional component: `tracopt.versioncontrol.git`.
+
+You simply have to explicitly ''''enable'''' the plugin in TracIni:
+{{{
+[components]
+tracopt.versioncontrol.git.* = enabled
+}}}
+
+The web administration interface can also be used for this,
+using the //General / Plugins// panel.
+
+=== Setting up a Trac environment ===
+
+You can either reuse an existing Trac environment,
+or create a brand new one.
+
+==== New environment
+For general instructions, see TracInstall.
+
+When creating a new environment with TracAdmin `initenv` command, 
+ - for the ''''repository type'''', specify `git` instead of the default `svn`.
+ - for the ''''repository directory'''', specify the location of the Git repository
+   (including the ending `.git` directory).
+
+Your [wiki:TracIni <trac_environment>/conf/trac.ini] configuration file
+should have a `[trac]` section similar to the following:
+{{{
+[trac]
+repository_type = git
+repository_dir = /path/to/my/git/repository/.git
+}}}
+Also in there, make sure you specify the location of the `git` executable, in case it''s not the default `/usr/bin/git`. As an example, for Windows:
+{{{
+[git]
+git_bin = C:/Dev/msysgit/bin/git.exe
+}}}
+See also [#settings] below.
+
+==== Adding a Git repository to an existing environment
+
+If all you need is to work with a single git environment, it is enough
+to modify the `[trac]` section in your [TracIni trac.ini] so that it
+contains the appropriate values for the `repository_type` and 
+`repository_dir` options, like in the above example.
+
+However, if you need more than one git repository, or I you want to 
+keep your old Subversion repository as the default repository in order
+to not break the TracLinks pointing to source files and changesets 
+contained in that repository, you can add non-default repositories.
+
+There is basically two ways to do it, either via the
+[TracIni#repositories-section "[repositories]"] section of the TracIni
+file, or via the web administration interface using the
+//Version Control / Repositories// panel.
+For more details, see the TracRepositoryAdmin.
+
+==== Fine tune `trac.ini` settings #settings
+
+Besides the `git_bin` setting discussed above, there are a few more Git specific settings that can be specified in [TracIni#git-section "TracIni [git]"] section.
+
+
+=== Setting up post-receive hooks === #hooks
+
+If you want to benefit from some advanced features for your repository,
+like automatically update your tickets based on the content of the commit
+messages (CommitTicketUpdater) or smart caching, then you need to create
+or modify the [http://git-scm.com/book/en/Customizing-Git-Git-Hooks#Server-Side-Hooks post-receive] hook in the `.git/hooks` 
+repository so that it calls `trac-admin repository` appropriately.
+
+enable post-receive hook functionality on your repository, put a post-receive script into `your_repository/.git/hooks/`. 
+
+TODO: Include post-receive scripts attached to http://trac-hacks.org/wiki/GitPlugin#post-receivehookscripts
+
+You can then enable the CommitTicketUpdater functionality in your `trac.ini` by adding:
+
+{{{
+tracopt.ticket.commit_updater.* = enabled
+}}}
+
+to the `[components]` section.
+
+== Troubleshooting 
+
+* `repository_dir` in the configuration section needs to be the `.git` repository directory (i.e. the one containing the file `HEAD` and `config`), not the working tree directory that holds the `.git/` folder. 
+* Wrong permissions may also be the cause of the error `GitError: GIT control files not found, maybe wrong directory?`. Make sure the `repository_dir` argument is accessible via git by the `tracd` process. 
+* If you are noticing a slow down in trac with a repository above 500 commits, try disabling the caching. It seems to bog things down as a repo grows(!)
+* Don''t forget to enable the plugin:
+  {{{
+  [components]
+  tracopt.versioncontrol.git.* = enabled 
+  }}}
+* If you don''t see the `shortrev` and `commit` branch, you probably have caching enabled (`cached_repository = true, persistent_cache = true`). Set those to false.
+
+== Known Issues 
+
+[[TicketQuery(component=plugin/git,status=!closed,type=defect)]]
+
+== History
+
+The Git support was initially developed as a plugin by Herbert Valerio Riedel for Trac 0.10-0.13. See TracHacks:GitPlugin / [https://github.com/hvr/trac-git-plugin GitHub]. For Trac 1.0, it has now been included as an optional component, and is maintained and developed here.','20130311 从 http://trac.edgewall.org/wiki/TracGit 复制的内容',0);
 CREATE TABLE repository (
     id integer,
     name text,
@@ -37639,6 +37787,103 @@ D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main wiki upgrade
 
 D:\thinkbase.net\PortableTrac-git>
 }}}',1361178443,1361178443,'','thinkbase','thinkbase','trac');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/03/10',1,'在 Trac 中集成 Git 版本库','按照 [TracGit] 的说明, 把现有的几个 Github 上的 Git Repositories( https://github.com/thinkbase )集成到 thinkbase.net.
+
+主要操作记录如下:
+ 1. 将 Git 引入运行环境. `git.exe` 来自 [http://msysgit.github.com/ Git for Windows], 具体的安装版本是 `Git-1.8.1.2-preview20130201.exe`, 安装后只需要保留 {{{bin}}} 目录即可.
+  - 运行环境的变化提交到 [PortableTrac], 具体的修改见 [86be8351295be93e65a8f3c89c1d7169a76f4ce8].
+ 2. 修改 [TracIni trac.ini] 及 增加版本库:
+  - 按照 [TracGit] 的说明, 在 [TracIni trac.ini] 的 `[components]` 小节增加:
+{{{
+tracopt.versioncontrol.git.* = enabled
+}}}
+  - 在 Trac 的 `管理: 版本库` 中添加版本库:[[BR]][[Image(admin_versioncontrol_repository.png, 100%)]]
+  - 注意, 在添加版本库时, Trac 会提醒需要执行 `trac-admin $ENV repository resync ...` 命令(参见上图的提示), 经过实际检验, 也可以通过设置 `[trac]` 小节的 `repository_sync_per_request` 属性来自动同步源代码库, 例如:
+{{{
+repository_sync_per_request = PortableTrac, dev-thinkbase.net, trac-thinkbase.net
+}}}
+  - 详细的修改参见 [97b08e7272b559b4541c96e73418d0c7ef6c8628]
+',1362931342,1362931342,'','thinkbase','thinkbase','trac git');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/03/10',2,'在 Trac 中集成 Git 版本库','按照 [TracGit] 的说明, 把现有的几个 Github 上的 Git Repositories( https://github.com/thinkbase )集成到 thinkbase.net.
+
+主要操作记录如下:
+ 1. 将 Git 引入运行环境. `git.exe` 来自 [http://msysgit.github.com/ Git for Windows], 具体的安装版本是 `Git-1.8.1.2-preview20130201.exe`, 安装后只需要保留 {{{bin}}} 目录即可.
+  - 运行环境的变化提交到 [PortableTrac], 具体的修改见 [86be8351295be93e65a8f3c89c1d7169a76f4ce8/PortableTrac].
+ 2. 修改 [TracIni trac.ini] 及 增加版本库:
+  - 按照 [TracGit] 的说明, 在 [TracIni trac.ini] 的 `[components]` 小节增加:
+{{{
+tracopt.versioncontrol.git.* = enabled
+}}}
+  - 在 Trac 的 `管理: 版本库` 中添加版本库:[[BR]][[Image(admin_versioncontrol_repository.png, 100%)]]
+  - 注意, 在添加版本库时, Trac 会提醒需要执行 `trac-admin $ENV repository resync ...` 命令(参见上图的提示), 经过实际检验, 也可以通过设置 `[trac]` 小节的 `repository_sync_per_request` 属性来自动同步源代码库, 例如:
+{{{
+repository_sync_per_request = PortableTrac, dev-thinkbase.net, trac-thinkbase.net
+}}}
+  - 详细的修改参见 [97b08e7272b559b4541c96e73418d0c7ef6c8628/trac-thinkbase.net]',1362931342,1362931681,'','thinkbase','thinkbase','trac git');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/03/10',3,'在 Trac 中集成 Git 版本库','按照 [TracGit] 的说明, 把现有的几个 Github 上的 Git Repositories( https://github.com/thinkbase )集成到 thinkbase.net.
+
+主要操作记录如下:
+ 1. 将 Git 引入运行环境. `git.exe` 来自 [http://msysgit.github.com/ Git for Windows], 具体的安装版本是 `Git-1.8.1.2-preview20130201.exe`, 安装后只需要保留 {{{bin}}} 目录即可.
+  - 运行环境的变化提交到 [PortableTrac], 具体的修改见 [86be8351295be93e65a8f3c89c1d7169a76f4ce8/PortableTrac 86be83...].
+ 2. 修改 [TracIni trac.ini] 及 增加版本库:
+  - 按照 [TracGit] 的说明, 在 [TracIni trac.ini] 的 `[components]` 小节增加:
+{{{
+tracopt.versioncontrol.git.* = enabled
+}}}
+  - 在 Trac 的 `管理: 版本库` 中添加版本库:[[BR]][[Image(admin_versioncontrol_repository.png, 100%)]]
+  - 注意, 在添加版本库时, Trac 会提醒需要执行 `trac-admin $ENV repository resync ...` 命令(参见上图的提示), 经过实际检验, 也可以通过设置 `[trac]` 小节的 `repository_sync_per_request` 属性来自动同步源代码库, 例如:
+{{{
+repository_sync_per_request = PortableTrac, dev-thinkbase.net, trac-thinkbase.net
+}}}
+  - 详细的修改参见 [97b08e7272b559b4541c96e73418d0c7ef6c8628/trac-thinkbase.net 97b08e...]',1362931342,1362931773,'','thinkbase','thinkbase','trac git');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/03/10',4,'在 Trac 中集成 Git 版本库','按照 [TracGit] 的说明, 把现有的几个 Github 上的 Git Repositories( https://github.com/thinkbase )集成到 thinkbase.net.
+
+主要操作记录如下:
+ 1. 将 Git 引入运行环境. `git.exe` 来自 [http://msysgit.github.com/ Git for Windows], 具体的安装版本是 `Git-1.8.1.2-preview20130201.exe`, 安装后只需要保留 {{{bin}}} 目录即可.
+  - 运行环境的变化提交到 [PortableTrac], 具体的修改见 [changeset:86be8351295be93e65a8f3c89c1d7169a76f4ce8/PortableTrac 86be83...].
+ 2. 修改 [TracIni trac.ini] 及 增加版本库:
+  - 按照 [TracGit] 的说明, 在 [TracIni trac.ini] 的 `[components]` 小节增加:
+{{{
+tracopt.versioncontrol.git.* = enabled
+}}}
+  - 在 Trac 的 `管理: 版本库` 中添加版本库:[[BR]][[Image(admin_versioncontrol_repository.png, 100%)]]
+  - 注意, 在添加版本库时, Trac 会提醒需要执行 `trac-admin $ENV repository resync ...` 命令(参见上图的提示), 经过实际检验, 也可以通过设置 `[trac]` 小节的 `repository_sync_per_request` 属性来自动同步源代码库, 例如:
+{{{
+repository_sync_per_request = PortableTrac, dev-thinkbase.net, trac-thinkbase.net
+}}}
+  - 详细的修改参见 [changeset:97b08e7272b559b4541c96e73418d0c7ef6c8628/trac-thinkbase.net 97b08e...]',1362931342,1362931808,'','thinkbase','thinkbase','trac git');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/03/10',5,'在 Trac 中集成 Git 版本库','按照 [TracGit] 的说明, 把现有的几个 Github 上的 Git Repositories( https://github.com/thinkbase )集成到 thinkbase.net.
+
+主要操作记录如下:
+ 1. 将 Git 引入运行环境. `git.exe` 来自 [http://msysgit.github.com/ Git for Windows], 具体的安装版本是 `Git-1.8.1.2-preview20130201.exe`, 安装后只需要保留 {{{bin}}} 目录即可.
+  - 运行环境的变化提交到 [PortableTrac], 具体的修改见 [changeset:86be8351295be93e65a8f3c89c1d7169a76f4ce8/PortableTrac 86be83...].
+ 2. 修改 [TracIni trac.ini] 及 增加版本库:
+  - 按照 [TracGit] 的说明, 在 [TracIni trac.ini] 的 `[components]` 小节增加:
+{{{
+tracopt.versioncontrol.git.* = enabled
+}}}
+  - 在 Trac 的 `管理: 版本库` 中添加版本库:[[BR]][[Image(admin_versioncontrol_repository.png, 100%)]]
+  - 注意, 在添加版本库时, Trac 会提醒需要执行 `trac-admin $ENV repository resync ...` 命令(参见上图的提示), 经过实际检验, ''''''这些命令并不是必须的'''''', 可以通过设置 `[trac]` 小节的 `repository_sync_per_request` 属性来自动同步源代码库, 例如:
+{{{
+repository_sync_per_request = PortableTrac, dev-thinkbase.net, trac-thinkbase.net
+}}}
+  - 详细的修改参见 [changeset:97b08e7272b559b4541c96e73418d0c7ef6c8628/trac-thinkbase.net 97b08e...]',1362931342,1362931869,'','thinkbase','thinkbase','trac git');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/03/10',6,'在 Trac 中集成 Git 版本库','按照 [TracGit] 的说明, 把现有的几个 Github 上的 Git Repositories( https://github.com/thinkbase )集成到 thinkbase.net.
+
+主要操作记录如下:
+ 1. 将 Git 引入运行环境. `git.exe` 来自 [http://msysgit.github.com/ Git for Windows], 具体的安装版本是 `Git-1.8.1.2-preview20130201.exe`, 安装后只需要保留 {{{bin}}} 目录即可.
+  - 运行环境的变化提交到 [PortableTrac], 具体的修改见 [changeset:86be8351295be93e65a8f3c89c1d7169a76f4ce8/PortableTrac 86be83...].
+ 2. 修改 [TracIni trac.ini] 及 增加版本库:
+  - 按照 [TracGit] 的说明, 在 [TracIni trac.ini] 的 `[components]` 小节增加:
+{{{
+tracopt.versioncontrol.git.* = enabled
+}}}
+  - 在 Trac 的 `管理: 版本库` 中添加版本库:[[BR]][[Image(admin_versioncontrol_repository.png, 100%)]]
+  - 注意, 在添加版本库时, Trac 会提醒需要执行 `trac-admin $ENV repository resync ...` 命令(参见上图的提示), 经过实际检验, ''''''这些命令并不是必须的'''''', 可以通过设置 `[trac]` 小节的 `repository_sync_per_request` 属性来自动同步源代码库(''''可能对性能有一定的影响''''), 例如:
+{{{
+repository_sync_per_request = PortableTrac, dev-thinkbase.net, trac-thinkbase.net
+}}}
+  - 详细的修改参见 [changeset:97b08e7272b559b4541c96e73418d0c7ef6c8628/trac-thinkbase.net 97b08e...]',1362931342,1362931925,'','thinkbase','thinkbase','trac git');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
@@ -37722,7 +37967,7 @@ CREATE TABLE cache (
     generation integer,
     key text
 );
-INSERT INTO "cache" VALUES(901198563,5,'trac.wiki.api.WikiSystem.pages');
+INSERT INTO "cache" VALUES(901198563,6,'trac.wiki.api.WikiSystem.pages');
 INSERT INTO "cache" VALUES(1722364385,18,'trac.perm.DefaultPermissionStore._all_permissions');
 CREATE TABLE subtickets (
     parent integer,
