@@ -51,6 +51,7 @@ INSERT INTO "auth_cookie" VALUES('51fd783acaacd06e97b4b87d8fac8a57','thinkbase',
 INSERT INTO "auth_cookie" VALUES('98865e7c32766f3f21be8eed35357f4d','thinkbase','180.169.66.118',1364301061);
 INSERT INTO "auth_cookie" VALUES('7401288bf83c3c9a2ed44c6b30525ca4','admin','116.230.193.170',1364400031);
 INSERT INTO "auth_cookie" VALUES('2899003124fa550d11c44a786e2f1f3e','thinkbase','114.86.17.107',1364484148);
+INSERT INTO "auth_cookie" VALUES('7417a14b442141ae8834a24cea40c5b6','thinkbase','112.65.136.195',1364528744);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -329,6 +330,10 @@ INSERT INTO "session" VALUES('44640a9cf94925eb1aa79574',0,1364396939);
 INSERT INTO "session" VALUES('03b095d69dd20354075a1656',0,1364411050);
 INSERT INTO "session" VALUES('2b616053128da751a5d0b492',0,1364460497);
 INSERT INTO "session" VALUES('65a53cc5ff2761e6e0ad76ea',0,1364466480);
+INSERT INTO "session" VALUES('7cda8d04395c5b0d255e1125',0,1364502063);
+INSERT INTO "session" VALUES('0b465a9f13f681455f072e4d',0,1364507984);
+INSERT INTO "session" VALUES('e2295008d2cc6f2ce013a091',0,1364533138);
+INSERT INTO "session" VALUES('2c9d9dbe28e911e4a22d5274',0,1364553009);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -874,6 +879,15 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1361171568561000');
+INSERT INTO "session_attribute" VALUES('7cda8d04395c5b0d255e1125',0,'timeline.lastvisit','1364486052000000');
+INSERT INTO "session_attribute" VALUES('7cda8d04395c5b0d255e1125',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0b465a9f13f681455f072e4d',0,'timeline.lastvisit','1364486052000000');
+INSERT INTO "session_attribute" VALUES('0b465a9f13f681455f072e4d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e2295008d2cc6f2ce013a091',0,'name','Nathaniel');
+INSERT INTO "session_attribute" VALUES('e2295008d2cc6f2ce013a091',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('e2295008d2cc6f2ce013a091',0,'email','freelife@yahoo.com');
+INSERT INTO "session_attribute" VALUES('2c9d9dbe28e911e4a22d5274',0,'timeline.lastvisit','1364530204000000');
+INSERT INTO "session_attribute" VALUES('2c9d9dbe28e911e4a22d5274',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -1106,6 +1120,7 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-2013/03/10','admin_versioncont
 INSERT INTO "attachment" VALUES('blog','thinkbase-2013/03/26','Win2008定时间隔执行触发器示例.png',39373,1364303195504000,'','thinkbase','180.169.66.118');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2013/03/28','PortableNginx.7z',2135639,1364482085218000,'','thinkbase','114.86.17.107');
 INSERT INTO "attachment" VALUES('blog','thinkbase-2013/03/28','winsw.png',44145,1364483147485000,'','thinkbase','114.86.17.107');
+INSERT INTO "attachment" VALUES('blog','thinkbase-2012/12/02-6','wmic-stdout.png',27521,1364530151995000,'','thinkbase','112.65.136.195');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -38911,6 +38926,230 @@ http {
 
 更多细节可以继续研究附件(参见其中的 `readme.txt`)，或者把附件解压后自己体验，下面是 winsw 产生的 Windows Servicce 以及 Service 运行时产生的相关文件截图，供参考：
 [[Image(winsw.png, 100%)]].',1364481919,1364483493,'','thinkbase','thinkbase','windows service winsw nginx http reverse-proxy');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',5,'批处理中很有用的命令 WMIC(补 20120503)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
+
+== 最典型的用法 ==
+=== 通过命令行中的一些内容查找程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
+}}}
+
+ * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
+ * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
+
+=== 将 wmic 的输出由 unicode 转为 ascii ===
+wmic 输出到 stdout 和 stderr 的内容都是 unicode 的，因此重定向到文件后，看起来会是这个样子：
+ - [[Image(wmic-stdout.png, 100%)]].
+
+使用如下的代码可以将 wmic 的输出由 unicode 转为 ascii：
+{{{
+#!sh
+:: 需要将 wmic 的输出由 unicode 转为 ascii
+set TMP_WMIC_OUT=%TEMP%\wmic-process-list.txt
+wmic /output:"%TMP_WMIC_OUT%" process where name="cmd.exe" get sessionid,commandline
+cmd /A /C type "%TMP_WMIC_OUT%"
+}}}
+
+=== 通过命令行中的一些内容结束程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
+}}}
+
+== 参考 ==
+  * 关于 wmic 命令输出的 unicode 转 ascii
+   * http://www.robvanderwoude.com/type.php#Unicode
+  * MSDN:
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
+  * Microsoft `TechNet`
+   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
+  * 来自 http://lgj573.iteye.com/blog/327432
+{{{
+#!sh
+# wmic 获取硬盘固定分区盘符:
+wmic logicaldisk where "drivetype=3" get name
+
+# wmic 获取硬盘各分区文件系统以及可用空间：
+wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
+
+# wmic 获取进程名称以及可执行路径:
+wmic process get name,executablepath
+
+# wmic 删除指定进程(根据进程名称):
+wmic process where name="qq.exe" call terminate
+# 或者用
+wmic process where name="qq.exe" delete
+
+# wmic 删除指定进程(根据进程PID):
+wmic process where pid="123" delete
+
+# wmic 创建新进程
+wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
+
+# 在远程机器上创建新进程：
+wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
+
+# 关闭本地计算机
+wmic process call create shutdown.exe
+
+# 重启远程计算机
+wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
+
+# 更改计算机名称
+wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
+
+# 更改帐户名
+wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
+
+# wmic 结束可疑进程（根据进程的启动路径）
+wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
+
+# wmic 获取物理内存
+wmic memlogical get TotalPhysicalMemory|find /i /v "t"
+
+# wmic 获取文件的创建、访问、修改时间
+@echo off
+wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
+
+# wmic 全盘搜索某文件并获取该文件所在目录
+wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
+
+for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
+
+# 获取屏幕分辨率
+wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
+
+# 获取U盘盘符，并运行U盘上的QQ.exe
+@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
+
+# 获得进程当前占用的内存和最大占用内存的大小：
+wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
+# 把内存大小改成KB(MB的话可能有小数)
+@echo off
+for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
+set /a m=%%a/1024
+set /a mm=%%b/1024
+echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
+)
+pause 
+}}}',1354470149,1364530139,'','thinkbase','thinkbase','wmic windows batch');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2012/12/02-6',6,'批处理中很有用的命令 WMIC(补 20120503)','''''原文来自 https://code.google.com/p/thinkbasenet/wiki/20120503_WMIC''''
+
+== 最典型的用法 ==
+=== 通过命令行中的一些内容查找程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )"
+}}}
+
+ * 为了防止有 `''%notepad%''` 这样的环境变量, 所以使用了 `''%_notepad_%''` 这样的查询语法, 一般情况下, 直接使用 `''%notepad%''` 也是可以的.
+ * 另外, 查询条件中 `LIKE` 操作符是不区分字符串的大小写的.
+
+=== 将 wmic 的输出由 unicode 转为 ascii ===
+wmic 输出到 stdout 和 stderr 的内容都是 unicode 的，因此重定向到文件后，看起来会是这个样子：
+ - [[Image(wmic-stdout.png, 100%)]]
+
+使用如下的代码可以将 wmic 的输出由 unicode 转为 ascii：
+{{{
+#!sh
+:: 需要将 wmic 的输出由 unicode 转为 ascii
+set TMP_WMIC_OUT=%TEMP%\wmic-process-list.txt
+wmic /output:"%TMP_WMIC_OUT%" process where name="cmd.exe" get sessionid,commandline
+cmd /A /C type "%TMP_WMIC_OUT%"
+}}}
+
+=== 通过命令行中的一些内容结束程序 ===
+{{{
+#!sh
+wmic process where "( (CommandLine LIKE ''%_notepad_%'') AND NOT(CommandLine LIKE ''%_wmic_%'' ) )" delete
+}}}
+
+== 参考 ==
+  * 关于 wmic 命令输出的 unicode 转 ascii
+   * http://www.robvanderwoude.com/type.php#Unicode
+  * MSDN:
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394531%28v=vs.85%29.aspx wmic]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394606%28v=vs.85%29.aspx WQL (SQL for WMI)]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392902%28v=vs.85%29.aspx Querying with WQL]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa394605%28v=vs.85%29.aspx WQL Operators]
+   * [http://msdn.microsoft.com/en-us/library/windows/desktop/aa392263%28v=vs.85%29.aspx LIKE Operator]
+  * Microsoft `TechNet`
+   * [http://technet.microsoft.com/en-us/library/bb742610.aspx WMIC - Take Command-line Control over WMI ]
+  * 来自 http://lgj573.iteye.com/blog/327432
+{{{
+#!sh
+# wmic 获取硬盘固定分区盘符:
+wmic logicaldisk where "drivetype=3" get name
+
+# wmic 获取硬盘各分区文件系统以及可用空间：
+wmic logicaldisk where "drivetype=3" get name,filesystem,freespace
+
+# wmic 获取进程名称以及可执行路径:
+wmic process get name,executablepath
+
+# wmic 删除指定进程(根据进程名称):
+wmic process where name="qq.exe" call terminate
+# 或者用
+wmic process where name="qq.exe" delete
+
+# wmic 删除指定进程(根据进程PID):
+wmic process where pid="123" delete
+
+# wmic 创建新进程
+wmic process call create "C:\Program Files\Tencent\QQ\QQ.exe"
+
+# 在远程机器上创建新进程：
+wmic /node:192.168.1.10 /user:administrator /password:123456 process call create cmd.exe
+
+# 关闭本地计算机
+wmic process call create shutdown.exe
+
+# 重启远程计算机
+wmic /node:192.168.1.10/user:administrator /password:123456 process call create "shutdown.exe -r -f -m"
+
+# 更改计算机名称
+wmic computersystem where "caption=''%ComputerName%''" call rename newcomputername
+
+# 更改帐户名
+wmic USERACCOUNT where "name=''%UserName%''" call rename newUserName
+
+# wmic 结束可疑进程（根据进程的启动路径）
+wmic process where "name=''explorer.exe'' and executablepath<>''%SystemDrive%\\windows\\explorer.exe''" delete
+
+# wmic 获取物理内存
+wmic memlogical get TotalPhysicalMemory|find /i /v "t"
+
+# wmic 获取文件的创建、访问、修改时间
+@echo off
+wmic datafile where name^="c:\\windows\\system32\\notepad.exe" get CreationDate^,LastAccessed^,LastModified
+
+# wmic 全盘搜索某文件并获取该文件所在目录
+wmic datafile where "FileName=''qq'' and extension=''exe''" get drive,path
+
+for /f "skip=1 tokens=1*" %i in (''wmic datafile where "FileName=''qq'' and extension=''exe''" get drive^,path'') do (set "qPath=%i%j"&@echo %qPath:~0,-3%)
+
+# 获取屏幕分辨率
+wmic DESKTOPMONITOR where Status=''ok'' get ScreenHeight,ScreenWidth
+
+# 获取U盘盘符，并运行U盘上的QQ.exe
+@for /f "skip=1 tokens=*" %i in (''wmic logicaldisk where "drivetype=2" get name'') do (if not "%i"=="" start d:\qq.exe)
+
+# 获得进程当前占用的内存和最大占用内存的大小：
+wmic process where caption=''filename.exe'' get WorkingSetSize,PeakWorkingSetSize
+# 把内存大小改成KB(MB的话可能有小数)
+@echo off
+for /f "skip=1 tokens=1-2 delims= " %%a in (''wmic process where caption^="conime.exe" get WorkingSetSize^,PeakWorkingSetSize'') do (
+set /a m=%%a/1024
+set /a mm=%%b/1024
+echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
+)
+pause 
+}}}',1354470149,1364530204,'','thinkbase','thinkbase','wmic windows batch');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
