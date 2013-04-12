@@ -54,6 +54,10 @@ INSERT INTO "auth_cookie" VALUES('6a4144fe2a70da201859e33375d63360','thinkbase',
 INSERT INTO "auth_cookie" VALUES('fecad8db4de317364af9b2837ffb4000','thinkbase','180.166.22.90',1365566544);
 INSERT INTO "auth_cookie" VALUES('cd9bb3e8aa84976a3fdf70f500a21ae8','thinkbase','127.0.0.1',1365566949);
 INSERT INTO "auth_cookie" VALUES('7f25025dc1c2d6cada84be80b57b6246','admin','180.166.22.90',1365567408);
+INSERT INTO "auth_cookie" VALUES('0f02affa38f4952d20a3292b0f7b0801','admin','180.157.7.220',1365677612);
+INSERT INTO "auth_cookie" VALUES('0e3fcf7db61e2dabae7154e48c6891ae','admin','180.157.7.220',1365677639);
+INSERT INTO "auth_cookie" VALUES('48fb62b2f4da1016ac1589a0f33fab0f','admin','112.65.136.195',1365763525);
+INSERT INTO "auth_cookie" VALUES('2febf88552fbe4329ab0e939f2a998dd','thinkbase','180.157.7.220',1365799730);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -271,6 +275,8 @@ INSERT INTO "session" VALUES('c80f7415164c1db681681cc4',0,1365568113);
 INSERT INTO "session" VALUES('987061baf6167066986a8120',0,1365574762);
 INSERT INTO "session" VALUES('4c706a7cd9234d67fdf95672',0,1365574860);
 INSERT INTO "session" VALUES('d069c31aaf4d99c45ef49872',0,1365577841);
+INSERT INTO "session" VALUES('f560f8156fec8b8d2f57195e',0,1365712582);
+INSERT INTO "session" VALUES('e63dbcc8346650a9aadffa61',0,1365733499);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -696,6 +702,10 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1361171568561000');
+INSERT INTO "session_attribute" VALUES('f560f8156fec8b8d2f57195e',0,'timeline.lastvisit','1365605465000000');
+INSERT INTO "session_attribute" VALUES('f560f8156fec8b8d2f57195e',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e63dbcc8346650a9aadffa61',0,'timeline.lastvisit','1365605465000000');
+INSERT INTO "session_attribute" VALUES('e63dbcc8346650a9aadffa61',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -39126,6 +39136,601 @@ echo 进程conime.exe现在占用内存：%m%K；最高占用内存：%mm%K
 )
 pause 
 }}}',1354470149,1364530204,'','thinkbase','thinkbase','wmic windows batch');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130412-1836',1,'在 Basic 认证下多个 Trac 服务器之间的单点登陆','由于 Trac 目前只能支持单个项目，所以，很多时候需要在多个 Trac 服务器间进行链接等的互相关联，Trac 对这种需求的回答是 InterTrac^([ZhInterTrac 中文])^ ，不过 InterTrac 并不处理多个 Trac 服务器之间的统一登陆问题；
+
+在使用 Apache httpd 的''''''Basic 认证''''''模式下，如果多个 Trac 服务器使用相同的`认证来源`(比如使用相同的LDAP服务器，或者相同的passwd文件)，那么就可以比较方便的实现多个 Trac 服务器间的单点登陆，要点包括：
+ 1. 一般情况下与 Trac 服务器集成的 httpd 会设置对 `.../login` 地址的用户认证，如果在当前服务器中设置一个指向其他服务器的反向代理，并且对反向代理后的 url 设置一个当前服务器的 `LocationMatch` 认证控制，那么：
+  1. 如果用户已经登陆当前 Trac，那么访问反向代理后的 url 就可以自动获得已有的 Basic 认证信息(因为二者是一个服务器地址);
+  2. 在已经具有 Basic 认证信息的情况下，通过反向代理访问到真正的服务器时，Basic 认证信息同样可以传递，从而可以直接登陆到外部服务器，不需要用户再次输入用户名/密码；
+ 2. 借用 Trac 处理 `.../login` 时对 `referer` HTTP 参数的 `redirect_back` 特性，如果在访问 `.../login` 时使用参数 `?referer=....`，那么完成 Basic 认证后，可以重定向到需要显示的页面；
+ 3. 通过在 `trac.ini` 中设置类似 `prj1.url = /trac/prj1/login?referer=/trac/prj1` 的 InterTrac URL，可以保证使用 InterTrac 语法编写的 TracLinks 通过 `.../login` URL 实现自动登陆然后跳转到具体页面，从而完成单点登录；
+
+具体的例子：
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+# ================================================= 
+# Proxy to http://another-server2/trac/prj2
+# =================================================
+<proxy http://another-server2/trac/prj2>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj2 http://another-server2/trac/prj2
+ProxyPassReverse /trac/prj2 http://another-server2/trac/prj2
+
+# 这里定义的 AuthType 必需是 Basic, 其他的配置项与当前 Trac 要保持一致，即这几个 Trac 需要使用同一个用户认证机制和认证来源
+# 具体需要几个 LocationMatch，取决于反向代理配置是的 URL 设置情况，这里因为反向代理的两台服务器都被定义在 /trac 下，所以可以使用一个 LocationMatch 来进行用户认证
+<LocationMatch "/trac/[^/]+/login">
+    AuthType Basic
+    AuthBasicProvider "ldap"
+    AuthLDAPUrl "ldap://domain-server/DC=thinkbase,DC=net?sAMAccountName?sub?(objectClass=*)"
+    AuthLDAPBindDN "CN=trac-ldap-user,OU=ServerAccountsGroup,DC=thinkbase,DC=net"
+    AuthLDAPBindPassword "**********"
+
+    AuthName "Trac 1.0.1"
+
+    Require valid-user
+</LocationMatch>
+}}}
+ - `trac.ini`
+{{{
+#!ini
+[intertrac]
+P1 = prj1
+prj1.title = Project 1 Trac
+prj1.url = /trac/prj1/login?referer=/trac/prj1
+P2 = prj2
+prj2.title = Project 2 Trac
+prj2.url = /trac/prj2/login?referer=/trac/prj2
+}}}',1365793522,1365793522,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130412-1836',2,'在 Basic 认证下多个 Trac 服务器之间的单点登陆','由于 Trac 目前只能支持单个项目，所以，很多时候需要在多个 Trac 服务器间进行链接等的互相关联，Trac 对这种需求的回答是 InterTrac^([ZhInterTrac 中文])^ ，不过 InterTrac 并不处理多个 Trac 服务器之间的统一登陆问题；
+
+== 原理 ==
+在使用 Apache httpd 的''''''Basic 认证''''''模式下，如果多个 Trac 服务器使用相同的`认证来源`(比如使用相同的LDAP服务器，或者相同的passwd文件)，那么就可以比较方便的实现多个 Trac 服务器间的单点登陆，要点包括：
+ 1. 一般情况下与 Trac 服务器集成的 httpd 会设置对 `.../login` 地址的用户认证，如果在当前服务器中设置一个指向其他服务器的反向代理，并且对反向代理后的 url 设置一个当前服务器的 `LocationMatch` 认证控制，那么：
+  1. 如果用户已经登陆当前 Trac，那么访问反向代理后的 url 就可以自动获得已有的 Basic 认证信息(因为二者是一个服务器地址);
+  2. 在已经具有 Basic 认证信息的情况下，通过反向代理访问到真正的服务器时，Basic 认证信息同样可以传递，从而可以直接登陆到外部服务器，不需要用户再次输入用户名/密码；
+ 2. 借用 Trac 处理 `.../login` 时对 `referer` HTTP 参数的 `redirect_back` 特性，如果在访问 `.../login` 时使用参数 `?referer=....`，那么完成 Basic 认证后，可以重定向到需要显示的页面；
+  - 参考 http://trac.edgewall.org/browser/trunk/trac/web/auth.py?rev=11493#L246
+ 3. 通过在 `trac.ini` 中设置类似 `prj1.url = /trac/prj1/login?referer=/trac/prj1` 的 InterTrac URL，可以保证使用 InterTrac 语法编写的 TracLinks 通过 `.../login` URL 实现自动登陆然后跳转到具体页面，从而完成单点登录；
+
+== 具体的例子 ==
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+# ================================================= 
+# Proxy to http://another-server2/trac/prj2
+# =================================================
+<proxy http://another-server2/trac/prj2>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj2 http://another-server2/trac/prj2
+ProxyPassReverse /trac/prj2 http://another-server2/trac/prj2
+
+# 这里定义的 AuthType 必需是 Basic, 其他的配置项与当前 Trac 要保持一致，即这几个 Trac 需要使用同一个用户认证机制和认证来源
+# 具体需要几个 LocationMatch，取决于反向代理配置是的 URL 设置情况，这里因为反向代理的两台服务器都被定义在 /trac 下，所以可以使用一个 LocationMatch 来进行用户认证
+<LocationMatch "/trac/[^/]+/login">
+    AuthType Basic
+    AuthBasicProvider "ldap"
+    AuthLDAPUrl "ldap://domain-server/DC=thinkbase,DC=net?sAMAccountName?sub?(objectClass=*)"
+    AuthLDAPBindDN "CN=trac-ldap-user,OU=ServerAccountsGroup,DC=thinkbase,DC=net"
+    AuthLDAPBindPassword "**********"
+
+    AuthName "Trac 1.0.1"
+
+    Require valid-user
+</LocationMatch>
+}}}
+ - `trac.ini`
+{{{
+#!ini
+[intertrac]
+P1 = prj1
+prj1.title = Project 1 Trac
+prj1.url = /trac/prj1/login?referer=/trac/prj1
+P2 = prj2
+prj2.title = Project 2 Trac
+prj2.url = /trac/prj2/login?referer=/trac/prj2
+}}}',1365793522,1365793619,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130412-1836',3,'在 Basic 认证下多个 Trac 服务器之间的单点登陆','由于 Trac 目前只能支持单个项目，所以，很多时候需要在多个 Trac 服务器间进行链接等的互相关联，Trac 对这种需求的回答是 InterTrac^([ZhInterTrac 中文])^ ，不过 InterTrac 并不处理多个 Trac 服务器之间的统一登陆问题；
+
+== 原理 ==
+在使用 Apache httpd 的''''''Basic 认证''''''模式下，如果多个 Trac 服务器使用相同的`认证来源`(比如使用相同的LDAP服务器，或者相同的passwd文件)，那么就可以比较方便的实现多个 Trac 服务器间的单点登陆，要点包括：
+ 1. 一般情况下与 Trac 服务器集成的 httpd 会设置对 `.../login` 地址的用户认证，如果在当前服务器中设置一个指向其他服务器的反向代理，并且对反向代理后的 url 设置一个当前服务器的 `LocationMatch` 认证控制，那么：
+  1. 如果用户已经登陆当前 Trac，那么访问反向代理后的 url 就可以自动获得已有的 Basic 认证信息(因为二者是一个服务器地址);
+  2. 在已经具有 Basic 认证信息的情况下，通过反向代理访问到真正的服务器时，Basic 认证信息同样可以传递，从而可以直接登陆到外部服务器，不需要用户再次输入用户名/密码；
+ 2. 借用 Trac 处理 `.../login` 时对 `referer` HTTP 参数的 `redirect_back` 特性，如果在访问 `.../login` 时使用参数 `?referer=....`，那么完成 Basic 认证后，可以重定向到需要显示的页面；
+  - 参考 http://trac.edgewall.org/browser/trunk/trac/web/auth.py?rev=11493#L246
+ 3. 通过在 `trac.ini` 中设置类似 `prj1.url = /trac/prj1/login?referer=/trac/prj1` 的 InterTrac URL，可以保证使用 InterTrac 语法编写的 TracLinks 通过 `.../login` URL 实现自动登陆然后跳转到具体页面，从而完成单点登录；
+
+== 具体的例子 ==
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+# ================================================= 
+# Proxy to http://another-server2/trac/prj2
+# =================================================
+<proxy http://another-server2/trac/prj2>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj2 http://another-server2/trac/prj2
+ProxyPassReverse /trac/prj2 http://another-server2/trac/prj2
+
+# 这里定义的 AuthType 必需是 Basic, 其他的配置项与当前 Trac 要保持一致，即这几个 Trac 需要使用同一个用户认证机制和认证来源
+# 具体需要几个 LocationMatch，取决于反向代理配置是的 URL 设置情况，这里因为反向代理的两台服务器都被定义在 /trac 下，所以可以使用一个 LocationMatch 来进行用户认证
+<LocationMatch "/trac/[^/]+/login">
+    AuthType Basic
+    AuthBasicProvider "ldap"
+    AuthLDAPUrl "ldap://domain-server/DC=thinkbase,DC=net?sAMAccountName?sub?(objectClass=*)"
+    AuthLDAPBindDN "CN=trac-ldap-user,OU=ServerAccountsGroup,DC=thinkbase,DC=net"
+    AuthLDAPBindPassword "**********"
+
+    AuthName "Trac 1.0.1"
+
+    Require valid-user
+</LocationMatch>
+}}}
+ - `trac.ini`
+{{{
+#!ini
+[intertrac]
+P1 = prj1
+prj1.title = Project 1 Trac
+prj1.url = /trac/prj1/login?referer=/trac/prj1
+P2 = prj2
+prj2.title = Project 2 Trac
+prj2.url = /trac/prj2/login?referer=/trac/prj2
+}}}
+
+== 另外一种方式 ==
+如果两个 Trac 服务器的认证来源不一致(比如一个使用 LDAP 认证，一个使用 passwd 文件认证，用户名和密码都不相同)，是否可以实现类似的效果呢？
+
+答案是可以的，不过需要有一个前提，就是''''''使用固定的用户/密码访问另外那个 Trac 服务器''''''，具体来说，在 `httpd.conf` 中可以省去 `<LocationMatch` 定义认证方式的部分，而是在 `<proxy` 中通过 HTTP Header `RequestHeader` 写死 Basic 认证的用户名和密码:
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule headers_module modules/mod_headers.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+    # 这里固定设置反向代理转发时的 Basic 认证用户名和密码， dXNlcjE6cGFzc3dkMQ= 是命令行 ''echo -n user1:passwd1 | base64'' 的运行结果
+    RequestHeader set Authorization "Basic dXNlcjE6cGFzc3dkMQ="
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+}}}',1365793522,1365798052,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130412-1836',4,'在 Basic 认证下多个 Trac 服务器之间的单点登陆','由于 Trac 目前只能支持单个项目，所以，很多时候需要在多个 Trac 服务器间进行链接等的互相关联，Trac 对这种需求的回答是 InterTrac^([ZhInterTrac 中文])^ ，不过 InterTrac 并不处理多个 Trac 服务器之间的统一登陆问题；
+
+== 原理 ==
+在使用 Apache httpd 的''''''Basic 认证''''''模式下，如果多个 Trac 服务器使用相同的`认证来源`(比如使用相同的LDAP服务器，或者相同的passwd文件)，那么就可以比较方便的实现多个 Trac 服务器间的单点登陆，要点包括：
+ 1. 一般情况下与 Trac 服务器集成的 httpd 会设置对 `.../login` 地址的用户认证，如果在当前服务器中设置一个指向其他服务器的反向代理，并且对反向代理后的 url 设置一个当前服务器的 `LocationMatch` 认证控制，那么：
+  1. 如果用户已经登陆当前 Trac，那么访问反向代理后的 url 就可以自动获得已有的 Basic 认证信息(因为二者是一个服务器地址);
+  2. 在已经具有 Basic 认证信息的情况下，通过反向代理访问到真正的服务器时，Basic 认证信息同样可以传递，从而可以直接登陆到外部服务器，不需要用户再次输入用户名/密码；
+ 2. 借用 Trac 处理 `.../login` 时对 `referer` HTTP 参数的 `redirect_back` 特性，如果在访问 `.../login` 时使用参数 `?referer=....`，那么完成 Basic 认证后，可以重定向到需要显示的页面；
+  - 参考 http://trac.edgewall.org/browser/trunk/trac/web/auth.py?rev=11493#L246
+ 3. 通过在 `trac.ini` 中设置类似 `prj1.url = /trac/prj1/login?referer=/trac/prj1` 的 InterTrac URL，可以保证使用 InterTrac 语法编写的 TracLinks 通过 `.../login` URL 实现自动登陆然后跳转到具体页面，从而完成单点登录；
+
+== 具体的例子 ==
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+# ================================================= 
+# Proxy to http://another-server2/trac/prj2
+# =================================================
+<proxy http://another-server2/trac/prj2>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj2 http://another-server2/trac/prj2
+ProxyPassReverse /trac/prj2 http://another-server2/trac/prj2
+
+# 这里定义的 AuthType 必需是 Basic, 其他的配置项与当前 Trac 要保持一致，即这几个 Trac 需要使用同一个用户认证机制和认证来源
+# 具体需要几个 LocationMatch，取决于反向代理配置是的 URL 设置情况，这里因为反向代理的两台服务器都被定义在 /trac 下，所以可以使用一个 LocationMatch 来进行用户认证
+<LocationMatch "/trac/[^/]+/login">
+    AuthType Basic
+    AuthBasicProvider "ldap"
+    AuthLDAPUrl "ldap://domain-server/DC=thinkbase,DC=net?sAMAccountName?sub?(objectClass=*)"
+    AuthLDAPBindDN "CN=trac-ldap-user,OU=ServerAccountsGroup,DC=thinkbase,DC=net"
+    AuthLDAPBindPassword "**********"
+
+    AuthName "Trac 1.0.1"
+
+    Require valid-user
+</LocationMatch>
+}}}
+ - `trac.ini`
+{{{
+#!ini
+[intertrac]
+P1 = prj1
+prj1.title = Project 1 Trac
+prj1.url = /trac/prj1/login?referer=/trac/prj1
+P2 = prj2
+prj2.title = Project 2 Trac
+prj2.url = /trac/prj2/login?referer=/trac/prj2
+}}}
+
+== 另外一种方式 ==
+如果两个 Trac 服务器的认证来源不一致(比如一个使用 LDAP 认证，一个使用 passwd 文件认证，用户名和密码都不相同)，是否可以实现类似的效果呢？
+
+答案是可以的，不过需要有一个前提，就是''''''使用固定的用户/密码访问另外那个 Trac 服务器''''''，具体来说，在 `httpd.conf` 中可以省去 `<LocationMatch` 定义认证方式的部分，而是在 `<proxy` 中通过 HTTP Header `RequestHeader` 写死 Basic 认证的用户名和密码:
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule headers_module modules/mod_headers.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+    # 这里固定设置反向代理转发时的 Basic 认证用户名和密码， dXNlcjE6cGFzc3dkMQ= 是命令行 ''echo -n user1:passwd1 | base64'' 的运行结果
+    RequestHeader set Authorization "Basic dXNlcjE6cGFzc3dkMQ="
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+}}}',1365793522,1365798138,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130412-1836',5,'在 Basic 认证下多个 Trac 服务器之间的单点登陆','由于 Trac 目前只能支持单个项目，所以，很多时候需要在多个 Trac 服务器间进行链接等的互相关联，Trac 对这种需求的回答是 InterTrac^([ZhInterTrac 中文])^ ，不过 InterTrac 并不处理多个 Trac 服务器之间的统一登陆问题；
+
+== 原理 ==
+在使用 Apache httpd 的''''''Basic 认证''''''模式下，如果多个 Trac 服务器使用相同的`认证来源`(比如使用相同的LDAP服务器，或者相同的passwd文件)，那么就可以比较方便的实现多个 Trac 服务器间的单点登陆，要点包括：
+ 1. 一般情况下与 Trac 服务器集成的 httpd 会设置对 `.../login` 地址的用户认证，如果在当前服务器中设置一个指向其他服务器的反向代理，并且对反向代理后的 url 设置一个当前服务器的 `LocationMatch` 认证控制，那么：
+  1. 如果用户已经登陆当前 Trac，那么访问反向代理后的 url 就可以自动获得已有的 Basic 认证信息(因为二者是一个服务器地址);
+  2. 在已经具有 Basic 认证信息的情况下，通过反向代理访问到真正的服务器时，Basic 认证信息同样可以传递，从而可以直接登陆到外部服务器，不需要用户再次输入用户名/密码；
+ 2. 借用 Trac 处理 `.../login` 时对 `referer` HTTP 参数的 `redirect_back` 特性，如果在访问 `.../login` 时使用参数 `?referer=....`，那么完成 Basic 认证后，可以重定向到需要显示的页面；
+  - 参考 http://trac.edgewall.org/browser/trunk/trac/web/auth.py?rev=11493#L246
+ 3. 通过在 `trac.ini` 中设置类似 `prj1.url = /trac/prj1/login?referer=/trac/prj1` 的 InterTrac URL，可以保证使用 InterTrac 语法编写的 TracLinks 通过 `.../login` URL 实现自动登陆然后跳转到具体页面，从而完成单点登录；
+
+== 具体的例子 ==
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+# ================================================= 
+# Proxy to http://another-server2/trac/prj2
+# =================================================
+<proxy http://another-server2/trac/prj2>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj2 http://another-server2/trac/prj2
+ProxyPassReverse /trac/prj2 http://another-server2/trac/prj2
+
+# 这里定义的 AuthType 必需是 Basic, 其他的配置项与当前 Trac 要保持一致，即这几个 Trac 需要使用同一个用户认证机制和认证来源
+# 具体需要几个 LocationMatch，取决于反向代理配置是的 URL 设置情况，这里因为反向代理的两台服务器都被定义在 /trac 下，所以可以使用一个 LocationMatch 来进行用户认证
+<LocationMatch "/trac/[^/]+/login">
+    AuthType Basic
+    AuthBasicProvider "ldap"
+    AuthLDAPUrl "ldap://domain-server/DC=thinkbase,DC=net?sAMAccountName?sub?(objectClass=*)"
+    AuthLDAPBindDN "CN=trac-ldap-user,OU=ServerAccountsGroup,DC=thinkbase,DC=net"
+    AuthLDAPBindPassword "**********"
+
+    AuthName "Trac 1.0.1"
+
+    Require valid-user
+</LocationMatch>
+}}}
+ - `trac.ini`
+{{{
+#!ini
+[intertrac]
+P1 = prj1
+prj1.title = Project 1 Trac
+prj1.url = /trac/prj1/login?referer=/trac/prj1
+P2 = prj2
+prj2.title = Project 2 Trac
+prj2.url = /trac/prj2/login?referer=/trac/prj2
+}}}
+
+== 另外一种方式 ==
+如果两个 Trac 服务器的认证来源不一致(比如一个使用 LDAP 认证，一个使用 passwd 文件认证，用户名和密码都不相同)，是否可以实现类似的效果呢？
+
+答案是可以的，不过需要有一个前提，就是''''''使用固定的用户/密码访问另外那个 Trac 服务器''''''，具体来说，在 `httpd.conf` 中可以省去 `<LocationMatch` 定义认证方式的部分，而是在 `<proxy` 中通过 HTTP Header `RequestHeader` 写死 Basic 认证的用户名和密码:
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule headers_module modules/mod_headers.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+    # 这里固定设置反向代理转发时的 Basic 认证用户名和密码， dXNlcjE6cGFzc3dkMQ= 是命令行 ''echo -n user1:passwd1 | base64'' 的运行结果
+    RequestHeader set Authorization "Basic dXNlcjE6cGFzc3dkMQ="
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+}}}
+
+== 参考 ==
+ - Apache Reverse proxy with proxy authentication : http://stackoverflow.com/questions/7502597/apache-reverse-proxy-with-proxy-authentication
+ - How to do HTTP basic auth through a reverse proxy ? : http://www.zeitoun.net/articles/http-basic-auth-through-reverse-proxy/start
+ - How to setup a reverse proxy to enable HTTP access with basic authentication to an internal HTTPS server that requires a certificate : http://serverfault.com/questions/300502/how-to-setup-a-reverse-proxy-to-enable-http-access-with-basic-authentication-to
+
+== END ==',1365793522,1365798302,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130412-1836',6,'在 Basic 认证下多个 Trac 服务器之间的单点登陆','由于 Trac 目前只能支持单个项目，所以，很多时候需要在多个 Trac 服务器间进行链接等的互相关联，Trac 对这种需求的回答是 InterTrac^([ZhInterTrac 中文])^ ，不过 InterTrac 并不处理多个 Trac 服务器之间的统一登陆问题；
+
+== 原理 ==
+在使用 Apache httpd 的''''''Basic 认证''''''模式下，如果多个 Trac 服务器使用相同的`认证来源`(比如使用相同的LDAP服务器，或者相同的passwd文件)，那么就可以比较方便的实现多个 Trac 服务器间的单点登陆，要点包括：
+ 1. 一般情况下与 Trac 服务器集成的 httpd 会设置对 `.../login` 地址的用户认证，如果在当前服务器中设置一个指向其他服务器的反向代理，并且对反向代理后的 url 设置一个当前服务器的 `LocationMatch` 认证控制，那么：
+  1. 如果用户已经登陆当前 Trac，那么访问反向代理后的 url 就可以自动获得已有的 Basic 认证信息(因为二者是一个服务器地址);
+  2. 在已经具有 Basic 认证信息的情况下，通过反向代理访问到真正的服务器时，Basic 认证信息同样可以传递，从而可以直接登陆到外部服务器，不需要用户再次输入用户名/密码；
+ 2. 借用 Trac 处理 `.../login` 时对 `referer` HTTP 参数的 `redirect_back` 特性，如果在访问 `.../login` 时使用参数 `?referer=....`，那么完成 Basic 认证后，可以重定向到需要显示的页面；
+  - 参考 http://trac.edgewall.org/browser/trunk/trac/web/auth.py?rev=11493#L246
+ 3. 通过在 `trac.ini` 中设置类似 `prj1.url = /trac/prj1/login?referer=/trac/prj1` 的 InterTrac URL，可以保证使用 InterTrac 语法编写的 TracLinks 通过 `.../login` URL 实现自动登陆然后跳转到具体页面，从而完成单点登录；
+
+== 具体的例子 ==
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+# ================================================= 
+# Proxy to http://another-server2/trac/prj2
+# =================================================
+<proxy http://another-server2/trac/prj2>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj2 http://another-server2/trac/prj2
+ProxyPassReverse /trac/prj2 http://another-server2/trac/prj2
+
+# 这里定义的 AuthType 必需是 Basic, 其他的配置项与当前 Trac 要保持一致，即这几个 Trac 需要使用同一个用户认证机制和认证来源
+# 具体需要几个 LocationMatch，取决于反向代理配置是的 URL 设置情况，这里因为反向代理的两台服务器都被定义在 /trac 下，所以可以使用一个 LocationMatch 来进行用户认证
+<LocationMatch "/trac/[^/]+/login">
+    AuthType Basic
+    AuthBasicProvider "ldap"
+    AuthLDAPUrl "ldap://domain-server/DC=thinkbase,DC=net?sAMAccountName?sub?(objectClass=*)"
+    AuthLDAPBindDN "CN=trac-ldap-user,OU=ServerAccountsGroup,DC=thinkbase,DC=net"
+    AuthLDAPBindPassword "**********"
+
+    AuthName "Trac 1.0.1"
+
+    Require valid-user
+</LocationMatch>
+}}}
+ - `trac.ini`
+{{{
+#!ini
+[intertrac]
+P1 = prj1
+prj1.title = Project 1 Trac
+prj1.url = /trac/prj1/login?referer=/trac/prj1
+P2 = prj2
+prj2.title = Project 2 Trac
+prj2.url = /trac/prj2/login?referer=/trac/prj2
+}}}
+
+== 另外一种方式 ==
+如果两个 Trac 服务器的认证来源不一致(比如一个使用 LDAP 认证，一个使用 passwd 文件认证，用户名和密码都不相同)，是否可以实现类似的效果呢？
+
+答案是可以的，不过需要有一个前提，就是''''''使用固定的用户/密码访问另外那个 Trac 服务器''''''，具体来说，在 `httpd.conf` 中可以省去 `<LocationMatch` 定义认证方式的部分，而是在 `<proxy` 中通过 HTTP Header `RequestHeader` 写死 Basic 认证的用户名和密码:
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule headers_module modules/mod_headers.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+    # 这里固定设置反向代理转发时的 Basic 认证用户名和密码， dXNlcjE6cGFzc3dkMQ= 是命令行 ''echo -n user1:passwd1 | base64'' 的运行结果
+    RequestHeader set Authorization "Basic dXNlcjE6cGFzc3dkMQ="
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+}}}
+
+== 参考 ==
+ - Apache Reverse proxy with proxy authentication : http://stackoverflow.com/questions/7502597/apache-reverse-proxy-with-proxy-authentication
+ - How to do HTTP basic auth through a reverse proxy ? : http://www.zeitoun.net/articles/http-basic-auth-through-reverse-proxy/start
+ - How to setup a reverse proxy to enable HTTP access with basic authentication to an internal HTTPS server that requires a certificate : http://serverfault.com/questions/300502/how-to-setup-a-reverse-proxy-to-enable-http-access-with-basic-authentication-to
+
+== END ==',1365793522,1365798448,'','thinkbase','thinkbase','apache trac http  reverse-proxy sso authorization InterTrac');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130412-1836',7,'在 Basic 认证下多个 Trac 服务器之间的单点登陆','由于 Trac 目前只能支持单个项目，所以，很多时候需要在多个 Trac 服务器间进行链接等的互相关联，Trac 对这种需求的回答是 InterTrac^([ZhInterTrac 中文])^ ，不过 InterTrac 并不处理多个 Trac 服务器之间的统一登陆问题；
+
+== 原理 ==
+在使用 Apache httpd 的''''''Basic 认证''''''模式下，如果多个 Trac 服务器使用相同的`认证来源`(比如使用相同的LDAP服务器，或者相同的passwd文件)，那么就可以比较方便的实现多个 Trac 服务器间的单点登陆，要点包括：
+ 1. 一般情况下与 Trac 服务器集成的 httpd 会设置对 `.../login` 地址的用户认证，如果在当前服务器中设置一个指向其他服务器的反向代理，并且对反向代理后的 url 设置一个当前服务器的 `LocationMatch` 认证控制，那么：
+  1. 如果用户已经登陆当前 Trac，那么访问反向代理后的 url 就可以自动获得已有的 Basic 认证信息(因为二者是一个服务器地址);
+  2. 在已经具有 Basic 认证信息的情况下，通过反向代理访问到真正的服务器时，Basic 认证信息同样可以传递，从而可以直接登陆到外部服务器，不需要用户再次输入用户名/密码；
+ 2. 借用 Trac 处理 `.../login` 时对 `referer` HTTP 参数的 `redirect_back` 特性，如果在访问 `.../login` 时使用参数 `?referer=....`，那么完成 Basic 认证后，可以重定向到需要显示的页面；
+  - 参考 http://trac.edgewall.org/browser/trunk/trac/web/auth.py?rev=11493#L246
+ 3. 通过在 `trac.ini` 中设置类似 `prj1.url = /trac/prj1/login?referer=/trac/prj1` 的 InterTrac URL，可以保证使用 InterTrac 语法编写的 TracLinks 通过 `.../login` URL 实现自动登陆然后跳转到具体页面，从而完成单点登录；
+
+== 具体实现举例 ==
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+# ================================================= 
+# Proxy to http://another-server2/trac/prj2
+# =================================================
+<proxy http://another-server2/trac/prj2>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+</proxy>
+ProxyPass /trac/prj2 http://another-server2/trac/prj2
+ProxyPassReverse /trac/prj2 http://another-server2/trac/prj2
+
+# 这里定义的 AuthType 必需是 Basic, 其他的配置项与当前 Trac 要保持一致，即这几个 Trac 需要使用同一个用户认证机制和认证来源
+# 具体需要几个 LocationMatch，取决于反向代理配置是的 URL 设置情况，这里因为反向代理的两台服务器都被定义在 /trac 下，所以可以使用一个 LocationMatch 来进行用户认证
+<LocationMatch "/trac/[^/]+/login">
+    AuthType Basic
+    AuthBasicProvider "ldap"
+    AuthLDAPUrl "ldap://domain-server/DC=thinkbase,DC=net?sAMAccountName?sub?(objectClass=*)"
+    AuthLDAPBindDN "CN=trac-ldap-user,OU=ServerAccountsGroup,DC=thinkbase,DC=net"
+    AuthLDAPBindPassword "**********"
+
+    AuthName "Trac 1.0.1"
+
+    Require valid-user
+</LocationMatch>
+}}}
+ - `trac.ini`
+{{{
+#!ini
+[intertrac]
+P1 = prj1
+prj1.title = Project 1 Trac
+prj1.url = /trac/prj1/login?referer=/trac/prj1
+P2 = prj2
+prj2.title = Project 2 Trac
+prj2.url = /trac/prj2/login?referer=/trac/prj2
+}}}
+
+== 另外一种方式 ==
+如果两个 Trac 服务器的认证来源不一致(比如一个使用 LDAP 认证，一个使用 passwd 文件认证，用户名和密码都不相同)，是否可以实现类似的效果呢？
+
+答案是可以的，不过需要有一个前提，就是''''''使用固定的用户/密码访问另外那个 Trac 服务器''''''，具体来说，在 `httpd.conf` 中可以省去 `<LocationMatch` 定义认证方式的部分，而是在 `<proxy` 中通过 HTTP Header `RequestHeader` 写死 Basic 认证的用户名和密码:
+ - `httpd.conf`
+{{{
+#!sh
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule headers_module modules/mod_headers.so
+ProxyRequests Off
+# ================================================= 
+# Proxy to http://another-server/trac/prj1
+# =================================================
+<proxy http://another-server/trac/prj1>
+    AllowOverride None
+    Order Deny,Allow
+    Allow from all
+    # 这里固定设置反向代理转发时的 Basic 认证用户名和密码， dXNlcjE6cGFzc3dkMQ= 是命令行 ''echo -n user1:passwd1 | base64'' 的运行结果
+    RequestHeader set Authorization "Basic dXNlcjE6cGFzc3dkMQ="
+</proxy>
+ProxyPass /trac/prj1 http://another-server/trac/prj1
+ProxyPassReverse /trac/prj1 http://another-server/trac/prj1
+}}}
+
+== 演示 ==
+就 thinkbase.net 站点的两个 trac 环境作了一个示例。当然，因为这两个 trac 环境是部署在同一个 apache httpd 上的，所以不需要在 `httpd.conf` 中增加配置。
+ - 测试页面见 - T:wiki:other-demo/inter-trac
+
+== 参考 ==
+ - Apache Reverse proxy with proxy authentication : http://stackoverflow.com/questions/7502597/apache-reverse-proxy-with-proxy-authentication
+ - How to do HTTP basic auth through a reverse proxy ? : http://www.zeitoun.net/articles/http-basic-auth-through-reverse-proxy/start
+ - How to setup a reverse proxy to enable HTTP access with basic authentication to an internal HTTPS server that requires a certificate : http://serverfault.com/questions/300502/how-to-setup-a-reverse-proxy-to-enable-http-access-with-basic-authentication-to
+
+== END ==',1365793522,1365799622,'','thinkbase','thinkbase','apache trac http  reverse-proxy sso authorization InterTrac');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
