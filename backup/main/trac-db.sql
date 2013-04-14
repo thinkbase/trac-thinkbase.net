@@ -36114,6 +36114,75 @@ After login([attachment:login.png screenshot]), you can change the admin''s pass
 == Read more ==
  - [wiki:TracGuide The Trac User and Administration Guide]''''([wiki:ZhTracGuide Chinese translation - Trac使用及管理指南])'''';
  - [wiki:PortableTrac/manual PortableTrac User Manual / 用户手册].','',0);
+INSERT INTO "wiki" VALUES('PortableTrac/manual',6,1365960664634000,'thinkbase','101.229.196.27','= PortableTrac manual =
+
+== The first step: install and play ==
+ - see [wiki:PortableTrac/install installation];
+
+== Create a new trac environment ==
+//TODO
+
+== User management ==
+//TODO
+
+== Backup, restore, and the version control ==
+//TODO
+
+== Maintain a website like thinkbase.net ==
+//TODO
+
+== Develop PortableTrac ==
+//TODO
+','',0);
+INSERT INTO "wiki" VALUES('PortableTrac/install',36,1365960696091000,'thinkbase','101.229.196.27','= PortableTrac installation =
+
+Installation to `Windows Server 2003` / `Windows Server 2008` / `Windows 7` / `Windows 8`, and ''''the above versions of Windows'''' is recommended. ''''`Windows XP` and below'''' ''''''is not full supported''''''.
+
+== 1 minute tutorial ==
+ 1. Download the newest version of PortableTrac: https://github.com/thinkbase/PortableTrac/archive/master.zip;
+  - See the screenshots [attachment:download.png pic1] and [attachment:PortableTrac-master.zip.png pic2] for reference;
+
+ 2. Uncompress it into a folder: such as `C:\PortableTrac`(Or other your favorite folder name);
+  - This is the [attachment:uncompress-to-PortableTrac.png screenshot] of `C:\PortableTrac`;
+
+ 3. Open a command prompt windows, `cd C:\PortableTrac`;
+
+ 4. run `passwd admin 111111`;
+  - ''''This command create admin''s password as `111111`'''';
+  - The example: [attachment:passwd-command.png screenshot];
+
+ 5. run `tracd 8080 default`
+  - ''''This command start tracd for "default" environment, at port `8080`'''';
+  - See the screenshots [attachment:tracd-1.png pic1], [attachment:tracd-2.png pic2];
+
+ 6. Open browser and navigate to `http://localhost:8080`.
+  - See the screenshots [attachment:tracd-3.png pic1], [attachment:tracd-4.png pic2];
+
+[[NoteBox(tip,Subversion Intergration is not supported in Windows XP, 450px)]]
+
+== Run trac with `apache httpd` ==
+If you finish the `1 minute tutorial`''''(see [wiki:install#a1minutetutorial above])'''', you can easy start the `apache httpd` just run the batch file `start-httpd.cmd`;
+ - The default port of apache httpd is `80`, so you can access the Trac with URL `http://localhost/`;
+
+ - The screenshot: [attachment:httpd.png];
+
+ - `start-httpd.cmd` create a ''''''virtual disk drive'''''' `B:` for make apache httpd running portable(The idea from [http://www.wiki.uniformserver.com/index.php/Mini_Servers:_Introduction The Mini Servers]);
+
+ - process started with `apache httpd` is `apache rotatelogs command line pipe`''''(rotatelogs.exe)'''', which break up apache logs into daily, configurated in [source:PortableTrac/httpd/Apache2.2/conf/httpd.conf httpd.conf]:
+{{{
+#!python
+ErrorLog "|B:/Apache2.2/bin/rotatelogs.exe B:/Apache2.2/logs/error_%Y_%m_%d.log 86400 480″
+CustomLog "|B:/Apache2.2/bin/rotatelogs B:/Apache2.2/logs/%Y_%m_%d.access.log 86400 480" common
+}}}
+
+[[NoteBox(tip,Apache httpd is not supported in Windows XP, 450px)]]
+
+== Change the default password of admin ==
+After login([attachment:login.png screenshot]), you can change the admin''s password by link `http://localhost/default/prefs/account`([attachment:passwd-change.png screenshot]);
+
+== Read more ==
+ - [wiki:TracGuide The Trac User and Administration Guide]''''([wiki:ZhTracGuide Chinese translation - Trac使用及管理指南])'''';
+ - [wiki:PortableTrac/manual PortableTrac User Manual / 用户手册].','',0);
 CREATE TABLE repository (
     id integer,
     name text,
@@ -36418,6 +36487,12 @@ CREATE TABLE tags (
     tag text,
     UNIQUE (tagspace,name,tag)
 );
+INSERT INTO "tags" VALUES('wiki','PortableTrac/install','portable');
+INSERT INTO "tags" VALUES('wiki','PortableTrac/install','trac');
+INSERT INTO "tags" VALUES('wiki','PortableTrac','portable');
+INSERT INTO "tags" VALUES('wiki','PortableTrac','trac');
+INSERT INTO "tags" VALUES('wiki','PortableTrac/manual','portable');
+INSERT INTO "tags" VALUES('wiki','PortableTrac/manual','trac');
 CREATE TABLE tractweakui_list (
     id integer PRIMARY KEY,
     time integer,
@@ -41360,6 +41435,236 @@ c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0
 The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
 
 Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365956948,'','thinkbase','thinkbase','trac python');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',18,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below image:)[[BR]][[Image(mod_wsgi_error.png, 100%)]].
+
+The reason is the version of the Microsoft C/C++ compiler(''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`''''^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ).
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`:[[BR]]Copy from [[BR]]{{{c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest}}} [[BR]] to [[BR]] {{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365960763,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/18',2,'thinkbase.net 升级到 Trac 1.0.1','Trac 1.0 分支已经发布版本 `1.0.1`(参见 http://trac.edgewall.org/wiki/TracDev/ReleaseNotes/1.0#MaintenanceReleases), 因此今天将 http://thinkbase.net 站点(及其运行环境 [http://www.thinkbase.net/main/wiki/PortableTrac PortableTrac])升级到这个版本.
+
+== 主要工作 ==
+升级过程的主要工作包括`升级 Trac 1.0.1 egg 包`和`升级 Trac 环境`, 详细步骤参见 [wiki:TracUpgrade TracUpgrade] 或者 http://trac.edgewall.org/wiki/TracUpgrade ;
+=== 1. 安装 Trac 1.0.1 ===
+由于安装之前需要测试, 因此安装过程是在测试系统中进行的, 安装测试成功后, 将调整后的 `PortableTrac` 提交到 [https://github.com/thinkbase/PortableTrac PortableTrac GitHub Repositories], 然后在正式系统中更新这个运行环境;
+ - 主要命令:
+{{{
+I:\thinkbase.net\github\PortableTrac-git>easy_install --upgrade Trac==1.0.1
+}}}
+=== 2. 升级 Trac 环境 ===
+升级过程直接在正式系统中进行(此前已经在测试系统中经过测试了).
+ - 主要命令:
+{{{
+D:\thinkbase.net\PortableTrac-git>set SITE_BASE=D:\thinkbase.net\trac-thinkbase.net-git
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd trac upgrade
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main upgrade
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd trac wiki upgrade
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main wiki upgrade
+}}}
+
+== 详细操作日志 ==
+{{{
+I:\thinkbase.net\github\PortableTrac-git>easy_install --upgrade Trac==1.0.1
+[Current timestamp: 2013-02-18 周一 13-52-58.93]
+
+>>> call easy_install.exe --prefix="I:\thinkbase.net\github\PortableTrac-git\trac" --upgrade Trac==1.0.1
+Searching for Trac==1.0.1
+Reading http://pypi.python.org/simple/Trac/
+Reading http://trac.edgewall.org/
+Reading http://trac.edgewall.org/wiki/TracDownload
+Reading http://trac.edgewall.com/
+Reading http://projects.edgewall.com/trac
+Reading http://projects.edgewall.com/trac/wiki/TracDownload
+Best match: Trac 1.0.1
+Downloading http://download.edgewall.org/trac/Trac-1.0.1.win32.exe
+Processing Trac-1.0.1.win32.exe
+Deleting d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp\EGG-INFO\scripts\trac-admin-script.py
+Deleting d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp\EGG-INFO\scripts\trac-admin.exe
+Deleting d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp\EGG-INFO\scripts\tracd-script.py
+Deleting d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp\EGG-INFO\scripts\tracd.exe
+creating ''d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg'' and adding ''d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp'' to it
+Moving Trac-1.0.1-py2.7-win32.egg to i:\thinkbase.net\github\portabletrac-git\trac\lib\site-packages
+Removing trac 1.0 from easy-install.pth file
+Adding Trac 1.0.1 to easy-install.pth file
+Installing trac-admin-script.pyc script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing tracd-script.pyc script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing trac-admin-script.py script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing trac-admin.exe script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing trac-admin.exe.manifest script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing tracd-script.py script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing tracd.exe script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing tracd.exe.manifest script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+
+Installed i:\thinkbase.net\github\portabletrac-git\trac\lib\site-packages\trac-1.0.1-py2.7-win32.egg
+Processing dependencies for Trac==1.0.1
+Finished processing dependencies for Trac==1.0.1
+
+I:\thinkbase.net\github\PortableTrac-git>
+
+================================================================================
+================================================================================
+
+D:\thinkbase.net\PortableTrac-git>set SITE_BASE=D:\thinkbase.net\trac-thinkbase.net-git
+
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd trac upgrade
+[Current timestamp: 2013-02-18 星期一 15-12-12.14]
+
+>>> call python.exe  "D:\thinkbase.net\PortableTrac-git\trac\Scripts\trac-admin-script.py" "D:\thinkbase.net\trac-thinkbase.net-git\tracenv\trac" upgrade
+Database is up to date, no upgrade necessary.
+
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main upgrade
+[Current timestamp: 2013-02-18 星期一 15-12-26.48]
+
+>>> call python.exe  "D:\thinkbase.net\PortableTrac-git\trac\Scripts\trac-admin-script.py" "D:\thinkbase.net\trac-thinkbase.net-git\tracenv\main" upgrade
+Database is up to date, no upgrade necessary.
+
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd trac wiki upgrade
+[Current timestamp: 2013-02-18 星期一 15-12-35.62]
+
+>>> call python.exe  "D:\thinkbase.net\PortableTrac-git\trac\Scripts\trac-admin-script.py" "D:\thinkbase.net\trac-thinkbase.net-git\tracenv\trac" wiki upgrade
+  CamelCase is already up to date
+  InterMapTxt already exists
+  InterTrac is already up to date
+  InterWiki is already up to date
+  PageTemplates imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\PageTemplates
+  RecentChanges is already up to date
+  SandBox is already up to date
+  TitleIndex is already up to date
+  TracAccessibility is already up to date
+  TracAdmin is already up to date
+  TracBackup is already up to date
+  TracBatchModify is already up to date
+  TracBrowser is already up to date
+  TracCgi is already up to date
+  TracChangeset is already up to date
+  TracEnvironment is already up to date
+  TracFastCgi imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracFastCgi
+  TracFineGrainedPermissions is already up to date
+  TracGuide is already up to date
+  TracImport is already up to date
+  TracIni is already up to date
+  TracInstall is already up to date
+  TracInterfaceCustomization imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracInterfaceCustomization
+  TracLinks is already up to date
+  TracLogging is already up to date
+  TracModPython is already up to date
+  TracModWSGI is already up to date
+  TracNavigation imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracNavigation
+  TracNotification is already up to date
+  TracPermissions imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracPermissions
+  TracPlugins is already up to date
+  TracQuery is already up to date
+  TracReports imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracReports
+  TracRepositoryAdmin imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracRepositoryAdmin
+  TracRevisionLog is already up to date
+  TracRoadmap is already up to date
+  TracRss is already up to date
+  TracSearch is already up to date
+  TracStandalone imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracStandalone
+  TracSupport is already up to date
+  TracSyntaxColoring is already up to date
+  TracTickets is already up to date
+  TracTicketsCustomFields is already up to date
+  TracTimeline is already up to date
+  TracUnicode is already up to date
+  TracUpgrade imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracUpgrade
+  TracWiki is already up to date
+  TracWorkflow imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracWorkflow
+  WikiDeletePage is already up to date
+  WikiFormatting is already up to date
+  WikiHtml is already up to date
+  WikiMacros imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiMacros
+  WikiNewPage imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiNewPage
+  WikiPageNames is already up to date
+  WikiProcessors imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiProcessors
+  WikiRestructuredText is already up to date
+  WikiRestructuredTextLinks is already up to date
+
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main wiki upgrade
+[Current timestamp: 2013-02-18 星期一 15-12-46.85]
+
+>>> call python.exe  "D:\thinkbase.net\PortableTrac-git\trac\Scripts\trac-admin-script.py" "D:\thinkbase.net\trac-thinkbase.net-git\tracenv\main" wiki upgrade
+  CamelCase is already up to date
+  InterMapTxt already exists
+  InterTrac is already up to date
+  InterWiki is already up to date
+  PageTemplates imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\PageTemplates
+  RecentChanges is already up to date
+  SandBox is already up to date
+  TitleIndex is already up to date
+  TracAccessibility is already up to date
+  TracAdmin is already up to date
+  TracBackup is already up to date
+  TracBatchModify is already up to date
+  TracBrowser is already up to date
+  TracCgi is already up to date
+  TracChangeset is already up to date
+  TracEnvironment is already up to date
+  TracFastCgi imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracFastCgi
+  TracFineGrainedPermissions is already up to date
+  TracGuide is already up to date
+  TracImport is already up to date
+  TracIni is already up to date
+  TracInstall is already up to date
+  TracInterfaceCustomization imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracInterfaceCustomization
+  TracLinks is already up to date
+  TracLogging is already up to date
+  TracModPython is already up to date
+  TracModWSGI is already up to date
+  TracNavigation imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracNavigation
+  TracNotification is already up to date
+  TracPermissions imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracPermissions
+  TracPlugins is already up to date
+  TracQuery is already up to date
+  TracReports imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracReports
+  TracRepositoryAdmin imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracRepositoryAdmin
+  TracRevisionLog is already up to date
+  TracRoadmap is already up to date
+  TracRss is already up to date
+  TracSearch is already up to date
+  TracStandalone imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracStandalone
+  TracSupport is already up to date
+  TracSyntaxColoring is already up to date
+  TracTickets is already up to date
+  TracTicketsCustomFields is already up to date
+  TracTimeline is already up to date
+  TracUnicode is already up to date
+  TracUpgrade imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracUpgrade
+  TracWiki is already up to date
+  TracWorkflow imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracWorkflow
+  WikiDeletePage is already up to date
+  WikiFormatting is already up to date
+  WikiHtml is already up to date
+  WikiMacros imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiMacros
+  WikiNewPage imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiNewPage
+  WikiPageNames is already up to date
+  WikiProcessors imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiProcessors
+  WikiRestructuredText is already up to date
+  WikiRestructuredTextLinks is already up to date
+
+D:\thinkbase.net\PortableTrac-git>
+}}}',1361178443,1365960788,'','thinkbase','thinkbase','trac portable');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
