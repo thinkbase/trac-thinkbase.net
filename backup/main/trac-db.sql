@@ -59,6 +59,8 @@ INSERT INTO "auth_cookie" VALUES('0e3fcf7db61e2dabae7154e48c6891ae','admin','180
 INSERT INTO "auth_cookie" VALUES('48fb62b2f4da1016ac1589a0f33fab0f','admin','112.65.136.195',1365763525);
 INSERT INTO "auth_cookie" VALUES('2febf88552fbe4329ab0e939f2a998dd','thinkbase','180.157.7.220',1365799730);
 INSERT INTO "auth_cookie" VALUES('602e8d58e8800a983c12d945d450a186','thinkbase','180.157.7.220',1365800745);
+INSERT INTO "auth_cookie" VALUES('e78c69b1d14e290e7864909a934633fc','admin','101.229.196.27',1365965004);
+INSERT INTO "auth_cookie" VALUES('19e778bb802196d2f778276689aaba81','thinkbase','112.65.136.195',1366106501);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -66,12 +68,7 @@ CREATE TABLE session (
     UNIQUE (sid,authenticated)
 );
 INSERT INTO "session" VALUES('admin',1,1365942265);
-INSERT INTO "session" VALUES('thinkbase',1,1365942001);
-INSERT INTO "session" VALUES('8905ac625ff84e3b9e3c431c',0,1358169140);
-INSERT INTO "session" VALUES('a53b174f20bc16e783c9482a',0,1358196673);
-INSERT INTO "session" VALUES('d79effe9dcfc659106420e45',0,1358262565);
-INSERT INTO "session" VALUES('0e9ad1508f62065a76ea72d1',0,1358275521);
-INSERT INTO "session" VALUES('7bbb78aa6d93c3e15698b247',0,1358291365);
+INSERT INTO "session" VALUES('thinkbase',1,1366071546);
 INSERT INTO "session" VALUES('ba513785103e765713c24a70',0,1358299348);
 INSERT INTO "session" VALUES('7652a8d53701bf9deb97f784',0,1358331713);
 INSERT INTO "session" VALUES('2ffa0f7a839e0ae3fbece701',0,1358332648);
@@ -257,6 +254,12 @@ INSERT INTO "session" VALUES('b4bc0a3b8d8b2301314201fd',0,1365819783);
 INSERT INTO "session" VALUES('4b81f8fc8b093b5d2c002e78',0,1365834122);
 INSERT INTO "session" VALUES('56086f61bc456583e661d1d4',0,1365865470);
 INSERT INTO "session" VALUES('e0babfeadf99850fbd5835f6',0,1365919651);
+INSERT INTO "session" VALUES('49621b763a7c83f7aa04729c',0,1365961259);
+INSERT INTO "session" VALUES('c42eb64b0d1088ef36204d34',0,1365984506);
+INSERT INTO "session" VALUES('c0fa8bc4862289794ba32c33',0,1365995404);
+INSERT INTO "session" VALUES('51d2a5b88a1907ff2c8146fa',0,1366044709);
+INSERT INTO "session" VALUES('5d923c5c816cbd7b2b333276',0,1366074504);
+INSERT INTO "session" VALUES('2bdffeb80484d7e2c9fc0377',0,1366121401);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -264,16 +267,6 @@ CREATE TABLE session_attribute (
     value text,
     UNIQUE (sid,authenticated,name)
 );
-INSERT INTO "session_attribute" VALUES('8905ac625ff84e3b9e3c431c',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('8905ac625ff84e3b9e3c431c',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('a53b174f20bc16e783c9482a',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('a53b174f20bc16e783c9482a',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('d79effe9dcfc659106420e45',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('d79effe9dcfc659106420e45',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('0e9ad1508f62065a76ea72d1',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('0e9ad1508f62065a76ea72d1',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('7bbb78aa6d93c3e15698b247',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('7bbb78aa6d93c3e15698b247',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('ba513785103e765713c24a70',0,'timeline.lastvisit','1358004586644000');
 INSERT INTO "session_attribute" VALUES('ba513785103e765713c24a70',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('7652a8d53701bf9deb97f784',0,'timeline.lastvisit','1358004586644000');
@@ -638,6 +631,17 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1361171568561000');
+INSERT INTO "session_attribute" VALUES('49621b763a7c83f7aa04729c',0,'timeline.lastvisit','1365961006000000');
+INSERT INTO "session_attribute" VALUES('49621b763a7c83f7aa04729c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('c42eb64b0d1088ef36204d34',0,'timeline.lastvisit','1365962911000000');
+INSERT INTO "session_attribute" VALUES('c42eb64b0d1088ef36204d34',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('c0fa8bc4862289794ba32c33',0,'timeline.lastvisit','1365962911000000');
+INSERT INTO "session_attribute" VALUES('c0fa8bc4862289794ba32c33',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('51d2a5b88a1907ff2c8146fa',0,'name','Josiah');
+INSERT INTO "session_attribute" VALUES('51d2a5b88a1907ff2c8146fa',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('51d2a5b88a1907ff2c8146fa',0,'email','nogood87@yahoo.com');
+INSERT INTO "session_attribute" VALUES('5d923c5c816cbd7b2b333276',0,'timeline.lastvisit','1366071660098000');
+INSERT INTO "session_attribute" VALUES('5d923c5c816cbd7b2b333276',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignorewhitespace','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1363886070000000');
@@ -646,6 +650,8 @@ INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','16');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignoreblanklines','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
+INSERT INTO "session_attribute" VALUES('2bdffeb80484d7e2c9fc0377',0,'timeline.lastvisit','1366107653724000');
+INSERT INTO "session_attribute" VALUES('2bdffeb80484d7e2c9fc0377',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -891,6 +897,8 @@ INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','tracd-4.png',1393
 INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','httpd.png',167764,1365956379426000,'','thinkbase','101.229.196.27');
 INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','login.png',85182,1365958204537000,'','thinkbase','101.229.196.27');
 INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','passwd-change.png',64027,1365958213068000,'','thinkbase','101.229.196.27');
+INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','login-screenshot.png',85182,1366071558427000,'','thinkbase','180.169.66.118');
+INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','LOGIN.png',85182,1366071629895000,'','thinkbase','180.169.66.118');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -36183,6 +36191,272 @@ After login([attachment:login.png screenshot]), you can change the admin''s pass
 == Read more ==
  - [wiki:TracGuide The Trac User and Administration Guide]''''([wiki:ZhTracGuide Chinese translation - Trac使用及管理指南])'''';
  - [wiki:PortableTrac/manual PortableTrac User Manual / 用户手册].','',0);
+INSERT INTO "wiki" VALUES('PortableTrac/install',37,1366071546271000,'thinkbase','180.169.66.118','= PortableTrac installation =
+
+Installation to `Windows Server 2003` / `Windows Server 2008` / `Windows 7` / `Windows 8`, and ''''the above versions of Windows'''' is recommended. ''''`Windows XP` and below'''' ''''''is not full supported''''''.
+
+== 1 minute tutorial ==
+ 1. Download the newest version of PortableTrac: https://github.com/thinkbase/PortableTrac/archive/master.zip;
+  - See the screenshots [attachment:download.png pic1] and [attachment:PortableTrac-master.zip.png pic2] for reference;
+
+ 2. Uncompress it into a folder: such as `C:\PortableTrac`(Or other your favorite folder name);
+  - This is the [attachment:uncompress-to-PortableTrac.png screenshot] of `C:\PortableTrac`;
+
+ 3. Open a command prompt windows, `cd C:\PortableTrac`;
+
+ 4. run `passwd admin 111111`;
+  - ''''This command create admin''s password as `111111`'''';
+  - The example: [attachment:passwd-command.png screenshot];
+
+ 5. run `tracd 8080 default`
+  - ''''This command start tracd for "default" environment, at port `8080`'''';
+  - See the screenshots [attachment:tracd-1.png pic1], [attachment:tracd-2.png pic2];
+
+ 6. Open browser and navigate to `http://localhost:8080`.
+  - See the screenshots [attachment:tracd-3.png pic1], [attachment:tracd-4.png pic2];
+
+[[NoteBox(tip,Subversion Intergration is not supported in Windows XP, 450px)]]
+
+== Run trac with `apache httpd` ==
+If you finish the `1 minute tutorial`''''(see [wiki:install#a1minutetutorial above])'''', you can easy start the `apache httpd` just run the batch file `start-httpd.cmd`;
+ - The default port of apache httpd is `80`, so you can access the Trac with URL `http://localhost/`;
+
+ - The screenshot: [attachment:httpd.png];
+
+ - `start-httpd.cmd` create a ''''''virtual disk drive'''''' `B:` for make apache httpd running portable(The idea from [http://www.wiki.uniformserver.com/index.php/Mini_Servers:_Introduction The Mini Servers]);
+
+ - process started with `apache httpd` is `apache rotatelogs command line pipe`''''(rotatelogs.exe)'''', which break up apache logs into daily, configurated in [source:PortableTrac/httpd/Apache2.2/conf/httpd.conf httpd.conf]:
+{{{
+#!python
+ErrorLog "|B:/Apache2.2/bin/rotatelogs.exe B:/Apache2.2/logs/error_%Y_%m_%d.log 86400 480″
+CustomLog "|B:/Apache2.2/bin/rotatelogs B:/Apache2.2/logs/%Y_%m_%d.access.log 86400 480" common
+}}}
+
+[[NoteBox(tip,Apache httpd is not supported in Windows XP, 450px)]]
+
+== Change the default password of admin ==
+After login([attachment:login-screenshot.png screenshot]), you can change the admin''s password by link `http://localhost/default/prefs/account`([attachment:passwd-change.png screenshot]);
+
+== Read more ==
+ - [wiki:TracGuide The Trac User and Administration Guide]''''([wiki:ZhTracGuide Chinese translation - Trac使用及管理指南])'''';
+ - [wiki:PortableTrac/manual PortableTrac User Manual / 用户手册].','',0);
+INSERT INTO "wiki" VALUES('PortableTrac/install',38,1366071660098000,'thinkbase','180.169.66.118','= PortableTrac installation =
+
+Installation to `Windows Server 2003` / `Windows Server 2008` / `Windows 7` / `Windows 8`, and ''''the above versions of Windows'''' is recommended. ''''`Windows XP` and below'''' ''''''is not full supported''''''.
+
+== 1 minute tutorial ==
+ 1. Download the newest version of PortableTrac: https://github.com/thinkbase/PortableTrac/archive/master.zip;
+  - See the screenshots [attachment:download.png pic1] and [attachment:PortableTrac-master.zip.png pic2] for reference;
+
+ 2. Uncompress it into a folder: such as `C:\PortableTrac`(Or other your favorite folder name);
+  - This is the [attachment:uncompress-to-PortableTrac.png screenshot] of `C:\PortableTrac`;
+
+ 3. Open a command prompt windows, `cd C:\PortableTrac`;
+
+ 4. run `passwd admin 111111`;
+  - ''''This command create admin''s password as `111111`'''';
+  - The example: [attachment:passwd-command.png screenshot];
+
+ 5. run `tracd 8080 default`
+  - ''''This command start tracd for "default" environment, at port `8080`'''';
+  - See the screenshots [attachment:tracd-1.png pic1], [attachment:tracd-2.png pic2];
+
+ 6. Open browser and navigate to `http://localhost:8080`.
+  - See the screenshots [attachment:tracd-3.png pic1], [attachment:tracd-4.png pic2];
+
+[[NoteBox(tip,Subversion Intergration is not supported in Windows XP, 450px)]]
+
+== Run trac with `apache httpd` ==
+If you finish the `1 minute tutorial`''''(see [wiki:install#a1minutetutorial above])'''', you can easy start the `apache httpd` just run the batch file `start-httpd.cmd`;
+ - The default port of apache httpd is `80`, so you can access the Trac with URL `http://localhost/`;
+
+ - The screenshot: [attachment:httpd.png];
+
+ - `start-httpd.cmd` create a ''''''virtual disk drive'''''' `B:` for make apache httpd running portable(The idea from [http://www.wiki.uniformserver.com/index.php/Mini_Servers:_Introduction The Mini Servers]);
+
+ - process started with `apache httpd` is `apache rotatelogs command line pipe`''''(rotatelogs.exe)'''', which break up apache logs into daily, configurated in [source:PortableTrac/httpd/Apache2.2/conf/httpd.conf httpd.conf]:
+{{{
+#!python
+ErrorLog "|B:/Apache2.2/bin/rotatelogs.exe B:/Apache2.2/logs/error_%Y_%m_%d.log 86400 480″
+CustomLog "|B:/Apache2.2/bin/rotatelogs B:/Apache2.2/logs/%Y_%m_%d.access.log 86400 480" common
+}}}
+
+[[NoteBox(tip,Apache httpd is not supported in Windows XP, 450px)]]
+
+== Change the default password of admin ==
+After login([attachment:LOGIN.png screenshot]), you can change the admin''s password by link `http://localhost/default/prefs/account`([attachment:passwd-change.png screenshot]);
+
+== Read more ==
+ - [wiki:TracGuide The Trac User and Administration Guide]''''([wiki:ZhTracGuide Chinese translation - Trac使用及管理指南])'''';
+ - [wiki:PortableTrac/manual PortableTrac User Manual / 用户手册].','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',10,1366107474459000,'thinkbase','112.65.136.195','= About PortableTrac / 关于 PortableTrac =
+
+== Summary / 简介 ==
+PortableTrac is the redistribution of [http://trac.edgewall.org/ Trac] Server, focused on the `Plugins Ready` and `Out of the Box` Deployment.
+ 1. Portable - Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download]-and-uncompress.
+ 2. Easy to use - the pre-configuration includes [source:/PortableTrac/trac/Lib/site-packages many helpful plugins and functions], and software-intergration such as [source:/PortableTrac/httpd apache httpd] and [source:/PortableTrac/bin others].
+ 3. Default include the [wiki:ZhWikiStart Chinese content];
+
+PortableTrac is current based on python 2.7(win32), so the Windows platform(x86 and x64) is just the only platform to support.
+
+PortableTrac is hosted on Github: https://github.com/thinkbase/PortableTrac , including the python runtime / python eggs / configuration / other software and scripts.
+
+{{{
+#!div style="background: #ffd"
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的[https://github.com/thinkbase/PortableTrac/tree/master/trac/Lib/site-packages 功能插件], 以及 [https://github.com/thinkbase/PortableTrac/tree/master/httpd apache httpd] [https://github.com/thinkbase/PortableTrac/tree/master/bin 等]必要的相关软件;
+ 3. 默认已设置为[wiki:ZhWikiStart 中文版本];
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+PortableTrac 的所有代码(主要是 python 运行环境、python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
+}}}
+
+== Why PortableTrac / 为什么要创建 PortableTrac ==
+For own use, this website ( http://www.thinkbase.net ) is based the newest version of PortableTrac.
+
+{{{
+#!div style="background: #ffd"
+
+主要是为了自己使用方便, 比如这个站点( http://www.thinkbase.net )就是基于 PortableTrac 的当前版本建立的.
+}}}
+
+== The next / 下一步 ==
+To install and try PortableTrac, please see the [wiki:PortableTrac/install installation] and [wiki:PortableTrac/manual manual].
+
+{{{
+#!div style="background: #ffd"
+
+请参考 [wiki:PortableTrac/install 安装] and [wiki:PortableTrac/manual 用户手册] 页面，安装并测试 PortableTrac.
+}}}
+','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',11,1366107575349000,'thinkbase','112.65.136.195','= About PortableTrac / 关于 PortableTrac =
+
+== Summary / 简介 ==
+PortableTrac is the redistribution of [http://trac.edgewall.org/ Trac] Server, focused on the `Plugins Ready` and `Out of the Box` Deployment.
+ 1. Portable - Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download]-and-uncompress.
+ 2. Easy to use - the pre-configuration includes [source:/PortableTrac/trac/Lib/site-packages many helpful plugins and functions], and software-intergration such as [source:/PortableTrac/httpd apache httpd] and [source:/PortableTrac/bin others].
+ 3. Default include the [wiki:ZhWikiStart Chinese content];
+
+PortableTrac is current based on python 2.7(win32), so the Windows platform(x86 and x64) is just the only platform to support.
+
+PortableTrac is hosted on Github: https://github.com/thinkbase/PortableTrac , including the python runtime / python eggs / configuration / other software and scripts.
+
+{{{
+#!div style="background: #ffd"
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的 [source:/PortableTrac/trac/Lib/site-packages many helpful plugins and functions 功能插件], 以及 [source:/PortableTrac/httpd apache httpd] [source:/PortableTrac/bin 等]必要的相关软件;
+ 3. 默认已设置为[wiki:ZhWikiStart 中文版本];
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+PortableTrac 的所有代码(主要是 python 运行环境、python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
+}}}
+
+== Why PortableTrac / 为什么要创建 PortableTrac ==
+For own use, this website ( http://www.thinkbase.net ) is based the newest version of PortableTrac.
+
+{{{
+#!div style="background: #ffd"
+
+主要是为了自己使用方便, 比如这个站点( http://www.thinkbase.net )就是基于 PortableTrac 的当前版本建立的.
+}}}
+
+== The next / 下一步 ==
+To install and try PortableTrac, please see the [wiki:PortableTrac/install installation] and [wiki:PortableTrac/manual manual].
+
+{{{
+#!div style="background: #ffd"
+
+请参考 [wiki:PortableTrac/install 安装] and [wiki:PortableTrac/manual 用户手册] 页面，安装并测试 PortableTrac.
+}}}
+','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',12,1366107599396000,'thinkbase','112.65.136.195','= About PortableTrac / 关于 PortableTrac =
+
+== Summary / 简介 ==
+PortableTrac is the redistribution of [http://trac.edgewall.org/ Trac] Server, focused on the `Plugins Ready` and `Out of the Box` Deployment.
+ 1. Portable - Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download]-and-uncompress.
+ 2. Easy to use - the pre-configuration includes [source:/PortableTrac/trac/Lib/site-packages many helpful plugins and functions], and software-intergration such as [source:/PortableTrac/httpd apache httpd] and [source:/PortableTrac/bin others].
+ 3. Default include the [wiki:ZhWikiStart Chinese content];
+
+PortableTrac is current based on python 2.7(win32), so the Windows platform(x86 and x64) is just the only platform to support.
+
+PortableTrac is hosted on Github: https://github.com/thinkbase/PortableTrac , including the python runtime / python eggs / configuration / other software and scripts.
+
+{{{
+#!div style="background: #ffd"
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的 [source:/PortableTrac/trac/Lib/site-packages 功能插件], 以及 [source:/PortableTrac/httpd apache httpd] [source:/PortableTrac/bin 等]必要的相关软件;
+ 3. 默认已设置为[wiki:ZhWikiStart 中文版本];
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+PortableTrac 的所有代码(主要是 python 运行环境、python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
+}}}
+
+== Why PortableTrac / 为什么要创建 PortableTrac ==
+For own use, this website ( http://www.thinkbase.net ) is based the newest version of PortableTrac.
+
+{{{
+#!div style="background: #ffd"
+
+主要是为了自己使用方便, 比如这个站点( http://www.thinkbase.net )就是基于 PortableTrac 的当前版本建立的.
+}}}
+
+== The next / 下一步 ==
+To install and try PortableTrac, please see the [wiki:PortableTrac/install installation] and [wiki:PortableTrac/manual manual].
+
+{{{
+#!div style="background: #ffd"
+
+请参考 [wiki:PortableTrac/install 安装] and [wiki:PortableTrac/manual 用户手册] 页面，安装并测试 PortableTrac.
+}}}
+','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',13,1366107653724000,'thinkbase','112.65.136.195','= About PortableTrac / 关于 PortableTrac =
+
+== Summary / 简介 ==
+PortableTrac is the redistribution of [http://trac.edgewall.org/ Trac] Server, focused on the `Plugins Ready` and `Out of the Box` Deployment.
+ 1. Portable - Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download]-and-uncompress.
+ 2. Easy to use - the pre-configuration includes [source:/PortableTrac/trac/Lib/site-packages many helpful plugins and functions], and software-intergration such as [source:/PortableTrac/httpd apache httpd] and [source:/PortableTrac/bin others].
+ 3. Default include the [wiki:ZhWikiStart Chinese content];
+
+PortableTrac is current based on python 2.7(win32), so the Windows platform(x86 and x64) is just the only platform to support.
+
+PortableTrac is hosted on Github: https://github.com/thinkbase/PortableTrac , including the python runtime / python eggs / configuration / other software and scripts.
+
+{{{
+#!div style="background: #ffd"
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的 [source:/PortableTrac/trac/Lib/site-packages 功能插件], 以及 [source:/PortableTrac/httpd apache httpd] [source:/PortableTrac/bin 等] 必要的相关软件;
+ 3. 默认已设置为[wiki:ZhWikiStart 中文版本];
+
+PortableTrac 是基于 [http://www.portablepython.com/ PortablePython] 实现的, 目前只能在 Windows 上使用;
+
+PortableTrac 的所有代码(主要是 python 运行环境、python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
+}}}
+
+== Why PortableTrac / 为什么要创建 PortableTrac ==
+For own use, this website ( http://www.thinkbase.net ) is based the newest version of PortableTrac.
+
+{{{
+#!div style="background: #ffd"
+
+主要是为了自己使用方便, 比如这个站点( http://www.thinkbase.net )就是基于 PortableTrac 的当前版本建立的.
+}}}
+
+== The next / 下一步 ==
+To install and try PortableTrac, please see the [wiki:PortableTrac/install installation] and [wiki:PortableTrac/manual manual].
+
+{{{
+#!div style="background: #ffd"
+
+请参考 [wiki:PortableTrac/install 安装] and [wiki:PortableTrac/manual 用户手册] 页面，安装并测试 PortableTrac.
+}}}
+','',0);
 CREATE TABLE repository (
     id integer,
     name text,
@@ -41665,6 +41939,334 @@ D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main wiki upgrade
 
 D:\thinkbase.net\PortableTrac-git>
 }}}',1361178443,1365960788,'','thinkbase','thinkbase','trac portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',19,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below image:)[[BR]][[Image(mod_wsgi_error.png, 100%)]].
+
+The reason is the version of the Microsoft C/C++ compiler(''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`''''^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ).
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`:[[BR]]Copy from [[BR]]{{{c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest}}} [[BR]] to [[BR]] {{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365961330,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',20,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below image:)[[BR]][[Image(mod_wsgi_error.png, 100%)]], the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`''''^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ).
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`:[[BR]]Copy from [[BR]]{{{c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest}}} [[BR]] to [[BR]] {{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365962497,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',21,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below [attachment:mod_wsgi_error.png error screenshot]), the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`''''^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ).
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`:[[BR]]Copy from [[BR]]{{{c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest}}} [[BR]] to [[BR]] {{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365962582,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',22,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below [attachment:mod_wsgi_error.png error screenshot]), the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`'''').
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`:[[BR]]Copy from [[BR]]{{{c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest}}} [[BR]] to [[BR]] {{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365962632,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',23,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below [attachment:mod_wsgi_error.png error screenshot]), the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`'''').
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`:[[BR]]Copy from [[BR]]{{{c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest}}} [[BR]] to [[BR]] {{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365962654,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',24,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below [attachment:mod_wsgi_error.png error screenshot]), the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`'''').
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest` - {{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}:[[BR]]Copy from {{{c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365962722,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',25,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below [attachment:mod_wsgi_error.png error screenshot]), the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`'''').
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest` - {{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}:
+   - Copy from [[BR]] {{{c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365962764,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',26,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below [attachment:mod_wsgi_error.png error screenshot]), the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`'''').
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`
+   - {{{PortablePython\App\Microsoft.VC90.CRT.manifest}}};
+   - Copy from
+{{{
+c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest
+}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365962806,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',27,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below [attachment:mod_wsgi_error.png error screenshot]), the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`'''').
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`(''''{{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}''''), Copy from:
+{{{
+c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest
+}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download then play it, best regards!',1365937769,1365962852,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',28,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below [attachment:mod_wsgi_error.png error screenshot]), the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`'''').
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`(''''{{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}''''), Copy from:
+{{{
+c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest
+}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download, then play it, best regards!',1365937769,1365962911,'','thinkbase','thinkbase','trac python portable');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
