@@ -69,11 +69,6 @@ CREATE TABLE session (
 );
 INSERT INTO "session" VALUES('admin',1,1365942265);
 INSERT INTO "session" VALUES('thinkbase',1,1366071546);
-INSERT INTO "session" VALUES('ba513785103e765713c24a70',0,1358299348);
-INSERT INTO "session" VALUES('7652a8d53701bf9deb97f784',0,1358331713);
-INSERT INTO "session" VALUES('2ffa0f7a839e0ae3fbece701',0,1358332648);
-INSERT INTO "session" VALUES('9882f06f53d7869594ecdbfe',0,1358341730);
-INSERT INTO "session" VALUES('1d5ca94ac201f8b5e94611ff',0,1358352147);
 INSERT INTO "session" VALUES('10f0bcfca6bd0ae398ff4139',0,1358471453);
 INSERT INTO "session" VALUES('cb0626893130ff2c81c7ede2',0,1358522556);
 INSERT INTO "session" VALUES('2b0f2e296a1edc25e1bc6468',0,1358555845);
@@ -259,7 +254,14 @@ INSERT INTO "session" VALUES('c42eb64b0d1088ef36204d34',0,1365984506);
 INSERT INTO "session" VALUES('c0fa8bc4862289794ba32c33',0,1365995404);
 INSERT INTO "session" VALUES('51d2a5b88a1907ff2c8146fa',0,1366044709);
 INSERT INTO "session" VALUES('5d923c5c816cbd7b2b333276',0,1366074504);
-INSERT INTO "session" VALUES('2bdffeb80484d7e2c9fc0377',0,1366121401);
+INSERT INTO "session" VALUES('2bdffeb80484d7e2c9fc0377',0,1366211776);
+INSERT INTO "session" VALUES('af8fed40f37a384dd606146b',0,1366182024);
+INSERT INTO "session" VALUES('9098ce5a6a2a718febc1bd85',0,1366189685);
+INSERT INTO "session" VALUES('9601af00091caae0435ae472',0,1366276020);
+INSERT INTO "session" VALUES('95c8a272bb7594520129d124',0,1366313480);
+INSERT INTO "session" VALUES('86300e2273c283f021047c1a',0,1366319746);
+INSERT INTO "session" VALUES('951dbd2c8e1ac7726e074bbc',0,1366398516);
+INSERT INTO "session" VALUES('2186e014010c9aff604801f8',0,1366415195);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -267,16 +269,6 @@ CREATE TABLE session_attribute (
     value text,
     UNIQUE (sid,authenticated,name)
 );
-INSERT INTO "session_attribute" VALUES('ba513785103e765713c24a70',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('ba513785103e765713c24a70',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('7652a8d53701bf9deb97f784',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('7652a8d53701bf9deb97f784',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('2ffa0f7a839e0ae3fbece701',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('2ffa0f7a839e0ae3fbece701',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('9882f06f53d7869594ecdbfe',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('9882f06f53d7869594ecdbfe',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('1d5ca94ac201f8b5e94611ff',0,'timeline.lastvisit','1358004586644000');
-INSERT INTO "session_attribute" VALUES('1d5ca94ac201f8b5e94611ff',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('10f0bcfca6bd0ae398ff4139',0,'timeline.lastvisit','1358004586644000');
 INSERT INTO "session_attribute" VALUES('10f0bcfca6bd0ae398ff4139',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('cb0626893130ff2c81c7ede2',0,'timeline.lastvisit','1358004586644000');
@@ -650,8 +642,24 @@ INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','16');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignoreblanklines','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
+INSERT INTO "session_attribute" VALUES('af8fed40f37a384dd606146b',0,'timeline.lastvisit','1366125958000000');
+INSERT INTO "session_attribute" VALUES('af8fed40f37a384dd606146b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('9098ce5a6a2a718febc1bd85',0,'timeline.lastvisit','1366125958000000');
+INSERT INTO "session_attribute" VALUES('9098ce5a6a2a718febc1bd85',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2bdffeb80484d7e2c9fc0377',0,'diff_ignoreblanklines','1');
 INSERT INTO "session_attribute" VALUES('2bdffeb80484d7e2c9fc0377',0,'timeline.lastvisit','1366107653724000');
 INSERT INTO "session_attribute" VALUES('2bdffeb80484d7e2c9fc0377',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('9601af00091caae0435ae472',0,'timeline.lastvisit','1366211999000000');
+INSERT INTO "session_attribute" VALUES('9601af00091caae0435ae472',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('95c8a272bb7594520129d124',0,'timeline.lastvisit','1366211999000000');
+INSERT INTO "session_attribute" VALUES('95c8a272bb7594520129d124',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('86300e2273c283f021047c1a',0,'name','kidrock');
+INSERT INTO "session_attribute" VALUES('86300e2273c283f021047c1a',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('86300e2273c283f021047c1a',0,'email','flyman@gmail.com');
+INSERT INTO "session_attribute" VALUES('951dbd2c8e1ac7726e074bbc',0,'timeline.lastvisit','1366389105000000');
+INSERT INTO "session_attribute" VALUES('951dbd2c8e1ac7726e074bbc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2186e014010c9aff604801f8',0,'timeline.lastvisit','1366398867000000');
+INSERT INTO "session_attribute" VALUES('2186e014010c9aff604801f8',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
