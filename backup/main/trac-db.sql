@@ -48,7 +48,6 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('e6af84b1e8f17088f4e2fd14b611d691','thinkbase','180.169.66.118',1367987198);
 INSERT INTO "auth_cookie" VALUES('3e56621907e5d66642552b6e1c209d1c','thinkbase','112.65.136.195',1368497480);
 CREATE TABLE session (
     sid text,
@@ -311,6 +310,19 @@ INSERT INTO "session" VALUES('a9a61e2d5537c373b8ebecf1',0,1368422006);
 INSERT INTO "session" VALUES('e4ad65655ef487dc5655a3be',0,1368492653);
 INSERT INTO "session" VALUES('419250d3379dc80c266c051c',0,1368512543);
 INSERT INTO "session" VALUES('da2abd6d75a233eb4fd3daa6',0,1368576666);
+INSERT INTO "session" VALUES('02075f63c183257839e1068f',0,1368809616);
+INSERT INTO "session" VALUES('682535c2f2ce69c0eb97b69a',0,1368877863);
+INSERT INTO "session" VALUES('a3035b9036a5e9eef4b3eacb',0,1368882408);
+INSERT INTO "session" VALUES('9155ef8090e42df8a3cfeaaf',0,1368884424);
+INSERT INTO "session" VALUES('73097342a7d69990b0e9b752',0,1368889808);
+INSERT INTO "session" VALUES('706773abcd10ddff68953d2d',0,1368900281);
+INSERT INTO "session" VALUES('24560c6677c3048bcd40d6f8',0,1368905875);
+INSERT INTO "session" VALUES('f594e6ee0a425a40eb0d777e',0,1368912122);
+INSERT INTO "session" VALUES('84bffe9b4b1e468c701759fc',0,1368964543);
+INSERT INTO "session" VALUES('698485bdc1146ff682d51898',0,1368982855);
+INSERT INTO "session" VALUES('f00eb6e307049cfb7f8cd950',0,1368991524);
+INSERT INTO "session" VALUES('7f7c064afda6bd6465549777',0,1368991526);
+INSERT INTO "session" VALUES('ab8d16651d659707c3d6440f',0,1369077184);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -823,6 +835,46 @@ INSERT INTO "session_attribute" VALUES('419250d3379dc80c266c051c',0,'chrome.noti
 INSERT INTO "session_attribute" VALUES('419250d3379dc80c266c051c',0,'email','john@hotmail.com');
 INSERT INTO "session_attribute" VALUES('da2abd6d75a233eb4fd3daa6',0,'timeline.lastvisit','1368038129000000');
 INSERT INTO "session_attribute" VALUES('da2abd6d75a233eb4fd3daa6',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('02075f63c183257839e1068f',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('02075f63c183257839e1068f',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('682535c2f2ce69c0eb97b69a',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('682535c2f2ce69c0eb97b69a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a3035b9036a5e9eef4b3eacb',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('a3035b9036a5e9eef4b3eacb',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('9155ef8090e42df8a3cfeaaf',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('9155ef8090e42df8a3cfeaaf',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('73097342a7d69990b0e9b752',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('73097342a7d69990b0e9b752',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('706773abcd10ddff68953d2d',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('706773abcd10ddff68953d2d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('24560c6677c3048bcd40d6f8',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('24560c6677c3048bcd40d6f8',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f594e6ee0a425a40eb0d777e',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('f594e6ee0a425a40eb0d777e',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('84bffe9b4b1e468c701759fc',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('84bffe9b4b1e468c701759fc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('698485bdc1146ff682d51898',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('698485bdc1146ff682d51898',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f00eb6e307049cfb7f8cd950',0,'timeline.filter.blog','1');
+INSERT INTO "session_attribute" VALUES('f00eb6e307049cfb7f8cd950',0,'timeline.daysback','12');
+INSERT INTO "session_attribute" VALUES('f00eb6e307049cfb7f8cd950',0,'timeline.filter.repo-PortableTrac','1');
+INSERT INTO "session_attribute" VALUES('f00eb6e307049cfb7f8cd950',0,'timeline.authors','gzgipcsagg');
+INSERT INTO "session_attribute" VALUES('f00eb6e307049cfb7f8cd950',0,'timeline.filter.repo-AdminShells','1');
+INSERT INTO "session_attribute" VALUES('f00eb6e307049cfb7f8cd950',0,'timeline.filter.wiki','1');
+INSERT INTO "session_attribute" VALUES('f00eb6e307049cfb7f8cd950',0,'timeline.filter.changeset','1');
+INSERT INTO "session_attribute" VALUES('f00eb6e307049cfb7f8cd950',0,'timeline.filter.repo-trac-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('f00eb6e307049cfb7f8cd950',0,'timeline.filter.repo-dev-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('7f7c064afda6bd6465549777',0,'timeline.filter.blog','1');
+INSERT INTO "session_attribute" VALUES('7f7c064afda6bd6465549777',0,'timeline.daysback','12');
+INSERT INTO "session_attribute" VALUES('7f7c064afda6bd6465549777',0,'timeline.filter.repo-PortableTrac','1');
+INSERT INTO "session_attribute" VALUES('7f7c064afda6bd6465549777',0,'timeline.authors','gzgipcsagg');
+INSERT INTO "session_attribute" VALUES('7f7c064afda6bd6465549777',0,'timeline.filter.repo-AdminShells','1');
+INSERT INTO "session_attribute" VALUES('7f7c064afda6bd6465549777',0,'timeline.filter.wiki','1');
+INSERT INTO "session_attribute" VALUES('7f7c064afda6bd6465549777',0,'timeline.filter.changeset','1');
+INSERT INTO "session_attribute" VALUES('7f7c064afda6bd6465549777',0,'timeline.filter.repo-trac-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('7f7c064afda6bd6465549777',0,'timeline.filter.repo-dev-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('ab8d16651d659707c3d6440f',0,'timeline.lastvisit','1368627732000000');
+INSERT INTO "session_attribute" VALUES('ab8d16651d659707c3d6440f',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -1070,6 +1122,13 @@ INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','login.png',85182,
 INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','passwd-change.png',64027,1365958213068000,'','thinkbase','101.229.196.27');
 INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','login-screenshot.png',85182,1366071558427000,'','thinkbase','180.169.66.118');
 INSERT INTO "attachment" VALUES('wiki','PortableTrac/install','LOGIN.png',85182,1366071629895000,'','thinkbase','180.169.66.118');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','IE8-WinXP.png',5879,1368627001364000,'','thinkbase','180.175.163.49');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','IE9-Win7.png',13471,1368627111565000,'','thinkbase','180.175.163.49');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','Firefox19-Win7.png',5060,1368627117440000,'','thinkbase','180.175.163.49');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','Firefox20-Ubuntu.png',26689,1368627124189000,'','thinkbase','180.175.163.49');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','Chrome6-Win7.png',12346,1368627131752000,'','thinkbase','180.175.163.49');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','Chromium25-Ubuntu.png',30567,1368627138548000,'','thinkbase','180.175.163.49');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','IE8-WinXP-localAccess-error.png',14279,1368627372198000,'','thinkbase','180.175.163.49');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -42718,6 +42777,320 @@ c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_
 The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
 
 Please follow the [wiki:PortableTrac/install installation guide], download, then play it, best regards!',1365937769,1365962911,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',1,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+主要参考：
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}',1368625424,1368625424,'','thinkbase','thinkbase','');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',2,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - 安全模型：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]]
+ - IFrame 相关对象, 以及页面高度检测：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - [[Image(IE8-WinXP.png)]]
+  - [[Image(IE9-Win7.png)]]
+  - [[Image(Firefox19-Win7.png)]]
+  - [[Image(Firefox20-Ubuntu.png)]]
+  - [[Image(Chrome6-Win7.png)]]
+  - [[Image(Chromium25-Ubuntu.png)]]
+',1368625424,1368626947,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',3,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - 安全模型：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]]
+ - IFrame 相关对象, 以及页面高度检测：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - IE8, WindowsXP: [[BR]][[Image(IE8-WinXP.png)]]
+  - IE9, Windows 7: [[BR]][[Image(IE9-Win7.png)]]
+  - Firefox19, Windows 7: [[BR]][[Image(Firefox19-Win7.png)]]
+  - Firefox20, Ubuntu: [[BR]][[Image(Firefox20-Ubuntu.png)]]
+  - Google Chrome 6, Windows 7: [[BR]][[Image(Chrome6-Win7.png)]]
+  - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
+',1368625424,1368627099,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',4,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - 安全模型：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]][[BR]]另外如果 IFrame 中引用的是来自网络的 js 外部文件，IE8 可以正常运行(见这个例子：[source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string-online-test.html fill-iframe-with-string-online-test.html]);
+ - IFrame 相关对象, 以及页面高度检测：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - IE8, WindowsXP: [[BR]][[Image(IE8-WinXP.png)]]
+  - IE9, Windows 7: [[BR]][[Image(IE9-Win7.png)]]
+  - Firefox19, Windows 7: [[BR]][[Image(Firefox19-Win7.png)]]
+  - Firefox20, Ubuntu: [[BR]][[Image(Firefox20-Ubuntu.png)]]
+  - Google Chrome 6, Windows 7: [[BR]][[Image(Chrome6-Win7.png)]]
+  - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
+
+== END ==',1368625424,1368627556,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',5,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - ''''''安全模型''''''：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]][[BR]]另外如果 IFrame 中引用的是来自网络的 js 外部文件，IE8 可以正常运行(见这个例子：[source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string-online-test.html fill-iframe-with-string-online-test.html]);[[BR]]
+ - ''''''IFrame 相关对象'''''', 以及页面高度检测：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - IE8, WindowsXP: [[BR]][[Image(IE8-WinXP.png)]]
+  - IE9, Windows 7: [[BR]][[Image(IE9-Win7.png)]]
+  - Firefox19, Windows 7: [[BR]][[Image(Firefox19-Win7.png)]]
+  - Firefox20, Ubuntu: [[BR]][[Image(Firefox20-Ubuntu.png)]]
+  - Google Chrome 6, Windows 7: [[BR]][[Image(Chrome6-Win7.png)]]
+  - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
+
+== END ==',1368625424,1368627594,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',6,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - ''''''安全模型''''''：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]][[BR]]另外如果 IFrame 中引用的是来自网络的 js 外部文件，IE8 可以正常运行(见这个例子：[source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string-online-test.html fill-iframe-with-string-online-test.html]);[[BR]]
+ - ''''''IFrame 相关对象'''''', 以及''''''页面高度检测''''''：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - IE8, WindowsXP: [[BR]][[Image(IE8-WinXP.png)]]
+  - IE9, Windows 7: [[BR]][[Image(IE9-Win7.png)]]
+  - Firefox19, Windows 7: [[BR]][[Image(Firefox19-Win7.png)]]
+  - Firefox20, Ubuntu: [[BR]][[Image(Firefox20-Ubuntu.png)]]
+  - Google Chrome 6, Windows 7: [[BR]][[Image(Chrome6-Win7.png)]]
+  - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
+
+== END ==',1368625424,1368627615,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',7,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"][[BR]]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - ''''''安全模型''''''：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]][[BR]]另外如果 IFrame 中引用的是来自网络的 js 外部文件，IE8 可以正常运行(见这个例子：[source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string-online-test.html fill-iframe-with-string-online-test.html]);[[BR]]
+ - ''''''IFrame 相关对象'''''', 以及''''''页面高度检测''''''：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - IE8, WindowsXP: [[BR]][[Image(IE8-WinXP.png)]]
+  - IE9, Windows 7: [[BR]][[Image(IE9-Win7.png)]]
+  - Firefox19, Windows 7: [[BR]][[Image(Firefox19-Win7.png)]]
+  - Firefox20, Ubuntu: [[BR]][[Image(Firefox20-Ubuntu.png)]]
+  - Google Chrome 6, Windows 7: [[BR]][[Image(Chrome6-Win7.png)]]
+  - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
+
+== END ==',1368625424,1368627637,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',8,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"][[BR]][[BR]]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - ''''''安全模型''''''：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]][[BR]]另外如果 IFrame 中引用的是来自网络的 js 外部文件，IE8 可以正常运行(见这个例子：[source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string-online-test.html fill-iframe-with-string-online-test.html]);[[BR]]
+ - ''''''IFrame 相关对象'''''', 以及''''''页面高度检测''''''：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - IE8, WindowsXP: [[BR]][[Image(IE8-WinXP.png)]]
+  - IE9, Windows 7: [[BR]][[Image(IE9-Win7.png)]]
+  - Firefox19, Windows 7: [[BR]][[Image(Firefox19-Win7.png)]]
+  - Firefox20, Ubuntu: [[BR]][[Image(Firefox20-Ubuntu.png)]]
+  - Google Chrome 6, Windows 7: [[BR]][[Image(Chrome6-Win7.png)]]
+  - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
+
+== END ==',1368625424,1368627670,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',9,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"][[BR]][[BR]]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide 采用类似做法来运行示例代码]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - ''''''安全模型''''''：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]][[BR]]另外如果 IFrame 中引用的是来自网络的 js 外部文件，IE8 可以正常运行(见这个例子：[source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string-online-test.html fill-iframe-with-string-online-test.html]);[[BR]]
+ - ''''''IFrame 相关对象'''''', 以及''''''页面高度检测''''''：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - IE8, WindowsXP: [[BR]][[Image(IE8-WinXP.png)]]
+  - IE9, Windows 7: [[BR]][[Image(IE9-Win7.png)]]
+  - Firefox19, Windows 7: [[BR]][[Image(Firefox19-Win7.png)]]
+  - Firefox20, Ubuntu: [[BR]][[Image(Firefox20-Ubuntu.png)]]
+  - Google Chrome 6, Windows 7: [[BR]][[Image(Chrome6-Win7.png)]]
+  - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
+
+== END ==',1368625424,1368627732,'','thinkbase','thinkbase','iframe javascript html');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
