@@ -48,6 +48,8 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
+INSERT INTO "auth_cookie" VALUES('5212f81c0bfda27d1feebf1073139349','admin','180.157.14.48',1372084651);
+INSERT INTO "auth_cookie" VALUES('a559cc187d69464591723b8d1ed976f9','thinkbase','58.246.174.150',1372166843);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -55,43 +57,7 @@ CREATE TABLE session (
     UNIQUE (sid,authenticated)
 );
 INSERT INTO "session" VALUES('admin',1,1365942265);
-INSERT INTO "session" VALUES('thinkbase',1,1371761911);
-INSERT INTO "session" VALUES('1b90e9e6796ed9132bc801a8',0,1363993025);
-INSERT INTO "session" VALUES('90fe141f28c09d6c541ef436',0,1364014803);
-INSERT INTO "session" VALUES('fa5b13f92725b6fb829d6b0d',0,1364030608);
-INSERT INTO "session" VALUES('0d8836e6df45d6e8cbe20985',0,1364049166);
-INSERT INTO "session" VALUES('519b618186c71d0a3fad75f3',0,1364056031);
-INSERT INTO "session" VALUES('3b9da141c581b256cb3928e2',0,1364057042);
-INSERT INTO "session" VALUES('7bba8c93107d9d4fa786295a',0,1364103648);
-INSERT INTO "session" VALUES('c761e63ef6a6f4178c1707fd',0,1364133652);
-INSERT INTO "session" VALUES('2b0b7e994ac6ba63b1d818a9',0,1364177647);
-INSERT INTO "session" VALUES('a650d98b4d3826e6a8f25bda',0,1364182230);
-INSERT INTO "session" VALUES('3d8dfbb3703f6bf4afef1c76',0,1364182910);
-INSERT INTO "session" VALUES('de4096297520d0a2960f82d7',0,1364183362);
-INSERT INTO "session" VALUES('bde2108c5c800ebffd41bc2a',0,1364212205);
-INSERT INTO "session" VALUES('950c779dc3ae4b85d5128f0d',0,1364218073);
-INSERT INTO "session" VALUES('8defc7307c297ee5d7bba61f',0,1364224729);
-INSERT INTO "session" VALUES('226b246233169db2877ae4e4',0,1364225241);
-INSERT INTO "session" VALUES('c4ff5f801c00b80b5184ab14',0,1364247519);
-INSERT INTO "session" VALUES('ff88daf3a6af4207ae4269b8',0,1364272447);
-INSERT INTO "session" VALUES('76e003df3d4c93459c0e561f',0,1364273345);
-INSERT INTO "session" VALUES('d684a7302f44f2dd65f0575a',0,1364274244);
-INSERT INTO "session" VALUES('d6fe1f8aee5b7f41663f74df',0,1364295846);
-INSERT INTO "session" VALUES('22d5d3da20b82716d47b5480',0,1364302471);
-INSERT INTO "session" VALUES('a004066a435cd815459a7a37',0,1364302740);
-INSERT INTO "session" VALUES('52b37839bb4d1ec94aeed1b4',0,1364328742);
-INSERT INTO "session" VALUES('8b863556fc6a56834b1ff575',0,1364330641);
-INSERT INTO "session" VALUES('27acf4772a48bbbffb2a8684',0,1364395216);
-INSERT INTO "session" VALUES('cf29c11ad397163b8f825d66',0,1364395416);
-INSERT INTO "session" VALUES('1b405509ab97d90240f4488d',0,1364396623);
-INSERT INTO "session" VALUES('44640a9cf94925eb1aa79574',0,1364396939);
-INSERT INTO "session" VALUES('03b095d69dd20354075a1656',0,1364411050);
-INSERT INTO "session" VALUES('2b616053128da751a5d0b492',0,1364460497);
-INSERT INTO "session" VALUES('65a53cc5ff2761e6e0ad76ea',0,1364466480);
-INSERT INTO "session" VALUES('7cda8d04395c5b0d255e1125',0,1364502063);
-INSERT INTO "session" VALUES('0b465a9f13f681455f072e4d',0,1364507984);
-INSERT INTO "session" VALUES('e2295008d2cc6f2ce013a091',0,1364533138);
-INSERT INTO "session" VALUES('2c9d9dbe28e911e4a22d5274',0,1364553009);
+INSERT INTO "session" VALUES('thinkbase',1,1372342866);
 INSERT INTO "session" VALUES('8c4e4218cad004db15828da7',0,1364585788);
 INSERT INTO "session" VALUES('6aa703fb95be7bb783373d5c',0,1364620696);
 INSERT INTO "session" VALUES('9c1ad9fcac00177d9745ed51',0,1364649997);
@@ -283,7 +249,6 @@ INSERT INTO "session" VALUES('0a7ddf46c91b633891558a15',0,1371038679);
 INSERT INTO "session" VALUES('71cb6459428c7e33d5a25e73',0,1371098667);
 INSERT INTO "session" VALUES('6517a63f39f26db011d7f1a4',0,1371129949);
 INSERT INTO "session" VALUES('3d5bbc88b348990304fe869d',0,1371168567);
-INSERT INTO "session" VALUES('eb84d73f32b9e1d6aad77634',0,1371276548);
 INSERT INTO "session" VALUES('85cf16d6e38f6669cf89487b',0,1371301661);
 INSERT INTO "session" VALUES('bd3c108bceef61896aef353e',0,1371307219);
 INSERT INTO "session" VALUES('5b223c38261095614c82ed3f',0,1371323233);
@@ -299,7 +264,6 @@ INSERT INTO "session" VALUES('ae2d874ebcfb9b67b5e08e5d',0,1371648498);
 INSERT INTO "session" VALUES('79d87943fabde54b424486a6',0,1371650036);
 INSERT INTO "session" VALUES('12c37636796194f493017265',0,1371653860);
 INSERT INTO "session" VALUES('b84ec96a5d03ecf3ad50d918',0,1371654052);
-INSERT INTO "session" VALUES('9334163bbd7dbb730504b268',0,1371763036);
 INSERT INTO "session" VALUES('b836a43d636f0b0ad6dcbdb7',0,1371776793);
 INSERT INTO "session" VALUES('7a0ea061fde97b4707a5777c',0,1371781510);
 INSERT INTO "session" VALUES('4e0b31af67c3bf80f218864d',0,1371807525);
@@ -314,6 +278,11 @@ INSERT INTO "session" VALUES('dee865e26183b9fae2ca3b59',0,1371911171);
 INSERT INTO "session" VALUES('d26e4f4d8f44feaffedd5a7d',0,1371914057);
 INSERT INTO "session" VALUES('c72955b760361ada4a5b7f26',0,1371944888);
 INSERT INTO "session" VALUES('2a037e3556596b87421824d5',0,1371949451);
+INSERT INTO "session" VALUES('358dedf121158490200dee08',0,1372111261);
+INSERT INTO "session" VALUES('48784c1eb539fa025755861f',0,1372151043);
+INSERT INTO "session" VALUES('a9d44014f6ecdcd680b7064a',0,1372168813);
+INSERT INTO "session" VALUES('25e7e7105285ef5fd1fca4d7',0,1372212552);
+INSERT INTO "session" VALUES('95a05e33e3def07016d8a026',0,1372248301);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -321,66 +290,6 @@ CREATE TABLE session_attribute (
     value text,
     UNIQUE (sid,authenticated,name)
 );
-INSERT INTO "session_attribute" VALUES('1b90e9e6796ed9132bc801a8',0,'timeline.lastvisit','1363886070000000');
-INSERT INTO "session_attribute" VALUES('1b90e9e6796ed9132bc801a8',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('90fe141f28c09d6c541ef436',0,'timeline.lastvisit','1363886070000000');
-INSERT INTO "session_attribute" VALUES('90fe141f28c09d6c541ef436',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('fa5b13f92725b6fb829d6b0d',0,'timeline.lastvisit','1363886070000000');
-INSERT INTO "session_attribute" VALUES('fa5b13f92725b6fb829d6b0d',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('0d8836e6df45d6e8cbe20985',0,'timeline.lastvisit','1363886070000000');
-INSERT INTO "session_attribute" VALUES('0d8836e6df45d6e8cbe20985',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('519b618186c71d0a3fad75f3',0,'timeline.authors','uuqqfgnyalhrld');
-INSERT INTO "session_attribute" VALUES('3b9da141c581b256cb3928e2',0,'timeline.authors','uuqqfgnyalhrld');
-INSERT INTO "session_attribute" VALUES('7bba8c93107d9d4fa786295a',0,'name','Adrian');
-INSERT INTO "session_attribute" VALUES('7bba8c93107d9d4fa786295a',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('7bba8c93107d9d4fa786295a',0,'email','getjoy@msn.com');
-INSERT INTO "session_attribute" VALUES('c761e63ef6a6f4178c1707fd',0,'timeline.lastvisit','1363886070000000');
-INSERT INTO "session_attribute" VALUES('c761e63ef6a6f4178c1707fd',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('2b0b7e994ac6ba63b1d818a9',0,'timeline.lastvisit','1363886070000000');
-INSERT INTO "session_attribute" VALUES('2b0b7e994ac6ba63b1d818a9',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('a650d98b4d3826e6a8f25bda',0,'timeline.authors','lndeskfxrskougf');
-INSERT INTO "session_attribute" VALUES('3d8dfbb3703f6bf4afef1c76',0,'timeline.authors','lndeskfxrskougf');
-INSERT INTO "session_attribute" VALUES('de4096297520d0a2960f82d7',0,'timeline.authors','lndeskfxrskougf');
-INSERT INTO "session_attribute" VALUES('bde2108c5c800ebffd41bc2a',0,'timeline.authors','uuqqfgnyalhrld');
-INSERT INTO "session_attribute" VALUES('950c779dc3ae4b85d5128f0d',0,'timeline.lastvisit','1364211185000000');
-INSERT INTO "session_attribute" VALUES('950c779dc3ae4b85d5128f0d',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('8defc7307c297ee5d7bba61f',0,'timeline.lastvisit','1364218086611000');
-INSERT INTO "session_attribute" VALUES('8defc7307c297ee5d7bba61f',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('226b246233169db2877ae4e4',0,'timeline.lastvisit','1364218086611000');
-INSERT INTO "session_attribute" VALUES('226b246233169db2877ae4e4',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('c4ff5f801c00b80b5184ab14',0,'timeline.lastvisit','1364244420000000');
-INSERT INTO "session_attribute" VALUES('c4ff5f801c00b80b5184ab14',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('ff88daf3a6af4207ae4269b8',0,'timeline.authors','czcjkxtwzporjw');
-INSERT INTO "session_attribute" VALUES('76e003df3d4c93459c0e561f',0,'timeline.authors','czcjkxtwzporjw');
-INSERT INTO "session_attribute" VALUES('d684a7302f44f2dd65f0575a',0,'timeline.authors','czcjkxtwzporjw');
-INSERT INTO "session_attribute" VALUES('d6fe1f8aee5b7f41663f74df',0,'name','Zoey');
-INSERT INTO "session_attribute" VALUES('d6fe1f8aee5b7f41663f74df',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('d6fe1f8aee5b7f41663f74df',0,'email','rikky@aol.com');
-INSERT INTO "session_attribute" VALUES('22d5d3da20b82716d47b5480',0,'timeline.lastvisit','1364269004673000');
-INSERT INTO "session_attribute" VALUES('22d5d3da20b82716d47b5480',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('a004066a435cd815459a7a37',0,'timeline.lastvisit','1364269004673000');
-INSERT INTO "session_attribute" VALUES('a004066a435cd815459a7a37',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('52b37839bb4d1ec94aeed1b4',0,'timeline.lastvisit','1364310080000000');
-INSERT INTO "session_attribute" VALUES('52b37839bb4d1ec94aeed1b4',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('8b863556fc6a56834b1ff575',0,'timeline.authors','bapdklio');
-INSERT INTO "session_attribute" VALUES('27acf4772a48bbbffb2a8684',0,'timeline.authors','sohhkqhmjfjrrju');
-INSERT INTO "session_attribute" VALUES('cf29c11ad397163b8f825d66',0,'timeline.authors','sohhkqhmjfjrrju');
-INSERT INTO "session_attribute" VALUES('1b405509ab97d90240f4488d',0,'timeline.authors','sohhkqhmjfjrrju');
-INSERT INTO "session_attribute" VALUES('44640a9cf94925eb1aa79574',0,'timeline.authors','sohhkqhmjfjrrju');
-INSERT INTO "session_attribute" VALUES('03b095d69dd20354075a1656',0,'timeline.authors','bapdklio');
-INSERT INTO "session_attribute" VALUES('2b616053128da751a5d0b492',0,'timeline.lastvisit','1364400765000000');
-INSERT INTO "session_attribute" VALUES('2b616053128da751a5d0b492',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('65a53cc5ff2761e6e0ad76ea',0,'timeline.lastvisit','1364400765000000');
-INSERT INTO "session_attribute" VALUES('65a53cc5ff2761e6e0ad76ea',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('7cda8d04395c5b0d255e1125',0,'timeline.lastvisit','1364486052000000');
-INSERT INTO "session_attribute" VALUES('7cda8d04395c5b0d255e1125',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('0b465a9f13f681455f072e4d',0,'timeline.lastvisit','1364486052000000');
-INSERT INTO "session_attribute" VALUES('0b465a9f13f681455f072e4d',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('e2295008d2cc6f2ce013a091',0,'name','Nathaniel');
-INSERT INTO "session_attribute" VALUES('e2295008d2cc6f2ce013a091',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('e2295008d2cc6f2ce013a091',0,'email','freelife@yahoo.com');
-INSERT INTO "session_attribute" VALUES('2c9d9dbe28e911e4a22d5274',0,'timeline.lastvisit','1364530204000000');
-INSERT INTO "session_attribute" VALUES('2c9d9dbe28e911e4a22d5274',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('8c4e4218cad004db15828da7',0,'timeline.lastvisit','1364569885000000');
 INSERT INTO "session_attribute" VALUES('8c4e4218cad004db15828da7',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('6aa703fb95be7bb783373d5c',0,'timeline.lastvisit','1364569885000000');
@@ -798,8 +707,6 @@ INSERT INTO "session_attribute" VALUES('6517a63f39f26db011d7f1a4',0,'chrome.noti
 INSERT INTO "session_attribute" VALUES('6517a63f39f26db011d7f1a4',0,'email','pitfighter@hotmail.com');
 INSERT INTO "session_attribute" VALUES('3d5bbc88b348990304fe869d',0,'timeline.lastvisit','1370069452000000');
 INSERT INTO "session_attribute" VALUES('3d5bbc88b348990304fe869d',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('eb84d73f32b9e1d6aad77634',0,'timeline.lastvisit','1371275399000000');
-INSERT INTO "session_attribute" VALUES('eb84d73f32b9e1d6aad77634',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('85cf16d6e38f6669cf89487b',0,'timeline.lastvisit','1371275399000000');
 INSERT INTO "session_attribute" VALUES('85cf16d6e38f6669cf89487b',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('bd3c108bceef61896aef353e',0,'timeline.lastvisit','1371275399000000');
@@ -834,17 +741,6 @@ INSERT INTO "session_attribute" VALUES('12c37636796194f493017265',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('12c37636796194f493017265',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('b84ec96a5d03ecf3ad50d918',0,'timeline.lastvisit','1371275399000000');
 INSERT INTO "session_attribute" VALUES('b84ec96a5d03ecf3ad50d918',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignorewhitespace','1');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1363886070000000');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1363772154000000');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','16');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_sidebyside','1');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignoreblanklines','1');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
-INSERT INTO "session_attribute" VALUES('9334163bbd7dbb730504b268',0,'timeline.lastvisit','1371761960076000');
-INSERT INTO "session_attribute" VALUES('9334163bbd7dbb730504b268',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('b836a43d636f0b0ad6dcbdb7',0,'name','bqywjfxfo');
 INSERT INTO "session_attribute" VALUES('b836a43d636f0b0ad6dcbdb7',0,'chrome.notices.0','Your preferences have been saved.');
 INSERT INTO "session_attribute" VALUES('b836a43d636f0b0ad6dcbdb7',0,'email','wriuol@aywrup.com');
@@ -874,6 +770,27 @@ INSERT INTO "session_attribute" VALUES('c72955b760361ada4a5b7f26',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('c72955b760361ada4a5b7f26',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('2a037e3556596b87421824d5',0,'timeline.lastvisit','1371761960076000');
 INSERT INTO "session_attribute" VALUES('2a037e3556596b87421824d5',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('358dedf121158490200dee08',0,'timeline.lastvisit','1372095632000000');
+INSERT INTO "session_attribute" VALUES('358dedf121158490200dee08',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('48784c1eb539fa025755861f',0,'timeline.lastvisit','1372095632000000');
+INSERT INTO "session_attribute" VALUES('48784c1eb539fa025755861f',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a9d44014f6ecdcd680b7064a',0,'name','lqqtru');
+INSERT INTO "session_attribute" VALUES('a9d44014f6ecdcd680b7064a',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('a9d44014f6ecdcd680b7064a',0,'email','adclpi@txodfy.com');
+INSERT INTO "session_attribute" VALUES('25e7e7105285ef5fd1fca4d7',0,'name','Kayla');
+INSERT INTO "session_attribute" VALUES('25e7e7105285ef5fd1fca4d7',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('25e7e7105285ef5fd1fca4d7',0,'email','friend35@hotmail.com');
+INSERT INTO "session_attribute" VALUES('95a05e33e3def07016d8a026',0,'timeline.lastvisit','1372166971846000');
+INSERT INTO "session_attribute" VALUES('95a05e33e3def07016d8a026',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignorewhitespace','1');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignoreblanklines','1');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1363886070000000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','16');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_sidebyside','1');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1372342668000000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -37088,6 +37005,70 @@ INSERT INTO "wiki" VALUES('misc/NetworkDigest',28,1371761960076000,'thinkbase','
 
  - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
   - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',29,1372166971846000,'thinkbase','58.246.174.150','= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
+  - [[Image(玛雅历法预言末日.jpg)]]
+
+ - {{{这篇文章更多的是表达一种愿望，而不是现状：）}}}
+  - 来自 [http://www.oschina.net/translate/eight-reasons-c-sharp-is-the-best-language-for-mobile-development 8 个理由说明为什么 C# 是移动开发的最佳语言 - 开源中国社区]
+
+ - {{{如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭}}}
+  - 来自 [http://coolshell.cn/articles/8883.html 应该知道的Linux技巧 - 酷壳 – CoolShell.cn]
+
+ - {{{人最可怕的，是不动脑子。比不动脑子更可怕的，是想的太多。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2821609#p2821609 linux世界里那蛋疼的命名 - 查看主题 • Ubuntu中文论坛:]
+
+ - {{{- 以上内容全部来自互联网，本人并不识字，完全复制粘贴。}}}[[BR]]{{{- 看帖者请于24小时内自觉、主动、完全忘记。}}}[[BR]]{{{- 跟帖行为并不意味本人同意、支持、反对，或了解、知晓文中观点，如有任何疑问请直接联系原作者本人。故本人不对以上内容负法律责任（包括民法、刑法或婚姻法，及文中提及或未提及之法律），请勿跨村、跨乡、跨县、跨市、跨省、跨国、跨地球、跨太阳系、跨时空实施抓捕。}}}[[BR]]{{{- 谢谢合作! }}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=1721779#p1721779 汉语编程 与“来自中国的恐慌” - 查看主题 • Ubuntu中文论坛:]''''(当然, 这个也不是原创)''''
+
+ - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
+  - [[Image(Screenshot-Python-OSChina.NET.png)]]
+  - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 - 开源中国 OSChina.NET: 之 31 楼]
+
+ - {{{——你喜欢函数式编程？}}}[[BR]]{{{——是啊。}}}[[BR]]{{{——太好了我也是，你喜欢 Erlang 、Lua 、Lisp 还是 Haskell ？}}}[[BR]]{{{—— Lisp 。}}}[[BR]]{{{——太好了我也是，你喜欢 Common Lisp 、Emacs Lisp 、Scheme 还是 Clojure ？}}}[[BR]]{{{—— Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 MIT Scheme 、MzScheme 、DrScheme 还是 Guile ？}}}[[BR]]{{{—— MIT Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 7.5 版还是 7.4 版？}}}[[BR]]{{{—— 7.5 。}}}[[BR]]{{{——滚！异端！}}}
+  - 来自 [http://www.oschina.net/translate/why_lisp_failed?p=1#rpl_2803 为什么Lisp没有流行起来 - 技术翻译 - 开源中国 OSChina.NET: 之 9 楼]
+
+ - {{{摩尔定律规定：我们芯片上的晶体管数量每隔18个月翻一倍。然而芯片行业已经翻倍到了极限——现在那些小芯片上的晶体管就像在一个小空间内塞满一群性格阴郁的少年。}}}
+  - 来自 [http://www.csdn.net/article/2013-03-22/2814599-ibm-rethinks-the-transistor-to-keep-scaling-compute-power 传IBM重新设计晶体管 预计五至七年内成熟-CSDN.NET:]
+
+ - {{{“……如果把地球上的病毒首尾相接，能连成一条2亿光年的长链……”}}}[[BR]]{{{2x10^24米}}}[[BR]]{{{假设病毒链的直径是20nm(横截面1.2x10^-15平方米)}}}[[BR]]{{{那么总体积就是2.4x10^9立方米}}}[[BR]]{{{假设密度和水相同，就是24亿吨}}}[[BR]]{{{比磷虾还要多一些。。。}}}
+  - 来自 [http://songshuhui.net/archives/79183#comment-400085 科学松鼠会 » 小病毒 大能耐: 之 "100 说道:"]
+
+ - {{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+  - 来自 [http://www.infoq.com/cn/news/2013/03/git-in-javascript InfoQ - JavaScript Git的Kickstarter项目仅28小时达到集资目标:] [http://creationix.com/ Tim Caswell]{{{是多个JavaScript和Node.js社区的知名成员，他提出了一个使用JavaScript来重新实现Git的建议。}}}[http://www.kickstarter.com/projects/creationix/js-git 并将该项目放到了Kickstarter（译者注：Kickstarter是一个对个人创意项目进行公众集资（捐赠）从而获得资金支持的网络平台）上进行集资，结果仅仅在28小时内就获得了超过360人的资助。]{{{该项目再一次应证了}}}[http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html Atwood定律：]{{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+
+ - {{{这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题}}}
+  - 来自 [http://www.oschina.net/news/39858/fast-database-emerges-from-mit-class-gpus-and-students-invention?p=3#rpl_273342499 哈佛/MIT学生创造GPU数据库，性能提升70倍 - 开源中国 OSChina.NET:]
+{{{
+#!div
+''''''43楼：suifengsuoyu 发表于 2013-04-23 18:21''''''
+> 引用来自“unnamed”的评论
+> 难道写个数据库的时间还不够他处理那些数据？我觉得处理个几十次应该都够了吧
+这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题
+}}}
+
+ - {{{今天的苹果核google都是控制狂类型的公司。苹果不说了，google干的好事一桩：win下的chrome一直只是测试用的，firefox安装的是自己选择的flash player版本，结果2次chrome大版本升级，2次都将firefox的flash player强制插入了与其一致的最新的11版。这种“狗拿耗子”，在禁用google update插件情况下偷偷摸摸“自作聪明”的小伎俩也是今天google的程序员们的最爱。更别提什么把系统启动时进程常驻内存，骗取用户”chrome启动很快“，linux下想直接下载个for win的chrome都要和网页斗半天，否则它认准你只能下载 for linux版的。每每这种时候都有一种”你以为你是谁啊，猪啊！“的感觉，只有猪和变态控制狂类型的程序员才会以为自己永远知道别人想的是什么。。。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2966467#p2966467 苹果公司的邪恶 - 查看主题 • Ubuntu中文论坛:]
+
+ - {{{在他刚跳下不久的高度，气温大概是零下40度。这是一个神奇的数值，因为不需要指出其单位是摄氏还是华氏——数值在两种单位下都一样}}}
+  - 来自 [http://songshuhui.net/archives/78125 "科学松鼠会 » [What if]第28期——天上掉下来一块牛排排:"]
+
+ - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
+  - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]
+
+ - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
+  - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]','',0);
 CREATE TABLE repository (
     id integer,
     name text,
@@ -43212,6 +43193,99 @@ javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"
   - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
 
 == END ==',1368625424,1368627732,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/02',8,'使用 x3dom 框架及 WebGL 在浏览器上显示 3 维模型','如果需要在浏览器上显示 3D 画面的话, 现在一般会使用 [http://zh.wikipedia.org/wiki/WebGL WebGL], 典型的例如 `three.js`(http://mrdoob.github.com/three.js/), 但是 `WebGL` 对浏览器版本以及显卡的要求比较高, 很多客户端无法正常使用 [[span(———— 当然现在新买的机器是毫无压力的, style=color:red)]].
+
+后来在网上查找到了 `X3DOM`(http://www.x3dom.org/), 通过使用不同的后端(backend), `X3DOM` 可以兼容较低版本的浏览器(主要是指 IE 系列), 也可以在没有显卡支持的情况下运行, 常用的非 WebGL 后端是 [http://www.adobe.com/products/flashplayer.html Adobe Flash Player 11], IE 也可以通过使用 [http://www.google.com/chromeframe Google Chrome Frame] 实现对 WebGL 的支持, 注意 Flash 11 以下的版本是不能正常运行的.
+
+`X3DOM` 通过在标准的 `HTML5` DOM 中加入 [http://www.web3d.org/about/overview/ X3D] 格式的 XML 元素, 实现将 `X3D` 格式的 3D 模型嵌入到 HTML 页面的功能; 在 http://www.x3dom.org/ 网站上有丰富的示例以及较详细的文档, 不过彻底搞懂估计需要一些 3D 建模的知识, 比如 [http://en.wikipedia.org/wiki/Field_of_view fieldOfView] 这样的专业术语.
+
+另外 [http://www.web3d.org/ web3D Consortium] 也有大量关于 `X3D` 的资料, 尤其是 `X3D tooltips`(http://www.web3d.org/x3d/content/X3dTooltips.html), 是一份全面的 `X3D` 节点元素速查手册(有[http://www.web3d.org/x3d/content/X3dTooltipsChinese.html 中文版])''''(不知道为什么 www.web3d.org 被 GWF 了, 如果要下载也可以到 [https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill/docs 这里])'''';
+
+在初步了解 `x3dom` 的基础上, 以显示货物装箱为例, 对 `x3dom` 进行了简单的封装, 重点关注 ''''''货物在集装箱等容器中的堆放方式的显示'''''', 可以实现以 "Box" 的方式加入不同尺寸的货物(长方体), 以不同的角度查看堆放情况, 以及对这些长方体的选择/加亮显示等等, 具体代码可以到 https://github.com/thinkbase/dev-thinkbase.net/tree/master/.research/x3dom-container-fill 下载, 注意测试用的 html 文件不能直接在本地打开, 必须部署到 HTTP 服务器上才能正常运行; 如果不想麻烦的话，在这里可以看到 [[span([/../dev/.research/x3dom-container-fill/unittest.html 在线演示], style=padding:1px 6px;border:1px solid #000; font-size: 150%)]].
+
+实际显示的效果如下图所示''''(使用 Flash backend 的效果, 如果系统支持 WebGL 的话效果应该要好很多)'''':
+[[BR]][[Image(Screenshot-Fill3D-Test.png, 100%)]]
+[[BR]][[Image(Screenshot-Fill3D-Test2.png, 100%)]]',1359821643,1372342668,'','thinkbase','thinkbase','webgl x3d x3dom javascript 3D VRML');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',10,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"][[BR]][[BR]]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide 采用类似做法来运行示例代码]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+实际效果见 [[span([/../dev/.research/iframe-fill-and-autofit/fill-iframe-with-string.html 在线演示], style=padding:1px 6px;border:1px solid #000; font-size: 150%)]]。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - ''''''安全模型''''''：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]][[BR]]另外如果 IFrame 中引用的是来自网络的 js 外部文件，IE8 可以正常运行(见这个例子：[source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string-online-test.html fill-iframe-with-string-online-test.html]);[[BR]]
+ - ''''''IFrame 相关对象'''''', 以及''''''页面高度检测''''''：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - IE8, WindowsXP: [[BR]][[Image(IE8-WinXP.png)]]
+  - IE9, Windows 7: [[BR]][[Image(IE9-Win7.png)]]
+  - Firefox19, Windows 7: [[BR]][[Image(Firefox19-Win7.png)]]
+  - Firefox20, Ubuntu: [[BR]][[Image(Firefox20-Ubuntu.png)]]
+  - Google Chrome 6, Windows 7: [[BR]][[Image(Chrome6-Win7.png)]]
+  - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
+
+== END ==',1368625424,1372342996,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130515-1330',11,'动态写入内容到 iFrame 并执行其中脚本','== How to - Injecting HTML into an IFrame ==
+
+其实实现思路比较简单，与动态打开一个窗口并使用 `document.write(...)` 写入内容的做法类似，IFrame 内部包含的 window 对象也可以使用同样的方法写入 HTML 内容，并且可以执行其中的脚本。
+
+== 主要参考 ==
+ - [http://stackoverflow.com/questions/10418644/creating-an-iframe-with-given-html-dynamically stackoverflow "Creating an iframe with given HTML dynamically"][[BR]][[BR]]
+ - [http://dojotoolkit.org/reference-guide/1.8/dijit/Tree.html Dojo 的 Reference Guide 采用类似做法来运行示例代码]
+  - 经过分析可以看到 Dojo Reference Guide 是采用一个 `src=javascript:[页面内容]` 的方式来打开 iframe，例如：
+{{{
+#!javascript
+javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"%20href="../_static/js/dojo/../dijit/themes/claro/claro.css">\n\n<script>dojoConfig%20=%20{async:%20true}</script><script%20src=\''../_static/js/dojo/dojo.js\''></script><script>require([\n%20%20%20%20"dojo/ready",%20"dojo/_base/window",%20"dojo/store/Memory",\n%20%20%20%20"dijit/tree/ObjectStoreModel",%20"dijit/Tree"\n],%20function(ready,%20win,%20Memory,%20ObjectStoreModel,%20Tree){\n\n%20%20%20%20//%20Create%20test%20store,%20adding%20the%20getChildren()%20method%20required%20by%20ObjectStoreModel\n%20%20%20%20var%20myStore%20=%20new%20Memory({\n%20%20%20%20%20%20%20%20data:%20[\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''world\'',%20name:\''The%20earth\'',%20type:\''planet\'',%20population:%20\''6%20billion\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AF\'',%20name:\''Africa\'',%20type:\''continent\'',%20population:\''900%20million\'',%20area:%20\''30,221,532%20sq%20km\'',\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20timezone:%20\''-1%20UTC%20to%20+4%20UTC\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EG\'',%20name:\''Egypt\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''KE\'',%20name:\''Kenya\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Nairobi\'',%20name:\''Nairobi\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Mombasa\'',%20name:\''Mombasa\'',%20type:\''city\'',%20parent:%20\''KE\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SD\'',%20name:\''Sudan\'',%20type:\''country\'',%20parent:%20\''AF\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''Khartoum\'',%20name:\''Khartoum\'',%20type:\''city\'',%20parent:%20\''SD\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''AS\'',%20name:\''Asia\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''CN\'',%20name:\''China\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IN\'',%20name:\''India\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''RU\'',%20name:\''Russia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''MN\'',%20name:\''Mongolia\'',%20type:\''country\'',%20parent:%20\''AS\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''OC\'',%20name:\''Oceania\'',%20type:\''continent\'',%20population:\''21%20million\'',%20parent:%20\''world\''},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''EU\'',%20name:\''Europe\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''DE\'',%20name:\''Germany\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''FR\'',%20name:\''France\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''ES\'',%20name:\''Spain\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''IT\'',%20name:\''Italy\'',%20type:\''country\'',%20parent:%20\''EU\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''NA\'',%20name:\''North%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20},\n%20%20%20%20%20%20%20%20%20%20%20%20{%20id:%20\''SA\'',%20name:\''South%20America\'',%20type:\''continent\'',%20parent:%20\''world\''%20}\n%20%20%20%20%20%20%20%20],\n%20%20%20%20%20%20%20%20getChildren:%20function(object){\n%20%20%20%20%20%20%20%20%20%20%20%20return%20this.query({parent:%20object.id});\n%20%20%20%20%20%20%20%20}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20model\n%20%20%20%20var%20myModel%20=%20new%20ObjectStoreModel({\n%20%20%20%20%20%20%20%20store:%20myStore,\n%20%20%20%20%20%20%20%20query:%20{id:%20\''world\''}\n%20%20%20%20});\n\n%20%20%20%20//%20Create%20the%20Tree.%20%20%20Note%20that%20all%20widget%20creation%20should%20be%20inside%20a%20dojo.ready().\n%20%20%20%20ready(function(){\n%20%20%20%20%20%20%20%20var%20tree%20=%20new%20Tree({\n%20%20%20%20%20%20%20%20%20%20%20%20model:%20myModel\n%20%20%20%20%20%20%20%20});\n%20%20%20%20%20%20%20%20tree.placeAt(win.body());\n%20%20%20%20%20%20%20%20tree.startup();\n%20%20%20%20});\n});</script>\n</head>\n<body%20class="claro">\n%20%20%20%20\n</body>\n</html>''
+}}}
+
+== 实现实例 ==
+参考 [source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string.html fill-iframe-with-string.html], 要点解释如下：
+ 1. 基本流程就是:
+  - IFrame 内部 `document.open()`;
+  - IFrame 内部 `document.write(...)`;
+  - IFrame 内部 `document.close()`;
+ 2. 示例中实现了向 IFrame 内部窗口传递参数的功能。注意在 IE 中，`document.open()` 会清除 IFrame 内部 `window` 对象上的属性，因此参数的设置需要在 `document.open()` 之后进行；
+ 3. 关于脚本的执行：
+  - 按照一般的习惯，在页面头部会使用诸如 `<script src="./jquery-ui-1.10.3/jquery-1.9.1.js"></script>` 这样的写法引入外部 js，然后在 HTML 元素之后使用嵌入的 javascript 脚本执行与页面元素相关的操作；
+  - 在 Firefox 和 Chrome 中，`<script>` 的执行是按照在页面中的先后顺序进行的, 因此处于文档后部的嵌入 javascript 脚本可以使用外部 js 中定义的变量(比如：jQuery 的 "$");
+  - 但是在 IE 中情况正好相反，在执行嵌入的 javascript 脚本时，引入的外部 js 还没有执行，这样就造成嵌入 javascript 脚本出现 "找不到 $ 对象" 之类的错误；
+  - 解决方法是在 IFrame 内部页面上定义 `body` 的 `onload` 事件，在这个事件中执行页面中的嵌入 javascript 脚本。
+
+实际效果见 [[span([/../dev/.research/iframe-fill-and-autofit/fill-iframe-with-string.html 在线演示], style=padding:1px 6px;border:1px solid #000; font-size: 150%)]] 。
+
+== 讨论：不同浏览器的差异 ==
+总的来说 IE9、Firefox 和 Chrome 的差别很小，倒是 IE8 与其他浏览器存在不小的差别，主要包括：
+ - ''''''安全模型''''''：上面提到的示例 html 文件无法通过 IE8 直接在本地打开(如下图)，但是其他浏览器可以正常打开，而发布到 Web 服务器上之后，IE8 也可以正常打开；[[BR]][[Image(IE8-WinXP-localAccess-error.png)]][[BR]]另外如果 IFrame 中引用的是来自网络的 js 外部文件，IE8 可以正常运行(见这个例子：[source:dev-thinkbase.net/.research/iframe-fill-and-autofit/fill-iframe-with-string-online-test.html fill-iframe-with-string-online-test.html]);[[BR]]
+ - ''''''IFrame 相关对象'''''', 以及''''''页面高度检测''''''：下面对不同浏览器中 `iframe.documentWindow`、`iframe.contentWindow`、`iframe.Document`、`iframe.contentDocument.body.offsetHeight`、`iframe.Document.body.scrollHeight`进行了比较，可以看出来，IE8 与其他几个浏览器的差异比较明显：
+  - IE8, WindowsXP: [[BR]][[Image(IE8-WinXP.png)]]
+  - IE9, Windows 7: [[BR]][[Image(IE9-Win7.png)]]
+  - Firefox19, Windows 7: [[BR]][[Image(Firefox19-Win7.png)]]
+  - Firefox20, Ubuntu: [[BR]][[Image(Firefox20-Ubuntu.png)]]
+  - Google Chrome 6, Windows 7: [[BR]][[Image(Chrome6-Win7.png)]]
+  - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
+
+== END ==',1368625424,1372343018,'','thinkbase','thinkbase','iframe javascript html');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
