@@ -785,11 +785,11 @@ INSERT INTO "session_attribute" VALUES('95a05e33e3def07016d8a026',0,'timeline.ne
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignorewhitespace','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignoreblanklines','1');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1363886070000000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.nextlastvisit','1372343018000000');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','16');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_sidebyside','1');
-INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1372342668000000');
+INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1372351293000000');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
 CREATE TABLE attachment (
     type text,
@@ -1045,6 +1045,7 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','Firefox20-Ubun
 INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','Chrome6-Win7.png',12346,1368627131752000,'','thinkbase','180.175.163.49');
 INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','Chromium25-Ubuntu.png',30567,1368627138548000,'','thinkbase','180.175.163.49');
 INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','IE8-WinXP-localAccess-error.png',14279,1368627372198000,'','thinkbase','180.175.163.49');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20130627-1456','PortableTrac-QuickStart.gif',3059613,1372361146647000,'','thinkbase','180.157.14.48');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -37069,6 +37070,48 @@ INSERT INTO "wiki" VALUES('misc/NetworkDigest',29,1372166971846000,'thinkbase','
 
  - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
   - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]','',0);
+INSERT INTO "wiki" VALUES('PortableTrac',14,1372345779403000,'thinkbase','180.157.14.48','= About PortableTrac / 关于 PortableTrac =
+
+== Summary / 简介 ==
+PortableTrac is the redistribution of [http://trac.edgewall.org/ Trac] Server, focused on the `Plugins Ready` and `Out of the Box` Deployment.
+ 1. Portable - Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download]-and-uncompress.
+ 2. Easy to use - the pre-configuration includes [source:/PortableTrac/trac/Lib/site-packages many helpful plugins and functions], and software-intergration such as [source:/PortableTrac/httpd apache httpd] and [source:/PortableTrac/bin others].
+ 3. Default include the [wiki:ZhWikiStart Chinese content];
+
+PortableTrac is current based on python 2.7(win32), so the Windows platform(x86 and x64) is just the only platform to support.
+
+PortableTrac is hosted on Github: https://github.com/thinkbase/PortableTrac , including the python runtime / python eggs / configuration / other software and scripts.
+
+{{{
+#!div style="background: #ffd"
+PortableTrac 是 `thinkbase.net` 经过整理后打包发布、"开箱即用"的[http://trac.edgewall.org/ Trac]服务器发行版, 其重点在于:
+ 1. Portable - 解压后即可使用;
+ 2. 经过简单的预配置, 包含大量实际使用中必需的 [source:/PortableTrac/trac/Lib/site-packages 功能插件], 以及 [source:/PortableTrac/httpd apache httpd] [source:/PortableTrac/bin 等] 必要的相关软件;
+ 3. 默认已设置为[wiki:ZhWikiStart 中文版本];
+
+最新版本的 PortableTrac [https://github.com/thinkbase/PortableTrac/commit/38d4fab2e41861a9a620d3d3df0b23e92a6c178e 集成了官方版本Python2.7.4](''''早期集成的是 [http://www.portablepython.com/ PortablePython]''''), 目前只能在 Windows 上使用;
+
+PortableTrac 的所有代码(主要是 python 运行环境、python egg、配置文件、相关程序和脚本)托管在 https://github.com/thinkbase/PortableTrac .
+}}}
+
+== Why PortableTrac / 为什么要创建 PortableTrac ==
+For own use, this website ( http://www.thinkbase.net ) is based the newest version of PortableTrac.
+
+{{{
+#!div style="background: #ffd"
+
+主要是为了自己使用方便, 比如这个站点( http://www.thinkbase.net )就是基于 PortableTrac 的当前版本建立的.
+}}}
+
+== The next / 下一步 ==
+To install and try PortableTrac, please see the [wiki:PortableTrac/install installation] and [wiki:PortableTrac/manual manual].
+
+{{{
+#!div style="background: #ffd"
+
+请参考 [wiki:PortableTrac/install 安装] and [wiki:PortableTrac/manual 用户手册] 页面，安装并测试 PortableTrac.
+}}}
+','',0);
 CREATE TABLE repository (
     id integer,
     name text,
@@ -43286,6 +43329,260 @@ javascript:%20''<!DOCTYPE%20html>\n<html%20>\n<head>\n\n<link%20rel="stylesheet"
   - Chromium25, Ubuntu: [[BR]][[Image(Chromium25-Ubuntu.png)]]
 
 == END ==',1368625424,1372343018,'','thinkbase','thinkbase','iframe javascript html');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1456',1,'Portable Trac 简单介绍 - 兼谈为什么不选择 Redmine','[http://trac.edgewall.org/ Trac]是一个轻量级的`软件项目管理环境`，如果在工作中涉及一个开发团队的管理并且关心`项目管理工具`的话，相信都在 [http://trac.edgewall.org/ Trac]、[http://www.redmine.org/ Redmine] 等工具之间进行过比较，网上简单搜索一下就可以查到以下有代表性的文章：
+ - [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具]([http://sosopensource.com/187.html 英文版])
+ - [http://wiki.woodpecker.org.cn/moin/TracVsRedmine Trac对比Redmine]
+ - [http://wmcxy.iteye.com/blog/1481389 项目管理工具比较-redmine vs trac]
+
+一般来说这些比较都认为 Redmine 更为优秀，尤其是
+ - 可以同时管理多个项目;
+ - 安装和部署比较方便(''''[[span(利用rake、rails的db migration安装很方便，Trac则要用到命令行的trac-admin进行配置，以及每个项目有单独的ini配置文件, style=font-size:70%)]]'''')；
+ - 使用比较简单(''''[[span(trac的很多功能都需要通过trac-admin在命令行方式下进行配置，不易上手，这方面Redmine则十分方便, style=font-size:70%)]]'''')；
+
+总体来看，缺乏内置的`多项目管理`功能支持算是 Trac 的内伤，其他方面：
+ - 对于开发者而言，命令行不是特别严重的问题，而且 Trac 的插件机制比较完善，http://trac-hacks.org/ 上有大量的插件可以实现基于 Web 界面的管理需求(例如: [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin]实现了内置的用户管理、[http://trac-hacks.org/wiki/TracIniAdminPanelPlugin TracIniAdminPanelPlugin]支持通过Web方式调整Trac配置、[http://trac-hacks.org/wiki/SvnAuthzAdminPlugin SvnAuthzAdminPlugin]支持Web方式调整SVN权限等等), Python 语言也算比较大众化，自己写一个插件也没有太大压力；
+ - Trac 将维基融入了核心组件, 支持的更加彻底，而且其 [wiki:ZhWikiFormatting Wiki 语法] 功能强大并且可以通过插件扩展，这对于需要撰写大量文档的情况有不少帮助；而 Redmine 的 Wiki 功能实在太弱，实际使用的时候很不方便；''''''事实上功能丰富的 Wiki 是 Trac 最大的优势'''''';
+
+本文介绍的 [wiki:PortableTrac] 其实是针对官方 Trac 的重新打包发布(目前只支持 Windows)，其目的主要是简化 Trac 的安装配置过程，方便用户的使用，这方面的改进和正确包括：
+ - 内置中文说明；
+ - 自带的Python环境，已安装大量的常用插件，实现开箱即用，不再需要繁琐的安装和配置过程；
+ - 已实现与 Apache httpd、SVN、Git 的集成；
+ - 提供标准的数据备份和恢复功能；
+
+下图演示如何简单的在几分钟之内解压并运行一个 Trac 实例，尤其适合初学者：
+
+如果需要了解更多信息，请参考 [http://www.thinkbase.net/trac 在线演示站点].',1372348718,1372348718,'','thinkbase','thinkbase','trac python portable');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1456',2,'Portable Trac 简单介绍 - 兼谈为什么不选择 Redmine','[http://trac.edgewall.org/ Trac]是一个轻量级的`软件项目管理环境`，如果在工作中涉及一个开发团队的管理并且关心`项目管理工具`的话，相信都在 [http://trac.edgewall.org/ Trac]、[http://www.redmine.org/ Redmine] 等工具之间进行过比较，网上简单搜索一下就可以查到以下有代表性的文章：
+ - [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具]([http://sosopensource.com/187.html 英文版])
+ - [http://wiki.woodpecker.org.cn/moin/TracVsRedmine Trac对比Redmine]
+ - [http://wmcxy.iteye.com/blog/1481389 项目管理工具比较-redmine vs trac]
+
+一般来说这些比较都认为 Redmine 更为优秀，尤其是
+ - 可以同时管理多个项目;
+ - 安装和部署比较方便(''''[[span(利用rake、rails的db migration安装很方便，Trac则要用到命令行的trac-admin进行配置，以及每个项目有单独的ini配置文件, style=font-size:70%)]]'''')；
+ - 使用比较简单(''''[[span(trac的很多功能都需要通过trac-admin在命令行方式下进行配置，不易上手，这方面Redmine则十分方便, style=font-size:70%)]]'''')；
+
+总体来看，缺乏内置的`多项目管理`功能支持算是 Trac 的内伤，其他方面：
+ - 对于开发者而言，命令行不是特别严重的问题，而且 Trac 的插件机制比较完善，http://trac-hacks.org/ 上有大量的插件可以实现基于 Web 界面的管理需求(例如: [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin]实现了内置的用户管理、[http://trac-hacks.org/wiki/TracIniAdminPanelPlugin TracIniAdminPanelPlugin]支持通过Web方式调整Trac配置、[http://trac-hacks.org/wiki/SvnAuthzAdminPlugin SvnAuthzAdminPlugin]支持Web方式调整SVN权限等等), Python 语言也算比较大众化，自己写一个插件也没有太大压力；
+ - Trac 将维基融入了核心组件, 支持的更加彻底，而且其 [wiki:ZhWikiFormatting Wiki 语法] 功能强大并且可以通过插件扩展，这对于需要撰写大量文档的情况有不少帮助；而 Redmine 的 Wiki 功能实在太弱，实际使用的时候很不方便；''''''事实上功能丰富的 Wiki 是 Trac 最大的优势'''''';
+
+本文介绍的 [wiki:PortableTrac] 其实是针对官方 Trac 的重新打包发布(目前只支持 Windows)，其目的主要是简化 Trac 的安装配置过程，方便用户的使用，这方面的改进和正确包括：
+ - 内置中文说明；
+ - 自带的Python环境，已安装大量的常用插件，实现开箱即用，不再需要繁琐的安装和配置过程；
+ - 已实现与 Apache httpd、SVN、Git 的集成；
+ - 提供标准的数据备份和恢复功能；
+
+下图演示如何简单的在几分钟之内解压并运行一个 Trac 实例，尤其适合初学者：
+
+如果需要了解更多信息，请参考 [http://www.thinkbase.net/trac 在线演示站点].',1372348718,1372348730,'','thinkbase','thinkbase','trac python portable redmine');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1616',1,'PortableTrac 类似的系统','在 [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具] 看到：
+{{{
+#!html
+Trac 目前还无法同时管理多个项目，但如果作为一个单一项目的管理工具，它是一个很好的选择。大家可以使用 <a href="http://bitnami.org/stack/trac">BitNami</a> 和 <a href="http://www.turnkeylinux.org/trac">Turnkey virtual appliance</a>。
+}}}
+
+发现这两个项目和现在 PortableTrac 的目标比较接近：
+ - http://bitnami.com/stack/trac
+  - 提供了一键安装的 Trac 安装程序和虚拟机映像，甚至还包括在`云`上部署 Trac 服务器。
+  - 提供了 Windows、Linux 和 OS X 上的安装程序；
+ - http://www.turnkeylinux.org/trac
+  - TurnKey Linux是基于Ubuntu的虚拟应用程序库，它将一些最好的开放源码软件集成到完备可用的解决方案中。每一个虚拟应用程序都为易用性进行了优化，并能 在数分钟内就部署在裸机、虚拟机及云中，每一个虚拟应用都可以光盘镜像或是虚拟机镜像的形式获得(来自 http://baike.baidu.com/view/9300243.htm )。
+',1372350364,1372350364,'','thinkbase','thinkbase','trac portable linux ubuntu linux osx');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1616',2,'PortableTrac 类似的系统','在 [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具] 看到：
+{{{
+#!html
+Trac 目前还无法同时管理多个项目，但如果作为一个单一项目的管理工具，它是一个很好的选择。大家可以使用 <a href="http://bitnami.org/stack/trac">BitNami</a> 和 <a href="http://www.turnkeylinux.org/trac">Turnkey virtual appliance</a>。
+}}}
+
+发现这两个项目和现在 PortableTrac 的目标比较接近：
+ - http://bitnami.com/stack/trac
+  - 提供了一键安装的 Trac 安装程序和虚拟机映像，甚至还包括在`云`上部署 Trac 服务器。
+  - 提供了 Windows、Linux 和 OS X 上的安装程序；
+ - http://www.turnkeylinux.org/trac
+  - `TurnKey` Linux是基于Ubuntu的虚拟应用程序库，它将一些最好的开放源码软件集成到完备可用的解决方案中。每一个虚拟应用程序都为易用性进行了优化，并能 在数分钟内就部署在裸机、虚拟机及云中，每一个虚拟应用都可以光盘镜像或是虚拟机镜像的形式获得(来自 http://baike.baidu.com/view/9300243.htm )。
+',1372350364,1372350374,'','thinkbase','thinkbase','trac portable linux ubuntu linux osx');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1616',3,'PortableTrac 类似的系统','在 [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具] 看到：
+{{{
+#!html
+<div style="padding-left: 18px">
+Trac 目前还无法同时管理多个项目，但如果作为一个单一项目的管理工具，它是一个很好的选择。大家可以使用 <a href="http://bitnami.org/stack/trac">BitNami</a> 和 <a href="http://www.turnkeylinux.org/trac">Turnkey virtual appliance</a>。
+</div>
+}}}
+
+发现这两个项目和现在 PortableTrac 的目标比较接近：
+ - http://bitnami.com/stack/trac
+  - 提供了一键安装的 Trac 安装程序和虚拟机映像，甚至还包括在`云`上部署 Trac 服务器。
+  - 提供了 Windows、Linux 和 OS X 上的安装程序；
+ - http://www.turnkeylinux.org/trac
+  - `TurnKey` Linux是基于Ubuntu的虚拟应用程序库，它将一些最好的开放源码软件集成到完备可用的解决方案中。每一个虚拟应用程序都为易用性进行了优化，并能 在数分钟内就部署在裸机、虚拟机及云中，每一个虚拟应用都可以光盘镜像或是虚拟机镜像的形式获得(来自 http://baike.baidu.com/view/9300243.htm )。
+',1372350364,1372350434,'','thinkbase','thinkbase','trac portable linux ubuntu linux osx');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1456',3,'Portable Trac 简单介绍 - 兼谈为什么不选择 Redmine','[http://trac.edgewall.org/ Trac]是一个轻量级的`软件项目管理环境`，如果在工作中涉及一个开发团队的管理并且关心`项目管理工具`的话，相信都在 [http://trac.edgewall.org/ Trac]、[http://www.redmine.org/ Redmine] 等工具之间进行过比较，网上简单搜索一下就可以查到以下有代表性的文章：
+ - [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具]([http://sosopensource.com/187.html 英文版])
+ - [http://wiki.woodpecker.org.cn/moin/TracVsRedmine Trac对比Redmine]
+ - [http://wmcxy.iteye.com/blog/1481389 项目管理工具比较-redmine vs trac]
+
+一般来说这些比较都认为 Redmine 更为优秀，尤其是
+ - 可以同时管理多个项目;
+ - 安装和部署比较方便(''''[[span(利用rake、rails的db migration安装很方便，Trac则要用到命令行的trac-admin进行配置，以及每个项目有单独的ini配置文件, style=font-size:70%)]]'''')；
+ - 使用比较简单(''''[[span(trac的很多功能都需要通过trac-admin在命令行方式下进行配置，不易上手，这方面Redmine则十分方便, style=font-size:70%)]]'''')；
+
+总体来看，缺乏内置的`多项目管理`功能支持算是 Trac 的硬伤，其他方面：
+ - 对于开发者而言，命令行不是特别严重的问题，而且 Trac 的插件机制比较完善，http://trac-hacks.org/ 上有大量的插件可以实现基于 Web 界面的管理需求(例如: [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin]实现了内置的用户管理、[http://trac-hacks.org/wiki/TracIniAdminPanelPlugin TracIniAdminPanelPlugin]支持通过Web方式调整Trac配置、[http://trac-hacks.org/wiki/SvnAuthzAdminPlugin SvnAuthzAdminPlugin]支持Web方式调整SVN权限等等), Python 语言也算比较大众化，自己写一个插件也没有太大压力；
+ - Trac 将维基融入了核心组件, 支持的更加彻底，而且其 [wiki:ZhWikiFormatting Wiki 语法] 功能强大并且可以通过插件扩展，这对于需要撰写大量文档的情况有不少帮助；而 Redmine 的 Wiki 功能实在太弱，实际使用的时候很不方便；''''''事实上功能丰富的 Wiki 是 Trac 最大的优势'''''';
+
+本文介绍的 [wiki:PortableTrac] 其实是针对官方 Trac 的重新打包发布(目前只支持 Windows)，其目的主要是简化 Trac 的安装配置过程，方便用户的使用，这方面的改进和正确包括：
+ - 内置中文说明；
+ - 自带的Python环境，已安装大量的常用插件，实现开箱即用，不再需要繁琐的安装和配置过程；
+ - 已实现与 Apache httpd、SVN、Git 的集成；
+ - 提供标准的数据备份和恢复功能；
+
+下图演示如何简单的在几分钟之内解压并运行一个 Trac 实例，尤其适合初学者：
+
+如果需要了解更多信息，请参考 [http://www.thinkbase.net/trac 在线演示站点].',1372348718,1372350574,'','thinkbase','thinkbase','trac python portable redmine');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1456',4,'Portable Trac 简单介绍 - 兼谈为什么不选择 Redmine','[http://trac.edgewall.org/ Trac]是一个轻量级的`软件项目管理环境`，如果在工作中涉及一个开发团队的管理并且关心`项目管理工具`的话，相信都在 [http://trac.edgewall.org/ Trac]、[http://www.redmine.org/ Redmine] 等工具之间进行过比较，网上简单搜索一下就可以查到以下有代表性的文章：
+ - [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具]([http://sosopensource.com/187.html 英文版])
+ - [http://wiki.woodpecker.org.cn/moin/TracVsRedmine Trac对比Redmine]
+ - [http://wmcxy.iteye.com/blog/1481389 项目管理工具比较-redmine vs trac]
+
+一般来说这些比较都认为 Redmine 更为优秀，尤其是
+ - 可以同时管理多个项目;
+ - 安装和部署比较方便(''''[[span(利用rake、rails的db migration安装很方便，Trac则要用到命令行的trac-admin进行配置，以及每个项目有单独的ini配置文件, style=font-size:70%)]]'''')；
+ - 使用比较简单(''''[[span(trac的很多功能都需要通过trac-admin在命令行方式下进行配置，不易上手，这方面Redmine则十分方便, style=font-size:70%)]]'''')；
+
+总体来看，缺乏内置的`多项目管理`功能支持算是 Trac 的硬伤，其他方面：
+ - 对于开发者而言，命令行不是特别严重的问题，而且 Trac 的插件机制比较完善，http://trac-hacks.org/ 上有大量的插件可以实现基于 Web 界面的管理需求(例如: [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin]实现了内置的用户管理、[http://trac-hacks.org/wiki/TracIniAdminPanelPlugin TracIniAdminPanelPlugin]支持通过Web方式调整Trac配置、[http://trac-hacks.org/wiki/SvnAuthzAdminPlugin SvnAuthzAdminPlugin]支持Web方式调整SVN权限等等), Python 语言也算比较大众化，自己写一个插件也没有太大压力；
+ - Trac 将维基融入了核心组件, 支持的更加彻底，而且其 [wiki:ZhWikiFormatting Wiki 语法] 功能强大并且可以通过插件扩展，这对于需要撰写大量文档的情况有不少帮助；而 Redmine 的 Wiki 功能实在太弱，实际使用的时候很不方便；''''''事实上功能丰富的 Wiki 是 Trac 最大的优势'''''';
+
+本文介绍的 [wiki:PortableTrac] 其实是针对官方 Trac 的重新打包发布(目前只支持 Windows)，其目的主要是简化 Trac 的安装配置过程，方便用户的使用，这方面的改进和正确包括：
+ - 内置中文说明；
+ - 自带的Python环境，已安装大量的常用插件，实现开箱即用，不再需要繁琐的安装和配置过程；
+ - 已实现与 Apache httpd、SVN、Git 的集成；
+ - 提供标准的数据备份和恢复功能；
+ - 更详细的介绍可以参见 [wiki:PortableTrac]；
+
+下图演示如何简单的在几分钟之内解压并运行一个 Trac 实例，尤其适合初学者：
+
+如果需要了解更多信息，请参考 [http://www.thinkbase.net/trac 在线演示站点].',1372348718,1372350670,'','thinkbase','thinkbase','trac python portable redmine');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1456',5,'Portable Trac 简单介绍 - 兼谈为什么不选择 Redmine','[http://trac.edgewall.org/ Trac]是一个轻量级的`软件项目管理环境`，如果在工作中涉及一个开发团队的管理并且关心`项目管理工具`的话，相信都在 [http://trac.edgewall.org/ Trac]、[http://www.redmine.org/ Redmine] 等工具之间进行过比较，网上简单搜索一下就可以查到以下有代表性的文章：
+ - [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具]([http://sosopensource.com/187.html 英文版])
+ - [http://wiki.woodpecker.org.cn/moin/TracVsRedmine Trac对比Redmine]
+ - [http://wmcxy.iteye.com/blog/1481389 项目管理工具比较-redmine vs trac]
+
+一般来说这些比较都认为 Redmine 更为优秀，尤其是
+ - 可以同时管理多个项目;
+ - 安装和部署比较方便(''''[[span(利用rake、rails的db migration安装很方便，Trac则要用到命令行的trac-admin进行配置，以及每个项目有单独的ini配置文件, style=font-size:70%)]]'''')；
+ - 使用比较简单(''''[[span(trac的很多功能都需要通过trac-admin在命令行方式下进行配置，不易上手，这方面Redmine则十分方便, style=font-size:70%)]]'''')；
+
+总体来看，缺乏内置的`多项目管理`功能支持算是 Trac 的硬伤，其他方面：
+ - 对于开发者而言，命令行不是特别严重的问题，而且 Trac 的插件机制比较完善，http://trac-hacks.org/ 上有大量的插件可以实现基于 Web 界面的管理需求(例如: [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin]实现了内置的用户管理、[http://trac-hacks.org/wiki/TracIniAdminPanelPlugin TracIniAdminPanelPlugin]支持通过Web方式调整Trac配置、[http://trac-hacks.org/wiki/SvnAuthzAdminPlugin SvnAuthzAdminPlugin]支持Web方式调整SVN权限等等), Python 语言也算比较大众化，自己写一个插件也没有太大压力；
+ - Trac 将维基融入了核心组件, 支持的更加彻底，而且其 [wiki:ZhWikiFormatting Wiki 语法] 功能强大并且可以通过插件扩展，这对于需要撰写大量文档的情况有不少帮助；而 Redmine 的 Wiki 功能实在太弱，实际使用的时候很不方便；''''''事实上功能丰富的 Wiki 是 Trac 最大的优势'''''';
+
+本文介绍的 [wiki:PortableTrac] 其实是针对官方 Trac 的重新打包发布(目前只支持 Windows)，其目的主要是简化 Trac 的安装配置过程，方便用户的使用，这方面的改进和正确包括：
+ - 内置中文说明；
+ - 自带的Python环境，已安装大量的常用插件，实现开箱即用，不再需要繁琐的安装和配置过程；
+ - 已实现与 Apache httpd、SVN、Git 的集成；
+ - 提供标准的数据备份和恢复功能；
+ - 更详细的介绍可以参见 [wiki:PortableTrac]；
+
+下图演示如何简单的在几分钟之内解压并运行一个 Trac 实例(参考 wiki:PortableTrac/install)，尤其适合初学者：
+
+如果需要了解更多信息，请参考 [http://www.thinkbase.net/trac 在线演示站点].',1372348718,1372351277,'','thinkbase','thinkbase','trac python portable redmine');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1456',6,'Portable Trac 简单介绍 - 兼谈为什么不选择 Redmine','[http://trac.edgewall.org/ Trac]是一个轻量级的`软件项目管理环境`，如果在工作中涉及一个开发团队的管理并且关心`项目管理工具`的话，相信都在 [http://trac.edgewall.org/ Trac]、[http://www.redmine.org/ Redmine] 等工具之间进行过比较，网上简单搜索一下就可以查到以下有代表性的文章：
+ - [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具]([http://sosopensource.com/187.html 英文版])
+ - [http://wiki.woodpecker.org.cn/moin/TracVsRedmine Trac对比Redmine]
+ - [http://wmcxy.iteye.com/blog/1481389 项目管理工具比较-redmine vs trac]
+
+一般来说这些比较都认为 Redmine 更为优秀，尤其是
+ - 可以同时管理多个项目;
+ - 安装和部署比较方便(''''[[span(利用rake、rails的db migration安装很方便，Trac则要用到命令行的trac-admin进行配置，以及每个项目有单独的ini配置文件, style=font-size:70%)]]'''')；
+ - 使用比较简单(''''[[span(trac的很多功能都需要通过trac-admin在命令行方式下进行配置，不易上手，这方面Redmine则十分方便, style=font-size:70%)]]'''')；
+
+总体来看，缺乏内置的`多项目管理`功能支持算是 Trac 的硬伤，其他方面：
+ - 对于开发者而言，命令行不是特别严重的问题，而且 Trac 的插件机制比较完善，http://trac-hacks.org/ 上有大量的插件可以实现基于 Web 界面的管理需求(例如: [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin]实现了内置的用户管理、[http://trac-hacks.org/wiki/TracIniAdminPanelPlugin TracIniAdminPanelPlugin]支持通过Web方式调整Trac配置、[http://trac-hacks.org/wiki/SvnAuthzAdminPlugin SvnAuthzAdminPlugin]支持Web方式调整SVN权限等等), Python 语言也算比较大众化，自己写一个插件也没有太大压力；
+ - Trac 将维基融入了核心组件, 支持的更加彻底，而且其 [wiki:ZhWikiFormatting Wiki 语法] 功能强大并且可以通过插件扩展，这对于需要撰写大量文档的情况有不少帮助；而 Redmine 的 Wiki 功能实在太弱，实际使用的时候很不方便；''''''事实上功能丰富的 Wiki 是 Trac 最大的优势'''''';
+
+本文介绍的 [wiki:PortableTrac] 其实是针对官方 Trac 的重新打包发布(目前只支持 Windows)，其目的主要是简化 Trac 的安装配置过程，方便用户的使用，这方面的改进和正确包括：
+ - 内置中文说明；
+ - 自带的Python环境，已安装大量的常用插件，实现开箱即用，不再需要繁琐的安装和配置过程；
+ - 已实现与 Apache httpd、SVN、Git 的集成；
+ - 提供标准的数据备份和恢复功能；
+ - 更详细的介绍可以参见 [wiki:PortableTrac]；
+
+下图演示如何简单的在几分钟之内解压并运行一个 Trac 实例(参考 [wiki:PortableTrac/install])，尤其适合初学者：
+
+如果需要了解更多信息，请参考 [http://www.thinkbase.net/trac 在线演示站点].',1372348718,1372351293,'','thinkbase','thinkbase','trac python portable redmine');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1456',7,'Portable Trac 简单介绍 - 兼谈为什么不选择 Redmine','[http://trac.edgewall.org/ Trac]是一个轻量级的`软件项目管理环境`，如果在工作中涉及一个开发团队的管理并且关心`项目管理工具`的话，相信都在 [http://trac.edgewall.org/ Trac]、[http://www.redmine.org/ Redmine] 等工具之间进行过比较，网上简单搜索一下就可以查到以下有代表性的文章：
+ - [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具]([http://sosopensource.com/187.html 英文版])
+ - [http://wiki.woodpecker.org.cn/moin/TracVsRedmine Trac对比Redmine]
+ - [http://wmcxy.iteye.com/blog/1481389 项目管理工具比较-redmine vs trac]
+
+一般来说这些比较都认为 Redmine 更为优秀，尤其是
+ - 可以同时管理多个项目;
+ - 安装和部署比较方便(''''[[span(利用rake、rails的db migration安装很方便，Trac则要用到命令行的trac-admin进行配置，以及每个项目有单独的ini配置文件, style=font-size:70%)]]'''')；
+ - 使用比较简单(''''[[span(trac的很多功能都需要通过trac-admin在命令行方式下进行配置，不易上手，这方面Redmine则十分方便, style=font-size:70%)]]'''')；
+
+总体来看，`缺乏内置的"多项目管理"功能`支持算是 Trac 的硬伤，其他方面：
+ - 对于开发者而言，命令行不是特别严重的问题，而且 Trac 的插件机制比较完善，http://trac-hacks.org/ 上有大量的插件可以实现基于 Web 界面的管理需求(例如: [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin]实现了内置的用户管理、[http://trac-hacks.org/wiki/TracIniAdminPanelPlugin TracIniAdminPanelPlugin]支持通过Web方式调整Trac配置、[http://trac-hacks.org/wiki/SvnAuthzAdminPlugin SvnAuthzAdminPlugin]支持Web方式调整SVN权限等等), Python 语言也算比较大众化，自己写一个插件也没有太大压力；
+ - Trac 将维基融入了核心组件, 支持的更加彻底，而且其 [wiki:ZhWikiFormatting Wiki 语法] 功能强大并且可以通过插件扩展，这对于需要撰写大量文档的情况有不少帮助；而 Redmine 的 Wiki 功能实在太弱，实际使用的时候很不方便；''''''事实上功能丰富的 Wiki 是 Trac 最大的优势'''''';
+
+本文介绍的 [wiki:PortableTrac] 其实是针对官方 Trac 的重新打包发布(目前只支持 Windows)，其目的主要是简化 Trac 的安装配置过程，方便用户的使用，这方面的改进和正确包括：
+ - 内置中文说明；
+ - 自带的Python环境，已安装大量的常用插件，实现开箱即用，不再需要繁琐的安装和配置过程；
+ - 已实现与 Apache httpd、SVN、Git 的集成；
+ - 提供标准的数据备份和恢复功能；
+ - 更详细的介绍可以参见 [wiki:PortableTrac]；
+
+下图演示如何简单的在几分钟之内解压并运行一个 Trac 实例(参考 [wiki:PortableTrac/install])，尤其适合初学者：
+
+如果需要了解更多信息，请参考 [http://www.thinkbase.net/trac 在线演示站点].',1372348718,1372352960,'','thinkbase','thinkbase','trac python portable redmine');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1456',8,'Portable Trac 简单介绍 - 兼谈为什么不选择 Redmine','[http://trac.edgewall.org/ Trac]是一个轻量级的`软件项目管理环境`，如果在工作中涉及一个开发团队的管理并且关心`项目管理工具`的话，相信都在 [http://trac.edgewall.org/ Trac]、[http://www.redmine.org/ Redmine] 等工具之间进行过比较，网上简单搜索一下就可以查到以下有代表性的文章：
+ - [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具]([http://sosopensource.com/187.html 英文版])
+ - [http://wiki.woodpecker.org.cn/moin/TracVsRedmine Trac对比Redmine]
+ - [http://wmcxy.iteye.com/blog/1481389 项目管理工具比较-redmine vs trac]
+
+一般来说这些比较都认为 Redmine 更为优秀，尤其是
+ - 可以同时管理多个项目;
+ - 安装和部署比较方便(''''[[span(利用rake、rails的db migration安装很方便，Trac则要用到命令行的trac-admin进行配置，以及每个项目有单独的ini配置文件, style=font-size:70%)]]'''')；
+ - 使用比较简单(''''[[span(trac的很多功能都需要通过trac-admin在命令行方式下进行配置，不易上手，这方面Redmine则十分方便, style=font-size:70%)]]'''')；
+
+总体来看，`缺乏内置的"多项目管理"功能`支持算是 Trac 的硬伤，其他方面：
+ - 对于开发者而言，命令行不是特别严重的问题，而且 Trac 的插件机制比较完善，http://trac-hacks.org/ 上有大量的插件可以实现基于 Web 界面的管理需求(例如: [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin]实现了内置的用户管理、[http://trac-hacks.org/wiki/TracIniAdminPanelPlugin TracIniAdminPanelPlugin]支持通过Web方式调整Trac配置、[http://trac-hacks.org/wiki/SvnAuthzAdminPlugin SvnAuthzAdminPlugin]支持Web方式调整SVN权限等等), Python 语言也算比较大众化，自己写一个插件也没有太大压力；
+ - Trac 将维基融入了核心组件, 支持的更加彻底，而且其 [wiki:ZhWikiFormatting Wiki 语法] 功能强大并且可以通过插件扩展，这对于需要撰写大量文档的情况有不少帮助；而 Redmine 的 Wiki 功能实在太弱，实际使用的时候很不方便；''''''事实上功能丰富的 Wiki 是 Trac 最大的优势'''''';
+
+本文介绍的 [wiki:PortableTrac] 其实是针对官方 Trac 的重新打包发布(目前只支持 Windows)，其目的主要是简化 Trac 的安装配置过程，方便用户的使用，这方面的改进和正确包括：
+ - 内置中文说明；
+ - 自带的Python环境，已安装大量的常用插件，实现开箱即用，不再需要繁琐的安装和配置过程；
+ - 已实现与 Apache httpd、SVN、Git 的集成；
+ - 提供标准的数据备份和恢复功能；
+ - 更详细的介绍可以参见 [wiki:PortableTrac]；
+
+下图演示如何简单的在几分钟之内解压并运行一个 Trac 实例(参考 [wiki:PortableTrac/install])，尤其适合初学者：[[BR]][[Image(PortableTrac-QuickStart.gif)]].
+
+如果需要了解更多信息，请参考 [http://www.thinkbase.net/trac 在线演示站点].',1372348718,1372361186,'','thinkbase','thinkbase','trac python portable redmine');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130627-1456',9,'Portable Trac 简单介绍 - 兼谈为什么不选择 Redmine','[http://trac.edgewall.org/ Trac]是一个轻量级的`软件项目管理环境`，如果在工作中涉及一个开发团队的管理并且关心`项目管理工具`的话，相信都在 [http://trac.edgewall.org/ Trac]、[http://www.redmine.org/ Redmine] 等工具之间进行过比较，网上简单搜索一下就可以查到以下有代表性的文章：
+ - [http://yp.oss.org.cn/software/show_resource.php?resource_id=967 通过对比选择最佳开源的基于Web的项目管理工具]([http://sosopensource.com/187.html 英文版])
+ - [http://wiki.woodpecker.org.cn/moin/TracVsRedmine Trac对比Redmine]
+ - [http://wmcxy.iteye.com/blog/1481389 项目管理工具比较-redmine vs trac]
+
+一般来说这些比较都认为 Redmine 更为优秀，尤其是
+ - 可以同时管理多个项目;
+ - 安装和部署比较方便(''''[[span(利用rake、rails的db migration安装很方便，Trac则要用到命令行的trac-admin进行配置，以及每个项目有单独的ini配置文件, style=font-size:70%)]]'''')；
+ - 使用比较简单(''''[[span(trac的很多功能都需要通过trac-admin在命令行方式下进行配置，不易上手，这方面Redmine则十分方便, style=font-size:70%)]]'''')；
+
+总体来看，`缺乏内置的"多项目管理"功能`支持算是 Trac 的硬伤，其他方面：
+ - 对于开发者而言，命令行不是特别严重的问题，而且 Trac 的插件机制比较完善，http://trac-hacks.org/ 上有大量的插件可以实现基于 Web 界面的管理需求(例如: [http://trac-hacks.org/wiki/AccountManagerPlugin AccountManagerPlugin]实现了内置的用户管理、[http://trac-hacks.org/wiki/TracIniAdminPanelPlugin TracIniAdminPanelPlugin]支持通过Web方式调整Trac配置、[http://trac-hacks.org/wiki/SvnAuthzAdminPlugin SvnAuthzAdminPlugin]支持Web方式调整SVN权限等等), Python 语言也算比较大众化，自己写一个插件也没有太大压力；
+ - Trac 将维基融入了核心组件, 支持的更加彻底，而且其 [wiki:ZhWikiFormatting Wiki 语法] 功能强大并且可以通过插件扩展，这对于需要撰写大量文档的情况有不少帮助；而 Redmine 的 Wiki 功能实在太弱，实际使用的时候很不方便；''''''事实上功能丰富的 Wiki 是 Trac 最大的优势'''''';
+
+本文介绍的 [wiki:PortableTrac] 其实是针对官方 Trac 的重新打包发布(目前只支持 Windows)，其目的主要是简化 Trac 的安装配置过程，方便用户的使用，这方面的改进和增强包括：
+ - 内置中文说明；
+ - 自带的Python环境，已安装大量的常用插件，实现开箱即用，不再需要繁琐的安装和配置过程；
+ - 已实现与 Apache httpd、SVN、Git 的集成；
+ - 提供标准的数据备份和恢复功能；
+ - 更详细的介绍可以参见 [wiki:PortableTrac]；
+
+下图演示如何简单的在几分钟之内解压并运行一个 Trac 实例(参考 [wiki:PortableTrac/install])，尤其适合初学者：[[BR]][[Image(PortableTrac-QuickStart.gif)]].
+
+如果需要了解更多信息，请参考 [http://www.thinkbase.net/trac 在线演示站点].',1372348718,1372361504,'','thinkbase','thinkbase','trac python portable redmine');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
