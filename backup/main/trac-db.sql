@@ -55,70 +55,7 @@ CREATE TABLE session (
     UNIQUE (sid,authenticated)
 );
 INSERT INTO "session" VALUES('admin',1,1387045822);
-INSERT INTO "session" VALUES('thinkbase',1,1389178673);
-INSERT INTO "session" VALUES('686670205e0f4040741ce437',0,1381456297);
-INSERT INTO "session" VALUES('b54d235045c20bcffddbe9f7',0,1381560752);
-INSERT INTO "session" VALUES('e585d68206f30d693de63d59',0,1381651130);
-INSERT INTO "session" VALUES('4abc06092c4fc0c9336f3515',0,1381671195);
-INSERT INTO "session" VALUES('4a382d72fc39b9efdb8fd93d',0,1381734840);
-INSERT INTO "session" VALUES('60f7f3078cfadd7eda4cf492',0,1381763693);
-INSERT INTO "session" VALUES('5bcd41302ff6e2343cf79fca',0,1381784727);
-INSERT INTO "session" VALUES('22705b2690dd71af38fb6b36',0,1381863136);
-INSERT INTO "session" VALUES('dc7414c5b5afda0a595b18c8',0,1381871168);
-INSERT INTO "session" VALUES('c5eb0b1c39078ec452bede77',0,1382153318);
-INSERT INTO "session" VALUES('0e93ca52204b1233ff2dab7f',0,1382165682);
-INSERT INTO "session" VALUES('b29d20175b599eea6b9357a0',0,1382208295);
-INSERT INTO "session" VALUES('8d865fce09f2dcbbbc8ec922',0,1382230834);
-INSERT INTO "session" VALUES('e6b4c74d4d99c1f2cb02e1aa',0,1382240095);
-INSERT INTO "session" VALUES('693984f9831d286431408ceb',0,1382246260);
-INSERT INTO "session" VALUES('d0e362ba4f796ed7b4efab18',0,1382253103);
-INSERT INTO "session" VALUES('f2df2ec806e0148766c77212',0,1382292423);
-INSERT INTO "session" VALUES('7870bd19a8a318bd4eb74e17',0,1382362069);
-INSERT INTO "session" VALUES('e1358fe2ff54375b402e8a0f',0,1382566595);
-INSERT INTO "session" VALUES('61de1fd7534f97d59a597767',0,1382588531);
-INSERT INTO "session" VALUES('e59d891d4cc8aa2803459d25',0,1382597555);
-INSERT INTO "session" VALUES('71127f11b3c9050f6f8f5719',0,1382607916);
-INSERT INTO "session" VALUES('f22c80347fc9b6a296c92e32',0,1382624773);
-INSERT INTO "session" VALUES('c2b2e94db65ae934737e9ad3',0,1382636738);
-INSERT INTO "session" VALUES('baca357d209d972e822fc801',0,1382643592);
-INSERT INTO "session" VALUES('997b59babee43ea695550786',0,1382681476);
-INSERT INTO "session" VALUES('c600441cff9d12866cd3caa8',0,1382728832);
-INSERT INTO "session" VALUES('8620a335992dbee7dda08868',0,1382738155);
-INSERT INTO "session" VALUES('f6e9791014653cfd25d26ab4',0,1382931164);
-INSERT INTO "session" VALUES('143e50e38c3e35e00a190456',0,1382948738);
-INSERT INTO "session" VALUES('63baed641593101a654a6ca3',0,1382966371);
-INSERT INTO "session" VALUES('d58acbfa1bd4adf3da080438',0,1382974958);
-INSERT INTO "session" VALUES('52c9bd3fb6dfa341bc31dc37',0,1382987872);
-INSERT INTO "session" VALUES('343bc972c0fea5939b370722',0,1383026855);
-INSERT INTO "session" VALUES('b8c334be1a5acf65d360721d',0,1383056725);
-INSERT INTO "session" VALUES('41c0dd88242719b50644b2b6',0,1383057384);
-INSERT INTO "session" VALUES('49419a188ce6b74bd620ffe7',0,1383058920);
-INSERT INTO "session" VALUES('8cfafe19240ca33666177b0a',0,1383116064);
-INSERT INTO "session" VALUES('898870a5d994444ac4253d5e',0,1383126828);
-INSERT INTO "session" VALUES('92fa35d348a1aa48361c3b3e',0,1383150438);
-INSERT INTO "session" VALUES('92bd0e4cfc1df1d8c02dd02c',0,1383157298);
-INSERT INTO "session" VALUES('179a1b72084fe0a1f499711f',0,1383181736);
-INSERT INTO "session" VALUES('f3aec57a29a979a3740934a3',0,1383214536);
-INSERT INTO "session" VALUES('61aeac07b718a9cac3b04a82',0,1383215207);
-INSERT INTO "session" VALUES('e2f2e294363f8de0fb7fc1ae',0,1383235376);
-INSERT INTO "session" VALUES('03dc6641c81b21a96db8801f',0,1383263655);
-INSERT INTO "session" VALUES('bf7d16c920904903b1dcad13',0,1383263691);
-INSERT INTO "session" VALUES('2335ec64e076ca082ff02ec2',0,1383325984);
-INSERT INTO "session" VALUES('744243d14f1edcf77e7984b3',0,1383467281);
-INSERT INTO "session" VALUES('0ffccbf18102c0132d51cc4b',0,1383483835);
-INSERT INTO "session" VALUES('6cd9242b5686eb875e17950e',0,1383520824);
-INSERT INTO "session" VALUES('85306779b3387e3b5243292f',0,1383535449);
-INSERT INTO "session" VALUES('262329fbd4c41ff77ed418b7',0,1383555212);
-INSERT INTO "session" VALUES('b6832e0e131e9d0a200ca210',0,1383564935);
-INSERT INTO "session" VALUES('90981ce1f5d3767f23b7c4d4',0,1383769474);
-INSERT INTO "session" VALUES('86b0ad1f69e4b18cdd947eaa',0,1383783724);
-INSERT INTO "session" VALUES('a2eac64d9bdadb825d7f51ea',0,1383810037);
-INSERT INTO "session" VALUES('152c68e13cab09899d3e9da2',0,1383867880);
-INSERT INTO "session" VALUES('dc96042557034b3a1f586605',0,1383876744);
-INSERT INTO "session" VALUES('60bdf237e6230229a7fc315d',0,1383883863);
-INSERT INTO "session" VALUES('8d12079f7b5c9b776b1027fb',0,1384031664);
-INSERT INTO "session" VALUES('d03574efa6ad02317757e642',0,1384031665);
-INSERT INTO "session" VALUES('f5f5c3cd7d3e591bf9ad08c8',0,1384040151);
+INSERT INTO "session" VALUES('thinkbase',1,1391867559);
 INSERT INTO "session" VALUES('d3375ea2bad71f9148c78096',0,1384154983);
 INSERT INTO "session" VALUES('3de90f5a6825c23135699c3c',0,1384186317);
 INSERT INTO "session" VALUES('17fc29b1c2282aa5d27a8c72',0,1384241415);
@@ -235,6 +172,118 @@ INSERT INTO "session" VALUES('5a12fc510d2a8841452e7325',0,1389011535);
 INSERT INTO "session" VALUES('b262e2920cbd8b7c276fc50d',0,1389011535);
 INSERT INTO "session" VALUES('df9943c02a2240a654cf4ecd',0,1389026098);
 INSERT INTO "session" VALUES('27bed13b514da37c20e5116c',0,1389091470);
+INSERT INTO "session" VALUES('e9d2e1be743d23dcff6e3067',0,1389185273);
+INSERT INTO "session" VALUES('6e7fecd2b70ce6dbb002fdc6',0,1389203142);
+INSERT INTO "session" VALUES('d6953c7d4de8ec2e249e8c47',0,1389239923);
+INSERT INTO "session" VALUES('1c4a244d1a49638fe56cea75',0,1389374961);
+INSERT INTO "session" VALUES('515e88c5becf652e0ac89574',0,1389431238);
+INSERT INTO "session" VALUES('6c5ff81163303990d553849d',0,1389471724);
+INSERT INTO "session" VALUES('b57b045f98bea43b64643add',0,1389509489);
+INSERT INTO "session" VALUES('9060fc6dee10dd2368b78ef6',0,1389523250);
+INSERT INTO "session" VALUES('87171bec4cae7819a6a83719',0,1389607917);
+INSERT INTO "session" VALUES('0095b06a0ccb64382bc85176',0,1389773570);
+INSERT INTO "session" VALUES('418bcdb30ad0bde4fadc74ba',0,1389777592);
+INSERT INTO "session" VALUES('f4c9318c3c8772246e5068ee',0,1389857974);
+INSERT INTO "session" VALUES('bd66151cf6c1f8bc68b741ae',0,1389973250);
+INSERT INTO "session" VALUES('a043a853b95be98daf730ac3',0,1389974752);
+INSERT INTO "session" VALUES('3f81cb5d8e395a341bd29922',0,1389979865);
+INSERT INTO "session" VALUES('505ad4e10b57c78c48ffb050',0,1389985563);
+INSERT INTO "session" VALUES('15de0b971d4bf03d28f486d1',0,1390031029);
+INSERT INTO "session" VALUES('a2268746da73fbebecc9e81a',0,1390234349);
+INSERT INTO "session" VALUES('9685e705c29ed6b1a59d4148',0,1390235137);
+INSERT INTO "session" VALUES('3e4496e599719944ba82ec8d',0,1390245932);
+INSERT INTO "session" VALUES('f25539b2aa3942db11683d77',0,1390251966);
+INSERT INTO "session" VALUES('7979e8dfda467794cc0e9581',0,1390259260);
+INSERT INTO "session" VALUES('edec582c54a5ea8901ad0954',0,1390259265);
+INSERT INTO "session" VALUES('99699a619cf87ddacd0b6a83',0,1390285342);
+INSERT INTO "session" VALUES('d2e4a18d1e51ee5e7f75cea7',0,1390285937);
+INSERT INTO "session" VALUES('53e7941c57b82e87f58a5d92',0,1390290344);
+INSERT INTO "session" VALUES('1c53add276bee6a389144179',0,1390290355);
+INSERT INTO "session" VALUES('0fe256dbfc63009649424b2b',0,1390290358);
+INSERT INTO "session" VALUES('26e72a7616980e447210584e',0,1390290364);
+INSERT INTO "session" VALUES('d975972a77ee1fa3f35e433b',0,1390290384);
+INSERT INTO "session" VALUES('f60929072ca7c0cf90af3409',0,1390290384);
+INSERT INTO "session" VALUES('6f0d1e7fa315d81a0093ce29',0,1390290394);
+INSERT INTO "session" VALUES('a41b1953ca92813f2026206b',0,1390290398);
+INSERT INTO "session" VALUES('a304cea42e1095395a12d5f7',0,1390290413);
+INSERT INTO "session" VALUES('c28783c7bd13d99608e557fc',0,1390290417);
+INSERT INTO "session" VALUES('34b3db7e06001a9e2f4324f1',0,1390290425);
+INSERT INTO "session" VALUES('ba26c3589a4314eff5ba681d',0,1390290430);
+INSERT INTO "session" VALUES('732e1bc3fa021b761eeda997',0,1390290434);
+INSERT INTO "session" VALUES('6e98d5f54d498d444d2c4192',0,1390308447);
+INSERT INTO "session" VALUES('994942f62e5774023848f259',0,1390323369);
+INSERT INTO "session" VALUES('eee4228fde89f064971e7175',0,1390338894);
+INSERT INTO "session" VALUES('443884c823b338c9341782df',0,1390347556);
+INSERT INTO "session" VALUES('e70bca63ea704180bd4191a6',0,1390366761);
+INSERT INTO "session" VALUES('cfd3f3344072b84fc81295ba',0,1390375086);
+INSERT INTO "session" VALUES('26de47ff20e1a72575b5236a',0,1390382699);
+INSERT INTO "session" VALUES('e87d8a2722baebe39e300855',0,1390408041);
+INSERT INTO "session" VALUES('ae74d4fcee3054ca04ffc51c',0,1390421198);
+INSERT INTO "session" VALUES('9ea85f777443901081e7c5df',0,1390469256);
+INSERT INTO "session" VALUES('96eacbfe997d6a0442ed4b0a',0,1390501047);
+INSERT INTO "session" VALUES('3e514904c395a874d3e94a18',0,1390507235);
+INSERT INTO "session" VALUES('32563e6d80f6be0df48629b1',0,1390508553);
+INSERT INTO "session" VALUES('27c603e3355d190543ac3f7b',0,1390532562);
+INSERT INTO "session" VALUES('a09d13fab68a07fdb5b3e697',0,1390737014);
+INSERT INTO "session" VALUES('741ee9161986155d0adcdef9',0,1390588467);
+INSERT INTO "session" VALUES('1d358f1e6b7192b2919be6e9',0,1390664876);
+INSERT INTO "session" VALUES('56f27a366f6085537a6d01bd',0,1390664879);
+INSERT INTO "session" VALUES('822b2e449dfe1b733f9c7096',0,1390686330);
+INSERT INTO "session" VALUES('157f1a2c42ddc76ccd7064ff',0,1390715707);
+INSERT INTO "session" VALUES('d196c5f1134548328008a944',0,1390756232);
+INSERT INTO "session" VALUES('6a7205e05e0c2ee3875fba92',0,1390764474);
+INSERT INTO "session" VALUES('6ff836e6762cf56fcfb195f1',0,1390793734);
+INSERT INTO "session" VALUES('62cdbde512f3b5f17ab24132',0,1390875475);
+INSERT INTO "session" VALUES('8fe777405b8e35e829d16192',0,1390875920);
+INSERT INTO "session" VALUES('5d74d2c6c012c94f86d6b3a7',0,1390879281);
+INSERT INTO "session" VALUES('3917d7a335f96ad6a69d55a4',0,1390910321);
+INSERT INTO "session" VALUES('128b2ee34e4660d653257b8e',0,1390991226);
+INSERT INTO "session" VALUES('7689fe54742cbdc57a16c5b8',0,1391061980);
+INSERT INTO "session" VALUES('650c1f860f5b1eda46890a9d',0,1391071374);
+INSERT INTO "session" VALUES('f6c82b3002fb7306c898639a',0,1391127375);
+INSERT INTO "session" VALUES('1db71079ed873310f6099dd7',0,1391135585);
+INSERT INTO "session" VALUES('efd16856b3426c7a35fdb936',0,1391135756);
+INSERT INTO "session" VALUES('20ce22702a8bf22aee98a86d',0,1391181258);
+INSERT INTO "session" VALUES('cbb80b765022175d79136a4e',0,1391184538);
+INSERT INTO "session" VALUES('80f64e5631951fcdf9ebfd18',0,1391199304);
+INSERT INTO "session" VALUES('dd8b82e02b8502dbd8c80adf',0,1391201002);
+INSERT INTO "session" VALUES('45b7b00ef164af6e3208977c',0,1391228384);
+INSERT INTO "session" VALUES('6968bdcb1872fb4261426192',0,1391228384);
+INSERT INTO "session" VALUES('c93e348b9833cbefe16a8de6',0,1391248028);
+INSERT INTO "session" VALUES('d7d53707893531ae99d903b0',0,1391250484);
+INSERT INTO "session" VALUES('7f798471789e6076ebd7fed0',0,1391272111);
+INSERT INTO "session" VALUES('d769d243860568a47ad42065',0,1391287685);
+INSERT INTO "session" VALUES('6729fe1373c8ecadb24ed328',0,1391299638);
+INSERT INTO "session" VALUES('ffe1fb4f17bb831a1e7e5c0b',0,1391299639);
+INSERT INTO "session" VALUES('aaf4c220e36c1eaba493285a',0,1391301533);
+INSERT INTO "session" VALUES('5968b615ec6cab1be7df38e8',0,1391308394);
+INSERT INTO "session" VALUES('b4a816b15c55623a751e53cd',0,1391318778);
+INSERT INTO "session" VALUES('8558f6290c4a8a5750a6202d',0,1391342250);
+INSERT INTO "session" VALUES('27c9bc3815739e2dc72c7f85',0,1391366093);
+INSERT INTO "session" VALUES('b010951356865c006ceb1fb5',0,1391366107);
+INSERT INTO "session" VALUES('84e3dee88190aa032a7aba22',0,1391370934);
+INSERT INTO "session" VALUES('76401732bd96b4f3e2ff71bc',0,1391390044);
+INSERT INTO "session" VALUES('39487a5bd944301e7dbe1aed',0,1391390050);
+INSERT INTO "session" VALUES('50605db4314dea627a40e73a',0,1391410207);
+INSERT INTO "session" VALUES('e5e75731e10660b71aa2f824',0,1391436183);
+INSERT INTO "session" VALUES('59ea91d4866454612c98df87',0,1391436191);
+INSERT INTO "session" VALUES('a9b645f1ccd111a2a9830798',0,1391477129);
+INSERT INTO "session" VALUES('db239b0702eeb89f64e26f59',0,1391582668);
+INSERT INTO "session" VALUES('2fb6b370647e962c11562a65',0,1391601027);
+INSERT INTO "session" VALUES('2ef1ebb6ab3a222672a249da',0,1391622777);
+INSERT INTO "session" VALUES('01d818fa82d6f09a2f355aa4',0,1391622778);
+INSERT INTO "session" VALUES('ad8ba190d5dc8cee89db87b9',0,1391643419);
+INSERT INTO "session" VALUES('a5cd7ee333f3d6c09e757ce3',0,1391656987);
+INSERT INTO "session" VALUES('366cfb3c2e92446bd879ab2a',0,1391660481);
+INSERT INTO "session" VALUES('1fd8f28331ac434be0b9a122',0,1391661668);
+INSERT INTO "session" VALUES('8ec04736b25f0e24a0eef5bc',0,1391700358);
+INSERT INTO "session" VALUES('62821e78d97491dd7998492e',0,1391711098);
+INSERT INTO "session" VALUES('64851e8d3f54c9421b8cb13f',0,1391718530);
+INSERT INTO "session" VALUES('e2839bd87e8a7a3ad29c87fc',0,1391773681);
+INSERT INTO "session" VALUES('dc8e255180aea8929a3dbcc2',0,1391773681);
+INSERT INTO "session" VALUES('a15c70fe07133cc03d16cb67',0,1391802584);
+INSERT INTO "session" VALUES('6f9121266790985c5ac24513',0,1391832554);
+INSERT INTO "session" VALUES('90c1882929c84357b3d69b18',0,1391867576);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -242,140 +291,6 @@ CREATE TABLE session_attribute (
     value text,
     UNIQUE (sid,authenticated,name)
 );
-INSERT INTO "session_attribute" VALUES('686670205e0f4040741ce437',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('686670205e0f4040741ce437',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('b54d235045c20bcffddbe9f7',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('b54d235045c20bcffddbe9f7',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('e585d68206f30d693de63d59',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('e585d68206f30d693de63d59',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('4abc06092c4fc0c9336f3515',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('4abc06092c4fc0c9336f3515',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('4a382d72fc39b9efdb8fd93d',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('4a382d72fc39b9efdb8fd93d',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('60f7f3078cfadd7eda4cf492',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('60f7f3078cfadd7eda4cf492',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('5bcd41302ff6e2343cf79fca',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('5bcd41302ff6e2343cf79fca',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('22705b2690dd71af38fb6b36',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('22705b2690dd71af38fb6b36',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('dc7414c5b5afda0a595b18c8',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('dc7414c5b5afda0a595b18c8',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('c5eb0b1c39078ec452bede77',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('c5eb0b1c39078ec452bede77',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('0e93ca52204b1233ff2dab7f',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('0e93ca52204b1233ff2dab7f',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('b29d20175b599eea6b9357a0',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('b29d20175b599eea6b9357a0',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('8d865fce09f2dcbbbc8ec922',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('8d865fce09f2dcbbbc8ec922',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('e6b4c74d4d99c1f2cb02e1aa',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('e6b4c74d4d99c1f2cb02e1aa',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('693984f9831d286431408ceb',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('693984f9831d286431408ceb',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('d0e362ba4f796ed7b4efab18',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('d0e362ba4f796ed7b4efab18',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('f2df2ec806e0148766c77212',0,'timeline.lastvisit','1380640190000000');
-INSERT INTO "session_attribute" VALUES('f2df2ec806e0148766c77212',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('7870bd19a8a318bd4eb74e17',0,'name','Leslie');
-INSERT INTO "session_attribute" VALUES('7870bd19a8a318bd4eb74e17',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('7870bd19a8a318bd4eb74e17',0,'email','crazyivan@yahoo.com');
-INSERT INTO "session_attribute" VALUES('e1358fe2ff54375b402e8a0f',0,'timeline.lastvisit','1382534386598000');
-INSERT INTO "session_attribute" VALUES('e1358fe2ff54375b402e8a0f',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('61de1fd7534f97d59a597767',0,'timeline.lastvisit','1382534386598000');
-INSERT INTO "session_attribute" VALUES('61de1fd7534f97d59a597767',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('e59d891d4cc8aa2803459d25',0,'timeline.lastvisit','1382534386598000');
-INSERT INTO "session_attribute" VALUES('e59d891d4cc8aa2803459d25',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('71127f11b3c9050f6f8f5719',0,'timeline.lastvisit','1382534386598000');
-INSERT INTO "session_attribute" VALUES('71127f11b3c9050f6f8f5719',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('f22c80347fc9b6a296c92e32',0,'timeline.lastvisit','1382534386598000');
-INSERT INTO "session_attribute" VALUES('f22c80347fc9b6a296c92e32',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('c2b2e94db65ae934737e9ad3',0,'timeline.lastvisit','1382534386598000');
-INSERT INTO "session_attribute" VALUES('c2b2e94db65ae934737e9ad3',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('baca357d209d972e822fc801',0,'timeline.lastvisit','1382534386598000');
-INSERT INTO "session_attribute" VALUES('baca357d209d972e822fc801',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('997b59babee43ea695550786',0,'name','goodboy');
-INSERT INTO "session_attribute" VALUES('997b59babee43ea695550786',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('997b59babee43ea695550786',0,'email','cooler111@yahoo.com');
-INSERT INTO "session_attribute" VALUES('c600441cff9d12866cd3caa8',0,'timeline.lastvisit','1382534386598000');
-INSERT INTO "session_attribute" VALUES('c600441cff9d12866cd3caa8',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('8620a335992dbee7dda08868',0,'timeline.lastvisit','1382534386598000');
-INSERT INTO "session_attribute" VALUES('8620a335992dbee7dda08868',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('f6e9791014653cfd25d26ab4',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('f6e9791014653cfd25d26ab4',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('143e50e38c3e35e00a190456',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('143e50e38c3e35e00a190456',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('63baed641593101a654a6ca3',0,'name','Kayla');
-INSERT INTO "session_attribute" VALUES('63baed641593101a654a6ca3',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('63baed641593101a654a6ca3',0,'email','dirtbill@yahoo.com');
-INSERT INTO "session_attribute" VALUES('d58acbfa1bd4adf3da080438',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('d58acbfa1bd4adf3da080438',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('52c9bd3fb6dfa341bc31dc37',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('52c9bd3fb6dfa341bc31dc37',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('343bc972c0fea5939b370722',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('343bc972c0fea5939b370722',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('b8c334be1a5acf65d360721d',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('b8c334be1a5acf65d360721d',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('41c0dd88242719b50644b2b6',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('41c0dd88242719b50644b2b6',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('49419a188ce6b74bd620ffe7',0,'name','Matthew');
-INSERT INTO "session_attribute" VALUES('49419a188ce6b74bd620ffe7',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('49419a188ce6b74bd620ffe7',0,'email','dirtbill@yahoo.com');
-INSERT INTO "session_attribute" VALUES('8cfafe19240ca33666177b0a',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('8cfafe19240ca33666177b0a',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('898870a5d994444ac4253d5e',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('898870a5d994444ac4253d5e',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('92fa35d348a1aa48361c3b3e',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('92fa35d348a1aa48361c3b3e',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('92bd0e4cfc1df1d8c02dd02c',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('92bd0e4cfc1df1d8c02dd02c',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('179a1b72084fe0a1f499711f',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('179a1b72084fe0a1f499711f',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('f3aec57a29a979a3740934a3',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('f3aec57a29a979a3740934a3',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('61aeac07b718a9cac3b04a82',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('61aeac07b718a9cac3b04a82',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('e2f2e294363f8de0fb7fc1ae',0,'timeline.lastvisit','1382760889000000');
-INSERT INTO "session_attribute" VALUES('e2f2e294363f8de0fb7fc1ae',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('03dc6641c81b21a96db8801f',0,'name','patrik');
-INSERT INTO "session_attribute" VALUES('03dc6641c81b21a96db8801f',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('03dc6641c81b21a96db8801f',0,'email','dondy228@hotmail.com');
-INSERT INTO "session_attribute" VALUES('bf7d16c920904903b1dcad13',0,'name','patrik');
-INSERT INTO "session_attribute" VALUES('bf7d16c920904903b1dcad13',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('bf7d16c920904903b1dcad13',0,'email','dondy228@hotmail.com');
-INSERT INTO "session_attribute" VALUES('2335ec64e076ca082ff02ec2',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('2335ec64e076ca082ff02ec2',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('744243d14f1edcf77e7984b3',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('744243d14f1edcf77e7984b3',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('0ffccbf18102c0132d51cc4b',0,'name','ronny');
-INSERT INTO "session_attribute" VALUES('0ffccbf18102c0132d51cc4b',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('0ffccbf18102c0132d51cc4b',0,'email','normy273@hotmail.com');
-INSERT INTO "session_attribute" VALUES('6cd9242b5686eb875e17950e',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('6cd9242b5686eb875e17950e',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('85306779b3387e3b5243292f',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('85306779b3387e3b5243292f',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('262329fbd4c41ff77ed418b7',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('262329fbd4c41ff77ed418b7',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('b6832e0e131e9d0a200ca210',0,'name','fqqxowcugxe');
-INSERT INTO "session_attribute" VALUES('b6832e0e131e9d0a200ca210',0,'chrome.notices.0','Your preferences have been saved.');
-INSERT INTO "session_attribute" VALUES('b6832e0e131e9d0a200ca210',0,'email','advgbw@lbxnub.com');
-INSERT INTO "session_attribute" VALUES('90981ce1f5d3767f23b7c4d4',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('90981ce1f5d3767f23b7c4d4',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('86b0ad1f69e4b18cdd947eaa',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('86b0ad1f69e4b18cdd947eaa',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('a2eac64d9bdadb825d7f51ea',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('a2eac64d9bdadb825d7f51ea',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('152c68e13cab09899d3e9da2',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('152c68e13cab09899d3e9da2',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('dc96042557034b3a1f586605',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('dc96042557034b3a1f586605',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('60bdf237e6230229a7fc315d',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('60bdf237e6230229a7fc315d',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('8d12079f7b5c9b776b1027fb',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('8d12079f7b5c9b776b1027fb',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('d03574efa6ad02317757e642',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('d03574efa6ad02317757e642',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('f5f5c3cd7d3e591bf9ad08c8',0,'timeline.lastvisit','1383325199000000');
-INSERT INTO "session_attribute" VALUES('f5f5c3cd7d3e591bf9ad08c8',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('d3375ea2bad71f9148c78096',0,'timeline.lastvisit','1383325199000000');
 INSERT INTO "session_attribute" VALUES('d3375ea2bad71f9148c78096',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('3de90f5a6825c23135699c3c',0,'timeline.lastvisit','1383325199000000');
@@ -634,6 +549,280 @@ INSERT INTO "session_attribute" VALUES('df9943c02a2240a654cf4ecd',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('df9943c02a2240a654cf4ecd',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('27bed13b514da37c20e5116c',0,'timeline.lastvisit','1388423956895000');
 INSERT INTO "session_attribute" VALUES('27bed13b514da37c20e5116c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e9d2e1be743d23dcff6e3067',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('e9d2e1be743d23dcff6e3067',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6e7fecd2b70ce6dbb002fdc6',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('6e7fecd2b70ce6dbb002fdc6',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d6953c7d4de8ec2e249e8c47',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('d6953c7d4de8ec2e249e8c47',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('1c4a244d1a49638fe56cea75',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('1c4a244d1a49638fe56cea75',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('515e88c5becf652e0ac89574',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('515e88c5becf652e0ac89574',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6c5ff81163303990d553849d',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('6c5ff81163303990d553849d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b57b045f98bea43b64643add',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('b57b045f98bea43b64643add',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('9060fc6dee10dd2368b78ef6',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('9060fc6dee10dd2368b78ef6',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('87171bec4cae7819a6a83719',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('87171bec4cae7819a6a83719',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0095b06a0ccb64382bc85176',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('0095b06a0ccb64382bc85176',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('418bcdb30ad0bde4fadc74ba',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('418bcdb30ad0bde4fadc74ba',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f4c9318c3c8772246e5068ee',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('f4c9318c3c8772246e5068ee',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('bd66151cf6c1f8bc68b741ae',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('bd66151cf6c1f8bc68b741ae',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a043a853b95be98daf730ac3',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('a043a853b95be98daf730ac3',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3f81cb5d8e395a341bd29922',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('3f81cb5d8e395a341bd29922',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('505ad4e10b57c78c48ffb050',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('505ad4e10b57c78c48ffb050',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('15de0b971d4bf03d28f486d1',0,'name','mdfylxco');
+INSERT INTO "session_attribute" VALUES('15de0b971d4bf03d28f486d1',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('15de0b971d4bf03d28f486d1',0,'email','psphac@qjayyq.com');
+INSERT INTO "session_attribute" VALUES('a2268746da73fbebecc9e81a',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('a2268746da73fbebecc9e81a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('9685e705c29ed6b1a59d4148',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('9685e705c29ed6b1a59d4148',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3e4496e599719944ba82ec8d',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('3e4496e599719944ba82ec8d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f25539b2aa3942db11683d77',0,'name','Pzmoysjt');
+INSERT INTO "session_attribute" VALUES('f25539b2aa3942db11683d77',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('f25539b2aa3942db11683d77',0,'email','zzzjdpip@ytcmldyl.com');
+INSERT INTO "session_attribute" VALUES('7979e8dfda467794cc0e9581',0,'name','Jake');
+INSERT INTO "session_attribute" VALUES('7979e8dfda467794cc0e9581',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('7979e8dfda467794cc0e9581',0,'email','freelife@yahoo.com');
+INSERT INTO "session_attribute" VALUES('edec582c54a5ea8901ad0954',0,'name','Brooke');
+INSERT INTO "session_attribute" VALUES('edec582c54a5ea8901ad0954',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('edec582c54a5ea8901ad0954',0,'email','lightsoul@gmail.com');
+INSERT INTO "session_attribute" VALUES('99699a619cf87ddacd0b6a83',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('99699a619cf87ddacd0b6a83',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d2e4a18d1e51ee5e7f75cea7',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('d2e4a18d1e51ee5e7f75cea7',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('53e7941c57b82e87f58a5d92',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('53e7941c57b82e87f58a5d92',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('1c53add276bee6a389144179',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('1c53add276bee6a389144179',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0fe256dbfc63009649424b2b',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('0fe256dbfc63009649424b2b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('26e72a7616980e447210584e',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('26e72a7616980e447210584e',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d975972a77ee1fa3f35e433b',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('d975972a77ee1fa3f35e433b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f60929072ca7c0cf90af3409',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('f60929072ca7c0cf90af3409',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6f0d1e7fa315d81a0093ce29',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('6f0d1e7fa315d81a0093ce29',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a41b1953ca92813f2026206b',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('a41b1953ca92813f2026206b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a304cea42e1095395a12d5f7',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('a304cea42e1095395a12d5f7',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('c28783c7bd13d99608e557fc',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('c28783c7bd13d99608e557fc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('34b3db7e06001a9e2f4324f1',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('34b3db7e06001a9e2f4324f1',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('ba26c3589a4314eff5ba681d',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('ba26c3589a4314eff5ba681d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('732e1bc3fa021b761eeda997',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('732e1bc3fa021b761eeda997',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6e98d5f54d498d444d2c4192',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('6e98d5f54d498d444d2c4192',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('994942f62e5774023848f259',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('994942f62e5774023848f259',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('eee4228fde89f064971e7175',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('eee4228fde89f064971e7175',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('443884c823b338c9341782df',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('443884c823b338c9341782df',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e70bca63ea704180bd4191a6',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('e70bca63ea704180bd4191a6',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('cfd3f3344072b84fc81295ba',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('cfd3f3344072b84fc81295ba',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('26de47ff20e1a72575b5236a',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('26de47ff20e1a72575b5236a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e87d8a2722baebe39e300855',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('e87d8a2722baebe39e300855',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('ae74d4fcee3054ca04ffc51c',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('ae74d4fcee3054ca04ffc51c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('9ea85f777443901081e7c5df',0,'name','Kjbmzmrx');
+INSERT INTO "session_attribute" VALUES('9ea85f777443901081e7c5df',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('9ea85f777443901081e7c5df',0,'email','vftnykfx@pyaxairg.com');
+INSERT INTO "session_attribute" VALUES('96eacbfe997d6a0442ed4b0a',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('96eacbfe997d6a0442ed4b0a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3e514904c395a874d3e94a18',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('3e514904c395a874d3e94a18',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('32563e6d80f6be0df48629b1',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('32563e6d80f6be0df48629b1',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('27c603e3355d190543ac3f7b',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('27c603e3355d190543ac3f7b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('741ee9161986155d0adcdef9',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('741ee9161986155d0adcdef9',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('1d358f1e6b7192b2919be6e9',0,'name','Ryan');
+INSERT INTO "session_attribute" VALUES('1d358f1e6b7192b2919be6e9',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('1d358f1e6b7192b2919be6e9',0,'email','nogood87@yahoo.com');
+INSERT INTO "session_attribute" VALUES('56f27a366f6085537a6d01bd',0,'name','John');
+INSERT INTO "session_attribute" VALUES('56f27a366f6085537a6d01bd',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('56f27a366f6085537a6d01bd',0,'email','crazyivan@yahoo.com');
+INSERT INTO "session_attribute" VALUES('822b2e449dfe1b733f9c7096',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('822b2e449dfe1b733f9c7096',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('157f1a2c42ddc76ccd7064ff',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('157f1a2c42ddc76ccd7064ff',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a09d13fab68a07fdb5b3e697',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('a09d13fab68a07fdb5b3e697',0,'timeline.nextlastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('d196c5f1134548328008a944',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('d196c5f1134548328008a944',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6a7205e05e0c2ee3875fba92',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('6a7205e05e0c2ee3875fba92',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6ff836e6762cf56fcfb195f1',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('6ff836e6762cf56fcfb195f1',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('62cdbde512f3b5f17ab24132',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('62cdbde512f3b5f17ab24132',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('8fe777405b8e35e829d16192',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('8fe777405b8e35e829d16192',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('5d74d2c6c012c94f86d6b3a7',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('5d74d2c6c012c94f86d6b3a7',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3917d7a335f96ad6a69d55a4',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('3917d7a335f96ad6a69d55a4',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('128b2ee34e4660d653257b8e',0,'timeline.lastvisit','1389179596000000');
+INSERT INTO "session_attribute" VALUES('128b2ee34e4660d653257b8e',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('7689fe54742cbdc57a16c5b8',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('7689fe54742cbdc57a16c5b8',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('650c1f860f5b1eda46890a9d',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('650c1f860f5b1eda46890a9d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f6c82b3002fb7306c898639a',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('f6c82b3002fb7306c898639a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('1db71079ed873310f6099dd7',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('1db71079ed873310f6099dd7',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('efd16856b3426c7a35fdb936',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('efd16856b3426c7a35fdb936',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('20ce22702a8bf22aee98a86d',0,'name','Ghttxqnv');
+INSERT INTO "session_attribute" VALUES('20ce22702a8bf22aee98a86d',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('20ce22702a8bf22aee98a86d',0,'email','nmoqkesr@zvgyluhc.com');
+INSERT INTO "session_attribute" VALUES('cbb80b765022175d79136a4e',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('cbb80b765022175d79136a4e',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('80f64e5631951fcdf9ebfd18',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('80f64e5631951fcdf9ebfd18',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('dd8b82e02b8502dbd8c80adf',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('dd8b82e02b8502dbd8c80adf',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('45b7b00ef164af6e3208977c',0,'name','Jason');
+INSERT INTO "session_attribute" VALUES('45b7b00ef164af6e3208977c',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('45b7b00ef164af6e3208977c',0,'email','goodsam@gmail.com');
+INSERT INTO "session_attribute" VALUES('6968bdcb1872fb4261426192',0,'name','Eli');
+INSERT INTO "session_attribute" VALUES('6968bdcb1872fb4261426192',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('6968bdcb1872fb4261426192',0,'email','coolman@msn.com');
+INSERT INTO "session_attribute" VALUES('c93e348b9833cbefe16a8de6',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('c93e348b9833cbefe16a8de6',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d7d53707893531ae99d903b0',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('d7d53707893531ae99d903b0',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('7f798471789e6076ebd7fed0',0,'name','NQzEUrfBX');
+INSERT INTO "session_attribute" VALUES('7f798471789e6076ebd7fed0',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('7f798471789e6076ebd7fed0',0,'email','fNDpDDokv');
+INSERT INTO "session_attribute" VALUES('d769d243860568a47ad42065',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('d769d243860568a47ad42065',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6729fe1373c8ecadb24ed328',0,'name','WVfELhOSZKgAtpY');
+INSERT INTO "session_attribute" VALUES('6729fe1373c8ecadb24ed328',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('6729fe1373c8ecadb24ed328',0,'email','YRoUpcPZ');
+INSERT INTO "session_attribute" VALUES('ffe1fb4f17bb831a1e7e5c0b',0,'name','fyBAaSzzWdxL');
+INSERT INTO "session_attribute" VALUES('ffe1fb4f17bb831a1e7e5c0b',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('ffe1fb4f17bb831a1e7e5c0b',0,'email','PjmpMoOFOsCqhp');
+INSERT INTO "session_attribute" VALUES('aaf4c220e36c1eaba493285a',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('aaf4c220e36c1eaba493285a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('5968b615ec6cab1be7df38e8',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('5968b615ec6cab1be7df38e8',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b4a816b15c55623a751e53cd',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('b4a816b15c55623a751e53cd',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('8558f6290c4a8a5750a6202d',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('8558f6290c4a8a5750a6202d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.filter.blog','1');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.daysback','12');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.filter.repo-dev-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.filter.repo-PortableTrac','1');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.authors','Vshjejxe');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.filter.repo-AdminShells','1');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.filter.wiki','1');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.filter.changeset','1');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.filter.repo-trac-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('27c9bc3815739e2dc72c7f85',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.filter.blog','1');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.daysback','12');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.filter.repo-dev-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.filter.repo-PortableTrac','1');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.authors','Wktsrkfq');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.filter.repo-AdminShells','1');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.filter.wiki','1');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.filter.changeset','1');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.filter.repo-trac-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('b010951356865c006ceb1fb5',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('84e3dee88190aa032a7aba22',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('84e3dee88190aa032a7aba22',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('76401732bd96b4f3e2ff71bc',0,'name','Txrwppdc');
+INSERT INTO "session_attribute" VALUES('76401732bd96b4f3e2ff71bc',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('76401732bd96b4f3e2ff71bc',0,'email','enmotvzn@jykiudhf.com');
+INSERT INTO "session_attribute" VALUES('39487a5bd944301e7dbe1aed',0,'name','Wwtkyoya');
+INSERT INTO "session_attribute" VALUES('39487a5bd944301e7dbe1aed',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('39487a5bd944301e7dbe1aed',0,'email','gfycwtiy@snykcnfs.com');
+INSERT INTO "session_attribute" VALUES('50605db4314dea627a40e73a',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('50605db4314dea627a40e73a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e5e75731e10660b71aa2f824',0,'name','nqtgphr');
+INSERT INTO "session_attribute" VALUES('e5e75731e10660b71aa2f824',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('e5e75731e10660b71aa2f824',0,'email','qoopwg@icqlre.com');
+INSERT INTO "session_attribute" VALUES('59ea91d4866454612c98df87',0,'name','hfdcbr');
+INSERT INTO "session_attribute" VALUES('59ea91d4866454612c98df87',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('59ea91d4866454612c98df87',0,'email','gyyldt@vyycrf.com');
+INSERT INTO "session_attribute" VALUES('a9b645f1ccd111a2a9830798',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('a9b645f1ccd111a2a9830798',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('db239b0702eeb89f64e26f59',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('db239b0702eeb89f64e26f59',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2fb6b370647e962c11562a65',0,'name','Gixvkiem');
+INSERT INTO "session_attribute" VALUES('2fb6b370647e962c11562a65',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('2fb6b370647e962c11562a65',0,'email','dnvraqxg@jwmrgebh.com');
+INSERT INTO "session_attribute" VALUES('2ef1ebb6ab3a222672a249da',0,'name','Vpfmnwze');
+INSERT INTO "session_attribute" VALUES('2ef1ebb6ab3a222672a249da',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('2ef1ebb6ab3a222672a249da',0,'email','gokgkpps@zbjvnpcy.com');
+INSERT INTO "session_attribute" VALUES('01d818fa82d6f09a2f355aa4',0,'name','Jztkattk');
+INSERT INTO "session_attribute" VALUES('01d818fa82d6f09a2f355aa4',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('01d818fa82d6f09a2f355aa4',0,'email','cvriabwn@hwrdbrmj.com');
+INSERT INTO "session_attribute" VALUES('ad8ba190d5dc8cee89db87b9',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('ad8ba190d5dc8cee89db87b9',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a5cd7ee333f3d6c09e757ce3',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('a5cd7ee333f3d6c09e757ce3',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('366cfb3c2e92446bd879ab2a',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('366cfb3c2e92446bd879ab2a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('1fd8f28331ac434be0b9a122',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('1fd8f28331ac434be0b9a122',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('8ec04736b25f0e24a0eef5bc',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('8ec04736b25f0e24a0eef5bc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('62821e78d97491dd7998492e',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('62821e78d97491dd7998492e',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('64851e8d3f54c9421b8cb13f',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('64851e8d3f54c9421b8cb13f',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e2839bd87e8a7a3ad29c87fc',0,'name','Eli');
+INSERT INTO "session_attribute" VALUES('e2839bd87e8a7a3ad29c87fc',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('e2839bd87e8a7a3ad29c87fc',0,'email','dogkill@yahoo.com');
+INSERT INTO "session_attribute" VALUES('dc8e255180aea8929a3dbcc2',0,'name','Allison');
+INSERT INTO "session_attribute" VALUES('dc8e255180aea8929a3dbcc2',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('dc8e255180aea8929a3dbcc2',0,'email','fifa55@yahoo.com');
+INSERT INTO "session_attribute" VALUES('a15c70fe07133cc03d16cb67',0,'timeline.lastvisit','1391059414180000');
+INSERT INTO "session_attribute" VALUES('a15c70fe07133cc03d16cb67',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6f9121266790985c5ac24513',0,'name','Upjrrgpu');
+INSERT INTO "session_attribute" VALUES('6f9121266790985c5ac24513',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('6f9121266790985c5ac24513',0,'email','gqvcfuat@iymfuanw.com');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.filter.blog','1');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.daysback','12');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.filter.repo-dev-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.filter.repo-PortableTrac','1');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.authors','Kdymdhnb');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.filter.repo-AdminShells','1');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.filter.wiki','1');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.filter.changeset','1');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.filter.repo-trac-thinkbase.net','1');
+INSERT INTO "session_attribute" VALUES('90c1882929c84357b3d69b18',0,'timeline.lastvisit','1391867559966000');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignorewhitespace','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1379556754000000');
@@ -898,6 +1087,7 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','Chromium25-Ubu
 INSERT INTO "attachment" VALUES('blog','thinkbase-20130515-1330','IE8-WinXP-localAccess-error.png',14279,1368627372198000,'','thinkbase','180.175.163.49');
 INSERT INTO "attachment" VALUES('blog','thinkbase-20130627-1456','PortableTrac-QuickStart.gif',3059613,1372361146647000,'','thinkbase','180.157.14.48');
 INSERT INTO "attachment" VALUES('wiki','misc/NetworkDigest','www.guokr.com_article_38500.png',180398,1382760102119000,'','thinkbase','180.172.84.38');
+INSERT INTO "attachment" VALUES('wiki','misc/NetworkDigest','PHOT6KCR0016030U_9KIVFQAQ.html.txt',2813,1391867584732000,'','thinkbase','180.158.230.54');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -38072,6 +38262,324 @@ INSERT INTO "wiki" VALUES('misc/NetworkDigest',41,1389179051694000,'thinkbase','
  - {{{伴随着企业的这种管理上的和发展上的痛处，信息化企业也飞速发展，就如同肥胖人群多了，医疗机构，保健机构，甚至江湖郎中也火了一样，或许比喻不够恰当，那就领会精神吧，}}}
  - {{{所以企业实施了各种各样的应用系统之后，问题也随之而来，这就是滥服药物的害处，目前急需一种应用平台可以中和这些系统，那么这就是BPM基础软件。}}}
  - 来自 [http://www.cnblogs.com/Reedzhang/p/ReedZhang.html k2之于.NET流程应用开发者 - Reed Zhang - 博客园:]
+
+== END ==','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',42,1391059414180000,'thinkbase','110.187.220.159','[[PageOutline]]
+= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+==== 当你在开源的世界里提倡用脚走路时... ====
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+==== 其实linux很不自由啊... ====
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+==== 类似LZ的喷法还有很多 ... ====
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+==== 玛雅历法预言末日 ====
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
+  - [[Image(玛雅历法预言末日.jpg)]]
+==== 这篇文章更多的是表达一种愿望 ... ====
+ - {{{这篇文章更多的是表达一种愿望，而不是现状：）}}}
+  - 来自 [http://www.oschina.net/translate/eight-reasons-c-sharp-is-the-best-language-for-mobile-development 8 个理由说明为什么 C# 是移动开发的最佳语言 - 开源中国社区]
+==== 如果你要Baidu的话 ... ====
+ - {{{如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭}}}
+  - 来自 [http://coolshell.cn/articles/8883.html 应该知道的Linux技巧 - 酷壳 – CoolShell.cn]
+==== 比不动脑子更可怕的 ... ====
+ - {{{人最可怕的，是不动脑子。比不动脑子更可怕的，是想的太多。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2821609#p2821609 linux世界里那蛋疼的命名 - 查看主题 • Ubuntu中文论坛:]
+==== 请勿跨村、跨乡、跨县、... 跨太阳系、跨时空实施抓捕。 ====
+ - {{{- 以上内容全部来自互联网，本人并不识字，完全复制粘贴。}}}[[BR]]{{{- 看帖者请于24小时内自觉、主动、完全忘记。}}}[[BR]]{{{- 跟帖行为并不意味本人同意、支持、反对，或了解、知晓文中观点，如有任何疑问请直接联系原作者本人。故本人不对以上内容负法律责任（包括民法、刑法或婚姻法，及文中提及或未提及之法律），请勿跨村、跨乡、跨县、跨市、跨省、跨国、跨地球、跨太阳系、跨时空实施抓捕。}}}[[BR]]{{{- 谢谢合作! }}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=1721779#p1721779 汉语编程 与“来自中国的恐慌” - 查看主题 • Ubuntu中文论坛:]''''(当然, 这个也不是原创)''''
+==== Python 不小心出了 2.6.4 版本 ... ====
+ - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
+  - [[Image(Screenshot-Python-OSChina.NET.png)]]
+  - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 - 开源中国 OSChina.NET: 之 31 楼]
+==== 为什么Lisp没有流行起来 ... ====
+ - {{{——你喜欢函数式编程？}}}[[BR]]{{{——是啊。}}}[[BR]]{{{——太好了我也是，你喜欢 Erlang 、Lua 、Lisp 还是 Haskell ？}}}[[BR]]{{{—— Lisp 。}}}[[BR]]{{{——太好了我也是，你喜欢 Common Lisp 、Emacs Lisp 、Scheme 还是 Clojure ？}}}[[BR]]{{{—— Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 MIT Scheme 、MzScheme 、DrScheme 还是 Guile ？}}}[[BR]]{{{—— MIT Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 7.5 版还是 7.4 版？}}}[[BR]]{{{—— 7.5 。}}}[[BR]]{{{——滚！异端！}}}
+  - 来自 [http://www.oschina.net/translate/why_lisp_failed?p=1#rpl_2803 为什么Lisp没有流行起来 - 技术翻译 - 开源中国 OSChina.NET: 之 9 楼]
+==== ... 就像在一个小空间内塞满一群性格阴郁的少年 ====
+ - {{{摩尔定律规定：我们芯片上的晶体管数量每隔18个月翻一倍。然而芯片行业已经翻倍到了极限——现在那些小芯片上的晶体管就像在一个小空间内塞满一群性格阴郁的少年。}}}
+  - 来自 [http://www.csdn.net/article/2013-03-22/2814599-ibm-rethinks-the-transistor-to-keep-scaling-compute-power 传IBM重新设计晶体管 预计五至七年内成熟-CSDN.NET:]
+==== 如果把地球上的病毒首尾相接 ... ====
+ - {{{“……如果把地球上的病毒首尾相接，能连成一条2亿光年的长链……”}}}[[BR]]{{{2x10^24米}}}[[BR]]{{{假设病毒链的直径是20nm(横截面1.2x10^-15平方米)}}}[[BR]]{{{那么总体积就是2.4x10^9立方米}}}[[BR]]{{{假设密度和水相同，就是24亿吨}}}[[BR]]{{{比磷虾还要多一些。。。}}}
+  - 来自 [http://songshuhui.net/archives/79183#comment-400085 科学松鼠会 » 小病毒 大能耐: 之 "100 说道:"]
+==== 任何应用都可以 ... 并最终也会由JavaScript编写 ====
+ - {{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+  - 来自 [http://www.infoq.com/cn/news/2013/03/git-in-javascript InfoQ - JavaScript Git的Kickstarter项目仅28小时达到集资目标:] [http://creationix.com/ Tim Caswell]{{{是多个JavaScript和Node.js社区的知名成员，他提出了一个使用JavaScript来重新实现Git的建议。}}}[http://www.kickstarter.com/projects/creationix/js-git 并将该项目放到了Kickstarter（译者注：Kickstarter是一个对个人创意项目进行公众集资（捐赠）从而获得资金支持的网络平台）上进行集资，结果仅仅在28小时内就获得了超过360人的资助。]{{{该项目再一次应证了}}}[http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html Atwood定律：]{{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+==== 这就是牛人和我们的差别 ... ====
+ - {{{这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题}}}
+  - 来自 [http://www.oschina.net/news/39858/fast-database-emerges-from-mit-class-gpus-and-students-invention?p=3#rpl_273342499 哈佛/MIT学生创造GPU数据库，性能提升70倍 - 开源中国 OSChina.NET:]
+{{{
+#!div
+''''''43楼：suifengsuoyu 发表于 2013-04-23 18:21''''''
+> 引用来自“unnamed”的评论
+> 难道写个数据库的时间还不够他处理那些数据？我觉得处理个几十次应该都够了吧
+这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题
+}}}
+==== 只有猪和变态控制狂类型的程序员才会 ... ====
+ - {{{今天的苹果核google都是控制狂类型的公司。苹果不说了，google干的好事一桩：win下的chrome一直只是测试用的，firefox安装的是自己选择的flash player版本，结果2次chrome大版本升级，2次都将firefox的flash player强制插入了与其一致的最新的11版。这种“狗拿耗子”，在禁用google update插件情况下偷偷摸摸“自作聪明”的小伎俩也是今天google的程序员们的最爱。更别提什么把系统启动时进程常驻内存，骗取用户”chrome启动很快“，linux下想直接下载个for win的chrome都要和网页斗半天，否则它认准你只能下载 for linux版的。每每这种时候都有一种”你以为你是谁啊，猪啊！“的感觉，只有猪和变态控制狂类型的程序员才会以为自己永远知道别人想的是什么。。。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2966467#p2966467 苹果公司的邪恶 - 查看主题 • Ubuntu中文论坛:]
+==== 零下40度 ... 这是一个神奇的数值 ====
+ - {{{在他刚跳下不久的高度，气温大概是零下40度。这是一个神奇的数值，因为不需要指出其单位是摄氏还是华氏——数值在两种单位下都一样}}}
+  - 来自 [http://songshuhui.net/archives/78125 "科学松鼠会 » [What if]第28期——天上掉下来一块牛排排:"]
+==== ... 我们那里的CB不是这样的 ====
+ - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
+  - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]
+==== ... 而解决这些问题的方法就是再引入一个新的兼容层 ====
+ - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
+  - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]
+==== 令人食欲大振……当然振过就算了 ====
+ - {{{我曾经用致命白毒伞和大蒜同煮，结果汤色清亮，大蒜颗颗雪白，兼之鲜香四溢，令人食欲大振……当然振过就算了。}}}
+  - 来自 [http://songshuhui.net/archives/83379 科学松鼠会 » 辨别毒蘑菇，民间传说不可信:]
+==== 歌者是微软好不？ ====
+ - {{{歌者是微软好不？在到处搞二维化}}}
+  - 来自 [http://tieba.baidu.com/p/2538725451 【水】其实三体人已经潜伏地球多年_三体吧_百度贴吧:]
+==== 一款好手机必须具备以下条件： 首先 ... ====
+ - {{{一款好手机必须具备以下条件： 首先，得能买到……}}}
+  - 来自 [http://www.cnbeta.com/articles/251442.htm "[图]魅族MX3获入网许可_Meizu 魅族_cnBeta.COM:"],,''''(的评论)'''',,
+==== 本人擅长 ..., 精通 ..., 熟悉 ... ====
+ - {{{本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、PS等软件的安装与卸载，精通CSS、JavaScript、PHP、C、C＋＋、java、Ruby、Perl、Lisp、python、Objective-C、ActionScript等单词的拼写，熟悉windows、Linux、Mac、Android、IOS等系统的开关机 。}}}
+  - 来自 [http://tieba.baidu.com/p/2622689705#39598512972 自己通宵在机场，想睡觉还有装修的，太苦逼了_三体吧_百度贴吧:] 第 `5` 楼;
+==== CTHD ====
+ - {{{所以要是有机会去国外的录像带店逛，看到名字拖的老长老长，甭问，90％是中国电影。唯一的例外大概就是那部Crouching Tiger and Hidden Dragon《卧虎藏龙》，也不知老外念着绕不绕嘴。反正我单知道新西兰电影院很郁闷，他们的横条信息屏幕显示不下，于是干脆简称为CTHD。}}}
+  - 来自 [http://www.guokr.com/question/507637/#answer580156 你看到过哪些奇葩的翻译？ | 问答 | 果壳网 科技有意思:] 的 `某一楼`;
+==== 世界上最远的距离 ... ====
+ - {{{易碎双腔龙：世界上最远的距离不是天涯海角，而是我的咽喉到大脑。}}}
+ - [[Image(www.guokr.com_article_38500.png)]]
+ - 来自 [http://www.guokr.com/article/38500/ 喉返神经：进化走的弯路 | 环球科技观光团主题站 | 果壳网 科技有意思:]
+==== 神烦的蛇精病…… ====
+ - {{{看到这里，想必你的系统1已经有了结论：写这篇文章的人不知是好是坏，但应该是个神烦的蛇精病……}}}
+ - {{{拉姆斯菲尔德曾说过一段被群嘲但其实有道理的名言：“我们都知道自己知道一些事，有些事我们知道我们已经知道。我们同时知道我们不知道一些事，就是说，有些事我们知道我们不知道。但我们并不知道有些事情我们其实不知道，有些事我们真的不知道我们不知道。”}}}
+ - 来自 [http://songshuhui.net/archives/87220 科学松鼠会 » 为何笨蛋有自信:]
+==== 在不确定是否会赢的情况下，绝对不要拔剑 ====
+ - {{{最后的结论： 作为资深程序员，最优雅的方式就是尽可能地指出不好的地方，但绝对不要实际参与改进。 兵无常势水无常形，在不确定是否会赢的情况下，绝对不要拔剑。}}}
+ - 来自 [http://www.cnblogs.com/XiaoXiami142/p/3508642.html 为什么所有的架构都是糟糕的 - @小虾米@ - 博客园:]
+==== 这个系统复杂已经爆了几十块表 ====
+ - {{{如何避免飞机相撞本身已是个复杂度爆表的问题，为了解决这个问题而被设计出的这个系统复杂已经爆了几十块表，相信没有人能够真正理解这套系统，所以即便是这方面的专业人士有时也会对系统做出的反馈给吓到。这不断攀升的复杂程度也正是当代社会的普遍现象。人类无法理解的系统正在保护我们的安全，科技发展到了接受检验的节点。}}}
+ - 来自 [http://www.cnbeta.com/articles/267678.htm 世界已经太复杂，人类科技发展到极限了吗？_cnBeta 视点观察_cnBeta.COM:]
+==== 这就是滥服药物的害处 ====
+ - {{{伴随着企业的这种管理上的和发展上的痛处，信息化企业也飞速发展，就如同肥胖人群多了，医疗机构，保健机构，甚至江湖郎中也火了一样，或许比喻不够恰当，那就领会精神吧，}}}
+ - {{{所以企业实施了各种各样的应用系统之后，问题也随之而来，这就是滥服药物的害处，目前急需一种应用平台可以中和这些系统，那么这就是BPM基础软件。}}}
+ - 来自 [http://www.cnblogs.com/Reedzhang/p/ReedZhang.html k2之于.NET流程应用开发者 - Reed Zhang - 博客园:]
+==== C语言的奇技淫巧大都是汇编程序员发明的 ... ====
+ - {{{C语言的奇技淫巧大都是汇编程序员发明的，因为正常的C在他们眼中就是大便……}}}[[http://coolshell.cn/articles/10975.html#comment-1233237 @waveacme]]
+ - 来自 [http://coolshell.cn/articles/10975.html#comment-1233261 一个“蝇量级” C 语言协程库 | 酷 壳 - CoolShell.cn:]
+
+== END ==','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',43,1391867559966000,'thinkbase','180.158.230.54','[[PageOutline]]
+= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+==== 当你在开源的世界里提倡用脚走路时... ====
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+==== 其实linux很不自由啊... ====
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+==== 类似LZ的喷法还有很多 ... ====
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+==== 玛雅历法预言末日 ====
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
+  - [[Image(玛雅历法预言末日.jpg)]]
+==== 这篇文章更多的是表达一种愿望 ... ====
+ - {{{这篇文章更多的是表达一种愿望，而不是现状：）}}}
+  - 来自 [http://www.oschina.net/translate/eight-reasons-c-sharp-is-the-best-language-for-mobile-development 8 个理由说明为什么 C# 是移动开发的最佳语言 - 开源中国社区]
+==== 如果你要Baidu的话 ... ====
+ - {{{如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭}}}
+  - 来自 [http://coolshell.cn/articles/8883.html 应该知道的Linux技巧 - 酷壳 – CoolShell.cn]
+==== 比不动脑子更可怕的 ... ====
+ - {{{人最可怕的，是不动脑子。比不动脑子更可怕的，是想的太多。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2821609#p2821609 linux世界里那蛋疼的命名 - 查看主题 • Ubuntu中文论坛:]
+==== 请勿跨村、跨乡、跨县、... 跨太阳系、跨时空实施抓捕。 ====
+ - {{{- 以上内容全部来自互联网，本人并不识字，完全复制粘贴。}}}[[BR]]{{{- 看帖者请于24小时内自觉、主动、完全忘记。}}}[[BR]]{{{- 跟帖行为并不意味本人同意、支持、反对，或了解、知晓文中观点，如有任何疑问请直接联系原作者本人。故本人不对以上内容负法律责任（包括民法、刑法或婚姻法，及文中提及或未提及之法律），请勿跨村、跨乡、跨县、跨市、跨省、跨国、跨地球、跨太阳系、跨时空实施抓捕。}}}[[BR]]{{{- 谢谢合作! }}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=1721779#p1721779 汉语编程 与“来自中国的恐慌” - 查看主题 • Ubuntu中文论坛:]''''(当然, 这个也不是原创)''''
+==== Python 不小心出了 2.6.4 版本 ... ====
+ - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
+  - [[Image(Screenshot-Python-OSChina.NET.png)]]
+  - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 - 开源中国 OSChina.NET: 之 31 楼]
+==== 为什么Lisp没有流行起来 ... ====
+ - {{{——你喜欢函数式编程？}}}[[BR]]{{{——是啊。}}}[[BR]]{{{——太好了我也是，你喜欢 Erlang 、Lua 、Lisp 还是 Haskell ？}}}[[BR]]{{{—— Lisp 。}}}[[BR]]{{{——太好了我也是，你喜欢 Common Lisp 、Emacs Lisp 、Scheme 还是 Clojure ？}}}[[BR]]{{{—— Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 MIT Scheme 、MzScheme 、DrScheme 还是 Guile ？}}}[[BR]]{{{—— MIT Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 7.5 版还是 7.4 版？}}}[[BR]]{{{—— 7.5 。}}}[[BR]]{{{——滚！异端！}}}
+  - 来自 [http://www.oschina.net/translate/why_lisp_failed?p=1#rpl_2803 为什么Lisp没有流行起来 - 技术翻译 - 开源中国 OSChina.NET: 之 9 楼]
+==== ... 就像在一个小空间内塞满一群性格阴郁的少年 ====
+ - {{{摩尔定律规定：我们芯片上的晶体管数量每隔18个月翻一倍。然而芯片行业已经翻倍到了极限——现在那些小芯片上的晶体管就像在一个小空间内塞满一群性格阴郁的少年。}}}
+  - 来自 [http://www.csdn.net/article/2013-03-22/2814599-ibm-rethinks-the-transistor-to-keep-scaling-compute-power 传IBM重新设计晶体管 预计五至七年内成熟-CSDN.NET:]
+==== 如果把地球上的病毒首尾相接 ... ====
+ - {{{“……如果把地球上的病毒首尾相接，能连成一条2亿光年的长链……”}}}[[BR]]{{{2x10^24米}}}[[BR]]{{{假设病毒链的直径是20nm(横截面1.2x10^-15平方米)}}}[[BR]]{{{那么总体积就是2.4x10^9立方米}}}[[BR]]{{{假设密度和水相同，就是24亿吨}}}[[BR]]{{{比磷虾还要多一些。。。}}}
+  - 来自 [http://songshuhui.net/archives/79183#comment-400085 科学松鼠会 » 小病毒 大能耐: 之 "100 说道:"]
+==== 任何应用都可以 ... 并最终也会由JavaScript编写 ====
+ - {{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+  - 来自 [http://www.infoq.com/cn/news/2013/03/git-in-javascript InfoQ - JavaScript Git的Kickstarter项目仅28小时达到集资目标:] [http://creationix.com/ Tim Caswell]{{{是多个JavaScript和Node.js社区的知名成员，他提出了一个使用JavaScript来重新实现Git的建议。}}}[http://www.kickstarter.com/projects/creationix/js-git 并将该项目放到了Kickstarter（译者注：Kickstarter是一个对个人创意项目进行公众集资（捐赠）从而获得资金支持的网络平台）上进行集资，结果仅仅在28小时内就获得了超过360人的资助。]{{{该项目再一次应证了}}}[http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html Atwood定律：]{{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+==== 这就是牛人和我们的差别 ... ====
+ - {{{这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题}}}
+  - 来自 [http://www.oschina.net/news/39858/fast-database-emerges-from-mit-class-gpus-and-students-invention?p=3#rpl_273342499 哈佛/MIT学生创造GPU数据库，性能提升70倍 - 开源中国 OSChina.NET:]
+{{{
+#!div
+''''''43楼：suifengsuoyu 发表于 2013-04-23 18:21''''''
+> 引用来自“unnamed”的评论
+> 难道写个数据库的时间还不够他处理那些数据？我觉得处理个几十次应该都够了吧
+这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题
+}}}
+==== 只有猪和变态控制狂类型的程序员才会 ... ====
+ - {{{今天的苹果核google都是控制狂类型的公司。苹果不说了，google干的好事一桩：win下的chrome一直只是测试用的，firefox安装的是自己选择的flash player版本，结果2次chrome大版本升级，2次都将firefox的flash player强制插入了与其一致的最新的11版。这种“狗拿耗子”，在禁用google update插件情况下偷偷摸摸“自作聪明”的小伎俩也是今天google的程序员们的最爱。更别提什么把系统启动时进程常驻内存，骗取用户”chrome启动很快“，linux下想直接下载个for win的chrome都要和网页斗半天，否则它认准你只能下载 for linux版的。每每这种时候都有一种”你以为你是谁啊，猪啊！“的感觉，只有猪和变态控制狂类型的程序员才会以为自己永远知道别人想的是什么。。。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2966467#p2966467 苹果公司的邪恶 - 查看主题 • Ubuntu中文论坛:]
+==== 零下40度 ... 这是一个神奇的数值 ====
+ - {{{在他刚跳下不久的高度，气温大概是零下40度。这是一个神奇的数值，因为不需要指出其单位是摄氏还是华氏——数值在两种单位下都一样}}}
+  - 来自 [http://songshuhui.net/archives/78125 "科学松鼠会 » [What if]第28期——天上掉下来一块牛排排:"]
+==== ... 我们那里的CB不是这样的 ====
+ - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
+  - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]
+==== ... 而解决这些问题的方法就是再引入一个新的兼容层 ====
+ - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
+  - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]
+==== 令人食欲大振……当然振过就算了 ====
+ - {{{我曾经用致命白毒伞和大蒜同煮，结果汤色清亮，大蒜颗颗雪白，兼之鲜香四溢，令人食欲大振……当然振过就算了。}}}
+  - 来自 [http://songshuhui.net/archives/83379 科学松鼠会 » 辨别毒蘑菇，民间传说不可信:]
+==== 歌者是微软好不？ ====
+ - {{{歌者是微软好不？在到处搞二维化}}}
+  - 来自 [http://tieba.baidu.com/p/2538725451 【水】其实三体人已经潜伏地球多年_三体吧_百度贴吧:]
+==== 一款好手机必须具备以下条件： 首先 ... ====
+ - {{{一款好手机必须具备以下条件： 首先，得能买到……}}}
+  - 来自 [http://www.cnbeta.com/articles/251442.htm "[图]魅族MX3获入网许可_Meizu 魅族_cnBeta.COM:"],,''''(的评论)'''',,
+==== 本人擅长 ..., 精通 ..., 熟悉 ... ====
+ - {{{本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、PS等软件的安装与卸载，精通CSS、JavaScript、PHP、C、C＋＋、java、Ruby、Perl、Lisp、python、Objective-C、ActionScript等单词的拼写，熟悉windows、Linux、Mac、Android、IOS等系统的开关机 。}}}
+  - 来自 [http://tieba.baidu.com/p/2622689705#39598512972 自己通宵在机场，想睡觉还有装修的，太苦逼了_三体吧_百度贴吧:] 第 `5` 楼;
+==== CTHD ====
+ - {{{所以要是有机会去国外的录像带店逛，看到名字拖的老长老长，甭问，90％是中国电影。唯一的例外大概就是那部Crouching Tiger and Hidden Dragon《卧虎藏龙》，也不知老外念着绕不绕嘴。反正我单知道新西兰电影院很郁闷，他们的横条信息屏幕显示不下，于是干脆简称为CTHD。}}}
+  - 来自 [http://www.guokr.com/question/507637/#answer580156 你看到过哪些奇葩的翻译？ | 问答 | 果壳网 科技有意思:] 的 `某一楼`;
+==== 世界上最远的距离 ... ====
+ - {{{易碎双腔龙：世界上最远的距离不是天涯海角，而是我的咽喉到大脑。}}}
+ - [[Image(www.guokr.com_article_38500.png)]]
+ - 来自 [http://www.guokr.com/article/38500/ 喉返神经：进化走的弯路 | 环球科技观光团主题站 | 果壳网 科技有意思:]
+==== 神烦的蛇精病…… ====
+ - {{{看到这里，想必你的系统1已经有了结论：写这篇文章的人不知是好是坏，但应该是个神烦的蛇精病……}}}
+ - {{{拉姆斯菲尔德曾说过一段被群嘲但其实有道理的名言：“我们都知道自己知道一些事，有些事我们知道我们已经知道。我们同时知道我们不知道一些事，就是说，有些事我们知道我们不知道。但我们并不知道有些事情我们其实不知道，有些事我们真的不知道我们不知道。”}}}
+ - 来自 [http://songshuhui.net/archives/87220 科学松鼠会 » 为何笨蛋有自信:]
+==== 在不确定是否会赢的情况下，绝对不要拔剑 ====
+ - {{{最后的结论： 作为资深程序员，最优雅的方式就是尽可能地指出不好的地方，但绝对不要实际参与改进。 兵无常势水无常形，在不确定是否会赢的情况下，绝对不要拔剑。}}}
+ - 来自 [http://www.cnblogs.com/XiaoXiami142/p/3508642.html 为什么所有的架构都是糟糕的 - @小虾米@ - 博客园:]
+==== 这个系统复杂已经爆了几十块表 ====
+ - {{{如何避免飞机相撞本身已是个复杂度爆表的问题，为了解决这个问题而被设计出的这个系统复杂已经爆了几十块表，相信没有人能够真正理解这套系统，所以即便是这方面的专业人士有时也会对系统做出的反馈给吓到。这不断攀升的复杂程度也正是当代社会的普遍现象。人类无法理解的系统正在保护我们的安全，科技发展到了接受检验的节点。}}}
+ - 来自 [http://www.cnbeta.com/articles/267678.htm 世界已经太复杂，人类科技发展到极限了吗？_cnBeta 视点观察_cnBeta.COM:]
+==== 这就是滥服药物的害处 ====
+ - {{{伴随着企业的这种管理上的和发展上的痛处，信息化企业也飞速发展，就如同肥胖人群多了，医疗机构，保健机构，甚至江湖郎中也火了一样，或许比喻不够恰当，那就领会精神吧，}}}
+ - {{{所以企业实施了各种各样的应用系统之后，问题也随之而来，这就是滥服药物的害处，目前急需一种应用平台可以中和这些系统，那么这就是BPM基础软件。}}}
+ - 来自 [http://www.cnblogs.com/Reedzhang/p/ReedZhang.html k2之于.NET流程应用开发者 - Reed Zhang - 博客园:]
+==== C语言的奇技淫巧大都是汇编程序员发明的 ... ====
+ - {{{C语言的奇技淫巧大都是汇编程序员发明的，因为正常的C在他们眼中就是大便……}}}[[http://coolshell.cn/articles/10975.html#comment-1233237 @waveacme]]
+ - 来自 [http://coolshell.cn/articles/10975.html#comment-1233261 一个“蝇量级” C 语言协程库 | 酷 壳 - CoolShell.cn:]
+==== 给中国孩子和美国孩子一杯水 ... ====
+ - {{{曾经有教育家做了一个实验，给中国孩子和美国孩子一杯水，让他们不用火就让水沸腾起来。中国小孩 ...}}}, 后面的太长，见 [attachment:PHOT6KCR0016030U_9KIVFQAQ.html.txt 这里]
+ - 来自 [http://comment.digi.163.com/photoview_bbs/PHOT6KCR0016030U/9KIVFQAQ.html 那些消失的笔记本电脑品牌_图集跟贴_网易跟贴:]
+
+== END ==','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',44,1391867611248000,'thinkbase','180.158.230.54','[[PageOutline]]
+= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+==== 当你在开源的世界里提倡用脚走路时... ====
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+==== 其实linux很不自由啊... ====
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+==== 类似LZ的喷法还有很多 ... ====
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+==== 玛雅历法预言末日 ====
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
+  - [[Image(玛雅历法预言末日.jpg)]]
+==== 这篇文章更多的是表达一种愿望 ... ====
+ - {{{这篇文章更多的是表达一种愿望，而不是现状：）}}}
+  - 来自 [http://www.oschina.net/translate/eight-reasons-c-sharp-is-the-best-language-for-mobile-development 8 个理由说明为什么 C# 是移动开发的最佳语言 - 开源中国社区]
+==== 如果你要Baidu的话 ... ====
+ - {{{如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭}}}
+  - 来自 [http://coolshell.cn/articles/8883.html 应该知道的Linux技巧 - 酷壳 – CoolShell.cn]
+==== 比不动脑子更可怕的 ... ====
+ - {{{人最可怕的，是不动脑子。比不动脑子更可怕的，是想的太多。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2821609#p2821609 linux世界里那蛋疼的命名 - 查看主题 • Ubuntu中文论坛:]
+==== 请勿跨村、跨乡、跨县、... 跨太阳系、跨时空实施抓捕。 ====
+ - {{{- 以上内容全部来自互联网，本人并不识字，完全复制粘贴。}}}[[BR]]{{{- 看帖者请于24小时内自觉、主动、完全忘记。}}}[[BR]]{{{- 跟帖行为并不意味本人同意、支持、反对，或了解、知晓文中观点，如有任何疑问请直接联系原作者本人。故本人不对以上内容负法律责任（包括民法、刑法或婚姻法，及文中提及或未提及之法律），请勿跨村、跨乡、跨县、跨市、跨省、跨国、跨地球、跨太阳系、跨时空实施抓捕。}}}[[BR]]{{{- 谢谢合作! }}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=1721779#p1721779 汉语编程 与“来自中国的恐慌” - 查看主题 • Ubuntu中文论坛:]''''(当然, 这个也不是原创)''''
+==== Python 不小心出了 2.6.4 版本 ... ====
+ - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
+  - [[Image(Screenshot-Python-OSChina.NET.png)]]
+  - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 - 开源中国 OSChina.NET: 之 31 楼]
+==== 为什么Lisp没有流行起来 ... ====
+ - {{{——你喜欢函数式编程？}}}[[BR]]{{{——是啊。}}}[[BR]]{{{——太好了我也是，你喜欢 Erlang 、Lua 、Lisp 还是 Haskell ？}}}[[BR]]{{{—— Lisp 。}}}[[BR]]{{{——太好了我也是，你喜欢 Common Lisp 、Emacs Lisp 、Scheme 还是 Clojure ？}}}[[BR]]{{{—— Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 MIT Scheme 、MzScheme 、DrScheme 还是 Guile ？}}}[[BR]]{{{—— MIT Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 7.5 版还是 7.4 版？}}}[[BR]]{{{—— 7.5 。}}}[[BR]]{{{——滚！异端！}}}
+  - 来自 [http://www.oschina.net/translate/why_lisp_failed?p=1#rpl_2803 为什么Lisp没有流行起来 - 技术翻译 - 开源中国 OSChina.NET: 之 9 楼]
+==== ... 就像在一个小空间内塞满一群性格阴郁的少年 ====
+ - {{{摩尔定律规定：我们芯片上的晶体管数量每隔18个月翻一倍。然而芯片行业已经翻倍到了极限——现在那些小芯片上的晶体管就像在一个小空间内塞满一群性格阴郁的少年。}}}
+  - 来自 [http://www.csdn.net/article/2013-03-22/2814599-ibm-rethinks-the-transistor-to-keep-scaling-compute-power 传IBM重新设计晶体管 预计五至七年内成熟-CSDN.NET:]
+==== 如果把地球上的病毒首尾相接 ... ====
+ - {{{“……如果把地球上的病毒首尾相接，能连成一条2亿光年的长链……”}}}[[BR]]{{{2x10^24米}}}[[BR]]{{{假设病毒链的直径是20nm(横截面1.2x10^-15平方米)}}}[[BR]]{{{那么总体积就是2.4x10^9立方米}}}[[BR]]{{{假设密度和水相同，就是24亿吨}}}[[BR]]{{{比磷虾还要多一些。。。}}}
+  - 来自 [http://songshuhui.net/archives/79183#comment-400085 科学松鼠会 » 小病毒 大能耐: 之 "100 说道:"]
+==== 任何应用都可以 ... 并最终也会由JavaScript编写 ====
+ - {{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+  - 来自 [http://www.infoq.com/cn/news/2013/03/git-in-javascript InfoQ - JavaScript Git的Kickstarter项目仅28小时达到集资目标:] [http://creationix.com/ Tim Caswell]{{{是多个JavaScript和Node.js社区的知名成员，他提出了一个使用JavaScript来重新实现Git的建议。}}}[http://www.kickstarter.com/projects/creationix/js-git 并将该项目放到了Kickstarter（译者注：Kickstarter是一个对个人创意项目进行公众集资（捐赠）从而获得资金支持的网络平台）上进行集资，结果仅仅在28小时内就获得了超过360人的资助。]{{{该项目再一次应证了}}}[http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html Atwood定律：]{{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+==== 这就是牛人和我们的差别 ... ====
+ - {{{这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题}}}
+  - 来自 [http://www.oschina.net/news/39858/fast-database-emerges-from-mit-class-gpus-and-students-invention?p=3#rpl_273342499 哈佛/MIT学生创造GPU数据库，性能提升70倍 - 开源中国 OSChina.NET:]
+{{{
+#!div
+''''''43楼：suifengsuoyu 发表于 2013-04-23 18:21''''''
+> 引用来自“unnamed”的评论
+> 难道写个数据库的时间还不够他处理那些数据？我觉得处理个几十次应该都够了吧
+这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题
+}}}
+==== 只有猪和变态控制狂类型的程序员才会 ... ====
+ - {{{今天的苹果核google都是控制狂类型的公司。苹果不说了，google干的好事一桩：win下的chrome一直只是测试用的，firefox安装的是自己选择的flash player版本，结果2次chrome大版本升级，2次都将firefox的flash player强制插入了与其一致的最新的11版。这种“狗拿耗子”，在禁用google update插件情况下偷偷摸摸“自作聪明”的小伎俩也是今天google的程序员们的最爱。更别提什么把系统启动时进程常驻内存，骗取用户”chrome启动很快“，linux下想直接下载个for win的chrome都要和网页斗半天，否则它认准你只能下载 for linux版的。每每这种时候都有一种”你以为你是谁啊，猪啊！“的感觉，只有猪和变态控制狂类型的程序员才会以为自己永远知道别人想的是什么。。。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2966467#p2966467 苹果公司的邪恶 - 查看主题 • Ubuntu中文论坛:]
+==== 零下40度 ... 这是一个神奇的数值 ====
+ - {{{在他刚跳下不久的高度，气温大概是零下40度。这是一个神奇的数值，因为不需要指出其单位是摄氏还是华氏——数值在两种单位下都一样}}}
+  - 来自 [http://songshuhui.net/archives/78125 "科学松鼠会 » [What if]第28期——天上掉下来一块牛排排:"]
+==== ... 我们那里的CB不是这样的 ====
+ - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
+  - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]
+==== ... 而解决这些问题的方法就是再引入一个新的兼容层 ====
+ - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
+  - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]
+==== 令人食欲大振……当然振过就算了 ====
+ - {{{我曾经用致命白毒伞和大蒜同煮，结果汤色清亮，大蒜颗颗雪白，兼之鲜香四溢，令人食欲大振……当然振过就算了。}}}
+  - 来自 [http://songshuhui.net/archives/83379 科学松鼠会 » 辨别毒蘑菇，民间传说不可信:]
+==== 歌者是微软好不？ ====
+ - {{{歌者是微软好不？在到处搞二维化}}}
+  - 来自 [http://tieba.baidu.com/p/2538725451 【水】其实三体人已经潜伏地球多年_三体吧_百度贴吧:]
+==== 一款好手机必须具备以下条件： 首先 ... ====
+ - {{{一款好手机必须具备以下条件： 首先，得能买到……}}}
+  - 来自 [http://www.cnbeta.com/articles/251442.htm "[图]魅族MX3获入网许可_Meizu 魅族_cnBeta.COM:"],,''''(的评论)'''',,
+==== 本人擅长 ..., 精通 ..., 熟悉 ... ====
+ - {{{本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、PS等软件的安装与卸载，精通CSS、JavaScript、PHP、C、C＋＋、java、Ruby、Perl、Lisp、python、Objective-C、ActionScript等单词的拼写，熟悉windows、Linux、Mac、Android、IOS等系统的开关机 。}}}
+  - 来自 [http://tieba.baidu.com/p/2622689705#39598512972 自己通宵在机场，想睡觉还有装修的，太苦逼了_三体吧_百度贴吧:] 第 `5` 楼;
+==== CTHD ====
+ - {{{所以要是有机会去国外的录像带店逛，看到名字拖的老长老长，甭问，90％是中国电影。唯一的例外大概就是那部Crouching Tiger and Hidden Dragon《卧虎藏龙》，也不知老外念着绕不绕嘴。反正我单知道新西兰电影院很郁闷，他们的横条信息屏幕显示不下，于是干脆简称为CTHD。}}}
+  - 来自 [http://www.guokr.com/question/507637/#answer580156 你看到过哪些奇葩的翻译？ | 问答 | 果壳网 科技有意思:] 的 `某一楼`;
+==== 世界上最远的距离 ... ====
+ - {{{易碎双腔龙：世界上最远的距离不是天涯海角，而是我的咽喉到大脑。}}}
+ - [[Image(www.guokr.com_article_38500.png)]]
+ - 来自 [http://www.guokr.com/article/38500/ 喉返神经：进化走的弯路 | 环球科技观光团主题站 | 果壳网 科技有意思:]
+==== 神烦的蛇精病…… ====
+ - {{{看到这里，想必你的系统1已经有了结论：写这篇文章的人不知是好是坏，但应该是个神烦的蛇精病……}}}
+ - {{{拉姆斯菲尔德曾说过一段被群嘲但其实有道理的名言：“我们都知道自己知道一些事，有些事我们知道我们已经知道。我们同时知道我们不知道一些事，就是说，有些事我们知道我们不知道。但我们并不知道有些事情我们其实不知道，有些事我们真的不知道我们不知道。”}}}
+ - 来自 [http://songshuhui.net/archives/87220 科学松鼠会 » 为何笨蛋有自信:]
+==== 在不确定是否会赢的情况下，绝对不要拔剑 ====
+ - {{{最后的结论： 作为资深程序员，最优雅的方式就是尽可能地指出不好的地方，但绝对不要实际参与改进。 兵无常势水无常形，在不确定是否会赢的情况下，绝对不要拔剑。}}}
+ - 来自 [http://www.cnblogs.com/XiaoXiami142/p/3508642.html 为什么所有的架构都是糟糕的 - @小虾米@ - 博客园:]
+==== 这个系统复杂已经爆了几十块表 ====
+ - {{{如何避免飞机相撞本身已是个复杂度爆表的问题，为了解决这个问题而被设计出的这个系统复杂已经爆了几十块表，相信没有人能够真正理解这套系统，所以即便是这方面的专业人士有时也会对系统做出的反馈给吓到。这不断攀升的复杂程度也正是当代社会的普遍现象。人类无法理解的系统正在保护我们的安全，科技发展到了接受检验的节点。}}}
+ - 来自 [http://www.cnbeta.com/articles/267678.htm 世界已经太复杂，人类科技发展到极限了吗？_cnBeta 视点观察_cnBeta.COM:]
+==== 这就是滥服药物的害处 ====
+ - {{{伴随着企业的这种管理上的和发展上的痛处，信息化企业也飞速发展，就如同肥胖人群多了，医疗机构，保健机构，甚至江湖郎中也火了一样，或许比喻不够恰当，那就领会精神吧，}}}
+ - {{{所以企业实施了各种各样的应用系统之后，问题也随之而来，这就是滥服药物的害处，目前急需一种应用平台可以中和这些系统，那么这就是BPM基础软件。}}}
+ - 来自 [http://www.cnblogs.com/Reedzhang/p/ReedZhang.html k2之于.NET流程应用开发者 - Reed Zhang - 博客园:]
+==== C语言的奇技淫巧大都是汇编程序员发明的 ... ====
+ - {{{C语言的奇技淫巧大都是汇编程序员发明的，因为正常的C在他们眼中就是大便……}}}[[http://coolshell.cn/articles/10975.html#comment-1233237 @waveacme]]
+ - 来自 [http://coolshell.cn/articles/10975.html#comment-1233261 一个“蝇量级” C 语言协程库 | 酷 壳 - CoolShell.cn:]
+==== 给中国孩子和美国孩子一杯水 ... ====
+ - {{{曾经有教育家做了一个实验，给中国孩子和美国孩子一杯水，让他们不用火就让水沸腾起来。中国小孩 ...}}}, 后面的太长，见 [attachment:PHOT6KCR0016030U_9KIVFQAQ.html.txt 这里] ;
+ - 来自 [http://comment.digi.163.com/photoview_bbs/PHOT6KCR0016030U/9KIVFQAQ.html 那些消失的笔记本电脑品牌_图集跟贴_网易跟贴:]
 
 == END ==','',0);
 CREATE TABLE repository (
