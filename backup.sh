@@ -5,6 +5,6 @@ set -x
 # This is the backup shell script only for docker container "PortableTrac".
 #   - https://github.com/thinkbase/Dockerfiles/tree/master/09-Apps/01-PortableTrac
 
-export SITE_BASE=/data
+export SITE_BASE=/data/trac
 /home/u01/github/PortableTrac/trac-backup.sh main
 /home/u01/github/PortableTrac/trac-backup.sh trac
