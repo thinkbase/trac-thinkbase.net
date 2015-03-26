@@ -8,4 +8,4 @@ set -x
 export SITE_BASE=/data/trac
 /home/u01/github/PortableTrac/bin/do_restore.sh main
 /home/u01/github/PortableTrac/bin/do_restore.sh trac
-chmod -Rv g+rw /data/tracenv/*
+chmod -Rv g+rw /data/trac/tracenv/*
