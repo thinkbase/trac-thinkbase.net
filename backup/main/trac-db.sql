@@ -48,7 +48,7 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('6043da5950198220f5573b43ffcb4951','thinkbase','180.158.234.173',1423675583);
+INSERT INTO "auth_cookie" VALUES('19aa888b9faffe9575bda74d1d112ff9','thinkbase','61.171.92.220',1468104252);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -47139,6 +47139,379 @@ real	0m21.420s
 user	0m21.397s
 sys	0m0.001s
 }}}',1415549693,1415549693,'','thinkbase','thinkbase','linux shell pie performance');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160709-2244',1,'We are back - 现在 thinkbase.net 运行在 Docker 之上','[https://github.com/thinkbase/PortableTrac PortableTrac] 已经支持 Linux（从 https://github.com/thinkbase/PortableTrac/commit/bc2702cc9ed56f566a43b9d00137ae81dafdb395 开始），于是 http://thinkbase.net 终于迁移到 Linux 上，并且使用 [https://www.docker.com Docker] 来进行运行环境。
+
+基于 Docker 容器技术，要运行 thinkbase.net 的 Trac 系统只需要如下简单的几步即可：
+ 1. 在服务器上安装 docker:
+{{{
+#!sh
+# 安装 docker.io
+sudo apt-get install docker.io
+
+# 将当前用户加入 docker 组，以便非 root 用户也可以使用 docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+}}}',1468104752,1468104752,'','thinkbase','thinkbase','docker trac portable thinkbase');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160709-2244',2,'We are back - 现在 thinkbase.net 运行在 Docker 之上','[https://github.com/thinkbase/PortableTrac PortableTrac] 已经支持 Linux（从 https://github.com/thinkbase/PortableTrac/commit/bc2702cc9ed56f566a43b9d00137ae81dafdb395 开始），于是 http://thinkbase.net 终于迁移到 Linux 上，并且使用 [https://www.docker.com Docker] 来进行运行环境。
+
+基于 Docker 容器技术，要运行 thinkbase.net 的 Trac 系统只需要如下简单的几步即可：
+ 1. 在服务器上安装 docker:
+{{{
+#!sh
+# 安装 docker.io
+sudo apt-get install docker.io
+
+# 将当前用户加入 docker 组，以便非 root 用户也可以使用 docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+}}}
+
+ 2. 从 github 获取相关的 Dockerfile，构建运行镜像
+{{{
+#!sh
+# [运行目录: ~/github$] - 获取需要的 Dockerfile 定义
+git clone -v --progress https://github.com/thinkbase/Dockerfiles
+
+# [运行目录: ~/github/Dockerfiles/01-init/01-ubuntu14.04$] - 构建基于 ubuntu 的基础镜像
+docker build --force-rm -t ubuntu:14.04-sshd .
+
+# [运行目录: ~/github/Dockerfiles/90-servers/trac-thinkbase.net$] - 构建 thinkbase.net trac 镜像
+docker build --force-rm -t trac-thinkbase.net:1.0 .
+}}}',1468104752,1468104955,'','thinkbase','thinkbase','docker trac portable thinkbase');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160709-2244',3,'We are back - 现在 thinkbase.net 运行在 Docker 之上','[https://github.com/thinkbase/PortableTrac PortableTrac] 已经支持 Linux（从 https://github.com/thinkbase/PortableTrac/commit/bc2702cc9ed56f566a43b9d00137ae81dafdb395 开始），于是 http://thinkbase.net 终于迁移到 Linux 上，并且使用 [https://www.docker.com Docker] 来进行运行环境。
+
+基于 Docker 容器技术，要运行 thinkbase.net 的 Trac 系统只需要如下简单的几步即可：
+ 1. 在服务器上安装 docker:
+{{{
+#!sh
+# 安装 docker.io
+sudo apt-get install docker.io
+
+# 将当前用户加入 docker 组，以便非 root 用户也可以使用 docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+}}}
+
+ 2. 从 github 获取相关的 Dockerfile，构建运行镜像
+{{{
+#!sh
+# [运行目录: ~/github$] - 获取需要的 Dockerfile 定义
+git clone -v --progress https://github.com/thinkbase/Dockerfiles
+
+# [运行目录: ~/github/Dockerfiles/01-init/01-ubuntu14.04$] - 构建基于 ubuntu 的基础镜像
+docker build --force-rm -t ubuntu:14.04-sshd .
+
+# [运行目录: ~/github/Dockerfiles/90-servers/trac-thinkbase.net$] - 构建 thinkbase.net trac 镜像
+docker build --force-rm -t trac-thinkbase.net:1.0 .
+}}}
+
+ 3. 下面就可以创建容器并运行了：
+{{{
+#!sh
+docker run -d -p 80:8080 --name trac-tk trac-thinkbase.net:1.0
+}}}',1468104752,1468105020,'','thinkbase','thinkbase','docker trac portable thinkbase');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160709-2244',4,'We are back ! - 现在 thinkbase.net 运行在 Docker 之上','[https://github.com/thinkbase/PortableTrac PortableTrac] 已经支持 Linux（从 https://github.com/thinkbase/PortableTrac/commit/bc2702cc9ed56f566a43b9d00137ae81dafdb395 开始），于是 http://thinkbase.net 终于迁移到 Linux 上，并且使用 [https://www.docker.com Docker] 来进行运行环境。
+
+基于 Docker 容器技术，要运行 thinkbase.net 的 Trac 系统只需要如下简单的几步即可：
+ 1. 在服务器上安装 docker:
+{{{
+#!sh
+# 安装 docker.io
+sudo apt-get install docker.io
+
+# 将当前用户加入 docker 组，以便非 root 用户也可以使用 docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+}}}
+
+ 2. 从 github 获取相关的 Dockerfile，构建运行镜像
+{{{
+#!sh
+# [运行目录: ~/github$] - 获取需要的 Dockerfile 定义
+git clone -v --progress https://github.com/thinkbase/Dockerfiles
+
+# [运行目录: ~/github/Dockerfiles/01-init/01-ubuntu14.04$] - 构建基于 ubuntu 的基础镜像
+docker build --force-rm -t ubuntu:14.04-sshd .
+
+# [运行目录: ~/github/Dockerfiles/90-servers/trac-thinkbase.net$] - 构建 thinkbase.net trac 镜像
+docker build --force-rm -t trac-thinkbase.net:1.0 .
+}}}
+
+ 3. 下面就可以创建容器并运行了：
+{{{
+#!sh
+docker run -d -p 80:8080 --name trac-tk trac-thinkbase.net:1.0
+}}}',1468104752,1468105044,'','thinkbase','thinkbase','docker trac portable thinkbase');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160709-2244',5,'We are back ! - 现在 thinkbase.net 运行在 Docker 之上','[https://github.com/thinkbase/PortableTrac PortableTrac] 已经支持 Linux（从 https://github.com/thinkbase/PortableTrac/commit/bc2702cc9ed56f566a43b9d00137ae81dafdb395 开始），于是 http://thinkbase.net 终于迁移到 Linux 上，并且使用 [https://www.docker.com Docker] 来进行运行环境。
+
+基于 Docker 容器技术，要运行 thinkbase.net 的 Trac 系统只需要如下简单的几步即可：
+ 1. 在服务器上安装 docker:
+{{{
+#!sh
+# 安装 docker.io
+sudo apt-get install docker.io
+
+# 将当前用户加入 docker 组，以便非 root 用户也可以使用 docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+}}}
+
+ 2. 从 github 获取相关的 Dockerfile，构建运行镜像
+{{{
+#!sh
+# [运行目录: ~/github$] - 获取需要的 Dockerfile 定义
+git clone -v --progress https://github.com/thinkbase/Dockerfiles
+
+# [运行目录: ~/github/Dockerfiles/01-init/01-ubuntu14.04$] - 构建基于 ubuntu 的基础镜像
+docker build --force-rm -t ubuntu:14.04-sshd .
+
+# [运行目录: ~/github/Dockerfiles/90-servers/trac-thinkbase.net$] - 构建 thinkbase.net trac 镜像
+docker build --force-rm -t trac-thinkbase.net:1.0 .
+}}}
+
+ 3. 下面就可以创建容器并运行了：
+{{{
+#!sh
+docker run -d -p 80:8080 --name trac-tk trac-thinkbase.net:1.0
+}}}',1468104752,1468105068,'','thinkbase','thinkbase','docker trac portable thinkbase.net');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20130414-1028',29,'PortableTrac and thinkbase.net - upgrade to Python 2.7.4','Original plan was upgrade to [http://portablepython.com/ Portable Python] [http://portablepython.com/wiki/PortablePython2.7.3.2 2.7.3.2], unfortunately this version is incompatible to [http://code.google.com/p/modwsgi/ mod_wsgi](See below [attachment:mod_wsgi_error.png error screenshot]), the error message in stdout is :
+{{{
+>>> call "I:\thinkbase.net\github\PortableTrac\httpd\Apache2.2\bin\httpd.exe"
+httpd.exe: Syntax error on line 504 of I:/thinkbase.net/github/PortableTrac/httpd/Apache2.2/conf/httpd.conf: Cannot load B:/Apache2.2/modules/mod_wsgi-win32-ap22py27-3.3.so into server: \xb6\xaf\xcc\xac\xc1\xb4\xbd\xd3\xbf\xe2(DLL)\xb3\xf5\xca\xbc\xbb\xaf\xc0\xfd\xb3\xcc\xca\xa7\xb0\xdc\xa1\xa3
+}}}
+
+The reason is the version of the Microsoft C/C++ compiler(^http://code.google.com/p/modwsgi/wiki/InstallationOnWindows#Compiling_From_Source_Code^ ''''`To compile from source code you will need Microsoft C/C++ compiler for Windows. This must be the same version of the compiler as used to build the version of Python being used.`'''').
+
+So finally we chose the official python distribution([http://www.python.org/getit/releases/2.7.4/ Python 2.7.4]) and embeded the python runtime into PortableTrac, this is [source:PortableTrac/PortablePython/App the construction of embeded python runtime], following is the way to embed official python:
+ 1. Download [http://www.python.org/getit/ Python 2.7.4 Windows Installer''''(python-2.7.4.msi)''''], and install it to `C:\Python27`(Or else other folder you like);
+
+ 2. Download [https://pypi.python.org/pypi/setuptools setuptools 0.6c11''''(setuptools-0.6c11.win32-py2.7.exe)''''] and install it.
+
+ 3. Copy files and folders in `C:\Python27` into PortableTrac''s `PortablePython\App` folder;
+  - Before copy, delete `*.pyc` and `*.pyo` files;
+
+ 4. Copy `%windir%\system32\python27.dll` into PortableTrac''s `PortablePython\App` folder;
+
+ 5. To make it work on Windows XP, copy following files into `PortablePython\App` folder:
+  - `VC90.CRT`:
+{{{
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcm90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcp90.dll
+c:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375\msvcr90.dll
+}}}
+  - The `manifest`(''''{{{PortablePython\App\Microsoft.VC90.CRT.manifest}}}''''), Copy from:
+{{{
+c:\WINDOWS\WinSxS\Manifests\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.21022.8_x-ww_d08d0375.manifest
+}}}
+
+ 6. That''s all, we commit the whole python runtime into [https://github.com/thinkbase/PortableTrac PortableTrac Repository].
+
+The benefit of embeding python runtime is the easy-trac-deploy: Just [https://github.com/thinkbase/PortableTrac/archive/master.zip download from Github] and uncompress it, python runtime is there ready.
+
+Please follow the [wiki:PortableTrac/install installation guide], download, then play it, best regards!',1365937769,1468105117,'','thinkbase','thinkbase','trac python portable thinkbase.net');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-2013/02/18',3,'thinkbase.net 升级到 Trac 1.0.1','Trac 1.0 分支已经发布版本 `1.0.1`(参见 http://trac.edgewall.org/wiki/TracDev/ReleaseNotes/1.0#MaintenanceReleases), 因此今天将 http://thinkbase.net 站点(及其运行环境 [http://www.thinkbase.net/main/wiki/PortableTrac PortableTrac])升级到这个版本.
+
+== 主要工作 ==
+升级过程的主要工作包括`升级 Trac 1.0.1 egg 包`和`升级 Trac 环境`, 详细步骤参见 [wiki:TracUpgrade TracUpgrade] 或者 http://trac.edgewall.org/wiki/TracUpgrade ;
+=== 1. 安装 Trac 1.0.1 ===
+由于安装之前需要测试, 因此安装过程是在测试系统中进行的, 安装测试成功后, 将调整后的 `PortableTrac` 提交到 [https://github.com/thinkbase/PortableTrac PortableTrac GitHub Repositories], 然后在正式系统中更新这个运行环境;
+ - 主要命令:
+{{{
+I:\thinkbase.net\github\PortableTrac-git>easy_install --upgrade Trac==1.0.1
+}}}
+=== 2. 升级 Trac 环境 ===
+升级过程直接在正式系统中进行(此前已经在测试系统中经过测试了).
+ - 主要命令:
+{{{
+D:\thinkbase.net\PortableTrac-git>set SITE_BASE=D:\thinkbase.net\trac-thinkbase.net-git
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd trac upgrade
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main upgrade
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd trac wiki upgrade
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main wiki upgrade
+}}}
+
+== 详细操作日志 ==
+{{{
+I:\thinkbase.net\github\PortableTrac-git>easy_install --upgrade Trac==1.0.1
+[Current timestamp: 2013-02-18 周一 13-52-58.93]
+
+>>> call easy_install.exe --prefix="I:\thinkbase.net\github\PortableTrac-git\trac" --upgrade Trac==1.0.1
+Searching for Trac==1.0.1
+Reading http://pypi.python.org/simple/Trac/
+Reading http://trac.edgewall.org/
+Reading http://trac.edgewall.org/wiki/TracDownload
+Reading http://trac.edgewall.com/
+Reading http://projects.edgewall.com/trac
+Reading http://projects.edgewall.com/trac/wiki/TracDownload
+Best match: Trac 1.0.1
+Downloading http://download.edgewall.org/trac/Trac-1.0.1.win32.exe
+Processing Trac-1.0.1.win32.exe
+Deleting d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp\EGG-INFO\scripts\trac-admin-script.py
+Deleting d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp\EGG-INFO\scripts\trac-admin.exe
+Deleting d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp\EGG-INFO\scripts\tracd-script.py
+Deleting d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp\EGG-INFO\scripts\tracd.exe
+creating ''d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg'' and adding ''d:\temp\easy_install-yza88_\Trac-1.0.1-py2.7-win32.egg.tmp'' to it
+Moving Trac-1.0.1-py2.7-win32.egg to i:\thinkbase.net\github\portabletrac-git\trac\lib\site-packages
+Removing trac 1.0 from easy-install.pth file
+Adding Trac 1.0.1 to easy-install.pth file
+Installing trac-admin-script.pyc script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing tracd-script.pyc script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing trac-admin-script.py script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing trac-admin.exe script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing trac-admin.exe.manifest script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing tracd-script.py script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing tracd.exe script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+Installing tracd.exe.manifest script to I:\thinkbase.net\github\PortableTrac-git\trac/Scripts
+
+Installed i:\thinkbase.net\github\portabletrac-git\trac\lib\site-packages\trac-1.0.1-py2.7-win32.egg
+Processing dependencies for Trac==1.0.1
+Finished processing dependencies for Trac==1.0.1
+
+I:\thinkbase.net\github\PortableTrac-git>
+
+================================================================================
+================================================================================
+
+D:\thinkbase.net\PortableTrac-git>set SITE_BASE=D:\thinkbase.net\trac-thinkbase.net-git
+
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd trac upgrade
+[Current timestamp: 2013-02-18 星期一 15-12-12.14]
+
+>>> call python.exe  "D:\thinkbase.net\PortableTrac-git\trac\Scripts\trac-admin-script.py" "D:\thinkbase.net\trac-thinkbase.net-git\tracenv\trac" upgrade
+Database is up to date, no upgrade necessary.
+
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main upgrade
+[Current timestamp: 2013-02-18 星期一 15-12-26.48]
+
+>>> call python.exe  "D:\thinkbase.net\PortableTrac-git\trac\Scripts\trac-admin-script.py" "D:\thinkbase.net\trac-thinkbase.net-git\tracenv\main" upgrade
+Database is up to date, no upgrade necessary.
+
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd trac wiki upgrade
+[Current timestamp: 2013-02-18 星期一 15-12-35.62]
+
+>>> call python.exe  "D:\thinkbase.net\PortableTrac-git\trac\Scripts\trac-admin-script.py" "D:\thinkbase.net\trac-thinkbase.net-git\tracenv\trac" wiki upgrade
+  CamelCase is already up to date
+  InterMapTxt already exists
+  InterTrac is already up to date
+  InterWiki is already up to date
+  PageTemplates imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\PageTemplates
+  RecentChanges is already up to date
+  SandBox is already up to date
+  TitleIndex is already up to date
+  TracAccessibility is already up to date
+  TracAdmin is already up to date
+  TracBackup is already up to date
+  TracBatchModify is already up to date
+  TracBrowser is already up to date
+  TracCgi is already up to date
+  TracChangeset is already up to date
+  TracEnvironment is already up to date
+  TracFastCgi imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracFastCgi
+  TracFineGrainedPermissions is already up to date
+  TracGuide is already up to date
+  TracImport is already up to date
+  TracIni is already up to date
+  TracInstall is already up to date
+  TracInterfaceCustomization imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracInterfaceCustomization
+  TracLinks is already up to date
+  TracLogging is already up to date
+  TracModPython is already up to date
+  TracModWSGI is already up to date
+  TracNavigation imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracNavigation
+  TracNotification is already up to date
+  TracPermissions imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracPermissions
+  TracPlugins is already up to date
+  TracQuery is already up to date
+  TracReports imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracReports
+  TracRepositoryAdmin imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracRepositoryAdmin
+  TracRevisionLog is already up to date
+  TracRoadmap is already up to date
+  TracRss is already up to date
+  TracSearch is already up to date
+  TracStandalone imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracStandalone
+  TracSupport is already up to date
+  TracSyntaxColoring is already up to date
+  TracTickets is already up to date
+  TracTicketsCustomFields is already up to date
+  TracTimeline is already up to date
+  TracUnicode is already up to date
+  TracUpgrade imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracUpgrade
+  TracWiki is already up to date
+  TracWorkflow imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracWorkflow
+  WikiDeletePage is already up to date
+  WikiFormatting is already up to date
+  WikiHtml is already up to date
+  WikiMacros imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiMacros
+  WikiNewPage imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiNewPage
+  WikiPageNames is already up to date
+  WikiProcessors imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiProcessors
+  WikiRestructuredText is already up to date
+  WikiRestructuredTextLinks is already up to date
+
+D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main wiki upgrade
+[Current timestamp: 2013-02-18 星期一 15-12-46.85]
+
+>>> call python.exe  "D:\thinkbase.net\PortableTrac-git\trac\Scripts\trac-admin-script.py" "D:\thinkbase.net\trac-thinkbase.net-git\tracenv\main" wiki upgrade
+  CamelCase is already up to date
+  InterMapTxt already exists
+  InterTrac is already up to date
+  InterWiki is already up to date
+  PageTemplates imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\PageTemplates
+  RecentChanges is already up to date
+  SandBox is already up to date
+  TitleIndex is already up to date
+  TracAccessibility is already up to date
+  TracAdmin is already up to date
+  TracBackup is already up to date
+  TracBatchModify is already up to date
+  TracBrowser is already up to date
+  TracCgi is already up to date
+  TracChangeset is already up to date
+  TracEnvironment is already up to date
+  TracFastCgi imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracFastCgi
+  TracFineGrainedPermissions is already up to date
+  TracGuide is already up to date
+  TracImport is already up to date
+  TracIni is already up to date
+  TracInstall is already up to date
+  TracInterfaceCustomization imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracInterfaceCustomization
+  TracLinks is already up to date
+  TracLogging is already up to date
+  TracModPython is already up to date
+  TracModWSGI is already up to date
+  TracNavigation imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracNavigation
+  TracNotification is already up to date
+  TracPermissions imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracPermissions
+  TracPlugins is already up to date
+  TracQuery is already up to date
+  TracReports imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracReports
+  TracRepositoryAdmin imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracRepositoryAdmin
+  TracRevisionLog is already up to date
+  TracRoadmap is already up to date
+  TracRss is already up to date
+  TracSearch is already up to date
+  TracStandalone imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracStandalone
+  TracSupport is already up to date
+  TracSyntaxColoring is already up to date
+  TracTickets is already up to date
+  TracTicketsCustomFields is already up to date
+  TracTimeline is already up to date
+  TracUnicode is already up to date
+  TracUpgrade imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracUpgrade
+  TracWiki is already up to date
+  TracWorkflow imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\TracWorkflow
+  WikiDeletePage is already up to date
+  WikiFormatting is already up to date
+  WikiHtml is already up to date
+  WikiMacros imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiMacros
+  WikiNewPage imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiNewPage
+  WikiPageNames is already up to date
+  WikiProcessors imported from C:\Documents and Settings\Administrator\Application Data\Python-Eggs\trac-1.0.1-py2.7-win32.egg-tmp\trac\wiki\default-pages\WikiProcessors
+  WikiRestructuredText is already up to date
+  WikiRestructuredTextLinks is already up to date
+
+D:\thinkbase.net\PortableTrac-git>
+}}}',1361178443,1468105155,'','thinkbase','thinkbase','trac portable thinkbase.net');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
