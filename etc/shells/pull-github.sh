@@ -22,6 +22,8 @@ gitUpdate(){
 }
 
 gitUpdate dev-thinkbase.net  https://github.com/thinkbase/dev-thinkbase.net.git
+
+gitUpdate AdminShells        https://github.com/thinkbase/AdminShells.git
 gitUpdate PortableTrac       https://github.com/thinkbase/PortableTrac.git
 
 gitUpdate trac-thinkbase.net https://github.com/thinkbase/trac-thinkbase.net.git
