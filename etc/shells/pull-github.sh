@@ -19,8 +19,9 @@ gitUpdate(){
 	    git clone -v --progress ${url} ${folder}
 	fi
 	cd "${workFolder}/${folder}"
-    echo -e "***\n Pull ${workFolder}/${folder} ... \n***\n"
+    echo -e "***\n Pull ${workFolder}/${folder} ... \n***"
 	git pull -v --progress
+	echo -e "\n"
 }
 
 gitUpdate dev-thinkbase.net  https://github.com/thinkbase/dev-thinkbase.net.git
