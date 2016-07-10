@@ -1,0 +1,7 @@
+# The rc.local starting timestamp
+echo "rc.local started at: `date`" > /tmp/rc.local.starting.log
+
+# private links - the passwd file
+su u01 -c "ln -s /private/passwd /data/trac/protected/passwd"
+
+exit 0
