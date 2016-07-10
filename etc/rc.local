@@ -2,10 +2,26 @@
 echo "rc.local started at: `date`" > /tmp/rc.local.starting.log
 
 # private links - the passwd file
-su u01 -c "ln -s /private/passwd /data/trac/protected/passwd"
+if [ ! -e "/data/trac/protected/passwd" ]
+then
+    su u01 -c "ln -s /private/passwd /data/trac/protected/passwd"
+fi
 
 # private links - the logs folder
-su u01 -c "mkdir -p /private/logs"
-su u01 -c "ln -s /private/logs /data/trac/logs"
+if [ ! -e "/data/trac/tmp/logs" ]
+then
+	su u01 -c "mkdir -p /private/logs"
+	su u01 -c "ln -s /private/tmp/logs /data/trac/tmp/logs"
+fi
+
+# private links - the git-work folder
+if [ ! -e "/data/trac/tmp/git-work" ]
+then
+	su u01 -c "mkdir -p /private/git-work"
+	su u01 -c "ln -s /private/git-work /data/trac/tmp/git-work"
+fi
+
+# Force git pull at startup
+su u01 -c "git -C /data/trac pull"
 
 exit 0
