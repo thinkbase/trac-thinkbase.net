@@ -50,6 +50,7 @@ CREATE TABLE auth_cookie (
 );
 INSERT INTO "auth_cookie" VALUES('19aa888b9faffe9575bda74d1d112ff9','thinkbase','61.171.92.220',1468104252);
 INSERT INTO "auth_cookie" VALUES('3fb503e4b5cb4e308ccdbe7f60e9cd03','admin','61.171.92.220',1468128659);
+INSERT INTO "auth_cookie" VALUES('75f466e7a9344098a560b3dd3647eb82','thinkbase','61.171.92.220',1468131957);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -60,6 +61,7 @@ INSERT INTO "session" VALUES('admin',1,1468124835);
 INSERT INTO "session" VALUES('thinkbase',1,1423675728);
 INSERT INTO "session" VALUES('d9f62b3bb5c55782ac81da02',0,1468117142);
 INSERT INTO "session" VALUES('741538e6a87136e9d9d740c8',0,1468125895);
+INSERT INTO "session" VALUES('b8bdd08845d51e09e48a0e34',0,1468132099);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -87,6 +89,8 @@ INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1361171568561000');
 INSERT INTO "session_attribute" VALUES('741538e6a87136e9d9d740c8',0,'timeline.lastvisit','1468125408000000');
 INSERT INTO "session_attribute" VALUES('741538e6a87136e9d9d740c8',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b8bdd08845d51e09e48a0e34',0,'timeline.lastvisit','1468131973000000');
+INSERT INTO "session_attribute" VALUES('b8bdd08845d51e09e48a0e34',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -46272,6 +46276,38 @@ D:\thinkbase.net\PortableTrac-git>trac-admin.cmd main wiki upgrade
 
 D:\thinkbase.net\PortableTrac-git>
 }}}',1361178443,1468105155,'','thinkbase','thinkbase','trac portable thinkbase.net');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160709-2244',6,'We are back ! - 现在 thinkbase.net 运行在 Docker 之上','[https://github.com/thinkbase/PortableTrac PortableTrac] 已经支持 Linux（从 https://github.com/thinkbase/PortableTrac/commit/bc2702cc9ed56f566a43b9d00137ae81dafdb395 开始），于是 http://thinkbase.net 终于迁移到 Linux 上，并且使用 [https://www.docker.com Docker] 来进行运行环境。
+
+基于 Docker 容器技术，要运行 thinkbase.net 的 Trac 系统只需要如下简单的几步即可：
+ 1. 在服务器上安装 docker:
+{{{
+#!sh
+# 安装 docker.io
+sudo apt-get install docker.io
+
+# 将当前用户加入 docker 组，以便非 root 用户也可以使用 docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+}}}
+
+ 2. 从 github 获取相关的 Dockerfile，构建运行镜像
+{{{
+#!sh
+# [运行目录: ~/github$] - 获取需要的 Dockerfile 定义
+git clone -v --progress https://github.com/thinkbase/Dockerfiles
+
+# [运行目录: ~/github/Dockerfiles/01-init/01-ubuntu14.04$] - 构建基于 ubuntu 的基础镜像
+docker build --force-rm -t ubuntu:14.04-sshd .
+
+# [运行目录: ~/github/Dockerfiles/90-servers/trac-thinkbase.net$] - 构建 thinkbase.net trac 镜像
+docker build --force-rm -t trac-thinkbase.net:1.0 .
+}}}
+
+ 3. 下面就可以创建容器并运行了：
+{{{
+#!sh
+docker run -d -p 80:8080 -v ~/trac/private:/private --name trac-tk trac-thinkbase.net:1.0
+}}}',1468104752,1468131973,'','thinkbase','thinkbase','docker trac portable thinkbase.net');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
