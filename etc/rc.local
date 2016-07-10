@@ -11,7 +11,7 @@ fi
 if [ ! -e "/data/trac/tmp/logs" ]
 then
 	su u01 -c "mkdir -p /private/logs"
-	su u01 -c "ln -s /private/tmp/logs /data/trac/tmp/logs"
+	su u01 -c "ln -s /private/logs /data/trac/tmp/logs"
 fi
 
 # private links - the git-work folder
