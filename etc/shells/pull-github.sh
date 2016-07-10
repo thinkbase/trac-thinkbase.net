@@ -6,6 +6,7 @@ fi
 
 set -o nounset
 set -o errexit
+set -x
 
 gitUpdate(){
     local workFolder="/data/trac/tmp/git-work"

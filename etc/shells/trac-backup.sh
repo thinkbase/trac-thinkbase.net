@@ -6,6 +6,7 @@ fi
 
 set -o nounset
 set -o errexit
+set -x
 
 # Read git push username/password from /private/git-tokens.conf
 source /private/git-tokens.conf
@@ -32,4 +33,5 @@ set -o errexit
 
 # Push to remote repo
 git remote -v
+set +x  #Hide the next command line to avoid password leak
 git push https://${TOKEN_TRAC_THINKBASE_NET}@github.com/thinkbase/trac-thinkbase.net.git
