@@ -6,10 +6,11 @@ fi
 
 set -o nounset
 set -o errexit
-set -x
 
 # Read git push username/password from /private/git-tokens.conf
 source /private/git-tokens.conf
+
+set -x
 
 rm -rfv /data/trac/backup/.old
 
