@@ -4,12 +4,6 @@ if [ -z $BASH ]; then
     exit -1
 fi
 
-if [ ! -f "/private/git-tokens.conf" ]
-then
-    echo -e "***\n Clone ${url} into ${workFolder}/${folder} ... \n***"
-    git clone -v --progress ${url} ${folder}
-fi
-
 set -o nounset
 set -o errexit
 
