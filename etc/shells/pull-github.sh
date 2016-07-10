@@ -15,7 +15,7 @@ gitUpdate(){
 	if [ ! -d "${workFolder}/${folder}" ]
 	then
 	    cd "${workFolder}"
-	    git clone -v --progress url folder
+	    git clone -v --progress ${url} ${folder}
 	fi
 	cd "${workFolder}/${folder}"
 	git pull -v --progress
