@@ -4,4 +4,8 @@ echo "rc.local started at: `date`" > /tmp/rc.local.starting.log
 # private links - the passwd file
 su u01 -c "ln -s /private/passwd /data/trac/protected/passwd"
 
+# private links - the logs folder
+su u01 -c "mkdir -p /private/logs"
+su u01 -c "ln -s /private/logs /data/trac/logs"
+
 exit 0
