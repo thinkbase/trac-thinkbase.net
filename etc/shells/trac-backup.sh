@@ -13,7 +13,7 @@ source /private/git-tokens.conf
 set -x
 
 echo "PATH=${PATH}"
-export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 rm -rfv /data/trac/backup/.old
 
