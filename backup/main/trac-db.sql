@@ -46308,6 +46308,38 @@ docker build --force-rm -t trac-thinkbase.net:1.0 .
 #!sh
 docker run -d -p 80:8080 -v ~/trac/private:/private --name trac-tk trac-thinkbase.net:1.0
 }}}',1468104752,1468131973,'','thinkbase','thinkbase','docker trac portable thinkbase.net');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160709-2244',7,'We are back ! - 现在 thinkbase.net 运行在 Docker 之上','[https://github.com/thinkbase/PortableTrac PortableTrac] 已经支持 Linux（从 https://github.com/thinkbase/PortableTrac/commit/bc2702cc9ed56f566a43b9d00137ae81dafdb395 开始），于是 http://thinkbase.net 终于迁移到 Linux 上，并且使用 [https://www.docker.com Docker] 来进行运行环境。
+
+基于 Docker 容器技术，要运行 thinkbase.net 的 Trac 系统只需要如下简单的几步即可：
+ 1. 在服务器上安装 docker:
+{{{
+#!sh
+# 安装 docker.io
+sudo apt-get install docker.io
+
+# 将当前用户加入 docker 组，以便非 root 用户也可以使用 docker
+sudo gpasswd -a ${USER} docker
+sudo service docker restart
+}}}
+
+ 2. 从 github 获取相关的 Dockerfile，构建运行镜像
+{{{
+#!sh
+# [运行目录: ~/github$] - 获取需要的 Dockerfile 定义
+git clone -v --progress https://github.com/thinkbase/Dockerfiles
+
+# [运行目录: ~/github/Dockerfiles/01-init/01-ubuntu14.04$] - 构建基于 ubuntu 的基础镜像
+docker build --force-rm -t ubuntu:14.04-sshd .
+
+# [运行目录: ~/github/Dockerfiles/90-servers/trac-thinkbase.net$] - 构建 thinkbase.net trac 镜像
+docker build --force-rm -t trac-thinkbase.net:1.0 .
+}}}
+
+ 3. 下面就可以创建容器并运行了：
+{{{
+#!sh
+docker run -d -p 80:8080 -v ~/trac/private:/private --name trac-tk trac-thinkbase.net:1.0
+}}}',1468104752,1468137281,'','thinkbase','thinkbase','docker trac portable thinkbase.net linux');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
