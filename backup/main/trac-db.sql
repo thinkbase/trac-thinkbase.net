@@ -51,6 +51,7 @@ CREATE TABLE auth_cookie (
 INSERT INTO "auth_cookie" VALUES('19aa888b9faffe9575bda74d1d112ff9','thinkbase','61.171.92.220',1468104252);
 INSERT INTO "auth_cookie" VALUES('3fb503e4b5cb4e308ccdbe7f60e9cd03','admin','61.171.92.220',1468128659);
 INSERT INTO "auth_cookie" VALUES('75f466e7a9344098a560b3dd3647eb82','thinkbase','61.171.92.220',1468131957);
+INSERT INTO "auth_cookie" VALUES('887b8eeaa191e5fb5a7fa0c62e83819f','admin','61.171.92.220',1468339337);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -358,6 +359,13 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-20130627-1456','PortableTrac-Q
 INSERT INTO "attachment" VALUES('wiki','misc/NetworkDigest','www.guokr.com_article_38500.png',180398,1382760102119000,'','thinkbase','180.172.84.38');
 INSERT INTO "attachment" VALUES('wiki','misc/NetworkDigest','PHOT6KCR0016030U_9KIVFQAQ.html.txt',2813,1391867584732000,'','thinkbase','180.158.230.54');
 INSERT INTO "attachment" VALUES('wiki','misc/NetworkDigest','软件开发生命周期.jpg',282449,1423675752178000,'','thinkbase','180.158.234.173');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-092506-创建一个github.io对应的repository.png',70504,1468340607275407,'','thinkbase','61.171.92.220');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-092617-开始自动创建Page.png',99336,1468340616697637,'','thinkbase','61.171.92.220');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-092808-编写自动创建Page的内容.png',87138,1468340625729023,'','thinkbase','61.171.92.220');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-092858-选择页面风格.png',222017,1468340635347037,'','thinkbase','61.171.92.220');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-094731-为了使用域名访问-需要指定CNAME.png',84110,1468340642968262,'','thinkbase','61.171.92.220');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-100900-DNS设置.png',118072,1468340650540186,'','thinkbase','61.171.92.220');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-100914-关于DNS设置的说明.png',130965,1468340657360382,'','thinkbase','61.171.92.220');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -46349,6 +46357,117 @@ docker build --force-rm -t trac-thinkbase.net:1.0 .
 #!sh
 docker run -d -p 80:8080 -v ~/trac/private:/private --name trac-tk trac-thinkbase.net:1.0
 }}}',1468104752,1468137281,'','thinkbase','thinkbase','docker trac portable thinkbase.net linux');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160712-1602',1,'将自己的域名绑定到 GitHub Pages','以近期实现的一个站点 http://bizobj.org/ 为例，记录一下如何实现将自己的域名绑定到 Github 的 `Pages`。
+
+=== 首先，在你的 github 中建立一个 `域名.github.io` 的库 ===
+[[Image(20160311-092506-创建一个github.io对应的repository.png, width=100%)]]
+
+=== 建立过程中，可以使用系统的自动创建 Page 的功能 ====
+[[Image(20160311-092617-开始自动创建Page.png, width=100%)]]
+
+=== 可以直接在页面上使用 markdown 语法编辑页面内容 ===
+[[Image(20160311-092808-编写自动创建Page的内容.png, width=100%)]]
+
+=== 然后可以选择页面风格 ===
+[[Image(20160311-092858-选择页面风格.png, width=100%)]]
+
+=== 为了可以直接使用你自己的域名访问，需要编写一个 `CNAME` 文件，内容就是域名 ===
+[[Image(20160311-094731-为了使用域名访问-需要指定CNAME.png, width=100%)]]
+
+=== 然后去设置你的 DSN 指向 github 吧 ===
+[[Image(20160311-100900-DNS设置.png, width=100%)]]
+
+=== 具体 DSN 应该指向哪个 IP，github 提供的相关的帮助说明 ===
+[[Image(20160311-100914-关于DNS设置的说明.png, width=100%)]]
+',1468340581,1468340581,'','thinkbase','thinkbase','github bizobj.org');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160712-1602',2,'将自己的域名绑定到 GitHub Pages','以近期实现的一个站点 http://bizobj.org/ 为例，记录一下如何实现将自己的域名绑定到 Github 的 `Pages`。
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 首先，在你的 github 中建立一个 `域名.github.io` 的库 ====
+[[Image(20160311-092506-创建一个github.io对应的repository.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 建立过程中，可以使用系统的自动创建 Page 的功能 ====
+[[Image(20160311-092617-开始自动创建Page.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 可以直接在页面上使用 markdown 语法编辑页面内容 ====
+[[Image(20160311-092808-编写自动创建Page的内容.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 然后可以选择页面风格 ====
+[[Image(20160311-092858-选择页面风格.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 为了可以直接使用你自己的域名访问，需要编写一个 `CNAME` 文件，内容就是域名 ====
+[[Image(20160311-094731-为了使用域名访问-需要指定CNAME.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 然后去设置你的 DSN 指向 github 吧 ====
+[[Image(20160311-100900-DNS设置.png, width=100%)]]
+}}}
+
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 具体 DSN 应该指向哪个 IP，github 提供的相关的帮助说明 ====
+[[Image(20160311-100914-关于DNS设置的说明.png, width=100%)]]
+}}}',1468340581,1468341563,'','thinkbase','thinkbase','github bizobj.org');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160712-1602',3,'将自己的域名绑定到 GitHub Pages','以近期实现的一个站点 http://bizobj.org/ 为例，记录一下如何实现将自己的域名绑定到 Github 的 `Pages`。
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 首先，在你的 github 中建立一个 `域名.github.io` 的库 ====
+[[Image(20160311-092506-创建一个github.io对应的repository.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 建立过程中，可以使用系统的自动创建 Page 的功能 ====
+[[Image(20160311-092617-开始自动创建Page.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 可以直接在网页上使用 markdown 语法编辑页面内容 ====
+[[Image(20160311-092808-编写自动创建Page的内容.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 然后可以选择页面风格 ====
+[[Image(20160311-092858-选择页面风格.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 为了可以直接使用你自己的域名访问，需要编写一个 `CNAME` 文件，内容就是域名 ====
+[[Image(20160311-094731-为了使用域名访问-需要指定CNAME.png, width=100%)]]
+}}}
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 然后去设置你的 DSN 指向 github 吧 ====
+[[Image(20160311-100900-DNS设置.png, width=100%)]]
+}}}
+
+
+{{{
+#!div style="border:1pt dotted green; background-color:#ffd; padding:3px; margin-bottom:2em"
+==== 具体 DSN 应该指向哪个 IP，github 提供了相关的帮助说明 ====
+[[Image(20160311-100914-关于DNS设置的说明.png, width=100%)]]
+}}}',1468340581,1468341882,'','thinkbase','thinkbase','github bizobj.org');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
