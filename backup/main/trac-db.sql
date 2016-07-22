@@ -48,9 +48,6 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('19aa888b9faffe9575bda74d1d112ff9','thinkbase','61.171.92.220',1468104252);
-INSERT INTO "auth_cookie" VALUES('3fb503e4b5cb4e308ccdbe7f60e9cd03','admin','61.171.92.220',1468128659);
-INSERT INTO "auth_cookie" VALUES('75f466e7a9344098a560b3dd3647eb82','thinkbase','61.171.92.220',1468131957);
 INSERT INTO "auth_cookie" VALUES('887b8eeaa191e5fb5a7fa0c62e83819f','admin','61.171.92.220',1468339337);
 CREATE TABLE session (
     sid text,
@@ -59,7 +56,7 @@ CREATE TABLE session (
     UNIQUE (sid,authenticated)
 );
 INSERT INTO "session" VALUES('admin',1,1468124835);
-INSERT INTO "session" VALUES('thinkbase',1,1468620766);
+INSERT INTO "session" VALUES('thinkbase',1,1469139681);
 INSERT INTO "session" VALUES('d9f62b3bb5c55782ac81da02',0,1468117142);
 INSERT INTO "session" VALUES('741538e6a87136e9d9d740c8',0,1468125895);
 INSERT INTO "session" VALUES('b8bdd08845d51e09e48a0e34',0,1468132099);
@@ -70,11 +67,14 @@ INSERT INTO "session" VALUES('605c22c75d15e8954b851767',0,1468437407);
 INSERT INTO "session" VALUES('8a2a0165e572f8a6e01ad6f7',0,1468469561);
 INSERT INTO "session" VALUES('43ef5cf95a6566f475d4547f',0,1468471357);
 INSERT INTO "session" VALUES('a937e289c18484a00e5fe0a1',0,1468477889);
-INSERT INTO "session" VALUES('5fce21f4bdeda5c88847d62f',0,1468974958);
+INSERT INTO "session" VALUES('5fce21f4bdeda5c88847d62f',0,1469143784);
 INSERT INTO "session" VALUES('07c750bdbd091bcb8c62cf92',0,1468648111);
 INSERT INTO "session" VALUES('a02c41724d0dcddea8b30950',0,1468740900);
 INSERT INTO "session" VALUES('87491fcf98a87b07c9a2cabb',0,1468742460);
 INSERT INTO "session" VALUES('db717fb1df927d5055e48b6b',0,1469106394);
+INSERT INTO "session" VALUES('6c3bf9930203771a907671be',0,1469169204);
+INSERT INTO "session" VALUES('b62d011ddf3071d018c299f0',0,1469169391);
+INSERT INTO "session" VALUES('5cf2f23ece0fecf88c81d050',0,1469169420);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -110,6 +110,14 @@ INSERT INTO "session_attribute" VALUES('43ef5cf95a6566f475d4547f',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('43ef5cf95a6566f475d4547f',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('a937e289c18484a00e5fe0a1',0,'timeline.lastvisit','1468440016000000');
 INSERT INTO "session_attribute" VALUES('a937e289c18484a00e5fe0a1',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('07c750bdbd091bcb8c62cf92',0,'timeline.lastvisit','1468620903385613');
+INSERT INTO "session_attribute" VALUES('07c750bdbd091bcb8c62cf92',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a02c41724d0dcddea8b30950',0,'timeline.lastvisit','1468656015000000');
+INSERT INTO "session_attribute" VALUES('a02c41724d0dcddea8b30950',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('87491fcf98a87b07c9a2cabb',0,'timeline.lastvisit','1468656015000000');
+INSERT INTO "session_attribute" VALUES('87491fcf98a87b07c9a2cabb',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('db717fb1df927d5055e48b6b',0,'timeline.lastvisit','1469088019000000');
+INSERT INTO "session_attribute" VALUES('db717fb1df927d5055e48b6b',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignorewhitespace','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'name','thinkbase');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'timeline.lastvisit','1399624548265000');
@@ -118,16 +126,14 @@ INSERT INTO "session_attribute" VALUES('thinkbase',1,'shown_vote_message','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'wiki_editrows','16');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignoreblanklines','1');
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
-INSERT INTO "session_attribute" VALUES('07c750bdbd091bcb8c62cf92',0,'timeline.lastvisit','1468620903385613');
-INSERT INTO "session_attribute" VALUES('07c750bdbd091bcb8c62cf92',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('a02c41724d0dcddea8b30950',0,'timeline.lastvisit','1468656015000000');
-INSERT INTO "session_attribute" VALUES('a02c41724d0dcddea8b30950',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('87491fcf98a87b07c9a2cabb',0,'timeline.lastvisit','1468656015000000');
-INSERT INTO "session_attribute" VALUES('87491fcf98a87b07c9a2cabb',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('5fce21f4bdeda5c88847d62f',0,'timeline.lastvisit','1468958450000000');
-INSERT INTO "session_attribute" VALUES('5fce21f4bdeda5c88847d62f',0,'timeline.nextlastvisit','1468656015000000');
-INSERT INTO "session_attribute" VALUES('db717fb1df927d5055e48b6b',0,'timeline.lastvisit','1469088019000000');
-INSERT INTO "session_attribute" VALUES('db717fb1df927d5055e48b6b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('5fce21f4bdeda5c88847d62f',0,'timeline.lastvisit','1469140304561825');
+INSERT INTO "session_attribute" VALUES('5fce21f4bdeda5c88847d62f',0,'timeline.nextlastvisit','1468958450000000');
+INSERT INTO "session_attribute" VALUES('6c3bf9930203771a907671be',0,'timeline.lastvisit','1469143953000000');
+INSERT INTO "session_attribute" VALUES('6c3bf9930203771a907671be',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b62d011ddf3071d018c299f0',0,'timeline.lastvisit','1469143953000000');
+INSERT INTO "session_attribute" VALUES('b62d011ddf3071d018c299f0',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('5cf2f23ece0fecf88c81d050',0,'timeline.lastvisit','1469143953000000');
+INSERT INTO "session_attribute" VALUES('5cf2f23ece0fecf88c81d050',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -393,6 +399,8 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-09285
 INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-094731-为了使用域名访问-需要指定CNAME.png',84110,1468340642968262,'','thinkbase','61.171.92.220');
 INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-100900-DNS设置.png',118072,1468340650540186,'','thinkbase','61.171.92.220');
 INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-100914-关于DNS设置的说明.png',130965,1468340657360382,'','thinkbase','61.171.92.220');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20160721-2156','Home_-_2015-04-02_23.48.02.png',181167,1469139242570708,'','thinkbase','112.65.167.174');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20160721-2156','codehaus-the-once-great-house-of-code-has-fallen.html.pdf',144687,1469139448112996,'','thinkbase','112.65.167.174');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -39438,6 +39446,709 @@ INSERT INTO "wiki" VALUES('misc/NetworkDigest',56,1468620903385613,'thinkbase','
  - 简单说，如果我们从食物中获得的蛋白质超过了建造身体和维持运转这些“高级任务”的需求量，多余的那部分就可能被当做燃料消耗掉或者是变成脂肪储存起来。{{{就像你一下子有了好几部iPhone，闲置浪费总是不好的，于是拿出一部来带在身上专门做镜子用。}}}
  - 来自 [http://songshuhui.net/archives/95854 科学松鼠会 » 是什么吃胖了我们（3） 蛋白质:]
 == END ==','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',57,1469139681005088,'thinkbase','112.65.167.174','[[PageOutline]]
+= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+==== 当你在开源的世界里提倡用脚走路时... ====
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+==== 其实linux很不自由啊... ====
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+==== 类似LZ的喷法还有很多 ... ====
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+==== 玛雅历法预言末日 ====
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
+  - [[Image(玛雅历法预言末日.jpg)]]
+==== 这篇文章更多的是表达一种愿望 ... ====
+ - {{{这篇文章更多的是表达一种愿望，而不是现状：）}}}
+  - 来自 [http://www.oschina.net/translate/eight-reasons-c-sharp-is-the-best-language-for-mobile-development 8 个理由说明为什么 C# 是移动开发的最佳语言 - 开源中国社区]
+==== 如果你要Baidu的话 ... ====
+ - {{{如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭}}}
+  - 来自 [http://coolshell.cn/articles/8883.html 应该知道的Linux技巧 - 酷壳 – CoolShell.cn]
+==== 比不动脑子更可怕的 ... ====
+ - {{{人最可怕的，是不动脑子。比不动脑子更可怕的，是想的太多。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2821609#p2821609 linux世界里那蛋疼的命名 - 查看主题 • Ubuntu中文论坛:]
+==== 请勿跨村、跨乡、跨县、... 跨太阳系、跨时空实施抓捕。 ====
+ - {{{- 以上内容全部来自互联网，本人并不识字，完全复制粘贴。}}}[[BR]]{{{- 看帖者请于24小时内自觉、主动、完全忘记。}}}[[BR]]{{{- 跟帖行为并不意味本人同意、支持、反对，或了解、知晓文中观点，如有任何疑问请直接联系原作者本人。故本人不对以上内容负法律责任（包括民法、刑法或婚姻法，及文中提及或未提及之法律），请勿跨村、跨乡、跨县、跨市、跨省、跨国、跨地球、跨太阳系、跨时空实施抓捕。}}}[[BR]]{{{- 谢谢合作! }}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=1721779#p1721779 汉语编程 与“来自中国的恐慌” - 查看主题 • Ubuntu中文论坛:]''''(当然, 这个也不是原创)''''
+==== Python 不小心出了 2.6.4 版本 ... ====
+ - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
+  - [[Image(Screenshot-Python-OSChina.NET.png)]]
+  - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 - 开源中国 OSChina.NET: 之 31 楼]
+==== 为什么Lisp没有流行起来 ... ====
+ - {{{——你喜欢函数式编程？}}}[[BR]]{{{——是啊。}}}[[BR]]{{{——太好了我也是，你喜欢 Erlang 、Lua 、Lisp 还是 Haskell ？}}}[[BR]]{{{—— Lisp 。}}}[[BR]]{{{——太好了我也是，你喜欢 Common Lisp 、Emacs Lisp 、Scheme 还是 Clojure ？}}}[[BR]]{{{—— Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 MIT Scheme 、MzScheme 、DrScheme 还是 Guile ？}}}[[BR]]{{{—— MIT Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 7.5 版还是 7.4 版？}}}[[BR]]{{{—— 7.5 。}}}[[BR]]{{{——滚！异端！}}}
+  - 来自 [http://www.oschina.net/translate/why_lisp_failed?p=1#rpl_2803 为什么Lisp没有流行起来 - 技术翻译 - 开源中国 OSChina.NET: 之 9 楼]
+==== ... 就像在一个小空间内塞满一群性格阴郁的少年 ====
+ - {{{摩尔定律规定：我们芯片上的晶体管数量每隔18个月翻一倍。然而芯片行业已经翻倍到了极限——现在那些小芯片上的晶体管就像在一个小空间内塞满一群性格阴郁的少年。}}}
+  - 来自 [http://www.csdn.net/article/2013-03-22/2814599-ibm-rethinks-the-transistor-to-keep-scaling-compute-power 传IBM重新设计晶体管 预计五至七年内成熟-CSDN.NET:]
+==== 如果把地球上的病毒首尾相接 ... ====
+ - {{{“……如果把地球上的病毒首尾相接，能连成一条2亿光年的长链……”}}}[[BR]]{{{2x10^24米}}}[[BR]]{{{假设病毒链的直径是20nm(横截面1.2x10^-15平方米)}}}[[BR]]{{{那么总体积就是2.4x10^9立方米}}}[[BR]]{{{假设密度和水相同，就是24亿吨}}}[[BR]]{{{比磷虾还要多一些。。。}}}
+  - 来自 [http://songshuhui.net/archives/79183#comment-400085 科学松鼠会 » 小病毒 大能耐: 之 "100 说道:"]
+==== 任何应用都可以 ... 并最终也会由JavaScript编写 ====
+ - {{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+  - 来自 [http://www.infoq.com/cn/news/2013/03/git-in-javascript InfoQ - JavaScript Git的Kickstarter项目仅28小时达到集资目标:] [http://creationix.com/ Tim Caswell]{{{是多个JavaScript和Node.js社区的知名成员，他提出了一个使用JavaScript来重新实现Git的建议。}}}[http://www.kickstarter.com/projects/creationix/js-git 并将该项目放到了Kickstarter（译者注：Kickstarter是一个对个人创意项目进行公众集资（捐赠）从而获得资金支持的网络平台）上进行集资，结果仅仅在28小时内就获得了超过360人的资助。]{{{该项目再一次应证了}}}[http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html Atwood定律：]{{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+==== 这就是牛人和我们的差别 ... ====
+ - {{{这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题}}}
+  - 来自 [http://www.oschina.net/news/39858/fast-database-emerges-from-mit-class-gpus-and-students-invention?p=3#rpl_273342499 哈佛/MIT学生创造GPU数据库，性能提升70倍 - 开源中国 OSChina.NET:]
+{{{
+#!div
+''''''43楼：suifengsuoyu 发表于 2013-04-23 18:21''''''
+> 引用来自“unnamed”的评论
+> 难道写个数据库的时间还不够他处理那些数据？我觉得处理个几十次应该都够了吧
+这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题
+}}}
+==== 只有猪和变态控制狂类型的程序员才会 ... ====
+ - {{{今天的苹果核google都是控制狂类型的公司。苹果不说了，google干的好事一桩：win下的chrome一直只是测试用的，firefox安装的是自己选择的flash player版本，结果2次chrome大版本升级，2次都将firefox的flash player强制插入了与其一致的最新的11版。这种“狗拿耗子”，在禁用google update插件情况下偷偷摸摸“自作聪明”的小伎俩也是今天google的程序员们的最爱。更别提什么把系统启动时进程常驻内存，骗取用户”chrome启动很快“，linux下想直接下载个for win的chrome都要和网页斗半天，否则它认准你只能下载 for linux版的。每每这种时候都有一种”你以为你是谁啊，猪啊！“的感觉，只有猪和变态控制狂类型的程序员才会以为自己永远知道别人想的是什么。。。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2966467#p2966467 苹果公司的邪恶 - 查看主题 • Ubuntu中文论坛:]
+==== 零下40度 ... 这是一个神奇的数值 ====
+ - {{{在他刚跳下不久的高度，气温大概是零下40度。这是一个神奇的数值，因为不需要指出其单位是摄氏还是华氏——数值在两种单位下都一样}}}
+  - 来自 [http://songshuhui.net/archives/78125 "科学松鼠会 » [What if]第28期——天上掉下来一块牛排排:"]
+==== ... 我们那里的CB不是这样的 ====
+ - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
+  - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]
+==== ... 而解决这些问题的方法就是再引入一个新的兼容层 ====
+ - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
+  - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]
+==== 令人食欲大振……当然振过就算了 ====
+ - {{{我曾经用致命白毒伞和大蒜同煮，结果汤色清亮，大蒜颗颗雪白，兼之鲜香四溢，令人食欲大振……当然振过就算了。}}}
+  - 来自 [http://songshuhui.net/archives/83379 科学松鼠会 » 辨别毒蘑菇，民间传说不可信:]
+==== 歌者是微软好不？ ====
+ - {{{歌者是微软好不？在到处搞二维化}}}
+  - 来自 [http://tieba.baidu.com/p/2538725451 【水】其实三体人已经潜伏地球多年_三体吧_百度贴吧:]
+==== 一款好手机必须具备以下条件： 首先 ... ====
+ - {{{一款好手机必须具备以下条件： 首先，得能买到……}}}
+  - 来自 [http://www.cnbeta.com/articles/251442.htm "[图]魅族MX3获入网许可_Meizu 魅族_cnBeta.COM:"],,''''(的评论)'''',,
+==== 本人擅长 ..., 精通 ..., 熟悉 ... ====
+ - {{{本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、PS等软件的安装与卸载，精通CSS、JavaScript、PHP、C、C＋＋、java、Ruby、Perl、Lisp、python、Objective-C、ActionScript等单词的拼写，熟悉windows、Linux、Mac、Android、IOS等系统的开关机 。}}}
+  - 来自 [http://tieba.baidu.com/p/2622689705#39598512972 自己通宵在机场，想睡觉还有装修的，太苦逼了_三体吧_百度贴吧:] 第 `5` 楼;
+==== CTHD ====
+ - {{{所以要是有机会去国外的录像带店逛，看到名字拖的老长老长，甭问，90％是中国电影。唯一的例外大概就是那部Crouching Tiger and Hidden Dragon《卧虎藏龙》，也不知老外念着绕不绕嘴。反正我单知道新西兰电影院很郁闷，他们的横条信息屏幕显示不下，于是干脆简称为CTHD。}}}
+  - 来自 [http://www.guokr.com/question/507637/#answer580156 你看到过哪些奇葩的翻译？ | 问答 | 果壳网 科技有意思:] 的 `某一楼`;
+==== 世界上最远的距离 ... ====
+ - {{{易碎双腔龙：世界上最远的距离不是天涯海角，而是我的咽喉到大脑。}}}
+ - [[Image(www.guokr.com_article_38500.png)]]
+ - 来自 [http://www.guokr.com/article/38500/ 喉返神经：进化走的弯路 | 环球科技观光团主题站 | 果壳网 科技有意思:]
+==== 神烦的蛇精病…… ====
+ - {{{看到这里，想必你的系统1已经有了结论：写这篇文章的人不知是好是坏，但应该是个神烦的蛇精病……}}}
+ - {{{拉姆斯菲尔德曾说过一段被群嘲但其实有道理的名言：“我们都知道自己知道一些事，有些事我们知道我们已经知道。我们同时知道我们不知道一些事，就是说，有些事我们知道我们不知道。但我们并不知道有些事情我们其实不知道，有些事我们真的不知道我们不知道。”}}}
+ - 来自 [http://songshuhui.net/archives/87220 科学松鼠会 » 为何笨蛋有自信:]
+==== 在不确定是否会赢的情况下，绝对不要拔剑 ====
+ - {{{最后的结论： 作为资深程序员，最优雅的方式就是尽可能地指出不好的地方，但绝对不要实际参与改进。 兵无常势水无常形，在不确定是否会赢的情况下，绝对不要拔剑。}}}
+ - 来自 [http://www.cnblogs.com/XiaoXiami142/p/3508642.html 为什么所有的架构都是糟糕的 - @小虾米@ - 博客园:]
+==== 这个系统复杂已经爆了几十块表 ====
+ - {{{如何避免飞机相撞本身已是个复杂度爆表的问题，为了解决这个问题而被设计出的这个系统复杂已经爆了几十块表，相信没有人能够真正理解这套系统，所以即便是这方面的专业人士有时也会对系统做出的反馈给吓到。这不断攀升的复杂程度也正是当代社会的普遍现象。人类无法理解的系统正在保护我们的安全，科技发展到了接受检验的节点。}}}
+ - 来自 [http://www.cnbeta.com/articles/267678.htm 世界已经太复杂，人类科技发展到极限了吗？_cnBeta 视点观察_cnBeta.COM:]
+==== 这就是滥服药物的害处 ====
+ - {{{伴随着企业的这种管理上的和发展上的痛处，信息化企业也飞速发展，就如同肥胖人群多了，医疗机构，保健机构，甚至江湖郎中也火了一样，或许比喻不够恰当，那就领会精神吧，}}}
+ - {{{所以企业实施了各种各样的应用系统之后，问题也随之而来，这就是滥服药物的害处，目前急需一种应用平台可以中和这些系统，那么这就是BPM基础软件。}}}
+ - 来自 [http://www.cnblogs.com/Reedzhang/p/ReedZhang.html k2之于.NET流程应用开发者 - Reed Zhang - 博客园:]
+==== C语言的奇技淫巧大都是汇编程序员发明的 ... ====
+ - {{{C语言的奇技淫巧大都是汇编程序员发明的，因为正常的C在他们眼中就是大便……}}}
+ - 来自 [http://coolshell.cn/articles/10975.html#comment-1233261 一个“蝇量级” C 语言协程库 | 酷 壳 - CoolShell.cn:]
+==== 给中国孩子和美国孩子一杯水 ... ====
+ - {{{曾经有教育家做了一个实验，给中国孩子和美国孩子一杯水，让他们不用火就让水沸腾起来。中国小孩 ...}}}, 后面的太长，见 [attachment:PHOT6KCR0016030U_9KIVFQAQ.html.txt 这里] ;
+ - 来自 [http://comment.digi.163.com/photoview_bbs/PHOT6KCR0016030U/9KIVFQAQ.html 那些消失的笔记本电脑品牌_图集跟贴_网易跟贴:]
+==== 如果你造的是飞机上的马桶 ... ====
+ - {{{如果你造的是飞机上的马桶，你不需要知道为什么飞机会飞起来。但如果飞机总设计师，不知到飞机是怎么飞起来的是要出人命的。}}}
+ - 来自 [http://www.oschina.net/news/49241/programmer-rely-ide?p=2#rpl_278693244 依靠 IDE 会让你变成一位差劲的程序员吗？ - 开源中国社区: 第 39 楼]
+==== 在以智商闻名的鹦鹉界是一朵奇葩 ... ====
+ - {{{Kakapo其实是毛利语，这种鹦鹉在以智商闻名的鹦鹉界是一朵奇葩，常常不能意识到自己不会飞，然后从树上跳下来摔到自己。}}}
+ - 来自 [http://jandan.net/2014/03/05/strigops-habroptila.html#comment-2342897 煎蛋 - 鸟中宠物狗鸮鹦鹉: 第 15 楼]
+==== 快成阿里云专业陪练了 ====
+ - 来自 [http://www.cnblogs.com/cmt/p/3716523.html#2935069 云计算之路-阿里云上：“黑色30秒”走了，﻿“黑色1秒”来了，真相也许大白了 - 博客园团队 - 博客园: 第 16 楼]
+==== 典型的互相对抄然后都掉坑里的场面 ====
+ - {{{以前快嘀打车喊车后会正向计时，嘀嘀打车会有90秒倒计时；最近两个app都改版了，快嘀改成倒计时了，嘀嘀改成正向计时了。这应该就是典型的互相对抄然后都掉坑里的场面。不知道当初做决定的两个产品经理怎么面对对手的改版和自己的同事。}}}
+ - 来自 [http://weibo.com/2123664205/B520es1Rw 英式没品笑话百科的微博|微博-随时随地分享身边的新鲜事儿:]
+==== ubuntu及其他发行版都是不错的中文社区？ ====
+ - {{{ubuntu中文社区难道就不是ubuntu的广告了吗？}}}[[BR]]{{{你所定义的广告，在我看来只是一种linux发行版的推广而已。linux用户要不就说推广不够，做了推广又说是广告。那请你给出一个既不是广告又可以推广linux的方法？}}}[[BR]]{{{难道ubuntu社区的名字要改成——ubuntu及其他发行版都是不错的中文社区？}}}
+ - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=3062393#p3062393 质疑deepin算不算国内一枝独秀的发行版 - 查看主题 • Ubuntu中文论坛: 第 66 楼]
+==== 更‘大’更‘好’的傻瓜 ====
+ - {{{如今的编程是一场程序员和上帝的竞赛，程序员企图开发出来更好更大的傻瓜都会用的软件，而上帝总能创造出更‘大’更‘好’的傻瓜，所以，上帝总是赢。}}}
+ - 来自 [http://www.oschina.net/news/53654/how-client-use-their-software?p=3#rpl_281085215 在程序员的眼里，用户是这样使用他们开发的软件的 - 开源中国社区: 第 54 楼]
+==== 有种倒是弄个棍子不用翅膀就飞啊 ====
+ - {{{起落架，收入翼根，那是抄袭F35,SU27，收入侧面，那是抄袭F22，收入底部那是抄袭F15，要是老子一咬牙一跺脚，装到机翼上去，那你就是抄袭EF2000,F4,MIG15，还有J8,重要的是有种别用米其林轮胎，给套双解放鞋，你才是自主设计，还不算创新。}}}
+ - {{{进气道，你要用皮托管，那你是抄袭F16，用二元可调是抄袭F15,用3元是抄袭T50,用加莱特是抄袭F22,用DSI是抄袭F35，你要是一怒之下不用进气道，直接暴露空气中，那你是抄袭波音707。}}}
+ - {{{你用鸭翼是抄袭阵风台风后者是以色列的狮，你用三翼面是抄袭SU35，你用正常布局那肯定是抄袭F15,16,22，要是用四个翅膀不用传统布局了，那肯定是抄袭卢卡斯，你要是敢造个飞碟出来，那你丫肯定是抄袭斯皮尔伯格 ，有种倒是弄个棍子不用翅膀就飞啊，对了，那还是抄袭哈利波特。}}}
+ - 来自 [http://jandan.net/2012/05/16/chinas-fifth-ge.html 国内观光：成都造第二代歼-20试飞:] 评论之 `河马和马 无责任搬运`
+==== 软件开发的生命周期 ====
+ - {{{... 技术团队时间评估需要 1.2 年 ... 领导发话：“互联网精神————先上线，再迭代，给技术团队一个月的时间造桥” ...}}}
+ - 图在这里 [attachment:软件开发生命周期.jpg 软件开发生命周期.jpg]
+ - 来自 [http://my.oschina.net/xxiaobian/blog/361782 OSChina 周一乱弹 —— 软件开发的生命周期 - 小小编辑的个人空间 - 开源中国社区:]
+==== 闲置浪费总是不好的 ====
+ - 简单说，如果我们从食物中获得的蛋白质超过了建造身体和维持运转这些“高级任务”的需求量，多余的那部分就可能被当做燃料消耗掉或者是变成脂肪储存起来。{{{就像你一下子有了好几部iPhone，闲置浪费总是不好的，于是拿出一部来带在身上专门做镜子用。}}}
+ - 来自 [http://songshuhui.net/archives/95854 科学松鼠会 » 是什么吃胖了我们（3） 蛋白质:]
+==== 你不是他们的客户，而是他们的产品 ====
+ - {{{如果商家为你提供免费服务，那么你就不是他们的客户，而是他们的产品}}}
+ - 来自 [http://www.appinn.com/winrar-cn-free/#comment-362346 WinRAR 中文个人版正式免费[Win] - 小众软件:, 2015/05/24 12:37 的某条评论]
+== END ==','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',58,1469139726163051,'thinkbase','112.65.167.174','[[PageOutline]]
+= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+==== 当你在开源的世界里提倡用脚走路时... ====
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+==== 其实linux很不自由啊... ====
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+==== 类似LZ的喷法还有很多 ... ====
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+==== 玛雅历法预言末日 ====
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
+  - [[Image(玛雅历法预言末日.jpg)]]
+==== 这篇文章更多的是表达一种愿望 ... ====
+ - {{{这篇文章更多的是表达一种愿望，而不是现状：）}}}
+  - 来自 [http://www.oschina.net/translate/eight-reasons-c-sharp-is-the-best-language-for-mobile-development 8 个理由说明为什么 C# 是移动开发的最佳语言 - 开源中国社区]
+==== 如果你要Baidu的话 ... ====
+ - {{{如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭}}}
+  - 来自 [http://coolshell.cn/articles/8883.html 应该知道的Linux技巧 - 酷壳 – CoolShell.cn]
+==== 比不动脑子更可怕的 ... ====
+ - {{{人最可怕的，是不动脑子。比不动脑子更可怕的，是想的太多。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2821609#p2821609 linux世界里那蛋疼的命名 - 查看主题 • Ubuntu中文论坛:]
+==== 请勿跨村、跨乡、跨县、... 跨太阳系、跨时空实施抓捕。 ====
+ - {{{- 以上内容全部来自互联网，本人并不识字，完全复制粘贴。}}}[[BR]]{{{- 看帖者请于24小时内自觉、主动、完全忘记。}}}[[BR]]{{{- 跟帖行为并不意味本人同意、支持、反对，或了解、知晓文中观点，如有任何疑问请直接联系原作者本人。故本人不对以上内容负法律责任（包括民法、刑法或婚姻法，及文中提及或未提及之法律），请勿跨村、跨乡、跨县、跨市、跨省、跨国、跨地球、跨太阳系、跨时空实施抓捕。}}}[[BR]]{{{- 谢谢合作! }}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=1721779#p1721779 汉语编程 与“来自中国的恐慌” - 查看主题 • Ubuntu中文论坛:]''''(当然, 这个也不是原创)''''
+==== Python 不小心出了 2.6.4 版本 ... ====
+ - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
+  - [[Image(Screenshot-Python-OSChina.NET.png)]]
+  - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 - 开源中国 OSChina.NET: 之 31 楼]
+==== 为什么Lisp没有流行起来 ... ====
+ - {{{——你喜欢函数式编程？}}}[[BR]]{{{——是啊。}}}[[BR]]{{{——太好了我也是，你喜欢 Erlang 、Lua 、Lisp 还是 Haskell ？}}}[[BR]]{{{—— Lisp 。}}}[[BR]]{{{——太好了我也是，你喜欢 Common Lisp 、Emacs Lisp 、Scheme 还是 Clojure ？}}}[[BR]]{{{—— Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 MIT Scheme 、MzScheme 、DrScheme 还是 Guile ？}}}[[BR]]{{{—— MIT Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 7.5 版还是 7.4 版？}}}[[BR]]{{{—— 7.5 。}}}[[BR]]{{{——滚！异端！}}}
+  - 来自 [http://www.oschina.net/translate/why_lisp_failed?p=1#rpl_2803 为什么Lisp没有流行起来 - 技术翻译 - 开源中国 OSChina.NET: 之 9 楼]
+==== ... 就像在一个小空间内塞满一群性格阴郁的少年 ====
+ - {{{摩尔定律规定：我们芯片上的晶体管数量每隔18个月翻一倍。然而芯片行业已经翻倍到了极限——现在那些小芯片上的晶体管就像在一个小空间内塞满一群性格阴郁的少年。}}}
+  - 来自 [http://www.csdn.net/article/2013-03-22/2814599-ibm-rethinks-the-transistor-to-keep-scaling-compute-power 传IBM重新设计晶体管 预计五至七年内成熟-CSDN.NET:]
+==== 如果把地球上的病毒首尾相接 ... ====
+ - {{{“……如果把地球上的病毒首尾相接，能连成一条2亿光年的长链……”}}}[[BR]]{{{2x10^24米}}}[[BR]]{{{假设病毒链的直径是20nm(横截面1.2x10^-15平方米)}}}[[BR]]{{{那么总体积就是2.4x10^9立方米}}}[[BR]]{{{假设密度和水相同，就是24亿吨}}}[[BR]]{{{比磷虾还要多一些。。。}}}
+  - 来自 [http://songshuhui.net/archives/79183#comment-400085 科学松鼠会 » 小病毒 大能耐: 之 "100 说道:"]
+==== 任何应用都可以 ... 并最终也会由JavaScript编写 ====
+ - {{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+  - 来自 [http://www.infoq.com/cn/news/2013/03/git-in-javascript InfoQ - JavaScript Git的Kickstarter项目仅28小时达到集资目标:] [http://creationix.com/ Tim Caswell]{{{是多个JavaScript和Node.js社区的知名成员，他提出了一个使用JavaScript来重新实现Git的建议。}}}[http://www.kickstarter.com/projects/creationix/js-git 并将该项目放到了Kickstarter（译者注：Kickstarter是一个对个人创意项目进行公众集资（捐赠）从而获得资金支持的网络平台）上进行集资，结果仅仅在28小时内就获得了超过360人的资助。]{{{该项目再一次应证了}}}[http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html Atwood定律：]{{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+==== 这就是牛人和我们的差别 ... ====
+ - {{{这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题}}}
+  - 来自 [http://www.oschina.net/news/39858/fast-database-emerges-from-mit-class-gpus-and-students-invention?p=3#rpl_273342499 哈佛/MIT学生创造GPU数据库，性能提升70倍 - 开源中国 OSChina.NET:]
+{{{
+#!div
+''''''43楼：suifengsuoyu 发表于 2013-04-23 18:21''''''
+> 引用来自“unnamed”的评论
+> 难道写个数据库的时间还不够他处理那些数据？我觉得处理个几十次应该都够了吧
+这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题
+}}}
+==== 只有猪和变态控制狂类型的程序员才会 ... ====
+ - {{{今天的苹果核google都是控制狂类型的公司。苹果不说了，google干的好事一桩：win下的chrome一直只是测试用的，firefox安装的是自己选择的flash player版本，结果2次chrome大版本升级，2次都将firefox的flash player强制插入了与其一致的最新的11版。这种“狗拿耗子”，在禁用google update插件情况下偷偷摸摸“自作聪明”的小伎俩也是今天google的程序员们的最爱。更别提什么把系统启动时进程常驻内存，骗取用户”chrome启动很快“，linux下想直接下载个for win的chrome都要和网页斗半天，否则它认准你只能下载 for linux版的。每每这种时候都有一种”你以为你是谁啊，猪啊！“的感觉，只有猪和变态控制狂类型的程序员才会以为自己永远知道别人想的是什么。。。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2966467#p2966467 苹果公司的邪恶 - 查看主题 • Ubuntu中文论坛:]
+==== 零下40度 ... 这是一个神奇的数值 ====
+ - {{{在他刚跳下不久的高度，气温大概是零下40度。这是一个神奇的数值，因为不需要指出其单位是摄氏还是华氏——数值在两种单位下都一样}}}
+  - 来自 [http://songshuhui.net/archives/78125 "科学松鼠会 » [What if]第28期——天上掉下来一块牛排排:"]
+==== ... 我们那里的CB不是这样的 ====
+ - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
+  - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]
+==== ... 而解决这些问题的方法就是再引入一个新的兼容层 ====
+ - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
+  - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]
+==== 令人食欲大振……当然振过就算了 ====
+ - {{{我曾经用致命白毒伞和大蒜同煮，结果汤色清亮，大蒜颗颗雪白，兼之鲜香四溢，令人食欲大振……当然振过就算了。}}}
+  - 来自 [http://songshuhui.net/archives/83379 科学松鼠会 » 辨别毒蘑菇，民间传说不可信:]
+==== 歌者是微软好不？ ====
+ - {{{歌者是微软好不？在到处搞二维化}}}
+  - 来自 [http://tieba.baidu.com/p/2538725451 【水】其实三体人已经潜伏地球多年_三体吧_百度贴吧:]
+==== 一款好手机必须具备以下条件： 首先 ... ====
+ - {{{一款好手机必须具备以下条件： 首先，得能买到……}}}
+  - 来自 [http://www.cnbeta.com/articles/251442.htm "[图]魅族MX3获入网许可_Meizu 魅族_cnBeta.COM:"],,''''(的评论)'''',,
+==== 本人擅长 ..., 精通 ..., 熟悉 ... ====
+ - {{{本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、PS等软件的安装与卸载，精通CSS、JavaScript、PHP、C、C＋＋、java、Ruby、Perl、Lisp、python、Objective-C、ActionScript等单词的拼写，熟悉windows、Linux、Mac、Android、IOS等系统的开关机 。}}}
+  - 来自 [http://tieba.baidu.com/p/2622689705#39598512972 自己通宵在机场，想睡觉还有装修的，太苦逼了_三体吧_百度贴吧:] 第 `5` 楼;
+==== CTHD ====
+ - {{{所以要是有机会去国外的录像带店逛，看到名字拖的老长老长，甭问，90％是中国电影。唯一的例外大概就是那部Crouching Tiger and Hidden Dragon《卧虎藏龙》，也不知老外念着绕不绕嘴。反正我单知道新西兰电影院很郁闷，他们的横条信息屏幕显示不下，于是干脆简称为CTHD。}}}
+  - 来自 [http://www.guokr.com/question/507637/#answer580156 你看到过哪些奇葩的翻译？ | 问答 | 果壳网 科技有意思:] 的 `某一楼`;
+==== 世界上最远的距离 ... ====
+ - {{{易碎双腔龙：世界上最远的距离不是天涯海角，而是我的咽喉到大脑。}}}
+ - [[Image(www.guokr.com_article_38500.png)]]
+ - 来自 [http://www.guokr.com/article/38500/ 喉返神经：进化走的弯路 | 环球科技观光团主题站 | 果壳网 科技有意思:]
+==== 神烦的蛇精病…… ====
+ - {{{看到这里，想必你的系统1已经有了结论：写这篇文章的人不知是好是坏，但应该是个神烦的蛇精病……}}}
+ - {{{拉姆斯菲尔德曾说过一段被群嘲但其实有道理的名言：“我们都知道自己知道一些事，有些事我们知道我们已经知道。我们同时知道我们不知道一些事，就是说，有些事我们知道我们不知道。但我们并不知道有些事情我们其实不知道，有些事我们真的不知道我们不知道。”}}}
+ - 来自 [http://songshuhui.net/archives/87220 科学松鼠会 » 为何笨蛋有自信:]
+==== 在不确定是否会赢的情况下，绝对不要拔剑 ====
+ - {{{最后的结论： 作为资深程序员，最优雅的方式就是尽可能地指出不好的地方，但绝对不要实际参与改进。 兵无常势水无常形，在不确定是否会赢的情况下，绝对不要拔剑。}}}
+ - 来自 [http://www.cnblogs.com/XiaoXiami142/p/3508642.html 为什么所有的架构都是糟糕的 - @小虾米@ - 博客园:]
+==== 这个系统复杂已经爆了几十块表 ====
+ - {{{如何避免飞机相撞本身已是个复杂度爆表的问题，为了解决这个问题而被设计出的这个系统复杂已经爆了几十块表，相信没有人能够真正理解这套系统，所以即便是这方面的专业人士有时也会对系统做出的反馈给吓到。这不断攀升的复杂程度也正是当代社会的普遍现象。人类无法理解的系统正在保护我们的安全，科技发展到了接受检验的节点。}}}
+ - 来自 [http://www.cnbeta.com/articles/267678.htm 世界已经太复杂，人类科技发展到极限了吗？_cnBeta 视点观察_cnBeta.COM:]
+==== 这就是滥服药物的害处 ====
+ - {{{伴随着企业的这种管理上的和发展上的痛处，信息化企业也飞速发展，就如同肥胖人群多了，医疗机构，保健机构，甚至江湖郎中也火了一样，或许比喻不够恰当，那就领会精神吧，}}}
+ - {{{所以企业实施了各种各样的应用系统之后，问题也随之而来，这就是滥服药物的害处，目前急需一种应用平台可以中和这些系统，那么这就是BPM基础软件。}}}
+ - 来自 [http://www.cnblogs.com/Reedzhang/p/ReedZhang.html k2之于.NET流程应用开发者 - Reed Zhang - 博客园:]
+==== C语言的奇技淫巧大都是汇编程序员发明的 ... ====
+ - {{{C语言的奇技淫巧大都是汇编程序员发明的，因为正常的C在他们眼中就是大便……}}}
+ - 来自 [http://coolshell.cn/articles/10975.html#comment-1233261 一个“蝇量级” C 语言协程库 | 酷 壳 - CoolShell.cn:]
+==== 给中国孩子和美国孩子一杯水 ... ====
+ - {{{曾经有教育家做了一个实验，给中国孩子和美国孩子一杯水，让他们不用火就让水沸腾起来。中国小孩 ...}}}, 后面的太长，见 [attachment:PHOT6KCR0016030U_9KIVFQAQ.html.txt 这里] ;
+ - 来自 [http://comment.digi.163.com/photoview_bbs/PHOT6KCR0016030U/9KIVFQAQ.html 那些消失的笔记本电脑品牌_图集跟贴_网易跟贴:]
+==== 如果你造的是飞机上的马桶 ... ====
+ - {{{如果你造的是飞机上的马桶，你不需要知道为什么飞机会飞起来。但如果飞机总设计师，不知到飞机是怎么飞起来的是要出人命的。}}}
+ - 来自 [http://www.oschina.net/news/49241/programmer-rely-ide?p=2#rpl_278693244 依靠 IDE 会让你变成一位差劲的程序员吗？ - 开源中国社区: 第 39 楼]
+==== 在以智商闻名的鹦鹉界是一朵奇葩 ... ====
+ - {{{Kakapo其实是毛利语，这种鹦鹉在以智商闻名的鹦鹉界是一朵奇葩，常常不能意识到自己不会飞，然后从树上跳下来摔到自己。}}}
+ - 来自 [http://jandan.net/2014/03/05/strigops-habroptila.html#comment-2342897 煎蛋 - 鸟中宠物狗鸮鹦鹉: 第 15 楼]
+==== 快成阿里云专业陪练了 ====
+ - 来自 [http://www.cnblogs.com/cmt/p/3716523.html#2935069 云计算之路-阿里云上：“黑色30秒”走了，﻿“黑色1秒”来了，真相也许大白了 - 博客园团队 - 博客园: 第 16 楼]
+==== 典型的互相对抄然后都掉坑里的场面 ====
+ - {{{以前快嘀打车喊车后会正向计时，嘀嘀打车会有90秒倒计时；最近两个app都改版了，快嘀改成倒计时了，嘀嘀改成正向计时了。这应该就是典型的互相对抄然后都掉坑里的场面。不知道当初做决定的两个产品经理怎么面对对手的改版和自己的同事。}}}
+ - 来自 [http://weibo.com/2123664205/B520es1Rw 英式没品笑话百科的微博|微博-随时随地分享身边的新鲜事儿:]
+==== ubuntu及其他发行版都是不错的中文社区？ ====
+ - {{{ubuntu中文社区难道就不是ubuntu的广告了吗？}}}[[BR]]{{{你所定义的广告，在我看来只是一种linux发行版的推广而已。linux用户要不就说推广不够，做了推广又说是广告。那请你给出一个既不是广告又可以推广linux的方法？}}}[[BR]]{{{难道ubuntu社区的名字要改成——ubuntu及其他发行版都是不错的中文社区？}}}
+ - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=3062393#p3062393 质疑deepin算不算国内一枝独秀的发行版 - 查看主题 • Ubuntu中文论坛: 第 66 楼]
+==== 更‘大’更‘好’的傻瓜 ====
+ - {{{如今的编程是一场程序员和上帝的竞赛，程序员企图开发出来更好更大的傻瓜都会用的软件，而上帝总能创造出更‘大’更‘好’的傻瓜，所以，上帝总是赢。}}}
+ - 来自 [http://www.oschina.net/news/53654/how-client-use-their-software?p=3#rpl_281085215 在程序员的眼里，用户是这样使用他们开发的软件的 - 开源中国社区: 第 54 楼]
+==== 有种倒是弄个棍子不用翅膀就飞啊 ====
+ - {{{起落架，收入翼根，那是抄袭F35,SU27，收入侧面，那是抄袭F22，收入底部那是抄袭F15，要是老子一咬牙一跺脚，装到机翼上去，那你就是抄袭EF2000,F4,MIG15，还有J8,重要的是有种别用米其林轮胎，给套双解放鞋，你才是自主设计，还不算创新。}}}
+ - {{{进气道，你要用皮托管，那你是抄袭F16，用二元可调是抄袭F15,用3元是抄袭T50,用加莱特是抄袭F22,用DSI是抄袭F35，你要是一怒之下不用进气道，直接暴露空气中，那你是抄袭波音707。}}}
+ - {{{你用鸭翼是抄袭阵风台风后者是以色列的狮，你用三翼面是抄袭SU35，你用正常布局那肯定是抄袭F15,16,22，要是用四个翅膀不用传统布局了，那肯定是抄袭卢卡斯，你要是敢造个飞碟出来，那你丫肯定是抄袭斯皮尔伯格 ，有种倒是弄个棍子不用翅膀就飞啊，对了，那还是抄袭哈利波特。}}}
+ - 来自 [http://jandan.net/2012/05/16/chinas-fifth-ge.html 国内观光：成都造第二代歼-20试飞:] 评论之 `河马和马 无责任搬运`
+==== 软件开发的生命周期 ====
+ - {{{... 技术团队时间评估需要 1.2 年 ... 领导发话：“互联网精神————先上线，再迭代，给技术团队一个月的时间造桥” ...}}}
+ - 图在这里 [attachment:软件开发生命周期.jpg 软件开发生命周期.jpg]
+ - 来自 [http://my.oschina.net/xxiaobian/blog/361782 OSChina 周一乱弹 —— 软件开发的生命周期 - 小小编辑的个人空间 - 开源中国社区:]
+==== 闲置浪费总是不好的 ====
+ - 简单说，如果我们从食物中获得的蛋白质超过了建造身体和维持运转这些“高级任务”的需求量，多余的那部分就可能被当做燃料消耗掉或者是变成脂肪储存起来。{{{就像你一下子有了好几部iPhone，闲置浪费总是不好的，于是拿出一部来带在身上专门做镜子用。}}}
+ - 来自 [http://songshuhui.net/archives/95854 科学松鼠会 » 是什么吃胖了我们（3） 蛋白质:]
+==== 你不是他们的客户，而是他们的产品 ====
+ - {{{如果商家为你提供免费服务，那么你就不是他们的客户，而是他们的产品}}}
+ - 来自 [http://www.appinn.com/winrar-cn-free/#comment-362346 "WinRAR 中文个人版正式免费[Win] - 小众软件:, 2015/05/24 12:37 的某条评论"]
+== END ==','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',59,1469139919692462,'thinkbase','112.65.167.174','[[PageOutline]]
+= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+==== 当你在开源的世界里提倡用脚走路时... ====
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+==== 其实linux很不自由啊... ====
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+==== 类似LZ的喷法还有很多 ... ====
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+==== 玛雅历法预言末日 ====
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
+  - [[Image(玛雅历法预言末日.jpg)]]
+==== 这篇文章更多的是表达一种愿望 ... ====
+ - {{{这篇文章更多的是表达一种愿望，而不是现状：）}}}
+  - 来自 [http://www.oschina.net/translate/eight-reasons-c-sharp-is-the-best-language-for-mobile-development 8 个理由说明为什么 C# 是移动开发的最佳语言 - 开源中国社区]
+==== 如果你要Baidu的话 ... ====
+ - {{{如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭}}}
+  - 来自 [http://coolshell.cn/articles/8883.html 应该知道的Linux技巧 - 酷壳 – CoolShell.cn]
+==== 比不动脑子更可怕的 ... ====
+ - {{{人最可怕的，是不动脑子。比不动脑子更可怕的，是想的太多。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2821609#p2821609 linux世界里那蛋疼的命名 - 查看主题 • Ubuntu中文论坛:]
+==== 请勿跨村、跨乡、跨县、... 跨太阳系、跨时空实施抓捕。 ====
+ - {{{- 以上内容全部来自互联网，本人并不识字，完全复制粘贴。}}}[[BR]]{{{- 看帖者请于24小时内自觉、主动、完全忘记。}}}[[BR]]{{{- 跟帖行为并不意味本人同意、支持、反对，或了解、知晓文中观点，如有任何疑问请直接联系原作者本人。故本人不对以上内容负法律责任（包括民法、刑法或婚姻法，及文中提及或未提及之法律），请勿跨村、跨乡、跨县、跨市、跨省、跨国、跨地球、跨太阳系、跨时空实施抓捕。}}}[[BR]]{{{- 谢谢合作! }}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=1721779#p1721779 汉语编程 与“来自中国的恐慌” - 查看主题 • Ubuntu中文论坛:]''''(当然, 这个也不是原创)''''
+==== Python 不小心出了 2.6.4 版本 ... ====
+ - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
+  - [[Image(Screenshot-Python-OSChina.NET.png)]]
+  - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 - 开源中国 OSChina.NET: 之 31 楼]
+==== 为什么Lisp没有流行起来 ... ====
+ - {{{——你喜欢函数式编程？}}}[[BR]]{{{——是啊。}}}[[BR]]{{{——太好了我也是，你喜欢 Erlang 、Lua 、Lisp 还是 Haskell ？}}}[[BR]]{{{—— Lisp 。}}}[[BR]]{{{——太好了我也是，你喜欢 Common Lisp 、Emacs Lisp 、Scheme 还是 Clojure ？}}}[[BR]]{{{—— Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 MIT Scheme 、MzScheme 、DrScheme 还是 Guile ？}}}[[BR]]{{{—— MIT Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 7.5 版还是 7.4 版？}}}[[BR]]{{{—— 7.5 。}}}[[BR]]{{{——滚！异端！}}}
+  - 来自 [http://www.oschina.net/translate/why_lisp_failed?p=1#rpl_2803 为什么Lisp没有流行起来 - 技术翻译 - 开源中国 OSChina.NET: 之 9 楼]
+==== ... 就像在一个小空间内塞满一群性格阴郁的少年 ====
+ - {{{摩尔定律规定：我们芯片上的晶体管数量每隔18个月翻一倍。然而芯片行业已经翻倍到了极限——现在那些小芯片上的晶体管就像在一个小空间内塞满一群性格阴郁的少年。}}}
+  - 来自 [http://www.csdn.net/article/2013-03-22/2814599-ibm-rethinks-the-transistor-to-keep-scaling-compute-power 传IBM重新设计晶体管 预计五至七年内成熟-CSDN.NET:]
+==== 如果把地球上的病毒首尾相接 ... ====
+ - {{{“……如果把地球上的病毒首尾相接，能连成一条2亿光年的长链……”}}}[[BR]]{{{2x10^24米}}}[[BR]]{{{假设病毒链的直径是20nm(横截面1.2x10^-15平方米)}}}[[BR]]{{{那么总体积就是2.4x10^9立方米}}}[[BR]]{{{假设密度和水相同，就是24亿吨}}}[[BR]]{{{比磷虾还要多一些。。。}}}
+  - 来自 [http://songshuhui.net/archives/79183#comment-400085 科学松鼠会 » 小病毒 大能耐: 之 "100 说道:"]
+==== 任何应用都可以 ... 并最终也会由JavaScript编写 ====
+ - {{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+  - 来自 [http://www.infoq.com/cn/news/2013/03/git-in-javascript InfoQ - JavaScript Git的Kickstarter项目仅28小时达到集资目标:] [http://creationix.com/ Tim Caswell]{{{是多个JavaScript和Node.js社区的知名成员，他提出了一个使用JavaScript来重新实现Git的建议。}}}[http://www.kickstarter.com/projects/creationix/js-git 并将该项目放到了Kickstarter（译者注：Kickstarter是一个对个人创意项目进行公众集资（捐赠）从而获得资金支持的网络平台）上进行集资，结果仅仅在28小时内就获得了超过360人的资助。]{{{该项目再一次应证了}}}[http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html Atwood定律：]{{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+==== 这就是牛人和我们的差别 ... ====
+ - {{{这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题}}}
+  - 来自 [http://www.oschina.net/news/39858/fast-database-emerges-from-mit-class-gpus-and-students-invention?p=3#rpl_273342499 哈佛/MIT学生创造GPU数据库，性能提升70倍 - 开源中国 OSChina.NET:]
+{{{
+#!div
+''''''43楼：suifengsuoyu 发表于 2013-04-23 18:21''''''
+> 引用来自“unnamed”的评论
+> 难道写个数据库的时间还不够他处理那些数据？我觉得处理个几十次应该都够了吧
+这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题
+}}}
+==== 只有猪和变态控制狂类型的程序员才会 ... ====
+ - {{{今天的苹果核google都是控制狂类型的公司。苹果不说了，google干的好事一桩：win下的chrome一直只是测试用的，firefox安装的是自己选择的flash player版本，结果2次chrome大版本升级，2次都将firefox的flash player强制插入了与其一致的最新的11版。这种“狗拿耗子”，在禁用google update插件情况下偷偷摸摸“自作聪明”的小伎俩也是今天google的程序员们的最爱。更别提什么把系统启动时进程常驻内存，骗取用户”chrome启动很快“，linux下想直接下载个for win的chrome都要和网页斗半天，否则它认准你只能下载 for linux版的。每每这种时候都有一种”你以为你是谁啊，猪啊！“的感觉，只有猪和变态控制狂类型的程序员才会以为自己永远知道别人想的是什么。。。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2966467#p2966467 苹果公司的邪恶 - 查看主题 • Ubuntu中文论坛:]
+==== 零下40度 ... 这是一个神奇的数值 ====
+ - {{{在他刚跳下不久的高度，气温大概是零下40度。这是一个神奇的数值，因为不需要指出其单位是摄氏还是华氏——数值在两种单位下都一样}}}
+  - 来自 [http://songshuhui.net/archives/78125 "科学松鼠会 » [What if]第28期——天上掉下来一块牛排排:"]
+==== ... 我们那里的CB不是这样的 ====
+ - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
+  - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]
+==== ... 而解决这些问题的方法就是再引入一个新的兼容层 ====
+ - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
+  - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]
+==== 令人食欲大振……当然振过就算了 ====
+ - {{{我曾经用致命白毒伞和大蒜同煮，结果汤色清亮，大蒜颗颗雪白，兼之鲜香四溢，令人食欲大振……当然振过就算了。}}}
+  - 来自 [http://songshuhui.net/archives/83379 科学松鼠会 » 辨别毒蘑菇，民间传说不可信:]
+==== 歌者是微软好不？ ====
+ - {{{歌者是微软好不？在到处搞二维化}}}
+  - 来自 [http://tieba.baidu.com/p/2538725451 【水】其实三体人已经潜伏地球多年_三体吧_百度贴吧:]
+==== 一款好手机必须具备以下条件： 首先 ... ====
+ - {{{一款好手机必须具备以下条件： 首先，得能买到……}}}
+  - 来自 [http://www.cnbeta.com/articles/251442.htm "[图]魅族MX3获入网许可_Meizu 魅族_cnBeta.COM:"],,''''(的评论)'''',,
+==== 本人擅长 ..., 精通 ..., 熟悉 ... ====
+ - {{{本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、PS等软件的安装与卸载，精通CSS、JavaScript、PHP、C、C＋＋、java、Ruby、Perl、Lisp、python、Objective-C、ActionScript等单词的拼写，熟悉windows、Linux、Mac、Android、IOS等系统的开关机 。}}}
+  - 来自 [http://tieba.baidu.com/p/2622689705#39598512972 自己通宵在机场，想睡觉还有装修的，太苦逼了_三体吧_百度贴吧:] 第 `5` 楼;
+==== CTHD ====
+ - {{{所以要是有机会去国外的录像带店逛，看到名字拖的老长老长，甭问，90％是中国电影。唯一的例外大概就是那部Crouching Tiger and Hidden Dragon《卧虎藏龙》，也不知老外念着绕不绕嘴。反正我单知道新西兰电影院很郁闷，他们的横条信息屏幕显示不下，于是干脆简称为CTHD。}}}
+  - 来自 [http://www.guokr.com/question/507637/#answer580156 你看到过哪些奇葩的翻译？ | 问答 | 果壳网 科技有意思:] 的 `某一楼`;
+==== 世界上最远的距离 ... ====
+ - {{{易碎双腔龙：世界上最远的距离不是天涯海角，而是我的咽喉到大脑。}}}
+ - [[Image(www.guokr.com_article_38500.png)]]
+ - 来自 [http://www.guokr.com/article/38500/ 喉返神经：进化走的弯路 | 环球科技观光团主题站 | 果壳网 科技有意思:]
+==== 神烦的蛇精病…… ====
+ - {{{看到这里，想必你的系统1已经有了结论：写这篇文章的人不知是好是坏，但应该是个神烦的蛇精病……}}}
+ - {{{拉姆斯菲尔德曾说过一段被群嘲但其实有道理的名言：“我们都知道自己知道一些事，有些事我们知道我们已经知道。我们同时知道我们不知道一些事，就是说，有些事我们知道我们不知道。但我们并不知道有些事情我们其实不知道，有些事我们真的不知道我们不知道。”}}}
+ - 来自 [http://songshuhui.net/archives/87220 科学松鼠会 » 为何笨蛋有自信:]
+==== 在不确定是否会赢的情况下，绝对不要拔剑 ====
+ - {{{最后的结论： 作为资深程序员，最优雅的方式就是尽可能地指出不好的地方，但绝对不要实际参与改进。 兵无常势水无常形，在不确定是否会赢的情况下，绝对不要拔剑。}}}
+ - 来自 [http://www.cnblogs.com/XiaoXiami142/p/3508642.html 为什么所有的架构都是糟糕的 - @小虾米@ - 博客园:]
+==== 这个系统复杂已经爆了几十块表 ====
+ - {{{如何避免飞机相撞本身已是个复杂度爆表的问题，为了解决这个问题而被设计出的这个系统复杂已经爆了几十块表，相信没有人能够真正理解这套系统，所以即便是这方面的专业人士有时也会对系统做出的反馈给吓到。这不断攀升的复杂程度也正是当代社会的普遍现象。人类无法理解的系统正在保护我们的安全，科技发展到了接受检验的节点。}}}
+ - 来自 [http://www.cnbeta.com/articles/267678.htm 世界已经太复杂，人类科技发展到极限了吗？_cnBeta 视点观察_cnBeta.COM:]
+==== 这就是滥服药物的害处 ====
+ - {{{伴随着企业的这种管理上的和发展上的痛处，信息化企业也飞速发展，就如同肥胖人群多了，医疗机构，保健机构，甚至江湖郎中也火了一样，或许比喻不够恰当，那就领会精神吧，}}}
+ - {{{所以企业实施了各种各样的应用系统之后，问题也随之而来，这就是滥服药物的害处，目前急需一种应用平台可以中和这些系统，那么这就是BPM基础软件。}}}
+ - 来自 [http://www.cnblogs.com/Reedzhang/p/ReedZhang.html k2之于.NET流程应用开发者 - Reed Zhang - 博客园:]
+==== C语言的奇技淫巧大都是汇编程序员发明的 ... ====
+ - {{{C语言的奇技淫巧大都是汇编程序员发明的，因为正常的C在他们眼中就是大便……}}}
+ - 来自 [http://coolshell.cn/articles/10975.html#comment-1233261 一个“蝇量级” C 语言协程库 | 酷 壳 - CoolShell.cn:]
+==== 给中国孩子和美国孩子一杯水 ... ====
+ - {{{曾经有教育家做了一个实验，给中国孩子和美国孩子一杯水，让他们不用火就让水沸腾起来。中国小孩 ...}}}, 后面的太长，见 [attachment:PHOT6KCR0016030U_9KIVFQAQ.html.txt 这里] ;
+ - 来自 [http://comment.digi.163.com/photoview_bbs/PHOT6KCR0016030U/9KIVFQAQ.html 那些消失的笔记本电脑品牌_图集跟贴_网易跟贴:]
+==== 如果你造的是飞机上的马桶 ... ====
+ - {{{如果你造的是飞机上的马桶，你不需要知道为什么飞机会飞起来。但如果飞机总设计师，不知到飞机是怎么飞起来的是要出人命的。}}}
+ - 来自 [http://www.oschina.net/news/49241/programmer-rely-ide?p=2#rpl_278693244 依靠 IDE 会让你变成一位差劲的程序员吗？ - 开源中国社区: 第 39 楼]
+==== 在以智商闻名的鹦鹉界是一朵奇葩 ... ====
+ - {{{Kakapo其实是毛利语，这种鹦鹉在以智商闻名的鹦鹉界是一朵奇葩，常常不能意识到自己不会飞，然后从树上跳下来摔到自己。}}}
+ - 来自 [http://jandan.net/2014/03/05/strigops-habroptila.html#comment-2342897 煎蛋 - 鸟中宠物狗鸮鹦鹉: 第 15 楼]
+==== 快成阿里云专业陪练了 ====
+ - 来自 [http://www.cnblogs.com/cmt/p/3716523.html#2935069 云计算之路-阿里云上：“黑色30秒”走了，﻿“黑色1秒”来了，真相也许大白了 - 博客园团队 - 博客园: 第 16 楼]
+==== 典型的互相对抄然后都掉坑里的场面 ====
+ - {{{以前快嘀打车喊车后会正向计时，嘀嘀打车会有90秒倒计时；最近两个app都改版了，快嘀改成倒计时了，嘀嘀改成正向计时了。这应该就是典型的互相对抄然后都掉坑里的场面。不知道当初做决定的两个产品经理怎么面对对手的改版和自己的同事。}}}
+ - 来自 [http://weibo.com/2123664205/B520es1Rw 英式没品笑话百科的微博|微博-随时随地分享身边的新鲜事儿:]
+==== ubuntu及其他发行版都是不错的中文社区？ ====
+ - {{{ubuntu中文社区难道就不是ubuntu的广告了吗？}}}[[BR]]{{{你所定义的广告，在我看来只是一种linux发行版的推广而已。linux用户要不就说推广不够，做了推广又说是广告。那请你给出一个既不是广告又可以推广linux的方法？}}}[[BR]]{{{难道ubuntu社区的名字要改成——ubuntu及其他发行版都是不错的中文社区？}}}
+ - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=3062393#p3062393 质疑deepin算不算国内一枝独秀的发行版 - 查看主题 • Ubuntu中文论坛: 第 66 楼]
+==== 更‘大’更‘好’的傻瓜 ====
+ - {{{如今的编程是一场程序员和上帝的竞赛，程序员企图开发出来更好更大的傻瓜都会用的软件，而上帝总能创造出更‘大’更‘好’的傻瓜，所以，上帝总是赢。}}}
+ - 来自 [http://www.oschina.net/news/53654/how-client-use-their-software?p=3#rpl_281085215 在程序员的眼里，用户是这样使用他们开发的软件的 - 开源中国社区: 第 54 楼]
+==== 有种倒是弄个棍子不用翅膀就飞啊 ====
+ - {{{起落架，收入翼根，那是抄袭F35,SU27，收入侧面，那是抄袭F22，收入底部那是抄袭F15，要是老子一咬牙一跺脚，装到机翼上去，那你就是抄袭EF2000,F4,MIG15，还有J8,重要的是有种别用米其林轮胎，给套双解放鞋，你才是自主设计，还不算创新。}}}
+ - {{{进气道，你要用皮托管，那你是抄袭F16，用二元可调是抄袭F15,用3元是抄袭T50,用加莱特是抄袭F22,用DSI是抄袭F35，你要是一怒之下不用进气道，直接暴露空气中，那你是抄袭波音707。}}}
+ - {{{你用鸭翼是抄袭阵风台风后者是以色列的狮，你用三翼面是抄袭SU35，你用正常布局那肯定是抄袭F15,16,22，要是用四个翅膀不用传统布局了，那肯定是抄袭卢卡斯，你要是敢造个飞碟出来，那你丫肯定是抄袭斯皮尔伯格 ，有种倒是弄个棍子不用翅膀就飞啊，对了，那还是抄袭哈利波特。}}}
+ - 来自 [http://jandan.net/2012/05/16/chinas-fifth-ge.html 国内观光：成都造第二代歼-20试飞:] 评论之 `河马和马 无责任搬运`
+==== 软件开发的生命周期 ====
+ - {{{... 技术团队时间评估需要 1.2 年 ... 领导发话：“互联网精神————先上线，再迭代，给技术团队一个月的时间造桥” ...}}}
+ - 图在这里 [attachment:软件开发生命周期.jpg 软件开发生命周期.jpg]
+ - 来自 [http://my.oschina.net/xxiaobian/blog/361782 OSChina 周一乱弹 —— 软件开发的生命周期 - 小小编辑的个人空间 - 开源中国社区:]
+==== 闲置浪费总是不好的 ====
+ - 简单说，如果我们从食物中获得的蛋白质超过了建造身体和维持运转这些“高级任务”的需求量，多余的那部分就可能被当做燃料消耗掉或者是变成脂肪储存起来。{{{就像你一下子有了好几部iPhone，闲置浪费总是不好的，于是拿出一部来带在身上专门做镜子用。}}}
+ - 来自 [http://songshuhui.net/archives/95854 科学松鼠会 » 是什么吃胖了我们（3） 蛋白质:]
+==== 你不是他们的客户，而是他们的产品 ====
+ - {{{如果商家为你提供免费服务，那么你就不是他们的客户，而是他们的产品}}}
+ - 来自 [http://www.appinn.com/winrar-cn-free/#comment-362346 "WinRAR 中文个人版正式免费[Win] - 小众软件:, 2015/05/24 12:37 的某条评论"]
+==== 有些框架就属于牛逼人手里牛逼闪闪，二逼人手里一团乱麻 ====
+ - 基本上，针对每个平台，我都列出一些主流框架，但不意味着你们都能驾驭得住。小马过马，老牛没过膝，松鼠淹个半死，就是这么回事。创业公司喜欢新框架，这与他们拿得起高薪招一两个前端牛人所致，基本上所有页面就是他们干的，因此用Angular或Ember都没区别。小公司则小心，人员流失大，jQuery+RequireJS是万金油。大公司则基本上有自己的技术沉淀，换言之，应该有自己的前端框架，除非那东西很陈旧，不建议再造轮子。对大公司的建议是搞自己的技术委员会，根据自己的人员配置来挑选的框架。有句话说得好，不求最好，但求最合适。{{{有些框架就属于牛逼人手里牛逼闪闪，二逼人手里一团乱麻}}}。对于某些成长特别快的中等公司来说，这点最需防范，牛人是有的，但作战的主体70%都是刚培训出来的实习生，难上手，中文文档不全的框架就必须过滤掉。我也不排除造轮子的可能性，毕竟有些公司就是人才济济，能推出一些靠谱的开源产品来造福社区。 
+ - 来自 [http://www.iteye.com/news/30547 去哪儿网前端架构师司徒正美：如何挑选适合的前端框架？ - Web前端 - ITeye资讯:, 没有最好，选择最适合自己的]
+== END ==','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',60,1469139980717592,'thinkbase','112.65.167.174','[[PageOutline]]
+= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+==== 当你在开源的世界里提倡用脚走路时... ====
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+==== 其实linux很不自由啊... ====
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+==== 类似LZ的喷法还有很多 ... ====
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+==== 玛雅历法预言末日 ====
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
+  - [[Image(玛雅历法预言末日.jpg)]]
+==== 这篇文章更多的是表达一种愿望 ... ====
+ - {{{这篇文章更多的是表达一种愿望，而不是现状：）}}}
+  - 来自 [http://www.oschina.net/translate/eight-reasons-c-sharp-is-the-best-language-for-mobile-development 8 个理由说明为什么 C# 是移动开发的最佳语言 - 开源中国社区]
+==== 如果你要Baidu的话 ... ====
+ - {{{如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭}}}
+  - 来自 [http://coolshell.cn/articles/8883.html 应该知道的Linux技巧 - 酷壳 – CoolShell.cn]
+==== 比不动脑子更可怕的 ... ====
+ - {{{人最可怕的，是不动脑子。比不动脑子更可怕的，是想的太多。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2821609#p2821609 linux世界里那蛋疼的命名 - 查看主题 • Ubuntu中文论坛:]
+==== 请勿跨村、跨乡、跨县、... 跨太阳系、跨时空实施抓捕。 ====
+ - {{{- 以上内容全部来自互联网，本人并不识字，完全复制粘贴。}}}[[BR]]{{{- 看帖者请于24小时内自觉、主动、完全忘记。}}}[[BR]]{{{- 跟帖行为并不意味本人同意、支持、反对，或了解、知晓文中观点，如有任何疑问请直接联系原作者本人。故本人不对以上内容负法律责任（包括民法、刑法或婚姻法，及文中提及或未提及之法律），请勿跨村、跨乡、跨县、跨市、跨省、跨国、跨地球、跨太阳系、跨时空实施抓捕。}}}[[BR]]{{{- 谢谢合作! }}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=1721779#p1721779 汉语编程 与“来自中国的恐慌” - 查看主题 • Ubuntu中文论坛:]''''(当然, 这个也不是原创)''''
+==== Python 不小心出了 2.6.4 版本 ... ====
+ - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
+  - [[Image(Screenshot-Python-OSChina.NET.png)]]
+  - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 - 开源中国 OSChina.NET: 之 31 楼]
+==== 为什么Lisp没有流行起来 ... ====
+ - {{{——你喜欢函数式编程？}}}[[BR]]{{{——是啊。}}}[[BR]]{{{——太好了我也是，你喜欢 Erlang 、Lua 、Lisp 还是 Haskell ？}}}[[BR]]{{{—— Lisp 。}}}[[BR]]{{{——太好了我也是，你喜欢 Common Lisp 、Emacs Lisp 、Scheme 还是 Clojure ？}}}[[BR]]{{{—— Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 MIT Scheme 、MzScheme 、DrScheme 还是 Guile ？}}}[[BR]]{{{—— MIT Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 7.5 版还是 7.4 版？}}}[[BR]]{{{—— 7.5 。}}}[[BR]]{{{——滚！异端！}}}
+  - 来自 [http://www.oschina.net/translate/why_lisp_failed?p=1#rpl_2803 为什么Lisp没有流行起来 - 技术翻译 - 开源中国 OSChina.NET: 之 9 楼]
+==== ... 就像在一个小空间内塞满一群性格阴郁的少年 ====
+ - {{{摩尔定律规定：我们芯片上的晶体管数量每隔18个月翻一倍。然而芯片行业已经翻倍到了极限——现在那些小芯片上的晶体管就像在一个小空间内塞满一群性格阴郁的少年。}}}
+  - 来自 [http://www.csdn.net/article/2013-03-22/2814599-ibm-rethinks-the-transistor-to-keep-scaling-compute-power 传IBM重新设计晶体管 预计五至七年内成熟-CSDN.NET:]
+==== 如果把地球上的病毒首尾相接 ... ====
+ - {{{“……如果把地球上的病毒首尾相接，能连成一条2亿光年的长链……”}}}[[BR]]{{{2x10^24米}}}[[BR]]{{{假设病毒链的直径是20nm(横截面1.2x10^-15平方米)}}}[[BR]]{{{那么总体积就是2.4x10^9立方米}}}[[BR]]{{{假设密度和水相同，就是24亿吨}}}[[BR]]{{{比磷虾还要多一些。。。}}}
+  - 来自 [http://songshuhui.net/archives/79183#comment-400085 科学松鼠会 » 小病毒 大能耐: 之 "100 说道:"]
+==== 任何应用都可以 ... 并最终也会由JavaScript编写 ====
+ - {{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+  - 来自 [http://www.infoq.com/cn/news/2013/03/git-in-javascript InfoQ - JavaScript Git的Kickstarter项目仅28小时达到集资目标:] [http://creationix.com/ Tim Caswell]{{{是多个JavaScript和Node.js社区的知名成员，他提出了一个使用JavaScript来重新实现Git的建议。}}}[http://www.kickstarter.com/projects/creationix/js-git 并将该项目放到了Kickstarter（译者注：Kickstarter是一个对个人创意项目进行公众集资（捐赠）从而获得资金支持的网络平台）上进行集资，结果仅仅在28小时内就获得了超过360人的资助。]{{{该项目再一次应证了}}}[http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html Atwood定律：]{{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+==== 这就是牛人和我们的差别 ... ====
+ - {{{这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题}}}
+  - 来自 [http://www.oschina.net/news/39858/fast-database-emerges-from-mit-class-gpus-and-students-invention?p=3#rpl_273342499 哈佛/MIT学生创造GPU数据库，性能提升70倍 - 开源中国 OSChina.NET:]
+{{{
+#!div
+''''''43楼：suifengsuoyu 发表于 2013-04-23 18:21''''''
+> 引用来自“unnamed”的评论
+> 难道写个数据库的时间还不够他处理那些数据？我觉得处理个几十次应该都够了吧
+这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题
+}}}
+==== 只有猪和变态控制狂类型的程序员才会 ... ====
+ - {{{今天的苹果核google都是控制狂类型的公司。苹果不说了，google干的好事一桩：win下的chrome一直只是测试用的，firefox安装的是自己选择的flash player版本，结果2次chrome大版本升级，2次都将firefox的flash player强制插入了与其一致的最新的11版。这种“狗拿耗子”，在禁用google update插件情况下偷偷摸摸“自作聪明”的小伎俩也是今天google的程序员们的最爱。更别提什么把系统启动时进程常驻内存，骗取用户”chrome启动很快“，linux下想直接下载个for win的chrome都要和网页斗半天，否则它认准你只能下载 for linux版的。每每这种时候都有一种”你以为你是谁啊，猪啊！“的感觉，只有猪和变态控制狂类型的程序员才会以为自己永远知道别人想的是什么。。。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2966467#p2966467 苹果公司的邪恶 - 查看主题 • Ubuntu中文论坛:]
+==== 零下40度 ... 这是一个神奇的数值 ====
+ - {{{在他刚跳下不久的高度，气温大概是零下40度。这是一个神奇的数值，因为不需要指出其单位是摄氏还是华氏——数值在两种单位下都一样}}}
+  - 来自 [http://songshuhui.net/archives/78125 "科学松鼠会 » [What if]第28期——天上掉下来一块牛排排:"]
+==== ... 我们那里的CB不是这样的 ====
+ - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
+  - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]
+==== ... 而解决这些问题的方法就是再引入一个新的兼容层 ====
+ - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
+  - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]
+==== 令人食欲大振……当然振过就算了 ====
+ - {{{我曾经用致命白毒伞和大蒜同煮，结果汤色清亮，大蒜颗颗雪白，兼之鲜香四溢，令人食欲大振……当然振过就算了。}}}
+  - 来自 [http://songshuhui.net/archives/83379 科学松鼠会 » 辨别毒蘑菇，民间传说不可信:]
+==== 歌者是微软好不？ ====
+ - {{{歌者是微软好不？在到处搞二维化}}}
+  - 来自 [http://tieba.baidu.com/p/2538725451 【水】其实三体人已经潜伏地球多年_三体吧_百度贴吧:]
+==== 一款好手机必须具备以下条件： 首先 ... ====
+ - {{{一款好手机必须具备以下条件： 首先，得能买到……}}}
+  - 来自 [http://www.cnbeta.com/articles/251442.htm "[图]魅族MX3获入网许可_Meizu 魅族_cnBeta.COM:"],,''''(的评论)'''',,
+==== 本人擅长 ..., 精通 ..., 熟悉 ... ====
+ - {{{本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、PS等软件的安装与卸载，精通CSS、JavaScript、PHP、C、C＋＋、java、Ruby、Perl、Lisp、python、Objective-C、ActionScript等单词的拼写，熟悉windows、Linux、Mac、Android、IOS等系统的开关机 。}}}
+  - 来自 [http://tieba.baidu.com/p/2622689705#39598512972 自己通宵在机场，想睡觉还有装修的，太苦逼了_三体吧_百度贴吧:] 第 `5` 楼;
+==== CTHD ====
+ - {{{所以要是有机会去国外的录像带店逛，看到名字拖的老长老长，甭问，90％是中国电影。唯一的例外大概就是那部Crouching Tiger and Hidden Dragon《卧虎藏龙》，也不知老外念着绕不绕嘴。反正我单知道新西兰电影院很郁闷，他们的横条信息屏幕显示不下，于是干脆简称为CTHD。}}}
+  - 来自 [http://www.guokr.com/question/507637/#answer580156 你看到过哪些奇葩的翻译？ | 问答 | 果壳网 科技有意思:] 的 `某一楼`;
+==== 世界上最远的距离 ... ====
+ - {{{易碎双腔龙：世界上最远的距离不是天涯海角，而是我的咽喉到大脑。}}}
+ - [[Image(www.guokr.com_article_38500.png)]]
+ - 来自 [http://www.guokr.com/article/38500/ 喉返神经：进化走的弯路 | 环球科技观光团主题站 | 果壳网 科技有意思:]
+==== 神烦的蛇精病…… ====
+ - {{{看到这里，想必你的系统1已经有了结论：写这篇文章的人不知是好是坏，但应该是个神烦的蛇精病……}}}
+ - {{{拉姆斯菲尔德曾说过一段被群嘲但其实有道理的名言：“我们都知道自己知道一些事，有些事我们知道我们已经知道。我们同时知道我们不知道一些事，就是说，有些事我们知道我们不知道。但我们并不知道有些事情我们其实不知道，有些事我们真的不知道我们不知道。”}}}
+ - 来自 [http://songshuhui.net/archives/87220 科学松鼠会 » 为何笨蛋有自信:]
+==== 在不确定是否会赢的情况下，绝对不要拔剑 ====
+ - {{{最后的结论： 作为资深程序员，最优雅的方式就是尽可能地指出不好的地方，但绝对不要实际参与改进。 兵无常势水无常形，在不确定是否会赢的情况下，绝对不要拔剑。}}}
+ - 来自 [http://www.cnblogs.com/XiaoXiami142/p/3508642.html 为什么所有的架构都是糟糕的 - @小虾米@ - 博客园:]
+==== 这个系统复杂已经爆了几十块表 ====
+ - {{{如何避免飞机相撞本身已是个复杂度爆表的问题，为了解决这个问题而被设计出的这个系统复杂已经爆了几十块表，相信没有人能够真正理解这套系统，所以即便是这方面的专业人士有时也会对系统做出的反馈给吓到。这不断攀升的复杂程度也正是当代社会的普遍现象。人类无法理解的系统正在保护我们的安全，科技发展到了接受检验的节点。}}}
+ - 来自 [http://www.cnbeta.com/articles/267678.htm 世界已经太复杂，人类科技发展到极限了吗？_cnBeta 视点观察_cnBeta.COM:]
+==== 这就是滥服药物的害处 ====
+ - {{{伴随着企业的这种管理上的和发展上的痛处，信息化企业也飞速发展，就如同肥胖人群多了，医疗机构，保健机构，甚至江湖郎中也火了一样，或许比喻不够恰当，那就领会精神吧，}}}
+ - {{{所以企业实施了各种各样的应用系统之后，问题也随之而来，这就是滥服药物的害处，目前急需一种应用平台可以中和这些系统，那么这就是BPM基础软件。}}}
+ - 来自 [http://www.cnblogs.com/Reedzhang/p/ReedZhang.html k2之于.NET流程应用开发者 - Reed Zhang - 博客园:]
+==== C语言的奇技淫巧大都是汇编程序员发明的 ... ====
+ - {{{C语言的奇技淫巧大都是汇编程序员发明的，因为正常的C在他们眼中就是大便……}}}
+ - 来自 [http://coolshell.cn/articles/10975.html#comment-1233261 一个“蝇量级” C 语言协程库 | 酷 壳 - CoolShell.cn:]
+==== 给中国孩子和美国孩子一杯水 ... ====
+ - {{{曾经有教育家做了一个实验，给中国孩子和美国孩子一杯水，让他们不用火就让水沸腾起来。中国小孩 ...}}}, 后面的太长，见 [attachment:PHOT6KCR0016030U_9KIVFQAQ.html.txt 这里] ;
+ - 来自 [http://comment.digi.163.com/photoview_bbs/PHOT6KCR0016030U/9KIVFQAQ.html 那些消失的笔记本电脑品牌_图集跟贴_网易跟贴:]
+==== 如果你造的是飞机上的马桶 ... ====
+ - {{{如果你造的是飞机上的马桶，你不需要知道为什么飞机会飞起来。但如果飞机总设计师，不知到飞机是怎么飞起来的是要出人命的。}}}
+ - 来自 [http://www.oschina.net/news/49241/programmer-rely-ide?p=2#rpl_278693244 依靠 IDE 会让你变成一位差劲的程序员吗？ - 开源中国社区: 第 39 楼]
+==== 在以智商闻名的鹦鹉界是一朵奇葩 ... ====
+ - {{{Kakapo其实是毛利语，这种鹦鹉在以智商闻名的鹦鹉界是一朵奇葩，常常不能意识到自己不会飞，然后从树上跳下来摔到自己。}}}
+ - 来自 [http://jandan.net/2014/03/05/strigops-habroptila.html#comment-2342897 煎蛋 - 鸟中宠物狗鸮鹦鹉: 第 15 楼]
+==== 快成阿里云专业陪练了 ====
+ - 来自 [http://www.cnblogs.com/cmt/p/3716523.html#2935069 云计算之路-阿里云上：“黑色30秒”走了，﻿“黑色1秒”来了，真相也许大白了 - 博客园团队 - 博客园: 第 16 楼]
+==== 典型的互相对抄然后都掉坑里的场面 ====
+ - {{{以前快嘀打车喊车后会正向计时，嘀嘀打车会有90秒倒计时；最近两个app都改版了，快嘀改成倒计时了，嘀嘀改成正向计时了。这应该就是典型的互相对抄然后都掉坑里的场面。不知道当初做决定的两个产品经理怎么面对对手的改版和自己的同事。}}}
+ - 来自 [http://weibo.com/2123664205/B520es1Rw 英式没品笑话百科的微博|微博-随时随地分享身边的新鲜事儿:]
+==== ubuntu及其他发行版都是不错的中文社区？ ====
+ - {{{ubuntu中文社区难道就不是ubuntu的广告了吗？}}}[[BR]]{{{你所定义的广告，在我看来只是一种linux发行版的推广而已。linux用户要不就说推广不够，做了推广又说是广告。那请你给出一个既不是广告又可以推广linux的方法？}}}[[BR]]{{{难道ubuntu社区的名字要改成——ubuntu及其他发行版都是不错的中文社区？}}}
+ - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=3062393#p3062393 质疑deepin算不算国内一枝独秀的发行版 - 查看主题 • Ubuntu中文论坛: 第 66 楼]
+==== 更‘大’更‘好’的傻瓜 ====
+ - {{{如今的编程是一场程序员和上帝的竞赛，程序员企图开发出来更好更大的傻瓜都会用的软件，而上帝总能创造出更‘大’更‘好’的傻瓜，所以，上帝总是赢。}}}
+ - 来自 [http://www.oschina.net/news/53654/how-client-use-their-software?p=3#rpl_281085215 在程序员的眼里，用户是这样使用他们开发的软件的 - 开源中国社区: 第 54 楼]
+==== 有种倒是弄个棍子不用翅膀就飞啊 ====
+ - {{{起落架，收入翼根，那是抄袭F35,SU27，收入侧面，那是抄袭F22，收入底部那是抄袭F15，要是老子一咬牙一跺脚，装到机翼上去，那你就是抄袭EF2000,F4,MIG15，还有J8,重要的是有种别用米其林轮胎，给套双解放鞋，你才是自主设计，还不算创新。}}}
+ - {{{进气道，你要用皮托管，那你是抄袭F16，用二元可调是抄袭F15,用3元是抄袭T50,用加莱特是抄袭F22,用DSI是抄袭F35，你要是一怒之下不用进气道，直接暴露空气中，那你是抄袭波音707。}}}
+ - {{{你用鸭翼是抄袭阵风台风后者是以色列的狮，你用三翼面是抄袭SU35，你用正常布局那肯定是抄袭F15,16,22，要是用四个翅膀不用传统布局了，那肯定是抄袭卢卡斯，你要是敢造个飞碟出来，那你丫肯定是抄袭斯皮尔伯格 ，有种倒是弄个棍子不用翅膀就飞啊，对了，那还是抄袭哈利波特。}}}
+ - 来自 [http://jandan.net/2012/05/16/chinas-fifth-ge.html 国内观光：成都造第二代歼-20试飞:] 评论之 `河马和马 无责任搬运`
+==== 软件开发的生命周期 ====
+ - {{{... 技术团队时间评估需要 1.2 年 ... 领导发话：“互联网精神————先上线，再迭代，给技术团队一个月的时间造桥” ...}}}
+ - 图在这里 [attachment:软件开发生命周期.jpg 软件开发生命周期.jpg]
+ - 来自 [http://my.oschina.net/xxiaobian/blog/361782 OSChina 周一乱弹 —— 软件开发的生命周期 - 小小编辑的个人空间 - 开源中国社区:]
+==== 闲置浪费总是不好的 ====
+ - 简单说，如果我们从食物中获得的蛋白质超过了建造身体和维持运转这些“高级任务”的需求量，多余的那部分就可能被当做燃料消耗掉或者是变成脂肪储存起来。{{{就像你一下子有了好几部iPhone，闲置浪费总是不好的，于是拿出一部来带在身上专门做镜子用。}}}
+ - 来自 [http://songshuhui.net/archives/95854 科学松鼠会 » 是什么吃胖了我们（3） 蛋白质:]
+==== 你不是他们的客户，而是他们的产品 ====
+ - {{{如果商家为你提供免费服务，那么你就不是他们的客户，而是他们的产品}}}
+ - 来自 [http://www.appinn.com/winrar-cn-free/#comment-362346 "WinRAR 中文个人版正式免费[Win] - 小众软件: -  2015/05/24 12:37 的某条评论"]
+==== 有些框架就属于牛逼人手里牛逼闪闪，二逼人手里一团乱麻 ====
+ - 基本上，针对每个平台，我都列出一些主流框架，但不意味着你们都能驾驭得住。小马过马，老牛没过膝，松鼠淹个半死，就是这么回事。创业公司喜欢新框架，这与他们拿得起高薪招一两个前端牛人所致，基本上所有页面就是他们干的，因此用Angular或Ember都没区别。小公司则小心，人员流失大，jQuery+RequireJS是万金油。大公司则基本上有自己的技术沉淀，换言之，应该有自己的前端框架，除非那东西很陈旧，不建议再造轮子。对大公司的建议是搞自己的技术委员会，根据自己的人员配置来挑选的框架。有句话说得好，不求最好，但求最合适。{{{有些框架就属于牛逼人手里牛逼闪闪，二逼人手里一团乱麻}}}。对于某些成长特别快的中等公司来说，这点最需防范，牛人是有的，但作战的主体70%都是刚培训出来的实习生，难上手，中文文档不全的框架就必须过滤掉。我也不排除造轮子的可能性，毕竟有些公司就是人才济济，能推出一些靠谱的开源产品来造福社区。 
+ - 来自 [http://www.iteye.com/news/30547 去哪儿网前端架构师司徒正美：如何挑选适合的前端框架？ - Web前端 - ITeye资讯: - 没有最好，选择最适合自己的]
+== END ==','',0);
+INSERT INTO "wiki" VALUES('misc/NetworkDigest',61,1469140304561825,'thinkbase','112.65.167.174','[[PageOutline]]
+= 互联网语录 =
+''''摘录网络上比较有趣的话语 ...''''
+----
+==== 当你在开源的世界里提倡用脚走路时... ====
+ - {{{lZ，你要永远记住，当你在开源的世界里提倡用脚走路时，一大帮用手走路的人会努力证明用脚走路的荒谬，同时坚称用手走路是高尚的}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2115253#p2115253 为什么不换个思路：内核依桌面与服务器分开开发，图形界面写入linux桌面内核 - 查看主题 • Ubuntu中文论坛:]''''
+==== 其实linux很不自由啊... ====
+ - {{{其实linux和不自由啊，我用vb写的一个俄罗斯方块，就不能加入到linux的内核中去，申请了好几次他们都不让，一点都不自由}}}
+  - ''''来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2150808#p2150808 轉貼一篇很缺乏常識的反Linux部落格文章 - 查看主题 • Ubuntu中文论坛:]''''
+==== 类似LZ的喷法还有很多 ... ====
+ - {{{LZ是喷子，鉴定完毕。}}}[[BR]]{{{在我手里，而且我相信在许多人手里，python和C++根本就是干两种不同的事情的。类似LZ的喷法还有很多，比如我们可以喷ARM没有i7的性能，喷飞机没有渡轮的载客量，喷手术刀不能用来砍树等等。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2900906#p2900906 python是一个非常不好的语言 - 查看主题 • Ubuntu中文论坛:]
+==== 玛雅历法预言末日 ====
+ - {{{www.google.com.hk - 玛雅历法预言末日}}}
+  - [[Image(玛雅历法预言末日.jpg)]]
+==== 这篇文章更多的是表达一种愿望 ... ====
+ - {{{这篇文章更多的是表达一种愿望，而不是现状：）}}}
+  - 来自 [http://www.oschina.net/translate/eight-reasons-c-sharp-is-the-best-language-for-mobile-development 8 个理由说明为什么 C# 是移动开发的最佳语言 - 开源中国社区]
+==== 如果你要Baidu的话 ... ====
+ - {{{如果有什么问题，别忘了Google。如果你要Baidu的话，我仅代表这个地球上所有的生物包括微生物甚至细菌病毒和小强BS你到宇宙毁灭}}}
+  - 来自 [http://coolshell.cn/articles/8883.html 应该知道的Linux技巧 - 酷壳 – CoolShell.cn]
+==== 比不动脑子更可怕的 ... ====
+ - {{{人最可怕的，是不动脑子。比不动脑子更可怕的，是想的太多。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2821609#p2821609 linux世界里那蛋疼的命名 - 查看主题 • Ubuntu中文论坛:]
+==== 请勿跨村、跨乡、跨县、... 跨太阳系、跨时空实施抓捕。 ====
+ - {{{- 以上内容全部来自互联网，本人并不识字，完全复制粘贴。}}}[[BR]]{{{- 看帖者请于24小时内自觉、主动、完全忘记。}}}[[BR]]{{{- 跟帖行为并不意味本人同意、支持、反对，或了解、知晓文中观点，如有任何疑问请直接联系原作者本人。故本人不对以上内容负法律责任（包括民法、刑法或婚姻法，及文中提及或未提及之法律），请勿跨村、跨乡、跨县、跨市、跨省、跨国、跨地球、跨太阳系、跨时空实施抓捕。}}}[[BR]]{{{- 谢谢合作! }}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=1721779#p1721779 汉语编程 与“来自中国的恐慌” - 查看主题 • Ubuntu中文论坛:]''''(当然, 这个也不是原创)''''
+==== Python 不小心出了 2.6.4 版本 ... ====
+ - {{{Python 一不小心出了 2.6.4 版本，然后就悲剧了}}}
+  - [[Image(Screenshot-Python-OSChina.NET.png)]]
+  - 来自 [http://www.oschina.net/news/37812/python-language-of-the-decade?p=2#rpl_272249856 Python —— 十年语言之冠 - 开源中国 OSChina.NET: 之 31 楼]
+==== 为什么Lisp没有流行起来 ... ====
+ - {{{——你喜欢函数式编程？}}}[[BR]]{{{——是啊。}}}[[BR]]{{{——太好了我也是，你喜欢 Erlang 、Lua 、Lisp 还是 Haskell ？}}}[[BR]]{{{—— Lisp 。}}}[[BR]]{{{——太好了我也是，你喜欢 Common Lisp 、Emacs Lisp 、Scheme 还是 Clojure ？}}}[[BR]]{{{—— Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 MIT Scheme 、MzScheme 、DrScheme 还是 Guile ？}}}[[BR]]{{{—— MIT Scheme 。}}}[[BR]]{{{——太好了我也是，你喜欢 7.5 版还是 7.4 版？}}}[[BR]]{{{—— 7.5 。}}}[[BR]]{{{——滚！异端！}}}
+  - 来自 [http://www.oschina.net/translate/why_lisp_failed?p=1#rpl_2803 为什么Lisp没有流行起来 - 技术翻译 - 开源中国 OSChina.NET: 之 9 楼]
+==== ... 就像在一个小空间内塞满一群性格阴郁的少年 ====
+ - {{{摩尔定律规定：我们芯片上的晶体管数量每隔18个月翻一倍。然而芯片行业已经翻倍到了极限——现在那些小芯片上的晶体管就像在一个小空间内塞满一群性格阴郁的少年。}}}
+  - 来自 [http://www.csdn.net/article/2013-03-22/2814599-ibm-rethinks-the-transistor-to-keep-scaling-compute-power 传IBM重新设计晶体管 预计五至七年内成熟-CSDN.NET:]
+==== 如果把地球上的病毒首尾相接 ... ====
+ - {{{“……如果把地球上的病毒首尾相接，能连成一条2亿光年的长链……”}}}[[BR]]{{{2x10^24米}}}[[BR]]{{{假设病毒链的直径是20nm(横截面1.2x10^-15平方米)}}}[[BR]]{{{那么总体积就是2.4x10^9立方米}}}[[BR]]{{{假设密度和水相同，就是24亿吨}}}[[BR]]{{{比磷虾还要多一些。。。}}}
+  - 来自 [http://songshuhui.net/archives/79183#comment-400085 科学松鼠会 » 小病毒 大能耐: 之 "100 说道:"]
+==== 任何应用都可以 ... 并最终也会由JavaScript编写 ====
+ - {{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+  - 来自 [http://www.infoq.com/cn/news/2013/03/git-in-javascript InfoQ - JavaScript Git的Kickstarter项目仅28小时达到集资目标:] [http://creationix.com/ Tim Caswell]{{{是多个JavaScript和Node.js社区的知名成员，他提出了一个使用JavaScript来重新实现Git的建议。}}}[http://www.kickstarter.com/projects/creationix/js-git 并将该项目放到了Kickstarter（译者注：Kickstarter是一个对个人创意项目进行公众集资（捐赠）从而获得资金支持的网络平台）上进行集资，结果仅仅在28小时内就获得了超过360人的资助。]{{{该项目再一次应证了}}}[http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html Atwood定律：]{{{“任何应用都可以使用JavaScript来编写，并最终也会由JavaScript编写。”}}}
+==== 这就是牛人和我们的差别 ... ====
+ - {{{这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题}}}
+  - 来自 [http://www.oschina.net/news/39858/fast-database-emerges-from-mit-class-gpus-and-students-invention?p=3#rpl_273342499 哈佛/MIT学生创造GPU数据库，性能提升70倍 - 开源中国 OSChina.NET:]
+{{{
+#!div
+''''''43楼：suifengsuoyu 发表于 2013-04-23 18:21''''''
+> 引用来自“unnamed”的评论
+> 难道写个数据库的时间还不够他处理那些数据？我觉得处理个几十次应该都够了吧
+这就是牛人和我们的差别，不能只是解决当前问题，而要完美解决这同一类问题
+}}}
+==== 只有猪和变态控制狂类型的程序员才会 ... ====
+ - {{{今天的苹果核google都是控制狂类型的公司。苹果不说了，google干的好事一桩：win下的chrome一直只是测试用的，firefox安装的是自己选择的flash player版本，结果2次chrome大版本升级，2次都将firefox的flash player强制插入了与其一致的最新的11版。这种“狗拿耗子”，在禁用google update插件情况下偷偷摸摸“自作聪明”的小伎俩也是今天google的程序员们的最爱。更别提什么把系统启动时进程常驻内存，骗取用户”chrome启动很快“，linux下想直接下载个for win的chrome都要和网页斗半天，否则它认准你只能下载 for linux版的。每每这种时候都有一种”你以为你是谁啊，猪啊！“的感觉，只有猪和变态控制狂类型的程序员才会以为自己永远知道别人想的是什么。。。}}}
+  - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=2966467#p2966467 苹果公司的邪恶 - 查看主题 • Ubuntu中文论坛:]
+==== 零下40度 ... 这是一个神奇的数值 ====
+ - {{{在他刚跳下不久的高度，气温大概是零下40度。这是一个神奇的数值，因为不需要指出其单位是摄氏还是华氏——数值在两种单位下都一样}}}
+  - 来自 [http://songshuhui.net/archives/78125 "科学松鼠会 » [What if]第28期——天上掉下来一块牛排排:"]
+==== ... 我们那里的CB不是这样的 ====
+ - {{{不好意思，我可能无意间闯进你们这个平行界面了，我们那里的CB不是这样的。}}}
+  - 来自`改版后`的 cnBeta 评论 [http://www.cnbeta.com/articles/241890.htm Twitter地图显示：富人用iPhone 穷人用Android]
+==== ... 而解决这些问题的方法就是再引入一个新的兼容层 ====
+ - {{{大部分的软件问题都是由于兼容层太多引发兼容问题，而解决这些问题的方法就是再引入一个新的兼容层。}}}
+  - 来自 [http://www.solidot.org/story?sid=35302 Solidot | Xfce、LXDE和GNOME通过兼容层支持Mir:]
+==== 令人食欲大振……当然振过就算了 ====
+ - {{{我曾经用致命白毒伞和大蒜同煮，结果汤色清亮，大蒜颗颗雪白，兼之鲜香四溢，令人食欲大振……当然振过就算了。}}}
+  - 来自 [http://songshuhui.net/archives/83379 科学松鼠会 » 辨别毒蘑菇，民间传说不可信:]
+==== 歌者是微软好不？ ====
+ - {{{歌者是微软好不？在到处搞二维化}}}
+  - 来自 [http://tieba.baidu.com/p/2538725451 【水】其实三体人已经潜伏地球多年_三体吧_百度贴吧:]
+==== 一款好手机必须具备以下条件： 首先 ... ====
+ - {{{一款好手机必须具备以下条件： 首先，得能买到……}}}
+  - 来自 [http://www.cnbeta.com/articles/251442.htm "[图]魅族MX3获入网许可_Meizu 魅族_cnBeta.COM:"],,''''(的评论)'''',,
+==== 本人擅长 ..., 精通 ..., 熟悉 ... ====
+ - {{{本人擅长Ai、Fw、Fl、Br、Ae、Pr、Id、PS等软件的安装与卸载，精通CSS、JavaScript、PHP、C、C＋＋、java、Ruby、Perl、Lisp、python、Objective-C、ActionScript等单词的拼写，熟悉windows、Linux、Mac、Android、IOS等系统的开关机 。}}}
+  - 来自 [http://tieba.baidu.com/p/2622689705#39598512972 自己通宵在机场，想睡觉还有装修的，太苦逼了_三体吧_百度贴吧:] 第 `5` 楼;
+==== CTHD ====
+ - {{{所以要是有机会去国外的录像带店逛，看到名字拖的老长老长，甭问，90％是中国电影。唯一的例外大概就是那部Crouching Tiger and Hidden Dragon《卧虎藏龙》，也不知老外念着绕不绕嘴。反正我单知道新西兰电影院很郁闷，他们的横条信息屏幕显示不下，于是干脆简称为CTHD。}}}
+  - 来自 [http://www.guokr.com/question/507637/#answer580156 你看到过哪些奇葩的翻译？ | 问答 | 果壳网 科技有意思:] 的 `某一楼`;
+==== 世界上最远的距离 ... ====
+ - {{{易碎双腔龙：世界上最远的距离不是天涯海角，而是我的咽喉到大脑。}}}
+ - [[Image(www.guokr.com_article_38500.png)]]
+ - 来自 [http://www.guokr.com/article/38500/ 喉返神经：进化走的弯路 | 环球科技观光团主题站 | 果壳网 科技有意思:]
+==== 神烦的蛇精病…… ====
+ - {{{看到这里，想必你的系统1已经有了结论：写这篇文章的人不知是好是坏，但应该是个神烦的蛇精病……}}}
+ - {{{拉姆斯菲尔德曾说过一段被群嘲但其实有道理的名言：“我们都知道自己知道一些事，有些事我们知道我们已经知道。我们同时知道我们不知道一些事，就是说，有些事我们知道我们不知道。但我们并不知道有些事情我们其实不知道，有些事我们真的不知道我们不知道。”}}}
+ - 来自 [http://songshuhui.net/archives/87220 科学松鼠会 » 为何笨蛋有自信:]
+==== 在不确定是否会赢的情况下，绝对不要拔剑 ====
+ - {{{最后的结论： 作为资深程序员，最优雅的方式就是尽可能地指出不好的地方，但绝对不要实际参与改进。 兵无常势水无常形，在不确定是否会赢的情况下，绝对不要拔剑。}}}
+ - 来自 [http://www.cnblogs.com/XiaoXiami142/p/3508642.html 为什么所有的架构都是糟糕的 - @小虾米@ - 博客园:]
+==== 这个系统复杂已经爆了几十块表 ====
+ - {{{如何避免飞机相撞本身已是个复杂度爆表的问题，为了解决这个问题而被设计出的这个系统复杂已经爆了几十块表，相信没有人能够真正理解这套系统，所以即便是这方面的专业人士有时也会对系统做出的反馈给吓到。这不断攀升的复杂程度也正是当代社会的普遍现象。人类无法理解的系统正在保护我们的安全，科技发展到了接受检验的节点。}}}
+ - 来自 [http://www.cnbeta.com/articles/267678.htm 世界已经太复杂，人类科技发展到极限了吗？_cnBeta 视点观察_cnBeta.COM:]
+==== 这就是滥服药物的害处 ====
+ - {{{伴随着企业的这种管理上的和发展上的痛处，信息化企业也飞速发展，就如同肥胖人群多了，医疗机构，保健机构，甚至江湖郎中也火了一样，或许比喻不够恰当，那就领会精神吧，}}}
+ - {{{所以企业实施了各种各样的应用系统之后，问题也随之而来，这就是滥服药物的害处，目前急需一种应用平台可以中和这些系统，那么这就是BPM基础软件。}}}
+ - 来自 [http://www.cnblogs.com/Reedzhang/p/ReedZhang.html k2之于.NET流程应用开发者 - Reed Zhang - 博客园:]
+==== C语言的奇技淫巧大都是汇编程序员发明的 ... ====
+ - {{{C语言的奇技淫巧大都是汇编程序员发明的，因为正常的C在他们眼中就是大便……}}}
+ - 来自 [http://coolshell.cn/articles/10975.html#comment-1233261 一个“蝇量级” C 语言协程库 | 酷 壳 - CoolShell.cn:]
+==== 给中国孩子和美国孩子一杯水 ... ====
+ - {{{曾经有教育家做了一个实验，给中国孩子和美国孩子一杯水，让他们不用火就让水沸腾起来。中国小孩 ...}}}, 后面的太长，见 [attachment:PHOT6KCR0016030U_9KIVFQAQ.html.txt 这里] ;
+ - 来自 [http://comment.digi.163.com/photoview_bbs/PHOT6KCR0016030U/9KIVFQAQ.html 那些消失的笔记本电脑品牌_图集跟贴_网易跟贴:]
+==== 如果你造的是飞机上的马桶 ... ====
+ - {{{如果你造的是飞机上的马桶，你不需要知道为什么飞机会飞起来。但如果飞机总设计师，不知到飞机是怎么飞起来的是要出人命的。}}}
+ - 来自 [http://www.oschina.net/news/49241/programmer-rely-ide?p=2#rpl_278693244 依靠 IDE 会让你变成一位差劲的程序员吗？ - 开源中国社区: 第 39 楼]
+==== 在以智商闻名的鹦鹉界是一朵奇葩 ... ====
+ - {{{Kakapo其实是毛利语，这种鹦鹉在以智商闻名的鹦鹉界是一朵奇葩，常常不能意识到自己不会飞，然后从树上跳下来摔到自己。}}}
+ - 来自 [http://jandan.net/2014/03/05/strigops-habroptila.html#comment-2342897 煎蛋 - 鸟中宠物狗鸮鹦鹉: 第 15 楼]
+==== 快成阿里云专业陪练了 ====
+ - 来自 [http://www.cnblogs.com/cmt/p/3716523.html#2935069 云计算之路-阿里云上：“黑色30秒”走了，﻿“黑色1秒”来了，真相也许大白了 - 博客园团队 - 博客园: 第 16 楼]
+==== 典型的互相对抄然后都掉坑里的场面 ====
+ - {{{以前快嘀打车喊车后会正向计时，嘀嘀打车会有90秒倒计时；最近两个app都改版了，快嘀改成倒计时了，嘀嘀改成正向计时了。这应该就是典型的互相对抄然后都掉坑里的场面。不知道当初做决定的两个产品经理怎么面对对手的改版和自己的同事。}}}
+ - 来自 [http://weibo.com/2123664205/B520es1Rw 英式没品笑话百科的微博|微博-随时随地分享身边的新鲜事儿:]
+==== ubuntu及其他发行版都是不错的中文社区？ ====
+ - {{{ubuntu中文社区难道就不是ubuntu的广告了吗？}}}[[BR]]{{{你所定义的广告，在我看来只是一种linux发行版的推广而已。linux用户要不就说推广不够，做了推广又说是广告。那请你给出一个既不是广告又可以推广linux的方法？}}}[[BR]]{{{难道ubuntu社区的名字要改成——ubuntu及其他发行版都是不错的中文社区？}}}
+ - 来自 [http://forum.ubuntu.org.cn/viewtopic.php?p=3062393#p3062393 质疑deepin算不算国内一枝独秀的发行版 - 查看主题 • Ubuntu中文论坛: 第 66 楼]
+==== 更‘大’更‘好’的傻瓜 ====
+ - {{{如今的编程是一场程序员和上帝的竞赛，程序员企图开发出来更好更大的傻瓜都会用的软件，而上帝总能创造出更‘大’更‘好’的傻瓜，所以，上帝总是赢。}}}
+ - 来自 [http://www.oschina.net/news/53654/how-client-use-their-software?p=3#rpl_281085215 在程序员的眼里，用户是这样使用他们开发的软件的 - 开源中国社区: 第 54 楼]
+==== 有种倒是弄个棍子不用翅膀就飞啊 ====
+ - {{{起落架，收入翼根，那是抄袭F35,SU27，收入侧面，那是抄袭F22，收入底部那是抄袭F15，要是老子一咬牙一跺脚，装到机翼上去，那你就是抄袭EF2000,F4,MIG15，还有J8,重要的是有种别用米其林轮胎，给套双解放鞋，你才是自主设计，还不算创新。}}}
+ - {{{进气道，你要用皮托管，那你是抄袭F16，用二元可调是抄袭F15,用3元是抄袭T50,用加莱特是抄袭F22,用DSI是抄袭F35，你要是一怒之下不用进气道，直接暴露空气中，那你是抄袭波音707。}}}
+ - {{{你用鸭翼是抄袭阵风台风后者是以色列的狮，你用三翼面是抄袭SU35，你用正常布局那肯定是抄袭F15,16,22，要是用四个翅膀不用传统布局了，那肯定是抄袭卢卡斯，你要是敢造个飞碟出来，那你丫肯定是抄袭斯皮尔伯格 ，有种倒是弄个棍子不用翅膀就飞啊，对了，那还是抄袭哈利波特。}}}
+ - 来自 [http://jandan.net/2012/05/16/chinas-fifth-ge.html 国内观光：成都造第二代歼-20试飞:] 评论之 `河马和马 无责任搬运`
+==== 软件开发的生命周期 ====
+ - {{{... 技术团队时间评估需要 1.2 年 ... 领导发话：“互联网精神————先上线，再迭代，给技术团队一个月的时间造桥” ...}}}
+ - 图在这里 [attachment:软件开发生命周期.jpg 软件开发生命周期.jpg]
+ - 来自 [http://my.oschina.net/xxiaobian/blog/361782 OSChina 周一乱弹 —— 软件开发的生命周期 - 小小编辑的个人空间 - 开源中国社区:]
+==== 闲置浪费总是不好的 ====
+ - 简单说，如果我们从食物中获得的蛋白质超过了建造身体和维持运转这些“高级任务”的需求量，多余的那部分就可能被当做燃料消耗掉或者是变成脂肪储存起来。{{{就像你一下子有了好几部iPhone，闲置浪费总是不好的，于是拿出一部来带在身上专门做镜子用。}}}
+ - 来自 [http://songshuhui.net/archives/95854 科学松鼠会 » 是什么吃胖了我们（3） 蛋白质:]
+==== 你不是他们的客户，而是他们的产品 ====
+ - {{{如果商家为你提供免费服务，那么你就不是他们的客户，而是他们的产品}}}
+ - 来自 [http://www.appinn.com/winrar-cn-free/#comment-362346 "WinRAR 中文个人版正式免费[Win] - 小众软件: -  2015/05/24 12:37 的某条评论"]
+==== 有些框架就属于牛逼人手里牛逼闪闪，二逼人手里一团乱麻 ====
+ - 基本上，针对每个平台，我都列出一些主流框架，但不意味着你们都能驾驭得住。小马过马，老牛没过膝，松鼠淹个半死，就是这么回事。创业公司喜欢新框架，这与他们拿得起高薪招一两个前端牛人所致，基本上所有页面就是他们干的，因此用Angular或Ember都没区别。小公司则小心，人员流失大，jQuery+RequireJS是万金油。大公司则基本上有自己的技术沉淀，换言之，应该有自己的前端框架，除非那东西很陈旧，不建议再造轮子。对大公司的建议是搞自己的技术委员会，根据自己的人员配置来挑选的框架。有句话说得好，不求最好，但求最合适。{{{有些框架就属于牛逼人手里牛逼闪闪，二逼人手里一团乱麻}}}。对于某些成长特别快的中等公司来说，这点最需防范，牛人是有的，但作战的主体70%都是刚培训出来的实习生，难上手，中文文档不全的框架就必须过滤掉。我也不排除造轮子的可能性，毕竟有些公司就是人才济济，能推出一些靠谱的开源产品来造福社区。 
+ - 来自 [http://www.iteye.com/news/30547 去哪儿网前端架构师司徒正美：如何挑选适合的前端框架？ - Web前端 - ITeye资讯: - 没有最好，选择最适合自己的]
+==== 所谓云，其实是一堆不想给投资人解释的硬件和软件 ====
+ - 所谓云，其实是一堆不想给投资人解释的硬件和软件。
+ - 因为不管你多么努力地解释，他们也不会明白服务器/数据库/路由器/走线架/猫的区别。{{{如果你说这一坨tm的就是云，他们立刻进入不懂装懂模式，露出恍然大悟的表情，直接开始问价钱}}}。
+ - 来自 [http://www.guokr.com/question/565900/?answer=717054#answer717054 有哪些在你的认知圈子里是理所当然，在大众看来却是匪夷所思的事情？ | 问答 | 问答 | 果壳网 科技有意思: 之 answer717054]
+== END ==','',0);
 CREATE TABLE repository (
     id integer,
     name text,
@@ -46762,6 +47473,95 @@ INSERT INTO "fullblog_posts" VALUES('thinkbase-20160712-1602',3,'将自己的域
 ==== 具体 DSN 应该指向哪个 IP，github 提供了相关的帮助说明 ====
 [[Image(20160311-100914-关于DNS设置的说明.png, width=100%)]]
 }}}',1468340581,1468341882,'','thinkbase','thinkbase','github bizobj.org');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160721-2156',1,'纪念 Codehaus - Codehaus was overtaken by SourceForge and Google Code and eventually GitHub has overtaken all of them','在这个 [https://github.com Github] 如火如荼的年代，[http://sf.net sf.net] 已经式微，而 [https://code.google.com Google Code] 和 [http://www.codehaus.org/ Codehaus] 已经不再继续了。
+
+这里有篇文章：《[http://www.javaworld.com/article/2892227/open-source-tools/codehaus-the-once-great-house-of-code-has-fallen.html Codehaus: The once great house of code has fallen]》: `Codehaus was overtaken by SourceForge and Google Code and eventually GitHub has overtaken all of them`.
+
+然而有价值的项目仍然在延续，挑几个比较熟悉的：
+ - `Groovy`: http://groovy.codehaus.org/ (现在是 http://groovy-lang.org/).
+ - `XStream`: http://xstream.codehaus.org/ (现在是 http://x-stream.github.io/).
+ - `jMock`： https://xircles.codehaus.org/projects/jmock(现在是 http://www.jmock.org/).
+
+当然也有不怎么被使用的项目：
+ - `PicoContainer`: http://picocontainer.codehaus.org/
+ - `XDoclet`: http://xdoclet.codehaus.org/
+
+看起来，Codehaus 上原来的所有项目都已经转移到了 Github，如果需要去寻找历史的话，可以访问 https://github.com/codehaus 。',1469139196,1469139196,'','thinkbase','thinkbase','open-source codehaus');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160721-2156',2,'纪念 Codehaus - Codehaus was overtaken by SourceForge and Google Code and eventually GitHub has overtaken all of them','在这个 [https://github.com Github] 如火如荼的年代，[http://sf.net sf.net] 已经式微，而 [https://code.google.com Google Code] 和 [http://www.codehaus.org/ Codehaus] 已经不再继续了。
+
+[[Image(Home_-_2015-04-02_23.48.02.png, width=100%)]]
+
+----
+
+这里有篇文章：《[http://www.javaworld.com/article/2892227/open-source-tools/codehaus-the-once-great-house-of-code-has-fallen.html Codehaus: The once great house of code has fallen]》: `Codehaus was overtaken by SourceForge and Google Code and eventually GitHub has overtaken all of them`.
+
+然而有价值的项目仍然在延续，挑几个比较熟悉的：
+ - `Groovy`: http://groovy.codehaus.org/ (现在是 http://groovy-lang.org/).
+ - `XStream`: http://xstream.codehaus.org/ (现在是 http://x-stream.github.io/).
+ - `jMock`： https://xircles.codehaus.org/projects/jmock(现在是 http://www.jmock.org/).
+
+当然也有不怎么被使用的项目：
+ - `PicoContainer`: http://picocontainer.codehaus.org/
+ - `XDoclet`: http://xdoclet.codehaus.org/
+
+看起来，Codehaus 上原来的所有项目都已经转移到了 Github，如果需要去寻找历史的话，可以访问 https://github.com/codehaus 。',1469139196,1469139288,'','thinkbase','thinkbase','open-source codehaus');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160721-2156',3,'纪念 Codehaus - Codehaus was overtaken by SourceForge and Google Code and eventually GitHub has overtaken all of them','在这个 [https://github.com Github] 如火如荼的年代，[http://sf.net sf.net] 已经式微，而 [https://code.google.com Google Code] 和 [http://www.codehaus.org/ Codehaus] 已经不再继续了。
+
+[[Image(Home_-_2015-04-02_23.48.02.png, width=100%)]]
+
+----
+
+这里有篇文章：《[http://www.javaworld.com/article/2892227/open-source-tools/codehaus-the-once-great-house-of-code-has-fallen.html Codehaus: The once great house of code has fallen]》:
+ - `Codehaus was overtaken by SourceForge and Google Code and eventually GitHub has overtaken all of them`.
+
+然而有价值的项目仍然在延续，挑几个比较熟悉的：
+ - `Groovy`: http://groovy.codehaus.org/ (现在是 http://groovy-lang.org/).
+ - `XStream`: http://xstream.codehaus.org/ (现在是 http://x-stream.github.io/).
+ - `jMock`： https://xircles.codehaus.org/projects/jmock(现在是 http://www.jmock.org/).
+
+当然也有不怎么被使用的项目：
+ - `PicoContainer`: http://picocontainer.codehaus.org/
+ - `XDoclet`: http://xdoclet.codehaus.org/
+
+看起来，Codehaus 上原来的所有项目都已经转移到了 Github，如果需要去寻找历史的话，可以访问 https://github.com/codehaus 。',1469139196,1469139359,'','thinkbase','thinkbase','open-source codehaus');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160721-2156',4,'纪念 Codehaus - ... and eventually GitHub has overtaken all of them','在这个 [https://github.com Github] 如火如荼的年代，[http://sf.net sf.net] 已经式微，而 [https://code.google.com Google Code] 和 [http://www.codehaus.org/ Codehaus] 已经不再继续了。
+
+[[Image(Home_-_2015-04-02_23.48.02.png, width=100%)]]
+
+----
+
+这里有篇文章：《[http://www.javaworld.com/article/2892227/open-source-tools/codehaus-the-once-great-house-of-code-has-fallen.html Codehaus: The once great house of code has fallen]》:
+ - `Codehaus was overtaken by SourceForge and Google Code and eventually GitHub has overtaken all of them`.
+
+然而有价值的项目仍然在延续，挑几个比较熟悉的：
+ - `Groovy`: http://groovy.codehaus.org/ (现在是 http://groovy-lang.org/).
+ - `XStream`: http://xstream.codehaus.org/ (现在是 http://x-stream.github.io/).
+ - `jMock`： https://xircles.codehaus.org/projects/jmock(现在是 http://www.jmock.org/).
+
+当然也有不怎么被使用的项目：
+ - `PicoContainer`: http://picocontainer.codehaus.org/
+ - `XDoclet`: http://xdoclet.codehaus.org/
+
+看起来，Codehaus 上原来的所有项目都已经转移到了 Github，如果需要去寻找历史的话，可以访问 https://github.com/codehaus 。',1469139196,1469139514,'','thinkbase','thinkbase','open-source codehaus');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20160721-2156',5,'纪念 Codehaus - ... and eventually GitHub has overtaken all of them','在这个 [https://github.com Github] 如火如荼的年代，[http://sf.net sf.net] 已经式微，而 [https://code.google.com Google Code] 和 [http://www.codehaus.org/ Codehaus] 已经不再继续了。
+
+[[Image(Home_-_2015-04-02_23.48.02.png, width=100%)]]
+
+----
+
+这里有篇文章：《[http://www.javaworld.com/article/2892227/open-source-tools/codehaus-the-once-great-house-of-code-has-fallen.html Codehaus: The once great house of code has fallen]》:
+ - `Codehaus was overtaken by SourceForge and Google Code and eventually GitHub has overtaken all of them`.
+
+然而有价值的项目仍然在延续，挑几个比较熟悉的：
+ - `Groovy`: http://groovy.codehaus.org/ (现在是 http://groovy-lang.org/).
+ - `XStream`: http://xstream.codehaus.org/ (现在是 http://x-stream.github.io/).
+ - `jMock`： https://xircles.codehaus.org/projects/jmock (现在是 http://www.jmock.org/).
+
+当然也有不怎么被使用的项目：
+ - `PicoContainer`: http://picocontainer.codehaus.org/
+ - `XDoclet`: http://xdoclet.codehaus.org/
+
+看起来，Codehaus 上原来的所有项目都已经转移到了 Github，如果需要去寻找历史的话，可以访问 https://github.com/codehaus 。',1469139196,1469143953,'','thinkbase','thinkbase','open-source codehaus');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
