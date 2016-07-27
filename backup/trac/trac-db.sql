@@ -667,6 +667,8 @@ INSERT INTO "session" VALUES('a0557c78ec9f64a27751a424',0,1469371773);
 INSERT INTO "session" VALUES('12677079a94e735c83e669f3',0,1469371859);
 INSERT INTO "session" VALUES('14c69d972d0d1c4e2af318e3',0,1469372005);
 INSERT INTO "session" VALUES('846fd35fd9fad8fbc5815fb6',0,1469382331);
+INSERT INTO "session" VALUES('c81ba5876b2ff145c2d30c34',0,1469590372);
+INSERT INTO "session" VALUES('40029fb8b63b0cc2c8c1f7db',0,1469590449);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -2658,6 +2660,14 @@ INSERT INTO "session_attribute" VALUES('846fd35fd9fad8fbc5815fb6',0,'query_time'
 INSERT INTO "session_attribute" VALUES('846fd35fd9fad8fbc5815fb6',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
 INSERT INTO "session_attribute" VALUES('846fd35fd9fad8fbc5815fb6',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&desc=1&order=owner');
 INSERT INTO "session_attribute" VALUES('846fd35fd9fad8fbc5815fb6',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('c81ba5876b2ff145c2d30c34',0,'query_time','1469590372');
+INSERT INTO "session_attribute" VALUES('c81ba5876b2ff145c2d30c34',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('c81ba5876b2ff145c2d30c34',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&group=owner&desc=1&order=summary');
+INSERT INTO "session_attribute" VALUES('c81ba5876b2ff145c2d30c34',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('40029fb8b63b0cc2c8c1f7db',0,'query_time','1469590449');
+INSERT INTO "session_attribute" VALUES('40029fb8b63b0cc2c8c1f7db',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('40029fb8b63b0cc2c8c1f7db',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&desc=1&order=status');
+INSERT INTO "session_attribute" VALUES('40029fb8b63b0cc2c8c1f7db',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
