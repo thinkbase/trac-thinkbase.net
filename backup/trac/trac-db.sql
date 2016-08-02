@@ -683,6 +683,8 @@ INSERT INTO "session" VALUES('9951b98f86db30eda150bef7',0,1469998496);
 INSERT INTO "session" VALUES('84f20d46e7aeb8dd6457b993',0,1469998517);
 INSERT INTO "session" VALUES('3a6f05c86fa6cd93c50f968a',0,1470063016);
 INSERT INTO "session" VALUES('b45007b298a25b2e47945ba2',0,1470063037);
+INSERT INTO "session" VALUES('23c8a466e75d93ae693bb8a2',0,1470095223);
+INSERT INTO "session" VALUES('46517d33b470c911e434f820',0,1470095243);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -2728,6 +2730,14 @@ INSERT INTO "session_attribute" VALUES('b45007b298a25b2e47945ba2',0,'query_time'
 INSERT INTO "session_attribute" VALUES('b45007b298a25b2e47945ba2',0,'query_constraints','[{''status'': [u''closed'']}]');
 INSERT INTO "session_attribute" VALUES('b45007b298a25b2e47945ba2',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=id&row=description');
 INSERT INTO "session_attribute" VALUES('b45007b298a25b2e47945ba2',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('23c8a466e75d93ae693bb8a2',0,'query_time','1470095223');
+INSERT INTO "session_attribute" VALUES('23c8a466e75d93ae693bb8a2',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('23c8a466e75d93ae693bb8a2',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=summary&row=description');
+INSERT INTO "session_attribute" VALUES('23c8a466e75d93ae693bb8a2',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('46517d33b470c911e434f820',0,'query_time','1470095243');
+INSERT INTO "session_attribute" VALUES('46517d33b470c911e434f820',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('46517d33b470c911e434f820',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&desc=1&order=owner&row=description');
+INSERT INTO "session_attribute" VALUES('46517d33b470c911e434f820',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
