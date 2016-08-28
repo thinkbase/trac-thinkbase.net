@@ -817,6 +817,10 @@ INSERT INTO "session" VALUES('ff994b61f1acea66f5de0f9f',0,1472255311);
 INSERT INTO "session" VALUES('f0b29f5c2bb68f63ef9a6316',0,1472255313);
 INSERT INTO "session" VALUES('d31b184335c22ed2f7b6c1ca',0,1472255315);
 INSERT INTO "session" VALUES('222bd1d0652dd1df0c4d3b0d',0,1472294512);
+INSERT INTO "session" VALUES('f03a29a2dae2f787b70e24b7',0,1472331237);
+INSERT INTO "session" VALUES('3ba0ee5faf5fe8fa606078fc',0,1472331238);
+INSERT INTO "session" VALUES('a330c4d9b2b80b6651615a74',0,1472335815);
+INSERT INTO "session" VALUES('f7af6d6043fb118500a4b10d',0,1472338696);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -3274,6 +3278,18 @@ INSERT INTO "session_attribute" VALUES('d31b184335c22ed2f7b6c1ca',0,'query_href'
 INSERT INTO "session_attribute" VALUES('d31b184335c22ed2f7b6c1ca',0,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('222bd1d0652dd1df0c4d3b0d',0,'query_href','/trac/report/8?asc=1&USER=anonymous&page=1');
 INSERT INTO "session_attribute" VALUES('222bd1d0652dd1df0c4d3b0d',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('f03a29a2dae2f787b70e24b7',0,'query_time','1472331237');
+INSERT INTO "session_attribute" VALUES('f03a29a2dae2f787b70e24b7',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''accepted'', u''assigned'', u''new'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('f03a29a2dae2f787b70e24b7',0,'query_href','/trac/query?owner=%24USER&status=accepted&status=assigned&status=new&status=reopened&col=id&col=summary&col=status&col=due_assign&col=due_close&col=complete&col=parents&col=blockedby&col=blocking&col=type&col=priority&col=milestone&col=component&report=9&order=priority');
+INSERT INTO "session_attribute" VALUES('f03a29a2dae2f787b70e24b7',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('3ba0ee5faf5fe8fa606078fc',0,'query_time','1472331238');
+INSERT INTO "session_attribute" VALUES('3ba0ee5faf5fe8fa606078fc',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''accepted'', u''assigned'', u''new'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('3ba0ee5faf5fe8fa606078fc',0,'query_href','/trac/query?owner=%24USER&status=accepted&status=assigned&status=new&status=reopened&col=id&col=summary&col=status&col=due_assign&col=due_close&col=complete&col=parents&col=blockedby&col=blocking&col=type&col=priority&col=milestone&col=component&report=9&order=priority');
+INSERT INTO "session_attribute" VALUES('3ba0ee5faf5fe8fa606078fc',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('a330c4d9b2b80b6651615a74',0,'query_href','/trac/report/2?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('a330c4d9b2b80b6651615a74',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('f7af6d6043fb118500a4b10d',0,'query_href','/trac/report/3?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('f7af6d6043fb118500a4b10d',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
