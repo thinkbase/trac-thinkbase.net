@@ -940,6 +940,10 @@ INSERT INTO "session" VALUES('41f183254fdb67ee4da3b204',0,1474271698);
 INSERT INTO "session" VALUES('d1601cb4250bb5300c8bb4e9',0,1474449499);
 INSERT INTO "session" VALUES('9e5f55372c0b48673c4c079c',0,1474461658);
 INSERT INTO "session" VALUES('817e626765fc785263434e78',0,1474500521);
+INSERT INTO "session" VALUES('ef4dcd67ab9463849a06dbb2',0,1474577187);
+INSERT INTO "session" VALUES('769901e1085676b4c79e8d40',0,1474612529);
+INSERT INTO "session" VALUES('2750cd3afaf5d825e4a1c18d',0,1474612538);
+INSERT INTO "session" VALUES('1d88d6c5a7be03bf20b9338c',0,1474612568);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -3783,6 +3787,16 @@ INSERT INTO "session_attribute" VALUES('9e5f55372c0b48673c4c079c',0,'query_href'
 INSERT INTO "session_attribute" VALUES('9e5f55372c0b48673c4c079c',0,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('817e626765fc785263434e78',0,'query_href','/trac/report/6?asc=1&USER=anonymous&page=1');
 INSERT INTO "session_attribute" VALUES('817e626765fc785263434e78',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('ef4dcd67ab9463849a06dbb2',0,'query_time','1474577181');
+INSERT INTO "session_attribute" VALUES('ef4dcd67ab9463849a06dbb2',0,'query_constraints','[{u''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('ef4dcd67ab9463849a06dbb2',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('ef4dcd67ab9463849a06dbb2',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('769901e1085676b4c79e8d40',0,'query_href','/trac/report/4?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('769901e1085676b4c79e8d40',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('2750cd3afaf5d825e4a1c18d',0,'query_href','/trac/report/4?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('2750cd3afaf5d825e4a1c18d',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('1d88d6c5a7be03bf20b9338c',0,'query_href','/trac/report/4?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('1d88d6c5a7be03bf20b9338c',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
