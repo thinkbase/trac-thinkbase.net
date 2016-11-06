@@ -1306,6 +1306,7 @@ INSERT INTO "session" VALUES('f3633eac251c79c8a0405988',0,1478313659);
 INSERT INTO "session" VALUES('deb0ff39fb2aace33af5669f',0,1478318449);
 INSERT INTO "session" VALUES('978c098322ea4a77177a3784',0,1478318786);
 INSERT INTO "session" VALUES('7ed6ebac53f06fe59dd5c04f',0,1478412867);
+INSERT INTO "session" VALUES('d4e7bbd94653c0516db1b818',0,1478451483);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -5389,6 +5390,8 @@ INSERT INTO "session_attribute" VALUES('7ed6ebac53f06fe59dd5c04f',0,'query_time'
 INSERT INTO "session_attribute" VALUES('7ed6ebac53f06fe59dd5c04f',0,'query_constraints','[{''status'': [u''closed'']}]');
 INSERT INTO "session_attribute" VALUES('7ed6ebac53f06fe59dd5c04f',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=reporter');
 INSERT INTO "session_attribute" VALUES('7ed6ebac53f06fe59dd5c04f',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('d4e7bbd94653c0516db1b818',0,'query_href','/trac/report/2?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('d4e7bbd94653c0516db1b818',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
