@@ -222,6 +222,11 @@ INSERT INTO "session" VALUES('7b697f7a507eda91672650cf',0,1479225047);
 INSERT INTO "session" VALUES('1d77d85dabf83ca113de90fd',0,1479225085);
 INSERT INTO "session" VALUES('b7e46e0b185db445a66ee31d',0,1479242962);
 INSERT INTO "session" VALUES('fa8bc3bd619b6e332ef45090',0,1479242969);
+INSERT INTO "session" VALUES('4f6f669b4f7be5574169f0e3',0,1479298475);
+INSERT INTO "session" VALUES('2847f2509d419644b042f979',0,1479298565);
+INSERT INTO "session" VALUES('0926936f20c0a2e92c32c8fd',0,1479307158);
+INSERT INTO "session" VALUES('8cd150deae77f894a01efbed',0,1479318124);
+INSERT INTO "session" VALUES('9d4fe34825a7ee47823209c1',0,1479318296);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -575,6 +580,16 @@ INSERT INTO "session_attribute" VALUES('b7e46e0b185db445a66ee31d',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('b7e46e0b185db445a66ee31d',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('fa8bc3bd619b6e332ef45090',0,'timeline.lastvisit','1479240050000000');
 INSERT INTO "session_attribute" VALUES('fa8bc3bd619b6e332ef45090',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('4f6f669b4f7be5574169f0e3',0,'timeline.lastvisit','1479283220000000');
+INSERT INTO "session_attribute" VALUES('4f6f669b4f7be5574169f0e3',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2847f2509d419644b042f979',0,'timeline.lastvisit','1479283220000000');
+INSERT INTO "session_attribute" VALUES('2847f2509d419644b042f979',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0926936f20c0a2e92c32c8fd',0,'timeline.lastvisit','1479283220000000');
+INSERT INTO "session_attribute" VALUES('0926936f20c0a2e92c32c8fd',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('8cd150deae77f894a01efbed',0,'timeline.lastvisit','1479283220000000');
+INSERT INTO "session_attribute" VALUES('8cd150deae77f894a01efbed',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('9d4fe34825a7ee47823209c1',0,'timeline.lastvisit','1479283220000000');
+INSERT INTO "session_attribute" VALUES('9d4fe34825a7ee47823209c1',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
