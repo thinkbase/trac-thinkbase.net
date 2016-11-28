@@ -1435,6 +1435,8 @@ INSERT INTO "session" VALUES('a534f07bba2a802412a667a5',0,1480240657);
 INSERT INTO "session" VALUES('eb9a38d7896a76122fb8b81d',0,1480240659);
 INSERT INTO "session" VALUES('dac22db2cbb1f1fee0427186',0,1480240674);
 INSERT INTO "session" VALUES('f877346966a8f1dc31184094',0,1480245911);
+INSERT INTO "session" VALUES('4f4f182cf9039cf755e854ff',0,1480280234);
+INSERT INTO "session" VALUES('acfb9d875aa42245d51a3386',0,1480294892);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -5922,6 +5924,14 @@ INSERT INTO "session_attribute" VALUES('f877346966a8f1dc31184094',0,'query_time'
 INSERT INTO "session_attribute" VALUES('f877346966a8f1dc31184094',0,'query_constraints','[{''status'': [u''closed'']}]');
 INSERT INTO "session_attribute" VALUES('f877346966a8f1dc31184094',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=reporter&row=description');
 INSERT INTO "session_attribute" VALUES('f877346966a8f1dc31184094',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('4f4f182cf9039cf755e854ff',0,'query_time','1480280234');
+INSERT INTO "session_attribute" VALUES('4f4f182cf9039cf755e854ff',0,'query_constraints','[{u''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('4f4f182cf9039cf755e854ff',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('4f4f182cf9039cf755e854ff',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('acfb9d875aa42245d51a3386',0,'query_time','1480294892');
+INSERT INTO "session_attribute" VALUES('acfb9d875aa42245d51a3386',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('acfb9d875aa42245d51a3386',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&group=owner&order=component');
+INSERT INTO "session_attribute" VALUES('acfb9d875aa42245d51a3386',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
