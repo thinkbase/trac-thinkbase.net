@@ -1437,6 +1437,9 @@ INSERT INTO "session" VALUES('dac22db2cbb1f1fee0427186',0,1480240674);
 INSERT INTO "session" VALUES('f877346966a8f1dc31184094',0,1480245911);
 INSERT INTO "session" VALUES('4f4f182cf9039cf755e854ff',0,1480280234);
 INSERT INTO "session" VALUES('acfb9d875aa42245d51a3386',0,1480294892);
+INSERT INTO "session" VALUES('3b6e3e57936e0eb48762fc23',0,1480347105);
+INSERT INTO "session" VALUES('b059984bc9f6c4a834befe09',0,1480353823);
+INSERT INTO "session" VALUES('fe62cea24e47ab4b4fbc6a31',0,1480353867);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -5932,6 +5935,14 @@ INSERT INTO "session_attribute" VALUES('acfb9d875aa42245d51a3386',0,'query_time'
 INSERT INTO "session_attribute" VALUES('acfb9d875aa42245d51a3386',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
 INSERT INTO "session_attribute" VALUES('acfb9d875aa42245d51a3386',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&group=owner&order=component');
 INSERT INTO "session_attribute" VALUES('acfb9d875aa42245d51a3386',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('3b6e3e57936e0eb48762fc23',0,'query_time','1480347103');
+INSERT INTO "session_attribute" VALUES('3b6e3e57936e0eb48762fc23',0,'query_constraints','[{''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('3b6e3e57936e0eb48762fc23',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('3b6e3e57936e0eb48762fc23',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('b059984bc9f6c4a834befe09',0,'query_href','/trac/report/8?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('b059984bc9f6c4a834befe09',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('fe62cea24e47ab4b4fbc6a31',0,'query_href','/trac/report/6?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('fe62cea24e47ab4b4fbc6a31',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
