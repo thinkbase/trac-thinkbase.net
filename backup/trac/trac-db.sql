@@ -1497,6 +1497,8 @@ INSERT INTO "session" VALUES('0da193ec859e172098132a10',0,1481102227);
 INSERT INTO "session" VALUES('695f9a9b9c29b7b366312574',0,1481102248);
 INSERT INTO "session" VALUES('ca542b2ae97cdc4ce7c7d197',0,1481108864);
 INSERT INTO "session" VALUES('4485169c6ebcda83e4c02ae4',0,1481180718);
+INSERT INTO "session" VALUES('e03e1275546f6a3143e33b49',0,1481266110);
+INSERT INTO "session" VALUES('f718545a578981aac4ceda5f',0,1481268820);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -6174,6 +6176,14 @@ INSERT INTO "session_attribute" VALUES('4485169c6ebcda83e4c02ae4',0,'query_time'
 INSERT INTO "session_attribute" VALUES('4485169c6ebcda83e4c02ae4',0,'query_constraints','[{''status'': [u''closed'']}]');
 INSERT INTO "session_attribute" VALUES('4485169c6ebcda83e4c02ae4',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=summary');
 INSERT INTO "session_attribute" VALUES('4485169c6ebcda83e4c02ae4',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('e03e1275546f6a3143e33b49',0,'query_time','1481266110');
+INSERT INTO "session_attribute" VALUES('e03e1275546f6a3143e33b49',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('e03e1275546f6a3143e33b49',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=owner&row=description');
+INSERT INTO "session_attribute" VALUES('e03e1275546f6a3143e33b49',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('f718545a578981aac4ceda5f',0,'query_time','1481268820');
+INSERT INTO "session_attribute" VALUES('f718545a578981aac4ceda5f',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('f718545a578981aac4ceda5f',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=owner');
+INSERT INTO "session_attribute" VALUES('f718545a578981aac4ceda5f',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,

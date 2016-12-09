@@ -353,6 +353,7 @@ INSERT INTO "session" VALUES('f2f312b1e6d817154829f0b9',0,1481217346);
 INSERT INTO "session" VALUES('b8a3817159bc3dd0eb57c691',0,1481224301);
 INSERT INTO "session" VALUES('82dbe510c9e59a8337ad8077',0,1481225280);
 INSERT INTO "session" VALUES('1662b39a47d746e84ea0d40c',0,1481225502);
+INSERT INTO "session" VALUES('4d410523bc403fb888fd8109',0,1481241734);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -970,6 +971,9 @@ INSERT INTO "session_attribute" VALUES('82dbe510c9e59a8337ad8077',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('82dbe510c9e59a8337ad8077',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('1662b39a47d746e84ea0d40c',0,'timeline.lastvisit','1481184080000000');
 INSERT INTO "session_attribute" VALUES('1662b39a47d746e84ea0d40c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('4d410523bc403fb888fd8109',0,'name','qaqyhsfwj');
+INSERT INTO "session_attribute" VALUES('4d410523bc403fb888fd8109',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('4d410523bc403fb888fd8109',0,'email','dxswap@oorvdx.com');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -48673,6 +48677,7 @@ CREATE TABLE cache (
     key text
 );
 INSERT INTO "cache" VALUES(901198563,9,'trac.wiki.api.WikiSystem.pages');
+INSERT INTO "cache" VALUES(1173095902,0,'trac.env.Environment._known_users');
 INSERT INTO "cache" VALUES(1722364385,19,'trac.perm.DefaultPermissionStore._all_permissions');
 CREATE TABLE subtickets (
     parent integer,
