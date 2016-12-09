@@ -354,6 +354,10 @@ INSERT INTO "session" VALUES('b8a3817159bc3dd0eb57c691',0,1481224301);
 INSERT INTO "session" VALUES('82dbe510c9e59a8337ad8077',0,1481225280);
 INSERT INTO "session" VALUES('1662b39a47d746e84ea0d40c',0,1481225502);
 INSERT INTO "session" VALUES('4d410523bc403fb888fd8109',0,1481241734);
+INSERT INTO "session" VALUES('7c6d2ec633b2c087258307bc',0,1481271299);
+INSERT INTO "session" VALUES('10c1ffc53db06563f48a04e5',0,1481271333);
+INSERT INTO "session" VALUES('02bd0626afe9389e2b7c29f4',0,1481288379);
+INSERT INTO "session" VALUES('6a204718eb7cb1ca27f54839',0,1481308704);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -974,6 +978,14 @@ INSERT INTO "session_attribute" VALUES('1662b39a47d746e84ea0d40c',0,'timeline.ne
 INSERT INTO "session_attribute" VALUES('4d410523bc403fb888fd8109',0,'name','qaqyhsfwj');
 INSERT INTO "session_attribute" VALUES('4d410523bc403fb888fd8109',0,'chrome.notices.0','Your preferences have been saved.');
 INSERT INTO "session_attribute" VALUES('4d410523bc403fb888fd8109',0,'email','dxswap@oorvdx.com');
+INSERT INTO "session_attribute" VALUES('7c6d2ec633b2c087258307bc',0,'timeline.lastvisit','1481270418000000');
+INSERT INTO "session_attribute" VALUES('7c6d2ec633b2c087258307bc',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('10c1ffc53db06563f48a04e5',0,'timeline.lastvisit','1481270418000000');
+INSERT INTO "session_attribute" VALUES('10c1ffc53db06563f48a04e5',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('02bd0626afe9389e2b7c29f4',0,'timeline.lastvisit','1481270418000000');
+INSERT INTO "session_attribute" VALUES('02bd0626afe9389e2b7c29f4',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('6a204718eb7cb1ca27f54839',0,'timeline.lastvisit','1481270418000000');
+INSERT INTO "session_attribute" VALUES('6a204718eb7cb1ca27f54839',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
