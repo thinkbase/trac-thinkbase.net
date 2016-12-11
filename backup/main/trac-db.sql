@@ -292,7 +292,6 @@ INSERT INTO "session" VALUES('0e0bd479aebe4025adef4f96',0,1480620518);
 INSERT INTO "session" VALUES('51474b9765e3d8cc2595c8e5',0,1480630248);
 INSERT INTO "session" VALUES('1c2b85b42d83664a2aba5090',0,1480633057);
 INSERT INTO "session" VALUES('3b1f938b01543f654edad976',0,1480634383);
-INSERT INTO "session" VALUES('c8b313bbb82c228ea43e35ea',0,1480635517);
 INSERT INTO "session" VALUES('0f11dda485156d56d86c066b',0,1480642151);
 INSERT INTO "session" VALUES('32699aa7cdc9629d00cd08fd',0,1480646710);
 INSERT INTO "session" VALUES('18cff5a42d0ad4882e05fc86',0,1480682040);
@@ -362,6 +361,7 @@ INSERT INTO "session" VALUES('b16dc7dd9aaf4173d0dd7cce',0,1481328535);
 INSERT INTO "session" VALUES('41918972fc8a9197113de66c',0,1481381075);
 INSERT INTO "session" VALUES('072073e41b3b677e4eac04eb',0,1481381092);
 INSERT INTO "session" VALUES('68c151d350961e065b11d6e7',0,1481387349);
+INSERT INTO "session" VALUES('d05cbb18d12745262d69b36a',0,1481401079);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -857,8 +857,6 @@ INSERT INTO "session_attribute" VALUES('1c2b85b42d83664a2aba5090',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('1c2b85b42d83664a2aba5090',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('3b1f938b01543f654edad976',0,'timeline.lastvisit','1480622420000000');
 INSERT INTO "session_attribute" VALUES('3b1f938b01543f654edad976',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('c8b313bbb82c228ea43e35ea',0,'timeline.lastvisit','1480622420000000');
-INSERT INTO "session_attribute" VALUES('c8b313bbb82c228ea43e35ea',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('0f11dda485156d56d86c066b',0,'timeline.lastvisit','1480622420000000');
 INSERT INTO "session_attribute" VALUES('0f11dda485156d56d86c066b',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('32699aa7cdc9629d00cd08fd',0,'timeline.lastvisit','1480622420000000');
@@ -998,6 +996,8 @@ INSERT INTO "session_attribute" VALUES('072073e41b3b677e4eac04eb',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('072073e41b3b677e4eac04eb',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('68c151d350961e065b11d6e7',0,'timeline.lastvisit','1481356849000000');
 INSERT INTO "session_attribute" VALUES('68c151d350961e065b11d6e7',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d05cbb18d12745262d69b36a',0,'timeline.lastvisit','1481400041000000');
+INSERT INTO "session_attribute" VALUES('d05cbb18d12745262d69b36a',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -1265,6 +1265,8 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-10090
 INSERT INTO "attachment" VALUES('blog','thinkbase-20160712-1602','20160311-100914-关于DNS设置的说明.png',130965,1468340657360382,'','thinkbase','61.171.92.220');
 INSERT INTO "attachment" VALUES('blog','thinkbase-20160721-2156','Home_-_2015-04-02_23.48.02.png',181167,1469139242570708,'','thinkbase','112.65.167.174');
 INSERT INTO "attachment" VALUES('blog','thinkbase-20160721-2156','codehaus-the-once-great-house-of-code-has-fallen.html.pdf',144687,1469139448112996,'','thinkbase','112.65.167.174');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20161211-0558','20161211-140819-1600x900.png',127763,1481436862287242,'','thinkbase','116.227.87.13');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20161211-0558','20161211-135730-1600x900.png',154948,1481436870607652,'','thinkbase','116.227.87.13');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -48575,6 +48577,33 @@ INSERT INTO "fullblog_posts" VALUES('thinkbase-20160721-2156',5,'纪念 Codehaus
  - `XDoclet`: http://xdoclet.codehaus.org/
 
 看起来，Codehaus 上原来的所有项目都已经转移到了 Github，如果需要去寻找历史的话，可以访问 https://github.com/codehaus 。',1469139196,1469143953,'','thinkbase','thinkbase','open-source codehaus');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20161211-0558',1,'无意中访问到 jQuery 的 trac','看起来 jQuery 历史上使用过 [https://trac.edgewall.org/ trac] 来进行开发管理，具体地址访问这儿: https://trac.edgewall.org/ , 在通过 [http://stackoverflow.com stackoverflow] 上 [http://stackoverflow.com/questions/9160123/no-transport-error-w-jquery-ajax-call-in-ie 这个问题] 不小心进入的.
+
+',1481436705,1481436705,'','thinkbase','thinkbase','jQuery javascript stackoverflow');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20161211-0558',2,'历史 - 无意中访问到 jQuery 的 trac','看起来 jQuery 历史上使用过 [https://trac.edgewall.org/ trac] 来进行开发管理，具体地址访问这儿: https://trac.edgewall.org/ , 在通过 [http://stackoverflow.com stackoverflow] 上 [http://stackoverflow.com/questions/9160123/no-transport-error-w-jquery-ajax-call-in-ie 这个问题] 不小心进入的.
+
+看起来，这个 trac 两年前就不再使用了.
+----
+[[Image(20161211-140819-1600x900.png, width=1100px)]]
+----
+[[Image(20161211-135730-1600x900.png, width=1100px)]]
+',1481436705,1481436845,'','thinkbase','thinkbase','jQuery javascript stackoverflow');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20161211-0558',3,'历史 - 无意中访问到 jQuery 的 trac','看起来 jQuery 历史上使用过 [https://trac.edgewall.org/ trac] 来进行开发管理，具体地址访问这儿: https://bugs.jquery.com/ , 是通过 [http://stackoverflow.com stackoverflow] 上 [http://stackoverflow.com/questions/9160123/no-transport-error-w-jquery-ajax-call-in-ie 这个问题] 不小心进入的.
+
+看起来，这个 trac 两年前就不再使用了.
+----
+[[Image(20161211-140819-1600x900.png, width=1100px)]]
+----
+[[Image(20161211-135730-1600x900.png, width=1100px)]]
+',1481436705,1481436965,'','thinkbase','thinkbase','jQuery javascript stackoverflow');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20161211-0558',4,'历史 - 无意中访问到 jQuery 的 trac','看起来 jQuery 历史上使用过 [https://trac.edgewall.org/ trac] 来进行开发管理，具体地址访问这儿: https://bugs.jquery.com/ , 我是通过 [http://stackoverflow.com stackoverflow] 上 [http://stackoverflow.com/questions/9160123/no-transport-error-w-jquery-ajax-call-in-ie 这个问题] 不小心进入的.
+
+看起来，这个 trac 两年前就不再使用了.
+----
+[[Image(20161211-140819-1600x900.png, width=1100px)]]
+----
+[[Image(20161211-135730-1600x900.png, width=1100px)]]
+',1481436705,1481436979,'','thinkbase','thinkbase','jQuery javascript stackoverflow');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
