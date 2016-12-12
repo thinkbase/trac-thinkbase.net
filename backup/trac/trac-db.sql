@@ -1526,6 +1526,12 @@ INSERT INTO "session" VALUES('d69bd1a51a9bad4bae3c721b',0,1481447975);
 INSERT INTO "session" VALUES('54b7bf4a4b5ba14a60dcfeb2',0,1481448078);
 INSERT INTO "session" VALUES('5f4af6828da50092b8dbdf17',0,1481448082);
 INSERT INTO "session" VALUES('16976633ebd76fe7b967b0db',0,1481448199);
+INSERT INTO "session" VALUES('6b7cf2b5e75364dc2c448c6d',0,1481549546);
+INSERT INTO "session" VALUES('081a986f5527c1f6839b6215',0,1481549559);
+INSERT INTO "session" VALUES('5724db82f6c1c2ba5f016136',0,1481549571);
+INSERT INTO "session" VALUES('5260ccd43f87acf96c55fb56',0,1481568449);
+INSERT INTO "session" VALUES('6d8b58e7ef9e0bd2a98f1d0e',0,1481568640);
+INSERT INTO "session" VALUES('1ce169aa9d8619a770d032a3',0,1481568685);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -6285,6 +6291,24 @@ INSERT INTO "session_attribute" VALUES('16976633ebd76fe7b967b0db',0,'query_time'
 INSERT INTO "session_attribute" VALUES('16976633ebd76fe7b967b0db',0,'query_constraints','[{''status'': [u''!closed'']}]');
 INSERT INTO "session_attribute" VALUES('16976633ebd76fe7b967b0db',0,'query_href','/trac/query?status=!closed&order=summary');
 INSERT INTO "session_attribute" VALUES('16976633ebd76fe7b967b0db',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('6b7cf2b5e75364dc2c448c6d',0,'query_time','1481549546');
+INSERT INTO "session_attribute" VALUES('6b7cf2b5e75364dc2c448c6d',0,'query_constraints','[{u''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('6b7cf2b5e75364dc2c448c6d',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('6b7cf2b5e75364dc2c448c6d',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('081a986f5527c1f6839b6215',0,'query_href','/trac/report/2?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('081a986f5527c1f6839b6215',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('5724db82f6c1c2ba5f016136',0,'query_href','/trac/report/4?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('5724db82f6c1c2ba5f016136',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('5260ccd43f87acf96c55fb56',0,'query_time','1481568569');
+INSERT INTO "session_attribute" VALUES('5260ccd43f87acf96c55fb56',0,'query_constraints','[{''status'': [u''!closed''], ''owner'': [u''$USER'']}]');
+INSERT INTO "session_attribute" VALUES('5260ccd43f87acf96c55fb56',0,'query_href','/trac/query?status=!closed&owner=%24USER&max=0&col=id&col=summary&col=status&col=due_assign&col=due_close&col=complete&col=parents&col=blockedby&col=blocking&col=priority&col=milestone&order=blockedby');
+INSERT INTO "session_attribute" VALUES('5260ccd43f87acf96c55fb56',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('6d8b58e7ef9e0bd2a98f1d0e',0,'query_time','1481568640');
+INSERT INTO "session_attribute" VALUES('6d8b58e7ef9e0bd2a98f1d0e',0,'query_constraints','[{''status'': [u''!closed''], ''owner'': [u''$USER'']}]');
+INSERT INTO "session_attribute" VALUES('6d8b58e7ef9e0bd2a98f1d0e',0,'query_href','/trac/query?status=!closed&owner=%24USER&max=0&col=id&col=summary&col=status&col=due_assign&col=due_close&col=complete&col=parents&col=blockedby&col=blocking&col=priority&col=milestone&order=due_close');
+INSERT INTO "session_attribute" VALUES('6d8b58e7ef9e0bd2a98f1d0e',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('1ce169aa9d8619a770d032a3',0,'query_href','/trac/report/4?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('1ce169aa9d8619a770d032a3',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
