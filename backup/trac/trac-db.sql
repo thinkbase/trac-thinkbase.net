@@ -1552,6 +1552,8 @@ INSERT INTO "session" VALUES('c6a2bbddf1dab25dd292c639',0,1481801914);
 INSERT INTO "session" VALUES('bdd4a355064b558213241d86',0,1481886211);
 INSERT INTO "session" VALUES('7d564d3d548da54df9e80f48',0,1481903914);
 INSERT INTO "session" VALUES('7b2253794258ca0df9d30ce6',0,1481958415);
+INSERT INTO "session" VALUES('5e0b6723dbe9e7f3e98ef838',0,1481964869);
+INSERT INTO "session" VALUES('fdfc75bf908b1cd0cc4d8677',0,1481965899);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -6393,6 +6395,14 @@ INSERT INTO "session_attribute" VALUES('7b2253794258ca0df9d30ce6',0,'query_time'
 INSERT INTO "session_attribute" VALUES('7b2253794258ca0df9d30ce6',0,'query_constraints','[{''status'': [u''closed'']}]');
 INSERT INTO "session_attribute" VALUES('7b2253794258ca0df9d30ce6',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=resolution&row=description');
 INSERT INTO "session_attribute" VALUES('7b2253794258ca0df9d30ce6',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('5e0b6723dbe9e7f3e98ef838',0,'query_time','1481964869');
+INSERT INTO "session_attribute" VALUES('5e0b6723dbe9e7f3e98ef838',0,'query_constraints','[{''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('5e0b6723dbe9e7f3e98ef838',0,'query_href','/trac/query?status=!closed&desc=1&order=milestone');
+INSERT INTO "session_attribute" VALUES('5e0b6723dbe9e7f3e98ef838',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('fdfc75bf908b1cd0cc4d8677',0,'query_time','1481965898');
+INSERT INTO "session_attribute" VALUES('fdfc75bf908b1cd0cc4d8677',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('fdfc75bf908b1cd0cc4d8677',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=summary');
+INSERT INTO "session_attribute" VALUES('fdfc75bf908b1cd0cc4d8677',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
