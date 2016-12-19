@@ -1557,6 +1557,9 @@ INSERT INTO "session" VALUES('fdfc75bf908b1cd0cc4d8677',0,1481965899);
 INSERT INTO "session" VALUES('97440607e9cbf52a4561db67',0,1482039407);
 INSERT INTO "session" VALUES('8ce910aa88895f9f2ae83c26',0,1482047275);
 INSERT INTO "session" VALUES('f629fc3f44d67f42f2b3eb77',0,1482067673);
+INSERT INTO "session" VALUES('393566442f606a4866573417',0,1482106413);
+INSERT INTO "session" VALUES('1a0a9e73d03ae84434aadaad',0,1482120012);
+INSERT INTO "session" VALUES('c6808623c848eb1a5fe55dea',0,1482131221);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -6416,6 +6419,14 @@ INSERT INTO "session_attribute" VALUES('f629fc3f44d67f42f2b3eb77',0,'query_time'
 INSERT INTO "session_attribute" VALUES('f629fc3f44d67f42f2b3eb77',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
 INSERT INTO "session_attribute" VALUES('f629fc3f44d67f42f2b3eb77',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&group=owner&order=type');
 INSERT INTO "session_attribute" VALUES('f629fc3f44d67f42f2b3eb77',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('393566442f606a4866573417',0,'query_href','/trac/report/1?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('393566442f606a4866573417',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('1a0a9e73d03ae84434aadaad',0,'query_href','/trac/report/5?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('1a0a9e73d03ae84434aadaad',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('c6808623c848eb1a5fe55dea',0,'query_time','1482131218');
+INSERT INTO "session_attribute" VALUES('c6808623c848eb1a5fe55dea',0,'query_constraints','[{''status'': [u''closed'']}]');
+INSERT INTO "session_attribute" VALUES('c6808623c848eb1a5fe55dea',0,'query_href','/trac/query?status=closed&max=3&col=id&col=resolution&col=summary&col=owner&col=reporter&order=id&row=description');
+INSERT INTO "session_attribute" VALUES('c6808623c848eb1a5fe55dea',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
