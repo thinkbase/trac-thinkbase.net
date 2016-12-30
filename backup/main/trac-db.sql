@@ -574,6 +574,11 @@ INSERT INTO "session" VALUES('aeb93c0f42b4be5ab97cea24',0,1483024860);
 INSERT INTO "session" VALUES('668aaab61990e3e567a8a3be',0,1483027595);
 INSERT INTO "session" VALUES('a672ae19068afb558c76f2f8',0,1483030988);
 INSERT INTO "session" VALUES('b2f37184fd0bc6c2cab6da1c',0,1483034337);
+INSERT INTO "session" VALUES('daefbb171f3fc6a2a8acf304',0,1483052040);
+INSERT INTO "session" VALUES('802de96acc463ecedda9030b',0,1483059227);
+INSERT INTO "session" VALUES('c5f1eda56ec374674b3d7104',0,1483060878);
+INSERT INTO "session" VALUES('32ad6f944634d489c1098568',0,1483061504);
+INSERT INTO "session" VALUES('8efbea6b22092a3ff0bd03c1',0,1483080195);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -1644,6 +1649,17 @@ INSERT INTO "session_attribute" VALUES('a672ae19068afb558c76f2f8',0,'email','jfv
 INSERT INTO "session_attribute" VALUES('b2f37184fd0bc6c2cab6da1c',0,'name','Barnypok');
 INSERT INTO "session_attribute" VALUES('b2f37184fd0bc6c2cab6da1c',0,'chrome.notices.0','Your preferences have been saved.');
 INSERT INTO "session_attribute" VALUES('b2f37184fd0bc6c2cab6da1c',0,'email','jfvynms4281rt@hotmail.com');
+INSERT INTO "session_attribute" VALUES('daefbb171f3fc6a2a8acf304',0,'name','Barnypok');
+INSERT INTO "session_attribute" VALUES('daefbb171f3fc6a2a8acf304',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('daefbb171f3fc6a2a8acf304',0,'email','jfvynms4281rt@hotmail.com');
+INSERT INTO "session_attribute" VALUES('802de96acc463ecedda9030b',0,'timeline.lastvisit','1483041618000000');
+INSERT INTO "session_attribute" VALUES('802de96acc463ecedda9030b',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('c5f1eda56ec374674b3d7104',0,'timeline.lastvisit','1483041618000000');
+INSERT INTO "session_attribute" VALUES('c5f1eda56ec374674b3d7104',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('32ad6f944634d489c1098568',0,'timeline.lastvisit','1483041618000000');
+INSERT INTO "session_attribute" VALUES('32ad6f944634d489c1098568',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('8efbea6b22092a3ff0bd03c1',0,'timeline.lastvisit','1483041618000000');
+INSERT INTO "session_attribute" VALUES('8efbea6b22092a3ff0bd03c1',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -49682,7 +49698,7 @@ CREATE TABLE cache (
     key text
 );
 INSERT INTO "cache" VALUES(901198563,9,'trac.wiki.api.WikiSystem.pages');
-INSERT INTO "cache" VALUES(1173095902,12,'trac.env.Environment._known_users');
+INSERT INTO "cache" VALUES(1173095902,13,'trac.env.Environment._known_users');
 INSERT INTO "cache" VALUES(1722364385,19,'trac.perm.DefaultPermissionStore._all_permissions');
 CREATE TABLE subtickets (
     parent integer,
