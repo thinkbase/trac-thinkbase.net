@@ -1691,6 +1691,9 @@ INSERT INTO "session" VALUES('9fe532665e00b86e14e81996',0,1483622618);
 INSERT INTO "session" VALUES('491a94a0acdb5ab900ffeeae',0,1483622730);
 INSERT INTO "session" VALUES('31d9c50325698493bb803149',0,1483624922);
 INSERT INTO "session" VALUES('ede2d56e5179e292fe977469',0,1483636710);
+INSERT INTO "session" VALUES('aad9e821407888e0a4e7f2c3',0,1483663944);
+INSERT INTO "session" VALUES('5df356bb4ab32ed66c559d07',0,1483673324);
+INSERT INTO "session" VALUES('1ebfd3cea1eeffbce5f834c3',0,1483675816);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -6978,6 +6981,14 @@ INSERT INTO "session_attribute" VALUES('ede2d56e5179e292fe977469',0,'query_time'
 INSERT INTO "session_attribute" VALUES('ede2d56e5179e292fe977469',0,'query_constraints','[{''status'': [u''closed'']}]');
 INSERT INTO "session_attribute" VALUES('ede2d56e5179e292fe977469',0,'query_href','/trac/query?status=closed&max=3&col=id&col=owner&col=reporter&col=resolution&col=summary&order=owner&row=description');
 INSERT INTO "session_attribute" VALUES('ede2d56e5179e292fe977469',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('aad9e821407888e0a4e7f2c3',0,'query_time','1483663944');
+INSERT INTO "session_attribute" VALUES('aad9e821407888e0a4e7f2c3',0,'query_constraints','[{''status'': [u''new'', u''assigned'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('aad9e821407888e0a4e7f2c3',0,'query_href','/trac/query?status=new&status=assigned&status=reopened&order=status');
+INSERT INTO "session_attribute" VALUES('aad9e821407888e0a4e7f2c3',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('5df356bb4ab32ed66c559d07',0,'query_href','/trac/report/1?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('5df356bb4ab32ed66c559d07',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('1ebfd3cea1eeffbce5f834c3',0,'query_href','/trac/report/8?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('1ebfd3cea1eeffbce5f834c3',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
