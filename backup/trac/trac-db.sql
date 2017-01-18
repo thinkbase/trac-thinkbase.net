@@ -1773,6 +1773,16 @@ INSERT INTO "session" VALUES('9d336ecf5e0905944edf838e',0,1484706146);
 INSERT INTO "session" VALUES('b0c9e229e9aabdcb57e0e56b',0,1484712079);
 INSERT INTO "session" VALUES('69c136f5b5e16f2ea34bfc2f',0,1484714507);
 INSERT INTO "session" VALUES('cc8879a4488a0ba7194978cf',0,1484714732);
+INSERT INTO "session" VALUES('46bfb265642d3d82916c8509',0,1484731102);
+INSERT INTO "session" VALUES('8aa16c21fb1faf7110bec1ac',0,1484731106);
+INSERT INTO "session" VALUES('6c7c384b54a53b15a1131de6',0,1484731115);
+INSERT INTO "session" VALUES('5d0fd128b08edb31dbdaed94',0,1484731126);
+INSERT INTO "session" VALUES('df857022167a56abfe56ff3f',0,1484731142);
+INSERT INTO "session" VALUES('df3078d3629de68bd3574126',0,1484731156);
+INSERT INTO "session" VALUES('201a678979addc5f9cbe1fdd',0,1484731166);
+INSERT INTO "session" VALUES('960d3a24f4d487605bba0a8c',0,1484731174);
+INSERT INTO "session" VALUES('ef3eeb05fbc6c7588ed6c5cd',0,1484731202);
+INSERT INTO "session" VALUES('f228a16ac877690b86688087',0,1484745917);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -7348,6 +7358,30 @@ INSERT INTO "session_attribute" VALUES('69c136f5b5e16f2ea34bfc2f',0,'query_href'
 INSERT INTO "session_attribute" VALUES('69c136f5b5e16f2ea34bfc2f',0,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('cc8879a4488a0ba7194978cf',0,'query_href','/trac/report/4?asc=1&page=1');
 INSERT INTO "session_attribute" VALUES('cc8879a4488a0ba7194978cf',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('46bfb265642d3d82916c8509',0,'query_time','1484731101');
+INSERT INTO "session_attribute" VALUES('46bfb265642d3d82916c8509',0,'query_constraints','[{u''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('46bfb265642d3d82916c8509',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('46bfb265642d3d82916c8509',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('8aa16c21fb1faf7110bec1ac',0,'query_href','/trac/report/1?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('8aa16c21fb1faf7110bec1ac',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('6c7c384b54a53b15a1131de6',0,'query_href','/trac/report/2?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('6c7c384b54a53b15a1131de6',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('5d0fd128b08edb31dbdaed94',0,'query_href','/trac/report/3?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('5d0fd128b08edb31dbdaed94',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('df857022167a56abfe56ff3f',0,'query_href','/trac/report/4?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('df857022167a56abfe56ff3f',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('df3078d3629de68bd3574126',0,'query_href','/trac/report/5?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('df3078d3629de68bd3574126',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('201a678979addc5f9cbe1fdd',0,'query_href','/trac/report/6?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('201a678979addc5f9cbe1fdd',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('960d3a24f4d487605bba0a8c',0,'query_href','/trac/report/7?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('960d3a24f4d487605bba0a8c',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('ef3eeb05fbc6c7588ed6c5cd',0,'query_href','/trac/report/8?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('ef3eeb05fbc6c7588ed6c5cd',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('f228a16ac877690b86688087',0,'query_time','1484745916');
+INSERT INTO "session_attribute" VALUES('f228a16ac877690b86688087',0,'query_constraints','[{''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('f228a16ac877690b86688087',0,'query_href','/trac/query?status=!closed&order=status');
+INSERT INTO "session_attribute" VALUES('f228a16ac877690b86688087',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
