@@ -48,7 +48,6 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('0384c968ef4085cdcbe8d7f5217f4d29','thinkbase','116.227.5.9',1482024922);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -57,7 +56,6 @@ CREATE TABLE session (
 );
 INSERT INTO "session" VALUES('admin',1,1468124835);
 INSERT INTO "session" VALUES('thinkbase',1,1482026112);
-INSERT INTO "session" VALUES('227d0fea3ebcd40334266f0e',0,1493288138);
 INSERT INTO "session" VALUES('a9c1cc2af9d0d7a7449091e4',0,1485512447);
 INSERT INTO "session" VALUES('2ffa877fbad4bbdd5aaf714b',0,1485520759);
 INSERT INTO "session" VALUES('75d76c394cd29740998a9431',0,1485524131);
@@ -2324,6 +2322,15 @@ INSERT INTO "session" VALUES('1488cbc5af5eb85ed5512f0a',0,1494019074);
 INSERT INTO "session" VALUES('dc8fc8073dc171de1c23f70f',0,1494022659);
 INSERT INTO "session" VALUES('30c1040dd89ccb11b4086f89',0,1494046367);
 INSERT INTO "session" VALUES('cea293d72a6947aae8cbcd4d',0,1494055158);
+INSERT INTO "session" VALUES('b25b0af4e1152ccc75357b8d',0,1494060164);
+INSERT INTO "session" VALUES('d5f05d4a14832c19735ba299',0,1494066567);
+INSERT INTO "session" VALUES('66a0355166dd6be00f7c8dc1',0,1494068737);
+INSERT INTO "session" VALUES('3e4275030fc896dd95ce3d43',0,1494084222);
+INSERT INTO "session" VALUES('53a593b31bf9e6adeeb4c891',0,1494084809);
+INSERT INTO "session" VALUES('49bb2bd0e806dcbe1da3dba3',0,1494085884);
+INSERT INTO "session" VALUES('93470b87e16839f46fbf0e00',0,1494092380);
+INSERT INTO "session" VALUES('456853e2824ae6b30a6f25f4',0,1494092985);
+INSERT INTO "session" VALUES('aa7d6ca64edf9cf985c82082',0,1494093936);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -6538,8 +6545,6 @@ INSERT INTO "session_attribute" VALUES('87e81e58d4a811d5cccd2200',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('87e81e58d4a811d5cccd2200',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('a64e782e2eb783ec79c34e5d',0,'timeline.lastvisit','1493280018000000');
 INSERT INTO "session_attribute" VALUES('a64e782e2eb783ec79c34e5d',0,'timeline.nextlastvisit','0');
-INSERT INTO "session_attribute" VALUES('227d0fea3ebcd40334266f0e',0,'timeline.lastvisit','1493280018000000');
-INSERT INTO "session_attribute" VALUES('227d0fea3ebcd40334266f0e',0,'timeline.nextlastvisit','1484294442000000');
 INSERT INTO "session_attribute" VALUES('e6759a0036620f5a39439a59',0,'timeline.lastvisit','1493280018000000');
 INSERT INTO "session_attribute" VALUES('e6759a0036620f5a39439a59',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('0bf9d3476d30e69d132fe3e3',0,'timeline.lastvisit','1493280018000000');
@@ -6896,6 +6901,24 @@ INSERT INTO "session_attribute" VALUES('30c1040dd89ccb11b4086f89',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('30c1040dd89ccb11b4086f89',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('cea293d72a6947aae8cbcd4d',0,'timeline.lastvisit','1494014526000000');
 INSERT INTO "session_attribute" VALUES('cea293d72a6947aae8cbcd4d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b25b0af4e1152ccc75357b8d',0,'timeline.lastvisit','1494057619000000');
+INSERT INTO "session_attribute" VALUES('b25b0af4e1152ccc75357b8d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d5f05d4a14832c19735ba299',0,'timeline.lastvisit','1494057619000000');
+INSERT INTO "session_attribute" VALUES('d5f05d4a14832c19735ba299',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('66a0355166dd6be00f7c8dc1',0,'timeline.lastvisit','1494057619000000');
+INSERT INTO "session_attribute" VALUES('66a0355166dd6be00f7c8dc1',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3e4275030fc896dd95ce3d43',0,'timeline.lastvisit','1494083658000000');
+INSERT INTO "session_attribute" VALUES('3e4275030fc896dd95ce3d43',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('53a593b31bf9e6adeeb4c891',0,'timeline.lastvisit','1494084802000000');
+INSERT INTO "session_attribute" VALUES('53a593b31bf9e6adeeb4c891',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('49bb2bd0e806dcbe1da3dba3',0,'timeline.lastvisit','1494085284640545');
+INSERT INTO "session_attribute" VALUES('49bb2bd0e806dcbe1da3dba3',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('93470b87e16839f46fbf0e00',0,'timeline.lastvisit','1494085284640545');
+INSERT INTO "session_attribute" VALUES('93470b87e16839f46fbf0e00',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('456853e2824ae6b30a6f25f4',0,'timeline.lastvisit','1494085284640545');
+INSERT INTO "session_attribute" VALUES('456853e2824ae6b30a6f25f4',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('aa7d6ca64edf9cf985c82082',0,'timeline.lastvisit','1494085284640545');
+INSERT INTO "session_attribute" VALUES('aa7d6ca64edf9cf985c82082',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -7165,6 +7188,9 @@ INSERT INTO "attachment" VALUES('blog','thinkbase-20160721-2156','Home_-_2015-04
 INSERT INTO "attachment" VALUES('blog','thinkbase-20160721-2156','codehaus-the-once-great-house-of-code-has-fallen.html.pdf',144687,1469139448112996,'','thinkbase','112.65.167.174');
 INSERT INTO "attachment" VALUES('blog','thinkbase-20161211-0558','20161211-140819-1600x900.png',127763,1481436862287242,'','thinkbase','116.227.87.13');
 INSERT INTO "attachment" VALUES('blog','thinkbase-20161211-0558','20161211-135730-1600x900.png',154948,1481436870607652,'','thinkbase','116.227.87.13');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20170506-1507','20170506-231144-780x584.png',74997,1494083604599892,'','thinkbase','180.157.2.176');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20170506-1507','test-http-server.py',1165,1494085277722961,'','thinkbase','180.157.2.176');
+INSERT INTO "attachment" VALUES('blog','thinkbase-20170506-1507','nginx.conf',645,1494085284640545,'','thinkbase','180.157.2.176');
 CREATE TABLE wiki (
     name text,
     version integer,
@@ -54808,6 +54834,297 @@ INSERT INTO "fullblog_posts" VALUES('thinkbase-20161211-0558',4,'历史 - 无意
 ----
 [[Image(20161211-135730-1600x900.png, width=1100px)]]
 ',1481436705,1481436979,'','thinkbase','thinkbase','jQuery javascript stackoverflow');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20170506-1507',1,'使用 nginx 实现后端 HTTP 服务器的故障转移(failover)','一般情况下，nginx 的 `upstream` 通常的用途是实现负载均衡：
+[[Image(20170506-231144-780x584.png, width=100%)]]',1494083593,1494083593,'','thinkbase','thinkbase','nginx load-balance failover');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20170506-1507',2,'使用 nginx 实现后端 HTTP 服务器的故障转移(failover)','一般情况下，nginx 的 `upstream` 通常的用途是实现负载均衡：
+[[Image(20170506-231144-780x584.png, width=780)]]',1494083593,1494083627,'','thinkbase','thinkbase','nginx load-balance failover');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20170506-1507',3,'使用 nginx 实现后端 HTTP 服务器的故障转移(failover)','一般情况下，nginx 的 `upstream` 通常的用途是实现负载均衡：
+
+[[Image(20170506-231144-780x584.png, width=780)]]',1494083593,1494083658,'','thinkbase','thinkbase','nginx load-balance failover');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20170506-1507',4,'使用 nginx 实现后端 HTTP 服务器的故障转移(failover)','一般情况下，nginx 的 `upstream` 通常的用途是实现负载均衡：
+
+[[Image(20170506-231144-780x584.png, width=780)]]
+
+但是实际上，nginx 对 `upstream` 的多个设备可以设置不同的状态参数：
+ - `weight` 默认为1. weight越大，负载的权重就越大;
+ - `max_fails` : 允许请求失败的次数默认为1. 当超过最大次数时，返回proxy_next_upstream 模块定义的错误;
+ - `fail_timeout`: `max_fails` 次失败后，暂停的时间;
+ - `down` 表示当前的server暂时不参与负载;
+ - `backup`: 其它所有的非 `backup` 机器 `down` 或者忙的时候，请求 `backup` 机器(所以这台机器压力会最轻);
+
+因此，`upstream` 同样可以用于配置 “故障转移”的服务器集群，一般用于这类场景：一般情况下优先使用`服务器1`，只有这台服务器出故障后才转移到其他的服务器（因为其他服务器性能、网络速度不如`服务器1`等原因），下面就是一个配置的例子：
+{{{
+#!ruby
+worker_processes 1;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    default_type  application/octet-stream;
+    client_max_body_size 4m;
+    
+    keepalive_timeout 65;
+    upstream backend_servers {
+        server localhost:7001 max_fails=3 fail_timeout=30s;
+        # 下面两行 "backup" 只有在上面 "7001" 服务器失败后才会被访问(此时两天服务器会采用同样的权重进行负载均衡)
+        server localhost:7002 max_fails=3 fail_timeout=30s backup;
+        server localhost:7003 max_fails=3 fail_timeout=30s backup;
+        # 如果为上面两行 "backup" 设定悬殊的 "weight" 参数，可以控制 failover 的顺序(比如设置只有 "7002" 宕机后才会访问到 "7003")
+        #server localhost:7002 max_fails=3 fail_timeout=30s backup weight=2000000000;
+        #server localhost:7003 max_fails=3 fail_timeout=30s backup weight=1;
+    }
+
+    server {
+        listen 8001;
+        server_name example.com;
+
+        location / {
+            proxy_pass http://backend_servers;
+        }
+    }
+}
+}}}',1494083593,1494084802,'','thinkbase','thinkbase','nginx load-balance failover');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20170506-1507',5,'使用 nginx 实现后端 HTTP 服务器的故障转移(failover)','一般情况下，nginx 的 `upstream` 通常的用途是实现负载均衡：
+
+[[Image(20170506-231144-780x584.png, width=780)]]
+
+但是实际上，nginx 对 `upstream` 的多个设备可以设置不同的状态参数：
+ - `weight` 默认为1. weight越大，负载的权重就越大;
+ - `max_fails` : 允许请求失败的次数默认为1. 当超过最大次数时，返回proxy_next_upstream 模块定义的错误;
+ - `fail_timeout`: `max_fails` 次失败后，暂停的时间;
+ - `down` 表示当前的server暂时不参与负载;
+ - `backup`: 其它所有的非 `backup` 机器 `down` 或者忙的时候，请求 `backup` 机器(所以这台机器压力会最轻);
+
+因此，`upstream` 同样可以用于配置 “故障转移”的服务器集群，一般用于这类场景：一般情况下优先使用`服务器1`，只有这台服务器出故障后才转移到其他的服务器（因为其他服务器性能、网络速度不如`服务器1`等原因），下面就是一个配置的例子：
+{{{
+#!ruby
+worker_processes 1;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    default_type  application/octet-stream;
+    client_max_body_size 4m;
+    
+    keepalive_timeout 65;
+    upstream backend_servers {
+        server localhost:7001 max_fails=3 fail_timeout=30s;
+        # 下面两行 "backup" 只有在上面 "7001" 服务器失败后才会被访问(此时两台服务器会采用同样的权重进行负载均衡)
+        server localhost:7002 max_fails=3 fail_timeout=30s backup;
+        server localhost:7003 max_fails=3 fail_timeout=30s backup;
+        # 如果为上面两行 "backup" 设定悬殊的 "weight" 参数，可以控制 failover 的顺序(比如设置只有 "7002" 宕机后才会访问到 "7003")
+        #server localhost:7002 max_fails=3 fail_timeout=30s backup weight=2000000000;
+        #server localhost:7003 max_fails=3 fail_timeout=30s backup weight=1;
+    }
+
+    server {
+        listen 8001;
+        server_name example.com;
+
+        location / {
+            proxy_pass http://backend_servers;
+        }
+    }
+}
+}}}',1494083593,1494084841,'','thinkbase','thinkbase','nginx load-balance failover');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20170506-1507',6,'使用 nginx 实现后端 HTTP 服务器的故障转移(failover)','一般情况下，nginx 的 `upstream` 通常的用途是实现负载均衡：
+
+[[Image(20170506-231144-780x584.png, width=780)]]
+
+但是实际上，nginx 对 `upstream` 的多个设备可以设置不同的状态参数：
+ - `weight` 默认为1. weight越大，负载的权重就越大;
+ - `max_fails` : 允许请求失败的次数默认为1. 当超过最大次数时，返回proxy_next_upstream 模块定义的错误;
+ - `fail_timeout`: `max_fails` 次失败后，暂停的时间;
+ - `down` 表示当前的server暂时不参与负载;
+ - `backup`: 其它所有的非 `backup` 机器 `down` 或者忙的时候，请求 `backup` 机器(所以这台机器压力会最轻);
+
+因此，`upstream` 同样可以用于配置 “故障转移”的服务器集群，一般用于这类场景：一般情况下优先使用`服务器1`，只有这台服务器出故障后才转移到其他的服务器（因为其他服务器性能、网络速度不如`服务器1`等原因），下面就是一个配置的例子：
+{{{
+#!ruby
+worker_processes 1;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    default_type  application/octet-stream;
+    client_max_body_size 4m;
+    
+    keepalive_timeout 65;
+    upstream backend_servers {
+        server localhost:7001 max_fails=3 fail_timeout=30s;
+        # 下面两行 "backup" 只有在上面 "7001" 服务器失败后才会被访问(此时两台服务器会采用同样的权重进行负载均衡)
+        server localhost:7002 max_fails=3 fail_timeout=30s backup;
+        server localhost:7003 max_fails=3 fail_timeout=30s backup;
+        # 如果为上面两行 "backup" 设定悬殊的 "weight" 参数，可以控制 failover 的顺序(比如设置只有 "7002" 宕机后才会访问到 "7003")
+        #server localhost:7002 max_fails=3 fail_timeout=30s backup weight=2000000000;
+        #server localhost:7003 max_fails=3 fail_timeout=30s backup weight=1;
+    }
+
+    server {
+        listen 8001;
+        server_name example.com;
+
+        location / {
+            proxy_pass http://backend_servers;
+        }
+    }
+}
+}}}
+
+附件 [attachment:test-http-server.py] 和 [attachment:nginx.conf] 是用于测试的 Python HTTP 服务器和 nginx 配置：
+ - 首先依次通过如下命令启动 3 台后端 HTTP 服务器：
+{{{
+#!sh
+python test-http-server.py 7001
+python test-http-server.py 7002
+python test-http-server.py 7003
+}}}
+ - 然后使用如下命令启动 nginx 服务器：
+{{{
+#!sh
+# 启动 nginx
+nginx -c `pwd`/nginx.conf
+# 停止 nginx
+nginx -c `pwd`/nginx.conf -s quit
+}}}',1494083593,1494085070,'','thinkbase','thinkbase','nginx load-balance failover');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20170506-1507',7,'使用 nginx 实现后端 HTTP 服务器的故障转移(failover)','一般情况下，nginx 的 `upstream` 通常的用途是实现负载均衡：
+
+[[Image(20170506-231144-780x584.png, width=780)]]
+
+但是实际上，nginx 对 `upstream` 的多个设备可以设置不同的状态参数：
+ - `weight` 默认为1. weight越大，负载的权重就越大;
+ - `max_fails` : 允许请求失败的次数默认为1. 当超过最大次数时，返回proxy_next_upstream 模块定义的错误;
+ - `fail_timeout`: `max_fails` 次失败后，暂停的时间;
+ - `down` 表示当前的server暂时不参与负载;
+ - `backup`: 其它所有的非 `backup` 机器 `down` 或者忙的时候，请求 `backup` 机器(所以这台机器压力会最轻);
+
+因此，`upstream` 同样可以用于配置 “故障转移”的服务器集群，一般用于这类场景：一般情况下优先使用`服务器1`，只有这台服务器出故障后才转移到其他的服务器（因为其他服务器性能、网络速度不如`服务器1`等原因），下面就是一个配置的例子：
+{{{
+#!ruby
+worker_processes 1;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    default_type  application/octet-stream;
+    client_max_body_size 4m;
+    
+    keepalive_timeout 65;
+    upstream backend_servers {
+        server localhost:7001 max_fails=3 fail_timeout=30s;
+        # 下面两行 "backup" 只有在上面 "7001" 服务器失败后才会被访问(此时两台服务器会采用同样的权重进行负载均衡)
+        server localhost:7002 max_fails=3 fail_timeout=30s backup;
+        server localhost:7003 max_fails=3 fail_timeout=30s backup;
+        # 如果为上面两行 "backup" 设定悬殊的 "weight" 参数，可以控制 failover 的顺序(比如设置只有 "7002" 宕机后才会访问到 "7003")
+        #server localhost:7002 max_fails=3 fail_timeout=30s backup weight=2000000000;
+        #server localhost:7003 max_fails=3 fail_timeout=30s backup weight=1;
+    }
+
+    server {
+        listen 8001;
+        server_name example.com;
+
+        location / {
+            proxy_pass http://backend_servers;
+        }
+    }
+}
+}}}
+
+附件 [attachment:test-http-server.py] 和 [attachment:nginx.conf] 是用于测试的 Python HTTP 服务器和 nginx 配置：
+ - 首先依次通过如下命令启动 3 台后端 HTTP 服务器：
+{{{
+#!bash
+python test-http-server.py 7001
+python test-http-server.py 7002
+python test-http-server.py 7003
+}}}
+ - 然后使用如下命令启动 nginx 服务器：
+{{{
+#!bash
+# 启动 nginx
+nginx -c `pwd`/nginx.conf
+# 停止 nginx
+nginx -c `pwd`/nginx.conf -s quit
+}}}
+ - 通过浏览器访问类似这样的 URL: `http://localhost:8001/TEST/001`, 正常结果应该是 `localhost 7001`; 如果停止相应的服务器，可以看到浏览器上的输出切换到后续其他服务器(输出 `localhost 7002`、`localhost 7003`)
+
+',1494083593,1494085233,'','thinkbase','thinkbase','nginx load-balance failover');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20170506-1507',8,'使用 nginx 实现后端 HTTP 服务器的故障转移(failover)','一般情况下，nginx 的 `upstream` 通常的用途是实现负载均衡：
+
+[[Image(20170506-231144-780x584.png, width=780)]]
+
+但是实际上，nginx 对 `upstream` 的多个设备可以设置不同的状态参数：
+ - `weight` 默认为1. weight越大，负载的权重就越大;
+ - `max_fails` : 允许请求失败的次数默认为1. 当超过最大次数时，返回proxy_next_upstream 模块定义的错误;
+ - `fail_timeout`: `max_fails` 次失败后，暂停的时间;
+ - `down` 表示当前的server暂时不参与负载;
+ - `backup`: 其它所有的非 `backup` 机器 `down` 或者忙的时候，请求 `backup` 机器(所以这台机器压力会最轻);
+
+因此，`upstream` 同样可以用于配置 “故障转移”的服务器集群，一般用于这类场景：一般情况下优先使用`服务器1`，只有这台服务器出故障后才转移到其他的服务器（因为其他服务器性能、网络速度不如`服务器1`等原因），下面就是一个配置的例子：
+{{{
+#!ruby
+worker_processes 1;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    default_type  application/octet-stream;
+    client_max_body_size 4m;
+    
+    keepalive_timeout 65;
+    upstream backend_servers {
+        server localhost:7001 max_fails=3 fail_timeout=30s;
+        # 下面两行 "backup" 只有在上面 "7001" 服务器失败后才会被访问(此时两台服务器会采用同样的权重进行负载均衡)
+        server localhost:7002 max_fails=3 fail_timeout=30s backup;
+        server localhost:7003 max_fails=3 fail_timeout=30s backup;
+        # 如果为上面两行 "backup" 设定悬殊的 "weight" 参数，可以控制 failover 的顺序(比如设置只有 "7002" 宕机后才会访问到 "7003")
+        #server localhost:7002 max_fails=3 fail_timeout=30s backup weight=2000000000;
+        #server localhost:7003 max_fails=3 fail_timeout=30s backup weight=1;
+    }
+
+    server {
+        listen 8001;
+        server_name example.com;
+
+        location / {
+            proxy_pass http://backend_servers;
+        }
+    }
+}
+}}}
+
+附件 [attachment:test-http-server.py] 和 [attachment:nginx.conf] 是用于测试的 Python HTTP 服务器和 nginx 配置：
+ - 首先依次通过如下命令启动 3 台后端 HTTP 服务器：
+{{{
+#!bash
+python test-http-server.py 7001
+python test-http-server.py 7002
+python test-http-server.py 7003
+}}}
+ - 然后使用如下命令启动 nginx 服务器：
+{{{
+#!bash
+# 启动 nginx
+nginx -c `pwd`/nginx.conf
+# 停止 nginx
+nginx -c `pwd`/nginx.conf -s quit
+}}}
+ - 通过浏览器访问类似这样的 URL: `http://localhost:8001/TEST/001`
+  * 正常结果应该是 `localhost 7001`;
+  * 如果停止相应的服务器，可以看到浏览器上的输出切换到后续其他服务器(输出 `localhost 7002`、`localhost 7003`)
+
+',1494083593,1494085261,'','thinkbase','thinkbase','nginx load-balance failover');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
