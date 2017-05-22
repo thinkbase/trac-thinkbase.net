@@ -2611,6 +2611,16 @@ INSERT INTO "session" VALUES('d49b6a7539039e180c176548',0,1495218984);
 INSERT INTO "session" VALUES('75dc07fb747b9d855669ff5b',0,1495226782);
 INSERT INTO "session" VALUES('7681afbcef35c2a54fbdec51',0,1495318159);
 INSERT INTO "session" VALUES('889772065bb730b3d9e70a2f',0,1495335444);
+INSERT INTO "session" VALUES('aec9e076d350980c66ef5330',0,1495430323);
+INSERT INTO "session" VALUES('add03192cf99c07f525b04bd',0,1495438484);
+INSERT INTO "session" VALUES('4b3a72a29ac8c267cbc3b891',0,1495438532);
+INSERT INTO "session" VALUES('23c40bd8626cf00cfebc520e',0,1495438539);
+INSERT INTO "session" VALUES('f3c186e908293a5619122beb',0,1495438545);
+INSERT INTO "session" VALUES('81b9586c5b8a7f7f86d73a25',0,1495438551);
+INSERT INTO "session" VALUES('96937f58083c57962a93dc7e',0,1495438585);
+INSERT INTO "session" VALUES('959b41db27ac6b59e146b1d7',0,1495438598);
+INSERT INTO "session" VALUES('df1dd0694e61fb9669898999',0,1495438614);
+INSERT INTO "session" VALUES('0472117fea812b80d68d2662',0,1495438652);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -10766,6 +10776,30 @@ INSERT INTO "session_attribute" VALUES('889772065bb730b3d9e70a2f',0,'query_time'
 INSERT INTO "session_attribute" VALUES('889772065bb730b3d9e70a2f',0,'query_constraints','[{u''status'': [u''!closed'']}]');
 INSERT INTO "session_attribute" VALUES('889772065bb730b3d9e70a2f',0,'query_href','/trac/query?status=!closed&order=priority');
 INSERT INTO "session_attribute" VALUES('889772065bb730b3d9e70a2f',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('aec9e076d350980c66ef5330',0,'query_time','1495430323');
+INSERT INTO "session_attribute" VALUES('aec9e076d350980c66ef5330',0,'query_constraints','[{''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('aec9e076d350980c66ef5330',0,'query_href','/trac/query?status=!closed&order=id');
+INSERT INTO "session_attribute" VALUES('aec9e076d350980c66ef5330',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('add03192cf99c07f525b04bd',0,'query_time','1495438481');
+INSERT INTO "session_attribute" VALUES('add03192cf99c07f525b04bd',0,'query_constraints','[{u''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('add03192cf99c07f525b04bd',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('add03192cf99c07f525b04bd',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('4b3a72a29ac8c267cbc3b891',0,'query_href','/trac/report/5?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('4b3a72a29ac8c267cbc3b891',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('23c40bd8626cf00cfebc520e',0,'query_href','/trac/report/2?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('23c40bd8626cf00cfebc520e',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('f3c186e908293a5619122beb',0,'query_href','/trac/report/6?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('f3c186e908293a5619122beb',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('81b9586c5b8a7f7f86d73a25',0,'query_href','/trac/report/8?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('81b9586c5b8a7f7f86d73a25',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('96937f58083c57962a93dc7e',0,'query_href','/trac/report/3?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('96937f58083c57962a93dc7e',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('959b41db27ac6b59e146b1d7',0,'query_href','/trac/report/4?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('959b41db27ac6b59e146b1d7',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('df1dd0694e61fb9669898999',0,'query_href','/trac/report/1?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('df1dd0694e61fb9669898999',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('0472117fea812b80d68d2662',0,'query_href','/trac/report/7?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('0472117fea812b80d68d2662',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
