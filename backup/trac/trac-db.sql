@@ -2725,6 +2725,14 @@ INSERT INTO "session" VALUES('803a664e365c03aa9e0fe92d',0,1497073586);
 INSERT INTO "session" VALUES('1cc03e7c30f10a5809e7a686',0,1497193853);
 INSERT INTO "session" VALUES('8e6d6ccc5bd2ecda5b0714b7',0,1497279591);
 INSERT INTO "session" VALUES('d458d5e95300dc11eb193a61',0,1497296573);
+INSERT INTO "session" VALUES('99de71f78c6b789b5ea9e9a2',0,1497389229);
+INSERT INTO "session" VALUES('ed9fd72720f94e2b5c47d6d5',0,1497393636);
+INSERT INTO "session" VALUES('ae2e9a6ec14347437b7d0ea7',0,1497395887);
+INSERT INTO "session" VALUES('6ada436fd6d6106d7a400071',0,1497398289);
+INSERT INTO "session" VALUES('d1be3448f396ed4c61a22301',0,1497400661);
+INSERT INTO "session" VALUES('6a063b619ce247909cf715d3',0,1497408218);
+INSERT INTO "session" VALUES('f2da50889d42c7bd5843f9e1',0,1497408463);
+INSERT INTO "session" VALUES('0da64ffae3f57284f1f895ee',0,1497419714);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -11256,6 +11264,28 @@ INSERT INTO "session_attribute" VALUES('8e6d6ccc5bd2ecda5b0714b7',0,'query_href'
 INSERT INTO "session_attribute" VALUES('8e6d6ccc5bd2ecda5b0714b7',0,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('d458d5e95300dc11eb193a61',0,'query_href','/trac/report/6?asc=1&USER=anonymous&page=1');
 INSERT INTO "session_attribute" VALUES('d458d5e95300dc11eb193a61',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('99de71f78c6b789b5ea9e9a2',0,'query_href','/trac/report/7?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('99de71f78c6b789b5ea9e9a2',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('ed9fd72720f94e2b5c47d6d5',0,'query_time','1497393634');
+INSERT INTO "session_attribute" VALUES('ed9fd72720f94e2b5c47d6d5',0,'query_constraints','[{''owner'': [u''$USER''], ''status'': [u''accepted'', u''assigned'', u''new'', u''reopened'']}]');
+INSERT INTO "session_attribute" VALUES('ed9fd72720f94e2b5c47d6d5',0,'query_href','/trac/query?owner=%24USER&status=accepted&status=assigned&status=new&status=reopened&col=id&col=summary&col=status&col=due_assign&col=due_close&col=complete&col=parents&col=blockedby&col=blocking&col=type&col=priority&col=milestone&col=component&report=9&order=priority');
+INSERT INTO "session_attribute" VALUES('ed9fd72720f94e2b5c47d6d5',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('ae2e9a6ec14347437b7d0ea7',0,'query_href','/trac/report/6?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('ae2e9a6ec14347437b7d0ea7',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('6ada436fd6d6106d7a400071',0,'query_href','/trac/report/2?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('6ada436fd6d6106d7a400071',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('d1be3448f396ed4c61a22301',0,'query_href','/trac/report/3?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('d1be3448f396ed4c61a22301',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('6a063b619ce247909cf715d3',0,'query_time','1497408218');
+INSERT INTO "session_attribute" VALUES('6a063b619ce247909cf715d3',0,'query_constraints','[{u''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('6a063b619ce247909cf715d3',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('6a063b619ce247909cf715d3',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('f2da50889d42c7bd5843f9e1',0,'query_href','/trac/report/2?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('f2da50889d42c7bd5843f9e1',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('0da64ffae3f57284f1f895ee',0,'query_time','1497419714');
+INSERT INTO "session_attribute" VALUES('0da64ffae3f57284f1f895ee',0,'query_constraints','[{u''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('0da64ffae3f57284f1f895ee',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('0da64ffae3f57284f1f895ee',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
