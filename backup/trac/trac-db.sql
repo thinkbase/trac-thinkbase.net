@@ -2769,6 +2769,9 @@ INSERT INTO "session" VALUES('f23551155843e920da27dca0',0,1497938225);
 INSERT INTO "session" VALUES('9f09ac32beee51832a0341e8',0,1497963397);
 INSERT INTO "session" VALUES('4dd706fc63fcfc0f7a56424e',0,1498008832);
 INSERT INTO "session" VALUES('4ee13f68f349594f96cf086d',0,1498014253);
+INSERT INTO "session" VALUES('ab8133fa4ae5ff9bafdcaef5',0,1498052830);
+INSERT INTO "session" VALUES('39dddfb46e37f9ce00548aaa',0,1498052850);
+INSERT INTO "session" VALUES('ce4abbf8b1c2b0f6534b52c5',0,1498052852);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -11414,6 +11417,18 @@ INSERT INTO "session_attribute" VALUES('4ee13f68f349594f96cf086d',0,'query_time'
 INSERT INTO "session_attribute" VALUES('4ee13f68f349594f96cf086d',0,'query_constraints','[{''status'': [u''!closed'']}]');
 INSERT INTO "session_attribute" VALUES('4ee13f68f349594f96cf086d',0,'query_href','/trac/query?status=!closed&order=priority');
 INSERT INTO "session_attribute" VALUES('4ee13f68f349594f96cf086d',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('ab8133fa4ae5ff9bafdcaef5',0,'query_time','1498052830');
+INSERT INTO "session_attribute" VALUES('ab8133fa4ae5ff9bafdcaef5',0,'query_constraints','[{''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('ab8133fa4ae5ff9bafdcaef5',0,'query_href','/trac/query?status=!closed&order=id');
+INSERT INTO "session_attribute" VALUES('ab8133fa4ae5ff9bafdcaef5',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('39dddfb46e37f9ce00548aaa',0,'query_time','1498052849');
+INSERT INTO "session_attribute" VALUES('39dddfb46e37f9ce00548aaa',0,'query_constraints','[{''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('39dddfb46e37f9ce00548aaa',0,'query_href','/trac/query?status=!closed&order=milestone');
+INSERT INTO "session_attribute" VALUES('39dddfb46e37f9ce00548aaa',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('ce4abbf8b1c2b0f6534b52c5',0,'query_time','1498052852');
+INSERT INTO "session_attribute" VALUES('ce4abbf8b1c2b0f6534b52c5',0,'query_constraints','[{''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('ce4abbf8b1c2b0f6534b52c5',0,'query_href','/trac/query?status=!closed&order=summary');
+INSERT INTO "session_attribute" VALUES('ce4abbf8b1c2b0f6534b52c5',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
