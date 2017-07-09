@@ -3247,6 +3247,9 @@ INSERT INTO "session" VALUES('16fc7b8cfc34d2fd3af1500f',0,1499541240);
 INSERT INTO "session" VALUES('bb7274a8f4e800140acc570c',0,1499543687);
 INSERT INTO "session" VALUES('53de8c6a4e302172aa8c48a6',0,1499559702);
 INSERT INTO "session" VALUES('2e7f7babf821acbae7f8b7ef',0,1499559702);
+INSERT INTO "session" VALUES('f016f4f02e0000de0b33996d',0,1499590895);
+INSERT INTO "session" VALUES('8fae4540b6bd4dd26d8f0103',0,1499605224);
+INSERT INTO "session" VALUES('e6acb896df9d67703a96e7eb',0,1499629946);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -9697,6 +9700,13 @@ INSERT INTO "session_attribute" VALUES('53de8c6a4e302172aa8c48a6',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('53de8c6a4e302172aa8c48a6',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('2e7f7babf821acbae7f8b7ef',0,'timeline.lastvisit','1499544015000000');
 INSERT INTO "session_attribute" VALUES('2e7f7babf821acbae7f8b7ef',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f016f4f02e0000de0b33996d',0,'name','Barnypok');
+INSERT INTO "session_attribute" VALUES('f016f4f02e0000de0b33996d',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('f016f4f02e0000de0b33996d',0,'email','ecrev22vtv@hotmail.com');
+INSERT INTO "session_attribute" VALUES('8fae4540b6bd4dd26d8f0103',0,'timeline.lastvisit','1499587216000000');
+INSERT INTO "session_attribute" VALUES('8fae4540b6bd4dd26d8f0103',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e6acb896df9d67703a96e7eb',0,'timeline.lastvisit','1499587216000000');
+INSERT INTO "session_attribute" VALUES('e6acb896df9d67703a96e7eb',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -58029,7 +58039,7 @@ CREATE TABLE cache (
     key text
 );
 INSERT INTO "cache" VALUES(901198563,9,'trac.wiki.api.WikiSystem.pages');
-INSERT INTO "cache" VALUES(1173095902,105,'trac.env.Environment._known_users');
+INSERT INTO "cache" VALUES(1173095902,106,'trac.env.Environment._known_users');
 INSERT INTO "cache" VALUES(1722364385,19,'trac.perm.DefaultPermissionStore._all_permissions');
 CREATE TABLE subtickets (
     parent integer,
