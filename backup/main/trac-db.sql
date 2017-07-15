@@ -1439,6 +1439,8 @@ INSERT INTO "session" VALUES('601b238006efa39a430805b7',0,1500010081);
 INSERT INTO "session" VALUES('a49a9c2e9316b4b404ef36e3',0,1500012444);
 INSERT INTO "session" VALUES('b2bf6472531f7ebfc3fe96c6',0,1500016552);
 INSERT INTO "session" VALUES('cbadbf4c0b26dcc11224688b',0,1500021860);
+INSERT INTO "session" VALUES('6cfe6f174657010158b20a0e',0,1500081239);
+INSERT INTO "session" VALUES('cea89ae7ee575084ed236aa2',0,1500092267);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -4259,6 +4261,10 @@ INSERT INTO "session_attribute" VALUES('admin',1,'wiki_editrows','8');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_href','/default/report/6?asc=1&USER=admin&page=1');
 INSERT INTO "session_attribute" VALUES('admin',1,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('admin',1,'timeline.lastvisit','1361171568561000');
+INSERT INTO "session_attribute" VALUES('6cfe6f174657010158b20a0e',0,'timeline.lastvisit','1500062425000000');
+INSERT INTO "session_attribute" VALUES('6cfe6f174657010158b20a0e',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('cea89ae7ee575084ed236aa2',0,'timeline.lastvisit','1500062425000000');
+INSERT INTO "session_attribute" VALUES('cea89ae7ee575084ed236aa2',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
