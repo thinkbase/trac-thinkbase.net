@@ -2899,6 +2899,7 @@ INSERT INTO "session" VALUES('d1ee84cd378b87d29bb07c54',0,1500037380);
 INSERT INTO "session" VALUES('1f1fa465bf39f251e8fdbc98',0,1500049206);
 INSERT INTO "session" VALUES('cd8c96600f5a8cb33bba4168',0,1500243783);
 INSERT INTO "session" VALUES('0b11974ddfe1bf102bf371fa',0,1500317448);
+INSERT INTO "session" VALUES('b03217a024847430ef616052',0,1500340425);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -11962,6 +11963,8 @@ INSERT INTO "session_attribute" VALUES('cd8c96600f5a8cb33bba4168',0,'query_href'
 INSERT INTO "session_attribute" VALUES('cd8c96600f5a8cb33bba4168',0,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('0b11974ddfe1bf102bf371fa',0,'query_href','/trac/report/1?asc=1&page=1');
 INSERT INTO "session_attribute" VALUES('0b11974ddfe1bf102bf371fa',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('b03217a024847430ef616052',0,'query_href','/trac/report/8?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('b03217a024847430ef616052',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
