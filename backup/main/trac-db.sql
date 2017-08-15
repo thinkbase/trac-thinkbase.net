@@ -1762,6 +1762,10 @@ INSERT INTO "session" VALUES('cdf882570640787da51c0d91',0,1502704195);
 INSERT INTO "session" VALUES('803980b7cb43d0d463989777',0,1502705816);
 INSERT INTO "session" VALUES('896812ec4db8a5da93702507',0,1502708417);
 INSERT INTO "session" VALUES('0191521e3e27251d411d9263',0,1502721874);
+INSERT INTO "session" VALUES('95aa5ecc6343bb4474179011',0,1502752299);
+INSERT INTO "session" VALUES('68627a7660c11de7bc8958b0',0,1502757254);
+INSERT INTO "session" VALUES('d2fa5c9a4faad71eade18c7a',0,1502765220);
+INSERT INTO "session" VALUES('0330ee72c6c556ba57f30646',0,1502768379);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -5254,6 +5258,14 @@ INSERT INTO "session_attribute" VALUES('896812ec4db8a5da93702507',0,'timeline.ne
 INSERT INTO "session_attribute" VALUES('0191521e3e27251d411d9263',0,'name','aqkvlpc');
 INSERT INTO "session_attribute" VALUES('0191521e3e27251d411d9263',0,'chrome.notices.0','Your preferences have been saved.');
 INSERT INTO "session_attribute" VALUES('0191521e3e27251d411d9263',0,'email','dmiciy@ohasch.com');
+INSERT INTO "session_attribute" VALUES('95aa5ecc6343bb4474179011',0,'timeline.lastvisit','1502740832000000');
+INSERT INTO "session_attribute" VALUES('95aa5ecc6343bb4474179011',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('68627a7660c11de7bc8958b0',0,'timeline.lastvisit','1502740832000000');
+INSERT INTO "session_attribute" VALUES('68627a7660c11de7bc8958b0',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('d2fa5c9a4faad71eade18c7a',0,'timeline.lastvisit','1502740832000000');
+INSERT INTO "session_attribute" VALUES('d2fa5c9a4faad71eade18c7a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0330ee72c6c556ba57f30646',0,'timeline.lastvisit','1502740832000000');
+INSERT INTO "session_attribute" VALUES('0330ee72c6c556ba57f30646',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
