@@ -4625,6 +4625,15 @@ INSERT INTO "session" VALUES('40fc568a43e53d3aa4cb1223',0,1522239045);
 INSERT INTO "session" VALUES('28a2807a292f4c59cab0b8e7',0,1522254276);
 INSERT INTO "session" VALUES('37582d219098a5df9bbcd526',0,1522278209);
 INSERT INTO "session" VALUES('67946a1634155b15430739cd',0,1522370928);
+INSERT INTO "session" VALUES('d933c2c13ca992c2f143959a',0,1522446226);
+INSERT INTO "session" VALUES('106afeead792ed3e6289dbe1',0,1522482862);
+INSERT INTO "session" VALUES('7943310b30ec7e501bd14651',0,1522482957);
+INSERT INTO "session" VALUES('3e8097b0f38062c0640d34ea',0,1522482989);
+INSERT INTO "session" VALUES('b2776b0f634efd88f435517c',0,1522483021);
+INSERT INTO "session" VALUES('dac90df8f796eddb8aeb0b5c',0,1522483055);
+INSERT INTO "session" VALUES('1bc0a72f4d0279659cad177b',0,1522483086);
+INSERT INTO "session" VALUES('bb6c6d2bef7c791afb89787c',0,1522483118);
+INSERT INTO "session" VALUES('fce02dd8a5c15387da01e692',0,1522483213);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -19356,6 +19365,26 @@ INSERT INTO "session_attribute" VALUES('37582d219098a5df9bbcd526',0,'query_href'
 INSERT INTO "session_attribute" VALUES('37582d219098a5df9bbcd526',0,'query_tickets','');
 INSERT INTO "session_attribute" VALUES('67946a1634155b15430739cd',0,'query_href','/trac/report/7?asc=1&USER=anonymous&page=1');
 INSERT INTO "session_attribute" VALUES('67946a1634155b15430739cd',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('d933c2c13ca992c2f143959a',0,'query_href','/trac/report/5?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('d933c2c13ca992c2f143959a',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('106afeead792ed3e6289dbe1',0,'query_time','1522482862');
+INSERT INTO "session_attribute" VALUES('106afeead792ed3e6289dbe1',0,'query_constraints','[{u''status'': [u''!closed'']}]');
+INSERT INTO "session_attribute" VALUES('106afeead792ed3e6289dbe1',0,'query_href','/trac/query?status=!closed&order=priority');
+INSERT INTO "session_attribute" VALUES('106afeead792ed3e6289dbe1',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('7943310b30ec7e501bd14651',0,'query_href','/trac/report/1?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('7943310b30ec7e501bd14651',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('3e8097b0f38062c0640d34ea',0,'query_href','/trac/report/2?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('3e8097b0f38062c0640d34ea',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('b2776b0f634efd88f435517c',0,'query_href','/trac/report/3?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('b2776b0f634efd88f435517c',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('dac90df8f796eddb8aeb0b5c',0,'query_href','/trac/report/4?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('dac90df8f796eddb8aeb0b5c',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('1bc0a72f4d0279659cad177b',0,'query_href','/trac/report/5?asc=1&page=1');
+INSERT INTO "session_attribute" VALUES('1bc0a72f4d0279659cad177b',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('bb6c6d2bef7c791afb89787c',0,'query_href','/trac/report/6?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('bb6c6d2bef7c791afb89787c',0,'query_tickets','');
+INSERT INTO "session_attribute" VALUES('fce02dd8a5c15387da01e692',0,'query_href','/trac/report/7?asc=1&USER=anonymous&page=1');
+INSERT INTO "session_attribute" VALUES('fce02dd8a5c15387da01e692',0,'query_tickets','');
 CREATE TABLE attachment (
     type text,
     id text,
