@@ -48,8 +48,6 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('6c917f01aaeb3484c3be19dbd2a0bfd2','thinkbase','183.195.11.147',1536458680);
-INSERT INTO "auth_cookie" VALUES('8e0f00e0869498fd9c7b1507951e9351','thinkbase','183.195.11.147',1536683168);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -1902,6 +1900,12 @@ INSERT INTO "session" VALUES('6405eb3d4ab50d54b4e16887',0,1538677019);
 INSERT INTO "session" VALUES('9d12ce7c108ea1cc39e76336',0,1538677136);
 INSERT INTO "session" VALUES('f83a6d8fe18705b6ebc87a24',0,1538677142);
 INSERT INTO "session" VALUES('6b78394c286848c967f31023',0,1538677296);
+INSERT INTO "session" VALUES('79d972c6364b1e00479ab402',0,1538690152);
+INSERT INTO "session" VALUES('3b7863a08166715f415af11c',0,1538700955);
+INSERT INTO "session" VALUES('385c03cd8c2d3624d4b653a4',0,1538702054);
+INSERT INTO "session" VALUES('eced026677864958e8087095',0,1538705615);
+INSERT INTO "session" VALUES('ea543293e2cc173b18d48833',0,1538705627);
+INSERT INTO "session" VALUES('a7ad1a3c2d661e92dc440c54',0,1538705638);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -5630,6 +5634,18 @@ INSERT INTO "session_attribute" VALUES('f83a6d8fe18705b6ebc87a24',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('f83a6d8fe18705b6ebc87a24',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('6b78394c286848c967f31023',0,'timeline.lastvisit','1538640024000000');
 INSERT INTO "session_attribute" VALUES('6b78394c286848c967f31023',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('79d972c6364b1e00479ab402',0,'timeline.lastvisit','1538683252000000');
+INSERT INTO "session_attribute" VALUES('79d972c6364b1e00479ab402',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('3b7863a08166715f415af11c',0,'timeline.lastvisit','1538700880000000');
+INSERT INTO "session_attribute" VALUES('3b7863a08166715f415af11c',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('385c03cd8c2d3624d4b653a4',0,'timeline.lastvisit','1538702004000000');
+INSERT INTO "session_attribute" VALUES('385c03cd8c2d3624d4b653a4',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('eced026677864958e8087095',0,'timeline.lastvisit','1538702102000000');
+INSERT INTO "session_attribute" VALUES('eced026677864958e8087095',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('ea543293e2cc173b18d48833',0,'timeline.lastvisit','1538702102000000');
+INSERT INTO "session_attribute" VALUES('ea543293e2cc173b18d48833',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('a7ad1a3c2d661e92dc440c54',0,'timeline.lastvisit','1538702102000000');
+INSERT INTO "session_attribute" VALUES('a7ad1a3c2d661e92dc440c54',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -54836,6 +54852,322 @@ roxterm -T Eclipse:${workspace_loc} --tab -d ${resource_path} -n ${selected_reso
   - [[Image(20180909-101704-1098x577-Eclipse及StartExplorer版本信息.png)]]
 
 == END ==',1536459213,1536460097,'','thinkbase','thinkbase','linux ubuntu eclipse ROXTerm PCManFM StartExplorer');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20181005-0035',1,'ubuntu 上安装 MySQL 5.7 后对 root 用户的处理','在 Ubuntu 18.04 上通过命令 `sudo apt-get install mysql-server` 安装 MySQL 5.7 数据库服务器（Ubuntu 16.04 应该也是一样）的过程中，没有询问输入密码，安装完成后只能通过 `sudo mysql -u root` 登录到 MySQL 服务器（不用输入 MySQL 的 root 密码），而使用普通 Linux 帐号则无法登录;
+
+按照网上的资料（参考 https://www.jianshu.com/p/4ca115648939 和 http://www.phpbug.cn/archives/621.html ），解决方案如下：
+ 1. First, connect in sudo mysql
+{{{
+#!sh
+sudo mysql -u root
+}}}
+ 2. Check your accounts present in your db
+{{{
+#!sql
+mysql> SELECT User,Host FROM mysql.user;
+}}}
+{{{
+    +——————————————————+———————————+
+    | User             | Host      |
+    +——————————————————+———————————+
+    | admin            | localhost |
+    | debian-sys-maint | localhost |
+    | magento_user     | localhost |
+    | mysql.sys        | localhost |
+    | root             | localhost |
+}}}
+ 3. Delete current root@localhost account
+{{{
+#!sql
+mysql> DROP USER ''root''@''localhost'';
+ 4. Recreate your user
+{{{
+#!sql
+mysql> CREATE USER ''root''@''%'' IDENTIFIED BY '''';
+}}}
+ 5. Give permissions to your user (don’t forget to flush privileges)
+{{{
+#!sql
+mysql> GRANT ALL PRIVILEGES ON *.* TO ''root''@''%'';
+mysql> FLUSH PRIVILEGES;
+}}}	
+',1538700826,1538700826,'','thinkbase','thinkbase','linux ubuntu mysql database');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20181005-0035',2,'ubuntu 上安装 MySQL 5.7 后对 root 用户的处理','在 Ubuntu 18.04 上通过命令 `sudo apt-get install mysql-server` 安装 MySQL 5.7 数据库服务器（Ubuntu 16.04 应该也是一样）的过程中，没有询问输入密码，安装完成后只能通过 `sudo mysql -u root` 登录到 MySQL 服务器（不用输入 MySQL 的 root 密码），而使用普通 Linux 帐号则无法登录;
+
+按照网上的资料（参考 https://www.jianshu.com/p/4ca115648939 和 http://www.phpbug.cn/archives/621.html ），解决方案如下：
+ 1. First, connect in sudo mysql
+{{{
+#!sh
+sudo mysql -u root
+}}}
+ 2. Check your accounts present in your db
+{{{
+#!sql
+mysql> SELECT User,Host FROM mysql.user;
+
+    +——————————————————+———————————+
+    | User             | Host      |
+    +——————————————————+———————————+
+    | admin            | localhost |
+    | debian-sys-maint | localhost |
+    | magento_user     | localhost |
+    | mysql.sys        | localhost |
+    | root             | localhost |
+}}}
+ 3. Delete current root@localhost account
+{{{
+#!sql
+mysql> DROP USER ''root''@''localhost'';
+}}}
+ 4. Recreate your user
+{{{
+#!sql
+mysql> CREATE USER ''root''@''%'' IDENTIFIED BY '''';
+}}}
+ 5. Give permissions to your user (don’t forget to flush privileges)
+{{{
+#!sql
+mysql> GRANT ALL PRIVILEGES ON *.* TO ''root''@''%'';
+mysql> FLUSH PRIVILEGES;
+}}}	
+',1538700826,1538700863,'','thinkbase','thinkbase','linux ubuntu mysql database');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20181005-0035',3,'ubuntu 上安装 MySQL 5.7 后对 root 用户的处理','在 Ubuntu 18.04 上通过命令 `sudo apt-get install mysql-server` 安装 MySQL 5.7 数据库服务器（Ubuntu 16.04 应该也是一样）的过程中，没有询问输入密码，安装完成后只能通过 `sudo mysql -u root` 登录到 MySQL 服务器（不用输入 MySQL 的 root 密码），而使用普通 Linux 帐号则无法登录;
+
+按照网上的资料（参考 https://www.jianshu.com/p/4ca115648939 和 http://www.phpbug.cn/archives/621.html ），解决方案如下：
+ 1. First, connect in sudo mysql
+{{{
+#!sh
+sudo mysql -u root
+}}}
+ 2. Check your accounts present in your db
+{{{
+#!sql
+mysql> SELECT User,Host FROM mysql.user;
+}}}
+{{{
+    +——————————————————+———————————+
+    | User             | Host      |
+    +——————————————————+———————————+
+    | admin            | localhost |
+    | debian-sys-maint | localhost |
+    | magento_user     | localhost |
+    | mysql.sys        | localhost |
+    | root             | localhost |
+}}}
+ 3. Delete current root@localhost account
+{{{
+#!sql
+mysql> DROP USER ''root''@''localhost'';
+}}}
+ 4. Recreate your user
+{{{
+#!sql
+mysql> CREATE USER ''root''@''%'' IDENTIFIED BY '''';
+}}}
+ 5. Give permissions to your user (don’t forget to flush privileges)
+{{{
+#!sql
+mysql> GRANT ALL PRIVILEGES ON *.* TO ''root''@''%'';
+mysql> FLUSH PRIVILEGES;
+}}}	
+',1538700826,1538700880,'','thinkbase','thinkbase','linux ubuntu mysql database');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20181005-0035',4,'ubuntu 上安装 MySQL 5.7 后对 root 用户的处理','在 Ubuntu 18.04 上通过命令 `sudo apt-get install mysql-server` 安装 MySQL 5.7 数据库服务器（Ubuntu 16.04 应该也是一样）的过程中，没有询问输入密码，安装完成后只能通过 `sudo mysql -u root` 登录到 MySQL 服务器（不用输入 MySQL 的 root 密码），而使用普通 Linux 帐号则无法登录;
+
+按照网上的资料（参考 https://www.jianshu.com/p/4ca115648939 和 http://www.phpbug.cn/archives/621.html ），解决方案如下：
+ 1. First, connect in sudo mysql
+{{{
+#!sh
+sudo mysql -u root
+}}}
+ 2. Check your accounts present in your db
+{{{
+#!sql
+mysql> SELECT User,Host FROM mysql.user;
+}}}
+{{{
+    +------------------+-----------+
+    | User             | Host      |
+    +------------------+-----------+
+    | admin            | localhost |
+    | debian-sys-maint | localhost |
+    | magento_user     | localhost |
+    | mysql.sys        | localhost |
+    | root             | localhost |
+    +------------------+-----------+
+}}}
+ 3. Delete current root@localhost account
+{{{
+#!sql
+mysql> DROP USER ''root''@''localhost'';
+}}}
+ 4. Recreate your user
+{{{
+#!sql
+mysql> CREATE USER ''root''@''%'' IDENTIFIED BY '''';
+}}}
+ 5. Give permissions to your user (don’t forget to flush privileges)
+{{{
+#!sql
+mysql> GRANT ALL PRIVILEGES ON *.* TO ''root''@''%'';
+mysql> FLUSH PRIVILEGES;
+}}}	
+
+
+但是上述的操作其实会带来一个副作用，就是 在给新建的其他用户赋权限的时候会出现 mysql grant 命令错误：`ERROR 1044 (42000): Access denied for ''root'' With All Privileges`，解决方法如下（ 参考 http://www.cnblogs.com/xiaoerlang/p/4538746.html 和 https://stackoverflow.com/questions/21714869/error-1044-42000-access-denied-for-root-with-all-privileges ）：
+ 1. 确认 root@localhost 是否已被赋予的权限 `Grant_priv`：
+{{{
+#!sql
+mysql> SELECT host,user,password,Grant_priv,Super_priv FROM mysql.user;
+}}}
+{{{
++-----------+------------------+-------------------------------------------+------------+------------+
+| host      | user             | password                                  | Grant_priv | Super_priv |
++-----------+------------------+-------------------------------------------+------------+------------+
+| localhost | root             | ***************************************** | N          | Y          |
+| localhost | debian-sys-maint | ***************************************** | Y          | Y          |
+| localhost | staging          | ***************************************** | N          | N          |
++-----------+------------------+-------------------------------------------+------------+------------+
+}}}
+ 2. 如果 root@localhost 的 `Grant_priv`是 `N`，则设为 `Y`：
+{{{
+#!sql
+UPDATE mysql.user SET Grant_priv=''Y'', Super_priv=''Y'' WHERE User=''root'';
+FLUSH PRIVILEGES;
+GRANT ALL ON *.* TO ''root''@''localhost'';
+}}}
+ 3. 重新登录 MySQL，即可解决。
+',1538700826,1538701701,'','thinkbase','thinkbase','linux ubuntu mysql database');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20181005-0035',5,'ubuntu 上安装 MySQL 5.7 后对 root 用户的处理','在 Ubuntu 18.04 上通过命令 `sudo apt-get install mysql-server` 安装 MySQL 5.7 数据库服务器（Ubuntu 16.04 应该也是一样）的过程中，没有询问输入密码，安装完成后只能通过 `sudo mysql -u root` 登录到 MySQL 服务器（不用输入 MySQL 的 root 密码），而使用普通 Linux 帐号则无法登录;
+
+按照网上的资料（参考 https://www.jianshu.com/p/4ca115648939 和 http://www.phpbug.cn/archives/621.html ），解决方案如下：
+ 1. First, connect in sudo mysql
+{{{
+#!sh
+sudo mysql -u root
+}}}
+ 2. Check your accounts present in your db
+{{{
+#!sql
+mysql> SELECT User,Host FROM mysql.user;
+}}}
+{{{
+    +------------------+-----------+
+    | User             | Host      |
+    +------------------+-----------+
+    | admin            | localhost |
+    | debian-sys-maint | localhost |
+    | magento_user     | localhost |
+    | mysql.sys        | localhost |
+    | root             | localhost |
+    +------------------+-----------+
+}}}
+ 3. Delete current root@localhost account
+{{{
+#!sql
+mysql> DROP USER ''root''@''localhost'';
+}}}
+ 4. Recreate your user
+{{{
+#!sql
+mysql> CREATE USER ''root''@''%'' IDENTIFIED BY '''';
+}}}
+ 5. Give permissions to your user (don’t forget to flush privileges)
+{{{
+#!sql
+mysql> GRANT ALL PRIVILEGES ON *.* TO ''root''@''%'';
+mysql> FLUSH PRIVILEGES;
+}}}	
+
+
+但是上述的操作其实会带来一个副作用，就是 在给新建的其他用户赋权限的时候会出现 mysql grant 命令错误：`ERROR 1044 (42000): Access denied for ''root'' With All Privileges`，解决方法如下（ 参考 http://www.cnblogs.com/xiaoerlang/p/4538746.html 和 https://stackoverflow.com/questions/21714869/error-1044-42000-access-denied-for-root-with-all-privileges ）：
+ 1. 确认 root@localhost 是否已被赋予的权限 `Grant_priv`：
+{{{
+#!sql
+mysql> SELECT host,user,password,Grant_priv,Super_priv FROM mysql.user;
+}}}
+{{{
++-----------+------------------+-------------------------------------------+------------+------------+
+| host      | user             | password                                  | Grant_priv | Super_priv |
++-----------+------------------+-------------------------------------------+------------+------------+
+| localhost | root             | ***************************************** | N          | Y          |
+| localhost | debian-sys-maint | ***************************************** | Y          | Y          |
+| localhost | staging          | ***************************************** | N          | N          |
++-----------+------------------+-------------------------------------------+------------+------------+
+}}}
+ 2. 如果 root@localhost 的 `Grant_priv`是 `N`，则设为 `Y`：
+{{{
+#!sql
+mysql> UPDATE mysql.user SET Grant_priv=''Y'', Super_priv=''Y'' WHERE User=''root'';
+mysql> FLUSH PRIVILEGES;
+mysql> GRANT ALL ON *.* TO ''root''@''localhost'';
+}}}
+ 3. 重新登录 MySQL，即可解决。
+',1538700826,1538702004,'','thinkbase','thinkbase','linux ubuntu mysql database');
+INSERT INTO "fullblog_posts" VALUES('thinkbase-20181005-0035',6,'ubuntu 上安装 MySQL 5.7 后对 root 用户的处理','在 Ubuntu 18.04（Ubuntu 16.04 应该也是一样）上通过命令 `sudo apt-get install mysql-server` 安装 `MySQL 5.7` 数据库服务器的过程中，没有询问输入密码，安装完成后只能通过 `sudo mysql -u root` 登录到 MySQL 服务器（不用输入 MySQL 的 root 密码），而使用普通 Linux 帐号则无法登录;
+
+按照网上的资料（参考 https://www.jianshu.com/p/4ca115648939 和 http://www.phpbug.cn/archives/621.html ），解决方案如下：
+ 1. First, connect in sudo mysql
+{{{
+#!sh
+sudo mysql -u root
+}}}
+ 2. Check your accounts present in your db
+{{{
+#!sql
+mysql> SELECT User,Host FROM mysql.user;
+}}}
+{{{
+    +------------------+-----------+
+    | User             | Host      |
+    +------------------+-----------+
+    | admin            | localhost |
+    | debian-sys-maint | localhost |
+    | magento_user     | localhost |
+    | mysql.sys        | localhost |
+    | root             | localhost |
+    +------------------+-----------+
+}}}
+ 3. Delete current root@localhost account
+{{{
+#!sql
+mysql> DROP USER ''root''@''localhost'';
+}}}
+ 4. Recreate your user
+{{{
+#!sql
+mysql> CREATE USER ''root''@''%'' IDENTIFIED BY '''';
+}}}
+ 5. Give permissions to your user (don’t forget to flush privileges)
+{{{
+#!sql
+mysql> GRANT ALL PRIVILEGES ON *.* TO ''root''@''%'';
+mysql> FLUSH PRIVILEGES;
+}}}	
+
+
+但是上述的操作其实会带来一个副作用，就是 在给新建的其他用户赋权限的时候会出现 mysql grant 命令错误：`ERROR 1044 (42000): Access denied for ''root'' With All Privileges`，解决方法如下（ 参考 http://www.cnblogs.com/xiaoerlang/p/4538746.html 和 https://stackoverflow.com/questions/21714869/error-1044-42000-access-denied-for-root-with-all-privileges ）：
+ 1. 确认 root@localhost 是否已被赋予的权限 `Grant_priv`：
+{{{
+#!sql
+mysql> SELECT host,user,password,Grant_priv,Super_priv FROM mysql.user;
+}}}
+{{{
++-----------+------------------+-------------------------------------------+------------+------------+
+| host      | user             | password                                  | Grant_priv | Super_priv |
++-----------+------------------+-------------------------------------------+------------+------------+
+| localhost | root             | ***************************************** | N          | Y          |
+| localhost | debian-sys-maint | ***************************************** | Y          | Y          |
+| localhost | staging          | ***************************************** | N          | N          |
++-----------+------------------+-------------------------------------------+------------+------------+
+}}}
+ 2. 如果 root@localhost 的 `Grant_priv`是 `N`，则设为 `Y`：
+{{{
+#!sql
+mysql> UPDATE mysql.user SET Grant_priv=''Y'', Super_priv=''Y'' WHERE User=''root'';
+mysql> FLUSH PRIVILEGES;
+mysql> GRANT ALL ON *.* TO ''root''@''localhost'';
+}}}
+ 3. 重新登录 MySQL，即可解决。
+',1538700826,1538702102,'','thinkbase','thinkbase','linux ubuntu mysql database');
 CREATE TABLE fullblog_comments (
     name text,
     number integer,
