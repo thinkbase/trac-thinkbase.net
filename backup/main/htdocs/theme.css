@@ -1,29 +1,133 @@
-/* Warning: this file is auto-generated. If you edit it, changes will be lost the next time you use the simple customizer. */
-body, .milestone .info h2 *:link, .milestone .info h2 *:visited {
-  color: #050733;
-}
-
-body {
-  background-color: #FFFFFF;
-}
-
-*:link, *:visited, #tabs *:link, #tabs *:visited, .milestone .info h2 em {
-  color: #BB0000;
-}
-
-*:link:hover, *:visited:hover, #tabs *:link:hover, #tabs *:visited:hover {
-  color: #555555;
-}
-
-#mainnav {
-  background-color: #FFFFFF;
-}
-
-#mainnav .active *:link, #mainnav .active *:visited {
-  background-color: #000000;
-}
-
-#mainnav *:link:hover, #mainnav *:visited:hover {
-  background-color: #CCCCCC;
-}
-
+/* Warning: this file is auto-generated. If you edit it, changes will be lost the next time you use the simple customizer. */
+
+body, .milestone .info h2 *:link, .milestone .info h2 *:visited {
+  color: #050733;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+*:link, *:visited, #tabs *:link, #tabs *:visited, .milestone .info h2 em {
+  color: #BB0000;
+}
+
+*:link:hover, *:visited:hover, #tabs *:link:hover, #tabs *:visited:hover {
+  color: #555555;
+}
+
+#mainnav {
+  background-color: #FFFFFF;
+}
+
+#mainnav .active *:link, #mainnav .active *:visited {
+  background-color: #000000;
+}
+
+#mainnav *:link:hover, #mainnav *:visited:hover {
+  background-color: #CCCCCC;
+}
+
+
+/****************************************************************/
+/****************************************************************/
+
+/** Customize ticket for more readable */
+#content.ticket {
+    width: 980px;   /* enlarge ticket width */
+    font-size: 125%;
+}
+#content.ticket pre.wiki {
+    max-height: 200px; /* make long text area scrollable */
+}
+#ticket.trac-content .description hr {
+    margin: 1em 0em;   /* limit split line height */
+    border-top: 1px dashed lightgray;
+}
+#ticket.trac-content .description ol{
+    line-height: 1.5em;  /* Make more readable */
+}
+#ticket.trac-content .description ul{
+    line-height: 1.5em;  /* Make more readable */
+}
+#ticket.trac-content .searchable h3{  /* reset H3 */
+    font-family: Arial,Verdana,'Bitstream Vera Sans',Helvetica,sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.018em;
+    page-break-after: avoid;
+
+    border: initial;
+    color: initial;
+    font-size: 14px;
+}
+#ticket.trac-content .searchable p{
+    padding-left: 1em;
+}
+
+/** Customize wiki and blog for more readable */
+#content.blog {
+    font-size: 125%;
+    line-height: 1.5em;
+}
+textarea#blog-body {
+    width: 100%;
+}
+#wikipage ol {
+    line-height: 1.5em;  /* Make more readable */
+}
+#wikipage ul {
+    line-height: 1.5em;  /* Make more readable */
+}
+#blog-main ol {
+    line-height: 1.5em;  /* Make more readable */
+}
+#blog-main ul {
+    line-height: 1.5em;  /* Make more readable */
+}
+#blog-main p {
+    padding-left: 1em;
+}
+.blog-body img {
+    max-width: 100%;
+    margin: 0.3em;
+    border-radius: 12px;
+    border: 2px solid #a98175;
+}
+.blog-body .wiki-toc {
+    padding: .5em 1em;
+    margin: 0 0 2em 1em;
+    float: right;
+    --clear: right;
+    border: 1px outset #ddc;
+    background: #ffd;
+    font-size: 85%;
+    position: relative;
+}
+.blog-comment img {
+    max-width: 100%;
+    margin: 0.3em;
+    border-radius: 12px;
+    border: 2px solid #a98175;
+}
+
+/* For markdown file display */
+#preview {
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+#preview code {
+    font-size: 1em;
+    color: #600;
+    border: 1px solid #edc;
+    border-radius: .25em;
+    padding: 0 0.3em;
+    background: #fafafa;
+}
+#preview pre code {
+    border: 1px solid #edc;
+    border-radius: .25em;
+    padding: 0 0.3em;
+    background: #fafafa;
+    color: darkslategrey;
+    font-size: 1.2em;
+}
