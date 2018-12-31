@@ -48,7 +48,6 @@ CREATE TABLE auth_cookie (
     time integer,
     UNIQUE (cookie,ipnr,name)
 );
-INSERT INTO "auth_cookie" VALUES('72aebf3954d293b794b1ee500818bea0','thinkbase','183.195.4.112',1546197165);
 CREATE TABLE session (
     sid text,
     authenticated integer,
@@ -1057,6 +1056,8 @@ INSERT INTO "session" VALUES('f04806642da7e6c6aadcad48',0,1546188265);
 INSERT INTO "session" VALUES('60e90091d37678b609d6617a',0,1546194319);
 INSERT INTO "session" VALUES('c9b13c43785057d773f91f50',0,1546195637);
 INSERT INTO "session" VALUES('38dc6b0fc648683ce5408f63',0,1546198874);
+INSERT INTO "session" VALUES('b9ca73c2631d418bf7f93262',0,1546204413);
+INSERT INTO "session" VALUES('998321d089b4078280222020',0,1546224386);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -3081,6 +3082,10 @@ INSERT INTO "session_attribute" VALUES('thinkbase',1,'diff_ignoreblanklines','1'
 INSERT INTO "session_attribute" VALUES('thinkbase',1,'email','thinkbase.net@gmail.com');
 INSERT INTO "session_attribute" VALUES('38dc6b0fc648683ce5408f63',0,'timeline.lastvisit','1546197615049178');
 INSERT INTO "session_attribute" VALUES('38dc6b0fc648683ce5408f63',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b9ca73c2631d418bf7f93262',0,'timeline.lastvisit','1546200025000000');
+INSERT INTO "session_attribute" VALUES('b9ca73c2631d418bf7f93262',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('998321d089b4078280222020',0,'timeline.lastvisit','1546200025000000');
+INSERT INTO "session_attribute" VALUES('998321d089b4078280222020',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
