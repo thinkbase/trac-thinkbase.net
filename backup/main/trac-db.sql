@@ -1928,6 +1928,11 @@ INSERT INTO "session" VALUES('ade536434c00cfc4904eb49c',0,1555277347);
 INSERT INTO "session" VALUES('231017d603908ed9f07d2936',0,1555277364);
 INSERT INTO "session" VALUES('a428ca1e451d2472ff97283d',0,1555322418);
 INSERT INTO "session" VALUES('17a74290b82609f877ec0ccf',0,1555334693);
+INSERT INTO "session" VALUES('e3eed31b2319ffc5872a972d',0,1555405834);
+INSERT INTO "session" VALUES('905b71b2df63b2d0e9e41928',0,1555405847);
+INSERT INTO "session" VALUES('b6c3c998d5e9ff3a17889e3e',0,1555408895);
+INSERT INTO "session" VALUES('f4c0f6c88df3d285c71a7392',0,1555432941);
+INSERT INTO "session" VALUES('c5183f9bbceba0c47d8072cf',0,1555444018);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -5700,6 +5705,14 @@ INSERT INTO "session_attribute" VALUES('a428ca1e451d2472ff97283d',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('a428ca1e451d2472ff97283d',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('17a74290b82609f877ec0ccf',0,'timeline.lastvisit','1555315221000000');
 INSERT INTO "session_attribute" VALUES('17a74290b82609f877ec0ccf',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('e3eed31b2319ffc5872a972d',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('905b71b2df63b2d0e9e41928',0,'timeline.authors','/guestbook.html');
+INSERT INTO "session_attribute" VALUES('b6c3c998d5e9ff3a17889e3e',0,'timeline.lastvisit','1555401619000000');
+INSERT INTO "session_attribute" VALUES('b6c3c998d5e9ff3a17889e3e',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('f4c0f6c88df3d285c71a7392',0,'timeline.lastvisit','1555401619000000');
+INSERT INTO "session_attribute" VALUES('f4c0f6c88df3d285c71a7392',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('c5183f9bbceba0c47d8072cf',0,'timeline.lastvisit','1555401619000000');
+INSERT INTO "session_attribute" VALUES('c5183f9bbceba0c47d8072cf',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
