@@ -2149,6 +2149,13 @@ INSERT INTO "session" VALUES('6f58eddb8603f09deb327ee9',0,1558166180);
 INSERT INTO "session" VALUES('72e9303836058c0bcf3854d2',0,1558176490);
 INSERT INTO "session" VALUES('f3fe2b406489f6b02dd8197f',0,1558180302);
 INSERT INTO "session" VALUES('f38fdf5a0fc7085098641f0f',0,1558207417);
+INSERT INTO "session" VALUES('87f3965b84572fda752f0d7c',0,1558212328);
+INSERT INTO "session" VALUES('5501c78d4974bd4accc4f575',0,1558212420);
+INSERT INTO "session" VALUES('4e0190d6d3b88287dc6ec41d',0,1558212436);
+INSERT INTO "session" VALUES('28c7ae6f79b39789f0d1d38c',0,1558212464);
+INSERT INTO "session" VALUES('941cd5a6200cf3579b042547',0,1558212475);
+INSERT INTO "session" VALUES('56205356f6187ea49df00c1b',0,1558227449);
+INSERT INTO "session" VALUES('ada9ad8484ab091d2c8c08cb',0,1558238355);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -6240,6 +6247,14 @@ INSERT INTO "session_attribute" VALUES('f3fe2b406489f6b02dd8197f',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('f3fe2b406489f6b02dd8197f',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('f38fdf5a0fc7085098641f0f',0,'timeline.lastvisit','1558166451000000');
 INSERT INTO "session_attribute" VALUES('f38fdf5a0fc7085098641f0f',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('87f3965b84572fda752f0d7c',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('5501c78d4974bd4accc4f575',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('4e0190d6d3b88287dc6ec41d',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('28c7ae6f79b39789f0d1d38c',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('941cd5a6200cf3579b042547',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('56205356f6187ea49df00c1b',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('ada9ad8484ab091d2c8c08cb',0,'timeline.lastvisit','1558209645000000');
+INSERT INTO "session_attribute" VALUES('ada9ad8484ab091d2c8c08cb',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
