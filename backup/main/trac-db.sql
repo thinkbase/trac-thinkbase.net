@@ -2549,6 +2549,8 @@ INSERT INTO "session" VALUES('b0f7a97673ad929e72c15dc2',0,1559888004);
 INSERT INTO "session" VALUES('dbecaccd3e123496633b89fe',0,1559909985);
 INSERT INTO "session" VALUES('eb821ae21a943a94a09e95fe',0,1559935117);
 INSERT INTO "session" VALUES('2817cac46f0d50eb13f6a741',0,1559973785);
+INSERT INTO "session" VALUES('4a5fb0dcbfecde9938c7070c',0,1560001562);
+INSERT INTO "session" VALUES('1a69138bdd67da441acbeb1a',0,1560001572);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -7174,6 +7176,8 @@ INSERT INTO "session_attribute" VALUES('eb821ae21a943a94a09e95fe',0,'timeline.au
 INSERT INTO "session_attribute" VALUES('2817cac46f0d50eb13f6a741',0,'name','vktatqye');
 INSERT INTO "session_attribute" VALUES('2817cac46f0d50eb13f6a741',0,'chrome.notices.0','Your preferences have been saved.');
 INSERT INTO "session_attribute" VALUES('2817cac46f0d50eb13f6a741',0,'email','gbfgwf@snoggc.com');
+INSERT INTO "session_attribute" VALUES('4a5fb0dcbfecde9938c7070c',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('1a69138bdd67da441acbeb1a',0,'timeline.authors','/');
 CREATE TABLE attachment (
     type text,
     id text,
