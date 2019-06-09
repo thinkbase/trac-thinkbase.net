@@ -2551,6 +2551,14 @@ INSERT INTO "session" VALUES('eb821ae21a943a94a09e95fe',0,1559935117);
 INSERT INTO "session" VALUES('2817cac46f0d50eb13f6a741',0,1559973785);
 INSERT INTO "session" VALUES('4a5fb0dcbfecde9938c7070c',0,1560001562);
 INSERT INTO "session" VALUES('1a69138bdd67da441acbeb1a',0,1560001572);
+INSERT INTO "session" VALUES('52c0d772378367403819c5c5',0,1560051277);
+INSERT INTO "session" VALUES('39bbbc239328eb5d87b522eb',0,1560051283);
+INSERT INTO "session" VALUES('6cef1470f2c1a96eec366fe9',0,1560051286);
+INSERT INTO "session" VALUES('2d172db04268f5c58e2861ec',0,1560051289);
+INSERT INTO "session" VALUES('3f1460376636477a6ca66cb4',0,1560051292);
+INSERT INTO "session" VALUES('1d3e98ec8f89b15a58a07932',0,1560051299);
+INSERT INTO "session" VALUES('a6371986aa7ff10517dc0cfb',0,1560051302);
+INSERT INTO "session" VALUES('c6fa59a759b0d50193c45b2a',0,1560051305);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -7178,6 +7186,14 @@ INSERT INTO "session_attribute" VALUES('2817cac46f0d50eb13f6a741',0,'chrome.noti
 INSERT INTO "session_attribute" VALUES('2817cac46f0d50eb13f6a741',0,'email','gbfgwf@snoggc.com');
 INSERT INTO "session_attribute" VALUES('4a5fb0dcbfecde9938c7070c',0,'timeline.authors','/');
 INSERT INTO "session_attribute" VALUES('1a69138bdd67da441acbeb1a',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('52c0d772378367403819c5c5',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('39bbbc239328eb5d87b522eb',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('6cef1470f2c1a96eec366fe9',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('2d172db04268f5c58e2861ec',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('3f1460376636477a6ca66cb4',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('1d3e98ec8f89b15a58a07932',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('a6371986aa7ff10517dc0cfb',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('c6fa59a759b0d50193c45b2a',0,'timeline.authors','/');
 CREATE TABLE attachment (
     type text,
     id text,
