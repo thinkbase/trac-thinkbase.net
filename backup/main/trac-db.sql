@@ -2660,6 +2660,9 @@ INSERT INTO "session" VALUES('922fffb041c4cebba5af8bb8',0,1560707247);
 INSERT INTO "session" VALUES('7c619fa9b8afc5f8ade4c571',0,1560707300);
 INSERT INTO "session" VALUES('39ad55f74508506fc79aa600',0,1560709661);
 INSERT INTO "session" VALUES('53ac759afaf34491879e8b7a',0,1560714315);
+INSERT INTO "session" VALUES('095de73571d1b3e03877970b',0,1560734906);
+INSERT INTO "session" VALUES('2bd93551b4c96aee69c58b64',0,1560736887);
+INSERT INTO "session" VALUES('1bc6eed38b2f2dcb45ae384a',0,1560748505);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -7455,6 +7458,12 @@ INSERT INTO "session_attribute" VALUES('39ad55f74508506fc79aa600',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('39ad55f74508506fc79aa600',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('53ac759afaf34491879e8b7a',0,'timeline.lastvisit','1560672067000000');
 INSERT INTO "session_attribute" VALUES('53ac759afaf34491879e8b7a',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('095de73571d1b3e03877970b',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('2bd93551b4c96aee69c58b64',0,'name','Sonny');
+INSERT INTO "session_attribute" VALUES('2bd93551b4c96aee69c58b64',0,'chrome.notices.0','Your preferences have been saved.');
+INSERT INTO "session_attribute" VALUES('2bd93551b4c96aee69c58b64',0,'email','juliusg24@lycos.com');
+INSERT INTO "session_attribute" VALUES('1bc6eed38b2f2dcb45ae384a',0,'timeline.lastvisit','1560715237000000');
+INSERT INTO "session_attribute" VALUES('1bc6eed38b2f2dcb45ae384a',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
@@ -57993,7 +58002,7 @@ CREATE TABLE cache (
     key text
 );
 INSERT INTO "cache" VALUES(901198563,10,'trac.wiki.api.WikiSystem.pages');
-INSERT INTO "cache" VALUES(1173095902,221,'trac.env.Environment._known_users');
+INSERT INTO "cache" VALUES(1173095902,222,'trac.env.Environment._known_users');
 INSERT INTO "cache" VALUES(1722364385,19,'trac.perm.DefaultPermissionStore._all_permissions');
 CREATE TABLE subtickets (
     parent integer,
