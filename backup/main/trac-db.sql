@@ -2950,6 +2950,12 @@ INSERT INTO "session" VALUES('22751714e4b2a01ebd2ef80d',0,1561988639);
 INSERT INTO "session" VALUES('16d292b649e727304c721229',0,1561994269);
 INSERT INTO "session" VALUES('4c06bafd6fe656b4bf59cf1f',0,1561996187);
 INSERT INTO "session" VALUES('74e9e0d4a34f4ad9296f0d29',0,1562002399);
+INSERT INTO "session" VALUES('b40aeffa437af8e6ca29deb2',0,1562196977);
+INSERT INTO "session" VALUES('a272fdbfa49d7f55cfd8adc8',0,1562196981);
+INSERT INTO "session" VALUES('90ab48b38fa4546b5c683978',0,1562196997);
+INSERT INTO "session" VALUES('f9fd4a8daaff4f89185f4a43',0,1562197018);
+INSERT INTO "session" VALUES('54430edc5b6c419c37af260f',0,1562210728);
+INSERT INTO "session" VALUES('253b80db51efd87497f37e9b',0,1562211540);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -8244,6 +8250,14 @@ INSERT INTO "session_attribute" VALUES('4c06bafd6fe656b4bf59cf1f',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('4c06bafd6fe656b4bf59cf1f',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('74e9e0d4a34f4ad9296f0d29',0,'timeline.lastvisit','1561924855000000');
 INSERT INTO "session_attribute" VALUES('74e9e0d4a34f4ad9296f0d29',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('b40aeffa437af8e6ca29deb2',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('a272fdbfa49d7f55cfd8adc8',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('90ab48b38fa4546b5c683978',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('f9fd4a8daaff4f89185f4a43',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('54430edc5b6c419c37af260f',0,'timeline.lastvisit','1562184051000000');
+INSERT INTO "session_attribute" VALUES('54430edc5b6c419c37af260f',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('253b80db51efd87497f37e9b',0,'timeline.lastvisit','1562184051000000');
+INSERT INTO "session_attribute" VALUES('253b80db51efd87497f37e9b',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
