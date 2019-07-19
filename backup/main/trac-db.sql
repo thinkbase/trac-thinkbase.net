@@ -3143,6 +3143,13 @@ INSERT INTO "session" VALUES('6a81df2661bd5d7ae4eb13e4',0,1563506391);
 INSERT INTO "session" VALUES('5b071e41cad9292adfe40cf2',0,1563506394);
 INSERT INTO "session" VALUES('d05ec90188ad79f8146bdac5',0,1563506402);
 INSERT INTO "session" VALUES('dd87c0e72c7e4df4895ef587',0,1563516348);
+INSERT INTO "session" VALUES('694f8eae909224b7cd72d19d',0,1563535712);
+INSERT INTO "session" VALUES('c4783995d27101cd643c69f7',0,1563535870);
+INSERT INTO "session" VALUES('0235282f04faefe476b85008',0,1563535883);
+INSERT INTO "session" VALUES('c0be5b66fcbd861860aaeecf',0,1563535933);
+INSERT INTO "session" VALUES('e27179e40fc32c7a00d1d6c3',0,1563536005);
+INSERT INTO "session" VALUES('dfaf956c95cc88dd534734d1',0,1563536026);
+INSERT INTO "session" VALUES('f2cd412c05676df69abba5f2',0,1563546025);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -8732,6 +8739,14 @@ INSERT INTO "session_attribute" VALUES('5b071e41cad9292adfe40cf2',0,'timeline.au
 INSERT INTO "session_attribute" VALUES('d05ec90188ad79f8146bdac5',0,'timeline.authors','/');
 INSERT INTO "session_attribute" VALUES('dd87c0e72c7e4df4895ef587',0,'timeline.lastvisit','1563480021000000');
 INSERT INTO "session_attribute" VALUES('dd87c0e72c7e4df4895ef587',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('694f8eae909224b7cd72d19d',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('c4783995d27101cd643c69f7',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('0235282f04faefe476b85008',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('c0be5b66fcbd861860aaeecf',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('e27179e40fc32c7a00d1d6c3',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('dfaf956c95cc88dd534734d1',0,'timeline.authors','/');
+INSERT INTO "session_attribute" VALUES('f2cd412c05676df69abba5f2',0,'timeline.lastvisit','1563523247000000');
+INSERT INTO "session_attribute" VALUES('f2cd412c05676df69abba5f2',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
