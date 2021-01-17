@@ -1304,6 +1304,10 @@ INSERT INTO "session" VALUES('e545bde3006db7e4a9c15a27',0,1610850278);
 INSERT INTO "session" VALUES('4d3bf74dc9c9c8583348a60d',0,1610852656);
 INSERT INTO "session" VALUES('be21fe8d50403e19cdc62735',0,1610854673);
 INSERT INTO "session" VALUES('874fb72894ca1dcbe6470726',0,1610870001);
+INSERT INTO "session" VALUES('0c748e7cf9dab9d3fed6ba1d',0,1610886053);
+INSERT INTO "session" VALUES('bc570fce94e0898ca40f1f8f',0,1610903423);
+INSERT INTO "session" VALUES('9f6d04edb92bdca767069206',0,1610904154);
+INSERT INTO "session" VALUES('2f521952ea4f938655461288',0,1610910593);
 CREATE TABLE session_attribute (
     sid text,
     authenticated integer,
@@ -3813,6 +3817,14 @@ INSERT INTO "session_attribute" VALUES('be21fe8d50403e19cdc62735',0,'timeline.la
 INSERT INTO "session_attribute" VALUES('be21fe8d50403e19cdc62735',0,'timeline.nextlastvisit','0');
 INSERT INTO "session_attribute" VALUES('874fb72894ca1dcbe6470726',0,'timeline.lastvisit','1610784043000000');
 INSERT INTO "session_attribute" VALUES('874fb72894ca1dcbe6470726',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('0c748e7cf9dab9d3fed6ba1d',0,'timeline.lastvisit','1610870430000000');
+INSERT INTO "session_attribute" VALUES('0c748e7cf9dab9d3fed6ba1d',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('bc570fce94e0898ca40f1f8f',0,'timeline.lastvisit','1610870430000000');
+INSERT INTO "session_attribute" VALUES('bc570fce94e0898ca40f1f8f',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('9f6d04edb92bdca767069206',0,'timeline.lastvisit','1610870430000000');
+INSERT INTO "session_attribute" VALUES('9f6d04edb92bdca767069206',0,'timeline.nextlastvisit','0');
+INSERT INTO "session_attribute" VALUES('2f521952ea4f938655461288',0,'timeline.lastvisit','1610870430000000');
+INSERT INTO "session_attribute" VALUES('2f521952ea4f938655461288',0,'timeline.nextlastvisit','0');
 CREATE TABLE attachment (
     type text,
     id text,
